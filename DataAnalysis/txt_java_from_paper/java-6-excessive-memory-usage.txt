@@ -1,0 +1,22 @@
+    
+        Does Java 6 consume more memory than you expect for largish applications?
+
+I have an application I have been developing for years, which has, until now taken about 30-40 MB in my particular test configuration; now with Java 6u10 and 11 it is taking several hundred while active.  It bounces around a lot, anywhere between 50M and 200M, and when it idles, it does GC and drop the memory right down.  In addition it generates millions of page faults.  All of this is observed via Windows Task Manager.
+
+So, I ran it up under my profiler (jProfiler) and using jVisualVM, and both of them indicate the usual moderate heap and perm-gen usages of around 30M combined, even when fully active doing my load-test cycle.
+
+So I am mystified! And it not just requesting more memory from the Windows Virtual Memory pool - this is showing up as 200M "Mem Usage".
+
+CLARIFICATION: I want to be perfectly clear on this - observed over an 18 hour period with Java VisualVM the class heap and perm gen heap have been perfectly stable.  The allocated volatile heap (eden and tenured) sits unmoved at 16MB (which it reaches in the first few minutes), and the use of this memory fluctuates in a perfect pattern of growing evenly from 8MB to 16MB, at which point GC kicks in an drops it back to 8MB.  Over this 18 hour period, the system was under constant maximum load since I was running a stress test.  This behavior is perfectly and consistently reproducible, seen over numerous runs.  The only anomaly is that while this is going on the memory taken from Windows, observed via Task Manager, fluctuates all over the place from 64MB up to 900+MB.
+
+UPDATE 2008-12-18: I have run the program with -Xms16M -Xmx16M without any apparent adverse affect - performance is fine, total run time is about the same.  But memory use in a short run still peaked at about 180M.
+
+Update 2009-01-21: It seems the answer may be in the number of threads - see my answer below.
+
+
+
+EDIT: And I mean millions of page faults literally - in the region of 30M+.
+
+EDIT: I have a 4G machine, so the 200M is not significant in that regard.
+
+                

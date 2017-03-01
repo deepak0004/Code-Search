@@ -1,0 +1,23 @@
+    
+        Can someone tell me why assertSame() do fail when I use values > 127?
+
+        import static org.junit.Assert.*;
+
+        ...
+
+        @Test
+        public void StationTest1() {
+          ..
+
+          assertSame(4, 4);         // OK
+          assertSame(10, 10);       // OK
+          assertSame(100, 100);     // OK
+          assertSame(127, 127);     // OK
+          assertSame(128, 128);           // raises an junit.framework.AssertionFailedError!
+          assertSame(((int) 128),((int) 128)); // also junit.framework.AssertionFailedError!
+        }
+
+
+I'm using JUnit 4.8.1. 
+
+                

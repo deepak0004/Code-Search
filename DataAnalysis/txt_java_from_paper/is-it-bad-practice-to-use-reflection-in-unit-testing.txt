@@ -1,0 +1,10 @@
+    
+        During the last years I always thought that in Java, Reflection is widely used during Unit testing. Since some of the variables/methods which have to be checked are private, it is somehow necessary to read the values of them. I always thought that the Reflection API is also used for this purpose.
+
+Last week i had to test some packages and therefore write some JUnit tests. As always i used Reflection to access private fields and methods. But my supervisor who checked the code wasn't really happy with that and told me that the Reflection API wasn't meant to use for such "hacking". Instead he suggested to modifiy the visibility in the production code.
+
+Is it really bad practice to use Reflection? I can't really believe that-
+
+Edit: I should have mentioned that i was required that all tests are in a separate package called test (so using protected visibilty e.g. wasn't a possible solution too)
+
+                

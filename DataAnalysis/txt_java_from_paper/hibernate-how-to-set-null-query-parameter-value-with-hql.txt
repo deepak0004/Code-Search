@@ -1,0 +1,21 @@
+    
+        how can I set a Hibernate Parameter to "null"? Example:
+
+Query query = getSession().createQuery("from CountryDTO c where c.status = :status  and c.type =:type")
+.setParameter("status", status, Hibernate.STRING)
+.setParameter("type", type, Hibernate.STRING);
+
+
+In my case, the status String can be null. I have debugged this and hibernate then generates an SQL string/query like this ....status = null... This however does not Work in MYSQL, as the correct SQL statement must be "status is null" (Mysql does not understand status=null and evaluates this to false so that no records will ever be returned for the query, according to the mysql docs i have read...) 
+
+My Questions:
+
+
+Why doesnt Hibernat translate a null string correctly to "is null" (and rather and wrongly creates "=null")?
+What is the best way to rewrite this query so that it is null-safe? With nullsafe I mean that in the case that the "status" String is null than it should create an "is null"?
+
+
+Thank you very much!
+Tim
+
+                

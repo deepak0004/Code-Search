@@ -1,0 +1,8 @@
+    
+        I wonder if it is possible to implement a GUI panel (possibly JPanel) that is of square shape but rotated 90 degrees. Obviously, there will be a top-level container which contains this panel, and visually the main panel is this rotated square panel within.
+
+More specifically, I would divide a panel (called 'A') into 4 equal square sub-panels, and fill these sub-panels with JLabels, for which I am thinking to use GridLayout. And lastly, I would rotate 'A' 90 degrees to give what I want.
+
+From my reading of other similar questions, it seems that you cannot rotate JPanel itself, but you can rotate what is contained within. Is this applicable to my case here? Would appreciate if someone could point out. Thanks. 
+
+                

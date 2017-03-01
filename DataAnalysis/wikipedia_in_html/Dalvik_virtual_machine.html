@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Dalvik_virtual_machine by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:52:53 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Dalvik (software) - Wikipedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Dalvik_(software)","wgTitle":"Dalvik (software)","wgCurRevisionId":753143179,"wgRevisionId":753143179,"wgArticleId":14217943,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles containing potentially dated statements from March 2014","All articles containing potentially dated statements","All articles that may contain original research","Articles that may contain original research from June 2014","Register-based virtual machines","Java virtual machine","Android (operating system)"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Dalvik_(software)","wgRelevantArticleId":14217943,"wgRequestId":"WHM-ygpAAEAAAQfpD3YAAABF","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"Dalvik_virtual_machine","wgFlaggedRevsParams":{"tags":{}},"wgStableRevisionId":null,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"en","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgInternalRedirectTargetUrl":"/wiki/Dalvik_(software)","wgWikibaseItemId":"Q754752","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.cite.styles":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@1dqfd7l",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["mediawiki.action.view.redirect","ext.cite.a11y","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.legacy.wikibits","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.watchlist-notice","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.gadget.featured-articles-links","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.interface","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="https://en.wikipedia.org/w/load.php?debug=false&amp;lang=en&amp;modules=ext.cite.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="../w/load2c8d.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../w/load18b6.css?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.29.0-wmf.7"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="https://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Dalvik_(software)"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Dalvik_(software)&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Dalvik_(software)&amp;action=edit"/>
+<link rel="apple-touch-icon" href="https://en.wikipedia.org/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="../static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../w/api251f.php?action=rsd"/>
+<link rel="copyright" href="../../creativecommons.org/licenses/by-sa/3.0/index.html"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Dalvik_(software)"/>
+<link rel="dns-prefetch" href="../../login.wikimedia.org/index.html"/>
+<link rel="dns-prefetch" href="../../meta.wikimedia.org/index.html" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Dalvik_software rootpage-Dalvik_software skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">Dalvik (software)</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"><span class="mw-redirectedfrom">  (Redirected from <a href="https://en.wikipedia.org/w/index.php?title=Dalvik_virtual_machine&amp;redirect=no" class="mw-redirect" title="Dalvik virtual machine">Dalvik virtual machine</a>)</span></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><script>function mfTempOpenSection(id){var block=document.getElementById("mf-section-"+id);block.className+=" open-block";block.previousSibling.className+=" open-block";}</script><table class="infobox vevent" style="width:22em">
+<caption class="summary">Dalvik</caption>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_developer" title="Software developer">Original author(s)</a></th>
+<td>Dan Bornstein</td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Operating_system" title="Operating system">Operating system</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Linux_kernel" title="Linux kernel">Linux kernel</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Computing_platform" title="Computing platform">Platform</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Android_(operating_system)" title="Android (operating system)">Android</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/List_of_software_categories" class="mw-redirect" title="List of software categories">Type</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Virtual_machine" title="Virtual machine">Virtual machine</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_license" title="Software license">License</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Apache_License" title="Apache License">Apache License</a> 2.0</td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;">Website</th>
+<td><span class="url"><a rel="nofollow" class="external text" href="https://source.android.com/devices/tech/dalvik/index.html">source<wbr />.android<wbr />.com<wbr />/devices<wbr />/tech<wbr />/dalvik<wbr />/index<wbr />.html</a></span></td>
+</tr>
+</table>
+<table class="infobox" style="width:22em">
+<caption style="font-size:130%; padding-bottom:0.15em;">Dalvik Executable</caption>
+<tr>
+<th scope="row" style="padding:0.2em 0;line-height:1.2em; padding-right:0.65em;"><a href="https://en.wikipedia.org/wiki/Filename_extension" title="Filename extension">Filename extension</a></th>
+<td style="line-height:1.35em;"><code>.dex</code></td>
+</tr>
+</table>
+<p><b>Dalvik</b> is a discontinued<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[1]</a></sup> <a href="https://en.wikipedia.org/wiki/Process_virtual_machine" class="mw-redirect" title="Process virtual machine">process virtual machine</a> (VM) in <a href="https://en.wikipedia.org/wiki/Google" title="Google">Google</a>'s <a href="https://en.wikipedia.org/wiki/Android_(operating_system)" title="Android (operating system)">Android operating system</a> that executes applications written for Android. Dalvik is an integral part of the Android software stack in <a href="https://en.wikipedia.org/wiki/Android_version_history" title="Android version history">Android versions</a> 4.4 "KitKat" and earlier, which is typically used on mobile devices such as <a href="https://en.wikipedia.org/wiki/Mobile_phone" title="Mobile phone">mobile phones</a> and <a href="https://en.wikipedia.org/wiki/Tablet_computer" title="Tablet computer">tablet computers</a>, and more recently on devices such as <a href="https://en.wikipedia.org/wiki/Smart_TV" title="Smart TV">smart TVs</a> and <a href="https://en.wikipedia.org/wiki/Wearables" class="mw-redirect" title="Wearables">wearables</a>. Dalvik is <a href="https://en.wikipedia.org/wiki/Open-source_software" title="Open-source software">open-source software</a>, originally written by Dan Bornstein, who named it after the fishing village of <a href="https://en.wikipedia.org/wiki/Dalvík" title="Dalvík">Dalvík</a> in <a href="https://en.wikipedia.org/wiki/Eyjafjörður" title="Eyjafjörður">Eyjafjörður</a>, <a href="https://en.wikipedia.org/wiki/Iceland" title="Iceland">Iceland</a>.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">[2]</a></sup><sup id="cite_ref-onlamp_3-0" class="reference"><a href="#cite_note-onlamp-3">[3]</a></sup></p>
+<p><a href="https://en.wikipedia.org/wiki/Computer_program" title="Computer program">Programs</a> for Android are commonly written in <a href="https://en.wikipedia.org/wiki/Java_programming_language" class="mw-redirect" title="Java programming language">Java</a> and compiled to <a href="https://en.wikipedia.org/wiki/Bytecode" title="Bytecode">bytecode</a> for the <a href="https://en.wikipedia.org/wiki/Java_virtual_machine" title="Java virtual machine">Java virtual machine</a>, which is then translated to Dalvik bytecode and stored in <b>.dex</b> (<b>Dalvik EXecutable</b>) and <b>.odex</b> (<b>Optimized Dalvik EXecutable</b>) files; related terms <b>odex</b> and <b>de-odex</b> are associated with respective bytecode conversions. The compact Dalvik Executable format is designed for systems that are constrained in terms of <a href="https://en.wikipedia.org/wiki/Random_access_memory" class="mw-redirect" title="Random access memory">memory</a> and <a href="https://en.wikipedia.org/wiki/Central_processing_unit" title="Central processing unit">processor</a> speed.</p>
+<p>The successor of Dalvik is <a href="https://en.wikipedia.org/wiki/Android_Runtime" title="Android Runtime">Android Runtime</a> (ART), which uses the same bytecode and .dex files (but not .odex files), with the succession aiming at performance improvements transparent to the <a href="https://en.wikipedia.org/wiki/End_user" title="End user">end users</a>. The new runtime environment was included for the first time in <a href="https://en.wikipedia.org/wiki/KitKat_(operating_system)" class="mw-redirect" title="KitKat (operating system)">Android 4.4 "KitKat"</a> as a <a href="https://en.wikipedia.org/wiki/Technology_preview" class="mw-redirect" title="Technology preview">technology preview</a>,<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">[4]</a></sup><sup id="cite_ref-5" class="reference"><a href="#cite_note-5">[5]</a></sup> and replaced Dalvik entirely in later versions; <a href="https://en.wikipedia.org/wiki/Lollipop_(operating_system)" class="mw-redirect" title="Lollipop (operating system)">Android 5.0 "Lollipop"</a> is the first version in which ART is the only included runtime.<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">[6]</a></sup></p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Architecture"><span class="tocnumber">1</span> <span class="toctext">Architecture</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Performance"><span class="tocnumber">2</span> <span class="toctext">Performance</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Licensing_and_patents"><span class="tocnumber">3</span> <span class="toctext">Licensing and patents</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#See_also"><span class="tocnumber">4</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#References"><span class="tocnumber">5</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#External_links"><span class="tocnumber">6</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Architecture">Architecture</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Dalvik_(software)&amp;action=edit&amp;section=1" title="Edit section: Architecture">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright">
+<div class="thumbinner" style="width:402px;"><a href="https://en.wikipedia.org/wiki/File:ART_view.png" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/2/25/ART_view.png/400px-ART_view.png" width="400" height="364" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/2/25/ART_view.png/600px-ART_view.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/2/25/ART_view.png/800px-ART_view.png 2x" data-file-width="2810" data-file-height="2560" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="https://en.wikipedia.org/wiki/File:ART_view.png" class="internal" title="Enlarge"></a></div>
+A comparison of Dalvik and <a href="https://en.wikipedia.org/wiki/Android_Runtime" title="Android Runtime">ART</a> architectures</div>
+</div>
+</div>
+<p>Unlike <a href="Java_Virtual_Machine.html" class="mw-redirect" title="Java Virtual Machine">Java VMs</a>, which are <a href="https://en.wikipedia.org/wiki/Stack_machine" title="Stack machine">stack machines</a>, the Dalvik VM uses a <a href="https://en.wikipedia.org/wiki/Register_machine" title="Register machine">register-based architecture</a> that requires fewer, typically more complex, virtual machine instructions. Dalvik programs are written in Java using the Android <a href="https://en.wikipedia.org/wiki/Application_programming_interface" title="Application programming interface">application programming interface</a> (API), compiled to Java bytecode, and converted to Dalvik instructions as necessary.</p>
+<p>A tool called <b>dx</b> is used to convert Java <a href="Class_(file_format).html" class="mw-redirect" title="Class (file format)">.class</a> files into the .dex format. Multiple <a href="https://en.wikipedia.org/wiki/Class_(computer_science)" class="mw-redirect" title="Class (computer science)">classes</a> are included in a single .dex file. Duplicate <a href="https://en.wikipedia.org/wiki/String_(computer_science)" title="String (computer science)">strings</a> and other constants used in multiple class files are included only once in the .dex output to conserve space. Java <a href="https://en.wikipedia.org/wiki/Bytecode" title="Bytecode">bytecode</a> is also converted into an alternative <a href="https://en.wikipedia.org/wiki/Instruction_set" title="Instruction set">instruction set</a> used by the Dalvik VM. An uncompressed .dex file is typically a few percent smaller in size than a <a href="https://en.wikipedia.org/wiki/Data_compression" title="Data compression">compressed</a> <a href="JAR_(file_format).html" title="JAR (file format)">Java archive</a> (JAR) derived from the same .class files.<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">[7]</a></sup></p>
+<p>The Dalvik executables may be modified again when installed onto a mobile device. In order to gain further <a href="https://en.wikipedia.org/wiki/Optimization_(computer_science)" class="mw-redirect" title="Optimization (computer science)">optimizations</a>, <a href="https://en.wikipedia.org/wiki/Endianness" title="Endianness">byte order</a> may be swapped in certain data, simple <a href="https://en.wikipedia.org/wiki/Data_structure" title="Data structure">data structures</a> and <a href="https://en.wikipedia.org/wiki/Function_(computer_science)" class="mw-redirect" title="Function (computer science)">function</a> <a href="https://en.wikipedia.org/wiki/Library_(computing)" title="Library (computing)">libraries</a> may be <a href="https://en.wikipedia.org/wiki/Linker_(computing)" title="Linker (computing)">linked</a> <a href="https://en.wikipedia.org/wiki/Inline_function" title="Inline function">inline</a>, and empty class objects may be short-circuited, for example.</p>
+<p>Being optimized for low memory requirements, Dalvik has some specific characteristics that differentiate it from other standard VMs:<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">[8]</a></sup></p>
+<ul>
+<li>The VM was slimmed down to use less space.</li>
+<li>The <a href="Class_(file_format).html#The_constant_pool" class="mw-redirect" title="Class (file format)">constant pool</a> has been modified to use only <a href="https://en.wikipedia.org/wiki/32-bit" title="32-bit">32-bit</a> indices to simplify the <a href="https://en.wikipedia.org/wiki/Interpreter_(computing)" title="Interpreter (computing)">interpreter</a>.</li>
+<li>Standard <a href="Java_bytecode.html" title="Java bytecode">Java bytecode</a> executes <a href="https://en.wikipedia.org/wiki/8-bit" title="8-bit">8-bit</a> stack instructions. Local variables must be copied to or from the operand stack by separate instructions. Dalvik instead uses its own <a href="https://en.wikipedia.org/wiki/16-bit" title="16-bit">16-bit</a> instruction set that works directly on local variables. The local variable is commonly picked by a <a href="https://en.wikipedia.org/wiki/4-bit" title="4-bit">4-bit</a> "virtual register" field. This lowers Dalvik's instruction count and raises its interpreter speed.</li>
+</ul>
+<p>According to Google, the design of Dalvik permits a device to run multiple instances of the VM efficiently.<sup id="cite_ref-9" class="reference"><a href="#cite_note-9">[9]</a></sup></p>
+<p><a href="https://en.wikipedia.org/wiki/Froyo_(operating_system)" class="mw-redirect" title="Froyo (operating system)">Android 2.2 "Froyo"</a> brought <a href="https://en.wikipedia.org/wiki/Tracing_just-in-time_compilation" title="Tracing just-in-time compilation">trace-based just-in-time (JIT) compilation</a> into Dalvik, optimizing the execution of applications by continually <a href="https://en.wikipedia.org/wiki/Profiling_(computer_programming)" title="Profiling (computer programming)">profiling</a> applications each time they run and dynamically <a href="https://en.wikipedia.org/wiki/Compiler_(computing)" class="mw-redirect" title="Compiler (computing)">compiling</a> frequently executed short segments of their bytecode into native <a href="https://en.wikipedia.org/wiki/Machine_code" title="Machine code">machine code</a>. While Dalvik <a href="https://en.wikipedia.org/wiki/Interpreter_(computing)" title="Interpreter (computing)">interprets</a> the rest of application's bytecode, native execution of those short bytecode segments, called "traces", provides significant performance improvements.<sup id="cite_ref-10" class="reference"><a href="#cite_note-10">[10]</a></sup><sup id="cite_ref-11" class="reference"><a href="#cite_note-11">[11]</a></sup><sup id="cite_ref-12" class="reference"><a href="#cite_note-12">[12]</a></sup></p>
+<h2><span class="mw-headline" id="Performance">Performance</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Dalvik_(software)&amp;action=edit&amp;section=2" title="Edit section: Performance">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright">
+<div class="thumbinner" style="width:222px;"><a href="https://en.wikipedia.org/wiki/File:Motorola_RAZR_XT910.jpg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Motorola_RAZR_XT910.jpg/220px-Motorola_RAZR_XT910.jpg" width="220" height="249" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Motorola_RAZR_XT910.jpg/330px-Motorola_RAZR_XT910.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Motorola_RAZR_XT910.jpg/440px-Motorola_RAZR_XT910.jpg 2x" data-file-width="2501" data-file-height="2835" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="https://en.wikipedia.org/wiki/File:Motorola_RAZR_XT910.jpg" class="internal" title="Enlarge"></a></div>
+A Dalvik-powered phone</div>
+</div>
+</div>
+<p>The relative merits of <a href="https://en.wikipedia.org/wiki/Stack_machine" title="Stack machine">stack machines</a> versus <a href="https://en.wikipedia.org/wiki/Register_machine" title="Register machine">register</a>-based approaches are a subject of ongoing debate.<sup id="cite_ref-13" class="reference"><a href="#cite_note-13">[13]</a></sup></p>
+<p>Generally, stack-based machines must use <a href="https://en.wikipedia.org/wiki/Instruction_(computer_science)" class="mw-redirect" title="Instruction (computer science)">instructions</a> to load data on the stack and manipulate that data, and, thus, require more instructions than register machines to implement the same <a href="https://en.wikipedia.org/wiki/High-level_programming_language" title="High-level programming language">high level code</a>, but the instructions in a register machine must encode the source and destination registers and, therefore, tend to be larger. This difference is of importance to VM interpreters, for which <a href="https://en.wikipedia.org/wiki/Opcode" title="Opcode">opcode</a> dispatch tends to be expensive, along with other factors similarly relevant to <a href="https://en.wikipedia.org/wiki/Just-in-time_compilation" title="Just-in-time compilation">just-in-time compilation</a>.</p>
+<p>Tests performed on <a href="https://en.wikipedia.org/wiki/ARM_architecture" title="ARM architecture">ARMv7</a> devices in 2010 by <a href="https://en.wikipedia.org/wiki/Oracle_Corporation" title="Oracle Corporation">Oracle</a> (owner of the Java technology) with standard non-graphical Java benchmarks showed the <a href="HotSpot.html" title="HotSpot">HotSpot</a> VM of <a href="Embedded_Java.html#Java_SE_embedded" title="Embedded Java">Java SE embedded</a> to be two to three times faster than the <a href="https://en.wikipedia.org/wiki/JIT_compiler" class="mw-redirect" title="JIT compiler">JIT</a>-based Dalvik VM of <a href="https://en.wikipedia.org/wiki/Android_version_history#2.2_Froyo" title="Android version history">Android 2.2</a> (the initial Android release that included a JIT compiler).<sup id="cite_ref-14" class="reference"><a href="#cite_note-14">[14]</a></sup> In 2012, academic benchmarks confirmed the factor of 3 between <a href="HotSpot.html" title="HotSpot">HotSpot</a> and Dalvik on the same Android board, also noting that Dalvik code was not smaller than Hotspot.<sup id="cite_ref-15" class="reference"><a href="#cite_note-15">[15]</a></sup></p>
+<p>Furthermore, as of March 2014<sup class="plainlinks noprint asof-tag update" style="display:none;"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Dalvik_(software)&amp;action=edit">[update]</a></sup>, benchmarks performed on an Android device still show up to a factor 100 between native applications and a Dalvik application on the same Android device.<sup id="cite_ref-16" class="reference"><a href="#cite_note-16">[16]</a></sup><sup class="noprint Inline-Template" style="white-space:nowrap;">[<i><a href="https://en.wikipedia.org/wiki/Wikipedia:No_original_research" title="Wikipedia:No original research"><span title="The material near this tag possibly contains original research. (June 2014)">original research?</span></a></i>]</sup><sup class="noprint Inline-Template" style="white-space:nowrap;">[<i><a href="https://en.wikipedia.org/wiki/Wikipedia:No_original_research#Synthesis_of_published_material" title="Wikipedia:No original research"><span title="The material near this tag may be based upon an improper synthesis of sources. (June 2014)">improper synthesis?</span></a></i>]</sup> Upon running benchmarks using the early interpreter of 2009, both <a href="Java_Native_Interface.html" title="Java Native Interface">Java Native Interface</a> (JNI) and native code showed an order of magnitude speedup.<sup id="cite_ref-17" class="reference"><a href="#cite_note-17">[17]</a></sup></p>
+<h2><span class="mw-headline" id="Licensing_and_patents">Licensing and patents</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Dalvik_(software)&amp;action=edit&amp;section=3" title="Edit section: Licensing and patents">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div role="note" class="hatnote">Main article: <a href="https://en.wikipedia.org/wiki/Oracle_v._Google" class="mw-redirect" title="Oracle v. Google">Oracle v. Google</a></div>
+<p>Dalvik is published under the terms of the <a href="https://en.wikipedia.org/wiki/Apache_License" title="Apache License">Apache License</a> 2.0.<sup id="cite_ref-18" class="reference"><a href="#cite_note-18">[18]</a></sup> Google says that Dalvik is a <a href="https://en.wikipedia.org/wiki/Clean_room_design" title="Clean room design">clean-room</a> implementation rather than a development on top of a standard Java runtime, which would mean it does not inherit copyright-based license restrictions from either the standard-edition or open-source-edition Java runtimes.<sup id="cite_ref-19" class="reference"><a href="#cite_note-19">[19]</a></sup> <a href="https://en.wikipedia.org/wiki/Oracle_Corporation" title="Oracle Corporation">Oracle</a> and some reviewers dispute this.<sup id="cite_ref-20" class="reference"><a href="#cite_note-20">[20]</a></sup></p>
+<p>On August 12, 2010, <a href="https://en.wikipedia.org/wiki/Oracle_Corporation" title="Oracle Corporation">Oracle</a>, which acquired <a href="https://en.wikipedia.org/wiki/Sun_Microsystems" title="Sun Microsystems">Sun Microsystems</a> in April 2009 and therefore owns the rights to Java, sued Google over claimed infringement of copyrights and patents. Oracle alleged that Google, in developing Android, knowingly, directly and repeatedly infringed Oracle's Java-related intellectual property.<sup id="cite_ref-21" class="reference"><a href="#cite_note-21">[21]</a></sup><sup id="cite_ref-22" class="reference"><a href="#cite_note-22">[22]</a></sup><sup id="cite_ref-23" class="reference"><a href="#cite_note-23">[23]</a></sup> In May 2012, the jury in this case found that Google did not infringe on Oracle's patents, and the trial judge ruled that the structure of the Java APIs used by Google was not copyrightable.<sup id="cite_ref-24" class="reference"><a href="#cite_note-24">[24]</a></sup><sup id="cite_ref-25" class="reference"><a href="#cite_note-25">[25]</a></sup> The parties agreed to zero dollars in <a href="https://en.wikipedia.org/wiki/Statutory_damages" title="Statutory damages">statutory damages</a> for 9 lines of copied code.<sup id="cite_ref-damages_26-0" class="reference"><a href="#cite_note-damages-26">[26]</a></sup><sup id="cite_ref-nine_lines_of_code_27-0" class="reference"><a href="#cite_note-nine_lines_of_code-27">[27]</a></sup></p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Dalvik_(software)&amp;action=edit&amp;section=4" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div role="navigation" aria-label="Portals" class="noprint portal plainlist tright" style="margin:0.5em 0 0.5em 1em;border:solid #aaa 1px">
+<ul style="display:table;box-sizing:border-box;padding:0.1em;max-width:175px;background:#f9f9f9;font-size:85%;line-height:110%;font-style:italic;font-weight:bold">
+<li style="display:table-row"><span style="display:table-cell;padding:0.2em;vertical-align:middle;text-align:center"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_(2009).svg/28px-Free_and_open-source_software_logo_(2009).svg.png" width="28" height="28" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/42px-Free_and_open-source_software_logo_%282009%29.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/56px-Free_and_open-source_software_logo_%282009%29.svg.png 2x" data-file-width="512" data-file-height="512" /></span><span style="display:table-cell;padding:0.2em 0.2em 0.2em 0.3em;vertical-align:middle"><a href="https://en.wikipedia.org/wiki/Portal:Free_software" class="mw-redirect" title="Portal:Free software">Free software portal</a></span></li>
+</ul>
+</div>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Android_software_development" title="Android software development">Android software development</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Application_virtualization" title="Application virtualization">Application virtualization</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Comparison_of_application_virtual_machines" class="mw-redirect" title="Comparison of application virtual machines">Comparison of application virtual machines</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Comparison_of_Java_and_Android_API" title="Comparison of Java and Android API">Comparison of Java and Android API</a></li>
+<li><a href="https://en.wikipedia.org/wiki/JEB_decompiler" title="JEB decompiler">JEB decompiler</a> – a Dalvik (DEX and APK) decompiler</li>
+<li><a href="https://en.wikipedia.org/wiki/Dalvik_Turbo_virtual_machine" title="Dalvik Turbo virtual machine">Dalvik Turbo virtual machine</a> – a proprietary alternative Dalvik implementation</li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Dalvik_(software)&amp;action=edit&amp;section=5" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist columns references-column-width" style="-moz-column-width: 30em; -webkit-column-width: 30em; column-width: 30em; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://source.android.com/devices/tech/dalvik/gc-debug.html">"Debugging ART Garbage Collection"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">6 October</span> 2015</span>. <q>The Dalvik runtime is no longer maintained or available [in latest versions of Android] and its byte-code format is now used by ART.</q></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADalvik+%28software%29&amp;rft.btitle=Debugging+ART+Garbage+Collection&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fsource.android.com%2Fdevices%2Ftech%2Fdalvik%2Fgc-debug.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://uke.livejournal.com/25660.html">Journal entry</a> referencing the source of the name</span></li>
+<li id="cite_note-onlamp-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-onlamp_3-0">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.onlamp.com/pub/a/onlamp/2007/11/12/google-calling-inside-the-gphone-sdk.html">"Google Calling: Inside Android, the gPhone SDK"</a>. <i>onlamp.com</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2008-02-05</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADalvik+%28software%29&amp;rft.atitle=Google+Calling%3A+Inside+Android%2C+the+gPhone+SDK&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.onlamp.com%2Fpub%2Fa%2Fonlamp%2F2007%2F11%2F12%2Fgoogle-calling-inside-the-gphone-sdk.html&amp;rft.jtitle=onlamp.com&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><cite class="citation web">Sean Buckley (2013-11-06). <a rel="nofollow" class="external text" href="http://www.engadget.com/2013/11/06/new-android-runtime-could-improve-battery-life/">"<span style="padding-left:0.2em;">'</span>ART' experiment in Android KitKat improves battery life and speeds up apps"</a>. <a href="https://en.wikipedia.org/wiki/Engadget" title="Engadget">Engadget</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2014-07-05</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADalvik+%28software%29&amp;rft.au=Sean+Buckley&amp;rft.btitle=%27ART%27+experiment+in+Android+KitKat+improves+battery+life+and+speeds+up+apps&amp;rft.date=2013-11-06&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.engadget.com%2F2013%2F11%2F06%2Fnew-android-runtime-could-improve-battery-life%2F&amp;rft.pub=Engadget&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><cite class="citation web">Daniel P. (2013-11-07). <a rel="nofollow" class="external text" href="http://www.phonearena.com/news/Experimental-Google-ART-runtime-in-Android-KitKat-can-bring-twice-faster-app-executions_id49139">"Experimental Google ART runtime in Android KitKat can bring twice faster app executions"</a>. <i>phonearena.com</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2014-07-05</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADalvik+%28software%29&amp;rft.atitle=Experimental+Google+ART+runtime+in+Android+KitKat+can+bring+twice+faster+app+executions&amp;rft.au=Daniel+P.&amp;rft.date=2013-11-07&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.phonearena.com%2Fnews%2FExperimental-Google-ART-runtime-in-Android-KitKat-can-bring-twice-faster-app-executions_id49139&amp;rft.jtitle=phonearena.com&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><cite class="citation web">Brad Linder (October 15, 2014). <a rel="nofollow" class="external text" href="http://liliputing.com/2014/10/whats-new-android-5-0-lollipop.html">"What's new in Android 5.0 Lollipop?"</a>. <i>liliputing.com</i><span class="reference-accessdate">. Retrieved <span class="nowrap">October 15,</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADalvik+%28software%29&amp;rft.atitle=What%27s+new+in+Android+5.0+Lollipop%3F&amp;rft.au=Brad+Linder&amp;rft.date=2014-10-15&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fliliputing.com%2F2014%2F10%2Fwhats-new-android-5-0-lollipop.html&amp;rft.jtitle=liliputing.com&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><cite class="citation web">Bornstein, Dan (2008-05-29). <a rel="nofollow" class="external text" href="http://sites.google.com/site/io/dalvik-vm-internals/2008-05-29-Presentation-Of-Dalvik-VM-Internals.pdf?attredirects=0">"Presentation of Dalvik VM Internals"</a> <span style="font-size:85%;">(PDF)</span>. Google. p.&#160;22<span class="reference-accessdate">. Retrieved <span class="nowrap">2010-08-16</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADalvik+%28software%29&amp;rft.aufirst=Dan&amp;rft.aulast=Bornstein&amp;rft.btitle=Presentation+of+Dalvik+VM+Internals&amp;rft.date=2008-05-29&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fsites.google.com%2Fsite%2Fio%2Fdalvik-vm-internals%2F2008-05-29-Presentation-Of-Dalvik-VM-Internals.pdf%3Fattredirects%3D0&amp;rft.pages=22&amp;rft.pub=Google&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><cite class="citation web">Rose, John (2008-05-31). <a rel="nofollow" class="external text" href="http://blogs.sun.com/jrose/entry/with_android_and_dalvik_at">"with Android and Dalvik at Google I/O"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2008-06-08</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADalvik+%28software%29&amp;rft.aufirst=John&amp;rft.aulast=Rose&amp;rft.btitle=with+Android+and+Dalvik+at+Google+I%2FO&amp;rft.date=2008-05-31&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fblogs.sun.com%2Fjrose%2Fentry%2Fwith_android_and_dalvik_at&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><cite class="citation web">Google (2009-04-13). <a rel="nofollow" class="external text" href="http://developer.android.com/guide/basics/what-is-android.html">"What is Android?"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2009-04-19</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADalvik+%28software%29&amp;rft.au=Google&amp;rft.btitle=What+is+Android%3F&amp;rft.date=2009-04-13&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fdeveloper.android.com%2Fguide%2Fbasics%2Fwhat-is-android.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><cite class="citation web">Ben Cheng; Bill Buzbee (May 2010). <a rel="nofollow" class="external text" href="http://www.android-app-developer.co.uk/android-app-development-docs/android-jit-compiler-androids-dalvik-vm.pdf">"A JIT Compiler for Android's Dalvik VM"</a> <span style="font-size:85%;">(PDF)</span>. <i>android-app-developer.co.uk</i>. <a href="https://en.wikipedia.org/wiki/Google" title="Google">Google</a>. pp.&#160;5–14<span class="reference-accessdate">. Retrieved <span class="nowrap">March 18,</span> 2015</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADalvik+%28software%29&amp;rft.atitle=A+JIT+Compiler+for+Android%27s+Dalvik+VM&amp;rft.au=Ben+Cheng&amp;rft.au=Bill+Buzbee&amp;rft.date=2010-05&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.android-app-developer.co.uk%2Fandroid-app-development-docs%2Fandroid-jit-compiler-androids-dalvik-vm.pdf&amp;rft.jtitle=android-app-developer.co.uk&amp;rft.pages=5-14&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text"><cite class="citation web">Phil Nickinson (May 26, 2010). <a rel="nofollow" class="external text" href="http://www.androidcentral.com/google-android-developer-explains-more-about-dalvik-and-jit-froyo">"Google Android developer explains more about Dalvik and the JIT in Froyo"</a>. <i>androidcentral.com</i><span class="reference-accessdate">. Retrieved <span class="nowrap">July 8,</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADalvik+%28software%29&amp;rft.atitle=Google+Android+developer+explains+more+about+Dalvik+and+the+JIT+in+Froyo&amp;rft.au=Phil+Nickinson&amp;rft.date=2010-05-26&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.androidcentral.com%2Fgoogle-android-developer-explains-more-about-dalvik-and-jit-froyo&amp;rft.jtitle=androidcentral.com&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.androidpolice.com/2010/05/11/exclusive-androidpolice-coms-nexus-one-is-running-android-2-2-froyo-how-fast-is-it-compared-to-2-1-oh-only-about-450-faster/">"Nexus One Is Running Android 2.2 Froyo. How Fast Is It Compared To 2.1? Oh, Only About 450% Faster"</a>. 2010-05-13<span class="reference-accessdate">. Retrieved <span class="nowrap">2010-05-21</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADalvik+%28software%29&amp;rft.btitle=Nexus+One+Is+Running+Android+2.2+Froyo.+How+Fast+Is+It+Compared+To+2.1%3F+Oh%2C+Only+About+450%25+Faster&amp;rft.date=2010-05-13&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.androidpolice.com%2F2010%2F05%2F11%2Fexclusive-androidpolice-coms-nexus-one-is-running-android-2-2-froyo-how-fast-is-it-compared-to-2-1-oh-only-about-450-faster%2F&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-13">^</a></b></span> <span class="reference-text"><cite class="citation web">Shi, Yunhe; Gregg, David; Beatty, Andrew; Ertl, M. Anton (2005-06-11). <a rel="nofollow" class="external text" href="http://www.usenix.org/events/vee05/full_papers/p153-yunhe.pdf">"Virtual Machine Showdown: Stack Versus Registers"</a> <span style="font-size:85%;">(PDF)</span><span class="reference-accessdate">. Retrieved <span class="nowrap">2009-12-22</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADalvik+%28software%29&amp;rft.au=Beatty%2C+Andrew&amp;rft.au=Ertl%2C+M.+Anton&amp;rft.aufirst=Yunhe&amp;rft.au=Gregg%2C+David&amp;rft.aulast=Shi&amp;rft.btitle=Virtual+Machine+Showdown%3A+Stack+Versus+Registers&amp;rft.date=2005-06-11&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.usenix.org%2Fevents%2Fvee05%2Ffull_papers%2Fp153-yunhe.pdf&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-14"><span class="mw-cite-backlink"><b><a href="#cite_ref-14">^</a></b></span> <span class="reference-text"><cite class="citation web">Vandette, Bob (2010-11-22). <a rel="nofollow" class="external text" href="http://blogs.oracle.com/javaseembedded/entry/how_does_android_22s_performance_stack_up_against_java_se_embedded">"Java SE Embedded Performance Versus Android 2.2"</a>. <a href="https://en.wikipedia.org/wiki/Oracle_Corporation" title="Oracle Corporation">Oracle Corporation</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2011-09-04</span></span>. <q>The results show that although Androids new JIT is an improvement over its interpreter only implementation, Android is still lagging behind the performance of our Hotspot enabled Java SE Embedded. As you can see from the above results, Java SE Embedded can execute Java bytecodes from 2 to 3 times faster than Android 2.2.</q></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADalvik+%28software%29&amp;rft.aufirst=Bob&amp;rft.aulast=Vandette&amp;rft.btitle=Java+SE+Embedded+Performance+Versus+Android+2.2&amp;rft.date=2010-11-22&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fblogs.oracle.com%2Fjavaseembedded%2Fentry%2Fhow_does_android_22s_performance_stack_up_against_java_se_embedded&amp;rft.pub=Oracle+Corporation&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-15">^</a></b></span> <span class="reference-text"><cite class="citation web">Hyeong-Seok Oh; Beom-Jun Kim; Hyung-Kyu Choi; Soo-Mook Moon (2012). <a rel="nofollow" class="external text" href="http://dl.acm.org/citation.cfm?id=2388956">"Evaluation of Android Dalvik virtual machine"</a>. <a href="https://en.wikipedia.org/wiki/Association_for_Computing_Machinery" title="Association for Computing Machinery">Association for Computing Machinery</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2014-03-23</span></span>. <q>In the JITC mode, however, Dakvik is slower than HotSpot by more than 2.9 times and its generated code size is not smaller than HotSpot's due to its worse code quality and trace-chaining code.</q></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADalvik+%28software%29&amp;rft.au=Beom-Jun+Kim&amp;rft.au=Hyeong-Seok+Oh&amp;rft.au=Hyung-Kyu+Choi&amp;rft.au=Soo-Mook+Moon&amp;rft.btitle=Evaluation+of+Android+Dalvik+virtual+machine&amp;rft.date=2012&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fdl.acm.org%2Fcitation.cfm%3Fid%3D2388956&amp;rft.pub=Association+for+Computing+Machinery&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-16"><span class="mw-cite-backlink"><b><a href="#cite_ref-16">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.eembc.org/andebench/">"Top AndEBench Scores"</a>. www.eembc.org<span class="reference-accessdate">. Retrieved <span class="nowrap">2014-03-23</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADalvik+%28software%29&amp;rft.btitle=Top+AndEBench+Scores&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.eembc.org%2Fandebench%2F&amp;rft.pub=www.eembc.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-17"><span class="mw-cite-backlink"><b><a href="#cite_ref-17">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://link.springer.com/chapter/10.1007%2F978-3-642-01802-2_28">"Developing and Benchmarking Native Linux Applications on Android"</a>. <i>Lecture Notes of the Institute for Computer Sciences, Social Informatics and Telecommunications Engineering</i>. <a href="https://en.wikipedia.org/wiki/Springer_Publishing" title="Springer Publishing">Springer Publishing</a>. 2009-04-29<span class="reference-accessdate">. Retrieved <span class="nowrap">2014-03-23</span></span>. <q>The results show that native C applications can be up to 30 times as fast as an identical algorithm running in Dalvik VM. Java applications can become a speed-up of up to 10 times if utilizing JNI.</q></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADalvik+%28software%29&amp;rft.atitle=Developing+and+Benchmarking+Native+Linux+Applications+on+Android&amp;rft.date=2009-04-29&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Flink.springer.com%2Fchapter%2F10.1007%252F978-3-642-01802-2_28&amp;rft.jtitle=Lecture+Notes+of+the+Institute+for+Computer+Sciences%2C+Social+Informatics+and+Telecommunications+Engineering&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-18"><span class="mw-cite-backlink"><b><a href="#cite_ref-18">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://web.archive.org/web/20090417091524/http://android.git.kernel.org:80/?p=platform/dalvik.git">"Downloading the Source Tree - Android Open Source"</a>. Android.git.kernel.org. Archived from <a rel="nofollow" class="external text" href="http://android.git.kernel.org/?p=platform/dalvik.git;a=blob_plain;f=NOTICE;hb=HEAD">the original</a> on 2009-04-17<span class="reference-accessdate">. Retrieved <span class="nowrap">2012-06-07</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADalvik+%28software%29&amp;rft.btitle=Downloading+the+Source+Tree+-+Android+Open+Source&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fandroid.git.kernel.org%2F%3Fp%3Dplatform%2Fdalvik.git%3Ba%3Dblob_plain%3Bf%3DNOTICE%3Bhb%3DHEAD&amp;rft.pub=Android.git.kernel.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-19"><span class="mw-cite-backlink"><b><a href="#cite_ref-19">^</a></b></span> <span class="reference-text"><cite class="citation web">Stefano Mazzocchi (2007-11-12). <a rel="nofollow" class="external text" href="https://web.archive.org/web/20110225035845/http://www.betaversion.org:80/~stefano/linotype/news/110/">"Dalvik: how Google routed around Sun's IP-based licensing restrictions on Java ME"</a>. Archived from <a rel="nofollow" class="external text" href="http://www.betaversion.org/~stefano/linotype/news/110/">the original</a> on 2011-02-25<span class="reference-accessdate">. Retrieved <span class="nowrap">2010-08-16</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADalvik+%28software%29&amp;rft.au=Stefano+Mazzocchi&amp;rft.btitle=Dalvik%3A+how+Google+routed+around+Sun%99s+IP-based+licensing+restrictions+on+Java+ME&amp;rft.date=2007-11-12&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.betaversion.org%2F~stefano%2Flinotype%2Fnews%2F110%2F&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-20"><span class="mw-cite-backlink"><b><a href="#cite_ref-20">^</a></b></span> <span class="reference-text"><cite class="citation web">Ed Bott (September 8, 2011). <a rel="nofollow" class="external text" href="http://www.zdnet.com/blog/bott/the-real-history-of-java-and-android-as-told-by-google/3924">"The real history of Java and Android, as told by Google"</a>. <a href="https://en.wikipedia.org/wiki/ZDNet" title="ZDNet">ZDNet</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2011-11-27</span></span>. <q><i>The definition of a “clean room” implementation is that the engineers writing the code have no direct exposure to the original, copyrighted material, including code, specifications, and other documentation. That’s a problem for Google, as I noted in yesterday’s post, because there is substantial evidence that the engineers working on the project had direct access to the copyrighted material.</i></q></cite> <span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADalvik+%28software%29&amp;rft.au=Ed+Bott&amp;rft.btitle=The+real+history+of+Java+and+Android%2C+as+told+by+Google&amp;rft.date=2011-09-08&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.zdnet.com%2Fblog%2Fbott%2Fthe-real-history-of-java-and-android-as-told-by-google%2F3924&amp;rft.pub=ZDNet&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-21"><span class="mw-cite-backlink"><b><a href="#cite_ref-21">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.digitaltrends.com/mobile/oracle-sues-google-over-java-in-android-devices/">"Oracle Sues Google Over Java in Android Devices"</a>. digitaltrends.com. 2010-08-13<span class="reference-accessdate">. Retrieved <span class="nowrap">2011-08-08</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADalvik+%28software%29&amp;rft.btitle=Oracle+Sues+Google+Over+Java+in+Android+Devices&amp;rft.date=2010-08-13&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.digitaltrends.com%2Fmobile%2Foracle-sues-google-over-java-in-android-devices%2F&amp;rft.pub=digitaltrends.com&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-22"><span class="mw-cite-backlink"><b><a href="#cite_ref-22">^</a></b></span> <span class="reference-text"><cite class="citation web">James Niccolai (2010-08-12). <a rel="nofollow" class="external text" href="http://www.computerworld.com/s/article/9180678/Update_Oracle_sues_Google_over_Java_use_in_Android?taxonomyId=13">"Oracle sues Google over Java use in Android"</a>. <i><a href="https://en.wikipedia.org/wiki/Computerworld" title="Computerworld">Computerworld</a></i><span class="reference-accessdate">. Retrieved <span class="nowrap">2010-08-13</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADalvik+%28software%29&amp;rft.atitle=Oracle+sues+Google+over+Java+use+in+Android&amp;rft.au=James+Niccolai&amp;rft.date=2010-08-12&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.computerworld.com%2Fs%2Farticle%2F9180678%2FUpdate_Oracle_sues_Google_over_Java_use_in_Android%3FtaxonomyId%3D13&amp;rft.jtitle=Computerworld&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-23"><span class="mw-cite-backlink"><b><a href="#cite_ref-23">^</a></b></span> <span class="reference-text"><cite class="citation web">Mark Hachman (2010-08-13). <a rel="nofollow" class="external text" href="http://www.pcmag.com/article2/0,2817,2367761,00.asp">"Oracle Sues Google Over Android Java Use"</a>. <i><a href="https://en.wikipedia.org/wiki/PC_Magazine" title="PC Magazine">PC Magazine</a></i>. <a href="https://en.wikipedia.org/wiki/Ziff_Davis" title="Ziff Davis">Ziff Davis</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADalvik+%28software%29&amp;rft.atitle=Oracle+Sues+Google+Over+Android+Java+Use&amp;rft.au=Mark+Hachman&amp;rft.date=2010-08-13&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.pcmag.com%2Farticle2%2F0%2C2817%2C2367761%2C00.asp&amp;rft.jtitle=PC+Magazine&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-24"><span class="mw-cite-backlink"><b><a href="#cite_ref-24">^</a></b></span> <span class="reference-text"><cite class="citation web">Josh Lowensohn (May 23, 2012). <a rel="nofollow" class="external text" href="http://www.zdnet.com/blog/btl/jury-clears-google-of-infringing-on-oracle-patents/77897">"Jury clears Google of infringing on Oracle's patents"</a>. <i>ZDNet</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2012-05-25</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADalvik+%28software%29&amp;rft.atitle=Jury+clears+Google+of+infringing+on+Oracle%27s+patents&amp;rft.au=Josh+Lowensohn&amp;rft.date=2012-05-23&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.zdnet.com%2Fblog%2Fbtl%2Fjury-clears-google-of-infringing-on-oracle-patents%2F77897&amp;rft.jtitle=ZDNet&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-25"><span class="mw-cite-backlink"><b><a href="#cite_ref-25">^</a></b></span> <span class="reference-text"><cite class="citation web">Joe Mullin (May 31, 2012). <a rel="nofollow" class="external text" href="http://arstechnica.com/tech-policy/2012/05/google-wins-crucial-api-ruling-oracles-case-decimated/">"Google wins crucial API ruling, Oracle's case decimated"</a>. <i>Ars Technica</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2012-06-01</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADalvik+%28software%29&amp;rft.atitle=Google+wins+crucial+API+ruling%2C+Oracle%99s+case+decimated&amp;rft.au=Joe+Mullin&amp;rft.date=2012-05-31&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Farstechnica.com%2Ftech-policy%2F2012%2F05%2Fgoogle-wins-crucial-api-ruling-oracles-case-decimated%2F&amp;rft.jtitle=Ars+Technica&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-damages-26"><span class="mw-cite-backlink"><b><a href="#cite_ref-damages_26-0">^</a></b></span> <span class="reference-text"><cite class="citation web">Niccolai, James (June 20, 2012). <a rel="nofollow" class="external text" href="http://www.computerworld.com/s/article/9228298/Oracle_agrees_to_zero_damages_in_Google_lawsuit_eyes_appeal">"Oracle agrees to 'zero' damages in Google lawsuit, eyes appeal"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2012-06-23</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADalvik+%28software%29&amp;rft.aufirst=James&amp;rft.aulast=Niccolai&amp;rft.btitle=Oracle+agrees+to+%27zero%27+damages+in+Google+lawsuit%2C+eyes+appeal&amp;rft.date=2012-06-20&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.computerworld.com%2Fs%2Farticle%2F9228298%2FOracle_agrees_to_zero_damages_in_Google_lawsuit_eyes_appeal&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-nine_lines_of_code-27"><span class="mw-cite-backlink"><b><a href="#cite_ref-nine_lines_of_code_27-0">^</a></b></span> <span class="reference-text"><cite class="citation web">Adam Outler (May 16, 2012). <a rel="nofollow" class="external text" href="http://www.xda-developers.com/android/update-on-the-oracle-versus-google-trial/">"Update on the Oracle Versus Google Trial"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2013-01-18</span></span>. <q><i>A major portion of the Oracle’s claims are based on 9 lines of code contained within Java.Util.Arrays.rangeCheck(). Here is the code in question:...</i></q></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADalvik+%28software%29&amp;rft.au=Adam+Outler&amp;rft.btitle=Update+on+the+Oracle+Versus+Google+Trial&amp;rft.date=2012-05-16&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.xda-developers.com%2Fandroid%2Fupdate-on-the-oracle-versus-google-trial%2F&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Dalvik_(software)&amp;action=edit&amp;section=6" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="https://source.android.com/devices/tech/dalvik/dalvik-bytecode.html">Dalvik bytecode</a> – official Android documentation of the <a href="https://en.wikipedia.org/wiki/Instruction_set" title="Instruction set">instruction set</a></li>
+<li><a rel="nofollow" class="external text" href="https://source.android.com/devices/tech/dalvik/dex-format.html">Dex Executable format</a> – official Android documentation</li>
+<li><a rel="nofollow" class="external text" href="https://www.youtube.com/watch?v=Ls0tM-c4Vfo"><span class="plainlinks">A JIT Compiler for Android's Dalvik VM</span></a> on <a href="https://en.wikipedia.org/wiki/YouTube" title="YouTube">YouTube</a>, Google I/O 2010, by Ben Cheng and Bill Buzbee</li>
+<li><a rel="nofollow" class="external text" href="http://sites.google.com/site/io/dalvik-vm-internals">Dalvik VM Internals</a>, Google I/O 2008, by Dan Bornstein</li>
+<li><a rel="nofollow" class="external text" href="http://johnkoenig.com/the-800-million-dollar-question-whats-the-difference-between-trademark-and-copyright/">The $800 Million Dollar Question: What’s the Difference Between Trademark and Copyright?</a></li>
+</ul>
+<div role="navigation" class="navbox" aria-labelledby="Android" style="padding:3px">
+<table class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit">
+<tr>
+<th scope="col" class="navbox-title" colspan="3">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="https://en.wikipedia.org/wiki/Template:Android" title="Template:Android"><abbr title="View this template" style=";;background:none transparent;border:none;">v</abbr></a></li>
+<li class="nv-talk"><a href="https://en.wikipedia.org/wiki/Template_talk:Android" title="Template talk:Android"><abbr title="Discuss this template" style=";;background:none transparent;border:none;">t</abbr></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Android&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;">e</abbr></a></li>
+</ul>
+</div>
+<div id="Android" style="font-size:114%"><a href="https://en.wikipedia.org/wiki/Android_(operating_system)" title="Android (operating system)">Android</a></div>
+</th>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Category:Android_(operating_system)_development_software" title="Category:Android (operating system) development software">Development</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Android_application_package" title="Android application package">Android application package</a> (APK)</li>
+<li><a href="https://en.wikipedia.org/wiki/Android_Debug_Bridge" class="mw-redirect" title="Android Debug Bridge">Android Debug Bridge</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Android_Open_Accessory_Development_Kit" class="mw-redirect" title="Android Open Accessory Development Kit">Android Open Accessory Development Kit</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Android_Open_Source_Project" class="mw-redirect" title="Android Open Source Project">Android Open Source Project</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Android_Runtime" title="Android Runtime">Android Runtime</a> (ART)</li>
+<li><a href="https://en.wikipedia.org/wiki/Android_software_development" title="Android software development">Android software development</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Android_Studio" title="Android Studio">Android Studio</a></li>
+<li><a href="https://en.wikipedia.org/wiki/App_Inventor_for_Android" title="App Inventor for Android">App Inventor</a></li>
+<li><strong class="selflink">Dalvik</strong></li>
+<li><a href="https://en.wikipedia.org/wiki/OpenBinder" title="OpenBinder">OpenBinder</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Android_Developer_Challenge" title="Android Developer Challenge">Developer Challenge</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Android_Developer_Lab" title="Android Developer Lab">Developer Lab</a></li>
+<li><a href="Eclipse_(software).html" title="Eclipse (software)">Eclipse</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Google_Developers" title="Google Developers">Google Developers</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Google_I/O" title="Google I/O">Google I/O</a></li>
+<li><a href="https://en.wikipedia.org/wiki/RenderScript" title="RenderScript">RenderScript</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Android_NDK" class="mw-redirect" title="Android NDK">NDK</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Android_SDK" class="mw-redirect" title="Android SDK">SDK</a></li>
+</ul>
+</div>
+</td>
+<td class="navbox-image" rowspan="25" style="width:0%;padding:0px 0px 0px 2px">
+<div><a href="https://en.wikipedia.org/wiki/File:Android_robot_2014.svg" class="image" title="Android logo"><img alt="Android logo" src="http://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Android_robot_2014.svg/100px-Android_robot_2014.svg.png" width="100" height="117" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/db/Android_robot_2014.svg/150px-Android_robot_2014.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/db/Android_robot_2014.svg/200px-Android_robot_2014.svg.png 2x" data-file-width="512" data-file-height="601" /></a></div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Android_version_history" title="Android version history">Releases</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Android_Cupcake" title="Android Cupcake">Cupcake (1.5)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Android_Donut" title="Android Donut">Donut (1.6)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Android_Eclair" title="Android Eclair">Eclair (2.0-2.1)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Android_Froyo" title="Android Froyo">Froyo (2.2)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Android_Gingerbread" title="Android Gingerbread">Gingerbread (2.3)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Android_Honeycomb" title="Android Honeycomb">Honeycomb (3)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Android_Ice_Cream_Sandwich" title="Android Ice Cream Sandwich">Ice Cream Sandwich (4.0)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Android_Jelly_Bean" title="Android Jelly Bean">Jelly Bean (4.1-4.3)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Android_KitKat" title="Android KitKat">KitKat (4.4)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Android_Lollipop" title="Android Lollipop">Lollipop (5)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Android_Marshmallow" title="Android Marshmallow">Marshmallow (6)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Android_Nougat" title="Android Nougat">Nougat (7.0)</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Derivatives</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Android_Auto" title="Android Auto">Android Auto</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Android_Things" title="Android Things">Android Things</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Android_TV" title="Android TV">Android TV</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Android_Wear" title="Android Wear">Android Wear</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Google_Pixel" title="Google Pixel">Google Pixel</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Pixel_(smartphone)" title="Pixel (smartphone)">Pixel &amp; Pixel XL</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Pixel_C" title="Pixel C">Pixel C</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Google_Nexus" title="Google Nexus">Nexus devices</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Nexus_One" title="Nexus One">Nexus One</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Nexus_S" title="Nexus S">Nexus S</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Galaxy_Nexus" title="Galaxy Nexus">Galaxy Nexus</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Nexus_4" title="Nexus 4">Nexus 4</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Nexus_5" title="Nexus 5">Nexus 5</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Nexus_5X" title="Nexus 5X">Nexus 5X</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Nexus_6" title="Nexus 6">Nexus 6</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Nexus_6P" title="Nexus 6P">Nexus 6P</a></li>
+<li>Nexus 7
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Nexus_7_(2012)" title="Nexus 7 (2012)">2012 version</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Nexus_7_(2013)" title="Nexus 7 (2013)">2013 version</a></li>
+</ul>
+</li>
+<li><a href="https://en.wikipedia.org/wiki/Nexus_10" title="Nexus 10">Nexus 10</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Nexus_9" title="Nexus 9">Nexus 9</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Nexus_Q" title="Nexus Q">Nexus Q</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Nexus_Player" title="Nexus Player">Nexus Player</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Google_Experience_device" class="mw-redirect" title="Google Experience device">Google Play<br />
+edition</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/HTC_One_(M7)" title="HTC One (M7)">HTC One (M7)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/HTC_One_(M8)" title="HTC One (M8)">HTC One (M8)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/LG_G_Pad_8.3" title="LG G Pad 8.3">LG G Pad 8.3</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Moto_G_(1st_generation)" title="Moto G (1st generation)">Moto G</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Samsung_Galaxy_S4" title="Samsung Galaxy S4">Samsung Galaxy S4</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sony_Xperia_Z_Ultra" title="Sony Xperia Z Ultra">Sony Xperia Z Ultra</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Customized<br />
+variants</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Android-x86" title="Android-x86">Android-x86</a>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Remix_OS" title="Remix OS">Remix OS</a></li>
+</ul>
+</li>
+<li><a href="https://en.wikipedia.org/wiki/AOKP" title="AOKP">AOKP</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Baidu_Yi" title="Baidu Yi">Baidu Yi</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Barnes_%26_Noble_Nook" title="Barnes &amp; Noble Nook">Barnes &amp; Noble Nook</a></li>
+<li><a href="https://en.wikipedia.org/wiki/ColorOS" title="ColorOS">ColorOS</a></li>
+<li><a href="https://en.wikipedia.org/wiki/CopperheadOS" title="CopperheadOS">CopperheadOS</a></li>
+<li><a href="https://en.wikipedia.org/wiki/CyanogenMod" title="CyanogenMod">CyanogenMod</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Fire_OS" title="Fire OS">Fire OS</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Meizu#Flyme_OS" title="Meizu">Flyme OS</a></li>
+<li><a href="https://en.wikipedia.org/wiki/LeWa_OS" title="LeWa OS">LeWa OS</a></li>
+<li><a href="https://en.wikipedia.org/wiki/MIUI" title="MIUI">MIUI</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Nokia_X_family#Nokia_X_software_platform" title="Nokia X family">Nokia X software platform</a></li>
+<li><a href="https://en.wikipedia.org/wiki/OPhone" title="OPhone">OPhone</a></li>
+<li><a href="https://en.wikipedia.org/wiki/OmniROM" title="OmniROM">OmniROM</a></li>
+<li><a href="https://en.wikipedia.org/wiki/OxygenOS" title="OxygenOS">OxygenOS</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Replicant_(operating_system)" title="Replicant (operating system)">Replicant</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Ubuntu_for_Android" title="Ubuntu for Android">Ubuntu for Android</a></li>
+<li><a href="https://en.wikipedia.org/wiki/XobotOS" title="XobotOS">XobotOS</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Category:Android_(operating_system)_software" title="Category:Android (operating system) software">Applications</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Google_Earth" title="Google Earth">Earth</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Gmail" title="Gmail">Gmail</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Google_Chrome_for_Android" title="Google Chrome for Android">Google Chrome for Android</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Google_Goggles" title="Google Goggles">Goggles</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Google_Hangouts" title="Google Hangouts">Hangouts</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Google_Maps_(mobile_application)" title="Google Maps (mobile application)">Maps</a>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Google_Maps_Navigation" title="Google Maps Navigation">Navigation</a></li>
+</ul>
+</li>
+<li><a href="https://en.wikipedia.org/wiki/Android_Pay" title="Android Pay">Pay</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Google_Play" title="Google Play">Play</a>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Google_Play_Books" title="Google Play Books">Books</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Google_Play_Music" title="Google Play Music">Music</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Google_Play_Newsstand" title="Google Play Newsstand">Newsstand</a></li>
+</ul>
+</li>
+<li><a href="https://en.wikipedia.org/wiki/Google_Sky" title="Google Sky">Sky</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Google_Talk" title="Google Talk">Talk</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Google_Voice" title="Google Voice">Voice</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">APIs</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Google_Cloud_Messaging" title="Google Cloud Messaging">Google Cloud Messaging</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Google_Maps" title="Google Maps">Google Maps</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Google_Play_Services" title="Google Play Services">Google Play Services</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Google_Search" title="Google Search">Google Search</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Alternative<br />
+user interfaces</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Asus_Zen_UI" title="Asus Zen UI">Asus Zen UI</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Hive_UI" title="Hive UI">Hive UI</a></li>
+<li><a href="https://en.wikipedia.org/wiki/HTC_Sense" title="HTC Sense">HTC Sense</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Optimus_UI" title="Optimus UI">LG Optimus UI</a></li>
+<li><a href="https://en.wikipedia.org/wiki/TouchWiz" title="TouchWiz">Samsung TouchWiz</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Lists</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/List_of_custom_Android_firmware" title="List of custom Android firmware">Custom firmware</a></li>
+<li><a href="https://en.wikipedia.org/wiki/List_of_features_in_Android" title="List of features in Android">Features</a></li>
+<li><a href="https://en.wikipedia.org/wiki/List_of_free_and_open-source_Android_applications" title="List of free and open-source Android applications">Free and open-source applications</a></li>
+<li><a href="https://en.wikipedia.org/wiki/List_of_Android_games" title="List of Android games">Games</a></li>
+<li><a href="https://en.wikipedia.org/wiki/List_of_Google_apps_for_Android" title="List of Google apps for Android">Google apps</a></li>
+<li><a href="https://en.wikipedia.org/wiki/List_of_Android_launchers" title="List of Android launchers">Launchers</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Other</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Index_of_Android_OS_articles" title="Index of Android OS articles">Index of articles</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Android_lawn_statues" title="Android lawn statues">Lawn statues</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Rooting_(Android_OS)" title="Rooting (Android OS)">Rooting</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Related topics</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Androidland" title="Androidland">Androidland</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Android_One" title="Android One">Android One</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Chromecast" title="Chromecast">Chromecast</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Google" title="Google">Google</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Google_Cardboard" title="Google Cardboard">Google Cardboard</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Comparison_of_Java_and_Android_API" title="Comparison of Java and Android API">Java vs. Android API</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Material_Design" title="Material Design">Material Design</a></li>
+<li><a href="https://en.wikipedia.org/wiki/XDA_Developers" title="XDA Developers">XDA Developers</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div role="navigation" class="navbox" aria-labelledby="Virtualization_software" style="padding:3px">
+<table class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="https://en.wikipedia.org/wiki/Template:Virtualization_software" title="Template:Virtualization software"><abbr title="View this template" style=";;background:none transparent;border:none;">v</abbr></a></li>
+<li class="nv-talk"><a href="https://en.wikipedia.org/wiki/Template_talk:Virtualization_software" title="Template talk:Virtualization software"><abbr title="Discuss this template" style=";;background:none transparent;border:none;">t</abbr></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Virtualization_software&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;">e</abbr></a></li>
+</ul>
+</div>
+<div id="Virtualization_software" style="font-size:114%"><a href="https://en.wikipedia.org/wiki/Virtualization" title="Virtualization">Virtualization</a> software</div>
+</th>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td class="navbox-abovebelow" colspan="2">
+<div><a href="https://en.wikipedia.org/wiki/Comparison_of_platform_virtualization_software" title="Comparison of platform virtualization software">Comparison of platform virtualization software</a></div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Hardware_virtualization" title="Hardware virtualization">Hardware<br />
+virtualization</a><br />
+(<a href="https://en.wikipedia.org/wiki/Hypervisor" title="Hypervisor">hypervisors</a>)</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em"></div>
+<table class="nowraplinks navbox-subgroup" style="border-spacing:0">
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;">Native</div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Adaptive_Domain_Environment_for_Operating_Systems" title="Adaptive Domain Environment for Operating Systems">Adeos</a></li>
+<li><a href="https://en.wikipedia.org/wiki/CP/CMS" title="CP/CMS">CP/CMS</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Hyper-V" title="Hyper-V">Hyper-V</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Kernel-based_Virtual_Machine" title="Kernel-based Virtual Machine">KVM</a>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Red_Hat_Enterprise_Virtualization" class="mw-redirect" title="Red Hat Enterprise Virtualization">Red Hat Enterprise Virtualization</a></li>
+</ul>
+</li>
+<li><a href="https://en.wikipedia.org/wiki/Oracle_VM_Server_for_SPARC" title="Oracle VM Server for SPARC">LDoms / Oracle VM Server for SPARC</a></li>
+<li><a href="https://en.wikipedia.org/wiki/LynxSecure" title="LynxSecure">LynxSecure</a></li>
+<li><a href="https://en.wikipedia.org/wiki/SIMMON" title="SIMMON">SIMMON</a></li>
+<li><a href="https://en.wikipedia.org/wiki/VMware_ESXi" title="VMware ESXi">VMware ESXi</a>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/VMware_vSphere" title="VMware vSphere">VMware vSphere</a></li>
+<li><a href="https://en.wikipedia.org/wiki/VCloud_Air" title="VCloud Air">vCloud</a></li>
+</ul>
+</li>
+<li><a href="https://en.wikipedia.org/wiki/VMware_Infrastructure" title="VMware Infrastructure">VMware Infrastructure</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Xen" title="Xen">Xen</a>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Oracle_VM_Server_for_x86" title="Oracle VM Server for x86">Oracle VM Server for x86</a></li>
+<li><a href="https://en.wikipedia.org/wiki/XenClient" title="XenClient">XenClient</a></li>
+</ul>
+</li>
+<li><a href="https://en.wikipedia.org/wiki/XtratuM" title="XtratuM">XtratuM</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Z/VM" title="Z/VM">z/VM</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;">Hosted</div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em"></div>
+<table class="nowraplinks navbox-subgroup" style="border-spacing:0">
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;">Specialized</div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Basilisk_II" title="Basilisk II">Basilisk II</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Bhyve" title="Bhyve">bhyve</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Bochs" title="Bochs">Bochs</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Cooperative_Linux" title="Cooperative Linux">Cooperative Linux</a></li>
+<li><a href="https://en.wikipedia.org/wiki/DOSBox" title="DOSBox">DOSBox</a></li>
+<li><a href="https://en.wikipedia.org/wiki/DOSEMU" title="DOSEMU">DOSEMU</a></li>
+<li><a href="https://en.wikipedia.org/wiki/L4Linux" title="L4Linux">L<sup>4</sup>Linux</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Mac-on-Linux" title="Mac-on-Linux">Mac-on-Linux</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Mac-on-Mac" title="Mac-on-Mac">Mac-on-Mac</a></li>
+<li><a href="https://en.wikipedia.org/wiki/PCem" title="PCem">PCem</a></li>
+<li><a href="https://en.wikipedia.org/wiki/SheepShaver" title="SheepShaver">SheepShaver</a></li>
+<li><a href="https://en.wikipedia.org/wiki/SIMH" title="SIMH">SIMH</a></li>
+<li><a href="https://en.wikipedia.org/w/index.php?title=Veertu&amp;action=edit&amp;redlink=1" class="new" title="Veertu (page does not exist)">Veertu</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Windows_on_Windows" title="Windows on Windows">Windows on Windows</a>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Virtual_DOS_machine" title="Virtual DOS machine">Virtual DOS machine</a></li>
+</ul>
+</li>
+<li><a href="https://en.wikipedia.org/wiki/Win4Lin" title="Win4Lin">Win4Lin</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;">Independent</div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Microsoft_Virtual_Server" title="Microsoft Virtual Server">Microsoft Virtual Server</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Parallels_Workstation" title="Parallels Workstation">Parallels Workstation</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Parallels_Desktop_for_Mac" title="Parallels Desktop for Mac">Parallels Desktop for Mac</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Parallels_Server_for_Mac" title="Parallels Server for Mac">Parallels Server for Mac</a></li>
+<li><a href="https://en.wikipedia.org/wiki/PearPC" title="PearPC">PearPC</a></li>
+<li><a href="https://en.wikipedia.org/wiki/QEMU" title="QEMU">QEMU</a></li>
+<li><a href="https://en.wikipedia.org/wiki/VirtualBox" title="VirtualBox">VirtualBox</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Virtual_Iron" title="Virtual Iron">Virtual Iron</a></li>
+<li><a href="https://en.wikipedia.org/wiki/VMware_Fusion" title="VMware Fusion">VMware Fusion</a></li>
+<li><a href="https://en.wikipedia.org/wiki/VMware_Player" class="mw-redirect" title="VMware Player">VMware Player</a></li>
+<li><a href="https://en.wikipedia.org/wiki/VMware_Server" title="VMware Server">VMware Server</a></li>
+<li><a href="https://en.wikipedia.org/wiki/VMware_Workstation" title="VMware Workstation">VMware Workstation</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Windows_Virtual_PC" title="Windows Virtual PC">Windows Virtual PC</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;">Tools</div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Ganeti" title="Ganeti">Ganeti</a></li>
+<li><a href="https://en.wikipedia.org/wiki/OVirt" title="OVirt">oVirt</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Virtual_Machine_Manager" title="Virtual Machine Manager">Virtual Machine Manager</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Operating-system-level_virtualization" title="Operating-system-level virtualization">OS-level<br />
+virtualization</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Cgroups" title="Cgroups">cgroups</a>-based
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/CoreOS" title="CoreOS">CoreOS</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Lmctfy" title="Lmctfy">lmctfy</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Linux-VServer" title="Linux-VServer">Linux-VServer</a></li>
+<li><a href="https://en.wikipedia.org/wiki/LXC" title="LXC">LXC</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Docker_(software)" title="Docker (software)">Docker</a></li>
+<li><a href="https://en.wikipedia.org/wiki/OpenVZ" title="OpenVZ">OpenVZ</a></li>
+</ul>
+</li>
+<li><a href="https://en.wikipedia.org/wiki/FreeBSD_jail" title="FreeBSD jail">FreeBSD jail</a></li>
+<li><a href="https://en.wikipedia.org/wiki/ICore_Virtual_Accounts" title="ICore Virtual Accounts">iCore Virtual Accounts</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Kubernetes" title="Kubernetes">Kubernetes</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Linux_namespaces" title="Linux namespaces">Linux namespaces</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Solaris_Containers" title="Solaris Containers">Solaris Containers</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Workload_Partitions" title="Workload Partitions">Workload Partitions</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Desktop_virtualization" title="Desktop virtualization">Desktop<br />
+virtualization</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Citrix_XenApp" class="mw-redirect" title="Citrix XenApp">Citrix XenApp</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Citrix_XenDesktop" class="mw-redirect" title="Citrix XenDesktop">Citrix XenDesktop</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Remote_Desktop_Services" title="Remote Desktop Services">Remote Desktop Services</a></li>
+<li><a href="https://en.wikipedia.org/wiki/VMware_Horizon_View" title="VMware Horizon View">VMware Horizon View</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Application_virtualization" title="Application virtualization">Application<br />
+virtualization</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Ceedo" title="Ceedo">Ceedo</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Citrix_XenApp" class="mw-redirect" title="Citrix XenApp">Citrix XenApp</a></li>
+<li><strong class="selflink">Dalvik</strong></li>
+<li><a href="https://en.wikipedia.org/wiki/InstallFree" title="InstallFree">InstallFree</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Microsoft_App-V" title="Microsoft App-V">Microsoft App-V</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Remote_Desktop_Services" title="Remote Desktop Services">Remote Desktop Services</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Spoon_(software)" class="mw-redirect" title="Spoon (software)">Spoon</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Symantec_Workspace_Virtualization" title="Symantec Workspace Virtualization">Symantec Workspace Virtualization</a></li>
+<li><a href="https://en.wikipedia.org/wiki/VMware_ThinApp" title="VMware ThinApp">VMware ThinApp</a></li>
+<li><a href="https://en.wikipedia.org/wiki/ZeroVM" title="ZeroVM">ZeroVM</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Network_virtualization" title="Network virtualization">Network<br />
+virtualization</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Distributed_Overlay_Virtual_Ethernet" title="Distributed Overlay Virtual Ethernet">Distributed Overlay Virtual Ethernet</a> (DOVE)</li>
+<li><a href="https://en.wikipedia.org/wiki/Network_Virtualization_using_Generic_Routing_Encapsulation" title="Network Virtualization using Generic Routing Encapsulation">NVGRE</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Open_vSwitch" title="Open vSwitch">Open vSwitch</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Virtual_security_switch" title="Virtual security switch">Virtual security switch</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Virtual_Extensible_LAN" title="Virtual Extensible LAN">Virtual Extensible LAN</a> (VXLAN)</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td class="navbox-abovebelow" colspan="2">
+<div>See also: <a href="https://en.wikipedia.org/wiki/List_of_emulators" title="List of emulators">List of emulators</a></div>
+</td>
+</tr>
+</table>
+</div>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1238
+Cached time: 20161231051914
+Cache expiry: 2592000
+Dynamic content: false
+CPU time usage: 0.316 seconds
+Real time usage: 0.395 seconds
+Preprocessor visited node count: 3674/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 116198/2097152 bytes
+Template argument size: 5591/2097152 bytes
+Highest expansion depth: 20/40
+Expensive parser function count: 4/500
+Lua time usage: 0.144/10.000 seconds
+Lua memory usage: 4.98 MB/50 MB
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  321.347      1 - -total
+ 42.34%  136.072      1 - Template:Reflist
+ 33.75%  108.468     26 - Template:Cite_web
+ 15.83%   50.858      2 - Template:Infobox
+ 13.82%   44.420      1 - Template:Infobox_software
+ 13.22%   42.498      2 - Template:Fix
+ 11.11%   35.696      4 - Template:Navbox
+ 11.10%   35.676      1 - Template:OR
+  6.35%   20.400      2 - Template:Category_handler
+  6.19%   19.902      2 - Template:Delink
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:14217943-0!*!0!!en!4!* and timestamp 20161231051913 and revision id 753143179
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Dalvik_(software)&amp;oldid=753143179">https://en.wikipedia.org/w/index.php?title=Dalvik_(software)&amp;oldid=753143179</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Help_Category.html" title="Help:Category">Categories</a>: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Register-based_virtual_machines" title="Category:Register-based virtual machines">Register-based virtual machines</a></li><li><a href="Category_Java_virtual_machine.html" title="Category:Java virtual machine">Java virtual machine</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Android_(operating_system)" title="Category:Android (operating system)">Android (operating system)</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Articles_containing_potentially_dated_statements_from_March_2014" title="Category:Articles containing potentially dated statements from March 2014">Articles containing potentially dated statements from March 2014</a></li><li><a href="https://en.wikipedia.org/wiki/Category:All_articles_containing_potentially_dated_statements" title="Category:All articles containing potentially dated statements">All articles containing potentially dated statements</a></li><li><a href="https://en.wikipedia.org/wiki/Category:All_articles_that_may_contain_original_research" title="Category:All articles that may contain original research">All articles that may contain original research</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Articles_that_may_contain_original_research_from_June_2014" title="Category:Articles that may contain original research from June 2014">Articles that may contain original research from June 2014</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="Special_MyTalk.html" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="Special_MyContributions.html" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&amp;returnto=Dalvik+%28software%29" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Dalvik+%28software%29" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="https://en.wikipedia.org/wiki/Dalvik_(software)"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+															<li  id="ca-talk"><span><a href="https://en.wikipedia.org/wiki/Talk:Dalvik_(software)"  title="Discussion about the content page [t]" accesskey="t" rel="discussion">Talk</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="https://en.wikipedia.org/wiki/Dalvik_(software)" >Read</a></span></li>
+															<li id="ca-edit"><span><a href="https://en.wikipedia.org/w/index.php?title=Dalvik_(software)&amp;action=edit"  title="Edit this page [e]" accesskey="e">Edit</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="https://en.wikipedia.org/w/index.php?title=Dalvik_(software)&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="https://en.wikipedia.org/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="Main_Page.html"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="Portal_Contents.html" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="Portal_Featured_content.html" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="Portal_Current_events.html" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="https://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="../../shop.wikimedia.org/index.html" title="Visit the Wikipedia store">Wikipedia store</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Interaction</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-help"><a href="Help_Contents.html" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="Wikipedia_About.html" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="Wikipedia_Community_portal.html" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="Wikipedia_Contact_us.html" title="How to contact Wikipedia">Contact page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="https://en.wikipedia.org/wiki/Special:WhatLinksHere/Dalvik_(software)" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://en.wikipedia.org/wiki/Special:RecentChangesLinked/Dalvik_(software)" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="Wikipedia_File_Upload_Wizard.html" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="https://en.wikipedia.org/w/index.php?title=Dalvik_(software)&amp;oldid=753143179" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://en.wikipedia.org/w/index.php?title=Dalvik_(software)&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q754752" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="https://en.wikipedia.org/w/index.php?title=Special:CiteThisPage&amp;page=Dalvik_%28software%29&amp;id=753143179" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Print/export</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Dalvik+%28software%29">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Dalvik+%28software%29&amp;returnto=Dalvik+%28software%29&amp;oldid=753143179&amp;writer=rdf2latex">Download as PDF</a></li><li id="t-print"><a href="https://en.wikipedia.org/w/index.php?title=Dalvik_(software)&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Languages</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-ar"><a href="https://ar.wikipedia.org/wiki/آلة_دالفيك_الافتراضية" title="آلة دالفيك الافتراضية – Arabic" lang="ar" hreflang="ar" class="interlanguage-link-target">العربية</a></li><li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Dalvik" title="Dalvik – Catalan" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Dalvik_(software)" title="Dalvik (software) – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Dalvik_Virtual_Machine" title="Dalvik Virtual Machine – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Dalvik" title="Dalvik – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/دالویک_(نرم‌افزار)" title="دالویک (نرم‌افزار) – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Dalvik_(machine_virtuelle)" title="Dalvik (machine virtuelle) – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/달빅_(소프트웨어)" title="달빅 (소프트웨어) – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-id"><a href="https://id.wikipedia.org/wiki/Dalvik_(perangkat_lunak)" title="Dalvik (perangkat lunak) – Indonesian" lang="id" hreflang="id" class="interlanguage-link-target">Bahasa Indonesia</a></li><li class="interlanguage-link interwiki-is"><a href="https://is.wikipedia.org/wiki/Dalvik" title="Dalvik – Icelandic" lang="is" hreflang="is" class="interlanguage-link-target">Íslenska</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Dalvik_virtual_machine" title="Dalvik virtual machine – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/Dalvik" title="Dalvik – Hungarian" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/Dalvik_(software)" title="Dalvik (software) – Dutch" lang="nl" hreflang="nl" class="interlanguage-link-target">Nederlands</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/Dalvik仮想マシン" title="Dalvik仮想マシン – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Dalvik_(maszyna_wirtualna)" title="Dalvik (maszyna wirtualna) – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Dalvik_virtual_machine" title="Dalvik virtual machine – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/Dalvik" title="Dalvik – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-sk"><a href="https://sk.wikipedia.org/wiki/Dalvik_(softvér)" title="Dalvik (softvér) – Slovak" lang="sk" hreflang="sk" class="interlanguage-link-target">Slovenčina</a></li><li class="interlanguage-link interwiki-sr"><a href="https://sr.wikipedia.org/wiki/Далвик_(софтвер)" title="Далвик (софтвер) – Serbian" lang="sr" hreflang="sr" class="interlanguage-link-target">Српски / srpski</a></li><li class="interlanguage-link interwiki-fi"><a href="https://fi.wikipedia.org/wiki/Dalvik-virtuaalikone" title="Dalvik-virtuaalikone – Finnish" lang="fi" hreflang="fi" class="interlanguage-link-target">Suomi</a></li><li class="interlanguage-link interwiki-sv"><a href="https://sv.wikipedia.org/wiki/Dalvik_(programvara)" title="Dalvik (programvara) – Swedish" lang="sv" hreflang="sv" class="interlanguage-link-target">Svenska</a></li><li class="interlanguage-link interwiki-tr"><a href="https://tr.wikipedia.org/wiki/Dalvik_(yazılım)" title="Dalvik (yazılım) – Turkish" lang="tr" hreflang="tr" class="interlanguage-link-target">Türkçe</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/Dalvik" title="Dalvik – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/Dalvik虚拟机" title="Dalvik虚拟机 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q754752#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 5 December 2016, at 12:22.</li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="Wikipedia_Text_of_Creative_Commons_Attribution-ShareAlike_3.html">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="../../creativecommons.org/licenses/by-sa/3.0/index.html" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="../../wikimediafoundation.org/wiki/Terms_of_Use.html">Terms of Use</a> and <a href="../../wikimediafoundation.org/wiki/Privacy_policy.html">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="../../www.wikimediafoundation.org/index.html">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../../wikimediafoundation.org/wiki/Privacy_policy.html" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="Wikipedia_About.html" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="Wikipedia_General_disclaimer.html" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="Wikipedia_Contact_us.html">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a href="../../www.mediawiki.org/wiki/Special_MyLanguage/How_to_contribute.html">Developers</a></li>
+											<li id="footer-places-cookiestatement"><a href="../../wikimediafoundation.org/wiki/Cookie_statement.html">Cookie statement</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/w/index.php?title=Dalvik_(software)&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="../../www.wikimediafoundation.org/index.html"><img src="https://en.wikipedia.org/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="../../www.mediawiki.org/index.html"><img src="https://en.wikipedia.org/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":67,"wgHostname":"mw1269"});});</script>
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Dalvik_virtual_machine by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:52:53 GMT -->
+</html>

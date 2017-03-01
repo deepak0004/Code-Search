@@ -1,0 +1,39 @@
+    
+        I am trying to generate a random number with Java, but random in a specific range. For example, my range is 5-10, meaning that 5 is the smallest possible value the random number can take, and 10 is the biggest. Any other number in between these numbers is possible to be a value, too. 
+
+In Java, there is a function random() in the Math class, which returns a double value between 0.0 and 1.0. 
+In the class Random there is a function nextInt(int n), which returns a random value in the range of 0 (inclusive) and n (exclusive).
+I couldn't find a method, which returns a random value between two numbers.
+
+I have tried the following things, but I still have problems:
+(minimum and maximum are the smallest and biggest numbers).
+
+Solution 1 :
+
+randomNum = minimum + (int)(Math.random()*maximum);
+
+
+problem: randomNum takes is assinged values numbers bigger that maximum
+
+Solution 2 : 
+
+Random rn = new Random();
+int n = maximum - minimum + 1;
+int i = rn.nextInt() % n;
+randomNum =  minimum + i;
+
+
+problem: randomNum takes is assigned values smaller than minimum.
+
+Could you suggest how to solve my problem, or point me to some references? I have tried also browsing through the archive, and found:
+
+
+<a href="http://stackoverflow.com/questions/137783/given-a-function-which-produces-a-random-integer-in-the-range-1-to-5-write-a-fu">http://stackoverflow.com/questions/137783/given-a-function-which-produces-a-random-integer-in-the-range-1-to-5-write-a-fu
+<a href="http://stackoverflow.com/questions/288739/generate-random-numbers-uniformly-over-entire-range">http://stackoverflow.com/questions/288739/generate-random-numbers-uniformly-over-entire-range
+
+
+but I couldn't solve the problem. 
+
+Thank you.
+
+                

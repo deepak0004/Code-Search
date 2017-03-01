@@ -1,0 +1,32 @@
+    
+        How would you initialise a static Map in Java?
+
+Method one: Static initialiser
+Method two: instance initialiser (anonymous subclass)
+or
+some other method?
+
+What are the pros and cons of each?
+
+Here is an example illustrating two methods:
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Test {
+    private static final Map&lt;Integer, String&gt; myMap = new HashMap&lt;Integer, String&gt;();
+    static {
+        myMap.put(1, "one");
+        myMap.put(2, "two");
+    }
+
+    private static final Map&lt;Integer, String&gt; myMap2 = new HashMap&lt;Integer, String&gt;(){
+        {
+            put(1, "one");
+            put(2, "two");
+        }
+    };
+}
+
+
+                

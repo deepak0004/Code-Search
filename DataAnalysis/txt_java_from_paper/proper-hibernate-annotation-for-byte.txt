@@ -1,0 +1,103 @@
+    
+        I have an application using hibernate 3.1 and JPA annotations.  It has a few objects with byte[] attributes (1k - 200k in size).  It uses the JPA @Lob annotation, and hibernate 3.1 can read these just fine on all major databases -- it seems to hide the JDBC Blob vendor peculiarities (as it should do).
+
+@Entity
+public class ConfigAttribute {
+  @Lob
+  public byte[] getValueBuffer() {
+    return m_valueBuffer;
+  }
+}
+
+
+We had to upgrade to 3.5, when we discovered that hibernate 3.5  <a href="http://opensource.atlassian.com/projects/hibernate/browse/HHH-4876">breaks (and won't fix) this annotation combination in postgresql (with no workaround).  I have not found a clear fix so far, but I did notice that if I just remove the @Lob, it uses the postgresql type bytea (which works, but only on postgres).
+
+annotation                   postgres     oracle      works on
+-------------------------------------------------------------
+byte[] + @Lob                oid          blob        oracle
+byte[]                       bytea        raw(255)    postgresql
+byte[] + @Type(PBA)          oid          blob        oracle
+byte[] + @Type(BT)           bytea        blob        postgresql
+
+once you use @Type, @Lob seems to not be relevant
+note: oracle seems to have deprecated the "raw" type since 8i.
+
+
+I am looking for a way to have a single annotated class (with a blob property) which is portable across major databases.
+
+
+What is the portable way to annotate a byte[] property?
+Is this fixed in some recent version of hibernate?
+
+
+Update:
+After reading <a href="http://in.relation.to/Bloggers/PostgreSQLAndBLOBs#comment15505">this blog I have finally figured out what the original workaround in the JIRA issue was: Apparently you are supposed to drop @Lob and annotate the property as:
+
+@Type(type="org.hibernate.type.PrimitiveByteArrayBlobType") 
+byte[] getValueBuffer() {...
+
+
+However, this does not work for me -- I still get OIDs instead of bytea; it did however work for the author of the JIRA issue, who seemed to want oid.
+
+After the answer from A. Garcia, I then tried this combo, which actually does work on postgresql, but not on oracle.
+
+@Type(type="org.hibernate.type.BinaryType") 
+byte[] getValueBuffer() {...
+
+
+What I really need to do is control which @org.hibernate.annotations.Type the combination (@Lob + byte[] gets mapped) to (on postgresql).
+
+
+
+Here is the snippet from 3.5.5.Final from MaterializedBlobType (sql type Blob).  According to Steve's blog, postgresql wants you to use Streams for bytea (don't ask me why) and postgresql's custom Blob type for oids.  Note also that using setBytes() on JDBC is also for bytea (from past experience).  So this explains why use-streams has no affect they both assume 'bytea'.
+
+public void set(PreparedStatement st, Object value, int index) {
+ byte[] internalValue = toInternalFormat( value );
+ if ( Environment.useStreamsForBinary() ) {
+  // use streams = true
+   st.setBinaryStream( index, 
+    new ByteArrayInputStream( internalValue ), internalValue.length );
+ }
+ else {
+  // use streams = false
+  st.setBytes( index, internalValue );
+ }
+}
+
+
+This results in:
+
+ERROR: column "signature" is of type oid but expression is of type bytea
+
+
+Update
+The next logical question is: "why not just change the table definitions manually to bytea" and keep the (@Lob + byte[])?  This does work, UNTIL you try to store a null byte[].  Which the postgreSQL driver thinks is an OID type expression and the column type is bytea -- this is because hibernate (rightly) calls JDBC.setNull() instead of JDBC.setBytes(null) which PG driver expects. 
+
+ERROR: column "signature" is of type bytea but expression is of type oid
+
+
+The type system in hibernate is currently a 'work in progress' (according to 3.5.5 deprecation comment).  In fact so much of the 3.5.5 code is deprecated, it is hard to know what to look at when sub-classing the PostgreSQLDialect).  
+
+AFAKT, Types.BLOB/'oid' on postgresql should be mapped to some custom type which uses OID style JDBC access (i.e. PostgresqlBlobType object and NOT MaterializedBlobType).  I've never actually successfully used Blobs with postgresql, but I do know that bytea just simply works as one / I would expect.
+
+I am currently looking at the BatchUpdateException -- its possible that the driver doesn't support batching.  
+
+
+
+Great quote from 2004:
+ "To sum up my ramblings, I'd say they we should wait for the JDBC driver to do LOBs properly before changing Hibernate."
+
+References:
+
+
+<a href="https://forum.hibernate.org/viewtopic.php?p=2393203">https://forum.hibernate.org/viewtopic.php?p=2393203
+<a href="https://forum.hibernate.org/viewtopic.php?p=2435174">https://forum.hibernate.org/viewtopic.php?p=2435174
+<a href="http://opensource.atlassian.com/projects/hibernate/browse/HHH-4617">http://opensource.atlassian.com/projects/hibernate/browse/HHH-4617
+<a href="http://opensource.atlassian.com/projects/hibernate/browse/HHH-4617">http://opensource.atlassian.com/projects/hibernate/browse/HHH-4617
+<a href="http://postgresql.1045698.n5.nabble.com/Migration-to-Hibernate-3-5-final-td2175339.html">http://postgresql.1045698.n5.nabble.com/Migration-to-Hibernate-3-5-final-td2175339.html
+<a href="https://jira.springframework.org/browse/SPR-2318">https://jira.springframework.org/browse/SPR-2318
+<a href="https://forums.hibernate.org/viewtopic.php?p=2203382&amp;sid=b526a17d9cf60a80f13d40cf8082aafd">https://forums.hibernate.org/viewtopic.php?p=2203382&amp;sid=b526a17d9cf60a80f13d40cf8082aafd
+<a href="http://virgo47.wordpress.com/2008/06/13/jpa-postgresql-and-bytea-vs-oid-type/">http://virgo47.wordpress.com/2008/06/13/jpa-postgresql-and-bytea-vs-oid-type/
+
+
+                

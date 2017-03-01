@@ -1,0 +1,6 @@
+    
+        I want to limit my users to a directory and its sub directories but the "Parent Directory" button allows them to browse to an arbitraty directory.
+
+How should I go about doing that?
+
+                

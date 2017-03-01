@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from en.wikipedia.org/wiki/GNU_Compiler_for_Java by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:04 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>GNU Compiler for Java - Wikipedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"GNU_Compiler_for_Java","wgTitle":"GNU Compiler for Java","wgCurRevisionId":759203690,"wgRevisionId":759203690,"wgArticleId":162939,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Pages using deprecated image syntax","Free compilers and interpreters","GNU Project software","Java development tools","Java platform"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"GNU_Compiler_for_Java","wgRelevantArticleId":162939,"wgRequestId":"WH32bQpAAEEAAe8JqNUAAAAH","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgFlaggedRevsParams":{"tags":{}},"wgStableRevisionId":null,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"en","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgWikibaseItemId":"Q1007042","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.cite.styles":"ready","ext.pygments":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@1dqfd7l",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["ext.cite.a11y","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.legacy.wikibits","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.watchlist-notice","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.gadget.featured-articles-links","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.interface","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="https://en.wikipedia.org/w/load.php?debug=false&amp;lang=en&amp;modules=ext.cite.styles%7Cext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="../w/load2c8d.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../w/load18b6.css?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.29.0-wmf.7"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="https://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/GNU_Compiler_for_Java"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=GNU_Compiler_for_Java&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=GNU_Compiler_for_Java&amp;action=edit"/>
+<link rel="apple-touch-icon" href="https://en.wikipedia.org/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="../static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../w/api251f.php?action=rsd"/>
+<link rel="copyright" href="../../creativecommons.org/licenses/by-sa/3.0/index.html"/>
+<link rel="canonical" href="GNU_Compiler_for_Java.html"/>
+<link rel="dns-prefetch" href="../../login.wikimedia.org/index.html"/>
+<link rel="dns-prefetch" href="../../meta.wikimedia.org/index.html" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-GNU_Compiler_for_Java rootpage-GNU_Compiler_for_Java skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">GNU Compiler for Java</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><script>function mfTempOpenSection(id){var block=document.getElementById("mf-section-"+id);block.className+=" open-block";block.previousSibling.className+=" open-block";}</script><table class="infobox vevent" style="width:22em">
+<caption class="summary">GNU Compiler for Java</caption>
+<tr>
+<td colspan="2" style="text-align:center"><a href="https://en.wikipedia.org/wiki/File:Gcj2.png" class="image"><img alt="Gcj2.png" src="http://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Gcj2.png/70px-Gcj2.png" width="70" height="49" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Gcj2.png/105px-Gcj2.png 1.5x, //upload.wikimedia.org/wikipedia/commons/e/e4/Gcj2.png 2x" data-file-width="121" data-file-height="85" /></a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_developer" title="Software developer">Developer(s)</a></th>
+<td><a href="https://en.wikipedia.org/wiki/GNU" title="GNU">The GNU Project</a></td>
+</tr>
+<tr>
+<td colspan="2" style="text-align:center"></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_release_life_cycle" title="Software release life cycle">Stable release</a></th>
+<td>
+<div style="margin:0px;">6.3<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[1]</a></sup> / December&#160;21, 2016<span class="noprint">; 27 days ago</span><span style="display:none">&#160;(<span class="bday dtstart published updated">2016-12-21</span>)</span></div>
+</td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_release_life_cycle" title="Software release life cycle">Preview release</a></th>
+<td>
+<div style="margin:0px;">7.0 / May&#160;22, 2016<span class="noprint">; 7 months ago</span><span style="display:none">&#160;(<span class="bday dtstart published updated">2016-05-22</span>)</span></div>
+</td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Operating_system" title="Operating system">Operating system</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Unix-like" title="Unix-like">Unix-like</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_categories#Broad_categories" title="Software categories">Type</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Compiler" title="Compiler">Compiler</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_license" title="Software license">License</a></th>
+<td><a href="https://en.wikipedia.org/wiki/GNU_General_Public_License" title="GNU General Public License">GNU GPL</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;">Website</th>
+<td><span class="url"><a rel="nofollow" class="external text" href="http://gcc.gnu.org/java">gcc<wbr />.gnu<wbr />.org<wbr />/java</a></span></td>
+</tr>
+</table>
+<p>The <b>GNU Compiler for Java</b> (<b>GCJ</b>) was a <a href="https://en.wikipedia.org/wiki/Free_software" title="Free software">free</a> <a href="https://en.wikipedia.org/wiki/Compiler" title="Compiler">compiler</a> for the <a href="Java_(programming_language).html" title="Java (programming language)">Java programming language</a> and part of the <a href="GNU_Compiler_Collection.html" title="GNU Compiler Collection">GNU Compiler Collection</a>.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">[2]</a></sup><sup id="cite_ref-3" class="reference"><a href="#cite_note-3">[3]</a></sup></p>
+<p>GCJ could compile Java <a href="https://en.wikipedia.org/wiki/Source_code" title="Source code">source code</a> to <a href="Java_Virtual_Machine.html" class="mw-redirect" title="Java Virtual Machine">Java Virtual Machine</a> <a href="https://en.wikipedia.org/wiki/Bytecode" title="Bytecode">bytecode</a> or to <a href="https://en.wikipedia.org/wiki/Machine_code" title="Machine code">machine code</a> for a number of <a href="https://en.wikipedia.org/wiki/CPU_architecture" class="mw-redirect" title="CPU architecture">CPU architectures</a>. It could also compile <a href="Class_(file_format).html" class="mw-redirect" title="Class (file format)">class files</a> and whole <a href="JAR_(file_format).html" title="JAR (file format)">JARs</a> that contain bytecode into machine code.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">[4]</a></sup><sup id="cite_ref-5" class="reference"><a href="#cite_note-5">[5]</a></sup></p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#History"><span class="tocnumber">1</span> <span class="toctext">History</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Performance"><span class="tocnumber">2</span> <span class="toctext">Performance</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Compiled_Native_Interface_.28CNI.29"><span class="tocnumber">3</span> <span class="toctext">Compiled Native Interface (CNI)</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Comparison_of_language_use"><span class="tocnumber">3.1</span> <span class="toctext">Comparison of language use</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#See_also"><span class="tocnumber">4</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#References"><span class="tocnumber">5</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#External_links"><span class="tocnumber">6</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=GNU_Compiler_for_Java&amp;action=edit&amp;section=1" title="Edit section: History">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The GCJ runtime-libraries original source is from <a href="GNU_Classpath.html" title="GNU Classpath">GNU Classpath</a> project, but there is a code difference between the <code>libgcj</code> libraries. GCJ 4.3 uses the <a href="Eclipse_(software).html" title="Eclipse (software)">Eclipse</a> Compiler for Java as a front-end.<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">[6]</a></sup></p>
+<p>In 2007, a lot of work was done to implement support for Java's two graphical <a href="https://en.wikipedia.org/wiki/Application_programming_interface" title="Application programming interface">APIs</a> in <a href="GNU_Classpath.html" title="GNU Classpath">GNU Classpath</a>: <a href="Abstract_Window_Toolkit.html" title="Abstract Window Toolkit">AWT</a> and <a href="Swing_(Java).html" title="Swing (Java)">Swing</a>. Software support for <a href="Abstract_Window_Toolkit.html" title="Abstract Window Toolkit">AWT</a> is still in development. "Once AWT support is working then Swing support can be considered. There is at least one free-software partial implementations of <a href="Swing_Application_Framework.html" title="Swing Application Framework">Swing</a> that may be usable.".<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">[7]</a></sup> The GNU CLASSPATH was never completed to even Java 1.2 status and now appears to have been abandoned completely.</p>
+<p>As of 2015, there were no new developments announced from GCJ<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">[8]</a></sup> and the product was in deep <a href="https://en.wikipedia.org/wiki/Maintenance_mode" title="Maintenance mode">maintenance mode</a>.<sup id="cite_ref-9" class="reference"><a href="#cite_note-9">[9]</a></sup> In 2016, GCJ was in the process of being removed from GCC<sup id="cite_ref-10" class="reference"><a href="#cite_note-10">[10]</a></sup> and was deleted in October.<sup id="cite_ref-11" class="reference"><a href="#cite_note-11">[11]</a></sup></p>
+<h2><span class="mw-headline" id="Performance">Performance</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=GNU_Compiler_for_Java&amp;action=edit&amp;section=2" title="Edit section: Performance">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The compilation function in GCJ should have a faster start-up time than the equivalent bytecode launched in a JVM when compiling Java code into machine code.<sup id="cite_ref-12" class="reference"><a href="#cite_note-12">[12]</a></sup></p>
+<h2><span class="mw-headline" id="Compiled_Native_Interface_.28CNI.29">Compiled Native Interface (CNI)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=GNU_Compiler_for_Java&amp;action=edit&amp;section=3" title="Edit section: Compiled Native Interface (CNI)">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The <b>Compiled Native Interface</b> (<b>CNI</b>), previously named "Cygnus Native Interface", is a <a href="https://en.wikipedia.org/wiki/Software_framework" title="Software framework">software framework</a> for the GCJ that allows Java code to <a href="https://en.wikipedia.org/wiki/Call_site" title="Call site">call</a>, and be <a href="https://en.wikipedia.org/wiki/Call_site" title="Call site">called</a>, by native applications (programs specific to a hardware and operating-system platform) and libraries written in <a href="https://en.wikipedia.org/wiki/C++" title="C++">C++</a>.</p>
+<p>CNI closely resembles the <a href="Java_Native_Interface.html" title="Java Native Interface">JNI</a> (Java Native Interface) framework which comes as a standard with various <a href="https://en.wikipedia.org/wiki/Java_virtual_machine" title="Java virtual machine">Java virtual machines</a>.</p>
+<h3><span class="mw-headline" id="Comparison_of_language_use">Comparison of language use</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=GNU_Compiler_for_Java&amp;action=edit&amp;section=4" title="Edit section: Comparison of language use">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The authors of CNI claim for various advantages over JNI:<sup id="cite_ref-13" class="reference"><a href="#cite_note-13">[13]</a></sup></p>
+<table class="cquote" role="presentation" style="margin:auto; border-collapse: collapse; border: none; background-color: transparent; width: auto;">
+<tr>
+<td style="width: 20px; vertical-align: top; border: none; color: #B2B7F2; font-size: 40px; font-family: 'Times New Roman', Times, serif; font-weight: bold; line-height: .6em; text-align: left; padding: 10px 10px;">“</td>
+<td style="vertical-align: top; border: none; padding: 4px 10px;">We use CNI because we think it is a better solution, especially for a Java implementation that is based on the idea that Java is just another programming language that can be implemented using standard compilation techniques. Given that, and the idea that languages implemented using Gcc should be compatible where it makes sense, it follows that the Java calling convention should be as similar as practical to that used for other languages, especially C++, since we can think of Java as a subset of C++. CNI is just a set of helper functions and conventions built on the idea that C++ and Java have the *same* calling convention and object layout; they are binary compatible. (This is a simplification, but close enough.)</td>
+<td style="width: 20px; vertical-align: bottom; border: none; color: #B2B7F2; font-size: 40px; font-family: 'Times New Roman', Times, serif; font-weight: bold; line-height: .6em; text-align: right; padding: 10px 10px;">”</td>
+</tr>
+</table>
+<p>CNI depends on Java classes appearing as C++ classes. For example,<sup id="cite_ref-14" class="reference"><a href="#cite_note-14">[14]</a></sup> given a Java class,</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Int</span>
+<span class="o">{</span>
+   <span class="kd">public</span> <span class="kt">int</span> <span class="n">i</span><span class="o">;</span>
+   <span class="kd">public</span> <span class="nf">Int</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">)</span> <span class="o">{</span> <span class="k">this</span><span class="o">.</span><span class="na">i</span> <span class="o">=</span> <span class="n">i</span><span class="o">;</span> <span class="o">}</span>
+   <span class="kd">public</span> <span class="kd">static</span> <span class="n">Int</span> <span class="n">zero</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Int</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
+<span class="o">}</span>
+</pre></div>
+<p>one can use the class thus:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="cp">#include</span> <span class="cpf">&lt;gcj/cni.h&gt;</span>
+<span class="cp">#include</span> <span class="cpf">&lt;Int&gt;</span>
+
+<span class="n">Int</span> <span class="o">*</span><span class="nf">mult</span><span class="p">(</span><span class="n">Int</span> <span class="o">*</span><span class="n">p</span><span class="p">,</span> <span class="kt">int</span> <span class="n">k</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">k</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">Int</span><span class="o">::</span><span class="n">zero</span><span class="p">;</span>  <span class="c1">// Static member access.</span>
+  <span class="k">return</span> <span class="k">new</span> <span class="n">Int</span><span class="p">(</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">i</span> <span class="o">*</span> <span class="n">k</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=GNU_Compiler_for_Java&amp;action=edit&amp;section=5" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div role="navigation" aria-label="Portals" class="noprint portal plainlist tright" style="margin:0.5em 0 0.5em 1em;border:solid #aaa 1px">
+<ul style="display:table;box-sizing:border-box;padding:0.1em;max-width:175px;background:#f9f9f9;font-size:85%;line-height:110%;font-style:italic;font-weight:bold">
+<li style="display:table-row"><span style="display:table-cell;padding:0.2em;vertical-align:middle;text-align:center"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_(2009).svg/28px-Free_and_open-source_software_logo_(2009).svg.png" width="28" height="28" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/42px-Free_and_open-source_software_logo_%282009%29.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/56px-Free_and_open-source_software_logo_%282009%29.svg.png 2x" data-file-width="512" data-file-height="512" /></span><span style="display:table-cell;padding:0.2em 0.2em 0.2em 0.3em;vertical-align:middle"><a href="https://en.wikipedia.org/wiki/Portal:Free_software" class="mw-redirect" title="Portal:Free software">Free software portal</a></span></li>
+<li style="display:table-row"><span style="display:table-cell;padding:0.2em;vertical-align:middle;text-align:center"><a href="https://en.wikipedia.org/wiki/File:Wave.svg" class="image"><img alt="icon" src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/15px-Wave.svg.png" width="15" height="28" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/23px-Wave.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/31px-Wave.svg.png 2x" data-file-width="226" data-file-height="407" /></a></span><span style="display:table-cell;padding:0.2em 0.2em 0.2em 0.3em;vertical-align:middle"><a href="https://en.wikipedia.org/wiki/Portal:Java" title="Portal:Java">Java portal</a></span></li>
+</ul>
+</div>
+<ul>
+<li><a href="GNU_Interpreter_for_Java.html" title="GNU Interpreter for Java">GNU Interpreter for Java</a> (GIJ)</li>
+<li><a href="Excelsior_JET.html" title="Excelsior JET">Excelsior JET</a> (Excelsior Java native code compiler)</li>
+<li><a href="IcedTea.html" title="IcedTea">IcedTea</a></li>
+<li><a href="Kaffe.html" title="Kaffe">Kaffe</a></li>
+<li><a href="SableVM.html" title="SableVM">SableVM</a></li>
+<li><a href="JamVM.html" title="JamVM">JamVM</a></li>
+<li><a href="Apache_Harmony.html" title="Apache Harmony">Apache Harmony</a></li>
+<li><a href="Jikes.html" title="Jikes">Jikes</a></li>
+<li><a href="https://en.wikipedia.org/wiki/C_to_Java_Virtual_Machine_compilers" class="mw-redirect" title="C to Java Virtual Machine compilers">C to Java Virtual Machine compilers</a></li>
+<li><a href="Free_Java_implementations.html" title="Free Java implementations">Free Java implementations</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=GNU_Compiler_for_Java&amp;action=edit&amp;section=6" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://www.gnu.org/software/gcc/releases.html">"GCC Releases – GNU Project – Free Software Foundation (FSF)"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGNU+Compiler+for+Java&amp;rft.btitle=GCC+Releases+%93+GNU+Project+%93+Free+Software+Foundation+%28FSF%29&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fwww.gnu.org%2Fsoftware%2Fgcc%2Freleases.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="https://gcc.gnu.org/java/">https://gcc.gnu.org/java/</a></span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><cite class="citation book">Campbell, Bill (2013). <a rel="nofollow" class="external text" href="https://books.google.com/books?id=-b8WjLY2eKEC&amp;pg=PA277"><i>Introduction to Compiler Construction in a Java World</i></a>. CRC Press Taylor &amp; Francis Group. <a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="https://en.wikipedia.org/wiki/Special:BookSources/978-1-4398-6088-5" title="Special:BookSources/978-1-4398-6088-5">978-1-4398-6088-5</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2014-02-06</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGNU+Compiler+for+Java&amp;rft.aufirst=Bill&amp;rft.aulast=Campbell&amp;rft.btitle=Introduction+to+Compiler+Construction+in+a+Java+World&amp;rft.date=2013&amp;rft.genre=book&amp;rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3D-b8WjLY2eKEC%26pg%3DPA277&amp;rft.isbn=978-1-4398-6088-5&amp;rft.pub=CRC+Press+Taylor+%26+Francis+Group&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://www.linuxjournal.com/article/4860">http://www.linuxjournal.com/article/4860</a></span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://freecode.com/projects/gcj">http://freecode.com/projects/gcj</a></span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://gcc.gnu.org/java/">"gcj to use Eclipse compiler as a front end"</a>. 2007-01-08<span class="reference-accessdate">. Retrieved <span class="nowrap">2007-05-20</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGNU+Compiler+for+Java&amp;rft.btitle=gcj+to+use+Eclipse+compiler+as+a+front+end&amp;rft.date=2007-01-08&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fgcc.gnu.org%2Fjava%2F&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://gcc.gnu.org/java/faq.html#2_4">The GCJ FAQ - GNU Project - Free Software Foundation (FSF)</a></span></li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://gcc.gnu.org/java">GCJ: News</a></span></li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://www.phoronix.com/scan.php?page=news_item&amp;px=MTUwOTA">GCC Looks To Turn Off Java, Replace With Go Or ADA</a></span></li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="https://gcc.gnu.org/ml/gcc-patches/2016-09/msg00602.html">https://gcc.gnu.org/ml/gcc-patches/2016-09/msg00602.html</a></span></li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text"><cite class="citation web">Tromey, Tom (October 2, 2016). <a rel="nofollow" class="external text" href="http://tromey.com/blog/?p=911">"The Deletion of gcj"</a>. <i>The Cliffs of Inanity</i><span class="reference-accessdate">. Retrieved <span class="nowrap">October 3,</span> 2016</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGNU+Compiler+for+Java&amp;rft.atitle=The+Deletion+of+gcj&amp;rft.aufirst=Tom&amp;rft.aulast=Tromey&amp;rft.date=2016-10-02&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Ftromey.com%2Fblog%2F%3Fp%3D911&amp;rft.jtitle=The+Cliffs+of+Inanity&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.hpl.hp.com/personal/Hans_Boehm/misc_slides/gcj2.pdf">GCJ: The GNU Static Java Compiler</a></span></li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-13">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://gcc.gnu.org/java/faq.html#2_3">The GCJ FAQ - GNU Project - Free Software Foundation (FSF)</a></span></li>
+<li id="cite_note-14"><span class="mw-cite-backlink"><b><a href="#cite_ref-14">^</a></b></span> <span class="reference-text">The example comes from: <a rel="nofollow" class="external free" href="https://gcc.gnu.org/onlinedocs/gcj/Objects-and-Classes.html#Objects-and-Classes">https://gcc.gnu.org/onlinedocs/gcj/Objects-and-Classes.html#Objects-and-Classes</a></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=GNU_Compiler_for_Java&amp;action=edit&amp;section=7" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="https://gcc.gnu.org/java/">GCJ Homepage</a></li>
+<li><a rel="nofollow" class="external text" href="https://gcc.gnu.org/onlinedocs/gcj/">GCJ Manual</a></li>
+<li><a rel="nofollow" class="external text" href="https://gcc.gnu.org/onlinedocs/gcj/About-CNI.html">About CNI section of GCJ Manual</a></li>
+<li><a rel="nofollow" class="external text" href="https://lwn.net/Articles/130796/">LWN: GCJ - past, present, and future</a> – the article discusses some history of GCJ</li>
+</ul>
+<div role="navigation" class="navbox" aria-labelledby="Java_virtual_machines_.28comparison.29" style="padding:3px">
+<table class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="https://en.wikipedia.org/wiki/Template:Java_Virtual_Machine" title="Template:Java Virtual Machine"><abbr title="View this template" style=";;background:none transparent;border:none;">v</abbr></a></li>
+<li class="nv-talk"><a href="https://en.wikipedia.org/wiki/Template_talk:Java_Virtual_Machine" title="Template talk:Java Virtual Machine"><abbr title="Discuss this template" style=";;background:none transparent;border:none;">t</abbr></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Java_Virtual_Machine&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;">e</abbr></a></li>
+</ul>
+</div>
+<div id="Java_virtual_machines_.28comparison.29" style="font-size:114%"><a href="https://en.wikipedia.org/wiki/Java_virtual_machine" title="Java virtual machine">Java virtual machines</a> (<a href="https://en.wikipedia.org/wiki/Comparison_of_Java_virtual_machines" title="Comparison of Java virtual machines">comparison</a>)</div>
+</th>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Sun/Oracle</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="HotSpot.html" title="HotSpot">HotSpot</a></li>
+<li><a href="K_virtual_machine.html" title="K virtual machine">KVM</a></li>
+<li><a href="OpenJDK.html" title="OpenJDK">OpenJDK</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Maxine_Virtual_Machine" title="Maxine Virtual Machine">Maxine VM</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Major implementations</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Excelsior_JET.html" title="Excelsior JET">Excelsior JET</a></li>
+<li><a href="JamVM.html" title="JamVM">JamVM</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Jikes_RVM" title="Jikes RVM">Jikes RVM</a></li>
+<li><a href="IKVM.html" title="IKVM.NET">IKVM.NET</a></li>
+<li><a href="IBM_J9.html" title="IBM J9">IBM J9</a></li>
+<li><a href="JRockit.html" title="JRockit">JRockit</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Embedded</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Excelsior_JET.html" title="Excelsior JET">Excelsior JET Embedded</a></li>
+<li><a href="https://en.wikipedia.org/wiki/JamaicaVM" title="JamaicaVM">JamaicaVM</a></li>
+<li><a href="Mika_VM.html" title="Mika VM">Mika VM</a></li>
+<li><a href="Mysaifu_JVM.html" title="Mysaifu JVM">Mysaifu</a></li>
+<li><a href="Squawk_virtual_machine.html" title="Squawk virtual machine">Squawk (Sun)</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Others</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="CACAO.html" title="CACAO">CACAO</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Dalvik_(software)" title="Dalvik (software)">Dalvik</a></li>
+<li><a href="JX_(operating_system).html" title="JX (operating system)">JX</a></li>
+<li><i><a href="List_of_Java_virtual_machines.html" title="List of Java virtual machines">more…</a></i></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Discontinued</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Apache_Harmony.html" title="Apache Harmony">Apache Harmony</a></li>
+<li><strong class="selflink">GCJ</strong></li>
+<li><a href="Kaffe.html" title="Kaffe">Kaffe</a></li>
+<li><a href="Microsoft_Java_Virtual_Machine.html" title="Microsoft Java Virtual Machine">Microsoft JVM</a></li>
+<li><a href="SableVM.html" title="SableVM">SableVM</a></li>
+<li><a href="Jupiter_JVM.html" title="Jupiter JVM">Jupiter</a></li>
+<li><i><a href="https://en.wikipedia.org/wiki/Category:Discontinued_Java_virtual_machines" title="Category:Discontinued Java virtual machines">more…</a></i></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div role="navigation" class="navbox" aria-labelledby="Java" style="padding:3px">
+<table class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit">
+<tr>
+<th scope="col" class="navbox-title" colspan="3">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="https://en.wikipedia.org/wiki/Template:Java_(software_platform)" title="Template:Java (software platform)"><abbr title="View this template" style=";;background:none transparent;border:none;">v</abbr></a></li>
+<li class="nv-talk"><a href="https://en.wikipedia.org/wiki/Template_talk:Java_(software_platform)" title="Template talk:Java (software platform)"><abbr title="Discuss this template" style=";;background:none transparent;border:none;">t</abbr></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Java_(software_platform)&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;">e</abbr></a></li>
+</ul>
+</div>
+<div id="Java" style="font-size:114%"><a href="Java_(software_platform).html" title="Java (software platform)">Java</a></div>
+</th>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Java platforms</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Java_(programming_language).html" title="Java (programming language)">Java language</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Java_virtual_machine" title="Java virtual machine">JVM</a></li>
+<li><a href="Java_Platform%2c_Micro_Edition.html" title="Java Platform, Micro Edition">Micro Edition</a></li>
+<li><a href="Java_Platform%2c_Standard_Edition.html" title="Java Platform, Standard Edition">Standard Edition</a></li>
+<li><a href="Java_Platform%2c_Enterprise_Edition.html" title="Java Platform, Enterprise Edition">Enterprise Edition</a></li>
+<li><a href="Java_Card.html" title="Java Card">Java Card</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Android_software_development#SDK" title="Android software development">Android SDK</a></li>
+</ul>
+</div>
+</td>
+<td class="navbox-image" rowspan="13" style="width:0%;padding:0px 0px 0px 2px">
+<div><a href="https://en.wikipedia.org/wiki/File:Wave.svg" class="image"><img alt="Wave.svg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/75px-Wave.svg.png" width="75" height="135" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/113px-Wave.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/150px-Wave.svg.png 2x" data-file-width="226" data-file-height="407" /></a></div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Oracle technologies</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Squawk_virtual_machine.html" title="Squawk virtual machine">Squawk</a></li>
+<li><a href="Java_Development_Kit.html" title="Java Development Kit">Java Development Kit</a></li>
+<li><a href="OpenJDK.html" title="OpenJDK">OpenJDK</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Java_virtual_machine" title="Java virtual machine">Java virtual machine</a></li>
+<li><a href="JavaFX.html" title="JavaFX">JavaFX</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Maxine_Virtual_Machine" title="Maxine Virtual Machine">Maxine VM</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Platform technologies</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Java_applet.html" title="Java applet">Applets</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Java_servlet" title="Java servlet">Servlets</a></li>
+<li><a href="MIDlet.html" title="MIDlet">MIDlets</a></li>
+<li><a href="JavaServer_Pages.html" title="JavaServer Pages">JSP</a></li>
+<li><a href="Java_Web_Start.html" title="Java Web Start">Web Start (JNLP)</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Major third-party technologies</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Blackdown_Java.html" title="Blackdown Java">Blackdown</a></li>
+<li><a href="Eclipse_(software).html" title="Eclipse (software)">Eclipse</a></li>
+<li><a href="GNU_Classpath.html" title="GNU Classpath">GNU Classpath</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Google_Web_Toolkit" title="Google Web Toolkit">GWT</a></li>
+<li><a href="Apache_Harmony.html" title="Apache Harmony">Harmony</a></li>
+<li><a href="Hibernate_(Java).html" class="mw-redirect" title="Hibernate (Java)">Hibernate</a></li>
+<li><a href="IcedTea.html" title="IcedTea">IcedTea</a></li>
+<li><a href="Jazelle.html" title="Jazelle">Jazelle</a></li>
+<li><a href="Spring_Framework.html" title="Spring Framework">Spring</a></li>
+<li><a href="Apache_Struts.html" class="mw-redirect" title="Apache Struts">Struts</a></li>
+<li><a href="TopLink.html" title="TopLink">TopLink</a></li>
+<li><a href="https://en.wikipedia.org/wiki/WildFly" title="WildFly">WildFly</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">History</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Java_version_history.html" title="Java version history">Java version history</a></li>
+<li><a href="Java_Community_Process.html" title="Java Community Process">Java Community Process</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sun_Microsystems" title="Sun Microsystems">Sun Microsystems</a></li>
+<li><a href="Free_Java_implementations.html" title="Free Java implementations">Free Java implementations</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="List_of_JVM_languages.html" title="List of JVM languages">Major programming languages</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="BeanShell.html" title="BeanShell">BeanShell</a></li>
+<li><a href="Clojure.html" title="Clojure">Clojure</a></li>
+<li><a href="Groovy_(programming_language).html" title="Groovy (programming language)">Groovy</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Oxygene_(programming_language)" title="Oxygene (programming language)">Oxygene</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Tcl/Java" title="Tcl/Java">Java Tcl</a></li>
+<li><a href="JRuby.html" title="JRuby">JRuby</a></li>
+<li><a href="Jython.html" title="Jython">Jython</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Kotlin_(programming_language)" title="Kotlin (programming language)">Kotlin</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Processing_(programming_language)" title="Processing (programming language)">Processing</a></li>
+<li><a href="Rhino_(JavaScript_engine).html" title="Rhino (JavaScript engine)">Rhino</a></li>
+<li><a href="Scala_(programming_language).html" title="Scala (programming language)">Scala</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Java conferences</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="JavaOne.html" title="JavaOne">JavaOne</a></li>
+<li><a href="Devoxx.html" title="Devoxx">Devoxx</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1221
+Cached time: 20170117103222
+Cache expiry: 2592000
+Dynamic content: false
+CPU time usage: 0.184 seconds
+Real time usage: 0.235 seconds
+Preprocessor visited node count: 1278/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 42318/2097152 bytes
+Template argument size: 2650/2097152 bytes
+Highest expansion depth: 25/40
+Expensive parser function count: 2/500
+Lua time usage: 0.072/10.000 seconds
+Lua memory usage: 2.58 MB/50 MB
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  186.668      1 - -total
+ 59.62%  111.285      2 - Template:Infobox
+ 44.40%   82.872      1 - Template:Infobox_software
+ 33.33%   62.216      1 - Template:Reflist
+ 22.27%   41.572      3 - Template:Cite_web
+ 20.40%   38.089      1 - Template:Infobox_software/simple
+ 11.39%   21.257      2 - Template:Start_date_and_age
+  7.57%   14.137      2 - Template:Navbox
+  6.24%   11.646      1 - Template:Portal
+  5.54%   10.334      1 - Template:Java_Virtual_Machine
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:162939-0!*!0!!en!4!* and timestamp 20170117103222 and revision id 759203690
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=GNU_Compiler_for_Java&amp;oldid=759203690">https://en.wikipedia.org/w/index.php?title=GNU_Compiler_for_Java&amp;oldid=759203690</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Help_Category.html" title="Help:Category">Categories</a>: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Free_compilers_and_interpreters" title="Category:Free compilers and interpreters">Free compilers and interpreters</a></li><li><a href="https://en.wikipedia.org/wiki/Category:GNU_Project_software" title="Category:GNU Project software">GNU Project software</a></li><li><a href="Category_Java_development_tools.html" title="Category:Java development tools">Java development tools</a></li><li><a href="Category_Java_platform.html" title="Category:Java platform">Java platform</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Pages_using_deprecated_image_syntax" title="Category:Pages using deprecated image syntax">Pages using deprecated image syntax</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="Special_MyTalk.html" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="Special_MyContributions.html" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&amp;returnto=GNU+Compiler+for+Java" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=GNU+Compiler+for+Java" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="GNU_Compiler_for_Java.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+															<li  id="ca-talk"><span><a href="https://en.wikipedia.org/wiki/Talk:GNU_Compiler_for_Java"  title="Discussion about the content page [t]" accesskey="t" rel="discussion">Talk</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="GNU_Compiler_for_Java.html" >Read</a></span></li>
+															<li id="ca-edit"><span><a href="https://en.wikipedia.org/w/index.php?title=GNU_Compiler_for_Java&amp;action=edit"  title="Edit this page [e]" accesskey="e">Edit</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="https://en.wikipedia.org/w/index.php?title=GNU_Compiler_for_Java&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="https://en.wikipedia.org/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="Main_Page.html"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="Portal_Contents.html" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="Portal_Featured_content.html" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="Portal_Current_events.html" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="https://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="../../shop.wikimedia.org/index.html" title="Visit the Wikipedia store">Wikipedia store</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Interaction</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-help"><a href="Help_Contents.html" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="Wikipedia_About.html" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="Wikipedia_Community_portal.html" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="Wikipedia_Contact_us.html" title="How to contact Wikipedia">Contact page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="https://en.wikipedia.org/wiki/Special:WhatLinksHere/GNU_Compiler_for_Java" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://en.wikipedia.org/wiki/Special:RecentChangesLinked/GNU_Compiler_for_Java" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="Wikipedia_File_Upload_Wizard.html" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="https://en.wikipedia.org/w/index.php?title=GNU_Compiler_for_Java&amp;oldid=759203690" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://en.wikipedia.org/w/index.php?title=GNU_Compiler_for_Java&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q1007042" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="https://en.wikipedia.org/w/index.php?title=Special:CiteThisPage&amp;page=GNU_Compiler_for_Java&amp;id=759203690" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Print/export</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=GNU+Compiler+for+Java">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=GNU+Compiler+for+Java&amp;returnto=GNU+Compiler+for+Java&amp;oldid=759203690&amp;writer=rdf2latex">Download as PDF</a></li><li id="t-print"><a href="https://en.wikipedia.org/w/index.php?title=GNU_Compiler_for_Java&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Languages</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/GNU_Compiler_for_Java" title="GNU Compiler for Java – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/GNU_Compiler_for_Java" title="GNU Compiler for Java – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/GCJ" title="GCJ – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/GCJ" title="GCJ – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/GNU_Compiler_for_Java" title="GNU Compiler for Java – Hungarian" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/GNU_Compiler_for_Java" title="GNU Compiler for Java – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/GNU_Compiler_for_Java" title="GNU Compiler for Java – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/GCJ" title="GCJ – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/GNU_Compiler_for_Java" title="GNU Compiler for Java – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/GCJ" title="GCJ – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/GCJ" title="GCJ – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q1007042#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 9 January 2017, at 20:41.</li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="Wikipedia_Text_of_Creative_Commons_Attribution-ShareAlike_3.html">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="../../creativecommons.org/licenses/by-sa/3.0/index.html" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="../../wikimediafoundation.org/wiki/Terms_of_Use.html">Terms of Use</a> and <a href="../../wikimediafoundation.org/wiki/Privacy_policy.html">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="../../www.wikimediafoundation.org/index.html">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../../wikimediafoundation.org/wiki/Privacy_policy.html" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="Wikipedia_About.html" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="Wikipedia_General_disclaimer.html" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="Wikipedia_Contact_us.html">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a href="../../www.mediawiki.org/wiki/Special_MyLanguage/How_to_contribute.html">Developers</a></li>
+											<li id="footer-places-cookiestatement"><a href="../../wikimediafoundation.org/wiki/Cookie_statement.html">Cookie statement</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/w/index.php?title=GNU_Compiler_for_Java&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="../../www.wikimediafoundation.org/index.html"><img src="https://en.wikipedia.org/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="../../www.mediawiki.org/index.html"><img src="https://en.wikipedia.org/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":67,"wgHostname":"mw1270"});});</script>
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/GNU_Compiler_for_Java by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:04 GMT -->
+</html>

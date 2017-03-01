@@ -1,0 +1,4 @@
+    
+        please give me a sample code for read/write text file in blackberry application.
+
+                

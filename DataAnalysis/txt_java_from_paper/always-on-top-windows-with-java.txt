@@ -1,0 +1,4 @@
+    
+        In Java, is there a way to have a window that is "Always on top" regardless if the user switches focus to another application?  I've searched the web, and all of the solutions lean to some sort of JNI interface with native bindings.  Truly this can't be the only way to do it?.. or is it?
+
+                

@@ -1,0 +1,67 @@
+    
+        I just played with Java file system API, and came down with the following function, used to copy binary files. The original source came from the Web, but I added try/catch/finally clauses to be sure that, should something wrong happen, the Buffer Streams would be closed (and thus, my OS ressources freed) before quiting the function.
+
+I trimmed down the function to show the pattern:
+
+public static void copyFile(FileOutputStream oDStream, FileInputStream oSStream) throw etc...
+{
+   BufferedInputStream oSBuffer = new BufferedInputStream(oSStream, 4096);
+   BufferedOutputStream oDBuffer = new BufferedOutputStream(oDStream, 4096);
+
+   try
+   { 
+      try
+      { 
+         int c;
+
+         while((c = oSBuffer.read()) != -1)  // could throw a IOException
+         {
+            oDBuffer.write(c);  // could throw a IOException
+         }
+      }
+      finally
+      {
+         oDBuffer.close(); // could throw a IOException
+      }
+   }
+   finally
+   {
+      oSBuffer.close(); // could throw a IOException
+   }
+}
+
+
+As far as I understand it, I cannot put the two close() in the finally clause because the first close() could well throw, and then, the second would not be executed.
+
+I know C# has the Dispose pattern that would have handled this with the using keyword.
+
+I even know better a C++ code would have been something like (using a Java-like API):
+
+void copyFile(FileOutputStream &amp; oDStream, FileInputStream &amp; oSStream)
+{
+   BufferedInputStream oSBuffer(oSStream, 4096);
+   BufferedOutputStream oDBuffer(oDStream, 4096);
+
+   int c;
+
+   while((c = oSBuffer.read()) != -1)  // could throw a IOException
+   {
+      oDBuffer.write(c);  // could throw a IOException
+   }
+
+   // I don't care about resources, as RAII handle them for me
+}
+
+
+I am missing something, or do I really have to produce ugly and bloated code in Java just to handle exceptions in the close() method of a Buffered Stream?
+
+(Please, tell me I'm wrong somewhere...)
+
+EDIT: Is it me, or when updating this page, I saw both the question and all the answers decreased by one point in a couple of minutes? Is someone enjoying himself too much while remaning anonymous?
+
+EDIT 2: McDowell offered a very interesting link I felt I had to mention here:
+<a href="http://illegalargumentexception.blogspot.com/2008/10/java-how-not-to-make-mess-of-stream.html" rel="nofollow">http://illegalargumentexception.blogspot.com/2008/10/java-how-not-to-make-mess-of-stream.html
+
+EDIT 3: Following McDowell's link, I tumbled upon a proposal for Java 7 of a pattern similar to the C# using pattern: <a href="http://tech.puredanger.com/java7/#resourceblock" rel="nofollow">http://tech.puredanger.com/java7/#resourceblock . My problem is explicitly described. Apparently, even with the Java 7 do, the problems remain.
+
+                

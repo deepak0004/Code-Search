@@ -1,0 +1,15 @@
+    
+        I'm a little confused as to how the IOC works in spring.
+
+Say I have a service class called UserServiceImpl that implements UserService interface.
+
+How would this be auto-wired?
+
+And in my Controllers action, how would I instantiate an instance of this service?
+
+Would I just do:
+
+UserService userService = new UserServiceImpl();
+
+
+                

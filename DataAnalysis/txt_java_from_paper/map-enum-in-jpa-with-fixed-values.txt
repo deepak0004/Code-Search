@@ -1,0 +1,87 @@
+    
+        I'm looking for the different ways to map an enum using JPA. I especially want to set the integer value of each enum entry and to save only the integer value.
+
+@Entity
+@Table(name = "AUTHORITY_")
+public class Authority implements Serializable {
+
+  public enum Right {
+      READ(100), WRITE(200), EDITOR (300);
+
+      private int value;
+
+      Right(int value) { this.value = value; }
+
+      public int getValue() { return value; }
+  };
+
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
+  @Column(name = "AUTHORITY_ID")
+  private Long id;
+
+  // the enum to map : 
+  private Right right;
+}
+
+
+A simple solution is to use the Enumerated annotation with EnumType.ORDINAL:
+
+@Column(name = "RIGHT")
+@Enumerated(EnumType.ORDINAL)
+private Right right;
+
+
+But in this case JPA maps the enum index (0,1,2) and not the value I want (100,200,300).
+
+Th two solutions I found do not seem simple...
+
+First Solution
+
+A solution, <a href="http://forums.java.net/jive/thread.jspa?threadID=32048" rel="nofollow">proposed here, uses @PrePersist and @PostLoad to convert the enum to an other field and mark the enum field as transient:
+
+@Basic
+private int intValueForAnEnum;
+
+@PrePersist
+void populateDBFields() {
+  intValueForAnEnum = right.getValue();
+}
+
+@PostLoad
+void populateTransientFields() {
+  right = Right.valueOf(intValueForAnEnum);
+}
+
+
+Second Solution
+
+The second solution <a href="http://appfuse.org/display/APF/Java+5+Enums+Persistence+with+Hibernate" rel="nofollow">proposed here proposed a generic conversion object, but still seems heavy and hibernate-oriented (@Type doesn't seem to exist in JEE): 
+
+@Type(
+    type = "org.appfuse.tutorial.commons.hibernate.GenericEnumUserType",
+    parameters = {
+            @Parameter(
+                name  = "enumClass",                      
+                value = "Authority$Right"),
+            @Parameter(
+                name  = "identifierMethod",
+                value = "toInt"),
+            @Parameter(
+                name  = "valueOfMethod",
+                value = "fromInt")
+            }
+)
+
+
+Is there any other solutions ?
+
+I've several ideas in mind but I don't know if they exist in JPA:
+
+
+use the setter and getter methods of right member of Authority Class when loading and saving the Authority object
+an equivalent idea would be to tell JPA what are the methods of Right enum to convert enum to int and int to enum
+Because I'm using Spring, is there any way to tell JPA to use a specific converter (RightEditor) ?
+
+
+                

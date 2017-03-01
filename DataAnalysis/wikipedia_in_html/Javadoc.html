@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Javadoc by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:38 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Javadoc - Wikipedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Javadoc","wgTitle":"Javadoc","wgCurRevisionId":758047391,"wgRevisionId":758047391,"wgArticleId":1329358,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Free documentation generators","Java development tools"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Javadoc","wgRelevantArticleId":1329358,"wgRequestId":"WG-JogpAICoAAH6z@@kAAAAD","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgFlaggedRevsParams":{"tags":{}},"wgStableRevisionId":null,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"en","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgWikibaseItemId":"Q1413077","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.cite.styles":"ready","ext.pygments":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@1dqfd7l",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["ext.cite.a11y","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.legacy.wikibits","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.watchlist-notice","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.gadget.featured-articles-links","ext.centralauth.centralautologin","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.interface","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="https://en.wikipedia.org/w/load.php?debug=false&amp;lang=en&amp;modules=ext.cite.styles%7Cext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="../w/load2c8d.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../w/load18b6.css?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.29.0-wmf.7"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="https://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Javadoc"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Javadoc&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Javadoc&amp;action=edit"/>
+<link rel="apple-touch-icon" href="https://en.wikipedia.org/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="../static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../w/api251f.php?action=rsd"/>
+<link rel="copyright" href="../../creativecommons.org/licenses/by-sa/3.0/index.html"/>
+<link rel="canonical" href="Javadoc.html"/>
+<link rel="dns-prefetch" href="../../login.wikimedia.org/index.html"/>
+<link rel="dns-prefetch" href="../../meta.wikimedia.org/index.html" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Javadoc rootpage-Javadoc skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">Javadoc</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><script>function mfTempOpenSection(id){var block=document.getElementById("mf-section-"+id);block.className+=" open-block";block.previousSibling.className+=" open-block";}</script><p><b>Javadoc</b> (originally cased as <b>JavaDoc</b>)<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[1]</a></sup> is a <a href="https://en.wikipedia.org/wiki/Documentation_generator" title="Documentation generator">documentation generator</a> created by <a href="https://en.wikipedia.org/wiki/Sun_Microsystems" title="Sun Microsystems">Sun Microsystems</a> for the Java language (now owned by <a href="https://en.wikipedia.org/wiki/Oracle_Corporation" title="Oracle Corporation">Oracle Corporation</a>) for generating <a href="https://en.wikipedia.org/wiki/Application_programming_interface" title="Application programming interface">API</a> documentation in <a href="https://en.wikipedia.org/wiki/HTML" title="HTML">HTML</a> format from <a href="Java_(programming_language).html" title="Java (programming language)">Java</a> source code. The HTML format is used to add the convenience of being able to <a href="https://en.wikipedia.org/wiki/Hyperlink" title="Hyperlink">hyperlink</a> related documents together.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">[2]</a></sup></p>
+<p>The "doc comments" format<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">[3]</a></sup> used by Javadoc is the de facto industry standard for documenting Java classes. Some <a href="https://en.wikipedia.org/wiki/Integrated_Development_Environment" class="mw-redirect" title="Integrated Development Environment">IDEs</a>,<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">[4]</a></sup> such as <a href="https://en.wikipedia.org/wiki/Netbeans" class="mw-redirect" title="Netbeans">Netbeans</a> and <a href="Eclipse_(software).html" title="Eclipse (software)">Eclipse</a>, automatically generate Javadoc HTML. Many file editors assist the user in producing Javadoc source and use the Javadoc info as internal references for the programmer.</p>
+<p>Javadoc also provides an API for creating <a href="Doclets.html" class="mw-redirect" title="Doclets">doclets</a> and taglets, which allows you to analyze the structure of a Java application. This is how <a href="JDiff.html" title="JDiff">JDiff</a> can generate reports of what changed between two versions of an API.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#History"><span class="tocnumber">1</span> <span class="toctext">History</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Technical_architecture"><span class="tocnumber">2</span> <span class="toctext">Technical architecture</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Structure_of_a_Javadoc_comment"><span class="tocnumber">2.1</span> <span class="toctext">Structure of a Javadoc comment</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Overview_of_Javadoc"><span class="tocnumber">2.2</span> <span class="toctext">Overview of Javadoc</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Example"><span class="tocnumber">2.3</span> <span class="toctext">Example</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#See_also"><span class="tocnumber">3</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Notes"><span class="tocnumber">4</span> <span class="toctext">Notes</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#External_links"><span class="tocnumber">5</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Javadoc&amp;action=edit&amp;section=1" title="Edit section: History">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Javadoc was an early Java language <a href="https://en.wikipedia.org/wiki/Documentation_generator" title="Documentation generator">documentation generator</a>.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">[5]</a></sup> Prior to the use of documentation generators it was customary to use technical writers who would typically write only standalone documentation for the software,<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">[6]</a></sup> but it was much harder to keep this documentation in sync with the software itself.</p>
+<p>Javadoc has been used by Java since the first release, and is usually updated on every new release of the <a href="Java_Development_Kit.html" title="Java Development Kit">Java Development Kit</a>.</p>
+<h2><span class="mw-headline" id="Technical_architecture">Technical architecture</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Javadoc&amp;action=edit&amp;section=2" title="Edit section: Technical architecture">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Structure_of_a_Javadoc_comment">Structure of a Javadoc comment</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Javadoc&amp;action=edit&amp;section=3" title="Edit section: Structure of a Javadoc comment">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>A Javadoc comment is set off from code by standard multi-line comment tags <code>/*</code> and <code>*/</code>. The opening tag (called begin-comment delimiter), has an extra asterisk, as in <code>/**</code>.</p>
+<ol>
+<li>The first paragraph is a description of the method documented.</li>
+<li>Following the description are a varying number of descriptive tags, signifying:
+<ol>
+<li>The parameters of the method (<code>@param</code>)</li>
+<li>What the method returns (<code>@return</code>)</li>
+<li>Any exceptions the method may throw (<code>@throws</code>)</li>
+<li>Other less-common tags such as <code>@see</code> (a "see also" tag)</li>
+</ol>
+</li>
+</ol>
+<h3><span class="mw-headline" id="Overview_of_Javadoc">Overview of Javadoc</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Javadoc&amp;action=edit&amp;section=4" title="Edit section: Overview of Javadoc">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The basic structure of writing document comments is to embed them inside <code>/** ... */</code>. The Javadoc is written next to the items without any separating newline. Note that any import statements must precede the class declaration. The class declaration usually contains:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="c1">// import statements</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * @author      Firstname Lastname &lt;address @ example.com&gt;</span>
+<span class="cm"> * @version     1.6                 (current version number of program)</span>
+<span class="cm"> * @since       1.2          (the version of the package this class was first added to)</span>
+<span class="cm"> */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Test</span> <span class="o">{</span>
+    <span class="c1">// class body</span>
+<span class="o">}</span>
+</pre></div>
+<p>For methods there is (1) a short, concise, one line description to explain what the item does. This is followed by (2) a longer description that may span multiple paragraphs. The details can be explained in full here. This section, marked in brackets [], is optional. Lastly, there is (3) a tag section to list the accepted input arguments and return values of the method. Note that all of the Javadoc is treated as HTML so the multiple paragraph sections are separated by a "<code>&lt;p&gt;</code>" paragraph break tag.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="cm">/**</span>
+<span class="cm"> * Short one line description.                           (1)</span>
+<span class="cm"> * &lt;p&gt;</span>
+<span class="cm"> * Longer description. If there were any, it would be    (2)</span>
+<span class="cm"> * here.</span>
+<span class="cm"> * &lt;p&gt;</span>
+<span class="cm"> * And even more explanations to follow in consecutive</span>
+<span class="cm"> * paragraphs separated by HTML paragraph breaks.</span>
+<span class="cm"> *</span>
+<span class="cm"> * @param  variable Description text text text.          (3)</span>
+<span class="cm"> * @return Description text text text.</span>
+<span class="cm"> */</span>
+<span class="kd">public</span> <span class="kt">int</span> <span class="nf">methodName</span> <span class="o">(...)</span> <span class="o">{</span>
+    <span class="c1">// method body with a return statement</span>
+<span class="o">}</span>
+</pre></div>
+<p>Variables are documented similarly to methods with the exception that part (3) is omitted. Here the variable contains only the short description:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="cm">/**</span>
+<span class="cm"> * Description of the variable here.</span>
+<span class="cm"> */</span>
+<span class="kd">private</span> <span class="kt">int</span> <span class="n">debug</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+</pre></div>
+<p>Note that it is not recommended<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">[7]</a></sup> to define multiple variables in a single documentation comment. This is because Javadoc reads each variable and places them separately to the generated HTML page with the same documentation comment that is copied for all fields.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="cm">/**</span>
+<span class="cm"> * The horizontal and vertical distances of point (x,y)</span>
+<span class="cm"> */</span>
+<span class="kd">public</span> <span class="kt">int</span> <span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">;</span>      <span class="c1">// AVOID</span>
+</pre></div>
+<p>Instead, it is recommended to write and document each variable separately:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="cm">/**</span>
+<span class="cm"> * The horizontal distances of point.</span>
+<span class="cm"> */</span>
+<span class="kd">public</span> <span class="kt">int</span> <span class="n">x</span><span class="o">;</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * The vertical distances of point.</span>
+<span class="cm"> */</span>
+<span class="kd">public</span> <span class="kt">int</span> <span class="n">y</span><span class="o">;</span>
+</pre></div>
+<p>Some of the available Javadoc tags<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">[8]</a></sup> are listed in the table below:</p>
+<table class="wikitable">
+<tr>
+<th>Tag &amp; Parameter</th>
+<th>Usage</th>
+<th>Applies to</th>
+<th>Since</th>
+</tr>
+<tr>
+<td><b>@author</b> <i>John Smith</i></td>
+<td>Describes an author.</td>
+<td>Class, Interface, Enum</td>
+<td></td>
+</tr>
+<tr>
+<td><b>@version</b> <i>version</i></td>
+<td>Provides software version entry. Max one per Class or Interface.</td>
+<td>Class, Interface, Enum</td>
+<td></td>
+</tr>
+<tr>
+<td><b>@since</b> <i>since-text</i></td>
+<td>Describes when this functionality has first existed.</td>
+<td>Class, Interface, Enum, Field, Method</td>
+<td></td>
+</tr>
+<tr>
+<td><b>@see</b> <i>reference</i></td>
+<td>Provides a link to other element of documentation.</td>
+<td>Class, Interface, Enum, Field, Method</td>
+<td></td>
+</tr>
+<tr>
+<td><b>@param</b> <i>name description</i></td>
+<td>Describes a method parameter.</td>
+<td>Method</td>
+<td></td>
+</tr>
+<tr>
+<td><b>@return</b> <i>description</i></td>
+<td>Describes the return value.</td>
+<td>Method</td>
+<td></td>
+</tr>
+<tr>
+<td><b>@exception</b> <i>classname description</i><br />
+<b>@throws</b> <i>classname description</i></td>
+<td>Describes an exception that may be thrown from this method.</td>
+<td>Method</td>
+<td></td>
+</tr>
+<tr>
+<td><b>@deprecated</b> <i>description</i></td>
+<td>Describes an outdated method.</td>
+<td>Class, Interface, Enum, Field, Method</td>
+<td></td>
+</tr>
+<tr>
+<td>{<b>@inheritDoc</b>}</td>
+<td>Copies the description from the overridden method.</td>
+<td>Overriding Method</td>
+<td>1.4.0</td>
+</tr>
+<tr>
+<td>{<b>@link</b> <i><var>reference</var></i>}</td>
+<td>Link to other symbol.</td>
+<td>Class, Interface, Enum, Field, Method</td>
+<td></td>
+</tr>
+<tr>
+<td>{<b>@value</b> <i>#STATIC_FIELD</i>}</td>
+<td>Return the value of a static field.</td>
+<td>Static Field</td>
+<td>1.4.0</td>
+</tr>
+<tr>
+<td>{<b>@code</b> <i>literal</i>}</td>
+<td>Formats literal text in the code font. It is equivalent to &lt;code&gt;{@literal}&lt;/code&gt;.</td>
+<td>Class, Interface, Enum, Field, Method</td>
+<td>1.5.0</td>
+</tr>
+<tr>
+<td>{<b>@literal</b> <i>literal</i>}</td>
+<td>Denotes literal text. The enclosed text is interpreted as not containing HTML markup or nested javadoc tags.</td>
+<td>Class, Interface, Enum, Field, Method</td>
+<td>1.5.0</td>
+</tr>
+</table>
+<h3><span class="mw-headline" id="Example">Example</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Javadoc&amp;action=edit&amp;section=5" title="Edit section: Example">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>An example of Javadoc to document a method follows. Notice that spacing and number of characters in this example are as conventions state.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="cm">/**</span>
+<span class="cm"> * Validates a chess move.</span>
+<span class="cm"> *</span>
+<span class="cm"> * Use {@link #doMove(int theFromFile, int theFromRank, int theToFile, int theToRank)} to move a piece.</span>
+<span class="cm"> *</span>
+<span class="cm"> * @param theFromFile file from which a piece is being moved</span>
+<span class="cm"> * @param theFromRank rank from which a piece is being moved</span>
+<span class="cm"> * @param theToFile   file to which a piece is being moved</span>
+<span class="cm"> * @param theToRank   rank to which a piece is being moved</span>
+<span class="cm"> * @return            true if the move is valid, otherwise false</span>
+<span class="cm"> */</span>
+<span class="kt">boolean</span> <span class="nf">isValidMove</span><span class="o">(</span><span class="kt">int</span> <span class="n">theFromFile</span><span class="o">,</span> <span class="kt">int</span> <span class="n">theFromRank</span><span class="o">,</span> <span class="kt">int</span> <span class="n">theToFile</span><span class="o">,</span> <span class="kt">int</span> <span class="n">theToRank</span><span class="o">)</span> <span class="o">{</span>
+    <span class="c1">// ...body</span>
+<span class="o">}</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Moves a chess piece.</span>
+<span class="cm"> *</span>
+<span class="cm"> * @see java.math.RoundingMode</span>
+<span class="cm"> */</span>
+<span class="kt">void</span> <span class="nf">doMove</span><span class="o">(</span><span class="kt">int</span> <span class="n">theFromFile</span><span class="o">,</span> <span class="kt">int</span> <span class="n">theFromRank</span><span class="o">,</span> <span class="kt">int</span> <span class="n">theToFile</span><span class="o">,</span> <span class="kt">int</span> <span class="n">theToRank</span><span class="o">)</span>  <span class="o">{</span>
+    <span class="c1">// ...body</span>
+<span class="o">}</span>
+</pre></div>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Javadoc&amp;action=edit&amp;section=6" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Comparison_of_documentation_generators" title="Comparison of documentation generators">Comparison of documentation generators</a></li>
+<li><a href="https://en.wikipedia.org/wiki/C_Sharp_syntax#XML_documentation_system" title="C Sharp syntax">.NET XML documentation comments</a></li>
+</ul>
+<h2><span class="mw-headline" id="Notes">Notes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Javadoc&amp;action=edit&amp;section=7" title="Edit section: Notes">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text">Now cased as 'Javadoc'. See <a rel="nofollow" class="external autonumber" href="http://www.oracle.com/technetwork/java/javase/documentation/index-jsp-135444.html">[1]</a>. Originally cased as 'JavaDoc'. See <a rel="nofollow" class="external autonumber" href="http://www.artima.com/intv/jackpot3.html">[2]</a></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://agile.csc.ncsu.edu/SEMaterials/tutorials/javadoc/">http://agile.csc.ncsu.edu/SEMaterials/tutorials/javadoc/</a></span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/1.5.0/docs/tooldocs/solaris/javadoc.html">"javadoc - The Java API Documentation Generator"</a>. <a href="https://en.wikipedia.org/wiki/Sun_Microsystems" title="Sun Microsystems">Sun Microsystems</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2011-09-30</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJavadoc&amp;rft.btitle=javadoc+-+The+Java+API+Documentation+Generator&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fdocs.oracle.com%2Fjavase%2F1.5.0%2Fdocs%2Ftooldocs%2Fsolaris%2Fjavadoc.html&amp;rft.pub=Sun+Microsystems&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span>.</span></li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.netbeans-blog.org/netbeans-ide/generating-javadoc-for-a-project-in-netbeans-ide.html">NetBeans</a></span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.oracle.com/technetwork/articles/java/index-137868.html">"How to Write Doc Comments for the Javadoc Tool"</a>. <a href="https://en.wikipedia.org/wiki/Sun_Microsystems" title="Sun Microsystems">Sun Microsystems</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2011-09-30</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJavadoc&amp;rft.btitle=How+to+Write+Doc+Comments+for+the+Javadoc+Tool&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.oracle.com%2Ftechnetwork%2Farticles%2Fjava%2Findex-137868.html&amp;rft.pub=Sun+Microsystems&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span>.</span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><cite class="citation web">Bill Venners, James Gosling (2003-07-08). <a rel="nofollow" class="external text" href="http://www.artima.com/intv/jackpot3.html">"Visualizing with JavaDoc"</a>. artima.com<span class="reference-accessdate">. Retrieved <span class="nowrap">2013-01-19</span></span>. <q><i>When I did the original JavaDoc in the original compiler, even the people close around me pretty soundly criticized it. And it was interesting, because the usual criticism was: a good tech writer could do a lot better job than the JavaDoc does. And the answer is, well, yeah, but how many APIs are actually documented by good tech writers? And how many of them actually update their documentation often enough to be useful?</i></q></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJavadoc&amp;rft.au=Bill+Venners%2C+James+Gosling&amp;rft.btitle=Visualizing+with+JavaDoc&amp;rft.date=2003-07-08&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.artima.com%2Fintv%2Fjackpot3.html&amp;rft.pub=artima.com&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><cite class="citation news"><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/8/docs/technotes/tools/unix/javadoc.html">"Javadoc Tool Reference Page (Solaris, Linux, or Mac OS X). Section "Multiple-Field Declarations<span style="padding-right:0.2em;">"</span>"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">14 Sep</span> 2015</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJavadoc&amp;rft.atitle=Javadoc+Tool+Reference+Page+%28Solaris%2C+Linux%2C+or+Mac+OS+X%29.+Section+%22Multiple-Field+Declarations%22&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fdocs.oracle.com%2Fjavase%2F8%2Fdocs%2Ftechnotes%2Ftools%2Funix%2Fjavadoc.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/6/docs/technotes/tools/windows/javadoc.html#javadoctags">Javadoc tags in JavaSE 6</a></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Javadoc&amp;action=edit&amp;section=8" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://www.oracle.com/technetwork/java/javase/documentation/index-jsp-135444.html">Javadoc tool web site</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.oracle.com/technetwork/java/javase/documentation/index-137868.html">Javadoc tags and how to write comments</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.jcp.org/en/jsr/detail?id=260">JSR 260</a> Javadoc Tag Technology Update <a href="https://en.wikipedia.org/wiki/Java_Specification_Request" class="mw-redirect" title="Java Specification Request">Java Specification Request</a> (defines new Javadoc tags)</li>
+<li><a rel="nofollow" class="external text" href="https://web.archive.org/web/20130927133806/https://today.java.net/pub/a/today/2004/08/26/ashkelon.html">Improve on Javadocs with ashkelon</a></li>
+<li><a rel="nofollow" class="external text" href="http://doclet.com/">A collection of Javadoc doclets</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.myjavadoc.net/">MyJavadoc: Another search engine project, to get public Javadocs over Internet, with the possibility to submit new Javadocs</a></li>
+<li><a rel="nofollow" class="external text" href="http://javafxtuts.com/javafx-tutorials/">A tutorial on Java documentations in java docs formats</a></li>
+<li><a rel="nofollow" class="external text" href="http://globaldocs.info/">Globaldocs: A viewer to browse multiple Javadocs simultaneously.</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.allimant.org/javadoc/">Various Java documentations converted to Windows Help format</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.javadoq.com/">JavaDoq</a> is a handy open source tool to convert Java source code into browsable HTML documents with JavaDoc style and Eclipse Look-And-Feel.</li>
+</ul>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1234
+Cached time: 20170103044244
+Cache expiry: 2592000
+Dynamic content: false
+CPU time usage: 0.096 seconds
+Real time usage: 0.117 seconds
+Preprocessor visited node count: 270/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 6423/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 4/40
+Expensive parser function count: 0/500
+Lua time usage: 0.037/10.000 seconds
+Lua memory usage: 1.71 MB/50 MB
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   87.129      1 - Template:Reflist
+100.00%   87.129      1 - -total
+ 78.87%   68.715      3 - Template:Cite_web
+  6.84%    5.956      1 - Template:Cite_news
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:1329358-0!*!0!!en!*!* and timestamp 20170103044300 and revision id 758047391
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Javadoc&amp;oldid=758047391">https://en.wikipedia.org/w/index.php?title=Javadoc&amp;oldid=758047391</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Help_Category.html" title="Help:Category">Categories</a>: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Free_documentation_generators" title="Category:Free documentation generators">Free documentation generators</a></li><li><a href="Category_Java_development_tools.html" title="Category:Java development tools">Java development tools</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="Special_MyTalk.html" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="Special_MyContributions.html" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&amp;returnto=Javadoc" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Javadoc" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="Javadoc.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+															<li  id="ca-talk"><span><a href="https://en.wikipedia.org/wiki/Talk:Javadoc"  title="Discussion about the content page [t]" accesskey="t" rel="discussion">Talk</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="Javadoc.html" >Read</a></span></li>
+															<li id="ca-edit"><span><a href="https://en.wikipedia.org/w/index.php?title=Javadoc&amp;action=edit"  title="Edit this page [e]" accesskey="e">Edit</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="https://en.wikipedia.org/w/index.php?title=Javadoc&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="https://en.wikipedia.org/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="Main_Page.html"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="Portal_Contents.html" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="Portal_Featured_content.html" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="Portal_Current_events.html" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="https://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="../../shop.wikimedia.org/index.html" title="Visit the Wikipedia store">Wikipedia store</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Interaction</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-help"><a href="Help_Contents.html" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="Wikipedia_About.html" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="Wikipedia_Community_portal.html" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="Wikipedia_Contact_us.html" title="How to contact Wikipedia">Contact page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="https://en.wikipedia.org/wiki/Special:WhatLinksHere/Javadoc" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://en.wikipedia.org/wiki/Special:RecentChangesLinked/Javadoc" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="Wikipedia_File_Upload_Wizard.html" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="https://en.wikipedia.org/w/index.php?title=Javadoc&amp;oldid=758047391" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://en.wikipedia.org/w/index.php?title=Javadoc&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q1413077" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="https://en.wikipedia.org/w/index.php?title=Special:CiteThisPage&amp;page=Javadoc&amp;id=758047391" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Print/export</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Javadoc">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Javadoc&amp;returnto=Javadoc&amp;oldid=758047391&amp;writer=rdf2latex">Download as PDF</a></li><li id="t-print"><a href="https://en.wikipedia.org/w/index.php?title=Javadoc&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Languages</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Javadoc" title="Javadoc – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Javadoc" title="Javadoc – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Javadoc" title="Javadoc – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Javadoc" title="Javadoc – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Javadoc" title="Javadoc – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/Javadoc" title="Javadoc – Dutch" lang="nl" hreflang="nl" class="interlanguage-link-target">Nederlands</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/Javadoc" title="Javadoc – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-no"><a href="https://no.wikipedia.org/wiki/Javadoc" title="Javadoc – Norwegian" lang="no" hreflang="no" class="interlanguage-link-target">Norsk bokmål</a></li><li class="interlanguage-link interwiki-nn"><a href="https://nn.wikipedia.org/wiki/Javadoc" title="Javadoc – Norwegian Nynorsk" lang="nn" hreflang="nn" class="interlanguage-link-target">Norsk nynorsk</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Javadoc" title="Javadoc – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Javadoc" title="Javadoc – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/Javadoc" title="Javadoc – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-sv"><a href="https://sv.wikipedia.org/wiki/Javadoc" title="Javadoc – Swedish" lang="sv" hreflang="sv" class="interlanguage-link-target">Svenska</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/Javadoc" title="Javadoc – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q1413077#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 3 January 2017, at 04:43.</li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="Wikipedia_Text_of_Creative_Commons_Attribution-ShareAlike_3.html">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="../../creativecommons.org/licenses/by-sa/3.0/index.html" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="../../wikimediafoundation.org/wiki/Terms_of_Use.html">Terms of Use</a> and <a href="../../wikimediafoundation.org/wiki/Privacy_policy.html">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="../../www.wikimediafoundation.org/index.html">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../../wikimediafoundation.org/wiki/Privacy_policy.html" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="Wikipedia_About.html" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="Wikipedia_General_disclaimer.html" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="Wikipedia_Contact_us.html">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a href="../../www.mediawiki.org/wiki/Special_MyLanguage/How_to_contribute.html">Developers</a></li>
+											<li id="footer-places-cookiestatement"><a href="../../wikimediafoundation.org/wiki/Cookie_statement.html">Cookie statement</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/w/index.php?title=Javadoc&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="../../www.wikimediafoundation.org/index.html"><img src="https://en.wikipedia.org/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="../../www.mediawiki.org/index.html"><img src="https://en.wikipedia.org/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":68,"wgHostname":"mw1172"});});</script>
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Javadoc by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:38 GMT -->
+</html>

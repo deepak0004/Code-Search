@@ -1,0 +1,4 @@
+    
+        Suppose I am having three dropdownlist controls named dd1, dd2 and dd3. The value of each dropdownlist comes from database. dd3's value depends upon value of dd2 and dd2's value depends on value of dd1. Can anyone tell me how do I call servlet for this problem?
+
+                

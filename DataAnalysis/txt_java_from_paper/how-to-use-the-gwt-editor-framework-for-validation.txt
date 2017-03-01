@@ -1,0 +1,48 @@
+    
+        I am trying to integrate with the new GWT Editor framework of GWT 2.1.0. I also want to add my validation checks into the framework. However, I am struggling to find a decent example how to do this.
+
+For the moment I have the following code:
+
+&lt;!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent"&gt;
+&lt;ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+    xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:e="urn:import:com.google.gwt.editor.ui.client"&gt;
+    &lt;ui:with type="be.credoc.iov.webapp.client.MessageConstants"
+        field="msg" /&gt;
+    &lt;g:HTMLPanel&gt;
+        &lt;e:ValueBoxEditorDecorator ui:field="personalReference"&gt;
+            &lt;e:valuebox&gt;
+                &lt;g:TextBox /&gt;
+            &lt;/e:valuebox&gt;
+        &lt;/e:ValueBoxEditorDecorator&gt;
+    &lt;/g:HTMLPanel&gt;
+&lt;/ui:UiBinder&gt; 
+
+
+And for my editor:
+
+public class GarageEditor extends Composite implements Editor&lt;Garage&gt; {
+
+    @UiField
+    ValueBoxEditorDecorator&lt;String&gt; personalReference;
+
+    interface GarageEditorUiBinder extends UiBinder&lt;Widget, GarageEditor&gt; {
+    }
+
+    private static GarageEditorUiBinder uiBinder = GWT.create(GarageEditorUiBinder.class);
+
+    public GarageEditor() {
+        initWidget(uiBinder.createAndBindUi(this));
+    }
+
+}
+
+
+On what point do I have to call my validator and how do I integrate with it?
+
+Update:
+
+I am actually looking for a way to retrieve a map with as key the property path, and as value the editor. There is a path field on a delegate, but this is not the path within the edited object, but the path in the editor class.
+
+Does anybody know if it is possible to do something like this?
+
+                

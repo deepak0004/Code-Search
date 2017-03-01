@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from en.wikipedia.org/wiki/JRuby by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:17 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>JRuby - Wikipedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"JRuby","wgTitle":"JRuby","wgCurRevisionId":759856574,"wgRevisionId":759856574,"wgArticleId":1948859,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Webarchive template wayback links","Pages using deprecated image syntax","Articles containing potentially dated statements from 2012","All articles containing potentially dated statements","Free software programmed in Java (programming language)","Free software programmed in Ruby","JVM programming languages","Scripting languages","Object-oriented programming languages","Ruby (programming language)","Software using the Eclipse license"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"JRuby","wgRelevantArticleId":1948859,"wgRequestId":"WH35-wpAEK8AABxppv8AAACK","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgFlaggedRevsParams":{"tags":{}},"wgStableRevisionId":null,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"en","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgWikibaseItemId":"Q605718","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.math.styles":"ready","ext.cite.styles":"ready","ext.pygments":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@1dqfd7l",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["ext.cite.a11y","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.legacy.wikibits","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.watchlist-notice","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.gadget.featured-articles-links","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.interface","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="https://en.wikipedia.org/w/load.php?debug=false&amp;lang=en&amp;modules=ext.cite.styles%7Cext.math.scripts%2Cstyles%7Cext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="../w/load2c8d.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../w/load18b6.css?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.29.0-wmf.7"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="https://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/JRuby"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=JRuby&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=JRuby&amp;action=edit"/>
+<link rel="apple-touch-icon" href="https://en.wikipedia.org/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="../static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../w/api251f.php?action=rsd"/>
+<link rel="copyright" href="../../creativecommons.org/licenses/by-sa/3.0/index.html"/>
+<link rel="canonical" href="JRuby.html"/>
+<link rel="dns-prefetch" href="../../login.wikimedia.org/index.html"/>
+<link rel="dns-prefetch" href="../../meta.wikimedia.org/index.html" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-JRuby rootpage-JRuby skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">JRuby</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><script>function mfTempOpenSection(id){var block=document.getElementById("mf-section-"+id);block.className+=" open-block";block.previousSibling.className+=" open-block";}</script><table class="infobox vevent" style="width:22em">
+<caption class="summary">JRuby</caption>
+<tr>
+<td colspan="2" style="text-align:center"><a href="https://en.wikipedia.org/wiki/File:JRuby_logo.png" class="image"><img alt="JRuby logo.png" src="http://upload.wikimedia.org/wikipedia/en/thumb/e/ea/JRuby_logo.png/200px-JRuby_logo.png" width="200" height="60" srcset="//upload.wikimedia.org/wikipedia/en/thumb/e/ea/JRuby_logo.png/300px-JRuby_logo.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/e/ea/JRuby_logo.png/400px-JRuby_logo.png 2x" data-file-width="500" data-file-height="149" /></a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_developer" title="Software developer">Developer(s)</a></th>
+<td>Charles Oliver Nutter, Thomas Enebo, Ola Bini and Nick Sieger</td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;">Initial release</th>
+<td>2001<span class="noprint">; 16&#160;years ago</span><span style="display:none">&#160;(<span class="bday dtstart published updated">2001</span>)</span></td>
+</tr>
+<tr>
+<td colspan="2" style="text-align:center"></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_release_life_cycle" title="Software release life cycle">Stable release</a></th>
+<td>
+<div style="margin:0px;">9.1.7.0 / January&#160;11,&#160;2017<span style="display:none">&#160;(<span class="bday dtstart published updated">2017-01-11</span>)</span></div>
+</td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;">Development status</th>
+<td>Active</td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;">Written in</th>
+<td><a href="https://en.wikipedia.org/wiki/Ruby_programming_language" class="mw-redirect" title="Ruby programming language">Ruby</a> and <a href="Java_(programming_language).html" title="Java (programming language)">Java</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Operating_system" title="Operating system">Operating system</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Cross-platform" title="Cross-platform">Cross-platform</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Computing_platform" title="Computing platform">Platform</a></th>
+<td><a href="Java_Virtual_Machine.html" class="mw-redirect" title="Java Virtual Machine">Java Virtual Machine</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_categories#Broad_categories" title="Software categories">Type</a></th>
+<td>Ruby programming language interpreter</td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_license" title="Software license">License</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Eclipse_Public_License" title="Eclipse Public License">EPL</a>/<a href="https://en.wikipedia.org/wiki/GNU_General_Public_License" title="GNU General Public License">GPL</a>/<a href="https://en.wikipedia.org/wiki/GNU_Lesser_Public_License" class="mw-redirect" title="GNU Lesser Public License">LGPL</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;">Website</th>
+<td><span class="url"><a rel="nofollow" class="external text" href="http://www.jruby.org/">www<wbr />.jruby<wbr />.org</a></span></td>
+</tr>
+</table>
+<p><b>JRuby</b> is an implementation of the <a href="https://en.wikipedia.org/wiki/Ruby_(programming_language)" title="Ruby (programming language)">Ruby programming language</a> atop the <a href="Java_Virtual_Machine.html" class="mw-redirect" title="Java Virtual Machine">Java Virtual Machine</a>, written largely in <a href="Java_(programming_language).html" title="Java (programming language)">Java</a>. It is <a href="https://en.wikipedia.org/wiki/Free_software" title="Free software">free software</a> released under a three-way <a href="https://en.wikipedia.org/wiki/Eclipse_Public_License" title="Eclipse Public License">EPL</a>/<a href="https://en.wikipedia.org/wiki/GNU_General_Public_License" title="GNU General Public License">GPL</a>/<a href="https://en.wikipedia.org/wiki/GNU_Lesser_Public_License" class="mw-redirect" title="GNU Lesser Public License">LGPL</a> license. JRuby is tightly integrated with <a href="Java_(programming_language).html" title="Java (programming language)">Java</a> to allow the embedding of the interpreter into any Java application with full two-way access between the Java and the Ruby code (similar to <a href="Jython.html" title="Jython">Jython</a> for the Python language).</p>
+<p>JRuby's lead developers are <a href="https://en.wikipedia.org/w/index.php?title=Charles_Oliver_Nutter&amp;action=edit&amp;redlink=1" class="new" title="Charles Oliver Nutter (page does not exist)">Charles Oliver Nutter</a> and <a href="https://en.wikipedia.org/w/index.php?title=Thomas_Enebo&amp;action=edit&amp;redlink=1" class="new" title="Thomas Enebo (page does not exist)">Thomas Enebo</a>, with many current and past contributors including <a href="https://en.wikipedia.org/w/index.php?title=Ola_Bini&amp;action=edit&amp;redlink=1" class="new" title="Ola Bini (page does not exist)">Ola Bini</a> and <a href="https://en.wikipedia.org/w/index.php?title=Nick_Sieger&amp;action=edit&amp;redlink=1" class="new" title="Nick Sieger (page does not exist)">Nick Sieger</a>. In September 2006, <a href="https://en.wikipedia.org/wiki/Sun_Microsystems" title="Sun Microsystems">Sun Microsystems</a> hired Enebo and Nutter to work on JRuby full-time.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[1]</a></sup> In June 2007, <a href="https://en.wikipedia.org/wiki/ThoughtWorks" title="ThoughtWorks">ThoughtWorks</a> hired Ola Bini to work on Ruby and JRuby.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">[2]</a></sup></p>
+<p>In July 2009, the JRuby developers left Sun to continue JRuby development at <a href="https://en.wikipedia.org/wiki/Engine_Yard" title="Engine Yard">Engine Yard</a>.<sup id="cite_ref-engineyardmove_3-0" class="reference"><a href="#cite_note-engineyardmove-3">[3]</a></sup> In May 2012, Nutter and Enebo left Engine Yard to work on JRuby at <a href="https://en.wikipedia.org/wiki/Red_Hat" title="Red Hat">Red Hat</a>.<sup id="cite_ref-redhatmove_4-0" class="reference"><a href="#cite_note-redhatmove-4">[4]</a></sup></p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#History"><span class="tocnumber">1</span> <span class="toctext">History</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Ruby_on_Rails"><span class="tocnumber">1.1</span> <span class="toctext">Ruby on Rails</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Multiple_virtual_machine_collaboration"><span class="tocnumber">1.2</span> <span class="toctext">Multiple virtual machine collaboration</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Dynamic_invocation_on_Java_Virtual_Machines"><span class="tocnumber">1.3</span> <span class="toctext">Dynamic invocation on Java Virtual Machines</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Release_history"><span class="tocnumber">1.4</span> <span class="toctext">Release history</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#Design"><span class="tocnumber">2</span> <span class="toctext">Design</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Frameworks_support"><span class="tocnumber">3</span> <span class="toctext">Frameworks support</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Programming"><span class="tocnumber">4</span> <span class="toctext">Programming</span></a>
+<ul>
+<li class="toclevel-2 tocsection-9"><a href="#Ruby_meets_Java"><span class="tocnumber">4.1</span> <span class="toctext">Ruby meets Java</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#JRuby_calling_Java"><span class="tocnumber">4.2</span> <span class="toctext">JRuby calling Java</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Calling_JRuby_from_Java"><span class="tocnumber">4.3</span> <span class="toctext">Calling JRuby from Java</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-12"><a href="#Performance"><span class="tocnumber">5</span> <span class="toctext">Performance</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#See_also"><span class="tocnumber">6</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#References"><span class="tocnumber">7</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#Further_reading"><span class="tocnumber">8</span> <span class="toctext">Further reading</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#External_links"><span class="tocnumber">9</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=JRuby&amp;action=edit&amp;section=1" title="Edit section: History">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>JRuby was originally created by Jan Arne Petersen, in 2001. At that time and for several years following, the code was a direct port of the Ruby 1.6 <a href="https://en.wikipedia.org/wiki/C_(programming_language)" title="C (programming language)">C</a> code. With the release of Ruby 1.8.6, an effort began to update JRuby to 1.8.6 features and semantics. Since 2001, several contributors have assisted the project, leading to the current (2012<sup class="plainlinks noprint asof-tag update" style="display:none;"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=JRuby&amp;action=edit">[update]</a></sup>) core team of around six members.</p>
+<p>JRuby 1.1 added <a href="https://en.wikipedia.org/wiki/Just-in-time_compilation" title="Just-in-time compilation">Just-in-time compilation</a> and <a href="https://en.wikipedia.org/wiki/AOT_compiler" class="mw-redirect" title="AOT compiler">Ahead-of-time compilation</a> modes to JRuby and was already faster in most cases than the then-current Ruby 1.8.7 reference implementation.<sup id="cite_ref-antoniocangiano_5-0" class="reference"><a href="#cite_note-antoniocangiano-5">[5]</a></sup></p>
+<p>JRuby packages are available for most platforms; <a href="https://en.wikipedia.org/wiki/Fedora_(operating_system)#Fedora_9" title="Fedora (operating system)">Fedora 9</a> was among the first to include it as a standard package at JRuby 1.1.1.<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">[6]</a></sup><sup id="cite_ref-7" class="reference"><a href="#cite_note-7">[7]</a></sup></p>
+<p>In July 2009, the core JRuby developers at Sun Microsystems, <a href="https://en.wikipedia.org/w/index.php?title=Charles_Oliver_Nutter&amp;action=edit&amp;redlink=1" class="new" title="Charles Oliver Nutter (page does not exist)">Charles Oliver Nutter</a>, <a href="https://en.wikipedia.org/w/index.php?title=Thomas_Enebo&amp;action=edit&amp;redlink=1" class="new" title="Thomas Enebo (page does not exist)">Thomas Enebo</a> and <a href="https://en.wikipedia.org/w/index.php?title=Nick_Sieger&amp;action=edit&amp;redlink=1" class="new" title="Nick Sieger (page does not exist)">Nick Sieger</a>, joined <a href="https://en.wikipedia.org/wiki/Engine_Yard" title="Engine Yard">Engine Yard</a> to continue JRuby development.<sup id="cite_ref-engineyardmove_3-1" class="reference"><a href="#cite_note-engineyardmove-3">[3]</a></sup><sup id="cite_ref-8" class="reference"><a href="#cite_note-8">[8]</a></sup> In May 2012, Nutter and Enebo left Engine Yard to work on JRuby at <a href="https://en.wikipedia.org/wiki/Red_Hat" title="Red Hat">Red Hat</a>.<sup id="cite_ref-redhatmove_4-1" class="reference"><a href="#cite_note-redhatmove-4">[4]</a></sup></p>
+<p>JRuby has supported compatibility with <a href="https://en.wikipedia.org/wiki/Ruby_MRI" title="Ruby MRI">Ruby MRI</a> versions 1.6 through 1.9.3. JRuby 1.0 supported Ruby 1.8.6, with JRuby 1.4.0 updating that compatibility to Ruby 1.8.7. JRuby 1.6.0 added simultaneous support for Ruby 1.9.2, with JRuby 1.7.0 making Ruby 1.9.3 the default execution mode (Ruby 1.8.7 compatibility is available via a command-line flag). JRuby 9.0.0.0 added support for Ruby 2.2.</p>
+<h3><span class="mw-headline" id="Ruby_on_Rails">Ruby on Rails</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=JRuby&amp;action=edit&amp;section=2" title="Edit section: Ruby on Rails">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>JRuby has been able to run the <a href="https://en.wikipedia.org/wiki/Ruby_on_Rails" title="Ruby on Rails">Ruby on Rails</a> web framework since version 0.9 (May 2006),<sup id="cite_ref-railssup_9-0" class="reference"><a href="#cite_note-railssup-9">[9]</a></sup><sup id="cite_ref-10" class="reference"><a href="#cite_note-10">[10]</a></sup> with the ability to execute <a href="https://en.wikipedia.org/wiki/RubyGems" title="RubyGems">RubyGems</a> and <a href="https://en.wikipedia.org/wiki/WEBrick" title="WEBrick">WEBrick</a>. Since the hiring of the two lead developers by Sun, Rails compatibility and speed have improved greatly. JRuby version 1.0 successfully passed nearly all of Rails's own test cases.<sup id="cite_ref-11" class="reference"><a href="#cite_note-11">[11]</a></sup> Since then, developers have begun to use JRuby for Rails applications in production environments.<sup id="cite_ref-12" class="reference"><a href="#cite_note-12">[12]</a></sup></p>
+<h3><span class="mw-headline" id="Multiple_virtual_machine_collaboration">Multiple virtual machine collaboration</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=JRuby&amp;action=edit&amp;section=3" title="Edit section: Multiple virtual machine collaboration">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>On February 27, 2008, <a href="https://en.wikipedia.org/wiki/Sun_Microsystems" title="Sun Microsystems">Sun Microsystems</a> and the <a href="https://en.wikipedia.org/wiki/University_of_Tokyo" title="University of Tokyo">University of Tokyo</a> announced a joint-research project to implement a virtual machine capable of executing more than one <a href="https://en.wikipedia.org/wiki/Ruby_(programming_language)" title="Ruby (programming language)">Ruby</a> or JRuby application on one interpreter.<sup id="cite_ref-13" class="reference"><a href="#cite_note-13">[13]</a></sup></p>
+<h3><span class="mw-headline" id="Dynamic_invocation_on_Java_Virtual_Machines">Dynamic invocation on Java Virtual Machines</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=JRuby&amp;action=edit&amp;section=4" title="Edit section: Dynamic invocation on Java Virtual Machines">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="https://en.wikipedia.org/wiki/JSR_292" class="mw-redirect" title="JSR 292">JSR 292</a> (<i>Supporting Dynamically Typed Languages on the JavaTM Platform</i>) <sup id="cite_ref-14" class="reference"><a href="#cite_note-14">[14]</a></sup> proposes:</p>
+<ul>
+<li>adding a new <code>invokedynamic</code> instruction at the JVM level, allowing method invocation using dynamic <a href="https://en.wikipedia.org/wiki/Type_system#Type_checking" title="Type system">type checking</a>,</li>
+<li>dynamically changing classes and methods at runtime.</li>
+</ul>
+<p>The <a href="https://en.wikipedia.org/wiki/Sun_Microsystems" title="Sun Microsystems">Sun</a> Open source project <a href="Da_Vinci_Machine.html" title="Da Vinci Machine">Multi Language Virtual Machine</a> aims to prototype this JSR.<sup id="cite_ref-15" class="reference"><a href="#cite_note-15">[15]</a></sup> The first working prototype, developed as a patch on <a href="OpenJDK.html" title="OpenJDK">OpenJDK</a>, was announced and made available on end of August 2008.<sup id="cite_ref-16" class="reference"><a href="#cite_note-16">[16]</a></sup><sup id="cite_ref-17" class="reference"><a href="#cite_note-17">[17]</a></sup></p>
+<p>The JRuby team has implemented dynamic invocation into their codebase. Dynamic invocation initially shipped with the 1.1.5 release in a primitive form.<sup id="cite_ref-18" class="reference"><a href="#cite_note-18">[18]</a></sup> Version 1.7.0 enabled it by default on Java 8 builds.<sup id="cite_ref-170release_19-0" class="reference"><a href="#cite_note-170release-19">[19]</a></sup></p>
+<h3><span class="mw-headline" id="Release_history">Release history</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=JRuby&amp;action=edit&amp;section=5" title="Edit section: Release history">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>This table presents only releases that present significant steps in JRuby history, aside from versions that mainly fixed bugs and improved performance. Performance improvements are also not shown in the table below, as every release has usually brought such improvements.</p>
+<p>The project gets coordinated <a rel="nofollow" class="external text" href="https://web.archive.org/web/20101206182432/http://jira.codehaus.org/browse/JRUBY">here</a> at codehaus.org, you can find also the official release history resp. plan <a rel="nofollow" class="external text" href="https://web.archive.org/web/20101206182432/http://jira.codehaus.org/browse/JRUBY">there</a>.</p>
+<table class="wikitable">
+<tr>
+<th width="60">Release</th>
+<th width="110">Release Date</th>
+<th width="400">Highlights</th>
+</tr>
+<tr>
+<td>0.9</td>
+<td>2006-08-01</td>
+<td>Rails support<sup id="cite_ref-railssup_9-1" class="reference"><a href="#cite_note-railssup-9">[9]</a></sup></td>
+</tr>
+<tr>
+<td>1.1</td>
+<td>2008-03-28</td>
+<td>Performs better than Ruby MRI 1.8.7<sup id="cite_ref-antoniocangiano_5-1" class="reference"><a href="#cite_note-antoniocangiano-5">[5]</a></sup><br />
+<a href="https://en.wikipedia.org/wiki/AOT_compiler" class="mw-redirect" title="AOT compiler">AOT mode</a> and <a href="https://en.wikipedia.org/wiki/Just-in-time_compilation" title="Just-in-time compilation">JIT mode</a><sup id="cite_ref-compilerComplete_20-0" class="reference"><a href="#cite_note-compilerComplete-20">[20]</a></sup></td>
+</tr>
+<tr>
+<td>1.1.4</td>
+<td>2008-08-28</td>
+<td>Refactored Java integration layer<br />
+Beginning of Ruby 1.9 support<br />
+<a href="https://en.wikipedia.org/wiki/Foreign_function_interface" title="Foreign function interface">FFI</a> subsystem for calling <a href="https://en.wikipedia.org/wiki/C_(programming_language)" title="C (programming language)">C</a> libraries<sup id="cite_ref-21" class="reference"><a href="#cite_note-21">[21]</a></sup></td>
+</tr>
+<tr>
+<td>1.2.0<sup id="cite_ref-22" class="reference"><a href="#cite_note-22">[22]</a></sup></td>
+<td>2009-03-16</td>
+<td><a href="https://en.wikipedia.org/wiki/Just-in-time_compilation" title="Just-in-time compilation">JIT</a> compiler for Ruby 1.9<br />
+Preliminary <a href="https://en.wikipedia.org/wiki/Android_(operating_system)" title="Android (operating system)">Android</a> support by the <a href="https://en.wikipedia.org/w/index.php?title=Ruboto&amp;action=edit&amp;redlink=1" class="new" title="Ruboto (page does not exist)">Ruboto</a> project.</td>
+</tr>
+<tr>
+<td>1.3.0<sup id="cite_ref-23" class="reference"><a href="#cite_note-23">[23]</a></sup></td>
+<td>2009-06-03</td>
+<td>JRuby runs in restricted environments better like <a href="https://en.wikipedia.org/wiki/Google_App_Engine" title="Google App Engine">GAE/J</a></td>
+</tr>
+<tr>
+<td>1.4.0<sup id="cite_ref-24" class="reference"><a href="#cite_note-24">[24]</a></sup><sup id="cite_ref-25" class="reference"><a href="#cite_note-25">[25]</a></sup></td>
+<td>2009-11-02</td>
+<td>Windows Native Launcher and Windows installer<br />
+Ruby 1.8.7 support</td>
+</tr>
+<tr>
+<td>1.5.0<sup id="cite_ref-26" class="reference"><a href="#cite_note-26">[26]</a></sup></td>
+<td>2010-05-12</td>
+<td>Native Launcher for <a href="https://en.wikipedia.org/wiki/UNIX" class="mw-redirect" title="UNIX">UNIX</a>-based platforms<br />
+Ant support and Rake-Ant integration<br />
+Updates to the standard library, <a href="https://en.wikipedia.org/wiki/RubyGems" title="RubyGems">RubyGems</a>, and <a href="https://en.wikipedia.org/wiki/RSpec" title="RSpec">RSpec</a></td>
+</tr>
+<tr>
+<td>1.6.0<sup id="cite_ref-27" class="reference"><a href="#cite_note-27">[27]</a></sup></td>
+<td>2011-03-15</td>
+<td>Ruby 1.9.2 language and API compatibility<br />
+Built-in profiler<br />
+Experimental support for C extensions based on Ruby’s C API</td>
+</tr>
+<tr>
+<td>1.7.0<sup id="cite_ref-170release_19-1" class="reference"><a href="#cite_note-170release-19">[19]</a></sup></td>
+<td>2012-10-22</td>
+<td>Ruby 1.9.3 language is the default mode<br />
+Support for <a href="Da_Vinci_Machine.html" title="Da Vinci Machine">invokedynamic</a></td>
+</tr>
+<tr>
+<td>1.7.4<sup id="cite_ref-28" class="reference"><a href="#cite_note-28">[28]</a></sup></td>
+<td>2013-05-16</td>
+<td>Experimental Ruby 2.0 support (most features and <a href="https://en.wikipedia.org/wiki/Stdlib" class="mw-redirect" title="Stdlib">stdlib</a> included)</td>
+</tr>
+<tr>
+<td>9.0.0.0<sup id="cite_ref-29" class="reference"><a href="#cite_note-29">[29]</a></sup></td>
+<td>2015-07-22</td>
+<td>Ruby 2.x support<br />
+New optimizing runtime<br />
+New POSIX-friendly IO and Process
+<p>Fully ported encoding/transcoding logic from MRI</p>
+</td>
+</tr>
+<tr>
+<td>9.1.7.0<sup id="cite_ref-30" class="reference"><a href="#cite_note-30">[30]</a></sup></td>
+<td>2017-01-11</td>
+<td>Fixed serious LinkageError when using multiple threads
+<p>Fixed several keyword argument issues</p>
+<p>Fixed several parser issues</p>
+<p>Reduced memory use of the JIT</p>
+<p>Update Psych to 2.2.2</p>
+<p>Update jruby-openssl to 0.9.18</p>
+<p>72 issues fixed (<a rel="nofollow" class="external text" href="https://github.com/jruby/jruby/milestone/58?closed=1">see on GitHub</a>)</p>
+</td>
+</tr>
+</table>
+<h2><span class="mw-headline" id="Design">Design</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=JRuby&amp;action=edit&amp;section=6" title="Edit section: Design">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Since early 2006, the current JRuby core team has endeavored to move JRuby beyond being a simple C port, to support better performance and to aid eventual compilation to <a href="Java_bytecode.html" title="Java bytecode">Java bytecode</a>. To support this end, the team set an ambitious goal: to be able to run <a href="https://en.wikipedia.org/wiki/Ruby_on_Rails" title="Ruby on Rails">Ruby on Rails</a> unmodified using JRuby. In the process of achieving this goal, the JRuby test suite expanded to such extent that the team gained confidence in the "correctness" of JRuby. As a result, toward the end of 2006 and in the beginning of 2007, they began to commit much more complicated redesigns and refactorings of JRuby's core subsystems.</p>
+<p>JRuby is designed to work as a mixed-mode virtual machine for Ruby, where code can be either interpreted directly, <a href="https://en.wikipedia.org/wiki/Just-in-time_compilation" title="Just-in-time compilation">just-in-time</a> compiled at runtime to Java bytecode, or <a href="https://en.wikipedia.org/wiki/AOT_compiler" class="mw-redirect" title="AOT compiler">ahead-of-time</a> compiled to Java bytecode before execution. Until October 2007, only the <a href="https://en.wikipedia.org/wiki/Interpreter_(computing)" title="Interpreter (computing)">interpreted</a> mode supported all Ruby's constructs, but a full <a href="https://en.wikipedia.org/wiki/AOT_compiler" class="mw-redirect" title="AOT compiler">AOT</a>/<a href="https://en.wikipedia.org/wiki/Just-in-time_compilation" title="Just-in-time compilation">JIT</a> compiler is available since version 1.1.<sup id="cite_ref-compilerComplete_20-1" class="reference"><a href="#cite_note-compilerComplete-20">[20]</a></sup> The compiler design allows for interpreted and compiled code to run side-by-side, as well as <a href="https://en.wikipedia.org/wiki/Deoptimization" class="mw-redirect" title="Deoptimization">decompilation</a> to reoptimize and outputting generated <a href="Java_bytecode.html" title="Java bytecode">bytecode</a> as Java class files.</p>
+<h2><span class="mw-headline" id="Frameworks_support">Frameworks support</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=JRuby&amp;action=edit&amp;section=7" title="Edit section: Frameworks support">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>JRuby has built-in support for <a href="https://en.wikipedia.org/wiki/Ruby_on_Rails" title="Ruby on Rails">Rails</a>, <a href="https://en.wikipedia.org/wiki/RSpec" title="RSpec">RSpec</a>, <a href="https://en.wikipedia.org/wiki/Rake_(software)" title="Rake (software)">Rake</a>, and <a href="https://en.wikipedia.org/wiki/RubyGems" title="RubyGems">RubyGems</a>. It embeds an <a href="https://en.wikipedia.org/wiki/Foreign_function_interface" title="Foreign function interface">FFI</a> subsystem to allow the use of <a href="https://en.wikipedia.org/wiki/C_(programming_language)" title="C (programming language)">C</a> libraries bundled as <a href="https://en.wikipedia.org/wiki/RubyGems" title="RubyGems">gems</a>. It also allows launching the <a href="https://en.wikipedia.org/wiki/Interactive_Ruby_Shell" title="Interactive Ruby Shell">Interactive Ruby Shell</a> (irb) as <a href="https://en.wikipedia.org/wiki/Ruby_MRI" title="Ruby MRI">Ruby MRI</a> does.</p>
+<p>The <a href="NetBeans.html#NetBeans_IDE_Bundle_for_Ruby" title="NetBeans">Netbeans Ruby Pack</a>, available in NetBeans 6, allows IDE development with <a href="https://en.wikipedia.org/wiki/Ruby_(programming_language)" title="Ruby (programming language)">Ruby</a> and JRuby, as well as <a href="https://en.wikipedia.org/wiki/Ruby_on_Rails" title="Ruby on Rails">Ruby on Rails</a> for the two implementations of Ruby.<sup id="cite_ref-31" class="reference"><a href="#cite_note-31">[31]</a></sup><sup id="cite_ref-32" class="reference"><a href="#cite_note-32">[32]</a></sup> It is no longer included in NetBeans 7.0 and later.</p>
+<h2><span class="mw-headline" id="Programming">Programming</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=JRuby&amp;action=edit&amp;section=8" title="Edit section: Programming">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Ruby_meets_Java">Ruby meets Java</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=JRuby&amp;action=edit&amp;section=9" title="Edit section: Ruby meets Java">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>JRuby is similar to the standard Ruby interpreter except written in <a href="Java_(programming_language).html" title="Java (programming language)">Java</a>. JRuby features some of the same concepts, including <a href="https://en.wikipedia.org/wiki/Object-oriented_programming" title="Object-oriented programming">object-oriented programming</a>, and <a href="https://en.wikipedia.org/w/index.php?title=Dynamic-typing&amp;action=edit&amp;redlink=1" class="new" title="Dynamic-typing (page does not exist)">dynamic-typing</a> as Ruby. The key difference is that JRuby is tightly integrated with Java, and can be called directly from Java programs.<sup id="cite_ref-33" class="reference"><a href="#cite_note-33">[33]</a></sup> Java has significant footing in the development of web applications.</p>
+<h3><span class="mw-headline" id="JRuby_calling_Java">JRuby calling Java</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=JRuby&amp;action=edit&amp;section=10" title="Edit section: JRuby calling Java">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>One powerful feature of JRuby is its ability to invoke the classes of the <a href="https://en.wikipedia.org/wiki/Java_Platform" class="mw-redirect" title="Java Platform">Java Platform</a>. To do this, one must first load JRuby's Java support, by calling "require 'java'". The following example creates a Java <b><code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/8/docs/api/javax/swing/JFrame.html">JFrame</a></code></b> with a <b><code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/8/docs/api/javax/swing/JLabel.html">JLabel</a></code></b>:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="nb">require</span> <span class="s1">'java'</span>
+
+<span class="n">frame</span> <span class="o">=</span> <span class="n">javax</span><span class="o">.</span><span class="n">swing</span><span class="o">.</span><span class="n">JFrame</span><span class="o">.</span><span class="n">new</span>
+<span class="n">frame</span><span class="o">.</span><span class="n">getContentPane</span><span class="o">.</span><span class="n">add</span> <span class="n">javax</span><span class="o">.</span><span class="n">swing</span><span class="o">.</span><span class="n">JLabel</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s1">'Hello, World!'</span><span class="p">)</span>
+<span class="n">frame</span><span class="o">.</span><span class="n">setDefaultCloseOperation</span> <span class="n">javax</span><span class="o">.</span><span class="n">swing</span><span class="o">.</span><span class="n">JFrame</span><span class="o">::</span><span class="no">EXIT_ON_CLOSE</span>
+<span class="n">frame</span><span class="o">.</span><span class="n">pack</span>
+<span class="n">frame</span><span class="o">.</span><span class="n">set_visible</span> <span class="kp">true</span>
+</pre></div>
+<p>JRuby also allows the user to call Java code using the more Ruby-like <a href="https://en.wikipedia.org/wiki/Naming_conventions_(programming)#Multiple-word_identifiers" class="mw-redirect" title="Naming conventions (programming)">underscore method naming</a> and to refer to <a href="JavaBean.html" class="mw-redirect" title="JavaBean">JavaBean</a> properties as attributes:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="n">frame</span><span class="o">.</span><span class="n">content_pane</span><span class="o">.</span><span class="n">add</span> <span class="n">label</span>
+<span class="n">frame</span><span class="o">.</span><span class="n">visible</span> <span class="o">=</span> <span class="kp">true</span>
+</pre></div>
+<h3><span class="mw-headline" id="Calling_JRuby_from_Java">Calling JRuby from Java</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=JRuby&amp;action=edit&amp;section=11" title="Edit section: Calling JRuby from Java">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>JRuby can just as easily be called from Java, using either the <a href="https://en.wikipedia.org/wiki/JSR_223" class="mw-redirect" title="JSR 223">JSR 223</a><sup id="cite_ref-34" class="reference"><a href="#cite_note-34">[34]</a></sup> Scripting for Java 6 or the <a href="Bean_Scripting_Framework.html" title="Bean Scripting Framework">Apache Bean Scripting</a> framework. More information on this is available in the <a rel="nofollow" class="external text" href="http://wiki.jruby.org/wiki/JavaIntegration">JRuby Wiki article</a>.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="c1">//Example using JSR 233 Scripting for Java 6</span>
+<span class="n">ScriptEngineManager</span> <span class="n">mgr</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ScriptEngineManager</span><span class="o">();</span>
+<span class="n">ScriptEngine</span> <span class="n">rbEngine</span> <span class="o">=</span> <span class="n">mgr</span><span class="o">.</span><span class="na">getEngineByExtension</span><span class="o">(</span><span class="s">"rb"</span><span class="o">);</span>
+<span class="k">try</span> <span class="o">{</span>
+  <span class="n">rbEngine</span><span class="o">.</span><span class="na">eval</span><span class="o">(</span><span class="s">"puts 'Hello World!'"</span><span class="o">);</span>
+<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">ScriptException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
+  <span class="n">ex</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+<span class="o">}</span>
+</pre></div>
+<h2><span class="mw-headline" id="Performance">Performance</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=JRuby&amp;action=edit&amp;section=12" title="Edit section: Performance">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>According to some benchmarks, JRuby is faster than alternatives. Since implementations vary in how much code is loaded before execution, different methods of measuring speed can lead to biased interpretations of performance advantages. The time it takes for a <a href="Java_Virtual_Machine.html" class="mw-redirect" title="Java Virtual Machine">Java Virtual Machine</a> itself to load is often excluded from execution times when calculating benchmarks.</p>
+<p>JRuby has the significant architectural advantage to be able to leverage JVM threads without being constrained by a <a href="https://en.wikipedia.org/wiki/Global_interpreter_lock" title="Global interpreter lock">global interpreter lock</a> (similarly to <a href="https://en.wikipedia.org/wiki/Rubinius" title="Rubinius">Rubinius</a>), therefore achieving full parallelism within a process, which Ruby MRI cannot achieve despite leveraging OS threads.</p>
+<p>In a real <a href="https://en.wikipedia.org/wiki/Mongrel_(web_server)" title="Mongrel (web server)">Mongrel</a> <a href="https://en.wikipedia.org/wiki/Web_server" title="Web server">web server</a> application tested in 2007, JRuby performance is better than <a href="https://en.wikipedia.org/wiki/Ruby_MRI" title="Ruby MRI">Ruby MRI</a> 1.8, after the Java Virtual Machine had been instantiated.<sup id="cite_ref-35" class="reference"><a href="#cite_note-35">[35]</a></sup></p>
+<p>In a 2007 benchmark of Ruby implementations, JRuby was faster than Ruby MRI 1.8 in some tests, but <a href="https://en.wikipedia.org/wiki/YARV" title="YARV">YARV</a> outperformed both of them.<sup id="cite_ref-36" class="reference"><a href="#cite_note-36">[36]</a></sup></p>
+<p>As of April 2014, in the Computer Language Benchmarks Game, JRuby 1.7.4 typically has the same performance as Ruby MRI 2.1.0, but uses more memory.<sup id="cite_ref-37" class="reference"><a href="#cite_note-37">[37]</a></sup><sup id="cite_ref-38" class="reference"><a href="#cite_note-38">[38]</a></sup></p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=JRuby&amp;action=edit&amp;section=13" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div role="navigation" aria-label="Portals" class="noprint portal plainlist tright" style="margin:0.5em 0 0.5em 1em;border:solid #aaa 1px">
+<ul style="display:table;box-sizing:border-box;padding:0.1em;max-width:175px;background:#f9f9f9;font-size:85%;line-height:110%;font-style:italic;font-weight:bold">
+<li style="display:table-row"><span style="display:table-cell;padding:0.2em;vertical-align:middle;text-align:center"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_(2009).svg/28px-Free_and_open-source_software_logo_(2009).svg.png" width="28" height="28" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/42px-Free_and_open-source_software_logo_%282009%29.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/56px-Free_and_open-source_software_logo_%282009%29.svg.png 2x" data-file-width="512" data-file-height="512" /></span><span style="display:table-cell;padding:0.2em 0.2em 0.2em 0.3em;vertical-align:middle"><a href="https://en.wikipedia.org/wiki/Portal:Free_software" class="mw-redirect" title="Portal:Free software">Free software portal</a></span></li>
+</ul>
+</div>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/List_of_Java_scripting_languages" class="mw-redirect" title="List of Java scripting languages">List of Java scripting languages</a></li>
+<li><a href="ZK_(framework).html" title="ZK (framework)">ZK (framework)</a> – an Ajax framework supporting JRuby</li>
+<li><a href="https://en.wikipedia.org/w/index.php?title=Monkeybars_Framework&amp;action=edit&amp;redlink=1" class="new" title="Monkeybars Framework (page does not exist)">Monkeybars Framework</a></li>
+<li><a href="Da_Vinci_Machine.html" title="Da Vinci Machine">Da Vinci Machine</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=JRuby&amp;action=edit&amp;section=14" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist references-column-width" style="-moz-column-width: 30em; -webkit-column-width: 30em; column-width: 30em; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite class="citation web">Jacki (2006-09-07). <a rel="nofollow" class="external text" href="https://blogs.oracle.com/ontherecord/entry/sun_welcomes_jruby_developers">"Sun Welcomes JRuby Developers"</a>. On the Record<span class="reference-accessdate">. Retrieved <span class="nowrap">2013-11-07</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJRuby&amp;rft.au=Jacki&amp;rft.btitle=Sun+Welcomes+JRuby+Developers&amp;rft.date=2006-09-07&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fblogs.oracle.com%2Fontherecord%2Fentry%2Fsun_welcomes_jruby_developers&amp;rft.pub=On+the+Record&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><cite class="citation web">Ola Bini. <a rel="nofollow" class="external text" href="http://ola-bini.blogspot.com/2007/03/thoughtworks.html">"ThoughtWorks"</a>. On the Record.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJRuby&amp;rft.au=Ola+Bini&amp;rft.btitle=ThoughtWorks&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fola-bini.blogspot.com%2F2007%2F03%2Fthoughtworks.html&amp;rft.pub=On+the+Record&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-engineyardmove-3"><span class="mw-cite-backlink">^ <a href="#cite_ref-engineyardmove_3-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-engineyardmove_3-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.pcworld.com/article/169145/suns_jruby_team_jumps_ship_to_engine_yard.html">"Sun's JRuby Team Jumps Ship to Engine Yard"</a>. <a href="https://en.wikipedia.org/wiki/PCWorld_(magazine)" class="mw-redirect" title="PCWorld (magazine)">PCWorld</a>. 2009-07-28<span class="reference-accessdate">. Retrieved <span class="nowrap">2012-06-02</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJRuby&amp;rft.btitle=Sun%27s+JRuby+Team+Jumps+Ship+to+Engine+Yard&amp;rft.date=2009-07-28&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.pcworld.com%2Farticle%2F169145%2Fsuns_jruby_team_jumps_ship_to_engine_yard.html&amp;rft.pub=PCWorld&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-redhatmove-4"><span class="mw-cite-backlink">^ <a href="#cite_ref-redhatmove_4-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-redhatmove_4-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.theregister.co.uk/2012/05/23/red_hat_hires_j_ruby_brains/">"Red Hat lures in JRuby power pair"</a>. <a href="https://en.wikipedia.org/wiki/The_Register" title="The Register">The Register</a>. 2012-05-23<span class="reference-accessdate">. Retrieved <span class="nowrap">2012-06-02</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJRuby&amp;rft.btitle=Red+Hat+lures+in+JRuby+power+pair&amp;rft.date=2012-05-23&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.theregister.co.uk%2F2012%2F05%2F23%2Fred_hat_hires_j_ruby_brains%2F&amp;rft.pub=The+Register&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-antoniocangiano-5"><span class="mw-cite-backlink">^ <a href="#cite_ref-antoniocangiano_5-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-antoniocangiano_5-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation web">Cangiano, Antonio (2007-03-12). <a rel="nofollow" class="external text" href="http://antoniocangiano.com/2007/12/03/the-great-ruby-shootout/">"The Great Ruby Shootout"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2008-02-01</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJRuby&amp;rft.aufirst=Antonio&amp;rft.aulast=Cangiano&amp;rft.btitle=The+Great+Ruby+Shootout&amp;rft.date=2007-03-12&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fantoniocangiano.com%2F2007%2F12%2F03%2Fthe-great-ruby-shootout%2F&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><cite class="citation web">Nutter, Charles (2008-04-25). <a rel="nofollow" class="external text" href="http://headius.blogspot.com/2008/04/jruby-111-in-redhat-fedora.html">"JRuby 1.1.1 in RedHat Fedora"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2008-04-26</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJRuby&amp;rft.aufirst=Charles&amp;rft.aulast=Nutter&amp;rft.btitle=JRuby+1.1.1+in+RedHat+Fedora&amp;rft.date=2008-04-25&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fheadius.blogspot.com%2F2008%2F04%2Fjruby-111-in-redhat-fedora.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://admin.fedoraproject.org/pkgdb/packages/name/jruby">"jruby"</a>. fedoraproject.org<span class="reference-accessdate">. Retrieved <span class="nowrap">2008-04-26</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJRuby&amp;rft.btitle=jruby&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fadmin.fedoraproject.org%2Fpkgdb%2Fpackages%2Fname%2Fjruby&amp;rft.pub=fedoraproject.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><cite class="citation web">Nutter, Charles (2009-07-28). <a rel="nofollow" class="external text" href="http://www.engineyard.com/blog/2009/jrubys-future-at-engine-yard/">"JRuby's Future at Engine Yard"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2009-07-28</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJRuby&amp;rft.aufirst=Charles&amp;rft.aulast=Nutter&amp;rft.btitle=JRuby%99s+Future+at+Engine+Yard&amp;rft.date=2009-07-28&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.engineyard.com%2Fblog%2F2009%2Fjrubys-future-at-engine-yard%2F&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-railssup-9"><span class="mw-cite-backlink">^ <a href="#cite_ref-railssup_9-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-railssup_9-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://wiki.jruby.org/wiki/Rails_Support">"Rails Support"</a>. JRuby Team<span class="reference-accessdate">. Retrieved <span class="nowrap">2008-02-17</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJRuby&amp;rft.btitle=Rails+Support&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwiki.jruby.org%2Fwiki%2FRails_Support&amp;rft.pub=JRuby+Team&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><cite class="citation web">Nutter, Charles (2008-08-24). <a rel="nofollow" class="external text" href="http://blog.headius.com/2008/08/zero-to-production-in-15-minutes.html">"Zero to Production in 15 Minutes"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2008-08-27</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJRuby&amp;rft.aufirst=Charles&amp;rft.aulast=Nutter&amp;rft.btitle=Zero+to+Production+in+15+Minutes&amp;rft.date=2008-08-24&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fblog.headius.com%2F2008%2F08%2Fzero-to-production-in-15-minutes.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text">98.6% of the 2,807 Rails-specific test cases execute successfully; see <a rel="nofollow" class="external text" href="http://docs.codehaus.org/display/JRUBY/2007/03/05/JRuby+0.9.8+Released">JRuby 0.9.8 Released</a> <a rel="nofollow" class="external text" href="https://web.archive.org/web/20150522171605/http://docs.codehaus.org/display/JRUBY/2007/03/05/JRuby+0.9.8+Released">Archived</a> May 22, 2015, at the <a href="https://en.wikipedia.org/wiki/Wayback_Machine" title="Wayback Machine">Wayback Machine</a>.</span></li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://github.com/jruby/jruby/wiki/SuccessStories">"Success Stories"</a>. JRuby Wiki on GitHub. 2011-01-05<span class="reference-accessdate">. Retrieved <span class="nowrap">2011-03-16</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJRuby&amp;rft.btitle=Success+Stories&amp;rft.date=2011-01-05&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fgithub.com%2Fjruby%2Fjruby%2Fwiki%2FSuccessStories&amp;rft.pub=JRuby+Wiki+on+GitHub&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-13">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.sun.com/aboutsun/pr/2008-02/sunflash.20080227.5.xml">"The University of Tokyo and Sun Microsystems Commence Joint Research Projects on High Performance Computing and Web-based Programming Languages"</a>. <a href="https://en.wikipedia.org/wiki/Sun_Microsystems" title="Sun Microsystems">Sun Microsystems</a>. 2008-02-27<span class="reference-accessdate">. Retrieved <span class="nowrap">2008-02-28</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJRuby&amp;rft.btitle=The+University+of+Tokyo+and+Sun+Microsystems+Commence+Joint+Research+Projects+on+High+Performance+Computing+and+Web-based+Programming+Languages&amp;rft.date=2008-02-27&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.sun.com%2Faboutsun%2Fpr%2F2008-02%2Fsunflash.20080227.5.xml&amp;rft.pub=Sun+Microsystems&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-14"><span class="mw-cite-backlink"><b><a href="#cite_ref-14">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.jcp.org/en/jsr/detail?id=292">see JSR 292</a></span></li>
+<li id="cite_note-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-15">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://openjdk.java.net/projects/mlvm/subprojects.html">"Sub-Projects and Investigations"</a>. <a href="https://en.wikipedia.org/wiki/Sun_Microsystems" title="Sun Microsystems">Sun Microsystems</a>. 2007<span class="reference-accessdate">. Retrieved <span class="nowrap">2008-02-06</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJRuby&amp;rft.btitle=Sub-Projects+and+Investigations&amp;rft.date=2007&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fopenjdk.java.net%2Fprojects%2Fmlvm%2Fsubprojects.html&amp;rft.pub=Sun+Microsystems&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-16"><span class="mw-cite-backlink"><b><a href="#cite_ref-16">^</a></b></span> <span class="reference-text"><cite class="citation web">Rose, John (2008-08-26). <a rel="nofollow" class="external text" href="https://blogs.oracle.com/jrose/entry/international_invokedynamic_day">"Happy International Invokedynamic Day!"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2008-09-03</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJRuby&amp;rft.aufirst=John&amp;rft.aulast=Rose&amp;rft.btitle=Happy+International+Invokedynamic+Day%21&amp;rft.date=2008-08-26&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fblogs.oracle.com%2Fjrose%2Fentry%2Finternational_invokedynamic_day&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-17"><span class="mw-cite-backlink"><b><a href="#cite_ref-17">^</a></b></span> <span class="reference-text"><cite class="citation web">Lorimer, R.J. (2008-09-01). <a rel="nofollow" class="external text" href="http://www.infoq.com/news/2008/09/invokedynamic_day">"Dynamic Invocation Runs on OpenJDK"</a>. infoq.com<span class="reference-accessdate">. Retrieved <span class="nowrap">2008-09-03</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJRuby&amp;rft.aufirst=R.J.&amp;rft.aulast=Lorimer&amp;rft.btitle=Dynamic+Invocation+Runs+on+OpenJDK&amp;rft.date=2008-09-01&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.infoq.com%2Fnews%2F2008%2F09%2Finvokedynamic_day&amp;rft.pub=infoq.com&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-18"><span class="mw-cite-backlink"><b><a href="#cite_ref-18">^</a></b></span> <span class="reference-text"><cite class="citation web">Nutter, Charles (2008-09-11). <a rel="nofollow" class="external text" href="http://blog.headius.com/2008/09/first-taste-of-invokedynamic.html">"A First Taste of InvokeDynamic"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2008-09-13</span></span>. <q><i>I managed to successfully wire InvokeDynamic directly into JRuby's dispatch process! Such excitement! The code is already in JRuby's trunk, and will ship with JRuby 1.1.5 (though it obviously will be disabled on JVMs without InvokeDynamic).</i></q></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJRuby&amp;rft.aufirst=Charles&amp;rft.aulast=Nutter&amp;rft.btitle=A+First+Taste+of+InvokeDynamic&amp;rft.date=2008-09-11&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fblog.headius.com%2F2008%2F09%2Ffirst-taste-of-invokedynamic.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-170release-19"><span class="mw-cite-backlink">^ <a href="#cite_ref-170release_19-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-170release_19-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://jruby.org/2012/10/22/jruby-1-7-0.html">"JRuby 1.7.0 Released"</a>. JRuby Team. 2012-10-22<span class="reference-accessdate">. Retrieved <span class="nowrap">2011-10-23</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJRuby&amp;rft.btitle=JRuby+1.7.0+Released&amp;rft.date=2012-10-22&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fjruby.org%2F2012%2F10%2F22%2Fjruby-1-7-0.html&amp;rft.pub=JRuby+Team&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-compilerComplete-20"><span class="mw-cite-backlink">^ <a href="#cite_ref-compilerComplete_20-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-compilerComplete_20-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation web">Nutter, Charles (2007-09-27). <a rel="nofollow" class="external text" href="http://headius.blogspot.com/2007/09/compiler-is-complete.html">"The Compiler Is Complete"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2007-10-12</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJRuby&amp;rft.aufirst=Charles&amp;rft.aulast=Nutter&amp;rft.btitle=The+Compiler+Is+Complete&amp;rft.date=2007-09-27&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fheadius.blogspot.com%2F2007%2F09%2Fcompiler-is-complete.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-21"><span class="mw-cite-backlink"><b><a href="#cite_ref-21">^</a></b></span> <span class="reference-text"><cite class="citation web">Enebo, Tom (2008-08-28). <a rel="nofollow" class="external text" href="http://www.bloglines.com/blog/ThomasEEnebo/2008_8">"JRuby 1.1.4 Released"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2009-02-25</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJRuby&amp;rft.aufirst=Tom&amp;rft.aulast=Enebo&amp;rft.btitle=JRuby+1.1.4+Released&amp;rft.date=2008-08-28&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.bloglines.com%2Fblog%2FThomasEEnebo%2F2008_8&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-22"><span class="mw-cite-backlink"><b><a href="#cite_ref-22">^</a></b></span> <span class="reference-text"><cite class="citation web">Enebo, Tom (2009-03-16). <a rel="nofollow" class="external text" href="http://docs.codehaus.org/display/JRUBY/2009/03/16/JRuby+1.2.0+Released">"JRuby 1.2.0 Released"</a>. JRuby Team<span class="reference-accessdate">. Retrieved <span class="nowrap">2009-03-17</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJRuby&amp;rft.aufirst=Tom&amp;rft.aulast=Enebo&amp;rft.btitle=JRuby+1.2.0+Released&amp;rft.date=2009-03-16&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fdocs.codehaus.org%2Fdisplay%2FJRUBY%2F2009%2F03%2F16%2FJRuby%2B1.2.0%2BReleased&amp;rft.pub=JRuby+Team&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-23"><span class="mw-cite-backlink"><b><a href="#cite_ref-23">^</a></b></span> <span class="reference-text"><cite class="citation web">Enebo, Tom (2009-06-03). <a rel="nofollow" class="external text" href="http://docs.codehaus.org/display/JRUBY/2009/06/03/JRuby+1.3.0+Released">"JRuby 1.3.0 Released"</a>. JRuby Team<span class="reference-accessdate">. Retrieved <span class="nowrap">2009-06-03</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJRuby&amp;rft.aufirst=Tom&amp;rft.aulast=Enebo&amp;rft.btitle=JRuby+1.3.0+Released&amp;rft.date=2009-06-03&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fdocs.codehaus.org%2Fdisplay%2FJRUBY%2F2009%2F06%2F03%2FJRuby%2B1.3.0%2BReleased&amp;rft.pub=JRuby+Team&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-24"><span class="mw-cite-backlink"><b><a href="#cite_ref-24">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.jruby.org/2009/11/02/jruby-1-4-0">"JRuby 1.4.0 Released"</a>. JRuby Team. 2009-11-02<span class="reference-accessdate">. Retrieved <span class="nowrap">2009-11-03</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJRuby&amp;rft.btitle=JRuby+1.4.0+Released&amp;rft.date=2009-11-02&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.jruby.org%2F2009%2F11%2F02%2Fjruby-1-4-0&amp;rft.pub=JRuby+Team&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-25"><span class="mw-cite-backlink"><b><a href="#cite_ref-25">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://adtmag.com/articles/2009/11/10/jruby-1.4-released.aspx">"JRuby 1.4.0 Released"</a>. adtmag.com. 2009-11-10<span class="reference-accessdate">. Retrieved <span class="nowrap">2009-11-21</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJRuby&amp;rft.btitle=JRuby+1.4.0+Released&amp;rft.date=2009-11-10&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fadtmag.com%2Farticles%2F2009%2F11%2F10%2Fjruby-1.4-released.aspx&amp;rft.pub=adtmag.com&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-26"><span class="mw-cite-backlink"><b><a href="#cite_ref-26">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://jruby.org/2010/05/12/jruby-1-5-0">"JRuby 1.5.0 Released"</a>. JRuby Team. 2010-05-12<span class="reference-accessdate">. Retrieved <span class="nowrap">2010-05-12</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJRuby&amp;rft.btitle=JRuby+1.5.0+Released&amp;rft.date=2010-05-12&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fjruby.org%2F2010%2F05%2F12%2Fjruby-1-5-0&amp;rft.pub=JRuby+Team&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-27"><span class="mw-cite-backlink"><b><a href="#cite_ref-27">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.jruby.org/2011/03/15/jruby-1-6-0.html">"JRuby 1.6.0 Released"</a>. JRuby Team. 2011-03-15<span class="reference-accessdate">. Retrieved <span class="nowrap">2011-03-15</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJRuby&amp;rft.btitle=JRuby+1.6.0+Released&amp;rft.date=2011-03-15&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.jruby.org%2F2011%2F03%2F15%2Fjruby-1-6-0.html&amp;rft.pub=JRuby+Team&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-28"><span class="mw-cite-backlink"><b><a href="#cite_ref-28">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.jruby.org/2013/05/16/jruby-1-7-4.html">"JRuby 1.7.4 Released"</a>. JRuby Team. 2013-05-16<span class="reference-accessdate">. Retrieved <span class="nowrap">2013-05-19</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJRuby&amp;rft.btitle=JRuby+1.7.4+Released&amp;rft.date=2013-05-16&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.jruby.org%2F2013%2F05%2F16%2Fjruby-1-7-4.html&amp;rft.pub=JRuby+Team&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-29"><span class="mw-cite-backlink"><b><a href="#cite_ref-29">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://jruby.org/2015/07/22/jruby-9-0-0-0.html">"JRuby 9.0.0.0 Released"</a>. JRuby Team. 2015-07-22<span class="reference-accessdate">. Retrieved <span class="nowrap">2015-07-25</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJRuby&amp;rft.btitle=JRuby+9.0.0.0+Released&amp;rft.date=2015-07-22&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fjruby.org%2F2015%2F07%2F22%2Fjruby-9-0-0-0.html&amp;rft.pub=JRuby+Team&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-30"><span class="mw-cite-backlink"><b><a href="#cite_ref-30">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://jruby.org/2017/01/11/jruby-9-1-7-0.html">"JRuby 9.1.7.0 Released — JRuby.org"</a>. <i>jruby.org</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2017-01-13</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJRuby&amp;rft.atitle=JRuby+9.1.7.0+Released+%94+JRuby.org&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fjruby.org%2F2017%2F01%2F11%2Fjruby-9-1-7-0.html&amp;rft.jtitle=jruby.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-31"><span class="mw-cite-backlink"><b><a href="#cite_ref-31">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.netbeans.org/servlets/NewsItemView?newsItemID=1015">"Ruby &amp; JRuby Support Available in NetBeans IDE"</a>. netbeans.org. 2007-03-06<span class="reference-accessdate">. Retrieved <span class="nowrap">2009-07-04</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJRuby&amp;rft.btitle=Ruby+%26+JRuby+Support+Available+in+NetBeans+IDE&amp;rft.date=2007-03-06&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.netbeans.org%2Fservlets%2FNewsItemView%3FnewsItemID%3D1015&amp;rft.pub=netbeans.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-32"><span class="mw-cite-backlink"><b><a href="#cite_ref-32">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.infoworld.com/d/developer-world/ruby-brightens-netbeans-platform-390">"Ruby brightens the NetBeans platform"</a>. infoworld.com. 2007-03-01<span class="reference-accessdate">. Retrieved <span class="nowrap">2008-07-04</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJRuby&amp;rft.btitle=Ruby+brightens+the+NetBeans+platform&amp;rft.date=2007-03-01&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.infoworld.com%2Fd%2Fdeveloper-world%2Fruby-brightens-netbeans-platform-390&amp;rft.pub=infoworld.com&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-33"><span class="mw-cite-backlink"><b><a href="#cite_ref-33">^</a></b></span> <span class="reference-text"><cite class="citation web">Fox, Joshua (2006-07-17). <a rel="nofollow" class="external text" href="http://www.javaworld.com/javaworld/jw-07-2006/jw-0717-ruby.html">"Script your Java applications and efficiently reuse your Java libraries with this dynamic language"</a>. <a href="https://en.wikipedia.org/wiki/JavaWorld" class="mw-redirect" title="JavaWorld">JavaWorld</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2008-04-26</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJRuby&amp;rft.aufirst=Joshua&amp;rft.aulast=Fox&amp;rft.btitle=Script+your+Java+applications+and+efficiently+reuse+your+Java+libraries+with+this+dynamic+language&amp;rft.date=2006-07-17&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.javaworld.com%2Fjavaworld%2Fjw-07-2006%2Fjw-0717-ruby.html&amp;rft.pub=JavaWorld&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-34"><span class="mw-cite-backlink"><b><a href="#cite_ref-34">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://jcp.org/aboutJava/communityprocess/final/jsr223/index.html">JSR 223: Scripting for the Java Platform Specification Request</a></span></li>
+<li id="cite_note-35"><span class="mw-cite-backlink"><b><a href="#cite_ref-35">^</a></b></span> <span class="reference-text"><cite class="citation web">Sieger, Nick (2007-10-25). <a rel="nofollow" class="external text" href="http://blog.nicksieger.com/articles/2007/10/25/jruby-on-rails-fast-enough">"JRuby on Rails: Fast Enough"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2007-10-28</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJRuby&amp;rft.aufirst=Nick&amp;rft.aulast=Sieger&amp;rft.btitle=JRuby+on+Rails%3A+Fast+Enough&amp;rft.date=2007-10-25&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fblog.nicksieger.com%2Farticles%2F2007%2F10%2F25%2Fjruby-on-rails-fast-enough&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-36"><span class="mw-cite-backlink"><b><a href="#cite_ref-36">^</a></b></span> <span class="reference-text"><cite class="citation web">Cangiano, Antonio (2007-12-03). <a rel="nofollow" class="external text" href="http://programmingzen.com/2007/12/03/the-great-ruby-shootout/">"The Great Ruby Shootout"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2014-02-02</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJRuby&amp;rft.aufirst=Antonio&amp;rft.aulast=Cangiano&amp;rft.btitle=The+Great+Ruby+Shootout&amp;rft.date=2007-12-03&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fprogrammingzen.com%2F2007%2F12%2F03%2Fthe-great-ruby-shootout%2F&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-37"><span class="mw-cite-backlink"><b><a href="#cite_ref-37">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://benchmarksgame.alioth.debian.org/u64q/jruby.html">"JRuby compared to Ruby 1.9, Computer Language Benchmarks Game (1)"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2014-02-02</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJRuby&amp;rft.btitle=JRuby+compared+to+Ruby+1.9%2C+Computer+Language+Benchmarks+Game+%281%29&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fbenchmarksgame.alioth.debian.org%2Fu64q%2Fjruby.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-38"><span class="mw-cite-backlink"><b><a href="#cite_ref-38">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://benchmarksgame.alioth.debian.org/u64/jruby.php">"JRuby compared to Ruby 1.9, Computer Language Benchmarks Game (2)"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2014-02-02</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJRuby&amp;rft.btitle=JRuby+compared+to+Ruby+1.9%2C+Computer+Language+Benchmarks+Game+%282%29&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fbenchmarksgame.alioth.debian.org%2Fu64%2Fjruby.php&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="Further_reading">Further reading</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=JRuby&amp;action=edit&amp;section=15" title="Edit section: Further reading">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="refbegin" style="">
+<ul>
+<li><cite class="citation journal">Kutner, Joe (August 22, 2012). <a rel="nofollow" class="external text" href="http://pragprog.com/book/jkdepj/deploying-with-jruby">"Deploying with JRuby: Deliver Scalable Web Apps using the JVM"</a> (First ed.). <a href="https://en.wikipedia.org/wiki/Pragmatic_Bookshelf" class="mw-redirect" title="Pragmatic Bookshelf">Pragmatic Bookshelf</a>: 200. <a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="https://en.wikipedia.org/wiki/Special:BookSources/978-1934356975" title="Special:BookSources/978-1934356975">978-1934356975</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJRuby&amp;rft.atitle=Deploying+with+JRuby%3A+Deliver+Scalable+Web+Apps+using+the+JVM&amp;rft.aufirst=Joe&amp;rft.aulast=Kutner&amp;rft.date=2012-08-22&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fpragprog.com%2Fbook%2Fjkdepj%2Fdeploying-with-jruby&amp;rft.isbn=978-1934356975&amp;rft.pages=200&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite class="citation journal">O Nutter, Charles; Enebo, Thomas; Sieger, Nick; Bini, Ola; Dees, Ian (February 4, 2011). <a rel="nofollow" class="external text" href="http://pragprog.com/book/jruby/using-jruby">"Using JRuby: Bringing Ruby to Java"</a> (First ed.). <a href="https://en.wikipedia.org/wiki/Pragmatic_Bookshelf" class="mw-redirect" title="Pragmatic Bookshelf">Pragmatic Bookshelf</a>: 300. <a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="https://en.wikipedia.org/wiki/Special:BookSources/978-1934356654" title="Special:BookSources/978-1934356654">978-1934356654</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJRuby&amp;rft.atitle=Using+JRuby%3A+Bringing+Ruby+to+Java&amp;rft.au=Bini%2C+Ola&amp;rft.au=Dees%2C+Ian&amp;rft.au=Enebo%2C+Thomas&amp;rft.aufirst=Charles&amp;rft.aulast=O+Nutter&amp;rft.au=Sieger%2C+Nick&amp;rft.date=2011-02-04&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fpragprog.com%2Fbook%2Fjruby%2Fusing-jruby&amp;rft.isbn=978-1934356654&amp;rft.pages=300&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite class="citation journal">Edelson, Justin; Liu, Henry (November 18, 2008). <a rel="nofollow" class="external text" href="http://oreilly.com/catalog/9780596519803/">"JRuby Cookbook"</a> (First ed.). <a href="https://en.wikipedia.org/wiki/O%27Reilly_Media" title="O'Reilly Media">O'Reilly Media</a>: 222. <a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="https://en.wikipedia.org/wiki/Special:BookSources/0-596-51980-X" title="Special:BookSources/0-596-51980-X">0-596-51980-X</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJRuby&amp;rft.atitle=JRuby+Cookbook&amp;rft.aufirst=Justin&amp;rft.aulast=Edelson&amp;rft.au=Liu%2C+Henry&amp;rft.date=2008-11-18&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Foreilly.com%2Fcatalog%2F9780596519803%2F&amp;rft.isbn=0-596-51980-X&amp;rft.pages=222&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite class="citation journal">Bini, Ola (September 24, 2007). <a rel="nofollow" class="external text" href="http://apress.com/book/view/9781590598818">"Practical JRuby on Rails Web 2.0 Projects: Bringing Ruby on Rails to Java"</a> (First ed.). <a href="https://en.wikipedia.org/wiki/Apress" title="Apress">Apress</a>: 330. <a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="https://en.wikipedia.org/wiki/Special:BookSources/1-59059-881-4" title="Special:BookSources/1-59059-881-4">1-59059-881-4</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJRuby&amp;rft.atitle=Practical+JRuby+on+Rails+Web+2.0+Projects%3A+Bringing+Ruby+on+Rails+to+Java&amp;rft.aufirst=Ola&amp;rft.aulast=Bini&amp;rft.date=2007-09-24&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fapress.com%2Fbook%2Fview%2F9781590598818&amp;rft.isbn=1-59059-881-4&amp;rft.pages=330&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite class="citation journal">Kutler, Chris; Leonard, Brian (May 4, 2009). <a rel="nofollow" class="external text" href="http://www.apress.com/book/view/1430216360">"NetBeans Ruby and Rails IDE with JRuby"</a> (First ed.). <a href="https://en.wikipedia.org/wiki/Apress" title="Apress">Apress</a>: 160. <a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="https://en.wikipedia.org/wiki/Special:BookSources/1-4302-1636-0" title="Special:BookSources/1-4302-1636-0">1-4302-1636-0</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJRuby&amp;rft.atitle=NetBeans+Ruby+and+Rails+IDE+with+JRuby&amp;rft.aufirst=Chris&amp;rft.aulast=Kutler&amp;rft.au=Leonard%2C+Brian&amp;rft.date=2009-05-04&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fwww.apress.com%2Fbook%2Fview%2F1430216360&amp;rft.isbn=1-4302-1636-0&amp;rft.pages=160&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+</ul>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=JRuby&amp;action=edit&amp;section=16" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><span class="official-website"><span class="url"><a rel="nofollow" class="external text" href="http://jruby.org/">Official website</a></span></span></li>
+<li><a rel="nofollow" class="external text" href="https://github.com/jruby/jruby/wiki">The JRuby Wiki</a></li>
+</ul>
+<div role="navigation" class="navbox" aria-labelledby="Ruby_programming_language" style="padding:3px">
+<table class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit">
+<tr>
+<th scope="col" class="navbox-title" colspan="3">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="https://en.wikipedia.org/wiki/Template:Ruby_programming_language" title="Template:Ruby programming language"><abbr title="View this template" style=";;background:none transparent;border:none;">v</abbr></a></li>
+<li class="nv-talk"><a href="https://en.wikipedia.org/wiki/Template_talk:Ruby_programming_language" title="Template talk:Ruby programming language"><abbr title="Discuss this template" style=";;background:none transparent;border:none;">t</abbr></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Ruby_programming_language&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;">e</abbr></a></li>
+</ul>
+</div>
+<div id="Ruby_programming_language" style="font-size:114%"><a href="https://en.wikipedia.org/wiki/Ruby_(programming_language)" title="Ruby (programming language)">Ruby programming language</a></div>
+</th>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Implementations</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em"></div>
+<table class="nowraplinks navbox-subgroup" style="border-spacing:0">
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;">Active</div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Ruby_MRI" title="Ruby MRI">Ruby MRI</a> / <a href="https://en.wikipedia.org/wiki/YARV" title="YARV">YARV</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Mruby" title="Mruby">mruby</a></li>
+<li><strong class="selflink">JRuby</strong></li>
+<li><a href="https://en.wikipedia.org/wiki/Rubinius" title="Rubinius">Rubinius</a></li>
+<li><a href="https://en.wikipedia.org/wiki/MagLev_(software)" title="MagLev (software)">MagLev</a></li>
+<li><a href="https://en.wikipedia.org/wiki/RubyMotion" title="RubyMotion">RubyMotion</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;">Discontinued</div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/MacRuby" title="MacRuby">MacRuby</a></li>
+<li><a href="https://en.wikipedia.org/wiki/IronRuby" title="IronRuby">IronRuby</a></li>
+<li><a href="https://en.wikipedia.org/wiki/XRuby" title="XRuby">XRuby</a></li>
+<li><a href="https://en.wikipedia.org/wiki/RubyJS" title="RubyJS">RubyJS</a></li>
+<li><a href="https://en.wikipedia.org/wiki/HotRuby" title="HotRuby">HotRuby</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+<td class="navbox-image" rowspan="13" style="width:0%;padding:0px 0px 0px 2px">
+<div><a href="https://en.wikipedia.org/wiki/File:Ruby_logo_64x64.png" class="image"><img alt="Ruby logo 64x64.png" src="http://upload.wikimedia.org/wikipedia/commons/f/f1/Ruby_logo_64x64.png" width="64" height="64" data-file-width="64" data-file-height="64" /></a></div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">IDE</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/ActiveState_Komodo" class="mw-redirect" title="ActiveState Komodo">Komodo</a></li>
+<li><a href="NetBeans.html" title="NetBeans">NetBeans</a></li>
+<li><a href="https://en.wikipedia.org/wiki/RadRails" title="RadRails">RadRails</a></li>
+<li><a href="https://en.wikipedia.org/wiki/RubyMine" class="mw-redirect" title="RubyMine">RubyMine</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Category:Free_software_programmed_in_Ruby" title="Category:Free software programmed in Ruby">Applications</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Capistrano_(software)" title="Capistrano (software)">Capistrano</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Chef_(software)" title="Chef (software)">Chef</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Hackety_Hack" title="Hackety Hack">Hackety Hack</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Homebrew_(package_management_software)" title="Homebrew (package management software)">Homebrew</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Interactive_Ruby_Shell" title="Interactive Ruby Shell">Interactive Ruby Shell</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Pry_(software)" title="Pry (software)">Pry</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Puppet_(software)" title="Puppet (software)">Puppet</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Rake_(software)" title="Rake (software)">Rake</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Redmine" title="Redmine">Redmine</a></li>
+<li><a href="https://en.wikipedia.org/wiki/RSpec" title="RSpec">RSpec</a></li>
+<li><a href="https://en.wikipedia.org/wiki/RubyGems" title="RubyGems">RubyGems</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Ruby_Version_Manager" title="Ruby Version Manager">RVM</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Libraries and frameworks</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Adhearsion" title="Adhearsion">Adhearsion</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Camping_(microframework)" title="Camping (microframework)">Camping</a></li>
+<li><a href="https://en.wikipedia.org/wiki/ERuby" title="ERuby">eRuby</a> (RHTML)</li>
+<li><a href="https://en.wikipedia.org/wiki/Merb" title="Merb">Merb</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Padrino_(web_framework)" title="Padrino (web framework)">Padrino</a></li>
+<li><a href="https://en.wikipedia.org/wiki/RubyCocoa" title="RubyCocoa">RubyCocoa</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Ruby_on_Rails" title="Ruby on Rails">Ruby on Rails</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Shoes_(GUI_toolkit)" title="Shoes (GUI toolkit)">Shoes</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sinatra_(software)" title="Sinatra (software)">Sinatra</a></li>
+<li><a href="https://en.wikipedia.org/wiki/QtRuby" title="QtRuby">QtRuby</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Server software</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Mod_ruby" title="Mod ruby">mod_ruby</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Mongrel_(web_server)" title="Mongrel (web server)">Mongrel</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Phusion_Passenger" title="Phusion Passenger">Phusion Passenger</a> (mod_rails/mod_rack)</li>
+<li><a href="https://en.wikipedia.org/wiki/Rack_(web_server_interface)" title="Rack (web server interface)">Rack</a></li>
+<li><a href="https://en.wikipedia.org/wiki/WEBrick" title="WEBrick">WEBrick</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">People</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Yukihiro_Matsumoto" title="Yukihiro Matsumoto">Yukihiro Matsumoto</a></li>
+<li><a href="https://en.wikipedia.org/wiki/David_Heinemeier_Hansson" title="David Heinemeier Hansson">David Heinemeier Hansson</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Why_the_lucky_stiff" title="Why the lucky stiff">why the lucky stiff</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Other</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Ruby_Document_format" title="Ruby Document format">Document format</a></li>
+<li><i><a href="https://en.wikipedia.org/wiki/Why%27s_(poignant)_Guide_to_Ruby" title="Why's (poignant) Guide to Ruby">why's (poignant) Guide to Ruby</a></i></li>
+<li><a href="https://en.wikipedia.org/wiki/Ruby_Central" title="Ruby Central">Ruby Central</a></li>
+<li><a href="https://en.wikipedia.org/wiki/RubyKaigi" title="RubyKaigi">RubyKaigi</a></li>
+<li><a href="https://en.wikipedia.org/wiki/RubyForge" title="RubyForge">RubyForge</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Ruby_License" title="Ruby License">Ruby License</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td class="navbox-abovebelow hlist" colspan="3">
+<div>
+<ul>
+<li><img alt="Category" src="http://upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/16px-Folder_Hexagonal_Icon.svg.png" title="Category" width="16" height="14" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/24px-Folder_Hexagonal_Icon.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/32px-Folder_Hexagonal_Icon.svg.png 2x" data-file-width="36" data-file-height="31" /> <b><a href="https://en.wikipedia.org/wiki/Category:Ruby_(programming_language)" title="Category:Ruby (programming language)">Category</a></b></li>
+<li><img alt="Commons page" src="http://upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/12px-Commons-logo.svg.png" title="Commons page" width="12" height="16" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/18px-Commons-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/24px-Commons-logo.svg.png 2x" data-file-width="1024" data-file-height="1376" /> <b><a href="https://commons.wikimedia.org/wiki/Category:Ruby_programming_language" class="extiw" title="commons:Category:Ruby programming language">Commons</a></b></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1220
+Cached time: 20170117110328
+Cache expiry: 86400
+Dynamic content: true
+CPU time usage: 0.360 seconds
+Real time usage: 0.428 seconds
+Preprocessor visited node count: 2785/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 84593/2097152 bytes
+Template argument size: 2023/2097152 bytes
+Highest expansion depth: 25/40
+Expensive parser function count: 3/500
+Lua time usage: 0.173/10.000 seconds
+Lua memory usage: 4.19 MB/50 MB
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  364.548      1 - -total
+ 47.99%  174.939      1 - Template:Reflist
+ 36.77%  134.027     35 - Template:Cite_web
+ 27.35%   99.693      2 - Template:Infobox
+ 23.55%   85.849      1 - Template:Infobox_software
+  7.30%   26.624      2 - Template:Navbox
+  6.56%   23.925      1 - Template:Ruby_programming_language
+  6.52%   23.774      1 - Template:Infobox_software/simple
+  5.65%   20.585      5 - Template:Cite_document
+  3.27%   11.926      1 - Template:Official_website
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:1948859-0!*!0!!en!4!* and timestamp 20170117110327 and revision id 759856574
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=JRuby&amp;oldid=759856574">https://en.wikipedia.org/w/index.php?title=JRuby&amp;oldid=759856574</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Help_Category.html" title="Help:Category">Categories</a>: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Free_software_programmed_in_Java_(programming_language)" title="Category:Free software programmed in Java (programming language)">Free software programmed in Java (programming language)</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Free_software_programmed_in_Ruby" title="Category:Free software programmed in Ruby">Free software programmed in Ruby</a></li><li><a href="Category_JVM_programming_languages.html" title="Category:JVM programming languages">JVM programming languages</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Scripting_languages" title="Category:Scripting languages">Scripting languages</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Object-oriented_programming_languages" title="Category:Object-oriented programming languages">Object-oriented programming languages</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Ruby_(programming_language)" title="Category:Ruby (programming language)">Ruby (programming language)</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Software_using_the_Eclipse_license" title="Category:Software using the Eclipse license">Software using the Eclipse license</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Webarchive_template_wayback_links" title="Category:Webarchive template wayback links">Webarchive template wayback links</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Pages_using_deprecated_image_syntax" title="Category:Pages using deprecated image syntax">Pages using deprecated image syntax</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Articles_containing_potentially_dated_statements_from_2012" title="Category:Articles containing potentially dated statements from 2012">Articles containing potentially dated statements from 2012</a></li><li><a href="https://en.wikipedia.org/wiki/Category:All_articles_containing_potentially_dated_statements" title="Category:All articles containing potentially dated statements">All articles containing potentially dated statements</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="Special_MyTalk.html" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="Special_MyContributions.html" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&amp;returnto=JRuby" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=JRuby" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="JRuby.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+															<li  id="ca-talk"><span><a href="https://en.wikipedia.org/wiki/Talk:JRuby"  title="Discussion about the content page [t]" accesskey="t" rel="discussion">Talk</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="JRuby.html" >Read</a></span></li>
+															<li id="ca-edit"><span><a href="https://en.wikipedia.org/w/index.php?title=JRuby&amp;action=edit"  title="Edit this page [e]" accesskey="e">Edit</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="https://en.wikipedia.org/w/index.php?title=JRuby&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="https://en.wikipedia.org/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="Main_Page.html"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="Portal_Contents.html" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="Portal_Featured_content.html" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="Portal_Current_events.html" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="https://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="../../shop.wikimedia.org/index.html" title="Visit the Wikipedia store">Wikipedia store</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Interaction</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-help"><a href="Help_Contents.html" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="Wikipedia_About.html" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="Wikipedia_Community_portal.html" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="Wikipedia_Contact_us.html" title="How to contact Wikipedia">Contact page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="https://en.wikipedia.org/wiki/Special:WhatLinksHere/JRuby" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://en.wikipedia.org/wiki/Special:RecentChangesLinked/JRuby" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="Wikipedia_File_Upload_Wizard.html" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="https://en.wikipedia.org/w/index.php?title=JRuby&amp;oldid=759856574" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://en.wikipedia.org/w/index.php?title=JRuby&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q605718" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="https://en.wikipedia.org/w/index.php?title=Special:CiteThisPage&amp;page=JRuby&amp;id=759856574" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Print/export</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=JRuby">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=JRuby&amp;returnto=JRuby&amp;oldid=759856574&amp;writer=rdf2latex">Download as PDF</a></li><li id="t-print"><a href="https://en.wikipedia.org/w/index.php?title=JRuby&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Languages</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/JRuby" title="JRuby – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/JRuby" title="JRuby – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/JRuby" title="JRuby – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/JRuby" title="JRuby – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/JRuby" title="JRuby – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-no"><a href="https://no.wikipedia.org/wiki/JRuby" title="JRuby – Norwegian" lang="no" hreflang="no" class="interlanguage-link-target">Norsk bokmål</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/JRuby" title="JRuby – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/JRuby" title="JRuby – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/JRuby" title="JRuby – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-tr"><a href="https://tr.wikipedia.org/wiki/JRuby" title="JRuby – Turkish" lang="tr" hreflang="tr" class="interlanguage-link-target">Türkçe</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/JRuby" title="JRuby – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-zh-yue"><a href="https://zh-yue.wikipedia.org/wiki/JRuby" title="JRuby – Cantonese" lang="zh-yue" hreflang="zh-yue" class="interlanguage-link-target">粵語</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/JRuby" title="JRuby – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q605718#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 13 January 2017, at 14:51.</li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="Wikipedia_Text_of_Creative_Commons_Attribution-ShareAlike_3.html">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="../../creativecommons.org/licenses/by-sa/3.0/index.html" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="../../wikimediafoundation.org/wiki/Terms_of_Use.html">Terms of Use</a> and <a href="../../wikimediafoundation.org/wiki/Privacy_policy.html">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="../../www.wikimediafoundation.org/index.html">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../../wikimediafoundation.org/wiki/Privacy_policy.html" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="Wikipedia_About.html" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="Wikipedia_General_disclaimer.html" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="Wikipedia_Contact_us.html">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a href="../../www.mediawiki.org/wiki/Special_MyLanguage/How_to_contribute.html">Developers</a></li>
+											<li id="footer-places-cookiestatement"><a href="../../wikimediafoundation.org/wiki/Cookie_statement.html">Cookie statement</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/w/index.php?title=JRuby&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="../../www.wikimediafoundation.org/index.html"><img src="https://en.wikipedia.org/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="../../www.mediawiki.org/index.html"><img src="https://en.wikipedia.org/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":510,"wgHostname":"mw1220"});});</script>
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/JRuby by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:17 GMT -->
+</html>

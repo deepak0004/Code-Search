@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Java_Servlet by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:33 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Java servlet - Wikipedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Java_servlet","wgTitle":"Java servlet","wgCurRevisionId":760495097,"wgRevisionId":760495097,"wgArticleId":43826,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles needing additional references from February 2014","All articles needing additional references","Wikipedia references cleanup from May 2016","All articles needing references cleanup","Articles covered by WikiProject Wikify from May 2016","All articles covered by WikiProject Wikify","All Wikipedia articles needing clarification","Wikipedia articles needing clarification from September 2012","Articles needing additional references from December 2013","Articles prone to spam from June 2013","Articles with example Java code","Java enterprise platform","Java platform","Java specification requests"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Java_servlet","wgRelevantArticleId":43826,"wgRequestId":"WH3sAQpAAEEAAZSB2BIAAABB","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"Java_Servlet","wgFlaggedRevsParams":{"tags":{}},"wgStableRevisionId":null,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"en","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgInternalRedirectTargetUrl":"/wiki/Java_servlet","wgWikibaseItemId":"Q375673","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.cite.styles":"ready","ext.pygments":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@1dqfd7l",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["mediawiki.action.view.redirect","ext.cite.a11y","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.legacy.wikibits","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.watchlist-notice","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.gadget.featured-articles-links","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.interface","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="https://en.wikipedia.org/w/load.php?debug=false&amp;lang=en&amp;modules=ext.cite.styles%7Cext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="../w/load2c8d.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../w/load18b6.css?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.29.0-wmf.7"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="https://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Java_servlet"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Java_servlet&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Java_servlet&amp;action=edit"/>
+<link rel="apple-touch-icon" href="https://en.wikipedia.org/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="../static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../w/api251f.php?action=rsd"/>
+<link rel="copyright" href="../../creativecommons.org/licenses/by-sa/3.0/index.html"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Java_servlet"/>
+<link rel="dns-prefetch" href="../../login.wikimedia.org/index.html"/>
+<link rel="dns-prefetch" href="../../meta.wikimedia.org/index.html" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Java_servlet rootpage-Java_servlet skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">Java servlet</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"><span class="mw-redirectedfrom">  (Redirected from <a href="https://en.wikipedia.org/w/index.php?title=Java_Servlet&amp;redirect=no" class="mw-redirect" title="Java Servlet">Java Servlet</a>)</span></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><script>function mfTempOpenSection(id){var block=document.getElementById("mf-section-"+id);block.className+=" open-block";block.previousSibling.className+=" open-block";}</script><table class="plainlinks metadata ambox ambox-content ambox-Refimprove" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px"><a href="https://en.wikipedia.org/wiki/File:Question_book-new.svg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/50px-Question_book-new.svg.png" width="50" height="39" srcset="//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/75px-Question_book-new.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/100px-Question_book-new.svg.png 2x" data-file-width="512" data-file-height="399" /></a></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article <b>needs additional citations for <a href="https://en.wikipedia.org/wiki/Wikipedia:Verifiability" title="Wikipedia:Verifiability">verification</a></b>. <span class="hide-when-compact">Please help <a class="external text" href="http://en.wikipedia.org/w/index.php?title=Java_servlet&amp;action=edit">improve this article</a> by <a href="https://en.wikipedia.org/wiki/Help:Introduction_to_referencing_with_Wiki_Markup/1" title="Help:Introduction to referencing with Wiki Markup/1">adding citations to reliable sources</a>. Unsourced material may be challenged and removed.</span> <small><i>(February 2014)</i></small> <small class="hide-when-compact"><i>(<a href="https://en.wikipedia.org/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></span></td>
+</tr>
+</table>
+<table class="plainlinks metadata ambox ambox-style ambox-citation_style" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px"><img alt="" src="http://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/40px-Edit-clear.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/60px-Edit-clear.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/80px-Edit-clear.svg.png 2x" data-file-width="48" data-file-height="48" /></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article <b>has an unclear citation style</b>. <span class="hide-when-compact">The references used may be made clearer with a different or consistent style of <a href="https://en.wikipedia.org/wiki/Wikipedia:Citing_sources" title="Wikipedia:Citing sources">citation</a>, <a href="https://en.wikipedia.org/wiki/Help:Footnotes" title="Help:Footnotes">footnoting</a>, or <a href="https://en.wikipedia.org/wiki/Wikipedia:External_links" title="Wikipedia:External links">external linking</a>. <em>Violates Wikipedia:External links: "Wikipedia articles may include links to web pages outside Wikipedia (external links), but they should not normally be used in the body of an article.".</em></span> <small><i>(May 2016)</i></small> <small class="hide-when-compact"><i>(<a href="https://en.wikipedia.org/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></span></td>
+</tr>
+</table>
+<div class="thumb tright">
+<div class="thumbinner" style="width:402px;"><a href="https://en.wikipedia.org/wiki/File:JSPLife.png" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/40/JSPLife.png/400px-JSPLife.png" width="400" height="245" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/40/JSPLife.png/600px-JSPLife.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/40/JSPLife.png/800px-JSPLife.png 2x" data-file-width="958" data-file-height="587" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="https://en.wikipedia.org/wiki/File:JSPLife.png" class="internal" title="Enlarge"></a></div>
+Life of a JSP file</div>
+</div>
+</div>
+<p>A <b>Java servlet</b> is a <a href="Java_(programming_language).html" title="Java (programming language)">Java</a> <a href="https://en.wikipedia.org/wiki/Computer_program" title="Computer program">program</a> that extends the capabilitie of a <a href="https://en.wikipedia.org/wiki/Server_(computing)" title="Server (computing)">server</a>. Although servlets can respond to any types of requests, they most commonly implement applications hosted on <a href="https://en.wikipedia.org/wiki/Web_server" title="Web server">Web servers</a>.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[1]</a></sup> Such Web servlets are the <a href="Java_(software_platform).html" title="Java (software platform)">Java</a> counterpart to other dynamic Web content technologies such as <a href="https://en.wikipedia.org/wiki/PHP" title="PHP">PHP</a> and <a href="https://en.wikipedia.org/wiki/ASP.NET" title="ASP.NET">ASP.NET</a>.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#History"><span class="tocnumber">2</span> <span class="toctext">History</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Compared_with_other_web_application_models"><span class="tocnumber">3</span> <span class="toctext">Compared with other web application models</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Life_cycle_of_a_servlet"><span class="tocnumber">4</span> <span class="toctext">Life cycle of a servlet</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Example"><span class="tocnumber">5</span> <span class="toctext">Example</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Container_servers"><span class="tocnumber">6</span> <span class="toctext">Container servers</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#References"><span class="tocnumber">7</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#External_links"><span class="tocnumber">8</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Introduction">Introduction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_servlet&amp;action=edit&amp;section=1" title="Edit section: Introduction">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Servlets are most often used to process or store a <a href="https://en.wikipedia.org/wiki/Java_class" class="mw-redirect" title="Java class">Java class</a> in <a href="https://en.wikipedia.org/wiki/Java_EE" class="mw-redirect" title="Java EE">Java EE</a> that conforms to the Java Servlet API,<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">[2]</a></sup> a standard for implementing Java classes that respond to requests. Servlets could in principle communicate over any <a href="https://en.wikipedia.org/wiki/Client–server_model" title="Client–server model">client–server</a> protocol, but they are most often used with the <a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol" title="Hypertext Transfer Protocol">HTTP protocol</a>. Thus "servlet" is often used as shorthand for "HTTP servlet".<sup id="cite_ref-r1_3-0" class="reference"><a href="#cite_note-r1-3">[3]</a></sup> Thus, a <a href="https://en.wikipedia.org/wiki/Software_developer" title="Software developer">software developer</a> may use a servlet to add <a href="https://en.wikipedia.org/wiki/Dynamic_web_page" title="Dynamic web page">dynamic content</a> to a <a href="https://en.wikipedia.org/wiki/Web_server" title="Web server">web server</a> using the <a href="https://en.wikipedia.org/wiki/Java_platform" class="mw-redirect" title="Java platform">Java platform</a>. The generated content is commonly <a href="https://en.wikipedia.org/wiki/HTML" title="HTML">HTML</a>, but may be other data such as <a href="https://en.wikipedia.org/wiki/XML" title="XML">XML</a>. Servlets can maintain <a href="https://en.wikipedia.org/wiki/State_(computer_science)" title="State (computer science)">state</a> in <a href="https://en.wikipedia.org/wiki/Session_(computer_science)" title="Session (computer science)">session</a> variables across many server transactions by using <a href="https://en.wikipedia.org/wiki/HTTP_cookie" title="HTTP cookie">HTTP cookies</a>, or <a href="https://en.wikipedia.org/wiki/Rewrite_engine" title="Rewrite engine">rewriting URLs</a>.</p>
+<p>To deploy and run a servlet, a <a href="Web_container.html" title="Web container">web container</a> must be used. A web container (also known as a servlet container) is essentially the component of a web server that interacts with the servlets. The web container is responsible for managing the lifecycle of servlets, mapping a URL to a particular servlet and ensuring that the URL requester has the correct access rights.</p>
+<p>The Servlet <a href="https://en.wikipedia.org/wiki/Application_programming_interface" title="Application programming interface">API</a>, contained in the <a href="Java_package.html" title="Java package">Java package</a> hierarchy <code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javaee/7/api/javax/servlet/package-summary.html">javax.servlet</a></code>, defines the expected interactions of the web container and a servlet.<sup id="cite_ref-r1_3-1" class="reference"><a href="#cite_note-r1-3">[3]</a></sup></p>
+<p>A <code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javaee/7/api/javax/servlet/Servlet.html">Servlet</a></code> is an <a href="https://en.wikipedia.org/wiki/Object_(computer_science)" title="Object (computer science)">object</a> that receives a request and generates a response based on that request. The basic Servlet package defines Java objects to represent servlet requests and responses, as well as objects to reflect the servlet's configuration parameters and execution environment. The package <code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javaee/7/api/javax/servlet/http/package-summary.html">javax.servlet.http</a></code> defines <a href="https://en.wikipedia.org/wiki/HTTP" class="mw-redirect" title="HTTP">HTTP</a>-specific subclasses of the generic servlet elements, including session management objects that track multiple requests and responses between the web server and a client. Servlets may be packaged in a <a href="https://en.wikipedia.org/wiki/WAR_file_format_(Sun)" class="mw-redirect" title="WAR file format (Sun)">WAR file</a> as a <a href="https://en.wikipedia.org/wiki/Web_application" title="Web application">web application</a>.</p>
+<p>Servlets can be generated automatically from <a href="https://en.wikipedia.org/wiki/Java_Server_Pages" class="mw-redirect" title="Java Server Pages">Java Server Pages</a> (JSP) by the <a href="JavaServer_Pages_compiler.html" class="mw-redirect" title="JavaServer Pages compiler">JavaServer Pages compiler</a>. The difference between servlets and JSP is that servlets typically embed HTML inside Java code, while JSPs embed Java code in HTML. While the direct usage of servlets to generate HTML (as shown in the example below) has become rare, the higher level MVC web framework in Java EE (<a href="JavaServer_Faces.html" title="JavaServer Faces">JSF</a>) still explicitly uses the servlet technology for the low level request/response handling via the FacesServlet. A somewhat older usage is to use servlets in conjunction with JSPs in a pattern called "<a href="https://en.wikipedia.org/wiki/JSP_model_2_architecture" title="JSP model 2 architecture">Model 2</a>", which is a flavor of the <a href="https://en.wikipedia.org/wiki/Model–view–controller" title="Model–view–controller">model–view–controller</a>.</p>
+<p>The current version of Servlet is 3.1.</p>
+<h2><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_servlet&amp;action=edit&amp;section=2" title="Edit section: History">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The Servlet1 specification was created by Pavni Diwanji<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">[4]</a></sup> while she worked at <a href="https://en.wikipedia.org/wiki/Sun_Microsystems" title="Sun Microsystems">Sun Microsystems</a>, with version 1.0 finalized in June 1997. Starting with version 2.3, the specification was developed under the <a href="Java_Community_Process.html" title="Java Community Process">Java Community Process</a>. JSR 53 defined both the Servlet 2.3 and JavaServer Page 1.2 specifications. JSR 154 specifies the Servlet 2.4 and 2.5 specifications. As of June 9, 2015, the current version of the Servlet specification is 3.1.</p>
+<p>In his blog on <a href="https://en.wikipedia.org/wiki/Java.net" title="Java.net">java.net</a>, Sun veteran and <a href="GlassFish.html" title="GlassFish">GlassFish</a> lead Jim Driscoll details the history of servlet technology.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">[5]</a></sup> <a href="James_Gosling.html" title="James Gosling">James Gosling</a> first thought of servlets in the early days of <a href="Java_(programming_language).html" title="Java (programming language)">Java</a>, but the concept did not become a product until Sun shipped the <span class="clarify-content" style="padding-left:0.1em; padding-right:0.1em; color:#595959; border:1px solid #DDD;"><i>Java Web Server</i></span><sup class="noprint Inline-Template Template-Clarify" style="margin-left:0.1em; white-space:nowrap;">[<i><a href="https://en.wikipedia.org/wiki/Wikipedia:Please_clarify" title="Wikipedia:Please clarify"><span title="This passage needs to be better explained. (September 2012)">clarify</span></a></i>]</sup> product. This was before what is now the <a href="Java_Platform%2c_Enterprise_Edition.html" title="Java Platform, Enterprise Edition">Java Platform, Enterprise Edition</a> was made into a specification.</p>
+<table class="wikitable">
+<caption>Servlet API history</caption>
+<tr>
+<th>Servlet API version</th>
+<th>Released</th>
+<th>Platform</th>
+<th>Important Changes</th>
+</tr>
+<tr>
+<td>Servlet 4.0</td>
+<td><a rel="nofollow" class="external text" href="https://jcp.org/en/jsr/detail?id=369">Under development</a></td>
+<td>Java EE 8</td>
+<td><a href="https://en.wikipedia.org/wiki/HTTP/2" title="HTTP/2">HTTP/2</a></td>
+</tr>
+<tr>
+<td>Servlet 3.1</td>
+<td><a rel="nofollow" class="external text" href="http://jcp.org/en/jsr/detail?id=340">May 2013</a></td>
+<td>Java EE 7</td>
+<td>Non-blocking I/O, HTTP protocol upgrade mechanism (<a href="https://en.wikipedia.org/wiki/WebSocket" title="WebSocket">WebSocket</a>)<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">[6]</a></sup></td>
+</tr>
+<tr>
+<td>Servlet 3.0</td>
+<td><a rel="nofollow" class="external text" href="http://www.javaworld.com/javaworld/jw-02-2009/jw-02-servlet3.html">December 2009</a></td>
+<td>Java EE 6, Java SE 6</td>
+<td>Pluggability, Ease of development, Async Servlet, Security, File Uploading</td>
+</tr>
+<tr>
+<td>Servlet 2.5</td>
+<td><a rel="nofollow" class="external text" href="http://www.javaworld.com/javaworld/jw-01-2006/jw-0102-servlet.html">September 2005</a></td>
+<td>Java EE 5, Java SE 5</td>
+<td>Requires Java SE 5, supports annotation</td>
+</tr>
+<tr>
+<td>Servlet 2.4</td>
+<td><a rel="nofollow" class="external text" href="http://www.javaworld.com/jw-03-2003/jw-0328-servlet.html">November 2003</a></td>
+<td>J2EE 1.4, J2SE 1.3</td>
+<td>web.xml uses XML Schema</td>
+</tr>
+<tr>
+<td>Servlet 2.3</td>
+<td><a rel="nofollow" class="external text" href="http://www.javaworld.com/jw-01-2001/jw-0126-servletapi.html">August 2001</a></td>
+<td>J2EE 1.3, J2SE 1.2</td>
+<td>Addition of <code>Filter</code></td>
+</tr>
+<tr>
+<td>Servlet 2.2</td>
+<td><a rel="nofollow" class="external text" href="http://www.javaworld.com/jw-10-1999/jw-10-servletapi.html">August 1999</a></td>
+<td>J2EE 1.2, J2SE 1.2</td>
+<td>Becomes part of J2EE, introduced independent web applications in .war files</td>
+</tr>
+<tr>
+<td>Servlet 2.1</td>
+<td><a rel="nofollow" class="external text" href="http://www.javaworld.com/jw-12-1998/jw-12-servletapi.html">November 1998</a></td>
+<td>Unspecified</td>
+<td>First official specification, added <code>RequestDispatcher</code>, <code>ServletContext</code></td>
+</tr>
+<tr>
+<td>Servlet 2.0</td>
+<td></td>
+<td>JDK 1.1</td>
+<td>Part of Java Servlet Development Kit 2.0</td>
+</tr>
+<tr>
+<td>Servlet 1.0</td>
+<td>June 1997</td>
+<td></td>
+<td></td>
+</tr>
+</table>
+<h2><span class="mw-headline" id="Compared_with_other_web_application_models">Compared with other web application models</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_servlet&amp;action=edit&amp;section=3" title="Edit section: Compared with other web application models">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="plainlinks metadata ambox ambox-content ambox-one_source" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px"><a href="https://en.wikipedia.org/wiki/File:Question_book-new.svg" class="image"><img alt="Question book-new.svg" src="http://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/50px-Question_book-new.svg.png" width="50" height="39" srcset="//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/75px-Question_book-new.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/100px-Question_book-new.svg.png 2x" data-file-width="512" data-file-height="399" /></a></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This section <b>relies largely or entirely upon a single <a href="https://en.wikipedia.org/wiki/Wikipedia:Identifying_reliable_sources" title="Wikipedia:Identifying reliable sources">source</a></b>. <span class="hide-when-compact">Relevant discussion may be found on the <a href="https://en.wikipedia.org/wiki/Talk:Java_servlet#.23" title="Talk:Java servlet">talk page</a>. Please help <a class="external text" href="http://en.wikipedia.org/w/index.php?title=Java_servlet&amp;action=edit">improve this article</a> by introducing <a href="https://en.wikipedia.org/wiki/Wikipedia:Citing_sources" title="Wikipedia:Citing sources">citations</a> to additional sources.</span> <small><i>(December 2013)</i></small></span></td>
+</tr>
+</table>
+<p>The advantages of using servlets are their fast performance and ease of use combined with more power over traditional <a href="https://en.wikipedia.org/wiki/Common_Gateway_Interface" title="Common Gateway Interface">CGI</a> (Common Gateway Interface). Traditional CGI scripts written in Java have a number of performance disadvantages:</p>
+<ul>
+<li>When an HTTP request is made, a new process is created each time the CGI script is called. The overhead associated with process creation can dominate the workload especially when the script does relatively fast operations. Thus, process creation will take more time for CGI script execution. In contrast, for servlets, each request is handled by a separate Java thread <i>within</i> the web server process, thereby avoiding the overhead associated with forking processes within the <a href="https://en.wikipedia.org/wiki/HTTP_daemon" class="mw-redirect" title="HTTP daemon">HTTP daemon</a>.</li>
+<li>Simultaneous CGI requests will load the CGI script to be copied into memory once per request. With servlets, there is only one copy that persists across requests and is shared between threads.</li>
+<li>Only a single instance answers all requests concurrently. This reduces memory usage and eases the management of persistent data.</li>
+<li>A servlet can be run by a servlet container in a restrictive environment, called a <a href="https://en.wikipedia.org/wiki/Sandbox_(computer_security)" title="Sandbox (computer security)">sandbox</a>. This is similar to an <a href="https://en.wikipedia.org/wiki/Applet" title="Applet">applet</a> that runs in the sandbox of the web browser. This enables restricted use of potentially harmful servlets.<sup id="cite_ref-r1_3-2" class="reference"><a href="#cite_note-r1-3">[3]</a></sup> CGI programs can of course also sandbox themselves, since they are simply OS processes.</li>
+</ul>
+<p>Technologies like <a href="https://en.wikipedia.org/wiki/FastCGI" title="FastCGI">FastCGI</a> and its derivatives (including <a href="https://en.wikipedia.org/wiki/Simple_Common_Gateway_Interface" title="Simple Common Gateway Interface">SCGI</a>, <a href="https://en.wikipedia.org/wiki/Apache_JServ_Protocol" title="Apache JServ Protocol">AJP</a>) do not exhibit the performance disadvantages of CGI, incurred by the constant process spawning. They are, however, roughly as simple as CGI. They are therefore also in contrast with servlets which are substantially more complex.</p>
+<h2><span class="mw-headline" id="Life_cycle_of_a_servlet">Life cycle of a servlet</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_servlet&amp;action=edit&amp;section=4" title="Edit section: Life cycle of a servlet">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Three methods are central to the life cycle of a servlet. These are <code>init()</code>, <code>service()</code>, and <code>destroy()</code>. They are implemented by every servlet and are invoked at specific times by the server.</p>
+<ul>
+<li>During initialization stage of the servlet <a href="https://en.wikipedia.org/wiki/Object_lifetime" title="Object lifetime">life cycle</a>, the web container initializes the servlet instance by calling the <a rel="nofollow" class="external text" href="http://docs.oracle.com/javaee/7/api/javax/servlet/Servlet.html#init"><code>init()</code></a> method, passing an object implementing the <a rel="nofollow" class="external text" href="http://docs.oracle.com/javaee/7/api/javax/servlet/ServletConfig.html"><code>javax.servlet.ServletConfig</code></a> interface. This configuration object allows the servlet to access <a href="https://en.wikipedia.org/wiki/Attribute–value_pair" title="Attribute–value pair">name-value</a> initialization parameters from the web application.</li>
+<li>After initialization, the servlet instance can service client requests. Each <a href="https://en.wikipedia.org/wiki/HTTP_request#Request_message" class="mw-redirect" title="HTTP request">request</a> is serviced in its own separate thread. The web container calls the <code>service()</code> method of the servlet for every request. The <code>service()</code> method determines the kind of request being made and dispatches it to an appropriate method to handle the request. The developer of the servlet must provide an implementation for these methods. If a request is made for a method that is not implemented by the servlet, the method of the parent class is called, typically resulting in an error being returned to the requester.</li>
+<li>Finally, the web container calls the <code>destroy()</code> method that takes the servlet out of service. The <code>destroy()</code> method, like <code>init()</code>, is called only once in the lifecycle of a servlet.</li>
+</ul>
+<p>The following is a typical user scenario of these methods.</p>
+<ol>
+<li>Assume that a user requests to visit a <a href="https://en.wikipedia.org/wiki/Uniform_resource_locator" class="mw-redirect" title="Uniform resource locator">URL</a>.
+<ul>
+<li>The browser then generates an HTTP request for this URL.</li>
+<li>This request is then sent to the appropriate server.</li>
+</ul>
+</li>
+<li>The HTTP request is received by the web server and forwarded to the servlet container.
+<ul>
+<li>The container maps this request to a particular servlet.</li>
+<li>The servlet is dynamically retrieved and loaded into the address space of the container.</li>
+</ul>
+</li>
+<li>The container invokes the <code>init()</code> method of the servlet.
+<ul>
+<li>This method is invoked only when the servlet is first loaded into memory.</li>
+<li>It is possible to pass initialization parameters to the servlet so that it may configure itself.</li>
+</ul>
+</li>
+<li>The container invokes the <code>service()</code> method of the servlet.
+<ul>
+<li>This method is called to process the HTTP request.</li>
+<li>The servlet may read data that has been provided in the HTTP request.</li>
+<li>The servlet may also formulate an HTTP response for the client.</li>
+</ul>
+</li>
+<li>The servlet remains in the container's address space and is available to process any other HTTP requests received from clients.
+<ul>
+<li>The <code>service()</code> method is called for each HTTP request.</li>
+</ul>
+</li>
+<li>The container may, at some point, decide to unload the servlet from its memory.
+<ul>
+<li>The algorithms by which this decision is made are specific to each container.</li>
+</ul>
+</li>
+<li>The container calls the servlet's <code>destroy()</code> method to relinquish any resources such as file handles that are allocated for the servlet; important data may be saved to a persistent store.</li>
+<li>The memory allocated for the servlet and its objects can then be garbage collected.</li>
+</ol>
+<h2><span class="mw-headline" id="Example">Example</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_servlet&amp;action=edit&amp;section=5" title="Edit section: Example">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The following example servlet prints how many times its <code>service()</code> method was called.</p>
+<p>Note that <code>HttpServlet</code> is a subclass of <code>GenericServlet</code>, an implementation of the <code>Servlet</code> interface.</p>
+<p>The <code>service()</code> method of <code>HttpServlet</code> class dispatches requests to the methods <code>doGet()</code>, <code>doPost()</code>, <code>doPut()</code>, <code>doDelete()</code>, and so on; according to the HTTP request. In the example below <code>service()</code> is overridden and does not distinguish which HTTP request method it serves.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kn">import</span> <span class="nn">java.io.IOException</span><span class="o">;</span>
+ 
+<span class="kn">import</span> <span class="nn">javax.servlet.ServletConfig</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.servlet.ServletException</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.servlet.http.HttpServlet</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.servlet.http.HttpServletRequest</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.servlet.http.HttpServletResponse</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ServletLifeCycleExample</span> <span class="kd">extends</span> <span class="n">HttpServlet</span> <span class="o">{</span>
+ 
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">count</span><span class="o">;</span>
+ 
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">init</span><span class="o">(</span><span class="n">ServletConfig</span> <span class="n">config</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">ServletException</span> <span class="o">{</span>
+        <span class="kd">super</span><span class="o">.</span><span class="na">init</span><span class="o">(</span><span class="n">config</span><span class="o">);</span>
+        <span class="n">getServletContext</span><span class="o">().</span><span class="na">log</span><span class="o">(</span><span class="s">"init() called"</span><span class="o">);</span>
+        <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+    <span class="o">}</span>
+ 
+    <span class="nd">@Override</span>
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">service</span><span class="o">(</span><span class="n">HttpServletRequest</span> <span class="n">request</span><span class="o">,</span> <span class="n">HttpServletResponse</span> <span class="n">response</span><span class="o">)</span>
+            <span class="kd">throws</span> <span class="n">ServletException</span><span class="o">,</span> <span class="n">IOException</span> <span class="o">{</span>
+        <span class="n">getServletContext</span><span class="o">().</span><span class="na">log</span><span class="o">(</span><span class="s">"service() called"</span><span class="o">);</span>
+        <span class="n">count</span><span class="o">++;</span>
+        <span class="n">response</span><span class="o">.</span><span class="na">getWriter</span><span class="o">().</span><span class="na">write</span><span class="o">(</span><span class="s">"Incrementing the count: count = "</span> <span class="o">+</span> <span class="n">count</span><span class="o">);</span>
+    <span class="o">}</span>
+ 
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">destroy</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">getServletContext</span><span class="o">().</span><span class="na">log</span><span class="o">(</span><span class="s">"destroy() called"</span><span class="o">);</span>
+    <span class="o">}</span>
+
+<span class="o">}</span>
+</pre></div>
+<h2><span class="mw-headline" id="Container_servers">Container servers</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_servlet&amp;action=edit&amp;section=6" title="Edit section: Container servers">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The specification for Servlet technology has been implemented in many products. See a list of implementations on the <a href="Web_container.html" title="Web container">Web container</a> page.</p>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_servlet&amp;action=edit&amp;section=7" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.webopedia.com/TERM/S/servlet.html">"servlet"</a>. <a rel="nofollow" class="external free" href="http://www.webopedia.com/">http://www.webopedia.com/</a>: WEBOPEDIA<span class="reference-accessdate">. Retrieved <span class="nowrap">2011-04-27</span></span>. <q>A small java program that runs on a server. The term usually refers to a Java applet which runs within a web server environment. This is analogous to a Java applet that runs within a web browser environment.</q></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+servlet&amp;rft.btitle=servlet&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.webopedia.com%2FTERM%2FS%2Fservlet.html&amp;rft.place=http%3A%2F%2Fwww.webopedia.com%2F&amp;rft.pub=WEBOPEDIA&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://docs.oracle.com/javaee/7/api/javax/servlet/Servlet.html">"Servlet (Java(TM) EE 7 Specification APIs)"</a>. <i>oracle.com</i><span class="reference-accessdate">. Retrieved <span class="nowrap">22 November</span> 2016</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+servlet&amp;rft.atitle=Servlet+%28Java%28TM%29+EE+7+Specification+APIs%29&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fdocs.oracle.com%2Fjavaee%2F7%2Fapi%2Fjavax%2Fservlet%2FServlet.html&amp;rft.jtitle=oracle.com&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-r1-3"><span class="mw-cite-backlink">^ <a href="#cite_ref-r1_3-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-r1_3-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-r1_3-2"><sup><i><b>c</b></i></sup></a></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.novocode.com/doc/servlet-essentials/chapter1.html">"Servlet Essentials - Chapter 1"</a>. <i>novocode.com</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2016-11-22</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+servlet&amp;rft.atitle=Servlet+Essentials+-+Chapter+1&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.novocode.com%2Fdoc%2Fservlet-essentials%2Fchapter1.html&amp;rft.jtitle=novocode.com&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://www.fosi.org/people/pavni-diwanji/">"Pavni Diwanji"</a>. <i>Family Online Safety Institute</i><span class="reference-accessdate">. Retrieved <span class="nowrap">12 November</span> 2016</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+servlet&amp;rft.atitle=Pavni+Diwanji&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fwww.fosi.org%2Fpeople%2Fpavni-diwanji%2F&amp;rft.jtitle=Family+Online+Safety+Institute&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://weblogs.java.net/blog/driscoll/archive/2005/12/servlet_history_1.html">"Servlet History | Java.net"</a>. Weblogs.java.net. 2005-12-10<span class="reference-accessdate">. Retrieved <span class="nowrap">2013-06-14</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+servlet&amp;rft.btitle=Servlet+History+%26%23124%3B+Java.net&amp;rft.date=2005-12-10&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fweblogs.java.net%2Fblog%2Fdriscoll%2Farchive%2F2005%2F12%2Fservlet_history_1.html&amp;rft.pub=Weblogs.java.net&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://blogs.oracle.com/arungupta/entry/what_s_new_in_servlet">"What's new in Servlet 3.1&#160;? - Java EE 7 moving forward (Arun Gupta, Miles to go ...)"</a>. <i>oracle.com</i><span class="reference-accessdate">. Retrieved <span class="nowrap">22 November</span> 2016</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+servlet&amp;rft.atitle=What%27s+new+in+Servlet+3.1+%3F+-+Java+EE+7+moving+forward+%28Arun+Gupta%2C+Miles+to+go+...%29&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fblogs.oracle.com%2Farungupta%2Fentry%2Fwhat_s_new_in_servlet&amp;rft.jtitle=oracle.com&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_servlet&amp;action=edit&amp;section=8" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="https://www.jcp.org/en/jsr/detail?id=369">JSR 369</a> - Java servlet 4.0 documentation</li>
+<li><a rel="nofollow" class="external text" href="https://www.jcp.org/en/jsr/detail?id=340">JSR 340</a> - Java servlet 3.1 documentation</li>
+<li><a rel="nofollow" class="external text" href="https://www.jcp.org/en/jsr/detail?id=315">JSR 315</a> - Java servlet 3.0 documentation</li>
+<li><a rel="nofollow" class="external text" href="https://www.jcp.org/en/jsr/detail?id=154">JSR 154</a> - Java servlet 2.4 documentation</li>
+<li><a rel="nofollow" class="external text" href="https://www.jcp.org/en/jsr/detail?id=53">JSR 53</a> - Java servlet 2.3 documentation</li>
+</ul>
+<div role="navigation" class="navbox" aria-labelledby="Java_EE_7_specifications" style="padding:3px">
+<table class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="https://en.wikipedia.org/wiki/Template:Java_EE_7" title="Template:Java EE 7"><abbr title="View this template" style=";;background:none transparent;border:none;">v</abbr></a></li>
+<li class="nv-talk"><a href="https://en.wikipedia.org/wiki/Template_talk:Java_EE_7" title="Template talk:Java EE 7"><abbr title="Discuss this template" style=";;background:none transparent;border:none;">t</abbr></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Java_EE_7&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;">e</abbr></a></li>
+</ul>
+</div>
+<div id="Java_EE_7_specifications" style="font-size:114%"><a href="Java_EE_version_history.html#Java_EE_7_.28June_12.2C_2013.29" title="Java EE version history">Java EE 7</a> specifications</div>
+</th>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Web_Application" class="mw-redirect" title="Web Application">Web Application</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Java_Servlet.html" class="mw-redirect" title="Java Servlet">Servlet</a></li>
+<li><a href="JavaServer_Pages.html" title="JavaServer Pages">JavaServer Pages</a></li>
+<li><a href="Unified_Expression_Language.html" title="Unified Expression Language">Expression Language</a></li>
+<li><a href="JavaServer_Pages_Standard_Tag_Library.html" title="JavaServer Pages Standard Tag Library">JSTL</a></li>
+<li><a href="JavaServer_Faces.html" title="JavaServer Faces">JavaServer Faces</a></li>
+<li><a href="https://en.wikipedia.org/wiki/WebSocket" title="WebSocket">WebSocket</a></li>
+<li><a href="https://en.wikipedia.org/w/index.php?title=JSON_Processing&amp;action=edit&amp;redlink=1" class="new" title="JSON Processing (page does not exist)">JSON Processing</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Enterprise_Application" class="mw-redirect" title="Enterprise Application">Enterprise Application</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li>CDI</li>
+<li><a href="https://en.wikipedia.org/wiki/Dependency_injection" title="Dependency injection">Dependency Injection</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Bean_Validation" title="Bean Validation">Bean Validation</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Enterprise_JavaBeans" title="Enterprise JavaBeans">Enterprise JavaBeans</a></li>
+<li><a href="Java_Persistence_API.html" title="Java Persistence API">JPA</a></li>
+<li><a href="Java_Message_Service.html" title="Java Message Service">JMS</a></li>
+<li><a href="Java_Transaction_API.html" title="Java Transaction API">JTA</a></li>
+<li><a href="https://en.wikipedia.org/wiki/JavaMail" title="JavaMail">JavaMail</a></li>
+<li>Interceptors</li>
+<li><a href="Java_EE_Connector_Architecture.html" title="Java EE Connector Architecture">JCA</a></li>
+<li><a href="JSR_250.html" title="JSR 250">Common Annotations</a></li>
+<li><a href="https://en.wikipedia.org/w/index.php?title=Batch_Applications&amp;action=edit&amp;redlink=1" class="new" title="Batch Applications (page does not exist)">Batch Applications</a></li>
+<li><a href="https://en.wikipedia.org/w/index.php?title=Concurrency_Utilities&amp;action=edit&amp;redlink=1" class="new" title="Concurrency Utilities (page does not exist)">Concurrency Utilities</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Web_Services" class="mw-redirect" title="Web Services">Web Services</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Java_API_for_RESTful_Web_Services" title="Java API for RESTful Web Services">JAX-RS</a></li>
+<li><a href="https://en.wikipedia.org/w/index.php?title=Enterprise_Web_Services&amp;action=edit&amp;redlink=1" class="new" title="Enterprise Web Services (page does not exist)">Enterprise Web Services</a></li>
+<li><a href="Java_API_for_XML_Web_Services.html" title="Java API for XML Web Services">JAX-WS</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Web_Services_Metadata_for_Java" title="Web Services Metadata for Java">Web Services Metadata</a></li>
+<li><a href="Java_API_for_XML_Messaging.html" title="Java API for XML Messaging">Java API for XML Messaging</a></li>
+<li><a href="Java_API_for_XML_Registries.html" title="Java API for XML Registries">JAXR</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Application_performance_management" title="Application performance management">Management</a> and <a href="https://en.wikipedia.org/wiki/Application_security" title="Application security">Security</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/w/index.php?title=Java_Authentication_SPI&amp;action=edit&amp;redlink=1" class="new" title="Java Authentication SPI (page does not exist)">Java Authentication SPI</a></li>
+<li><a href="https://en.wikipedia.org/w/index.php?title=Java_Authorization_SPI&amp;action=edit&amp;redlink=1" class="new" title="Java Authorization SPI (page does not exist)">Java Authorization SPI</a></li>
+<li><a href="https://en.wikipedia.org/wiki/J2EE_Management" title="J2EE Management">J2EE Management</a></li>
+<li>Debugging for Other Languages</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Related Specs in Java SE</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Java_Architecture_for_XML_Binding.html" title="Java Architecture for XML Binding">JAXB</a></li>
+<li><a href="Java_API_for_XML_Processing.html" title="Java API for XML Processing">JAXP</a></li>
+<li><a href="Java_Database_Connectivity.html" title="Java Database Connectivity">JDBC</a></li>
+<li><a href="Java_Management_Extensions.html" title="Java Management Extensions">JMX</a></li>
+<li><a href="JavaBeans_Activation_Framework.html" title="JavaBeans Activation Framework">JavaBeans Activation Framework</a></li>
+<li><a href="StAX.html" title="StAX">Streaming API for XML</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div role="navigation" class="navbox" aria-labelledby="Web_interfaces" style="padding:3px">
+<table class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="https://en.wikipedia.org/wiki/Template:Web_interfaces" title="Template:Web interfaces"><abbr title="View this template" style=";;background:none transparent;border:none;">v</abbr></a></li>
+<li class="nv-talk"><a href="https://en.wikipedia.org/wiki/Template_talk:Web_interfaces" title="Template talk:Web interfaces"><abbr title="Discuss this template" style=";;background:none transparent;border:none;">t</abbr></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Web_interfaces&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;">e</abbr></a></li>
+</ul>
+</div>
+<div id="Web_interfaces" style="font-size:114%"><a href="https://en.wikipedia.org/wiki/Web_API" title="Web API">Web interfaces</a></div>
+</th>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Server-side" title="Server-side">Server-side</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em"></div>
+<table class="nowraplinks navbox-subgroup" style="border-spacing:0">
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;"><a href="https://en.wikipedia.org/wiki/Communications_protocol" title="Communications protocol">Protocols</a></div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Common_Gateway_Interface" title="Common Gateway Interface">CGI</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Simple_Common_Gateway_Interface" title="Simple Common Gateway Interface">SCGI</a></li>
+<li><a href="https://en.wikipedia.org/wiki/FastCGI" title="FastCGI">FCGI</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_JServ_Protocol" title="Apache JServ Protocol">AJP</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Web_Services_for_Remote_Portlets" title="Web Services for Remote Portlets">WSRP</a></li>
+<li><a href="https://en.wikipedia.org/wiki/WebSocket" title="WebSocket">WebSocket</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;"><a href="https://en.wikipedia.org/wiki/Server_Application_Programming_Interface" title="Server Application Programming Interface">Server APIs</a></div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Netscape_Server_Application_Programming_Interface" title="Netscape Server Application Programming Interface">C NSAPI</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_HTTP_Server#Features" title="Apache HTTP Server">C ASAPI</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Internet_Server_Application_Programming_Interface" title="Internet Server Application Programming Interface">C ISAPI</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Active_Server_Pages" title="Active Server Pages">COM ASP</a></li>
+<li><strong class="selflink">Java servlet</strong>
+<ul>
+<li><a href="Web_container.html" title="Web container">container</a></li>
+</ul>
+</li>
+<li><a href="https://en.wikipedia.org/wiki/Open_Web_Interface_for_.NET" title="Open Web Interface for .NET">CLI OWIN</a></li>
+<li><a href="https://en.wikipedia.org/wiki/HTTP_handler" title="HTTP handler">ASP.NET Handler</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Web_Server_Gateway_Interface" title="Web Server Gateway Interface">Python WSGI</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Rack_(web_server_interface)" title="Rack (web server interface)">Ruby Rack</a></li>
+<li><a href="https://en.wikipedia.org/wiki/JSGI" title="JSGI">JavaScript JSGI</a></li>
+<li><a href="https://en.wikipedia.org/wiki/PSGI" title="PSGI">Perl PSGI</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Kepler_(software)#Frameworks" title="Kepler (software)">Lua WSAPI</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Portlet" title="Portlet">Portlet</a>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Portlet_container" title="Portlet container">container</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;"><a href="https://en.wikipedia.org/wiki/Category:Apache_httpd_modules" title="Category:Apache httpd modules">Apache modules</a></div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Mod_jk.html" title="Mod jk">mod_jk</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Mod_lisp" title="Mod lisp">mod_lisp</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Mod_mono" title="Mod mono">mod_mono</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Mod_parrot" title="Mod parrot">mod_parrot</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Mod_perl" title="Mod perl">mod_perl</a></li>
+<li><a href="https://en.wikipedia.org/wiki/PHP" title="PHP">mod_php</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Mod_proxy" title="Mod proxy">mod_proxy</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Mod_python" title="Mod python">mod_python</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Mod_wsgi" title="Mod wsgi">mod_wsgi</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Mod_ruby" title="Mod ruby">mod_ruby</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Phusion_Passenger" title="Phusion Passenger">Phusion Passenger</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;">Topics</div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Web_resource" title="Web resource">Web resource</a> vs. <a href="https://en.wikipedia.org/wiki/Web_service" title="Web service">Web service</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Open_API" title="Open API">Open API</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Webhook" title="Webhook">Webhook</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Application_server" title="Application server">Application server</a>
+<ul>
+<li><a href="Comparison_of_application_servers.html" title="Comparison of application servers">comparison</a></li>
+</ul>
+</li>
+<li><a href="https://en.wikipedia.org/wiki/Server-side_scripting" title="Server-side scripting">Scripting</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Client-side" title="Client-side">Client-side</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em"></div>
+<table class="nowraplinks navbox-subgroup" style="border-spacing:0">
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;"><a href="https://en.wikipedia.org/wiki/Browser_extension" title="Browser extension">Browser APIs</a></div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/NPAPI" title="NPAPI">C NPAPI</a>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/NPAPI#LiveConnect" title="NPAPI">LiveConnect</a></li>
+<li><a href="https://en.wikipedia.org/wiki/NPAPI#XPConnect" title="NPAPI">XPConnect</a></li>
+</ul>
+</li>
+<li><a href="https://en.wikipedia.org/wiki/NPAPI#NPRuntime" title="NPAPI">C NPRuntime</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Google_Native_Client#Pepper" title="Google Native Client">C PPAPI</a>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Google_Native_Client" title="Google Native Client">NaCl</a></li>
+</ul>
+</li>
+<li><a href="https://en.wikipedia.org/wiki/ActiveX" title="ActiveX">ActiveX</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Browser_Helper_Object" title="Browser Helper Object">BHO</a></li>
+<li><a href="https://en.wikipedia.org/wiki/XAML_Browser_Applications" title="XAML Browser Applications">XBAP</a></li>
+<li><a href="https://en.wikipedia.org/wiki/WebAssembly" title="WebAssembly">WebAssembly</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;"><a href="https://en.wikipedia.org/wiki/Web_API#Client-side" title="Web API">Web APIs</a></div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em"></div>
+<table class="nowraplinks navbox-subgroup" style="border-spacing:0">
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;"><a href="https://en.wikipedia.org/wiki/World_Wide_Web_Consortium" title="World Wide Web Consortium">W3C</a></div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/HTML5_Audio" title="HTML5 Audio">Audio</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Canvas_element" title="Canvas element">Canvas</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Cross-origin_resource_sharing" title="Cross-origin resource sharing">CORS</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Document_Object_Model" title="Document Object Model">DOM</a></li>
+<li><a href="https://en.wikipedia.org/wiki/DOM_events" title="DOM events">DOM events</a></li>
+<li><a href="https://en.wikipedia.org/wiki/HTML5_File_API" title="HTML5 File API">File</a></li>
+<li><a href="https://en.wikipedia.org/wiki/W3C_Geolocation_API" title="W3C Geolocation API">Geolocation</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Indexed_Database_API" title="Indexed Database API">IndexedDB</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Server-sent_events" title="Server-sent events">SSE</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Scalable_Vector_Graphics" title="Scalable Vector Graphics">SVG</a></li>
+<li><a href="https://en.wikipedia.org/wiki/HTML5_video" title="HTML5 video">Video</a></li>
+<li><a href="https://en.wikipedia.org/wiki/WebRTC" title="WebRTC">WebRTC</a></li>
+<li><a href="https://en.wikipedia.org/wiki/WebSocket" title="WebSocket">WebSocket</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Web_Messaging" title="Web Messaging">Web messaging</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Web_storage" title="Web storage">Web storage</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Web_worker" title="Web worker">Web worker</a></li>
+<li><a href="https://en.wikipedia.org/wiki/XMLHttpRequest" title="XMLHttpRequest">XMLHttpRequest</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;"><a href="https://en.wikipedia.org/wiki/Khronos_Group" title="Khronos Group">Khronos</a></div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/WebCL" title="WebCL">WebCL</a></li>
+<li><a href="https://en.wikipedia.org/wiki/WebGL" title="WebGL">WebGL</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;">Others</div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Gears_(software)" title="Gears (software)">Gears</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Web_SQL_Database" title="Web SQL Database">Web SQL Database</a> (formerly W3C)</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;">Topics</div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Ajax_(programming)" title="Ajax (programming)">Ajax</a> vs. <a href="https://en.wikipedia.org/wiki/Dynamic_HTML" title="Dynamic HTML">DHTML</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Mashup_(web_application_hybrid)" title="Mashup (web application hybrid)">Mashup</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Web_IDL" title="Web IDL">Web IDL</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Client-side_scripting" title="Client-side scripting">Scripting</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Topics</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Dynamic_web_page" title="Dynamic web page">Dynamic web page</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Open_Web_Platform" title="Open Web Platform">Open Web Platform</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Rich_Internet_application" title="Rich Internet application">Rich Internet application</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Web_application" title="Web application">Web application</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1204
+Cached time: 20170117100258
+Cache expiry: 2592000
+Dynamic content: false
+CPU time usage: 0.208 seconds
+Real time usage: 0.381 seconds
+Preprocessor visited node count: 2114/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 82099/2097152 bytes
+Template argument size: 5573/2097152 bytes
+Highest expansion depth: 12/40
+Expensive parser function count: 7/500
+Lua time usage: 0.080/10.000 seconds
+Lua memory usage: 3.55 MB/50 MB
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  316.291      1 - -total
+ 18.35%   58.028      1 - Template:Reflist
+ 17.22%   54.466      5 - Template:Navbox
+ 14.80%   46.811      6 - Template:Cite_web
+ 14.47%   45.775      1 - Template:Refimprove
+ 12.50%   39.543      3 - Template:Ambox
+  8.54%   27.005      1 - Template:Web_interfaces
+  8.37%   26.467      3 - Template:Navbox_subgroup
+  5.80%   18.335      1 - Template:Clarify-span
+  4.57%   14.439      1 - Template:Fix-span
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:43826-0!*!0!!en!4!* and timestamp 20170117100303 and revision id 760495097
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Java_servlet&amp;oldid=760495097">https://en.wikipedia.org/w/index.php?title=Java_servlet&amp;oldid=760495097</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Help_Category.html" title="Help:Category">Categories</a>: <ul><li><a href="Category_Java_enterprise_platform.html" title="Category:Java enterprise platform">Java enterprise platform</a></li><li><a href="Category_Java_platform.html" title="Category:Java platform">Java platform</a></li><li><a href="Category_Java_specification_requests.html" title="Category:Java specification requests">Java specification requests</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Articles_needing_additional_references_from_February_2014" title="Category:Articles needing additional references from February 2014">Articles needing additional references from February 2014</a></li><li><a href="https://en.wikipedia.org/wiki/Category:All_articles_needing_additional_references" title="Category:All articles needing additional references">All articles needing additional references</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Wikipedia_references_cleanup_from_May_2016" title="Category:Wikipedia references cleanup from May 2016">Wikipedia references cleanup from May 2016</a></li><li><a href="https://en.wikipedia.org/wiki/Category:All_articles_needing_references_cleanup" title="Category:All articles needing references cleanup">All articles needing references cleanup</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Articles_covered_by_WikiProject_Wikify_from_May_2016" title="Category:Articles covered by WikiProject Wikify from May 2016">Articles covered by WikiProject Wikify from May 2016</a></li><li><a href="https://en.wikipedia.org/wiki/Category:All_articles_covered_by_WikiProject_Wikify" title="Category:All articles covered by WikiProject Wikify">All articles covered by WikiProject Wikify</a></li><li><a href="https://en.wikipedia.org/wiki/Category:All_Wikipedia_articles_needing_clarification" title="Category:All Wikipedia articles needing clarification">All Wikipedia articles needing clarification</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Wikipedia_articles_needing_clarification_from_September_2012" title="Category:Wikipedia articles needing clarification from September 2012">Wikipedia articles needing clarification from September 2012</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Articles_needing_additional_references_from_December_2013" title="Category:Articles needing additional references from December 2013">Articles needing additional references from December 2013</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Articles_prone_to_spam_from_June_2013" title="Category:Articles prone to spam from June 2013">Articles prone to spam from June 2013</a></li><li><a href="Category_Articles_with_example_Java_code.html" title="Category:Articles with example Java code">Articles with example Java code</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="Special_MyTalk.html" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="Special_MyContributions.html" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&amp;returnto=Java+servlet" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Java+servlet" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="https://en.wikipedia.org/wiki/Java_servlet"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+															<li  id="ca-talk"><span><a href="https://en.wikipedia.org/wiki/Talk:Java_servlet"  title="Discussion about the content page [t]" accesskey="t" rel="discussion">Talk</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="https://en.wikipedia.org/wiki/Java_servlet" >Read</a></span></li>
+															<li id="ca-edit"><span><a href="https://en.wikipedia.org/w/index.php?title=Java_servlet&amp;action=edit"  title="Edit this page [e]" accesskey="e">Edit</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="https://en.wikipedia.org/w/index.php?title=Java_servlet&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="https://en.wikipedia.org/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="Main_Page.html"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="Portal_Contents.html" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="Portal_Featured_content.html" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="Portal_Current_events.html" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="https://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="../../shop.wikimedia.org/index.html" title="Visit the Wikipedia store">Wikipedia store</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Interaction</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-help"><a href="Help_Contents.html" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="Wikipedia_About.html" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="Wikipedia_Community_portal.html" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="Wikipedia_Contact_us.html" title="How to contact Wikipedia">Contact page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="https://en.wikipedia.org/wiki/Special:WhatLinksHere/Java_servlet" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://en.wikipedia.org/wiki/Special:RecentChangesLinked/Java_servlet" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="Wikipedia_File_Upload_Wizard.html" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="https://en.wikipedia.org/w/index.php?title=Java_servlet&amp;oldid=760495097" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://en.wikipedia.org/w/index.php?title=Java_servlet&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q375673" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="https://en.wikipedia.org/w/index.php?title=Special:CiteThisPage&amp;page=Java_servlet&amp;id=760495097" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Print/export</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Java+servlet">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Java+servlet&amp;returnto=Java+servlet&amp;oldid=760495097&amp;writer=rdf2latex">Download as PDF</a></li><li id="t-print"><a href="https://en.wikipedia.org/w/index.php?title=Java_servlet&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Languages</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-ar"><a href="https://ar.wikipedia.org/wiki/سيرفلت" title="سيرفلت – Arabic" lang="ar" hreflang="ar" class="interlanguage-link-target">العربية</a></li><li class="interlanguage-link interwiki-bg"><a href="https://bg.wikipedia.org/wiki/Сървлет" title="Сървлет – Bulgarian" lang="bg" hreflang="bg" class="interlanguage-link-target">Български</a></li><li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Miniaplicació_de_servidor" title="Miniaplicació de servidor – Catalan" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Java_Servlet" title="Java Servlet – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-da"><a href="https://da.wikipedia.org/wiki/Servlet" title="Servlet – Danish" lang="da" hreflang="da" class="interlanguage-link-target">Dansk</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Servlet" title="Servlet – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Java_Servlet" title="Java Servlet – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-eo"><a href="https://eo.wikipedia.org/wiki/Servleto" title="Servleto – Esperanto" lang="eo" hreflang="eo" class="interlanguage-link-target">Esperanto</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/جاوا_سرولت" title="جاوا سرولت – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Servlet" title="Servlet – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/자바_서블릿" title="자바 서블릿 – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-ia"><a href="https://ia.wikipedia.org/wiki/Servlet" title="Servlet – Interlingua" lang="ia" hreflang="ia" class="interlanguage-link-target">Interlingua</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Servlet" title="Servlet – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-he"><a href="https://he.wikipedia.org/wiki/Java_Servlet" title="Java Servlet – Hebrew" lang="he" hreflang="he" class="interlanguage-link-target">עברית</a></li><li class="interlanguage-link interwiki-kk"><a href="https://kk.wikipedia.org/wiki/Java_Servlet" title="Java Servlet – Kazakh" lang="kk" hreflang="kk" class="interlanguage-link-target">Қазақша</a></li><li class="interlanguage-link interwiki-lt"><a href="https://lt.wikipedia.org/wiki/Java_Servlet" title="Java Servlet – Lithuanian" lang="lt" hreflang="lt" class="interlanguage-link-target">Lietuvių</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/Servlet" title="Servlet – Hungarian" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/Servlet" title="Servlet – Dutch" lang="nl" hreflang="nl" class="interlanguage-link-target">Nederlands</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/Java_Servlet" title="Java Servlet – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Serwlet" title="Serwlet – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Servlet" title="Servlet – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ro"><a href="https://ro.wikipedia.org/wiki/Servlet" title="Servlet – Romanian" lang="ro" hreflang="ro" class="interlanguage-link-target">Română</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/Сервлет_(Java)" title="Сервлет (Java) – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-sr"><a href="https://sr.wikipedia.org/wiki/Servlet" title="Servlet – Serbian" lang="sr" hreflang="sr" class="interlanguage-link-target">Српски / srpski</a></li><li class="interlanguage-link interwiki-sv"><a href="https://sv.wikipedia.org/wiki/Java_Servlet" title="Java Servlet – Swedish" lang="sv" hreflang="sv" class="interlanguage-link-target">Svenska</a></li><li class="interlanguage-link interwiki-tr"><a href="https://tr.wikipedia.org/wiki/Java_Servlet" title="Java Servlet – Turkish" lang="tr" hreflang="tr" class="interlanguage-link-target">Türkçe</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/Сервлет" title="Сервлет – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-vi"><a href="https://vi.wikipedia.org/wiki/Java_servlet" title="Java servlet – Vietnamese" lang="vi" hreflang="vi" class="interlanguage-link-target">Tiếng Việt</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/Java_Servlet" title="Java Servlet – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q375673#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 17 January 2017, at 10:03.</li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="Wikipedia_Text_of_Creative_Commons_Attribution-ShareAlike_3.html">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="../../creativecommons.org/licenses/by-sa/3.0/index.html" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="../../wikimediafoundation.org/wiki/Terms_of_Use.html">Terms of Use</a> and <a href="../../wikimediafoundation.org/wiki/Privacy_policy.html">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="../../www.wikimediafoundation.org/index.html">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../../wikimediafoundation.org/wiki/Privacy_policy.html" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="Wikipedia_About.html" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="Wikipedia_General_disclaimer.html" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="Wikipedia_Contact_us.html">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a href="../../www.mediawiki.org/wiki/Special_MyLanguage/How_to_contribute.html">Developers</a></li>
+											<li id="footer-places-cookiestatement"><a href="../../wikimediafoundation.org/wiki/Cookie_statement.html">Cookie statement</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/w/index.php?title=Java_servlet&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="../../www.wikimediafoundation.org/index.html"><img src="https://en.wikipedia.org/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="../../www.mediawiki.org/index.html"><img src="https://en.wikipedia.org/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":64,"wgHostname":"mw1270"});});</script>
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Java_Servlet by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:33 GMT -->
+</html>

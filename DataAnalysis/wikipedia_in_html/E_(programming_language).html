@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from en.wikipedia.org/wiki/E_(programming_language) by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:52:57 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>E (programming language) - Wikipedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"E_(programming_language)","wgTitle":"E (programming language)","wgCurRevisionId":751635368,"wgRevisionId":751635368,"wgArticleId":1377046,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles needing additional references from April 2015","All articles needing additional references","Articles lacking in-text citations from April 2015","All articles lacking in-text citations","All articles with unsourced statements","Articles with unsourced statements from December 2014","Concurrent programming languages","Object-oriented programming languages","JVM programming languages","Secure programming languages","Dynamically typed programming languages","Capability systems"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"E_(programming_language)","wgRelevantArticleId":1377046,"wgRequestId":"WG-fOQpAADgAAa@Utf0AAABM","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgFlaggedRevsParams":{"tags":{}},"wgStableRevisionId":null,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"en","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgWikibaseItemId":"Q2658244","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.cite.styles":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@1dqfd7l",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["ext.cite.a11y","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.legacy.wikibits","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.watchlist-notice","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.gadget.featured-articles-links","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.interface","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="https://en.wikipedia.org/w/load.php?debug=false&amp;lang=en&amp;modules=ext.cite.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="../w/load2c8d.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../w/load18b6.css?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.29.0-wmf.7"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="https://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/E_(programming_language)"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=E_(programming_language)&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=E_(programming_language)&amp;action=edit"/>
+<link rel="apple-touch-icon" href="https://en.wikipedia.org/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="../static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../w/api251f.php?action=rsd"/>
+<link rel="copyright" href="../../creativecommons.org/licenses/by-sa/3.0/index.html"/>
+<link rel="canonical" href="E_(programming_language).html"/>
+<link rel="dns-prefetch" href="../../login.wikimedia.org/index.html"/>
+<link rel="dns-prefetch" href="../../meta.wikimedia.org/index.html" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-E_programming_language rootpage-E_programming_language skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">E (programming language)</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><script>function mfTempOpenSection(id){var block=document.getElementById("mf-section-"+id);block.className+=" open-block";block.previousSibling.className+=" open-block";}</script><table class="plainlinks metadata ambox ambox-content ambox-Refimprove" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px"><a href="https://en.wikipedia.org/wiki/File:Question_book-new.svg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/50px-Question_book-new.svg.png" width="50" height="39" srcset="//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/75px-Question_book-new.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/100px-Question_book-new.svg.png 2x" data-file-width="512" data-file-height="399" /></a></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article <b>needs additional citations for <a href="https://en.wikipedia.org/wiki/Wikipedia:Verifiability" title="Wikipedia:Verifiability">verification</a></b>. <span class="hide-when-compact">Please help <a class="external text" href="http://en.wikipedia.org/w/index.php?title=E_(programming_language)&amp;action=edit">improve this article</a> by <a href="https://en.wikipedia.org/wiki/Help:Introduction_to_referencing_with_Wiki_Markup/1" title="Help:Introduction to referencing with Wiki Markup/1">adding citations to reliable sources</a>. Unsourced material may be challenged and removed.</span> <small><i>(April 2015)</i></small> <small class="hide-when-compact"><i>(<a href="https://en.wikipedia.org/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></span></td>
+</tr>
+</table>
+<table class="plainlinks metadata ambox ambox-style ambox-More_footnotes" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/40px-Text_document_with_red_question_mark.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/60px-Text_document_with_red_question_mark.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/80px-Text_document_with_red_question_mark.svg.png 2x" data-file-width="48" data-file-height="48" /></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article includes a <a href="https://en.wikipedia.org/wiki/Wikipedia:Citing_sources" title="Wikipedia:Citing sources">list of references</a>, but <b>its sources remain unclear</b> because it has <b>insufficient <a href="https://en.wikipedia.org/wiki/Wikipedia:Citing_sources#Inline_citations" title="Wikipedia:Citing sources">inline citations</a></b>. <span class="hide-when-compact">Please help to <a href="https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Fact_and_Reference_Check" title="Wikipedia:WikiProject Fact and Reference Check">improve</a> this article by <a href="https://en.wikipedia.org/wiki/Wikipedia:When_to_cite" title="Wikipedia:When to cite">introducing</a> more precise citations.</span> <small><i>(April 2015)</i></small> <small class="hide-when-compact"><i>(<a href="https://en.wikipedia.org/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></span></td>
+</tr>
+</table>
+<div role="note" class="hatnote">Not to be confused with <a href="https://en.wikipedia.org/wiki/AmigaE" class="mw-redirect" title="AmigaE">AmigaE</a>, <a href="https://en.wikipedia.org/wiki/E_(verification_language)" title="E (verification language)">e (verification language)</a>, or <a href="https://en.wikipedia.org/wiki/GNU_E" title="GNU E">GNU E</a>.</div>
+<table class="infobox vevent" style="width:22em">
+<caption class="summary">E</caption>
+<tr>
+<th scope="row"><a href="https://en.wikipedia.org/wiki/Programming_paradigm" title="Programming paradigm">Paradigm</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Multi-paradigm_programming_language" class="mw-redirect" title="Multi-paradigm programming language">multi-paradigm</a>: <a href="https://en.wikipedia.org/wiki/Object-oriented_programming" title="Object-oriented programming">object-oriented</a>, <a href="https://en.wikipedia.org/wiki/Message_passing" title="Message passing">message passing</a></td>
+</tr>
+<tr>
+<th scope="row"><a href="https://en.wikipedia.org/wiki/Software_design" title="Software design">Designed&#160;by</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Mark_S._Miller" title="Mark S. Miller">Mark S. Miller</a></td>
+</tr>
+<tr>
+<th scope="row">First&#160;appeared</th>
+<td>1997</td>
+</tr>
+<tr>
+<th scope="row"><a href="https://en.wikipedia.org/wiki/Type_system" title="Type system">Typing discipline</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Strong_typing" class="mw-redirect" title="Strong typing">strong</a>, <a href="https://en.wikipedia.org/wiki/Dynamic_typing" class="mw-redirect" title="Dynamic typing">dynamic</a></td>
+</tr>
+<tr>
+<th scope="row"><a href="https://en.wikipedia.org/wiki/Operating_system" title="Operating system">OS</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Cross-platform" title="Cross-platform">Cross-platform</a></td>
+</tr>
+<tr>
+<th scope="row"><a href="https://en.wikipedia.org/wiki/Software_license" title="Software license">License</a></th>
+<td>portions in different <a href="https://en.wikipedia.org/wiki/Free_software_licence" class="mw-redirect" title="Free software licence">free licenses</a></td>
+</tr>
+<tr>
+<th scope="row">Website</th>
+<td><span class="url"><a rel="nofollow" class="external text" href="http://erights.org/">erights<wbr />.org</a></span></td>
+</tr>
+<tr>
+<th colspan="2" style="text-align:center;background-color: #eee;">Major <a href="https://en.wikipedia.org/wiki/Programming_language_implementation" title="Programming language implementation">implementations</a></th>
+</tr>
+<tr>
+<td colspan="2" style="text-align:center">E-on-Java, E-on-CL</td>
+</tr>
+<tr>
+<th colspan="2" style="text-align:center;background-color: #eee;">Influenced by</th>
+</tr>
+<tr>
+<td colspan="2" style="text-align:center"><a href="https://en.wikipedia.org/wiki/Joule_(programming_language)" title="Joule (programming language)">Joule</a>, <a rel="nofollow" class="external text" href="http://erights.org/history/original-e/index.html">Original-E</a>, <a href="Java_(programming_language).html" title="Java (programming language)">Java</a></td>
+</tr>
+</table>
+<p><b>E</b> is an <a href="https://en.wikipedia.org/wiki/Object-oriented_programming" title="Object-oriented programming">object-oriented programming</a> language for <a href="https://en.wikipedia.org/wiki/Computer_security" title="Computer security">secure</a> <a href="https://en.wikipedia.org/wiki/Distributed_computing" title="Distributed computing">distributed computing</a>, created by <a href="https://en.wikipedia.org/wiki/Mark_S._Miller" title="Mark S. Miller">Mark S. Miller</a>, <a href="https://en.wikipedia.org/wiki/Dan_Bornstein" class="mw-redirect" title="Dan Bornstein">Dan Bornstein</a>, and others at Electric Communities in 1997. E is mainly descended from the concurrent language <a href="https://en.wikipedia.org/wiki/Joule_programming_language" class="mw-redirect" title="Joule programming language">Joule</a> and from Original-E, a set of extensions to Java for secure distributed programming. E combines <a href="https://en.wikipedia.org/wiki/Message_(computer_science)" class="mw-redirect" title="Message (computer science)">message</a>-based computation with <a href="Java_(programming_language).html" title="Java (programming language)">Java</a>-like syntax. A <a href="https://en.wikipedia.org/wiki/Concurrent_programming" class="mw-redirect" title="Concurrent programming">concurrency</a> model based on <a href="https://en.wikipedia.org/wiki/Event-driven_programming" title="Event-driven programming">event loops</a> and <a href="https://en.wikipedia.org/wiki/Promise_(programming)" class="mw-redirect" title="Promise (programming)">promises</a> ensures that <a href="https://en.wikipedia.org/wiki/Deadlock" title="Deadlock">deadlock</a> can never occur.<sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">[<i><a href="https://en.wikipedia.org/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (December 2014)">citation needed</span></a></i>]</sup></p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Philosophy"><span class="tocnumber">1</span> <span class="toctext">Philosophy</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Computational_model"><span class="tocnumber">2</span> <span class="toctext">Computational model</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Syntax_and_examples"><span class="tocnumber">3</span> <span class="toctext">Syntax and examples</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#See_also"><span class="tocnumber">4</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#References"><span class="tocnumber">5</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#External_links"><span class="tocnumber">6</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Philosophy">Philosophy</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=E_(programming_language)&amp;action=edit&amp;section=1" title="Edit section: Philosophy">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Inspired by Minjie Shen, the entire language is designed with <a href="https://en.wikipedia.org/wiki/Computer_security" title="Computer security">secure computing</a> in mind; this is accomplished chiefly by strict adherence to the object-oriented computing model, which in its pure form has properties that support secure computing. The E language and its standard library employ a <a href="https://en.wikipedia.org/wiki/Capability-based_security" title="Capability-based security">capability-based</a> design philosophy throughout in order to help programmers build secure software and to enable software components to co-operate even if they don't fully trust each other. In E, object references serve as capabilities, hence capabilities add no computational or conceptual overhead costs. The language syntax is designed to be easy for people to audit for security flaws. For example, lexical <a href="https://en.wikipedia.org/wiki/Scope_(programming)" class="mw-redirect" title="Scope (programming)">scoping</a> limits the amount of code that has to be examined for its effects on a given variable. As another example, the language uses the <b>==</b> operator for comparison and the <b>:=</b> operator for assignment; to avoid the possibility of confusion, there is no <b>=</b> operator.</p>
+<h2><span class="mw-headline" id="Computational_model">Computational model</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=E_(programming_language)&amp;action=edit&amp;section=2" title="Edit section: Computational model">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>In E, all values are <a href="https://en.wikipedia.org/wiki/Object-oriented_programming" title="Object-oriented programming">objects</a> and computation is performed by sending messages to objects. Each object belongs to a <i>vat</i> (analogous to a <a href="https://en.wikipedia.org/wiki/Process_(computing)" title="Process (computing)">process</a>). Each vat has a single thread of execution, a stack frame, and an event queue. <a href="https://en.wikipedia.org/wiki/Distributed_programming" class="mw-redirect" title="Distributed programming">Distributed programming</a> is just a matter of sending messages to remote objects (objects in other vats). All communication with remote parties is <a href="https://en.wikipedia.org/wiki/Encryption" title="Encryption">encrypted</a> by the E runtime. Arriving messages are placed into the vat's event queue; the vat's event loop processes the incoming messages one by one in order of arrival.</p>
+<p>E has two ways of sending messages: the <i>immediate call</i> and the <i>eventual send</i>. An immediate call is just like a typical function or method call in a non-concurrent language: the sender waits until the receiver finishes and returns a value. An eventual send sends the message while producing a placeholder for the result called a <a href="https://en.wikipedia.org/wiki/Promise_(programming)" class="mw-redirect" title="Promise (programming)">promise</a>. The sender proceeds immediately with the promise. Later, when the receiver finishes and yields a result, the promise resolves to the result. Since only eventual sends are allowed when communicating with remote objects, <a href="https://en.wikipedia.org/wiki/Deadlock" title="Deadlock">deadlocks</a> cannot happen. In distributed systems, the promise mechanism also minimizes delays caused by network latency.</p>
+<h2><span class="mw-headline" id="Syntax_and_examples">Syntax and examples</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=E_(programming_language)&amp;action=edit&amp;section=3" title="Edit section: Syntax and examples">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>E's syntax is most similar to <a href="Java_(programming_language).html" title="Java (programming language)">Java</a>, though it also bears some resemblance to <a href="https://en.wikipedia.org/wiki/Python_(programming_language)" title="Python (programming language)">Python</a> and <a href="https://en.wikipedia.org/wiki/Pascal_(programming_language)" title="Pascal (programming language)">Pascal</a>. Variables are <a href="https://en.wikipedia.org/wiki/Datatype" class="mw-redirect" title="Datatype">dynamically typed</a> and lexically <a href="https://en.wikipedia.org/wiki/Scope_(programming)" class="mw-redirect" title="Scope (programming)">scoped</a>. Unlike Java or Python, however, E is composed entirely of <a href="https://en.wikipedia.org/wiki/Expression_(programming)" class="mw-redirect" title="Expression (programming)">expressions</a>. Here is an extremely simple E program:</p>
+<pre>
+ println("Hello, world!")
+</pre>
+<p>Here is a recursive function for computing the factorial of a number, written in E. Functions are defined using the <b>def</b> keyword.</p>
+<pre>
+ def factorial(n :int) :int {
+   if (n == 1) {
+     return 1
+   } else if (n &gt; 0) {
+     return n * factorial(n-1)
+   } else {
+     throw("invalid argument to factorial: "+n)
+   }
+ }
+</pre>
+<p>In the first line, <b>:int</b> is a <i>guard</i> that constrains the argument and result of the function. A guard is not quite the same thing as a type declaration; guards are optional and can specify constraints. The first <b>:int</b> ensures that the body of the function will only have to handle an integer argument. Without the second <b>:int</b> above, the function would not be able to return a value. Being able to see up front that information escapes out of the function is helpful for security auditing.</p>
+<p>Since E is intended to support secure co-operation, the canonical example for E programs is the mint, a simple electronic money system in just a few lines of E. The following code defines a function that makes mints, where each mint has its own currency. Each mint can make purses that hold its currency, and any holder of two purses of the same currency can securely transfer money between the purses. By quick examination of the source code, an E programmer can easily verify that only mints may change the amount of money in circulation, that money can only be created and not destroyed, that mints can only create money of their own currency, and that only the holder of a purse can change its balance.</p>
+<pre>
+ def makeMint(name) :any {
+   def [sealer, unsealer] := makeBrandPair(name)
+   def mint {
+     to makePurse(var balance :(int &gt;= 0)) :any {
+       def decr(amount :(0..balance)) :void {
+         balance -= amount
+       }
+       def purse {
+         to getBalance() :int { return balance }
+         to sprout() :any { return mint.makePurse(0) }
+         to getDecr() :any { return sealer.seal(decr) }
+         to deposit(amount :int, src) :void {
+           unsealer.unseal(src.getDecr())(amount)
+           balance += amount
+         }
+       }
+       return purse
+     }
+   }
+   return mint
+ }
+</pre>
+<p>Objects in E are defined with the <b>def</b> keyword, and within the object definition, the <b>to</b> keyword begins each method. The guard expressions in this example illustrate how to specify a value constraint (as in <b>:(int &gt;= 0)</b> or <b>:(0..balance)</b>).</p>
+<p>The mint example makes use of a built-in mechanism called a <i>sealer</i>. The function <b>makeBrandPair</b> creates two associated objects, a sealer and an unsealer, such that the sealer can seal an object in a box and the unsealer is the only object that can retrieve the contents of the box. See the E website for a more detailed explanation of this money example.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[1]</a></sup></p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=E_(programming_language)&amp;action=edit&amp;section=4" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="https://en.wikipedia.org/w/index.php?title=CapDesk&amp;action=edit&amp;redlink=1" class="new" title="CapDesk (page does not exist)">CapDesk</a> – a desktop environment written in E</li>
+<li>The <a href="https://en.wikipedia.org/wiki/Object-capability" class="mw-redirect" title="Object-capability">object-capability</a> model</li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=E_(programming_language)&amp;action=edit&amp;section=5" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite class="citation web">Rees, Jonathan; Miller, Mark (2001). <a rel="nofollow" class="external text" href="http://erights.org/elib/capability/ode/ode-capabilities.html#simple-money">"From Objects To Capabilities - Simple Money"</a>. <i>erights.org</i>. ERights<span class="reference-accessdate">. Retrieved <span class="nowrap">8 July</span> 2014</span>. <q>Before presenting the following simple example of capability-based money, we must attempt to head off a confusion this example repeatedly causes. We are not proposing to actually do money this way! A desirable money system must also provide for...</q></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AE+%28programming+language%29&amp;rft.atitle=From+Objects+To+Capabilities+-+Simple+Money&amp;rft.aufirst=Jonathan&amp;rft.aulast=Rees&amp;rft.au=Miller%2C+Mark&amp;rft.date=2001&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Ferights.org%2Felib%2Fcapability%2Fode%2Fode-capabilities.html%23simple-money&amp;rft.jtitle=erights.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=E_(programming_language)&amp;action=edit&amp;section=6" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><span class="official-website"><span class="url"><a rel="nofollow" class="external text" href="http://erights.org/">Official website</a></span></span></li>
+</ul>
+<div role="navigation" class="navbox" aria-labelledby="Object-capability_security" style="padding:3px">
+<table class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="https://en.wikipedia.org/wiki/Template:Object-capability_security" title="Template:Object-capability security"><abbr title="View this template" style=";;background:none transparent;border:none;">v</abbr></a></li>
+<li class="nv-talk"><a href="https://en.wikipedia.org/wiki/Template_talk:Object-capability_security" title="Template talk:Object-capability security"><abbr title="Discuss this template" style=";;background:none transparent;border:none;">t</abbr></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Object-capability_security&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;">e</abbr></a></li>
+</ul>
+</div>
+<div id="Object-capability_security" style="font-size:114%"><a href="https://en.wikipedia.org/wiki/Object-capability_model" title="Object-capability model">Object-capability</a> security</div>
+</th>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Concepts</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Principle_of_least_privilege" title="Principle of least privilege">Principle of least authority (POLA)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Confused_deputy_problem" title="Confused deputy problem">Confused deputy problem</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Ambient_authority" title="Ambient authority">Ambient authority</a></li>
+<li><a href="https://en.wikipedia.org/wiki/File_descriptor" title="File descriptor">File descriptor</a></li>
+<li><a href="https://en.wikipedia.org/wiki/C-list_(computer_security)" title="C-list (computer security)">C-list</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Object-capability_model" title="Object-capability model">Object-capability model</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Capability-based_security" title="Capability-based security">Capability-based security</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Capability-based_addressing" title="Capability-based addressing">Capability-based addressing</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Zooko%27s_triangle" title="Zooko's triangle">Zooko's triangle</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Petname" title="Petname">Petnames</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Capability-based_operating_system" title="Capability-based operating system">OS kernels</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Hydra_(operating_system)" title="Hydra (operating system)">Hydra</a></li>
+<li><a href="https://en.wikipedia.org/wiki/NLTSS" title="NLTSS">NLTSS</a></li>
+<li><a href="https://en.wikipedia.org/wiki/KeyKOS" title="KeyKOS">KeyKOS</a></li>
+<li><a href="https://en.wikipedia.org/wiki/EROS_(microkernel)" title="EROS (microkernel)">EROS</a></li>
+<li><a href="https://en.wikipedia.org/wiki/CapROS" title="CapROS">CapROS</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Coyotos" title="Coyotos">Coyotos</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Midori_(operating_system)" title="Midori (operating system)">Midori</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Google_Fuchsia" title="Google Fuchsia">Fuchsia</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Programming languages</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Joule_(programming_language)" title="Joule (programming language)">Joule</a></li>
+<li><strong class="selflink">E</strong></li>
+<li><a href="https://en.wikipedia.org/wiki/Joe-E" title="Joe-E">Joe-E</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Caja_project" title="Caja project">Cajita</a></li>
+<li><a href="https://en.wikipedia.org/wiki/BitC" title="BitC">BitC</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Filesystems</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Tahoe-LAFS" title="Tahoe-LAFS">Tahoe-LAFS</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Specialised hardware</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Plessey_System_250" title="Plessey System 250">Plessey System 250</a></li>
+<li><a href="https://en.wikipedia.org/wiki/CAP_computer" title="CAP computer">Cambridge CAP</a></li>
+<li><a href="https://en.wikipedia.org/wiki/IBM_System/38" title="IBM System/38">IBM System/38</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Intel_iAPX_432" title="Intel iAPX 432">Intel iAPX 432</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1209
+Cached time: 20161231004929
+Cache expiry: 2592000
+Dynamic content: false
+CPU time usage: 0.188 seconds
+Real time usage: 0.252 seconds
+Preprocessor visited node count: 777/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 27188/2097152 bytes
+Template argument size: 1442/2097152 bytes
+Highest expansion depth: 11/40
+Expensive parser function count: 5/500
+Lua time usage: 0.093/10.000 seconds
+Lua memory usage: 2.9 MB/50 MB
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  216.651      1 - -total
+ 27.83%   60.286      1 - Template:Ref_improve
+ 18.72%   40.559      1 - Template:Reflist
+ 18.64%   40.377      2 - Template:Ambox
+ 16.70%   36.186      1 - Template:Cite_web
+ 16.46%   35.659      1 - Template:Infobox_programming_language
+ 14.31%   31.006      1 - Template:Infobox
+ 13.38%   28.989      1 - Template:Citation_needed
+ 12.18%   26.398      1 - Template:Fix
+  7.98%   17.288      1 - Template:Official_website
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:1377046-0!*!0!!en!4!* and timestamp 20161231004929 and revision id 751635368
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=E_(programming_language)&amp;oldid=751635368">https://en.wikipedia.org/w/index.php?title=E_(programming_language)&amp;oldid=751635368</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Help_Category.html" title="Help:Category">Categories</a>: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Concurrent_programming_languages" title="Category:Concurrent programming languages">Concurrent programming languages</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Object-oriented_programming_languages" title="Category:Object-oriented programming languages">Object-oriented programming languages</a></li><li><a href="Category_JVM_programming_languages.html" title="Category:JVM programming languages">JVM programming languages</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Secure_programming_languages" title="Category:Secure programming languages">Secure programming languages</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Dynamically_typed_programming_languages" title="Category:Dynamically typed programming languages">Dynamically typed programming languages</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Capability_systems" title="Category:Capability systems">Capability systems</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Articles_needing_additional_references_from_April_2015" title="Category:Articles needing additional references from April 2015">Articles needing additional references from April 2015</a></li><li><a href="https://en.wikipedia.org/wiki/Category:All_articles_needing_additional_references" title="Category:All articles needing additional references">All articles needing additional references</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Articles_lacking_in-text_citations_from_April_2015" title="Category:Articles lacking in-text citations from April 2015">Articles lacking in-text citations from April 2015</a></li><li><a href="https://en.wikipedia.org/wiki/Category:All_articles_lacking_in-text_citations" title="Category:All articles lacking in-text citations">All articles lacking in-text citations</a></li><li><a href="https://en.wikipedia.org/wiki/Category:All_articles_with_unsourced_statements" title="Category:All articles with unsourced statements">All articles with unsourced statements</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Articles_with_unsourced_statements_from_December_2014" title="Category:Articles with unsourced statements from December 2014">Articles with unsourced statements from December 2014</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="Special_MyTalk.html" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="Special_MyContributions.html" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&amp;returnto=E+%28programming+language%29" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=E+%28programming+language%29" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="E_(programming_language).html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+															<li  id="ca-talk"><span><a href="https://en.wikipedia.org/wiki/Talk:E_(programming_language)"  title="Discussion about the content page [t]" accesskey="t" rel="discussion">Talk</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="E_(programming_language).html" >Read</a></span></li>
+															<li id="ca-edit"><span><a href="https://en.wikipedia.org/w/index.php?title=E_(programming_language)&amp;action=edit"  title="Edit this page [e]" accesskey="e">Edit</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="https://en.wikipedia.org/w/index.php?title=E_(programming_language)&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="https://en.wikipedia.org/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="Main_Page.html"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="Portal_Contents.html" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="Portal_Featured_content.html" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="Portal_Current_events.html" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="https://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="../../shop.wikimedia.org/index.html" title="Visit the Wikipedia store">Wikipedia store</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Interaction</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-help"><a href="Help_Contents.html" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="Wikipedia_About.html" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="Wikipedia_Community_portal.html" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="Wikipedia_Contact_us.html" title="How to contact Wikipedia">Contact page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="https://en.wikipedia.org/wiki/Special:WhatLinksHere/E_(programming_language)" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://en.wikipedia.org/wiki/Special:RecentChangesLinked/E_(programming_language)" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="Wikipedia_File_Upload_Wizard.html" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="https://en.wikipedia.org/w/index.php?title=E_(programming_language)&amp;oldid=751635368" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://en.wikipedia.org/w/index.php?title=E_(programming_language)&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q2658244" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="https://en.wikipedia.org/w/index.php?title=Special:CiteThisPage&amp;page=E_%28programming_language%29&amp;id=751635368" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Print/export</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=E+%28programming+language%29">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=E+%28programming+language%29&amp;returnto=E+%28programming+language%29&amp;oldid=751635368&amp;writer=rdf2latex">Download as PDF</a></li><li id="t-print"><a href="https://en.wikipedia.org/w/index.php?title=E_(programming_language)&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Languages</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-ar"><a href="https://ar.wikipedia.org/wiki/إي_(لغة_برمجة)" title="إي (لغة برمجة) – Arabic" lang="ar" hreflang="ar" class="interlanguage-link-target">العربية</a></li><li class="interlanguage-link interwiki-ms"><a href="https://ms.wikipedia.org/wiki/Bahasa_pengaturcaraan_E" title="Bahasa pengaturcaraan E – Malay" lang="ms" hreflang="ms" class="interlanguage-link-target">Bahasa Melayu</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/E_(język_programowania)" title="E (język programowania) – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/E_(linguagem_de_programação)" title="E (linguagem de programação) – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/E_(язык_программирования)" title="E (язык программирования) – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-sv"><a href="https://sv.wikipedia.org/wiki/E_(programspråk)" title="E (programspråk) – Swedish" lang="sv" hreflang="sv" class="interlanguage-link-target">Svenska</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q2658244#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 26 November 2016, at 23:27.</li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="Wikipedia_Text_of_Creative_Commons_Attribution-ShareAlike_3.html">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="../../creativecommons.org/licenses/by-sa/3.0/index.html" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="../../wikimediafoundation.org/wiki/Terms_of_Use.html">Terms of Use</a> and <a href="../../wikimediafoundation.org/wiki/Privacy_policy.html">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="../../www.wikimediafoundation.org/index.html">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../../wikimediafoundation.org/wiki/Privacy_policy.html" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="Wikipedia_About.html" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="Wikipedia_General_disclaimer.html" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="Wikipedia_Contact_us.html">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a href="../../www.mediawiki.org/wiki/Special_MyLanguage/How_to_contribute.html">Developers</a></li>
+											<li id="footer-places-cookiestatement"><a href="../../wikimediafoundation.org/wiki/Cookie_statement.html">Cookie statement</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/w/index.php?title=E_(programming_language)&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="../../www.wikimediafoundation.org/index.html"><img src="https://en.wikipedia.org/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="../../www.mediawiki.org/index.html"><img src="https://en.wikipedia.org/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":52,"wgHostname":"mw1261"});});</script>
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/E_(programming_language) by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:52:57 GMT -->
+</html>

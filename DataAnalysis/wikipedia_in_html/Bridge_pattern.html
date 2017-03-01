@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Bridge_pattern by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:52:44 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Bridge pattern - Wikipedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Bridge_pattern","wgTitle":"Bridge pattern","wgCurRevisionId":758284166,"wgRevisionId":758284166,"wgArticleId":65033,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles with example C Sharp code","Articles with example C++ code","Articles with example Java code","Software design patterns"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Bridge_pattern","wgRelevantArticleId":65033,"wgRequestId":"WHVlywpAEK8AADL4CdkAAAAJ","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgFlaggedRevsParams":{"tags":{}},"wgStableRevisionId":null,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"en","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgWikibaseItemId":"Q23802","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.cite.styles":"ready","ext.pygments":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@1dqfd7l",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["ext.cite.a11y","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.legacy.wikibits","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.watchlist-notice","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.gadget.featured-articles-links","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.interface","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="https://en.wikipedia.org/w/load.php?debug=false&amp;lang=en&amp;modules=ext.cite.styles%7Cext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="../w/load2c8d.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../w/load18b6.css?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.29.0-wmf.7"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="https://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Bridge_pattern"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Bridge_pattern&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Bridge_pattern&amp;action=edit"/>
+<link rel="apple-touch-icon" href="https://en.wikipedia.org/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="../static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../w/api251f.php?action=rsd"/>
+<link rel="copyright" href="../../creativecommons.org/licenses/by-sa/3.0/index.html"/>
+<link rel="canonical" href="Bridge_pattern.html"/>
+<link rel="dns-prefetch" href="../../login.wikimedia.org/index.html"/>
+<link rel="dns-prefetch" href="../../meta.wikimedia.org/index.html" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Bridge_pattern rootpage-Bridge_pattern skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">Bridge pattern</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><script>function mfTempOpenSection(id){var block=document.getElementById("mf-section-"+id);block.className+=" open-block";block.previousSibling.className+=" open-block";}</script><p>The <b>bridge pattern</b> is a <a href="https://en.wikipedia.org/wiki/Design_pattern_(computer_science)" class="mw-redirect" title="Design pattern (computer science)">design pattern</a> used in <a href="https://en.wikipedia.org/wiki/Software_engineering" title="Software engineering">software engineering</a> that is meant to <i>"decouple an <a href="Abstraction_(computer_science).html" class="mw-redirect" title="Abstraction (computer science)">abstraction</a> from its <a href="https://en.wikipedia.org/wiki/Implementation" title="Implementation">implementation</a> so that the two can vary independently"</i>, introduced by the Gang of Four (GoF).<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[1]</a></sup> The <i>bridge</i> uses <a href="https://en.wikipedia.org/wiki/Encapsulation_(computer_science)" class="mw-redirect" title="Encapsulation (computer science)">encapsulation</a>, <a href="https://en.wikipedia.org/wiki/Object_composition#Aggregation" title="Object composition">aggregation</a>, and can use <a href="https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming)" title="Inheritance (object-oriented programming)">inheritance</a> to separate responsibilities into different <a href="https://en.wikipedia.org/wiki/Class_(computer_science)" class="mw-redirect" title="Class (computer science)">classes</a>.</p>
+<p>When a class varies often, the features of <a href="https://en.wikipedia.org/wiki/Object-oriented_programming" title="Object-oriented programming">object-oriented programming</a> become very useful because changes to a <a href="https://en.wikipedia.org/wiki/Computer_program" title="Computer program">program</a>'s <a href="https://en.wikipedia.org/wiki/Source_code" title="Source code">code</a> can be made easily with minimal prior knowledge about the program. The bridge pattern is useful when both the class and what it does vary often. The class itself can be thought of as the <i>abstraction</i> and what the class can do as the <i>implementation</i>. The bridge pattern can also be thought of as two layers of abstraction.</p>
+<p>When there is only one fixed implementation, this pattern is known as the <a href="https://en.wikipedia.org/wiki/Pimpl" class="mw-redirect" title="Pimpl">Pimpl</a> idiom in the <a href="https://en.wikipedia.org/wiki/C++" title="C++">C++</a> world.</p>
+<p>The <b>bridge pattern</b> is often confused with the adapter pattern. In fact, the <b>bridge pattern</b> is often implemented using the <a href="Adapter_pattern.html#Class_Adapter_pattern" title="Adapter pattern">class <b>adapter pattern</b></a>, e.g. in the Java code below.</p>
+<p><b>Variant</b>: The implementation can be decoupled even more by deferring the presence of the implementation to the point where the abstraction is utilized.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Structure"><span class="tocnumber">1</span> <span class="toctext">Structure</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Example"><span class="tocnumber">2</span> <span class="toctext">Example</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#C.23"><span class="tocnumber">2.1</span> <span class="toctext">C#</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Crystal"><span class="tocnumber">2.2</span> <span class="toctext">Crystal</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Java"><span class="tocnumber">2.3</span> <span class="toctext">Java</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#PHP"><span class="tocnumber">2.4</span> <span class="toctext">PHP</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Scala"><span class="tocnumber">2.5</span> <span class="toctext">Scala</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#See_also"><span class="tocnumber">3</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#References"><span class="tocnumber">4</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#External_links"><span class="tocnumber">5</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Structure">Structure</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Bridge_pattern&amp;action=edit&amp;section=1" title="Edit section: Structure">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="https://en.wikipedia.org/wiki/File:Bridge_UML_class_diagram.svg" class="image"><img alt="Bridge UML class diagram.svg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Bridge_UML_class_diagram.svg/500px-Bridge_UML_class_diagram.svg.png" width="500" height="250" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Bridge_UML_class_diagram.svg/750px-Bridge_UML_class_diagram.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Bridge_UML_class_diagram.svg/1000px-Bridge_UML_class_diagram.svg.png 2x" data-file-width="1000" data-file-height="500" /></a></p>
+<dl>
+<dt>Abstraction (abstract class)</dt>
+<dd>defines the abstract interface</dd>
+<dd>maintains the Implementor reference.</dd>
+<dt>RefinedAbstraction (normal class)</dt>
+<dd>extends the interface defined by Abstraction</dd>
+<dt>Implementor (interface)</dt>
+<dd>defines the interface for implementation classes</dd>
+<dt>ConcreteImplementor (normal class)</dt>
+<dd>implements the Implementor interface</dd>
+</dl>
+<div class="thumb tnone">
+<div class="thumbinner" style="width:351px;"><a href="https://en.wikipedia.org/wiki/File:Bridge_pattern_in_LePUS3.1.gif" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/a/a8/Bridge_pattern_in_LePUS3.1.gif" width="349" height="219" class="thumbimage" data-file-width="349" data-file-height="219" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="https://en.wikipedia.org/wiki/File:Bridge_pattern_in_LePUS3.1.gif" class="internal" title="Enlarge"></a></div>
+Bridge in <a href="https://en.wikipedia.org/wiki/Lepus3" class="mw-redirect" title="Lepus3">LePUS3</a> (<a rel="nofollow" class="external text" href="http://lepus.org.uk/ref/legend/legend.xml">legend</a>)</div>
+</div>
+</div>
+<h2><span class="mw-headline" id="Example">Example</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Bridge_pattern&amp;action=edit&amp;section=2" title="Edit section: Example">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="C.23">C#</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Bridge_pattern&amp;action=edit&amp;section=3" title="Edit section: C#">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Bridge pattern compose objects in tree structure. It decouples abstraction from implementation. Here abstraction represents the client from which the objects will be called. An example to implement in C# is given below</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="c1">// Helps in providing truly decoupled architecture</span>
+<span class="k">public</span> <span class="k">interface</span> <span class="n">IBridge</span>
+<span class="p">{</span>
+    <span class="k">void</span> <span class="nf">Function1</span><span class="p">();</span>
+    <span class="k">void</span> <span class="nf">Function2</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="k">public</span> <span class="k">class</span> <span class="nc">Bridge1</span> <span class="p">:</span> <span class="n">IBridge</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">void</span> <span class="nf">Function1</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Bridge1.Function1"</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">void</span> <span class="nf">Function2</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Bridge1.Function2"</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">public</span> <span class="k">class</span> <span class="nc">Bridge2</span> <span class="p">:</span> <span class="n">IBridge</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">void</span> <span class="nf">Function1</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Bridge2.Function1"</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">void</span> <span class="nf">Function2</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Bridge2.Function2"</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">public</span> <span class="k">interface</span> <span class="n">IAbstractBridge</span>
+<span class="p">{</span>
+    <span class="k">void</span> <span class="nf">CallMethod1</span><span class="p">();</span>
+    <span class="k">void</span> <span class="nf">CallMethod2</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="k">public</span> <span class="k">class</span> <span class="nc">AbstractBridge</span> <span class="p">:</span> <span class="n">IAbstractBridge</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="n">IBridge</span> <span class="n">bridge</span><span class="p">;</span>
+
+    <span class="k">public</span> <span class="nf">AbstractBridge</span><span class="p">(</span><span class="n">IBridge</span> <span class="n">bridge</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">bridge</span> <span class="p">=</span> <span class="n">bridge</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">void</span> <span class="nf">CallMethod1</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">bridge</span><span class="p">.</span><span class="n">Function1</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">void</span> <span class="nf">CallMethod2</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">bridge</span><span class="p">.</span><span class="n">Function2</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+<p>As you can see, the Bridge classes are the Implementation that uses the same interface-oriented architecture to create objects. On the other hand, the abstraction takes an object of the implementation phase and runs its method. Thus, it makes completely decoupled from one another.</p>
+<h3><span class="mw-headline" id="Crystal">Crystal</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Bridge_pattern&amp;action=edit&amp;section=4" title="Edit section: Crystal">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="n">abstract</span> <span class="k">class</span> <span class="nc">DrawingAPI</span>
+  <span class="n">abstract</span> <span class="k">def</span> <span class="nf">draw_circle</span><span class="p">(</span><span class="n">x</span> <span class="p">:</span> <span class="no">Float64</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="no">Float64</span><span class="p">,</span> <span class="n">radius</span> <span class="p">:</span> <span class="no">Float64</span><span class="p">)</span>
+<span class="k">end</span>
+
+<span class="k">class</span> <span class="nc">DrawingAPI1</span> <span class="o">&lt;</span> <span class="no">DrawingAPI</span>
+  <span class="k">def</span> <span class="nf">draw_circle</span><span class="p">(</span><span class="n">x</span> <span class="p">:</span> <span class="nb">Float</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="nb">Float</span><span class="p">,</span> <span class="n">radius</span> <span class="p">:</span> <span class="nb">Float</span><span class="p">)</span>
+    <span class="s2">"API1.circle at </span><span class="si">#{</span><span class="n">x</span><span class="si">}</span><span class="s2">:</span><span class="si">#{</span><span class="n">y</span><span class="si">}</span><span class="s2"> - radius: </span><span class="si">#{</span><span class="n">radius</span><span class="si">}</span><span class="s2">"</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="k">class</span> <span class="nc">DrawingAPI2</span> <span class="o">&lt;</span> <span class="no">DrawingAPI</span>
+  <span class="k">def</span> <span class="nf">draw_circle</span><span class="p">(</span><span class="n">x</span> <span class="p">:</span> <span class="no">Float64</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="no">Float64</span><span class="p">,</span> <span class="n">radius</span> <span class="p">:</span> <span class="no">Float64</span><span class="p">)</span>
+    <span class="s2">"API2.circle at </span><span class="si">#{</span><span class="n">x</span><span class="si">}</span><span class="s2">:</span><span class="si">#{</span><span class="n">y</span><span class="si">}</span><span class="s2"> - radius: </span><span class="si">#{</span><span class="n">radius</span><span class="si">}</span><span class="s2">"</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="n">abstract</span> <span class="k">class</span> <span class="nc">Shape</span>
+  <span class="kp">protected</span> <span class="n">getter</span> <span class="n">drawing_api</span> <span class="p">:</span> <span class="no">DrawingAPI</span>
+
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="vi">@drawing_api</span><span class="p">)</span>
+  <span class="k">end</span>
+
+  <span class="n">abstract</span> <span class="k">def</span> <span class="nf">draw</span>
+  <span class="n">abstract</span> <span class="k">def</span> <span class="nf">resize_by_percentage</span><span class="p">(</span><span class="n">percent</span> <span class="p">:</span> <span class="no">Float64</span><span class="p">)</span>
+<span class="k">end</span>
+
+<span class="k">class</span> <span class="nc">CircleShape</span> <span class="o">&lt;</span> <span class="no">Shape</span>
+  <span class="n">getter</span> <span class="n">x</span> <span class="p">:</span> <span class="no">Float64</span>
+  <span class="n">getter</span> <span class="n">y</span> <span class="p">:</span> <span class="no">Float64</span>
+  <span class="n">getter</span> <span class="n">radius</span> <span class="p">:</span> <span class="no">Float64</span>
+
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="vi">@x</span><span class="p">,</span> <span class="vi">@y</span><span class="p">,</span> <span class="vi">@radius</span><span class="p">,</span> <span class="n">drawing_api</span> <span class="p">:</span> <span class="no">DrawingAPI</span><span class="p">)</span>
+    <span class="k">super</span><span class="p">(</span><span class="n">drawing_api</span><span class="p">)</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">draw</span>
+    <span class="vi">@drawing_api</span><span class="o">.</span><span class="n">draw_circle</span><span class="p">(</span><span class="vi">@x</span><span class="p">,</span> <span class="vi">@y</span><span class="p">,</span> <span class="vi">@radius</span><span class="p">)</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">resize_by_percentage</span><span class="p">(</span><span class="n">percent</span> <span class="p">:</span> <span class="no">Float64</span><span class="p">)</span>
+    <span class="vi">@radius</span> <span class="o">*=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">percent</span><span class="o">/</span><span class="mi">100</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="k">class</span> <span class="nc">BridgePattern</span>
+  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">test</span>
+    <span class="n">shapes</span> <span class="o">=</span> <span class="o">[]</span> <span class="n">of</span> <span class="no">Shape</span>
+    <span class="n">shapes</span> <span class="o">&lt;&lt;</span> <span class="no">CircleShape</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="o">.</span><span class="mi">0</span><span class="p">,</span> <span class="no">DrawingAPI1</span><span class="o">.</span><span class="n">new</span><span class="p">)</span>
+    <span class="n">shapes</span> <span class="o">&lt;&lt;</span> <span class="no">CircleShape</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">5</span><span class="o">.</span><span class="mi">0</span><span class="p">,</span> <span class="mi">7</span><span class="o">.</span><span class="mi">0</span><span class="p">,</span> <span class="mi">11</span><span class="o">.</span><span class="mi">0</span><span class="p">,</span> <span class="no">DrawingAPI2</span><span class="o">.</span><span class="n">new</span><span class="p">)</span>
+
+    <span class="n">shapes</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">shape</span><span class="o">|</span>
+      <span class="n">shape</span><span class="o">.</span><span class="n">resize_by_percentage</span><span class="p">(</span><span class="mi">2</span><span class="o">.</span><span class="mi">5</span><span class="p">)</span>
+      <span class="nb">puts</span> <span class="n">shape</span><span class="o">.</span><span class="n">draw</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="no">BridgePattern</span><span class="o">.</span><span class="n">test</span>
+</pre></div>
+<p>Output</p>
+<pre>
+API1.circle at 1.0:2.0 - radius: 3.075
+API2.circle at 5.0:7.0 - radius: 11.275
+</pre>
+<h3><span class="mw-headline" id="Java">Java</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Bridge_pattern&amp;action=edit&amp;section=5" title="Edit section: Java">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The following <a href="Java_(programming_language).html" title="Java (programming language)">Java</a> (SE 6) program illustrates a 'shape'.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="cm">/** "Implementor" */</span>
+<span class="kd">interface</span> <span class="nc">DrawingAPI</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">drawCircle</span><span class="o">(</span><span class="kd">final</span> <span class="kt">double</span> <span class="n">x</span><span class="o">,</span> <span class="kd">final</span> <span class="kt">double</span> <span class="n">y</span><span class="o">,</span> <span class="kd">final</span> <span class="kt">double</span> <span class="n">radius</span><span class="o">);</span>
+<span class="o">}</span>
+
+<span class="cm">/** "ConcreteImplementor"  1/2 */</span>
+<span class="kd">class</span> <span class="nc">DrawingAPI1</span> <span class="kd">implements</span> <span class="n">DrawingAPI</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">drawCircle</span><span class="o">(</span><span class="kd">final</span> <span class="kt">double</span> <span class="n">x</span><span class="o">,</span> <span class="kd">final</span> <span class="kt">double</span> <span class="n">y</span><span class="o">,</span> <span class="kd">final</span> <span class="kt">double</span> <span class="n">radius</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">"API1.circle at %f:%f radius %f\n"</span><span class="o">,</span> <span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">,</span> <span class="n">radius</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="cm">/** "ConcreteImplementor" 2/2 */</span>
+<span class="kd">class</span> <span class="nc">DrawingAPI2</span> <span class="kd">implements</span> <span class="n">DrawingAPI</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">drawCircle</span><span class="o">(</span><span class="kd">final</span> <span class="kt">double</span> <span class="n">x</span><span class="o">,</span> <span class="kd">final</span> <span class="kt">double</span> <span class="n">y</span><span class="o">,</span> <span class="kd">final</span> <span class="kt">double</span> <span class="n">radius</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">"API2.circle at %f:%f radius %f\n"</span><span class="o">,</span> <span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">,</span> <span class="n">radius</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="cm">/** "Abstraction" */</span>
+<span class="kd">abstract</span> <span class="kd">class</span> <span class="nc">Shape</span> <span class="o">{</span>
+    <span class="kd">protected</span> <span class="n">DrawingAPI</span> <span class="n">drawingAPI</span><span class="o">;</span>
+
+    <span class="kd">protected</span> <span class="nf">Shape</span><span class="o">(</span><span class="kd">final</span> <span class="n">DrawingAPI</span> <span class="n">drawingAPI</span><span class="o">){</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">drawingAPI</span> <span class="o">=</span> <span class="n">drawingAPI</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kd">abstract</span> <span class="kt">void</span> <span class="nf">draw</span><span class="o">();</span>                                 <span class="c1">// low-level</span>
+    <span class="kd">public</span> <span class="kd">abstract</span> <span class="kt">void</span> <span class="nf">resizeByPercentage</span><span class="o">(</span><span class="kd">final</span> <span class="kt">double</span> <span class="n">pct</span><span class="o">);</span>   <span class="c1">// high-level</span>
+<span class="o">}</span>
+
+<span class="cm">/** "Refined Abstraction" */</span>
+<span class="kd">class</span> <span class="nc">CircleShape</span> <span class="kd">extends</span> <span class="n">Shape</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="kt">double</span> <span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">,</span> <span class="n">radius</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="nf">CircleShape</span><span class="o">(</span><span class="kd">final</span> <span class="kt">double</span> <span class="n">x</span><span class="o">,</span> <span class="kd">final</span> <span class="kt">double</span> <span class="n">y</span><span class="o">,</span> <span class="kd">final</span> <span class="kt">double</span> <span class="n">radius</span><span class="o">,</span> <span class="kd">final</span> <span class="n">DrawingAPI</span> <span class="n">drawingAPI</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kd">super</span><span class="o">(</span><span class="n">drawingAPI</span><span class="o">);</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">;</span>  <span class="k">this</span><span class="o">.</span><span class="na">y</span> <span class="o">=</span> <span class="n">y</span><span class="o">;</span>  <span class="k">this</span><span class="o">.</span><span class="na">radius</span> <span class="o">=</span> <span class="n">radius</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="c1">// low-level i.e. Implementation specific</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">draw</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">drawingAPI</span><span class="o">.</span><span class="na">drawCircle</span><span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">,</span> <span class="n">radius</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="c1">// high-level i.e. Abstraction specific</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">resizeByPercentage</span><span class="o">(</span><span class="kd">final</span> <span class="kt">double</span> <span class="n">pct</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">radius</span> <span class="o">*=</span> <span class="o">(</span><span class="mf">1.0</span> <span class="o">+</span> <span class="n">pct</span><span class="o">/</span><span class="mf">100.0</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="cm">/** "Client" */</span>
+<span class="kd">class</span> <span class="nc">BridgePattern</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="kd">final</span> <span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">Shape</span><span class="o">[]</span> <span class="n">shapes</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Shape</span><span class="o">[]</span> <span class="o">{</span>
+            <span class="k">new</span> <span class="n">CircleShape</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="k">new</span> <span class="n">DrawingAPI1</span><span class="o">()),</span>
+            <span class="k">new</span> <span class="n">CircleShape</span><span class="o">(</span><span class="mi">5</span><span class="o">,</span> <span class="mi">7</span><span class="o">,</span> <span class="mi">11</span><span class="o">,</span> <span class="k">new</span> <span class="n">DrawingAPI2</span><span class="o">())</span>
+        <span class="o">};</span>
+
+        <span class="k">for</span> <span class="o">(</span><span class="n">Shape</span> <span class="n">shape</span> <span class="o">:</span> <span class="n">shapes</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">shape</span><span class="o">.</span><span class="na">resizeByPercentage</span><span class="o">(</span><span class="mf">2.5</span><span class="o">);</span>
+            <span class="n">shape</span><span class="o">.</span><span class="na">draw</span><span class="o">();</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+<p>It will output:</p>
+<pre>
+API1.circle at 1.000000:2.000000 radius 3.075000
+API2.circle at 5.000000:7.000000 radius 11.275000
+</pre>
+<h3><span class="mw-headline" id="PHP">PHP</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Bridge_pattern&amp;action=edit&amp;section=6" title="Edit section: PHP">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="k">interface</span> <span class="nx">DrawingAPI</span> <span class="p">{</span>
+    <span class="k">function</span> <span class="nf">drawCircle</span><span class="p">(</span><span class="nv">$x</span><span class="p">,</span> <span class="nv">$y</span><span class="p">,</span> <span class="nv">$radius</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">class</span> <span class="nc">DrawingAPI1</span> <span class="k">implements</span> <span class="nx">DrawingAPI</span> <span class="p">{</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">drawCircle</span><span class="p">(</span><span class="nv">$x</span><span class="p">,</span> <span class="nv">$y</span><span class="p">,</span> <span class="nv">$radius</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">echo</span> <span class="s2">"API1.circle at </span><span class="si">$x</span><span class="s2">:</span><span class="si">$y</span><span class="s2"> radius </span><span class="si">$radius</span><span class="s2">.</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">class</span> <span class="nc">DrawingAPI2</span> <span class="k">implements</span> <span class="nx">DrawingAPI</span> <span class="p">{</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">drawCircle</span><span class="p">(</span><span class="nv">$x</span><span class="p">,</span> <span class="nv">$y</span><span class="p">,</span> <span class="nv">$radius</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">echo</span> <span class="s2">"API2.circle at </span><span class="si">$x</span><span class="s2">:</span><span class="si">$y</span><span class="s2"> radius </span><span class="si">$radius</span><span class="s2">.</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">abstract</span> <span class="k">class</span> <span class="nc">Shape</span> <span class="p">{</span>
+    <span class="k">protected</span> <span class="nv">$drawingAPI</span><span class="p">;</span>
+
+    <span class="k">public</span> <span class="k">abstract</span> <span class="k">function</span> <span class="nf">draw</span><span class="p">();</span>
+    <span class="k">public</span> <span class="k">abstract</span> <span class="k">function</span> <span class="nf">resizeByPercentage</span><span class="p">(</span><span class="nv">$pct</span><span class="p">);</span>
+
+    <span class="k">protected</span> <span class="k">function</span> <span class="nf">__construct</span><span class="p">(</span><span class="nx">DrawingAPI</span> <span class="nv">$drawingAPI</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">drawingAPI</span> <span class="o">=</span> <span class="nv">$drawingAPI</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">class</span> <span class="nc">CircleShape</span> <span class="k">extends</span> <span class="nx">Shape</span> <span class="p">{</span>
+    <span class="k">private</span> <span class="nv">$x</span><span class="p">;</span>
+    <span class="k">private</span> <span class="nv">$y</span><span class="p">;</span>
+    <span class="k">private</span> <span class="nv">$radius</span><span class="p">;</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">__construct</span><span class="p">(</span><span class="nv">$x</span><span class="p">,</span> <span class="nv">$y</span><span class="p">,</span> <span class="nv">$radius</span><span class="p">,</span> <span class="nx">DrawingAPI</span> <span class="nv">$drawingAPI</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">parent</span><span class="o">::</span><span class="na">__construct</span><span class="p">(</span><span class="nv">$drawingAPI</span><span class="p">);</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">x</span> <span class="o">=</span> <span class="nv">$x</span><span class="p">;</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">y</span> <span class="o">=</span> <span class="nv">$y</span><span class="p">;</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">radius</span> <span class="o">=</span> <span class="nv">$radius</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">draw</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">drawingAPI</span><span class="o">-&gt;</span><span class="na">drawCircle</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">x</span><span class="p">,</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">y</span><span class="p">,</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">radius</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">resizeByPercentage</span><span class="p">(</span><span class="nv">$pct</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">radius</span> <span class="o">*=</span> <span class="nv">$pct</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">class</span> <span class="nc">Tester</span> <span class="p">{</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="k">function</span> <span class="nf">main</span><span class="p">()</span>  <span class="p">{</span>
+        <span class="nv">$shapes</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+            <span class="k">new</span> <span class="nx">CircleShape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span>  <span class="k">new</span> <span class="nx">DrawingAPI1</span><span class="p">()),</span>
+            <span class="k">new</span> <span class="nx">CircleShape</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="k">new</span> <span class="nx">DrawingAPI2</span><span class="p">()),</span>
+        <span class="p">);</span>
+
+        <span class="k">foreach</span> <span class="p">(</span><span class="nv">$shapes</span> <span class="k">as</span> <span class="nv">$shape</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nv">$shape</span><span class="o">-&gt;</span><span class="na">resizeByPercentage</span><span class="p">(</span><span class="mf">2.5</span><span class="p">);</span>
+            <span class="nv">$shape</span><span class="o">-&gt;</span><span class="na">draw</span><span class="p">();</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">Tester</span><span class="o">::</span><span class="na">main</span><span class="p">();</span>
+</pre></div>
+<p>Output:</p>
+<pre>
+API1.circle at 1:3 radius 17.5
+API2.circle at 5:7 radius 27.5
+</pre>
+<h3><span class="mw-headline" id="Scala">Scala</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Bridge_pattern&amp;action=edit&amp;section=7" title="Edit section: Scala">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="k">trait</span> <span class="nc">DrawingAPI</span> <span class="o">{</span>
+  <span class="k">def</span> <span class="n">drawCircle</span><span class="o">(</span><span class="n">x</span><span class="k">:</span> <span class="kt">Double</span><span class="o">,</span> <span class="n">y</span><span class="k">:</span> <span class="kt">Double</span><span class="o">,</span> <span class="n">radius</span><span class="k">:</span> <span class="kt">Double</span><span class="o">)</span>
+<span class="o">}</span>
+
+<span class="k">class</span> <span class="nc">DrawingAPI1</span> <span class="k">extends</span> <span class="nc">DrawingAPI</span> <span class="o">{</span>
+  <span class="k">def</span> <span class="n">drawCircle</span><span class="o">(</span><span class="n">x</span><span class="k">:</span> <span class="kt">Double</span><span class="o">,</span> <span class="n">y</span><span class="k">:</span> <span class="kt">Double</span><span class="o">,</span> <span class="n">radius</span><span class="k">:</span> <span class="kt">Double</span><span class="o">)</span> <span class="k">=</span> <span class="n">println</span><span class="o">(</span><span class="s">s"API #1 </span><span class="si">$x</span><span class="s"> </span><span class="si">$y</span><span class="s"> </span><span class="si">$radius</span><span class="s">"</span><span class="o">)</span>
+<span class="o">}</span>
+
+<span class="k">class</span> <span class="nc">DrawingAPI2</span> <span class="k">extends</span> <span class="nc">DrawingAPI</span> <span class="o">{</span>
+  <span class="k">def</span> <span class="n">drawCircle</span><span class="o">(</span><span class="n">x</span><span class="k">:</span> <span class="kt">Double</span><span class="o">,</span> <span class="n">y</span><span class="k">:</span> <span class="kt">Double</span><span class="o">,</span> <span class="n">radius</span><span class="k">:</span> <span class="kt">Double</span><span class="o">)</span> <span class="k">=</span> <span class="n">println</span><span class="o">(</span><span class="s">s"API #2 </span><span class="si">$x</span><span class="s"> </span><span class="si">$y</span><span class="s"> </span><span class="si">$radius</span><span class="s">"</span><span class="o">)</span>
+<span class="o">}</span>
+
+<span class="k">abstract</span> <span class="k">class</span> <span class="nc">Shape</span><span class="o">(</span><span class="n">drawingAPI</span><span class="k">:</span> <span class="kt">DrawingAPI</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">def</span> <span class="n">draw</span><span class="o">()</span>
+  <span class="k">def</span> <span class="n">resizePercentage</span><span class="o">(</span><span class="n">pct</span><span class="k">:</span> <span class="kt">Double</span><span class="o">)</span>
+<span class="o">}</span>
+
+<span class="k">class</span> <span class="nc">CircleShape</span><span class="o">(</span><span class="n">x</span><span class="k">:</span> <span class="kt">Double</span><span class="o">,</span> <span class="n">y</span><span class="k">:</span> <span class="kt">Double</span><span class="o">,</span> <span class="k">var</span> <span class="n">radius</span><span class="k">:</span> <span class="kt">Double</span><span class="o">,</span> <span class="n">drawingAPI</span><span class="k">:</span> <span class="kt">DrawingAPI</span><span class="o">)</span>
+    <span class="k">extends</span> <span class="nc">Shape</span><span class="o">(</span><span class="n">drawingAPI</span><span class="k">:</span> <span class="kt">DrawingAPI</span><span class="o">)</span> <span class="o">{</span>
+
+  <span class="k">def</span> <span class="n">draw</span><span class="o">()</span> <span class="k">=</span> <span class="n">drawingAPI</span><span class="o">.</span><span class="n">drawCircle</span><span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">,</span> <span class="n">radius</span><span class="o">)</span>
+
+  <span class="k">def</span> <span class="n">resizePercentage</span><span class="o">(</span><span class="n">pct</span><span class="k">:</span> <span class="kt">Double</span><span class="o">)</span> <span class="o">{</span> <span class="n">radius</span> <span class="o">*=</span> <span class="n">pct</span> <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="k">object</span> <span class="nc">BridgePattern</span> <span class="o">{</span>
+  <span class="k">def</span> <span class="n">main</span><span class="o">(</span><span class="n">args</span><span class="k">:</span> <span class="kt">Array</span><span class="o">[</span><span class="kt">String</span><span class="o">])</span> <span class="o">{</span>
+    <span class="nc">Seq</span> <span class="o">(</span>
+	<span class="k">new</span> <span class="nc">CircleShape</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="k">new</span> <span class="nc">DrawingAPI1</span><span class="o">),</span>
+	<span class="k">new</span> <span class="nc">CircleShape</span><span class="o">(</span><span class="mi">4</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">6</span><span class="o">,</span> <span class="k">new</span> <span class="nc">DrawingAPI2</span><span class="o">)</span>
+    <span class="o">)</span> <span class="n">foreach</span> <span class="o">{</span> <span class="n">x</span> <span class="k">=&gt;</span>
+        <span class="n">x</span><span class="o">.</span><span class="n">resizePercentage</span><span class="o">(</span><span class="mi">3</span><span class="o">)</span>
+        <span class="n">x</span><span class="o">.</span><span class="n">draw</span><span class="o">()</span>			
+      <span class="o">}</span>	
+  <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Bridge_pattern&amp;action=edit&amp;section=8" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="Adapter_pattern.html" title="Adapter pattern">Adapter pattern</a></li>
+<li><a href="Strategy_pattern.html" title="Strategy pattern">Strategy pattern</a></li>
+<li><a href="Template_method_pattern.html" title="Template method pattern">Template method pattern</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Bridge_pattern&amp;action=edit&amp;section=9" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text">Gamma, E, Helm, R, Johnson, R, Vlissides, J: <i>Design Patterns</i>, page 151. Addison-Wesley, 1995</span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Bridge_pattern&amp;action=edit&amp;section=10" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table role="presentation" class="mbox-small plainlinks sistersitebox" style="border:1px solid #aaa;background-color:#f9f9f9">
+<tr>
+<td class="mbox-image"><a href="https://en.wikipedia.org/wiki/File:Wikibooks-logo-en-noslogan.svg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/40px-Wikibooks-logo-en-noslogan.svg.png" width="40" height="40" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/60px-Wikibooks-logo-en-noslogan.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/80px-Wikibooks-logo-en-noslogan.svg.png 2x" data-file-width="400" data-file-height="400" /></a></td>
+<td class="mbox-text plainlist">The Wikibook <i><a href="http://en.wikibooks.org/wiki/Computer_Science/Design_Patterns" class="extiw" title="wikibooks:Computer Science/Design Patterns">Computer Science/Design Patterns</a></i> has a page on the topic of: <i><b><a href="http://en.wikibooks.org/wiki/Computer_Science/Design_Patterns/Bridge_pattern" class="extiw" title="wikibooks:Computer Science/Design Patterns/Bridge pattern">Bridge pattern implementations in various languages</a></b></i></td>
+</tr>
+</table>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://www.lepus.org.uk/ref/companion/Bridge.xml">Bridge in UML and in LePUS3</a> (a formal modelling language)</li>
+<li><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.informit.com/articles/article.aspx?p=30297">"C# Design Patterns: The Bridge Pattern"</a>. <i>Sample Chapter</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABridge+pattern&amp;rft.atitle=C%23+Design+Patterns%3A+The+Bridge+Pattern&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.informit.com%2Farticles%2Farticle.aspx%3Fp%3D30297&amp;rft.jtitle=Sample+Chapter&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span> From: <cite class="citation book">James W. Cooper. <a rel="nofollow" class="external text" href="http://www.informit.com/store/product.aspx?isbn=0-201-84453-2"><i>C# Design Patterns: A Tutorial</i></a>. <a href="https://en.wikipedia.org/wiki/Addison-Wesley" title="Addison-Wesley">Addison-Wesley</a>. <a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="https://en.wikipedia.org/wiki/Special:BookSources/0-201-84453-2" title="Special:BookSources/0-201-84453-2">0-201-84453-2</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABridge+pattern&amp;rft.au=James+W.+Cooper&amp;rft.btitle=C%23+Design+Patterns%3A+A+Tutorial&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.informit.com%2Fstore%2Fproduct.aspx%3Fisbn%3D0-201-84453-2&amp;rft.isbn=0-201-84453-2&amp;rft.pub=Addison-Wesley&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+</ul>
+<div role="navigation" class="navbox" aria-labelledby="Software_design_patterns" style="padding:3px">
+<table class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="https://en.wikipedia.org/wiki/Template:Design_Patterns_patterns" title="Template:Design Patterns patterns"><abbr title="View this template" style=";;background:none transparent;border:none;">v</abbr></a></li>
+<li class="nv-talk"><a href="https://en.wikipedia.org/wiki/Template_talk:Design_Patterns_patterns" title="Template talk:Design Patterns patterns"><abbr title="Discuss this template" style=";;background:none transparent;border:none;">t</abbr></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Design_Patterns_patterns&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;">e</abbr></a></li>
+</ul>
+</div>
+<div id="Software_design_patterns" style="font-size:114%"><a href="https://en.wikipedia.org/wiki/Software_design_pattern" title="Software design pattern">Software design patterns</a></div>
+</th>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Design_Patterns" title="Design Patterns">Gang of Four<br />
+patterns</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em"></div>
+<table class="nowraplinks navbox-subgroup" style="border-spacing:0">
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;"><a href="https://en.wikipedia.org/wiki/Creational_pattern" title="Creational pattern">Creational</a></div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Abstract_factory_pattern.html" title="Abstract factory pattern">Abstract factory</a></li>
+<li><a href="Builder_pattern.html" title="Builder pattern">Builder</a></li>
+<li><a href="Factory_method_pattern.html" title="Factory method pattern">Factory method</a></li>
+<li><a href="Prototype_pattern.html" title="Prototype pattern">Prototype</a></li>
+<li><a href="Singleton_pattern.html" title="Singleton pattern">Singleton</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;"><a href="https://en.wikipedia.org/wiki/Structural_pattern" title="Structural pattern">Structural</a></div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Adapter_pattern.html" title="Adapter pattern">Adapter</a></li>
+<li><strong class="selflink">Bridge</strong></li>
+<li><a href="Composite_pattern.html" title="Composite pattern">Composite</a></li>
+<li><a href="Decorator_pattern.html" title="Decorator pattern">Decorator</a></li>
+<li><a href="Facade_pattern.html" title="Facade pattern">Facade</a></li>
+<li><a href="Flyweight_pattern.html" title="Flyweight pattern">Flyweight</a></li>
+<li><a href="Proxy_pattern.html" title="Proxy pattern">Proxy</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;"><a href="https://en.wikipedia.org/wiki/Behavioral_pattern" title="Behavioral pattern">Behavioral</a></div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Chain-of-responsibility_pattern.html" title="Chain-of-responsibility pattern">Chain of responsibility</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Command_pattern" title="Command pattern">Command</a></li>
+<li><a href="Interpreter_pattern.html" title="Interpreter pattern">Interpreter</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Iterator_pattern" title="Iterator pattern">Iterator</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Mediator_pattern" title="Mediator pattern">Mediator</a></li>
+<li><a href="Memento_pattern.html" title="Memento pattern">Memento</a></li>
+<li><a href="Observer_pattern.html" title="Observer pattern">Observer</a></li>
+<li><a href="https://en.wikipedia.org/wiki/State_pattern" title="State pattern">State</a></li>
+<li><a href="Strategy_pattern.html" title="Strategy pattern">Strategy</a></li>
+<li><a href="Template_method_pattern.html" title="Template method pattern">Template method</a></li>
+<li><a href="Visitor_pattern.html" title="Visitor pattern">Visitor</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Concurrency_pattern" title="Concurrency pattern">Concurrency<br />
+patterns</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Active_object" title="Active object">Active object</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Balking_pattern" title="Balking pattern">Balking</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Binding_properties_pattern" title="Binding properties pattern">Binding properties</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Double-checked_locking" title="Double-checked locking">Double-checked locking</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Asynchronous_method_invocation" title="Asynchronous method invocation">Event-based asynchronous</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Guarded_suspension" title="Guarded suspension">Guarded suspension</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Join-pattern" title="Join-pattern">Join</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Lock_pattern" class="mw-redirect" title="Lock pattern">Lock</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Monitor_(synchronization)" title="Monitor (synchronization)">Monitor</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Proactor_pattern" title="Proactor pattern">Proactor</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Reactor_pattern" title="Reactor pattern">Reactor</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Readers–writer_lock" title="Readers–writer lock">Read write lock</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Scheduler_pattern" class="mw-redirect" title="Scheduler pattern">Scheduler</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Thread_pool_pattern" class="mw-redirect" title="Thread pool pattern">Thread pool</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Thread-local_storage" title="Thread-local storage">Thread-local storage</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Architectural_pattern" title="Architectural pattern">Architectural<br />
+patterns</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Front_controller" title="Front controller">Front controller</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Interceptor_pattern" title="Interceptor pattern">Interceptor</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Model–view–controller" title="Model–view–controller">MVC</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Multitier_architecture" title="Multitier architecture"><i>n</i>-tier</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Specification_pattern" title="Specification pattern">Specification</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Publish–subscribe_pattern" title="Publish–subscribe pattern">Publish–subscribe</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Naked_objects" title="Naked objects">Naked objects</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Service_locator_pattern" title="Service locator pattern">Service locator</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Active_record_pattern" title="Active record pattern">Active record</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Identity_map_pattern" title="Identity map pattern">Identity map</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Data_access_object" title="Data access object">Data access object</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Data_transfer_object" title="Data transfer object">Data transfer object</a></li>
+<li><a href="https://en.wikipedia.org/w/index.php?title=Action%E2%80%93Domain%E2%80%93Responder&amp;action=edit&amp;redlink=1" class="new" title="Action–Domain–Responder (page does not exist)">ADR</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Inversion_of_control" title="Inversion of control">Inversion of control</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Other<br />
+patterns</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Blackboard_design_pattern" class="mw-redirect" title="Blackboard design pattern">Blackboard</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Business_delegate_pattern" title="Business delegate pattern">Business delegate</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Composite_entity_pattern" title="Composite entity pattern">Composite entity</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Dependency_injection" title="Dependency injection">Dependency injection</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Intercepting_filter_pattern" title="Intercepting filter pattern">Intercepting filter</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Lazy_loading" title="Lazy loading">Lazy loading</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Mock_object" title="Mock object">Mock object</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Null_object_pattern" class="mw-redirect" title="Null object pattern">Null object</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Object_pool_pattern" title="Object pool pattern">Object pool</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Servant_(design_pattern)" title="Servant (design pattern)">Servant</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Twin_pattern" title="Twin pattern">Twin</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Type_Tunnel_pattern" title="Type Tunnel pattern">Type tunnel</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Books</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><i><a href="https://en.wikipedia.org/wiki/Design_Patterns" title="Design Patterns">Design Patterns</a></i></li>
+<li><i><a href="https://en.wikipedia.org/wiki/Enterprise_Integration_Patterns" title="Enterprise Integration Patterns">Enterprise Integration Patterns</a></i></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">People</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Christopher_Alexander" title="Christopher Alexander">Christopher Alexander</a></li>
+<li><a href="Erich_Gamma.html" title="Erich Gamma">Erich Gamma</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Ralph_Johnson_(computer_scientist)" title="Ralph Johnson (computer scientist)">Ralph Johnson</a></li>
+<li><a href="https://en.wikipedia.org/wiki/John_Vlissides" title="John Vlissides">John Vlissides</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Grady_Booch" title="Grady Booch">Grady Booch</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Kent_Beck" title="Kent Beck">Kent Beck</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Ward_Cunningham" title="Ward Cunningham">Ward Cunningham</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Martin_Fowler" title="Martin Fowler">Martin Fowler</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Robert_Cecil_Martin" title="Robert Cecil Martin">Robert Martin</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Jim_Coplien" title="Jim Coplien">Jim Coplien</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Douglas_C._Schmidt" title="Douglas C. Schmidt">Douglas Schmidt</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Linda_Rising" title="Linda Rising">Linda Rising</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Communities</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/The_Hillside_Group" title="The Hillside Group">The Hillside Group</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Portland_Pattern_Repository" title="Portland Pattern Repository">The Portland Pattern Repository</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1227
+Cached time: 20170104145717
+Cache expiry: 2592000
+Dynamic content: false
+CPU time usage: 0.108 seconds
+Real time usage: 0.143 seconds
+Preprocessor visited node count: 782/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 32754/2097152 bytes
+Template argument size: 1701/2097152 bytes
+Highest expansion depth: 11/40
+Expensive parser function count: 0/500
+Lua time usage: 0.031/10.000 seconds
+Lua memory usage: 1.71 MB/50 MB
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   92.218      1 - -total
+ 34.39%   31.718      1 - Template:Cite_web
+ 28.93%   26.675      1 - Template:Wikibooks
+ 27.35%   25.226      2 - Template:Navbox
+ 27.01%   24.912      1 - Template:Design_Patterns_Patterns
+ 26.57%   24.498      1 - Template:Sister_project
+ 23.91%   22.053      1 - Template:Side_box
+ 10.33%    9.522      1 - Template:Navbox_subgroup
+  4.99%    4.598      1 - Template:Cite_book
+  4.31%    3.977      1 - Template:Reflist
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:65033-0!*!0!!en!4!* and timestamp 20170104145719 and revision id 758284166
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Bridge_pattern&amp;oldid=758284166">https://en.wikipedia.org/w/index.php?title=Bridge_pattern&amp;oldid=758284166</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Help_Category.html" title="Help:Category">Categories</a>: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Software_design_patterns" title="Category:Software design patterns">Software design patterns</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Articles_with_example_C_Sharp_code" title="Category:Articles with example C Sharp code">Articles with example C Sharp code</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Articles_with_example_C++_code" title="Category:Articles with example C++ code">Articles with example C++ code</a></li><li><a href="Category_Articles_with_example_Java_code.html" title="Category:Articles with example Java code">Articles with example Java code</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="Special_MyTalk.html" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="Special_MyContributions.html" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&amp;returnto=Bridge+pattern" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Bridge+pattern" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="Bridge_pattern.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+															<li  id="ca-talk"><span><a href="https://en.wikipedia.org/wiki/Talk:Bridge_pattern"  title="Discussion about the content page [t]" accesskey="t" rel="discussion">Talk</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="Bridge_pattern.html" >Read</a></span></li>
+															<li id="ca-edit"><span><a href="https://en.wikipedia.org/w/index.php?title=Bridge_pattern&amp;action=edit"  title="Edit this page [e]" accesskey="e">Edit</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="https://en.wikipedia.org/w/index.php?title=Bridge_pattern&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="https://en.wikipedia.org/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="Main_Page.html"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="Portal_Contents.html" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="Portal_Featured_content.html" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="Portal_Current_events.html" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="https://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="../../shop.wikimedia.org/index.html" title="Visit the Wikipedia store">Wikipedia store</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Interaction</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-help"><a href="Help_Contents.html" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="Wikipedia_About.html" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="Wikipedia_Community_portal.html" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="Wikipedia_Contact_us.html" title="How to contact Wikipedia">Contact page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="https://en.wikipedia.org/wiki/Special:WhatLinksHere/Bridge_pattern" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://en.wikipedia.org/wiki/Special:RecentChangesLinked/Bridge_pattern" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="Wikipedia_File_Upload_Wizard.html" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="https://en.wikipedia.org/w/index.php?title=Bridge_pattern&amp;oldid=758284166" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://en.wikipedia.org/w/index.php?title=Bridge_pattern&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q23802" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="https://en.wikipedia.org/w/index.php?title=Special:CiteThisPage&amp;page=Bridge_pattern&amp;id=758284166" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Print/export</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Bridge+pattern">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Bridge+pattern&amp;returnto=Bridge+pattern&amp;oldid=758284166&amp;writer=rdf2latex">Download as PDF</a></li><li id="t-print"><a href="https://en.wikipedia.org/w/index.php?title=Bridge_pattern&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-wikibase-otherprojects' aria-labelledby='p-wikibase-otherprojects-label'>
+			<h3 id='p-wikibase-otherprojects-label'>In other projects</h3>
+
+			<div class="body">
+									<ul>
+						<li class="wb-otherproject-link wb-otherproject-commons"><a href="https://commons.wikimedia.org/wiki/Category:Bridge_pattern" hreflang="en">Wikimedia Commons</a></li><li class="wb-otherproject-link wb-otherproject-wikibooks"><a href="https://en.wikibooks.org/wiki/Computer_Science_Design_Patterns/Bridge" hreflang="en">Wikibooks</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Languages</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-ar"><a href="https://ar.wikipedia.org/wiki/نموذج_التصميم_جسر" title="نموذج التصميم جسر – Arabic" lang="ar" hreflang="ar" class="interlanguage-link-target">العربية</a></li><li class="interlanguage-link interwiki-bg"><a href="https://bg.wikipedia.org/wiki/Мост_(шаблон)" title="Мост (шаблон) – Bulgarian" lang="bg" hreflang="bg" class="interlanguage-link-target">Български</a></li><li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Bridge_(patró_de_disseny)" title="Bridge (patró de disseny) – Catalan" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Brücke_(Entwurfsmuster)" title="Brücke (Entwurfsmuster) – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Bridge_(patrón_de_diseño)" title="Bridge (patrón de diseño) – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Pont_(patron_de_conception)" title="Pont (patron de conception) – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-gl"><a href="https://gl.wikipedia.org/wiki/Bridge_(padrón_de_deseño)" title="Bridge (padrón de deseño) – Galician" lang="gl" hreflang="gl" class="interlanguage-link-target">Galego</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/브리지_패턴" title="브리지 패턴 – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-hy"><a href="https://hy.wikipedia.org/wiki/Կամուրջ_(նախագծման_ձևանմուշ)" title="Կամուրջ (նախագծման ձևանմուշ) – Armenian" lang="hy" hreflang="hy" class="interlanguage-link-target">Հայերեն</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Bridge_pattern" title="Bridge pattern – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/Híd_programtervezési_minta" title="Híd programtervezési minta – Hungarian" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/Bridge_(ontwerppatroon)" title="Bridge (ontwerppatroon) – Dutch" lang="nl" hreflang="nl" class="interlanguage-link-target">Nederlands</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/Bridge_パターン" title="Bridge パターン – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Most_(wzorzec_projektowy)" title="Most (wzorzec projektowy) – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Bridge_(padrão_de_projeto_de_software)" title="Bridge (padrão de projeto de software) – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/Мост_(шаблон_проектирования)" title="Мост (шаблон проектирования) – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-sv"><a href="https://sv.wikipedia.org/wiki/Brygga_(designmönster)" title="Brygga (designmönster) – Swedish" lang="sv" hreflang="sv" class="interlanguage-link-target">Svenska</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/Міст_(шаблон_проектування)" title="Міст (шаблон проектування) – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-vi"><a href="https://vi.wikipedia.org/wiki/Bridge_pattern" title="Bridge pattern – Vietnamese" lang="vi" hreflang="vi" class="interlanguage-link-target">Tiếng Việt</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/橋接模式" title="橋接模式 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q23802#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 4 January 2017, at 14:57.</li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="Wikipedia_Text_of_Creative_Commons_Attribution-ShareAlike_3.html">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="../../creativecommons.org/licenses/by-sa/3.0/index.html" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="../../wikimediafoundation.org/wiki/Terms_of_Use.html">Terms of Use</a> and <a href="../../wikimediafoundation.org/wiki/Privacy_policy.html">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="../../www.wikimediafoundation.org/index.html">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../../wikimediafoundation.org/wiki/Privacy_policy.html" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="Wikipedia_About.html" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="Wikipedia_General_disclaimer.html" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="Wikipedia_Contact_us.html">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a href="../../www.mediawiki.org/wiki/Special_MyLanguage/How_to_contribute.html">Developers</a></li>
+											<li id="footer-places-cookiestatement"><a href="../../wikimediafoundation.org/wiki/Cookie_statement.html">Cookie statement</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/w/index.php?title=Bridge_pattern&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="../../www.wikimediafoundation.org/index.html"><img src="https://en.wikipedia.org/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="../../www.mediawiki.org/index.html"><img src="https://en.wikipedia.org/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":61,"wgHostname":"mw1220"});});</script>
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Bridge_pattern by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:52:44 GMT -->
+</html>

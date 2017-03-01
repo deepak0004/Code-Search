@@ -1,0 +1,17 @@
+    
+        Can somebody suggest an easy way to get a reference to a file as a String/InputStream/File/etc type object in a junit test class?  Obviously I could paste the file (xml in this case) in as a giant String or read it in as a file but is there a shortcut specific to Junit like this?
+
+public class MyTestClass{
+
+@Resource(path="something.xml")
+File myTestFile;
+
+@Test
+public void toSomeTest(){
+...
+}
+
+}
+
+
+                

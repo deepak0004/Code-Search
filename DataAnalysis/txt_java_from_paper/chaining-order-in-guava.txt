@@ -1,0 +1,52 @@
+    
+        I'm a bit new to Guava and it's style. I'm definitely digging it, but one thing I keep tripping over is the order of chained methods. Where I seem to have this problem the most is when using compound Orderings. I have to keep asking myself questions like:
+
+
+Where does the natural go?
+Where does the nullFirst (or last) go?
+Which nullsFirst does what? (In the example below, one for host, one for last name, one for first name?)
+
+
+Here's an example of one that I was just working on. It looks cumbersome, and I'm just not sure if I put it all together right. I have some JUnits to test it, and it seems okay, but there are always those quirky boundary cases.
+
+Ordering&lt;Host&gt; lastNameThenFirstNameOrdering = Ordering.natural().nullsFirst().onResultOf(new Function&lt;Host, String&gt;() {
+    public String apply(Host host) {
+        return host.getLastName();
+    }}).compound(Ordering.natural().nullsFirst().onResultOf(new Function&lt;Host, String&gt;() {
+    public String apply(Host host) {
+        return host.getFirstName();
+    }})).nullsFirst();
+
+
+As for an actual question: Is there a well-defined rule for how these things get executed? It seems to be last-to-first, but I'm having trouble telling that.
+
+edit: Just wanted to point out the large, ugly code I was trying to replace:
+
+    Ordering&lt;Host&gt; ordering2 = new Ordering&lt;Host&gt;() {
+        public int compare(Host host1, Host host2) {
+            if (host1 == null || host2 == null) {
+                return host1 == host2 ? 0 : ((host1 == null) ? -1 : 1); 
+            }
+            if(host1.getLastName() != null || host2.getLastName() != null){
+                if (host1.getLastName() == null) {
+                    return -1;
+                } else if (host2.getLastName() == null) {
+                    return 1;
+                }
+
+                if (host1.getLastName().compareTo(host2.getLastName()) != 0) {
+                    return host1.getLastName().compareTo(host2.getLastName());
+                }
+            }
+
+            if (host1.getFirstName() == null) {
+                return -1;
+            } else if (host2.getFirstName() == null) {
+                return 1;
+            }
+
+            return host1.getFirstName().compareTo(host2.getFirstName());
+        }};
+
+
+                

@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from en.wikipedia.org/wiki/JikesRVM by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:39 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Jikes RVM - Wikipedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Jikes_RVM","wgTitle":"Jikes RVM","wgCurRevisionId":740524460,"wgRevisionId":740524460,"wgArticleId":2078427,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles lacking reliable references from September 2016","All articles lacking reliable references","Java virtual machine","Stack-based virtual machines","Software using the Eclipse license"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Jikes_RVM","wgRelevantArticleId":2078427,"wgRequestId":"WHjKEApAADgAAiQHTb0AAAAY","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"JikesRVM","wgFlaggedRevsParams":{"tags":{}},"wgStableRevisionId":null,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"en","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgInternalRedirectTargetUrl":"/wiki/Jikes_RVM","wgWikibaseItemId":"Q6192594","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.cite.styles":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@1dqfd7l",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["mediawiki.action.view.redirect","ext.cite.a11y","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.legacy.wikibits","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.watchlist-notice","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.gadget.featured-articles-links","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.interface","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="https://en.wikipedia.org/w/load.php?debug=false&amp;lang=en&amp;modules=ext.cite.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="../w/load2c8d.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../w/load18b6.css?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.29.0-wmf.7"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="https://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Jikes_RVM"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Jikes_RVM&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Jikes_RVM&amp;action=edit"/>
+<link rel="apple-touch-icon" href="https://en.wikipedia.org/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="../static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../w/api251f.php?action=rsd"/>
+<link rel="copyright" href="../../creativecommons.org/licenses/by-sa/3.0/index.html"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Jikes_RVM"/>
+<link rel="dns-prefetch" href="../../login.wikimedia.org/index.html"/>
+<link rel="dns-prefetch" href="../../meta.wikimedia.org/index.html" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Jikes_RVM rootpage-Jikes_RVM skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">Jikes RVM</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"><span class="mw-redirectedfrom">  (Redirected from <a href="https://en.wikipedia.org/w/index.php?title=JikesRVM&amp;redirect=no" class="mw-redirect" title="JikesRVM">JikesRVM</a>)</span></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><script>function mfTempOpenSection(id){var block=document.getElementById("mf-section-"+id);block.className+=" open-block";block.previousSibling.className+=" open-block";}</script><div role="note" class="hatnote">Not to be confused with <a href="Jikes.html" title="Jikes">Jikes</a>.</div>
+<table class="plainlinks metadata ambox ambox-content ambox-Primary_sources" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px"><a href="https://en.wikipedia.org/wiki/File:Question_book-new.svg" class="image"><img alt="Question book-new.svg" src="http://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/50px-Question_book-new.svg.png" width="50" height="39" srcset="//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/75px-Question_book-new.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/100px-Question_book-new.svg.png 2x" data-file-width="512" data-file-height="399" /></a></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article <b>relies too much on <a href="https://en.wikipedia.org/wiki/Wikipedia:Verifiability" title="Wikipedia:Verifiability">references</a> to <a href="https://en.wikipedia.org/wiki/Wikipedia:No_original_research#Primary.2C_secondary_and_tertiary_sources" title="Wikipedia:No original research">primary sources</a></b>. <span class="hide-when-compact">Please improve this by adding <a href="https://en.wikipedia.org/wiki/Wikipedia:No_original_research#Primary.2C_secondary_and_tertiary_sources" title="Wikipedia:No original research">secondary or tertiary sources</a>.</span> <small><i>(September 2016)</i></small> <small class="hide-when-compact"><i>(<a href="https://en.wikipedia.org/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></span></td>
+</tr>
+</table>
+<table class="infobox vevent" style="width:22em">
+<caption class="summary">Jikes RVM</caption>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_developer" title="Software developer">Developer(s)</a></th>
+<td><a rel="nofollow" class="external text" href="http://www.jikesrvm.org/ProjectOrganization/">Jikes RVM Team and Contributors</a></td>
+</tr>
+<tr>
+<td colspan="2" style="text-align:center"></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_release_life_cycle" title="Software release life cycle">Stable release</a></th>
+<td>
+<div style="margin:0px;">3.1.4 / February&#160;18, 2016<span class="noprint">; 10 months ago</span><span style="display:none">&#160;(<span class="bday dtstart published updated">2016-02-18</span>)</span></div>
+</td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;">Development status</th>
+<td>Active</td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;">Written in</th>
+<td><a href="Java_(programming_language).html" title="Java (programming language)">Java</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Operating_system" title="Operating system">Operating system</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Unix-like" title="Unix-like">Unix-like</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/List_of_software_categories" class="mw-redirect" title="List of software categories">Type</a></th>
+<td><a href="Java_Virtual_Machine.html" class="mw-redirect" title="Java Virtual Machine">Java Virtual Machine</a>, <a href="https://en.wikipedia.org/wiki/Library_(computer_science)" class="mw-redirect" title="Library (computer science)">library</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_license" title="Software license">License</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Eclipse_Public_License" title="Eclipse Public License">Eclipse Public License</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;">Website</th>
+<td><span class="url"><a rel="nofollow" class="external text" href="http://www.jikesrvm.org/">www<wbr />.jikesrvm<wbr />.org</a></span></td>
+</tr>
+</table>
+<p><b>Jikes RVM</b> (<b>Jikes Research Virtual Machine</b>) is a mature open source <a href="https://en.wikipedia.org/wiki/Virtual_machine" title="Virtual machine">virtual machine</a> that runs Java programs. Unlike most other JVMs, it is written in <a href="Java_(programming_language).html" title="Java (programming language)">Java</a>, a style of implementation termed <a href="https://en.wikipedia.org/wiki/Metacircular_interpreter" class="mw-redirect" title="Metacircular interpreter">meta-circular</a>.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#History"><span class="tocnumber">1</span> <span class="toctext">History</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Bootstrap"><span class="tocnumber">2</span> <span class="toctext">Bootstrap</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#VM_Magic"><span class="tocnumber">3</span> <span class="toctext">VM Magic</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Memory_Management_Toolkit"><span class="tocnumber">4</span> <span class="toctext">Memory Management Toolkit</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Class_Libraries"><span class="tocnumber">5</span> <span class="toctext">Class Libraries</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Compilers"><span class="tocnumber">6</span> <span class="toctext">Compilers</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Runtime"><span class="tocnumber">7</span> <span class="toctext">Runtime</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Processors"><span class="tocnumber">8</span> <span class="toctext">Processors</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Research"><span class="tocnumber">9</span> <span class="toctext">Research</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#See_also"><span class="tocnumber">10</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#References"><span class="tocnumber">11</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#External_links"><span class="tocnumber">12</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Jikes_RVM&amp;action=edit&amp;section=1" title="Edit section: History">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li>1997 November, the Jalapeño project starts as an internal research project at <a href="https://en.wikipedia.org/wiki/IBM" title="IBM">IBM</a>'s Thomas J. Watson Research Center.</li>
+<li>1999, 2000, research papers describing novel aspects of Jikes RVM are published by IBM researchers and several universities are given access to the source code.</li>
+<li>2001 October, Jikes RVM version 2 is released as an open source project under the <a href="https://en.wikipedia.org/wiki/Common_Public_License" title="Common Public License">Common Public License</a>. The release supports PowerPC and Intel architectures and a range of different <a href="https://en.wikipedia.org/wiki/Garbage_collection_(computer_science)" title="Garbage collection (computer science)">garbage collection</a> algorithms.</li>
+<li>2002, Jikes RVM 2.2 is released with the precise garbage collectors now refactored into the popular <i>Memory Management Toolkit</i> precise garbage collectors.</li>
+<li>2004, Jikes RVM 2.4 is released with increased stability and performance partly, particular focus was made of running eclipse.</li>
+<li>2007, Jikes RVM 2.9 development starts with the code base extensively refactored to use features of Java 5.0 and to use an ant build system.</li>
+<li>2008, Jikes RVM 3.0 released marking the end of 2.9 development and new stability in the code base.</li>
+<li>2009, Jikes RVM 3.1 released under the <a href="https://en.wikipedia.org/wiki/Eclipse_Public_License" title="Eclipse Public License">Eclipse Public License</a> (EPL) with significant improvements over the performance of version 3.0.1 and a switch to native threading.</li>
+<li>2012, Jikes RVM wins the ACM <a href="https://en.wikipedia.org/wiki/SIGPLAN" title="SIGPLAN">SIGPLAN</a> Software award, cited for its "high quality and modular design." <sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[1]</a></sup></li>
+</ul>
+<h2><span class="mw-headline" id="Bootstrap">Bootstrap</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Jikes_RVM&amp;action=edit&amp;section=2" title="Edit section: Bootstrap">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Being <a href="https://en.wikipedia.org/wiki/Metacircular_interpreter" class="mw-redirect" title="Metacircular interpreter">meta-circular</a> Jikes RVM requires a bootstrap JVM to run upon to create a boot image. The boot image is a view of the objects Jikes RVM requires to boot created using reflection in the bootstrap JVM. A small <a href="https://en.wikipedia.org/wiki/C_(programming_language)" title="C (programming language)">C</a> loader is responsible for loading the boot image at runtime.</p>
+<h2><span class="mw-headline" id="VM_Magic">VM Magic</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Jikes_RVM&amp;action=edit&amp;section=3" title="Edit section: VM Magic">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>VM Magic is where the compiler generates different code for a class than the bytecodes within that class should perform. VM Magic classes allow direct access to memory and are key to the Memory Management Toolkits performance. The VM Magic classes reside in the <i>org.vmmagic</i> package and have been reused in other Java projects.</p>
+<h2><span class="mw-headline" id="Memory_Management_Toolkit">Memory Management Toolkit</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Jikes_RVM&amp;action=edit&amp;section=4" title="Edit section: Memory Management Toolkit">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The Memory Management Toolkit (MMTk) is a collection of precise garbage collectors that have been used within Jikes RVM and other projects such as the <a href="https://en.wikipedia.org/wiki/Singularity_(operating_system)" title="Singularity (operating system)">Singularity</a> operating system and the <a href="https://en.wikipedia.org/wiki/Rotor_(software_project)" class="mw-redirect" title="Rotor (software project)">Rotor</a> software project.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">[2]</a></sup> As with the rest of the Jikes RVM the implementation is in <a href="Java_(programming_language).html" title="Java (programming language)">Java</a>, but the main dependence is on VM Magic.</p>
+<h2><span class="mw-headline" id="Class_Libraries">Class Libraries</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Jikes_RVM&amp;action=edit&amp;section=5" title="Edit section: Class Libraries">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Either <a href="Apache_Harmony.html" title="Apache Harmony">Apache Harmony</a> or <a href="GNU_Classpath.html" title="GNU Classpath">GNU Classpath</a> class libraries can be used with Jikes RVM, with experimental support for <a href="OpenJDK.html" title="OpenJDK">OpenJDK</a>'s class library.</p>
+<h2><span class="mw-headline" id="Compilers">Compilers</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Jikes_RVM&amp;action=edit&amp;section=6" title="Edit section: Compilers">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Jikes RVM uses a fast baseline compiler to quickly generate code for a particular architecture. Adaptive compilation then recompiles code with an optimizing compiler with features such as on-stack replacement (OSR). The adaptive compilation system uses a cost-benefit analysis model.</p>
+<h2><span class="mw-headline" id="Runtime">Runtime</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Jikes_RVM&amp;action=edit&amp;section=7" title="Edit section: Runtime">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Jikes RVM's runtime has many innovative features including mechanisms for fast locking, a collaborative scheduling mechanism and support for fast exception gathering and dispatch.</p>
+<h2><span class="mw-headline" id="Processors">Processors</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Jikes_RVM&amp;action=edit&amp;section=8" title="Edit section: Processors">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The <a href="https://en.wikipedia.org/wiki/PowerPC" title="PowerPC">PowerPC</a> (or ppc) and <a href="https://en.wikipedia.org/wiki/IA-32" title="IA-32">IA-32</a> (or Intel x86, 32-bit) <a href="https://en.wikipedia.org/wiki/Instruction_set" title="Instruction set">instruction set</a> architectures are supported by Jikes RVM.</p>
+<h2><span class="mw-headline" id="Research">Research</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Jikes_RVM&amp;action=edit&amp;section=9" title="Edit section: Research">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Since it is a research project, the emphasis of Jikes RVM is on researching new technologies, as is apparent from the scientific publications it has spawned -- over 220 papers as of 2015.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">[3]</a></sup></p>
+<p>Jikes RVM has also participated in the <a href="https://en.wikipedia.org/wiki/Google_Summer_of_Code" title="Google Summer of Code">Google Summer of Code</a> 2007, 2008, 2010, 2011 and 2012.</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Jikes_RVM&amp;action=edit&amp;section=10" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div role="navigation" aria-label="Portals" class="noprint portal plainlist tright" style="margin:0.5em 0 0.5em 1em;border:solid #aaa 1px">
+<ul style="display:table;box-sizing:border-box;padding:0.1em;max-width:175px;background:#f9f9f9;font-size:85%;line-height:110%;font-style:italic;font-weight:bold">
+<li style="display:table-row"><span style="display:table-cell;padding:0.2em;vertical-align:middle;text-align:center"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_(2009).svg/28px-Free_and_open-source_software_logo_(2009).svg.png" width="28" height="28" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/42px-Free_and_open-source_software_logo_%282009%29.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/56px-Free_and_open-source_software_logo_%282009%29.svg.png 2x" data-file-width="512" data-file-height="512" /></span><span style="display:table-cell;padding:0.2em 0.2em 0.2em 0.3em;vertical-align:middle"><a href="https://en.wikipedia.org/wiki/Portal:Free_software" class="mw-redirect" title="Portal:Free software">Free software portal</a></span></li>
+<li style="display:table-row"><span style="display:table-cell;padding:0.2em;vertical-align:middle;text-align:center"><a href="https://en.wikipedia.org/wiki/File:Wave.svg" class="image"><img alt="icon" src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/15px-Wave.svg.png" width="15" height="28" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/23px-Wave.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/31px-Wave.svg.png 2x" data-file-width="226" data-file-height="407" /></a></span><span style="display:table-cell;padding:0.2em 0.2em 0.2em 0.3em;vertical-align:middle"><a href="https://en.wikipedia.org/wiki/Portal:Java" title="Portal:Java">Java portal</a></span></li>
+</ul>
+</div>
+<ul>
+<li><a href="Jikes.html" title="Jikes">Jikes</a></li>
+<li><a href="List_of_Java_virtual_machines.html" title="List of Java virtual machines">List of Java virtual machines</a></li>
+<li><a href="Free_Java_implementations.html" title="Free Java implementations">Free Java implementations</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Bootstrapping_(compilers)" title="Bootstrapping (compilers)">Bootstrapping (compilers)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Self-hosting" title="Self-hosting">Self-hosting</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Self-interpreter" class="mw-redirect" title="Self-interpreter">Self-interpreter</a></li>
+<li><a href="https://en.wikipedia.org/wiki/PyPy" title="PyPy">PyPy</a> (Python implementation in Python)</li>
+<li><a href="https://en.wikipedia.org/wiki/Rubinius" title="Rubinius">Rubinius</a> (Ruby implementation in Ruby)</li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Jikes_RVM&amp;action=edit&amp;section=11" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://www.sigplan.org/awards/software/2012">http://www.sigplan.org/awards/software/2012</a></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.jikesrvm.org/Project+Proposals+2009">Jikes RVM Project Proposals 2009</a></span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.jikesrvm.org/Resources/Publications/">"Jikes RVM research papers"</a></span></li>
+</ol>
+</div>
+<p><i>The Jikes Research Virtual Machine project: Building an open-source research community</i>, IBM Systems Journal, Vol 44, No 2, 2005. <a rel="nofollow" class="external free" href="http://www.research.ibm.com/journal/sj/442/alpern.pdf">http://www.research.ibm.com/journal/sj/442/alpern.pdf</a></p>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Jikes_RVM&amp;action=edit&amp;section=12" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><span class="official-website"><span class="url"><a rel="nofollow" class="external text" href="http://jikesrvm.org/">Official website</a></span></span></li>
+<li><a rel="nofollow" class="external text" href="http://sourceforge.net/projects/jikesrvm/">Jikes RVM project page on SourceForge</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.dacapobench.org/">DaCapo Benchmarks</a></li>
+<li><a rel="nofollow" class="external text" href="http://wala.sourceforge.net/">WALA</a></li>
+<li><a rel="nofollow" class="external text" href="http://pearcolator.sourceforge.net/">PearColator</a></li>
+</ul>
+<div role="navigation" class="navbox" aria-labelledby="Java_virtual_machines_.28comparison.29" style="padding:3px">
+<table class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="https://en.wikipedia.org/wiki/Template:Java_Virtual_Machine" title="Template:Java Virtual Machine"><abbr title="View this template" style=";;background:none transparent;border:none;">v</abbr></a></li>
+<li class="nv-talk"><a href="https://en.wikipedia.org/wiki/Template_talk:Java_Virtual_Machine" title="Template talk:Java Virtual Machine"><abbr title="Discuss this template" style=";;background:none transparent;border:none;">t</abbr></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Java_Virtual_Machine&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;">e</abbr></a></li>
+</ul>
+</div>
+<div id="Java_virtual_machines_.28comparison.29" style="font-size:114%"><a href="https://en.wikipedia.org/wiki/Java_virtual_machine" title="Java virtual machine">Java virtual machines</a> (<a href="https://en.wikipedia.org/wiki/Comparison_of_Java_virtual_machines" title="Comparison of Java virtual machines">comparison</a>)</div>
+</th>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Sun/Oracle</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="HotSpot.html" title="HotSpot">HotSpot</a></li>
+<li><a href="K_virtual_machine.html" title="K virtual machine">KVM</a></li>
+<li><a href="OpenJDK.html" title="OpenJDK">OpenJDK</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Maxine_Virtual_Machine" title="Maxine Virtual Machine">Maxine VM</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Major implementations</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Excelsior_JET.html" title="Excelsior JET">Excelsior JET</a></li>
+<li><a href="JamVM.html" title="JamVM">JamVM</a></li>
+<li><strong class="selflink">Jikes RVM</strong></li>
+<li><a href="IKVM.html" title="IKVM.NET">IKVM.NET</a></li>
+<li><a href="IBM_J9.html" title="IBM J9">IBM J9</a></li>
+<li><a href="JRockit.html" title="JRockit">JRockit</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Embedded</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Excelsior_JET.html" title="Excelsior JET">Excelsior JET Embedded</a></li>
+<li><a href="https://en.wikipedia.org/wiki/JamaicaVM" title="JamaicaVM">JamaicaVM</a></li>
+<li><a href="Mika_VM.html" title="Mika VM">Mika VM</a></li>
+<li><a href="Mysaifu_JVM.html" title="Mysaifu JVM">Mysaifu</a></li>
+<li><a href="Squawk_virtual_machine.html" title="Squawk virtual machine">Squawk (Sun)</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Others</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="CACAO.html" title="CACAO">CACAO</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Dalvik_(software)" title="Dalvik (software)">Dalvik</a></li>
+<li><a href="JX_(operating_system).html" title="JX (operating system)">JX</a></li>
+<li><i><a href="List_of_Java_virtual_machines.html" title="List of Java virtual machines">more…</a></i></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Discontinued</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Apache_Harmony.html" title="Apache Harmony">Apache Harmony</a></li>
+<li><a href="GNU_Compiler_for_Java.html" title="GNU Compiler for Java">GCJ</a></li>
+<li><a href="Kaffe.html" title="Kaffe">Kaffe</a></li>
+<li><a href="Microsoft_Java_Virtual_Machine.html" title="Microsoft Java Virtual Machine">Microsoft JVM</a></li>
+<li><a href="SableVM.html" title="SableVM">SableVM</a></li>
+<li><a href="Jupiter_JVM.html" title="Jupiter JVM">Jupiter</a></li>
+<li><i><a href="https://en.wikipedia.org/wiki/Category:Discontinued_Java_virtual_machines" title="Category:Discontinued Java virtual machines">more…</a></i></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1211
+Cached time: 20161231023547
+Cache expiry: 2592000
+Dynamic content: false
+CPU time usage: 0.120 seconds
+Real time usage: 0.176 seconds
+Preprocessor visited node count: 786/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 22913/2097152 bytes
+Template argument size: 1255/2097152 bytes
+Highest expansion depth: 25/40
+Expensive parser function count: 3/500
+Lua time usage: 0.052/10.000 seconds
+Lua memory usage: 1.74 MB/50 MB
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  147.204      1 - -total
+ 57.88%   85.203      2 - Template:Infobox
+ 43.94%   64.685      1 - Template:Infobox_software
+ 19.87%   29.255      1 - Template:Primary_sources
+ 19.63%   28.889      1 - Template:Infobox_software/simple
+ 17.08%   25.139      1 - Template:Ambox
+ 12.91%   19.008      1 - Template:Distinguish
+  9.54%   14.037      1 - Template:Start_date_and_age
+  7.25%   10.667      1 - Template:Official_website
+  5.89%    8.673      1 - Template:Portal
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:2078427-0!*!0!!en!4!* and timestamp 20161231023546 and revision id 740524460
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Jikes_RVM&amp;oldid=740524460">https://en.wikipedia.org/w/index.php?title=Jikes_RVM&amp;oldid=740524460</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Help_Category.html" title="Help:Category">Categories</a>: <ul><li><a href="Category_Java_virtual_machine.html" title="Category:Java virtual machine">Java virtual machine</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Stack-based_virtual_machines" title="Category:Stack-based virtual machines">Stack-based virtual machines</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Software_using_the_Eclipse_license" title="Category:Software using the Eclipse license">Software using the Eclipse license</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Articles_lacking_reliable_references_from_September_2016" title="Category:Articles lacking reliable references from September 2016">Articles lacking reliable references from September 2016</a></li><li><a href="https://en.wikipedia.org/wiki/Category:All_articles_lacking_reliable_references" title="Category:All articles lacking reliable references">All articles lacking reliable references</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="Special_MyTalk.html" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="Special_MyContributions.html" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&amp;returnto=Jikes+RVM" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Jikes+RVM" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="https://en.wikipedia.org/wiki/Jikes_RVM"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+															<li  id="ca-talk"><span><a href="https://en.wikipedia.org/wiki/Talk:Jikes_RVM"  title="Discussion about the content page [t]" accesskey="t" rel="discussion">Talk</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="https://en.wikipedia.org/wiki/Jikes_RVM" >Read</a></span></li>
+															<li id="ca-edit"><span><a href="https://en.wikipedia.org/w/index.php?title=Jikes_RVM&amp;action=edit"  title="Edit this page [e]" accesskey="e">Edit</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="https://en.wikipedia.org/w/index.php?title=Jikes_RVM&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="https://en.wikipedia.org/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="Main_Page.html"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="Portal_Contents.html" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="Portal_Featured_content.html" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="Portal_Current_events.html" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="https://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="../../shop.wikimedia.org/index.html" title="Visit the Wikipedia store">Wikipedia store</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Interaction</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-help"><a href="Help_Contents.html" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="Wikipedia_About.html" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="Wikipedia_Community_portal.html" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="Wikipedia_Contact_us.html" title="How to contact Wikipedia">Contact page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="https://en.wikipedia.org/wiki/Special:WhatLinksHere/Jikes_RVM" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://en.wikipedia.org/wiki/Special:RecentChangesLinked/Jikes_RVM" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="Wikipedia_File_Upload_Wizard.html" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="https://en.wikipedia.org/w/index.php?title=Jikes_RVM&amp;oldid=740524460" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://en.wikipedia.org/w/index.php?title=Jikes_RVM&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q6192594" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="https://en.wikipedia.org/w/index.php?title=Special:CiteThisPage&amp;page=Jikes_RVM&amp;id=740524460" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Print/export</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Jikes+RVM">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Jikes+RVM&amp;returnto=Jikes+RVM&amp;oldid=740524460&amp;writer=rdf2latex">Download as PDF</a></li><li id="t-print"><a href="https://en.wikipedia.org/w/index.php?title=Jikes_RVM&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Languages</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/Jikes研究虚拟机" title="Jikes研究虚拟机 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q6192594#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 21 September 2016, at 16:12.</li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="Wikipedia_Text_of_Creative_Commons_Attribution-ShareAlike_3.html">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="../../creativecommons.org/licenses/by-sa/3.0/index.html" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="../../wikimediafoundation.org/wiki/Terms_of_Use.html">Terms of Use</a> and <a href="../../wikimediafoundation.org/wiki/Privacy_policy.html">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="../../www.wikimediafoundation.org/index.html">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../../wikimediafoundation.org/wiki/Privacy_policy.html" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="Wikipedia_About.html" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="Wikipedia_General_disclaimer.html" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="Wikipedia_Contact_us.html">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a href="../../www.mediawiki.org/wiki/Special_MyLanguage/How_to_contribute.html">Developers</a></li>
+											<li id="footer-places-cookiestatement"><a href="../../wikimediafoundation.org/wiki/Cookie_statement.html">Cookie statement</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/w/index.php?title=Jikes_RVM&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="../../www.wikimediafoundation.org/index.html"><img src="https://en.wikipedia.org/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="../../www.mediawiki.org/index.html"><img src="https://en.wikipedia.org/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":73,"wgHostname":"mw1261"});});</script>
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/JikesRVM by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:39 GMT -->
+</html>

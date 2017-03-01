@@ -1,0 +1,4 @@
+    
+        I have a method that's about 10 lines of code.  I want to create more methods that do the exact same thing except for a calculation that's going to change one line of code.  This is a perfect application for passing in a function pointer to replace that one line, but Java doesn't have function pointers.  What's my best alternative?
+
+                

@@ -1,0 +1,4 @@
+    
+        I know the APIs are very different, but is there any functional difference between the built-in JavaScript stuff and the Rhino builds obtainable from Mozilla?
+
+                

@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Immutable_object by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:10 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Immutable object - Wikipedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Immutable_object","wgTitle":"Immutable object","wgCurRevisionId":747411976,"wgRevisionId":747411976,"wgArticleId":197824,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles needing additional references from February 2011","All articles needing additional references","Articles with example C++ code","Articles with example Java code","Articles with example Perl code","Articles with example Python code","Object (computer science)","Functional programming","Articles with example Racket code","Functional data structures"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Immutable_object","wgRelevantArticleId":197824,"wgRequestId":"WHACAQpAMFkAAK1lcTUAAABJ","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgFlaggedRevsParams":{"tags":{}},"wgStableRevisionId":null,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"en","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgWikibaseItemId":"Q23828","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.cite.styles":"ready","ext.pygments":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@1dqfd7l",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["ext.cite.a11y","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.legacy.wikibits","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.watchlist-notice","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.gadget.featured-articles-links","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.interface","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="https://en.wikipedia.org/w/load.php?debug=false&amp;lang=en&amp;modules=ext.cite.styles%7Cext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="../w/load2c8d.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../w/load18b6.css?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.29.0-wmf.7"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="https://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Immutable_object"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Immutable_object&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Immutable_object&amp;action=edit"/>
+<link rel="apple-touch-icon" href="https://en.wikipedia.org/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="../static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../w/api251f.php?action=rsd"/>
+<link rel="copyright" href="../../creativecommons.org/licenses/by-sa/3.0/index.html"/>
+<link rel="canonical" href="Immutable_object.html"/>
+<link rel="dns-prefetch" href="../../login.wikimedia.org/index.html"/>
+<link rel="dns-prefetch" href="../../meta.wikimedia.org/index.html" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Immutable_object rootpage-Immutable_object skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">Immutable object</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><script>function mfTempOpenSection(id){var block=document.getElementById("mf-section-"+id);block.className+=" open-block";block.previousSibling.className+=" open-block";}</script><div role="note" class="hatnote">"Immutable" and "Immutability" redirect here. For the Christian doctrine, see <a href="https://en.wikipedia.org/wiki/Immutability_(theology)" title="Immutability (theology)">Immutability (theology)</a>.</div>
+<table class="plainlinks metadata ambox ambox-content ambox-Refimprove" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px"><a href="https://en.wikipedia.org/wiki/File:Question_book-new.svg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/50px-Question_book-new.svg.png" width="50" height="39" srcset="//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/75px-Question_book-new.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/100px-Question_book-new.svg.png 2x" data-file-width="512" data-file-height="399" /></a></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article <b>needs additional citations for <a href="https://en.wikipedia.org/wiki/Wikipedia:Verifiability" title="Wikipedia:Verifiability">verification</a></b>. <span class="hide-when-compact">Please help <a class="external text" href="http://en.wikipedia.org/w/index.php?title=Immutable_object&amp;action=edit">improve this article</a> by <a href="https://en.wikipedia.org/wiki/Help:Introduction_to_referencing_with_Wiki_Markup/1" title="Help:Introduction to referencing with Wiki Markup/1">adding citations to reliable sources</a>. Unsourced material may be challenged and removed.</span> <small><i>(February 2011)</i></small> <small class="hide-when-compact"><i>(<a href="https://en.wikipedia.org/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></span></td>
+</tr>
+</table>
+<p>In <a href="https://en.wikipedia.org/wiki/Object-oriented_computer_programming" class="mw-redirect" title="Object-oriented computer programming">object-oriented</a> and <a href="https://en.wikipedia.org/wiki/Functional_programming" title="Functional programming">functional</a> programming, an <b>immutable object</b> (unchangeable<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[1]</a></sup> object) is an <a href="https://en.wikipedia.org/wiki/Object_(computer_science)" title="Object (computer science)">object</a> whose state cannot be modified after it is created.<sup id="cite_ref-Goetz_2-0" class="reference"><a href="#cite_note-Goetz-2">[2]</a></sup> This is in contrast to a <b>mutable object</b> (changeable object), which can be modified after it is created. In some cases, an object is considered immutable even if some internally used attributes change but the object's state appears to be unchanging from an external point of view. For example, an object that uses <a href="https://en.wikipedia.org/wiki/Memoization" title="Memoization">memoization</a> to cache the results of expensive computations could still be considered an immutable object.</p>
+<p>Strings and other concrete objects are typically expressed as immutable objects to improve readability and runtime efficiency in <a href="https://en.wikipedia.org/wiki/Object-oriented_programming" title="Object-oriented programming">object-oriented programming</a>. Immutable objects are also useful because they are inherently <a href="https://en.wikipedia.org/wiki/Thread_safety" title="Thread safety">thread-safe</a>.<sup id="cite_ref-Goetz_2-1" class="reference"><a href="#cite_note-Goetz-2">[2]</a></sup> Other benefits are that they are simpler to understand and reason about and offer higher security than mutable objects.<sup id="cite_ref-Goetz_2-2" class="reference"><a href="#cite_note-Goetz-2">[2]</a></sup></p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Concepts"><span class="tocnumber">1</span> <span class="toctext">Concepts</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Immutable_variables"><span class="tocnumber">1.1</span> <span class="toctext">Immutable variables</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Weak_vs_strong_immutability"><span class="tocnumber">1.2</span> <span class="toctext">Weak vs strong immutability</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#References_to_objects"><span class="tocnumber">1.3</span> <span class="toctext">References to objects</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Copying_objects"><span class="tocnumber">1.4</span> <span class="toctext">Copying objects</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Copy-on-write"><span class="tocnumber">1.5</span> <span class="toctext">Copy-on-write</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Interning"><span class="tocnumber">1.6</span> <span class="toctext">Interning</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Thread_safety"><span class="tocnumber">1.7</span> <span class="toctext">Thread safety</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Violating_immutability"><span class="tocnumber">1.8</span> <span class="toctext">Violating immutability</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#Language-specific_details"><span class="tocnumber">2</span> <span class="toctext">Language-specific details</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#Ada"><span class="tocnumber">2.1</span> <span class="toctext">Ada</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#C.23"><span class="tocnumber">2.2</span> <span class="toctext">C#</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#C.2B.2B"><span class="tocnumber">2.3</span> <span class="toctext">C++</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#Java"><span class="tocnumber">2.4</span> <span class="toctext">Java</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#Perl"><span class="tocnumber">2.5</span> <span class="toctext">Perl</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#Python"><span class="tocnumber">2.6</span> <span class="toctext">Python</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#JavaScript"><span class="tocnumber">2.7</span> <span class="toctext">JavaScript</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#Racket"><span class="tocnumber">2.8</span> <span class="toctext">Racket</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#Scala"><span class="tocnumber">2.9</span> <span class="toctext">Scala</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-20"><a href="#See_also"><span class="tocnumber">3</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-21"><a href="#References"><span class="tocnumber">4</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-22"><a href="#External_links"><span class="tocnumber">5</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Concepts">Concepts</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Immutable_object&amp;action=edit&amp;section=1" title="Edit section: Concepts">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Immutable_variables">Immutable variables</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Immutable_object&amp;action=edit&amp;section=2" title="Edit section: Immutable variables">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>In <a href="https://en.wikipedia.org/wiki/Imperative_programming" title="Imperative programming">imperative programming</a>, values held in <a href="https://en.wikipedia.org/wiki/Program_variable" class="mw-redirect" title="Program variable">program variables</a> whose content never changes are known as <i><a href="https://en.wikipedia.org/wiki/Constant_(programming)" class="mw-redirect" title="Constant (programming)">constants</a></i> to differentiate them from variables that could be altered during execution. Examples might include conversion factors from kilogram weights to pounds or the value of <a href="https://en.wikipedia.org/wiki/Pi" title="Pi">Pi</a> to several decimal places.</p>
+<h3><span class="mw-headline" id="Weak_vs_strong_immutability">Weak vs strong immutability</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Immutable_object&amp;action=edit&amp;section=3" title="Edit section: Weak vs strong immutability">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Sometimes, one talks of certain <i>fields</i> of an object being immutable. This means that there is no way to change those parts of the object state, even though other parts of the object may be changeable (<i>weakly immutable</i>). If all fields are immutable, then the object is immutable. If the whole object cannot be extended by another class, the object is called <i>strongly immutable</i>.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">[3]</a></sup> This might, for example, help to explicitly enforce certain invariants about certain data in the object staying the same through the lifetime of the object. In some languages, this is done with a keyword (e.g. <code>const</code> in <a href="https://en.wikipedia.org/wiki/C++" title="C++">C++</a>, <code>final</code> in <a href="Java_(programming_language).html" title="Java (programming language)">Java</a>) that designates the field to be immutable. In some languages, it is reversed: in <a href="https://en.wikipedia.org/wiki/OCaml" title="OCaml">OCaml</a>, fields of an object or record are by default immutable and need to be explicitly marked with <code>mutable</code> to be so.</p>
+<h3><span class="mw-headline" id="References_to_objects">References to objects</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Immutable_object&amp;action=edit&amp;section=4" title="Edit section: References to objects">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>In most <a href="https://en.wikipedia.org/wiki/Object-oriented_programming_language" class="mw-redirect" title="Object-oriented programming language">object-oriented languages</a>, objects can be referred to using <a href="https://en.wikipedia.org/wiki/Reference_(computer_science)" title="Reference (computer science)">references</a>. Some examples of such languages are <a href="Java_(programming_language).html" title="Java (programming language)">Java</a>, <a href="https://en.wikipedia.org/wiki/C++" title="C++">C++</a>, <a href="https://en.wikipedia.org/wiki/C_Sharp_(programming_language)" title="C Sharp (programming language)">C#</a>, <a href="https://en.wikipedia.org/wiki/VB.NET" class="mw-redirect" title="VB.NET">VB.NET</a>, and many <a href="https://en.wikipedia.org/wiki/Scripting_language" title="Scripting language">scripting languages</a>, such as <a href="https://en.wikipedia.org/wiki/Python_(programming_language)" title="Python (programming language)">Python</a> and <a href="https://en.wikipedia.org/wiki/Ruby_programming_language" class="mw-redirect" title="Ruby programming language">Ruby</a>. In this case, it matters whether the state of an object can vary when objects are shared via references.</p>
+<h3><span class="mw-headline" id="Copying_objects">Copying objects</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Immutable_object&amp;action=edit&amp;section=5" title="Edit section: Copying objects">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>If an object is known to be immutable, it can be copied simply by making a copy of a <a href="https://en.wikipedia.org/wiki/Reference_(computer_science)" title="Reference (computer science)">reference</a> to it instead of copying the entire object. Because a reference (typically only the size of a <a href="https://en.wikipedia.org/wiki/Pointer_(computer_programming)" title="Pointer (computer programming)">pointer</a>) is usually much smaller than the object itself, this results in memory savings and a potential boost in execution speed.</p>
+<p>The reference copying technique is much more difficult to use for mutable objects, because if any user of a reference to a mutable object changes it, all other users of that reference will see the change. If this is not the intended effect, it can be difficult to notify the other users to have them respond correctly. In these situations, <a href="https://en.wikipedia.org/wiki/Defensive_copy" class="mw-redirect" title="Defensive copy">defensive copying</a> of the entire object rather than the reference is usually an easy but costly solution. The <a href="Observer_pattern.html" title="Observer pattern">observer pattern</a> is an alternative technique for handling changes to mutable objects.</p>
+<h3><span class="mw-headline" id="Copy-on-write">Copy-on-write</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Immutable_object&amp;action=edit&amp;section=6" title="Edit section: Copy-on-write">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>A technique that blends the advantages of <b>mutable</b> and <b>immutable</b> objects, and is supported directly in almost all modern hardware, is <a href="https://en.wikipedia.org/wiki/Copy-on-write" title="Copy-on-write">copy-on-write</a> (COW). Using this technique, when a user asks the system to copy an object, it will instead merely create a new reference that still points to the same object. As soon as a user attempts to modify the object through a particular reference, the system makes a real copy, applies the modification to that, and sets the reference to refer to the new copy. The other users are unaffected, because they still refer to the original object. Therefore, under COW, all users appear to have a mutable version of their objects, although in the case that users do not modify their objects, the space-saving and speed advantages of immutable objects are preserved. Copy-on-write is popular in <a href="https://en.wikipedia.org/wiki/Virtual_memory" title="Virtual memory">virtual memory</a> systems because it allows them to save memory space while still correctly handling anything an application program might do.</p>
+<h3><span class="mw-headline" id="Interning">Interning</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Immutable_object&amp;action=edit&amp;section=7" title="Edit section: Interning">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The practice of always using references in place of copies of equal objects is known as <i><a href="https://en.wikipedia.org/wiki/Intern_(computer_science)" class="mw-redirect" title="Intern (computer science)">interning</a></i>. If interning is used, two objects are considered equal if and only if their references, typically represented as integers, are equal. Some languages do this automatically: for example, <a href="https://en.wikipedia.org/wiki/Python_(programming_language)" title="Python (programming language)">Python</a> automatically <a href="https://en.wikipedia.org/wiki/String_intern_pool" class="mw-redirect" title="String intern pool">interns short strings</a>. If the algorithm that implements interning is guaranteed to do so in every case that it is possible, then comparing objects for equality is reduced to comparing their pointers – a substantial gain in speed in most applications. (Even if the algorithm is not guaranteed to be comprehensive, there still exists the possibility of a <a href="https://en.wikipedia.org/wiki/Fast_path" title="Fast path">fast path</a> case improvement when the objects are equal and use the same reference.) Interning is generally only useful for immutable objects.</p>
+<h3><span class="mw-headline" id="Thread_safety">Thread safety</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Immutable_object&amp;action=edit&amp;section=8" title="Edit section: Thread safety">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Immutable objects can be useful in multi-threaded applications. Multiple threads can act on data represented by immutable objects without concern of the data being changed by other threads. Immutable objects are therefore considered to be more <i><a href="https://en.wikipedia.org/wiki/Thread-safe" class="mw-redirect" title="Thread-safe">thread-safe</a></i> than mutable objects.</p>
+<h3><span class="mw-headline" id="Violating_immutability">Violating immutability</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Immutable_object&amp;action=edit&amp;section=9" title="Edit section: Violating immutability">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Immutability does not imply that the object as stored in the computer's <a href="https://en.wikipedia.org/wiki/Computer_storage" class="mw-redirect" title="Computer storage">memory</a> is unwriteable. Rather, immutability is a <a href="https://en.wikipedia.org/wiki/Compile-time" class="mw-redirect" title="Compile-time">compile-time</a> construct that indicates what a programmer can do through the normal interface of the object, not necessarily what they can absolutely do (for instance, by circumventing the type system or violating <a href="https://en.wikipedia.org/wiki/Const_correctness" class="mw-redirect" title="Const correctness">const correctness</a> in <a href="https://en.wikipedia.org/wiki/C_(programming_language)" title="C (programming language)">C</a> or <a href="https://en.wikipedia.org/wiki/C++" title="C++">C++</a>).</p>
+<h2><span class="mw-headline" id="Language-specific_details">Language-specific details</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Immutable_object&amp;action=edit&amp;section=10" title="Edit section: Language-specific details">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>In <a href="https://en.wikipedia.org/wiki/Python_(programming_language)" title="Python (programming language)">Python</a>, <a href="Java_(programming_language).html" title="Java (programming language)">Java</a> and the <a href="https://en.wikipedia.org/wiki/.NET_Framework" title=".NET Framework">.NET Framework</a>, strings are immutable objects. Both Java and the .NET Framework have mutable versions of string. In Java these are <code><a href="https://en.wikipedia.org/wiki/StringBuffer" class="mw-redirect" title="StringBuffer">StringBuffer</a></code> and <code><a href="https://en.wikipedia.org/wiki/StringBuilder" class="mw-redirect" title="StringBuilder">StringBuilder</a></code> (mutable versions of Java <code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html">String</a></code>) and in .NET this is <code><a rel="nofollow" class="external text" href="http://msdn2.microsoft.com/en-us/library/system.text.stringbuilder.aspx">StringBuilder</a></code> (mutable version of .Net <code><a rel="nofollow" class="external text" href="http://msdn2.microsoft.com/en-us/library/system.string.aspx">String</a></code>). <a href="https://en.wikipedia.org/wiki/Python_3" class="mw-redirect" title="Python 3">Python 3</a> has a mutable string (bytes) variant, named <code>bytearray</code>.<a rel="nofollow" class="external autonumber" href="https://docs.python.org/release/3.0/library/functions.html#bytearray">[1]</a></p>
+<p>Additionally, all of the <a href="Primitive_wrapper_class.html" title="Primitive wrapper class">primitive wrapper classes</a> in Java are immutable.</p>
+<p>Similar patterns are the <a href="https://en.wikipedia.org/wiki/Immutable_interface" title="Immutable interface">Immutable Interface</a> and <a href="https://en.wikipedia.org/w/index.php?title=Immutable_Wrapper&amp;action=edit&amp;redlink=1" class="new" title="Immutable Wrapper (page does not exist)">Immutable Wrapper</a>.</p>
+<p>In pure <a href="https://en.wikipedia.org/wiki/Functional_programming" title="Functional programming">functional programming</a> languages it is not possible to create mutable objects without extending the language (e.g. via a mutable references library or a <a href="https://en.wikipedia.org/wiki/Foreign_function_interface" title="Foreign function interface">foreign function interface</a>), so all objects are immutable.</p>
+<h3><span class="mw-headline" id="Ada">Ada</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Immutable_object&amp;action=edit&amp;section=11" title="Edit section: Ada">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>In <a href="https://en.wikipedia.org/wiki/Ada_(programming_language)" title="Ada (programming language)">Ada</a>, any object is declared either <i>variable</i> (i.e. mutable; typically the implicit default), or <code>constant</code> (i.e. immutable) via the <code>constant</code> keyword.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+  <span class="kd">type</span> <span class="kt">Some_type</span> <span class="kr">is</span> <span class="kr">new</span> <span class="kt">Integer</span><span class="p">;</span> <span class="c1">-- could be anything more complicated</span>
+  <span class="no">x</span><span class="p">:</span> <span class="kr">constant</span> <span class="n">Some_type</span><span class="p">:=</span> <span class="mi">1</span><span class="p">;</span> <span class="c1">-- immutable</span>
+  <span class="n">y</span><span class="p">:</span> <span class="n">Some_type</span><span class="p">;</span> <span class="c1">-- mutable</span>
+</pre></div>
+<p>Subprogram parameters are immutable in the <i>in</i> mode, and mutable in the <i>in out</i> and <i>out</i> modes.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+  <span class="kd">procedure</span> <span class="nf">Do_it</span><span class="p">(</span><span class="nv">a</span><span class="p">: </span><span class="nv">in</span> <span class="nv">Integer</span><span class="p">;</span> <span class="nv">b</span><span class="p">: </span><span class="nv">in</span> <span class="nv">out</span> <span class="nv">Integer</span><span class="p">;</span> <span class="nv">c</span><span class="p">: </span><span class="nv">out</span> <span class="nv">Integer</span><span class="p">)</span> <span class="kr">is</span>
+  <span class="kr">begin</span>
+    <span class="c1">-- a is immutable</span>
+    <span class="n">b</span><span class="p">:=</span> <span class="n">b</span> <span class="o">+</span> <span class="n">a</span><span class="p">;</span>
+    <span class="n">c</span><span class="p">:=</span> <span class="n">a</span><span class="p">;</span>
+  <span class="kr">end</span> <span class="nf">Do_it</span><span class="p">;</span>
+</pre></div>
+<h3><span class="mw-headline" id="C.23">C#</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Immutable_object&amp;action=edit&amp;section=12" title="Edit section: C#">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>In <a href="https://en.wikipedia.org/wiki/C_Sharp_(programming_language)" title="C Sharp (programming language)">C#</a> you can enforce immutability of the fields of a class with the <code>readonly</code> statement. By enforcing all the fields to be immutable, you will obtain an immutable type.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="k">class</span> <span class="nc">AnImmutableType</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">readonly</span> <span class="kt">double</span> <span class="n">_value</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nf">AnImmutableType</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">)</span> 
+    <span class="p">{</span> 
+      <span class="n">_value</span> <span class="p">=</span> <span class="n">x</span><span class="p">;</span> 
+    <span class="p">}</span>
+    <span class="k">public</span> <span class="n">AnImmutableType</span> <span class="nf">Square</span><span class="p">()</span> 
+    <span class="p">{</span> 
+      <span class="k">return</span> <span class="k">new</span> <span class="nf">AnImmutableType</span><span class="p">(</span><span class="n">_value</span><span class="p">*</span><span class="n">_value</span><span class="p">);</span> 
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+<h3><span class="mw-headline" id="C.2B.2B">C++</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Immutable_object&amp;action=edit&amp;section=13" title="Edit section: C++">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>In C++, a <a href="https://en.wikipedia.org/wiki/Const-correctness" class="mw-redirect" title="Const-correctness">const-correct</a> implementation of <code>Cart</code> would allow the user to declare new instances of the class as either <code>const</code> (immutable) or mutable, as desired, by providing two different versions of the <code>getItems()</code> method. (Notice that in C++ it is not necessary — and in fact impossible — to provide a specialized constructor for <code>const</code> instances.)</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="k">class</span> <span class="nc">Cart</span> <span class="p">{</span>
+  <span class="k">private</span><span class="o">:</span>
+   <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">items</span><span class="p">;</span>
+
+  <span class="k">public</span><span class="o">:</span>
+   <span class="n">Cart</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">v</span><span class="p">)</span><span class="o">:</span> <span class="n">items</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
+
+   <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">getItems</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="n">items</span><span class="p">;</span> <span class="p">}</span>
+   <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">getItems</span><span class="p">()</span> <span class="k">const</span> <span class="p">{</span> <span class="k">return</span> <span class="n">items</span><span class="p">;</span> <span class="p">}</span>
+   <span class="kt">int</span> <span class="n">total</span><span class="p">()</span> <span class="k">const</span> <span class="p">{</span> <span class="cm">/* return sum of the prices */</span> <span class="p">}</span>
+ <span class="p">};</span>
+</pre></div>
+<p>Note that, if there were a field that is a pointer or reference to another object, then it might still be possible to mutate the object pointed to by such a pointer or reference within a const method, without violating const-correctness. It can be argued that in such a case the object is not really immutable.</p>
+<p>C++ also provides abstract (as opposed to bitwise) immutability via the <code>mutable</code> keyword, which allows a member variable to be changed from within a <code>const</code> method.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="k">class</span> <span class="nc">Cart</span> <span class="p">{</span>
+  <span class="k">private</span><span class="o">:</span>
+   <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">items</span><span class="p">;</span>
+   <span class="k">mutable</span> <span class="kt">int</span>    <span class="n">costInCents</span><span class="p">;</span>
+   <span class="k">mutable</span> <span class="kt">bool</span>   <span class="n">totaled</span><span class="p">;</span>
+
+  <span class="k">public</span><span class="o">:</span>
+   <span class="n">Cart</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">v</span><span class="p">)</span><span class="o">:</span> <span class="n">items</span><span class="p">(</span><span class="n">v</span><span class="p">),</span> <span class="n">totaled</span><span class="p">(</span><span class="nb">false</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
+
+   <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">getItems</span><span class="p">()</span> <span class="k">const</span> <span class="p">{</span> <span class="k">return</span> <span class="n">items</span><span class="p">;</span> <span class="p">}</span>
+   <span class="kt">int</span> <span class="n">total</span><span class="p">()</span> <span class="k">const</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">totaled</span><span class="p">)</span> <span class="p">{</span>
+         <span class="n">costInCents</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+         <span class="k">for</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;::</span><span class="n">const_iterator</span> <span class="n">itor</span> <span class="o">=</span> <span class="n">items</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span> <span class="n">itor</span> <span class="o">!=</span> <span class="n">items</span><span class="p">.</span><span class="n">end</span><span class="p">();</span> <span class="o">++</span><span class="n">itor</span><span class="p">)</span>
+            <span class="n">costInCents</span> <span class="o">+=</span> <span class="n">itor</span><span class="o">-&gt;</span><span class="n">costInCents</span><span class="p">();</span>
+
+         <span class="n">totaled</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="k">return</span> <span class="n">costInCents</span><span class="p">;</span>
+   <span class="p">}</span>
+ <span class="p">};</span>
+</pre></div>
+<h3><span class="mw-headline" id="Java">Java</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Immutable_object&amp;action=edit&amp;section=14" title="Edit section: Java">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>A classic example of an immutable object is an instance of the Java <code>String</code> class</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="n">String</span> <span class="n">s</span> <span class="o">=</span> <span class="s">"ABC"</span><span class="o">;</span>
+<span class="n">s</span><span class="o">.</span><span class="na">toLowerCase</span><span class="o">();</span>
+</pre></div>
+<p>The method <code>toLowerCase()</code> will not change the data "ABC" that <code>s</code> contains. Instead, a new String object is instantiated and given the data "abc" during its construction. A reference to this String object is returned by the <code>toLowerCase()</code> method. To make the String <code>s</code> contain the data "abc", a different approach is needed.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="n">s</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="na">toLowerCase</span><span class="o">();</span>
+</pre></div>
+<p>Now the String <code>s</code> references a new String object that contains "abc". There is nothing in the syntax of the <i>declaration</i> of the class String that enforces it as immutable; rather, none of the String class's methods ever affect the data that a String object contains, thus making it immutable.</p>
+<p>The keyword <code>final</code> (<a href="Final_(Java).html#Final_variables" title="Final (Java)">detailed article</a>) is used in implementing immutable primitive types and object references,<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">[4]</a></sup> but it cannot, by itself, make <i>the objects themselves</i> immutable. See below examples:</p>
+<p>Primitive type variables (<code>int</code>, <code>long</code>, <code>short</code>, etc.) can be reassigned after being defined. This can be prevented by using <code>final</code>.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">42</span><span class="o">;</span> <span class="c1">//int is of primitive type</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mi">43</span><span class="o">;</span> <span class="c1">// OK</span>
+
+<span class="kd">final</span> <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">42</span><span class="o">;</span>
+<span class="n">j</span> <span class="o">=</span> <span class="mi">43</span><span class="o">;</span> <span class="c1">// does not compile. j is final so can't be reassigned</span>
+</pre></div>
+<p>Reference types cannot be made immutable just by using the <code>final</code> keyword. <code>final</code> only prevents reassignment.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kd">final</span> <span class="n">MyObject</span> <span class="n">m</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MyObject</span><span class="o">();</span> <span class="c1">//m is of reference type</span>
+<span class="n">m</span><span class="o">.</span><span class="na">data</span> <span class="o">=</span> <span class="mi">100</span><span class="o">;</span> <span class="c1">// OK. We can change state of object m (m is mutable and final doesn't change this fact)</span>
+<span class="n">m</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MyObject</span><span class="o">();</span> <span class="c1">// does not compile. m is final so can't be reassigned</span>
+</pre></div>
+<p>Primitive wrappers (<code>Integer</code>, <code>Long</code>, <code>Short</code>, <code>Double</code>, <code>Float</code>, <code>Character</code>, <code>Byte</code>, <code>Boolean</code>) are also all immutable. Immutable classes can be implemented by following a few simple guidelines.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">[5]</a></sup></p>
+<h3><span class="mw-headline" id="Perl">Perl</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Immutable_object&amp;action=edit&amp;section=15" title="Edit section: Perl">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>In <a href="https://en.wikipedia.org/wiki/Perl" title="Perl">Perl</a>, one can create an immutable class with the Moo library by simply declaring all the attributes to be read only:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="nb">package</span> <span class="n">Immutable</span><span class="p">;</span>
+<span class="k">use</span> <span class="n">Moo</span><span class="p">;</span>
+
+<span class="n">has</span> <span class="n">value</span> <span class="o">=&gt;</span> <span class="p">(</span>
+    <span class="n">is</span>      <span class="o">=&gt;</span> <span class="s">'ro'</span><span class="p">,</span>   <span class="c1"># read only</span>
+    <span class="n">default</span> <span class="o">=&gt;</span> <span class="s">'data'</span><span class="p">,</span> <span class="c1"># can be overridden by supplying the constructor with</span>
+                       <span class="c1"># a value: Immutable-&gt;new(value =&gt; 'something else');</span>
+<span class="p">);</span>
+<span class="mi">1</span><span class="p">;</span>
+</pre></div>
+<p>Creating an immutable class used to require two steps: first, creating accessors (either automatically or manually) that prevent modification of object attributes, and secondly, preventing direct modification of the instance data of instances of that class (this was usually stored in a hash reference, and could be locked with Hash::Util's lock_hash function):</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="nb">package</span> <span class="n">Immutable</span><span class="p">;</span>
+<span class="k">use</span> <span class="n">strict</span><span class="p">;</span>
+<span class="k">use</span> <span class="n">warnings</span><span class="p">;</span>
+<span class="k">use</span> <span class="n">base</span> <span class="sx">qw(Class::Accessor)</span><span class="p">;</span>
+<span class="c1"># create read-only accessors</span>
+<span class="n">__PACKAGE__</span><span class="o">-&gt;</span><span class="n">mk_ro_accessors</span><span class="p">(</span><span class="sx">qw(value)</span><span class="p">);</span>
+<span class="k">use</span> <span class="nn">Hash::</span><span class="n">Util</span> <span class="s">'lock_hash'</span><span class="p">;</span>
+
+<span class="k">sub </span><span class="nf">new</span> <span class="p">{</span>
+    <span class="k">my</span> <span class="nv">$class</span> <span class="o">=</span> <span class="nb">shift</span><span class="p">;</span>
+    <span class="k">return</span> <span class="nv">$class</span> <span class="k">if</span> <span class="nb">ref</span><span class="p">(</span><span class="nv">$class</span><span class="p">);</span>
+    <span class="nb">die</span> <span class="s">"Arguments to new must be key =&gt; value pairs\n"</span>
+        <span class="k">unless</span> <span class="p">(</span><span class="nv">@_</span> <span class="nv">%</span> <span class="nv">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="k">my</span> <span class="nv">%defaults</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="n">value</span> <span class="o">=&gt;</span> <span class="s">'data'</span><span class="p">,</span>
+    <span class="p">);</span>
+    <span class="k">my</span> <span class="nv">$obj</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="nv">%defaults</span><span class="p">,</span>
+        <span class="nv">@_</span><span class="p">,</span>
+    <span class="p">};</span>
+    <span class="nb">bless</span> <span class="nv">$obj</span><span class="p">,</span> <span class="nv">$class</span><span class="p">;</span>
+    <span class="c1"># prevent modification of the object data</span>
+    <span class="n">lock_hash</span> <span class="nv">%$obj</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="mi">1</span><span class="p">;</span>
+</pre></div>
+<p>Or, with a manually written accessor:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="nb">package</span> <span class="n">Immutable</span><span class="p">;</span>
+<span class="k">use</span> <span class="n">strict</span><span class="p">;</span>
+<span class="k">use</span> <span class="n">warnings</span><span class="p">;</span>
+<span class="k">use</span> <span class="nn">Hash::</span><span class="n">Util</span> <span class="s">'lock_hash'</span><span class="p">;</span>
+
+<span class="k">sub </span><span class="nf">new</span> <span class="p">{</span>
+    <span class="k">my</span> <span class="nv">$class</span> <span class="o">=</span> <span class="nb">shift</span><span class="p">;</span>
+    <span class="k">return</span> <span class="nv">$class</span> <span class="k">if</span> <span class="nb">ref</span><span class="p">(</span><span class="nv">$class</span><span class="p">);</span>
+    <span class="nb">die</span> <span class="s">"Arguments to new must be key =&gt; value pairs\n"</span>
+        <span class="k">unless</span> <span class="p">(</span><span class="nv">@_</span> <span class="nv">%</span> <span class="nv">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="k">my</span> <span class="nv">%defaults</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="n">value</span> <span class="o">=&gt;</span> <span class="s">'data'</span><span class="p">,</span>
+    <span class="p">);</span>
+    <span class="k">my</span> <span class="nv">$obj</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="nv">%defaults</span><span class="p">,</span>
+        <span class="nv">@_</span><span class="p">,</span>
+    <span class="p">};</span>
+    <span class="nb">bless</span> <span class="nv">$obj</span><span class="p">,</span> <span class="nv">$class</span><span class="p">;</span>
+    <span class="c1"># prevent modification of the object data</span>
+    <span class="n">lock_hash</span> <span class="nv">%$obj</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1"># read-only accessor</span>
+<span class="k">sub </span><span class="nf">value</span> <span class="p">{</span>
+    <span class="k">my</span> <span class="nv">$self</span> <span class="o">=</span> <span class="nb">shift</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="k">my</span> <span class="nv">$new_value</span> <span class="o">=</span> <span class="nb">shift</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1"># trying to set a new value</span>
+        <span class="nb">die</span> <span class="s">"This object cannot be modified\n"</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nv">$self</span><span class="o">-&gt;</span><span class="p">{</span><span class="n">value</span><span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="mi">1</span><span class="p">;</span>
+</pre></div>
+<h3><span class="mw-headline" id="Python">Python</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Immutable_object&amp;action=edit&amp;section=16" title="Edit section: Python">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>In <a href="https://en.wikipedia.org/wiki/Python_(programming_language)" title="Python (programming language)">Python</a>, some built-in types (numbers, booleans, strings, tuples, frozensets) are immutable, but custom classes are generally mutable. To simulate immutability in a class, one should override attribute setting and deletion to raise exceptions:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="k">class</span> <span class="nc">ImmutablePoint</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">"""An immutable class with 2 attributes 'x', 'y'."""</span>
+
+    <span class="n">__slots__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'x'</span><span class="p">,</span> <span class="s1">'y'</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">__setattr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Can not modify immutable instance"</span><span class="p">)</span>
+    <span class="n">__delattr__</span> <span class="o">=</span> <span class="n">__setattr__</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+        <span class="c1"># We can no longer use self.value = value to store the instance data</span>
+        <span class="c1"># so we must explicitly call the superclass</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">ImmutablePoint</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__setattr__</span><span class="p">(</span><span class="s1">'x'</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">ImmutablePoint</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__setattr__</span><span class="p">(</span><span class="s1">'y'</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+<p>The standard library helper <a rel="nofollow" class="external text" href="https://docs.python.org/3.3/library/collections.html#collections.namedtuple">namedtuple</a> creates simple immutable classes:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="n">Point</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">namedtuple</span><span class="p">(</span><span class="s1">'Point'</span><span class="p">,</span> <span class="p">[</span><span class="s1">'x'</span><span class="p">,</span> <span class="s1">'y'</span><span class="p">])</span>
+</pre></div>
+<p>is roughly equivalent to the above, plus some tuple-like features.</p>
+<h3><span class="mw-headline" id="JavaScript">JavaScript</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Immutable_object&amp;action=edit&amp;section=17" title="Edit section: JavaScript">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>In <a href="https://en.wikipedia.org/wiki/JavaScript" title="JavaScript">JavaScript</a>, some built-in types (numbers, strings) are immutable, but custom objects are generally mutable. To simulate immutability in an object, one should set immutable properties to prototype of object: One can use <a rel="nofollow" class="external text" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze">Object.freeze</a> to make existing objects immutable.</p>
+<h3><span class="mw-headline" id="Racket">Racket</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Immutable_object&amp;action=edit&amp;section=18" title="Edit section: Racket">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="https://en.wikipedia.org/wiki/Racket_(programming_language)" title="Racket (programming language)">Racket</a> substantially diverges from other <a href="https://en.wikipedia.org/wiki/Scheme_(programming_language)" title="Scheme (programming language)">Scheme</a> implementations by making its core pair type ("cons cells") immutable. Instead, it provides a parallel mutable pair type, via <code>mcons</code>, <code>mcar</code>, <code>set-mcar!</code> etc. In addition, many immutable types are supported, for example, immutable strings and vectors, and these are used extensively. New structs are immutable by default, unless a field is specifically declared mutable, or the whole struct:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="p">(</span><span class="k">struct</span> <span class="n">foo1</span> <span class="p">(</span><span class="n">x</span> <span class="n">y</span><span class="p">))</span>             <span class="c1">; all fields immutable</span>
+<span class="p">(</span><span class="k">struct</span> <span class="n">foo2</span> <span class="p">(</span><span class="n">x</span> <span class="p">[</span><span class="n">y</span> <span class="kd">#:mutable</span><span class="p">]))</span> <span class="c1">; one mutable field</span>
+<span class="p">(</span><span class="k">struct</span> <span class="n">foo3</span> <span class="p">(</span><span class="n">x</span> <span class="n">y</span><span class="p">)</span> <span class="kd">#:mutable</span><span class="p">)</span>   <span class="c1">; all fields mutable</span>
+</pre></div>
+<p>The language also supports immutable hash tables, implemented functionally, and immutable dictionaries.</p>
+<h3><span class="mw-headline" id="Scala">Scala</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Immutable_object&amp;action=edit&amp;section=19" title="Edit section: Scala">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>In <a href="Scala_(programming_language).html" title="Scala (programming language)">Scala</a>, any entity (narrowly, a binding) can be defined as mutable or immutable: in the declaration, one can use <code>val</code> (value) for immutable entities and <code>var</code> (variable) for mutable ones. Note that even though an immutable binding can not be reassigned, it may still refer to a mutable object and it is still possible to call mutating methods on that object: the <i>binding</i> is immutable, but the underlying <i>object</i> may be mutable.</p>
+<p>For example, the following code snippet:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="k">val</span> <span class="n">maxValue</span> <span class="k">=</span> <span class="mi">100</span>
+<span class="k">var</span> <span class="n">currentValue</span> <span class="k">=</span> <span class="mi">1</span>
+</pre></div>
+<p>defines an immutable entity <code>maxValue</code> (the integer type is inferred at compile-time) and a mutable entity named <code>currentValue</code>.</p>
+<p>By default, collection classes such as <code>List</code> and <code>Map</code> are immutable, so update-methods return a new instance rather than mutating an existing one. While this may sound inefficient, the implementation of these classes and their guarantees of immutability mean that the new instance can re-use existing nodes, which, especially in the case of creating copies, is very efficient.<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">[6]</a></sup></p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Immutable_object&amp;action=edit&amp;section=20" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="Clojure.html" title="Clojure">Clojure</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Erlang_(programming_language)" title="Erlang (programming language)">Erlang</a></li>
+<li><a href="https://en.wikipedia.org/wiki/F_Sharp_(programming_language)" title="F Sharp (programming language)">F#</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Haskell_(programming_language)" title="Haskell (programming language)">Haskell</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Prolog" title="Prolog">Prolog</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Tool_Command_Language" class="mw-redirect" title="Tool Command Language">Tcl</a></li>
+<li><a href="Scala_(programming_language).html" title="Scala (programming language)">Scala</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Mutator_method" title="Mutator method">Mutator method</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Immutable_object&amp;action=edit&amp;section=21" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><i>This article contains some material from the <a href="https://en.wikipedia.org/wiki/Perl_Design_Patterns_Book" title="Perl Design Patterns Book">Perl Design Patterns Book</a></i></p>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://www.oxfordlearnersdictionaries.com/definition/english/immutable">http://www.oxfordlearnersdictionaries.com/definition/english/immutable</a></span></li>
+<li id="cite_note-Goetz-2"><span class="mw-cite-backlink">^ <a href="#cite_ref-Goetz_2-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Goetz_2-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-Goetz_2-2"><sup><i><b>c</b></i></sup></a></span> <span class="reference-text">Goetz et al. <i>Java Concurrency in Practice</i>. Addison Wesley Professional, 2006, Section 3.4. Immutability</span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><cite class="citation web">David O'Meara (April 2003). <a rel="nofollow" class="external text" href="http://www.javaranch.com/journal/2003/04/immutable.htm">"Mutable and Immutable Objects: Make sure methods can't be overridden."</a>. <i>Java Ranch</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2012-05-14</span></span>. <q>The preferred way is to make the class final. This is sometimes referred to as "Strong Immutability". It prevents anyone from extending your class and accidentally or deliberately making it mutable.</q></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AImmutable+object&amp;rft.atitle=Mutable+and+Immutable+Objects%3A+Make+sure+methods+can%27t+be+overridden.&amp;rft.au=David+O%27Meara&amp;rft.date=2003-04&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.javaranch.com%2Fjournal%2F2003%2F04%2Fimmutable.htm&amp;rft.jtitle=Java+Ranch&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://javarevisited.blogspot.co.uk/2013/03/how-to-create-immutable-class-object-java-example-tutorial.html">"How to create Immutable Class and Object in Java – Tutorial Example"</a>. Javarevisited.blogspot.co.uk. 2013-03-04<span class="reference-accessdate">. Retrieved <span class="nowrap">2014-04-14</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AImmutable+object&amp;rft.btitle=How+to+create+Immutable+Class+and+Object+in+Java+%93+Tutorial+Example&amp;rft.date=2013-03-04&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fjavarevisited.blogspot.co.uk%2F2013%2F03%2Fhow-to-create-immutable-class-object-java-example-tutorial.html&amp;rft.pub=Javarevisited.blogspot.co.uk&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.javapractices.com/topic/TopicAction.do?Id=29">"Immutable objects"</a>. javapractices.com<span class="reference-accessdate">. Retrieved <span class="nowrap">November 15,</span> 2012</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AImmutable+object&amp;rft.btitle=Immutable+objects&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.javapractices.com%2Ftopic%2FTopicAction.do%3FId%3D29&amp;rft.pub=javapractices.com&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.scala-lang.org/docu/files/collections-api/collections_12.html">"Scala 2.8 Collections API – Concrete Immutable Collection Classes"</a>. Scala-lang.org<span class="reference-accessdate">. Retrieved <span class="nowrap">2014-04-14</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AImmutable+object&amp;rft.btitle=Scala+2.8+Collections+API+%93+Concrete+Immutable+Collection+Classes&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.scala-lang.org%2Fdocu%2Ffiles%2Fcollections-api%2Fcollections_12.html&amp;rft.pub=Scala-lang.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Immutable_object&amp;action=edit&amp;section=22" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table role="presentation" class="mbox-small plainlinks sistersitebox" style="border:1px solid #aaa;background-color:#f9f9f9">
+<tr>
+<td class="mbox-image"><a href="https://en.wikipedia.org/wiki/File:Wiktionary-logo-v2.svg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Wiktionary-logo-v2.svg/40px-Wiktionary-logo-v2.svg.png" width="40" height="40" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/06/Wiktionary-logo-v2.svg/60px-Wiktionary-logo-v2.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/06/Wiktionary-logo-v2.svg/80px-Wiktionary-logo-v2.svg.png 2x" data-file-width="391" data-file-height="391" /></a></td>
+<td class="mbox-text plainlist">Look up <i><b><a href="https://en.wiktionary.org/wiki/mutable" class="extiw" title="wiktionary:mutable">mutable</a></b></i> in Wiktionary, the free dictionary.</td>
+</tr>
+</table>
+<ul>
+<li>Article <a rel="nofollow" class="external text" href="https://web.archive.org/web/20101020235317/http://www.ibm.com/developerworks/java/library/j-jtp02183.html">Java theory and practice: To mutate or not to mutate?</a> by <a href="https://en.wikipedia.org/w/index.php?title=Brian_Goetz&amp;action=edit&amp;redlink=1" class="new" title="Brian Goetz (page does not exist)">Brian Goetz</a>, from <a href="https://en.wikipedia.org/wiki/IBM_DeveloperWorks" title="IBM DeveloperWorks">IBM DeveloperWorks</a> -- <a rel="nofollow" class="external text" href="https://web.archive.org/web/20101020235317/https://web.archive.org/web/20101020235317/http://www.ibm.com/developerworks/java/library/j-jtp02183.html">saved copy at Internet Archive</a> by <a href="https://en.wikipedia.org/w/index.php?title=Brian_Goetz&amp;action=edit&amp;redlink=1" class="new" title="Brian Goetz (page does not exist)">Brian Goetz</a>, from <a href="https://en.wikipedia.org/wiki/IBM_DeveloperWorks" title="IBM DeveloperWorks">IBM DeveloperWorks</a> -- <a rel="nofollow" class="external text" href="https://web.archive.org/web/20101020235317/http://www.ibm.com/developerworks/java/library/j-jtp02183.html">saved copy at Internet Archive</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.javapractices.com/Topic29.cjp">Immutable objects</a> from JavaPractices.com</li>
+<li><a rel="nofollow" class="external text" href="http://c2.com/cgi/wiki?ImmutableObject">Immutable objects</a> from <a href="https://en.wikipedia.org/wiki/Portland_Pattern_Repository" title="Portland Pattern Repository">Portland Pattern Repository</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.yegor256.com/2014/06/09/objects-should-be-immutable.html">Objects Should Be Immutable</a> by Yegor Bugayenko</li>
+<li><a rel="nofollow" class="external text" href="https://facebook.github.io/immutable-js/">Immutable.js</a> by Facebook</li>
+<li><a rel="nofollow" class="external text" href="https://persistent.codeplex.com/">Immutable structures in C#</a> opensource project in Codeplex</li>
+<li><a rel="nofollow" class="external text" href="https://msdn.microsoft.com/en-us/library/system.collections.immutable(v=vs.111).aspx">Immutable collections in .NET</a> official library by Microsoft <a rel="nofollow" class="external text" href="https://www.nuget.org/packages/System.Collections.Immutable/">(NuGet Package)</a></li>
+</ul>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1249
+Cached time: 20161230161112
+Cache expiry: 2592000
+Dynamic content: false
+CPU time usage: 0.096 seconds
+Real time usage: 0.137 seconds
+Preprocessor visited node count: 594/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 12202/2097152 bytes
+Template argument size: 157/2097152 bytes
+Highest expansion depth: 8/40
+Expensive parser function count: 2/500
+Lua time usage: 0.039/10.000 seconds
+Lua memory usage: 2.45 MB/50 MB
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  106.716      1 - -total
+ 39.67%   42.335      1 - Template:Reflist
+ 32.36%   34.533      4 - Template:Cite_web
+ 24.09%   25.710      1 - Template:Refimprove
+ 20.98%   22.386      1 - Template:Ambox
+ 17.48%   18.656      1 - Template:Redirect2
+  6.44%    6.877      1 - Template:Wiktionary
+  5.23%    5.583      1 - Template:Sister_project
+  3.43%    3.664      1 - Template:Side_box
+  2.23%    2.375      1 - Template:Javadoc:SE
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:197824-0!*!0!!en!4!* and timestamp 20161230161111 and revision id 747411976
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Immutable_object&amp;oldid=747411976">https://en.wikipedia.org/w/index.php?title=Immutable_object&amp;oldid=747411976</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Help_Category.html" title="Help:Category">Categories</a>: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Object_(computer_science)" title="Category:Object (computer science)">Object (computer science)</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Functional_programming" title="Category:Functional programming">Functional programming</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Articles_with_example_Racket_code" title="Category:Articles with example Racket code">Articles with example Racket code</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Functional_data_structures" title="Category:Functional data structures">Functional data structures</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Articles_needing_additional_references_from_February_2011" title="Category:Articles needing additional references from February 2011">Articles needing additional references from February 2011</a></li><li><a href="https://en.wikipedia.org/wiki/Category:All_articles_needing_additional_references" title="Category:All articles needing additional references">All articles needing additional references</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Articles_with_example_C++_code" title="Category:Articles with example C++ code">Articles with example C++ code</a></li><li><a href="Category_Articles_with_example_Java_code.html" title="Category:Articles with example Java code">Articles with example Java code</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Articles_with_example_Perl_code" title="Category:Articles with example Perl code">Articles with example Perl code</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Articles_with_example_Python_code" title="Category:Articles with example Python code">Articles with example Python code</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="Special_MyTalk.html" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="Special_MyContributions.html" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&amp;returnto=Immutable+object" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Immutable+object" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="Immutable_object.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+															<li  id="ca-talk"><span><a href="https://en.wikipedia.org/wiki/Talk:Immutable_object"  title="Discussion about the content page [t]" accesskey="t" rel="discussion">Talk</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="Immutable_object.html" >Read</a></span></li>
+															<li id="ca-edit"><span><a href="https://en.wikipedia.org/w/index.php?title=Immutable_object&amp;action=edit"  title="Edit this page [e]" accesskey="e">Edit</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="https://en.wikipedia.org/w/index.php?title=Immutable_object&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="https://en.wikipedia.org/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="Main_Page.html"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="Portal_Contents.html" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="Portal_Featured_content.html" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="Portal_Current_events.html" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="https://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="../../shop.wikimedia.org/index.html" title="Visit the Wikipedia store">Wikipedia store</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Interaction</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-help"><a href="Help_Contents.html" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="Wikipedia_About.html" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="Wikipedia_Community_portal.html" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="Wikipedia_Contact_us.html" title="How to contact Wikipedia">Contact page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="https://en.wikipedia.org/wiki/Special:WhatLinksHere/Immutable_object" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://en.wikipedia.org/wiki/Special:RecentChangesLinked/Immutable_object" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="Wikipedia_File_Upload_Wizard.html" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="https://en.wikipedia.org/w/index.php?title=Immutable_object&amp;oldid=747411976" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://en.wikipedia.org/w/index.php?title=Immutable_object&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q23828" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="https://en.wikipedia.org/w/index.php?title=Special:CiteThisPage&amp;page=Immutable_object&amp;id=747411976" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Print/export</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Immutable+object">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Immutable+object&amp;returnto=Immutable+object&amp;oldid=747411976&amp;writer=rdf2latex">Download as PDF</a></li><li id="t-print"><a href="https://en.wikipedia.org/w/index.php?title=Immutable_object&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Languages</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-bg"><a href="https://bg.wikipedia.org/wiki/Неизменим_обект" title="Неизменим обект – Bulgarian" lang="bg" hreflang="bg" class="interlanguage-link-target">Български</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Immutable_object" title="Immutable object – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Objeto_inmutable" title="Objeto inmutable – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Objet_immuable" title="Objet immuable – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/불변객체" title="불변객체 – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/イミュータブル" title="イミュータブル – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Objeto_imutável" title="Objeto imutável – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/Неизменяемый_объект" title="Неизменяемый объект – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/Незмінний_об%27єкт" title="Незмінний об'єкт – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/不可變物件" title="不可變物件 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q23828#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 2 November 2016, at 07:06.</li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="Wikipedia_Text_of_Creative_Commons_Attribution-ShareAlike_3.html">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="../../creativecommons.org/licenses/by-sa/3.0/index.html" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="../../wikimediafoundation.org/wiki/Terms_of_Use.html">Terms of Use</a> and <a href="../../wikimediafoundation.org/wiki/Privacy_policy.html">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="../../www.wikimediafoundation.org/index.html">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../../wikimediafoundation.org/wiki/Privacy_policy.html" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="Wikipedia_About.html" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="Wikipedia_General_disclaimer.html" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="Wikipedia_Contact_us.html">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a href="../../www.mediawiki.org/wiki/Special_MyLanguage/How_to_contribute.html">Developers</a></li>
+											<li id="footer-places-cookiestatement"><a href="../../wikimediafoundation.org/wiki/Cookie_statement.html">Cookie statement</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/w/index.php?title=Immutable_object&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="../../www.wikimediafoundation.org/index.html"><img src="https://en.wikipedia.org/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="../../www.mediawiki.org/index.html"><img src="https://en.wikipedia.org/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":65,"wgHostname":"mw1254"});});</script>
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Immutable_object by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:10 GMT -->
+</html>

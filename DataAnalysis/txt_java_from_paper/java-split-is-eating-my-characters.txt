@@ -1,0 +1,12 @@
+    
+        I have a string like this String str = "la$le\\$li$lo".
+
+I want to split it to get the following output "la","le\\$li","lo". The \$ is a $ escaped so it should be left in the output.
+
+But when I do  str.split("[^\\\\]\\$") y get "l","le\\$l","lo".
+
+From what I get my regex is matching a$ and i$ and removing then. Any idea of how to get my characters back?
+
+Thanks
+
+                

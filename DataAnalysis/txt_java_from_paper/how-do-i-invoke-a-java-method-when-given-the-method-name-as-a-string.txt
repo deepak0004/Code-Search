@@ -1,0 +1,11 @@
+    
+        If I have two variables:
+
+Object obj;
+String methodName = "getName";
+
+
+Without knowing the class of obj, how can I call the method identified by methodName on it?<br />
+The method being called has no parameters, and a String return value - a getter for a Java bean.
+
+                

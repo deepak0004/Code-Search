@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Jython by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:40 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Jython - Wikipedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Jython","wgTitle":"Jython","wgCurRevisionId":752330043,"wgRevisionId":752330043,"wgArticleId":390263,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["JVM programming languages","Object-oriented programming languages","Python implementations","Scripting languages","Software using the PSF license"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Jython","wgRelevantArticleId":390263,"wgRequestId":"WH3zjgpAMCYAAGhvdr0AAAAI","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgFlaggedRevsParams":{"tags":{}},"wgStableRevisionId":null,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"en","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgWikibaseItemId":"Q1053999","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.cite.styles":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@1dqfd7l",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["ext.cite.a11y","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.legacy.wikibits","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.watchlist-notice","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.gadget.featured-articles-links","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.interface","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="https://en.wikipedia.org/w/load.php?debug=false&amp;lang=en&amp;modules=ext.cite.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="../w/load2c8d.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../w/load18b6.css?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.29.0-wmf.7"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="https://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Jython"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Jython&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Jython&amp;action=edit"/>
+<link rel="apple-touch-icon" href="https://en.wikipedia.org/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="../static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../w/api251f.php?action=rsd"/>
+<link rel="copyright" href="../../creativecommons.org/licenses/by-sa/3.0/index.html"/>
+<link rel="canonical" href="Jython.html"/>
+<link rel="dns-prefetch" href="../../login.wikimedia.org/index.html"/>
+<link rel="dns-prefetch" href="../../meta.wikimedia.org/index.html" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Jython rootpage-Jython skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">Jython</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><script>function mfTempOpenSection(id){var block=document.getElementById("mf-section-"+id);block.className+=" open-block";block.previousSibling.className+=" open-block";}</script><table class="infobox vevent" style="width:22em">
+<caption class="summary">Jython</caption>
+<tr>
+<td colspan="2" style="text-align:center"><a href="https://en.wikipedia.org/wiki/File:Jython.png" class="image" title="Jython Logo"><img alt="Jython Logo" src="http://upload.wikimedia.org/wikipedia/en/e/ea/Jython.png" width="100" height="65" data-file-width="100" data-file-height="65" /></a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;">Initial release</th>
+<td>January&#160;17, 2001<span class="noprint">; 16 years ago</span><span style="display:none">&#160;(<span class="bday dtstart published updated">2001-01-17</span>)</span><sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[1]</a></sup></td>
+</tr>
+<tr>
+<td colspan="2" style="text-align:center"></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_release_life_cycle" title="Software release life cycle">Stable release</a></th>
+<td>
+<div style="margin:0px;">2.7.0 / May&#160;2, 2015<span class="noprint">; 20 months ago</span><span style="display:none">&#160;(<span class="bday dtstart published updated">2015-05-02</span>)</span><sup id="cite_ref-2" class="reference"><a href="#cite_note-2">[2]</a></sup></div>
+</td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;">Written in</th>
+<td><a href="https://en.wikipedia.org/wiki/Python_(programming_language)" title="Python (programming language)">Python</a> and <a href="Java_(programming_language).html" title="Java (programming language)">Java</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Operating_system" title="Operating system">Operating system</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Cross-platform" title="Cross-platform">Cross-platform</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Computing_platform" title="Computing platform">Platform</a></th>
+<td><a href="Java_Virtual_Machine.html" class="mw-redirect" title="Java Virtual Machine">Java Virtual Machine</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_categories#Broad_categories" title="Software categories">Type</a></th>
+<td>Python Programming Language <a href="https://en.wikipedia.org/wiki/Interpreter_(computing)" title="Interpreter (computing)">Interpreter</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_license" title="Software license">License</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Python_Software_Foundation_License" title="Python Software Foundation License">Python Software Foundation License</a> (for older releases see <a href="Jython.html#License_terms" title="Jython">License terms</a>)</td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;">Website</th>
+<td><span class="url"><a rel="nofollow" class="external text" href="http://www.jython.org/">www<wbr />.jython<wbr />.org</a></span></td>
+</tr>
+</table>
+<p><b>Jython</b> is an implementation of the <a href="https://en.wikipedia.org/wiki/Python_(programming_language)" title="Python (programming language)">Python programming language</a> designed to run on the <a href="Java_(programming_language).html" title="Java (programming language)">Java</a> platform. It is the successor of <b>JPython</b>.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">[3]</a></sup></p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Overview"><span class="tocnumber">1</span> <span class="toctext">Overview</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#History"><span class="tocnumber">2</span> <span class="toctext">History</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Status_and_roadmap"><span class="tocnumber">3</span> <span class="toctext">Status and roadmap</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#License_terms"><span class="tocnumber">4</span> <span class="toctext">License terms</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Usage"><span class="tocnumber">5</span> <span class="toctext">Usage</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#See_also"><span class="tocnumber">6</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#References"><span class="tocnumber">7</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#External_links"><span class="tocnumber">8</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Overview">Overview</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Jython&amp;action=edit&amp;section=1" title="Edit section: Overview">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Jython programs can import and use any Java class. Except for some standard modules, Jython programs use Java classes instead of Python modules. Jython includes almost all of the modules in the standard <a href="https://en.wikipedia.org/wiki/Python_(programming_language)" title="Python (programming language)">Python programming language</a> distribution, lacking only some of the modules implemented originally in <a href="https://en.wikipedia.org/wiki/C_(programming_language)" title="C (programming language)">C</a>. For example, a user interface in Jython could be written with <a href="Swing_(Java).html" title="Swing (Java)">Swing</a>, <a href="Abstract_Window_Toolkit.html" title="Abstract Window Toolkit">AWT</a> or <a href="Standard_Widget_Toolkit.html" title="Standard Widget Toolkit">SWT</a>. Jython compiles to <a href="Java_bytecode.html" title="Java bytecode">Java bytecode</a> (intermediate language) either on demand or statically.</p>
+<h2><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Jython&amp;action=edit&amp;section=2" title="Edit section: History">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Jython was initially created in late 1997 to replace <a href="https://en.wikipedia.org/wiki/C_(programming_language)" title="C (programming language)">C</a> with <a href="Java_(programming_language).html" title="Java (programming language)">Java</a> for performance-intensive code accessed by Python programs, moving to <a href="https://en.wikipedia.org/wiki/SourceForge" title="SourceForge">SourceForge</a> in October 2000. The <a href="https://en.wikipedia.org/wiki/Python_Software_Foundation" title="Python Software Foundation">Python Software Foundation</a> awarded a grant in January 2005. Jython 2.5 was released in June 2009.<sup id="cite_ref-2.5.0_4-0" class="reference"><a href="#cite_note-2.5.0-4">[4]</a></sup></p>
+<h2><span class="mw-headline" id="Status_and_roadmap">Status and roadmap</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Jython&amp;action=edit&amp;section=3" title="Edit section: Status and roadmap">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The most recent release is Jython 2.7.0. It was released on 2 May 2015 and is compatible with Python 2.7.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">[5]</a></sup></p>
+<p>Although Jython implements the Python language specification, it has some differences and incompatibilities with <a href="https://en.wikipedia.org/wiki/CPython" title="CPython">CPython</a>, which is the <a href="https://en.wikipedia.org/wiki/Reference_implementation" title="Reference implementation">reference implementation</a> of Python.<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">[6]</a></sup><sup id="cite_ref-7" class="reference"><a href="#cite_note-7">[7]</a></sup></p>
+<h2><span class="mw-headline" id="License_terms">License terms</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Jython&amp;action=edit&amp;section=4" title="Edit section: License terms">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>From version 2.2 on, Jython (including the standard library) is released under the <a href="https://en.wikipedia.org/wiki/Python_Software_Foundation_License" title="Python Software Foundation License">Python Software Foundation License</a> (v2). Older versions are covered by the <i>Jython 2.0, 2.1 license</i> and the <i>JPython 1.1.x Software License</i>.<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">[8]</a></sup></p>
+<p>The command line interpreter is available under the Apache Software License.</p>
+<h2><span class="mw-headline" id="Usage">Usage</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Jython&amp;action=edit&amp;section=5" title="Edit section: Usage">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Jython is one of two <a href="https://en.wikipedia.org/wiki/Scripting_language" title="Scripting language">scripting languages</a> (with <a href="https://en.wikipedia.org/wiki/Java_Tcl" class="mw-redirect" title="Java Tcl">Jacl</a>) used in <a href="https://en.wikipedia.org/wiki/WebSphere_Application_Server" class="mw-redirect" title="WebSphere Application Server">WebSphere Application Server</a>. It is used in <a href="https://en.wikipedia.org/wiki/IBM" title="IBM">IBM</a> <a href="https://en.wikipedia.org/wiki/Rational_Software" title="Rational Software">Rational</a> development tools, where Jython projects can be created using <a href="https://en.wikipedia.org/wiki/Wizard_(software)" title="Wizard (software)">wizards</a>.</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/JBoss_Enterprise_Application_Platform" title="JBoss Enterprise Application Platform">JBoss</a> – Application Server's CLI (<a href="https://en.wikipedia.org/wiki/Command_line_interface" class="mw-redirect" title="Command line interface">command line interface</a>) scripting using Jython</li>
+<li><i><a href="https://en.wikipedia.org/w/index.php?title=Wlst&amp;action=edit&amp;redlink=1" class="new" title="Wlst (page does not exist)">wlst</a></i> - <a href="Oracle_Weblogic_Server.html" class="mw-redirect" title="Oracle Weblogic Server">Oracle Weblogic Server</a> Application Server tool scripting using Jython</li>
+<li><i><a href="https://en.wikipedia.org/wiki/Wsadmin" title="Wsadmin">wsadmin</a></i> – IBM WebSphere Application Server tool scripting using Jython</li>
+<li><a href="https://en.wikipedia.org/wiki/ZK_Framework" class="mw-redirect" title="ZK Framework">ZK</a> – a Java Ajax framework that allows glue logic written in Jython</li>
+<li><a href="https://en.wikipedia.org/wiki/DataMelt" title="DataMelt">DMelt</a> – a Java framework for numerical and statistical calculations with 2D/3D math visualization (graphs, charts, histograms)</li>
+</ul>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Jython&amp;action=edit&amp;section=6" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div role="navigation" aria-label="Portals" class="noprint portal plainlist tright" style="margin:0.5em 0 0.5em 1em;border:solid #aaa 1px">
+<ul style="display:table;box-sizing:border-box;padding:0.1em;max-width:175px;background:#f9f9f9;font-size:85%;line-height:110%;font-style:italic;font-weight:bold">
+<li style="display:table-row"><span style="display:table-cell;padding:0.2em;vertical-align:middle;text-align:center"><a href="https://en.wikipedia.org/wiki/File:8bit-dynamiclist_(reversed).gif" class="image"><img alt="icon" src="http://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/8bit-dynamiclist_(reversed).gif/28px-8bit-dynamiclist_(reversed).gif" width="28" height="28" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/c/cc/8bit-dynamiclist_%28reversed%29.gif 1.5x" data-file-width="32" data-file-height="32" /></a></span><span style="display:table-cell;padding:0.2em 0.2em 0.2em 0.3em;vertical-align:middle"><a href="https://en.wikipedia.org/wiki/Portal:Computer_programming" title="Portal:Computer programming">Computer programming portal</a></span></li>
+</ul>
+</div>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/List_of_Java_scripting_languages" class="mw-redirect" title="List of Java scripting languages">List of Java scripting languages</a></li>
+<li><a href="https://en.wikipedia.org/wiki/IronPython" title="IronPython">IronPython</a> – an implementation of Python for .NET and Mono</li>
+<li><a href="https://en.wikipedia.org/wiki/PyPy" title="PyPy">PyPy</a> – a self-hosting interpreter for the Python programming language.</li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Jython&amp;action=edit&amp;section=7" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist columns references-column-width" style="-moz-column-width: 30em; -webkit-column-width: 30em; column-width: 30em; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite class="citation web">Wierzbicki, Frank (2015-03-22). <a rel="nofollow" class="external text" href="http://hg.python.org/jython/file/tip/NEWS">"jython: 3d8067c56a1d NEWS"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2015-03-28</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJython&amp;rft.aufirst=Frank&amp;rft.aulast=Wierzbicki&amp;rft.btitle=jython%3A+3d8067c56a1d+NEWS&amp;rft.date=2015-03-22&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fhg.python.org%2Fjython%2Ffile%2Ftip%2FNEWS&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><cite class="citation mailinglist">Wierzbicki, Frank (2015-05-03). <a rel="nofollow" class="external text" href="https://mail.python.org/pipermail/python-announce-list/2015-May/010726.html">"Jython 2.7.0 final released!"</a>. <i>Python-announce-list</i> (Mailing list)<span class="reference-accessdate">. Retrieved <span class="nowrap">2015-05-03</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJython&amp;rft.aufirst=Frank&amp;rft.aulast=Wierzbicki&amp;rft.btitle=Jython+2.7.0+final+released%21&amp;rft.date=2015-05-03&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fmail.python.org%2Fpipermail%2Fpython-announce-list%2F2015-May%2F010726.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://wiki.python.org/jython/JythonFaq/GeneralInfo">"JythonFaq/GeneralInfo - JythonWiki"</a>. 2014-04-03<span class="reference-accessdate">. Retrieved <span class="nowrap">2015-03-28</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJython&amp;rft.btitle=JythonFaq%2FGeneralInfo+-+JythonWiki&amp;rft.date=2014-04-03&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fwiki.python.org%2Fjython%2FJythonFaq%2FGeneralInfo&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-2.5.0-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-2.5.0_4-0">^</a></b></span> <span class="reference-text"><cite class="citation web">Wierzbicki, Frank (2009-06-16). <a rel="nofollow" class="external text" href="http://fwierzbicki.blogspot.com/2009/06/jython-250-final-is-out.html">"Jython 2.5.0 Final is out!"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2009-07-02</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJython&amp;rft.aufirst=Frank&amp;rft.aulast=Wierzbicki&amp;rft.btitle=Jython+2.5.0+Final+is+out%21&amp;rft.date=2009-06-16&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Ffwierzbicki.blogspot.com%2F2009%2F06%2Fjython-250-final-is-out.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text">Jython 2.7 beta2 released! <a rel="nofollow" class="external autonumber" href="http://fwierzbicki.blogspot.fi/2014/05/jython-27-beta2-released.html">[1]</a></span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://wiki.python.org/jython/JythonFaq/GeneralInfo#IsJythonthesamelanguageasPython.3F">"JythonFaq"</a>. Jython's project<span class="reference-accessdate">. Retrieved <span class="nowrap">2009-07-05</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJython&amp;rft.btitle=JythonFaq&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fwiki.python.org%2Fjython%2FJythonFaq%2FGeneralInfo%23IsJythonthesamelanguageasPython.3F&amp;rft.pub=Jython%27s+project&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://jython.sourceforge.net/archive/21/docs/differences.html">"Differences between CPython and Jython"</a>. Jython's project<span class="reference-accessdate">. Retrieved <span class="nowrap">2009-07-05</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJython&amp;rft.btitle=Differences+between+CPython+and+Jython&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fjython.sourceforge.net%2Farchive%2F21%2Fdocs%2Fdifferences.html&amp;rft.pub=Jython%27s+project&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.jython.org/Project/license.html">"The Jython License"</a>. Jython's project<span class="reference-accessdate">. Retrieved <span class="nowrap">2008-02-09</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJython&amp;rft.btitle=The+Jython+License&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.jython.org%2FProject%2Flicense.html&amp;rft.pub=Jython%27s+project&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Jython&amp;action=edit&amp;section=8" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><span class="official-website"><span class="url"><a rel="nofollow" class="external text" href="http://www.jython.org/">Official website</a></span></span></li>
+<li><a rel="nofollow" class="external text" href="https://wiki.python.org/jython/">Official wiki</a></li>
+<li><span style="font-family: monospace,Courier; white-space: pre-wrap !important; word-wrap: break-word; max-width: 1200px; overflow: auto;"><a href="irc://irc.freenode.net/#jython" class="extiw" title="freenode:">#jython</a></span> <sup class="plainlinks"><a rel="nofollow" class="external text" href="http://webchat.freenode.net/?channels=#jython"><span style="color:green;">connect</span></a></sup></li>
+<li><a rel="nofollow" class="external text" href="https://sourceforge.net/projects/jython/">Jython</a> on <a href="https://en.wikipedia.org/wiki/SourceForge" title="SourceForge">SourceForge.net</a></li>
+</ul>
+<div role="navigation" class="navbox" aria-labelledby="Python" style="padding:3px">
+<table class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit">
+<tr>
+<th scope="col" class="navbox-title" colspan="3">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="https://en.wikipedia.org/wiki/Template:Python_(programming_language)" title="Template:Python (programming language)"><abbr title="View this template" style=";;background:none transparent;border:none;">v</abbr></a></li>
+<li class="nv-talk"><a href="https://en.wikipedia.org/wiki/Template_talk:Python_(programming_language)" title="Template talk:Python (programming language)"><abbr title="Discuss this template" style=";;background:none transparent;border:none;">t</abbr></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Python_(programming_language)&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;">e</abbr></a></li>
+</ul>
+</div>
+<div id="Python" style="font-size:114%"><a href="https://en.wikipedia.org/wiki/Python_(programming_language)" title="Python (programming language)">Python</a></div>
+</th>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Implementations</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/CLPython" title="CLPython">CLPython</a></li>
+<li><a href="https://en.wikipedia.org/wiki/CPython" title="CPython">CPython</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Cython" title="Cython">Cython</a></li>
+<li><a href="https://en.wikipedia.org/wiki/IronPython" title="IronPython">IronPython</a></li>
+<li><strong class="selflink">Jython</strong></li>
+<li><a href="https://en.wikipedia.org/wiki/Psyco" title="Psyco">Psyco</a></li>
+<li><a href="https://en.wikipedia.org/wiki/PyPy" title="PyPy">PyPy</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Python_for_S60" title="Python for S60">Python for S60</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Stackless_Python" title="Stackless Python">Stackless Python</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Unladen_Swallow" class="mw-redirect" title="Unladen Swallow">Unladen Swallow</a></li>
+</ul>
+</div>
+</td>
+<td class="navbox-image" rowspan="5" style="width:0%;padding:0px 0px 0px 2px">
+<div><a href="https://en.wikipedia.org/wiki/File:Python-logo-notext.svg" class="image"><img alt="Python-logo-notext.svg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/55px-Python-logo-notext.svg.png" width="55" height="55" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/83px-Python-logo-notext.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/110px-Python-logo-notext.svg.png 2x" data-file-width="110" data-file-height="110" /></a></div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">IDE</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Comparison_of_integrated_development_environments#Python" title="Comparison of integrated development environments">Boa</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Eric_Python_IDE" class="mw-redirect" title="Eric Python IDE">Eric Python IDE</a></li>
+<li><a href="https://en.wikipedia.org/wiki/IDLE_(Python)" class="mw-redirect" title="IDLE (Python)">IDLE</a></li>
+<li><a href="PyDev.html" title="PyDev">PyDev</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Stani%27s_Python_Editor" title="Stani's Python Editor">SPE</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Ninja-IDE" title="Ninja-IDE">Ninja-IDE</a></li>
+<li><i><a href="https://en.wikipedia.org/wiki/List_of_integrated_development_environments_for_Python#Python" class="mw-redirect" title="List of integrated development environments for Python">more</a>...</i></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Topics</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Web_Server_Gateway_Interface" title="Web Server Gateway Interface">WSGI</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td class="navbox-abovebelow hlist" colspan="3">
+<div>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/List_of_Python_software" title="List of Python software">software (list)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Python_Software_Foundation" title="Python Software Foundation">Python Software Foundation</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Python_Conference" title="Python Conference">PyCon</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1235
+Cached time: 20170117103441
+Cache expiry: 2592000
+Dynamic content: false
+CPU time usage: 0.160 seconds
+Real time usage: 0.210 seconds
+Preprocessor visited node count: 1131/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 28614/2097152 bytes
+Template argument size: 1726/2097152 bytes
+Highest expansion depth: 25/40
+Expensive parser function count: 2/500
+Lua time usage: 0.069/10.000 seconds
+Lua memory usage: 3.07 MB/50 MB
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  182.870      1 - -total
+ 63.66%  116.411      2 - Template:Infobox
+ 55.16%  100.873      1 - Template:Infobox_software
+ 29.16%   53.333      1 - Template:Reflist
+ 21.25%   38.866      6 - Template:Cite_web
+ 13.68%   25.016      2 - Template:Start_date_and_age
+ 13.25%   24.222      1 - Template:Infobox_software/simple
+  6.77%   12.384      2 - Template:Time_ago
+  6.10%   11.152      1 - Template:Official_URL
+  3.89%    7.118      1 - Template:Python_(programming_language)
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:390263-0!*!0!!en!4!* and timestamp 20170117103441 and revision id 752330043
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Jython&amp;oldid=752330043">https://en.wikipedia.org/w/index.php?title=Jython&amp;oldid=752330043</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Help_Category.html" title="Help:Category">Categories</a>: <ul><li><a href="Category_JVM_programming_languages.html" title="Category:JVM programming languages">JVM programming languages</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Object-oriented_programming_languages" title="Category:Object-oriented programming languages">Object-oriented programming languages</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Python_implementations" title="Category:Python implementations">Python implementations</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Scripting_languages" title="Category:Scripting languages">Scripting languages</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Software_using_the_PSF_license" title="Category:Software using the PSF license">Software using the PSF license</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="Special_MyTalk.html" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="Special_MyContributions.html" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&amp;returnto=Jython" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Jython" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="Jython.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+															<li  id="ca-talk"><span><a href="https://en.wikipedia.org/wiki/Talk:Jython"  title="Discussion about the content page [t]" accesskey="t" rel="discussion">Talk</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="Jython.html" >Read</a></span></li>
+															<li id="ca-edit"><span><a href="https://en.wikipedia.org/w/index.php?title=Jython&amp;action=edit"  title="Edit this page [e]" accesskey="e">Edit</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="https://en.wikipedia.org/w/index.php?title=Jython&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="https://en.wikipedia.org/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="Main_Page.html"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="Portal_Contents.html" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="Portal_Featured_content.html" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="Portal_Current_events.html" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="https://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="../../shop.wikimedia.org/index.html" title="Visit the Wikipedia store">Wikipedia store</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Interaction</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-help"><a href="Help_Contents.html" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="Wikipedia_About.html" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="Wikipedia_Community_portal.html" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="Wikipedia_Contact_us.html" title="How to contact Wikipedia">Contact page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="https://en.wikipedia.org/wiki/Special:WhatLinksHere/Jython" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://en.wikipedia.org/wiki/Special:RecentChangesLinked/Jython" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="Wikipedia_File_Upload_Wizard.html" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="https://en.wikipedia.org/w/index.php?title=Jython&amp;oldid=752330043" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://en.wikipedia.org/w/index.php?title=Jython&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q1053999" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="https://en.wikipedia.org/w/index.php?title=Special:CiteThisPage&amp;page=Jython&amp;id=752330043" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Print/export</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Jython">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Jython&amp;returnto=Jython&amp;oldid=752330043&amp;writer=rdf2latex">Download as PDF</a></li><li id="t-print"><a href="https://en.wikipedia.org/w/index.php?title=Jython&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Languages</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-ar"><a href="https://ar.wikipedia.org/wiki/جايثون" title="جايثون – Arabic" lang="ar" hreflang="ar" class="interlanguage-link-target">العربية</a></li><li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Jython" title="Jython – Catalan" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Jython" title="Jython – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Jython" title="Jython – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Jython" title="Jython – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/جایتون" title="جایتون – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Jython" title="Jython – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/자이썬" title="자이썬 – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-id"><a href="https://id.wikipedia.org/wiki/Jython" title="Jython – Indonesian" lang="id" hreflang="id" class="interlanguage-link-target">Bahasa Indonesia</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Jython" title="Jython – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-ms"><a href="https://ms.wikipedia.org/wiki/Jython" title="Jython – Malay" lang="ms" hreflang="ms" class="interlanguage-link-target">Bahasa Melayu</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/Jython" title="Jython – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Jython" title="Jython – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Jython" title="Jython – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/Jython" title="Jython – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-sr"><a href="https://sr.wikipedia.org/wiki/Jython" title="Jython – Serbian" lang="sr" hreflang="sr" class="interlanguage-link-target">Српски / srpski</a></li><li class="interlanguage-link interwiki-tg"><a href="https://tg.wikipedia.org/wiki/Jython" title="Jython – Tajik" lang="tg" hreflang="tg" class="interlanguage-link-target">Тоҷикӣ</a></li><li class="interlanguage-link interwiki-tr"><a href="https://tr.wikipedia.org/wiki/Jython" title="Jython – Turkish" lang="tr" hreflang="tr" class="interlanguage-link-target">Türkçe</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/Jython" title="Jython – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/Jython" title="Jython – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q1053999#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 30 November 2016, at 17:44.</li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="Wikipedia_Text_of_Creative_Commons_Attribution-ShareAlike_3.html">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="../../creativecommons.org/licenses/by-sa/3.0/index.html" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="../../wikimediafoundation.org/wiki/Terms_of_Use.html">Terms of Use</a> and <a href="../../wikimediafoundation.org/wiki/Privacy_policy.html">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="../../www.wikimediafoundation.org/index.html">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../../wikimediafoundation.org/wiki/Privacy_policy.html" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="Wikipedia_About.html" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="Wikipedia_General_disclaimer.html" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="Wikipedia_Contact_us.html">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a href="../../www.mediawiki.org/wiki/Special_MyLanguage/How_to_contribute.html">Developers</a></li>
+											<li id="footer-places-cookiestatement"><a href="../../wikimediafoundation.org/wiki/Cookie_statement.html">Cookie statement</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/w/index.php?title=Jython&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="../../www.wikimediafoundation.org/index.html"><img src="https://en.wikipedia.org/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="../../www.mediawiki.org/index.html"><img src="https://en.wikipedia.org/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":60,"wgHostname":"mw1210"});});</script>
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Jython by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:40 GMT -->
+</html>

@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Carbonado_(Java) by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:52:45 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Carbonado (Java) - Wikipedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Carbonado_(Java)","wgTitle":"Carbonado (Java)","wgCurRevisionId":645919659,"wgRevisionId":645919659,"wgArticleId":17722081,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Amazon.com","Java platform software","Persistence"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Carbonado_(Java)","wgRelevantArticleId":17722081,"wgRequestId":"WH342wpAMFgAALLE79kAAAHE","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgFlaggedRevsParams":{"tags":{}},"wgStableRevisionId":null,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"en","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgWikibaseItemId":"Q5038005","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.math.styles":"ready","ext.cite.styles":"ready","ext.pygments":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@1dqfd7l",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["ext.cite.a11y","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.legacy.wikibits","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.watchlist-notice","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.gadget.featured-articles-links","ext.centralauth.centralautologin","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.interface","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="https://en.wikipedia.org/w/load.php?debug=false&amp;lang=en&amp;modules=ext.cite.styles%7Cext.math.scripts%2Cstyles%7Cext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="../w/load2c8d.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../w/load18b6.css?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.29.0-wmf.7"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="https://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Carbonado_(Java)"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Carbonado_(Java)&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Carbonado_(Java)&amp;action=edit"/>
+<link rel="apple-touch-icon" href="https://en.wikipedia.org/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="../static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../w/api251f.php?action=rsd"/>
+<link rel="copyright" href="../../creativecommons.org/licenses/by-sa/3.0/index.html"/>
+<link rel="canonical" href="Carbonado_(Java).html"/>
+<link rel="dns-prefetch" href="../../login.wikimedia.org/index.html"/>
+<link rel="dns-prefetch" href="../../meta.wikimedia.org/index.html" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Carbonado_Java rootpage-Carbonado_Java skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">Carbonado (Java)</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><script>function mfTempOpenSection(id){var block=document.getElementById("mf-section-"+id);block.className+=" open-block";block.previousSibling.className+=" open-block";}</script><div role="note" class="hatnote">This article is about the software framework. For other uses, see <a href="https://en.wikipedia.org/wiki/Carbonado_(disambiguation)" class="mw-disambig" title="Carbonado (disambiguation)">Carbonado (disambiguation)</a>.</div>
+<table class="infobox vevent" style="width:22em">
+<caption class="summary">Carbonado</caption>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_developer" title="Software developer">Developer(s)</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Amazon.com" title="Amazon.com">Amazon.com</a></td>
+</tr>
+<tr>
+<td colspan="2" style="text-align:center"></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_release_life_cycle" title="Software release life cycle">Stable release</a></th>
+<td>
+<div style="margin:0px;">1.2.3 / March&#160;4,&#160;2012<span style="display:none">&#160;(<span class="bday dtstart published updated">2012-03-04</span>)</span></div>
+</td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;">Written in</th>
+<td><a href="Java_(programming_language).html" title="Java (programming language)">Java</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Operating_system" title="Operating system">Operating system</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Cross-platform" title="Cross-platform">Cross-platform</a> (<a href="https://en.wikipedia.org/wiki/JVM" class="mw-redirect" title="JVM">JVM</a>)</td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Computing_platform" title="Computing platform">Platform</a></th>
+<td><a href="Java_Virtual_Machine.html" class="mw-redirect" title="Java Virtual Machine">Java Virtual Machine</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_categories#Broad_categories" title="Software categories">Type</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Object-Relational_mapping" class="mw-redirect" title="Object-Relational mapping">Object-Relational mapping</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_license" title="Software license">License</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Apache_License" title="Apache License">Apache License</a> 2.0</td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;">Website</th>
+<td><a rel="nofollow" class="external text" href="https://github.com/Carbonado/Carbonado">github.com/Carbonado/Carbonado</a></td>
+</tr>
+</table>
+<p><b>Carbonado</b> is an <a href="https://en.wikipedia.org/wiki/Open_source" class="mw-redirect" title="Open source">open source</a> <a href="https://en.wikipedia.org/wiki/Relational_Database" class="mw-redirect" title="Relational Database">relational</a> database mapping framework, written in <a href="Java_(programming_language).html" title="Java (programming language)">Java</a>. Rather than following a typical <a href="https://en.wikipedia.org/wiki/Object-relational_mapping" title="Object-relational mapping">O/R mapping</a> approach, the relational model is preserved, while still being <a href="https://en.wikipedia.org/wiki/Object-oriented" class="mw-redirect" title="Object-oriented">object-oriented</a>. Not being tied to specific features of <a href="https://en.wikipedia.org/wiki/SQL" title="SQL">SQL</a> or <a href="https://en.wikipedia.org/wiki/JDBC" class="mw-redirect" title="JDBC">JDBC</a>, Carbonado also supports non-SQL database products such as <a href="https://en.wikipedia.org/wiki/Berkeley_DB" title="Berkeley DB">Berkeley DB</a>. In doing so, relational features such as queries and indexes are supported, without the overhead of SQL.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#History"><span class="tocnumber">1</span> <span class="toctext">History</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Entity_definitions"><span class="tocnumber">2</span> <span class="toctext">Entity definitions</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Repository_usage"><span class="tocnumber">3</span> <span class="toctext">Repository usage</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Query_execution"><span class="tocnumber">4</span> <span class="toctext">Query execution</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Transactions"><span class="tocnumber">5</span> <span class="toctext">Transactions</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Notes"><span class="tocnumber">6</span> <span class="toctext">Notes</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#External_links"><span class="tocnumber">7</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Carbonado_(Java)&amp;action=edit&amp;section=1" title="Edit section: History">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Carbonado was originally developed for internal use by <a href="https://en.wikipedia.org/wiki/Amazon.com" title="Amazon.com">Amazon.com</a>, as a revision to an earlier framework. It was released as an <a href="https://en.wikipedia.org/wiki/Apache_License" title="Apache License">Apache licensed</a> open-source project in October 2006.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[1]</a></sup></p>
+<h2><span class="mw-headline" id="Entity_definitions">Entity definitions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Carbonado_(Java)&amp;action=edit&amp;section=2" title="Edit section: Entity definitions">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Relational entities are known as <i>Storables</i> in Carbonado, and they are defined by an interface or abstract class. Annotations are required to specify features which cannot defined by Java interface alone. Every Storable must have an annotation describing the <a href="https://en.wikipedia.org/wiki/Primary_Key" class="mw-redirect" title="Primary Key">primary key</a> of the entity.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+ <span class="nd">@PrimaryKey</span><span class="o">(</span><span class="s">"entityId"</span><span class="o">)</span>
+ <span class="kd">public</span> <span class="kd">interface</span> <span class="nc">MyEntity</span> <span class="kd">extends</span> <span class="n">Storable</span> <span class="o">{</span>
+     <span class="kt">long</span> <span class="nf">getEntityId</span><span class="o">();</span>
+     <span class="kt">void</span> <span class="nf">setEntityId</span><span class="o">(</span><span class="kt">long</span> <span class="n">id</span><span class="o">);</span>
+ 
+     <span class="n">String</span> <span class="nf">getMessage</span><span class="o">();</span>
+     <span class="kt">void</span> <span class="nf">setMessage</span><span class="o">(</span><span class="n">String</span> <span class="n">message</span><span class="o">);</span>
+ <span class="o">}</span>
+</pre></div>
+<p>Carbonado Storables are not pure <a href="https://en.wikipedia.org/wiki/POJO" class="mw-redirect" title="POJO">POJOs</a>, and they must always extend the Storable superclass. By doing so, they gain access to various methods built into it. A Storable definition may also contain business logic, following the <a href="https://en.wikipedia.org/wiki/Active_record_pattern" title="Active record pattern">active record pattern</a>.</p>
+<p>The actual implementation of the Storable is generated at runtime by Carbonado itself. The standard object methods of toString, equals and hashCode are also generated. This greatly simplifies the process of defining new entities, since no <a href="https://en.wikipedia.org/wiki/Boilerplate_code" title="Boilerplate code">boilerplate code</a> needs to be written.</p>
+<p>The process of loading a Storable by key starts by calling a factory method to create an uninitialized instance:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+ <span class="n">Repository</span> <span class="n">repo</span> <span class="o">=</span> <span class="o">...</span>
+ <span class="n">Storage</span><span class="o">&lt;</span><span class="n">MyEntity</span><span class="o">&gt;</span> <span class="n">storage</span> <span class="o">=</span> <span class="n">repo</span><span class="o">.</span><span class="na">storageFor</span><span class="o">(</span><span class="n">MyEntity</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+ <span class="n">MyEntity</span> <span class="n">entity</span> <span class="o">=</span> <span class="n">storage</span><span class="o">.</span><span class="na">prepare</span><span class="o">();</span>
+</pre></div>
+<p>Next, the key properties are set and load is called:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+ <span class="n">entity</span><span class="o">.</span><span class="na">setEntityId</span><span class="o">(</span><span class="n">id</span><span class="o">);</span>
+ <span class="n">entity</span><span class="o">.</span><span class="na">load</span><span class="o">();</span>
+</pre></div>
+<h2><span class="mw-headline" id="Repository_usage">Repository usage</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Carbonado_(Java)&amp;action=edit&amp;section=3" title="Edit section: Repository usage">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>A <i>Repository</i> is a gateway to the underlying database. A few core implementations are available, which include:</p>
+<ul>
+<li>JDBC access</li>
+<li>Berkeley DB</li>
+<li>Berkeley DB Java Edition</li>
+<li>An in memory database</li>
+</ul>
+<p>In addition, composite Repositories exist which support simple replication and logging.</p>
+<p>All Repositories are created using a <a href="Builder_pattern.html" title="Builder pattern">builder pattern</a>. Each type of builder supports options specific to the Repository type. When a Repository instance is built, it only adheres to the standard interface. Access to specific features is provided by a <i>Capability</i> interface.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+ <span class="n">BDBRepositoryBuilder</span> <span class="n">builder</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BDBRepositoryBuilder</span><span class="o">();</span>
+ <span class="n">builder</span><span class="o">.</span><span class="na">setName</span><span class="o">(</span><span class="n">name</span><span class="o">);</span>
+ <span class="n">builder</span><span class="o">.</span><span class="na">setEnvironmentHome</span><span class="o">(</span><span class="n">envHome</span><span class="o">);</span>
+ <span class="n">builder</span><span class="o">.</span><span class="na">setTransactionWriteNoSync</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
+ <span class="n">Repository</span> <span class="n">repo</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="na">build</span><span class="o">();</span>
+</pre></div>
+<h2><span class="mw-headline" id="Query_execution">Query execution</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Carbonado_(Java)&amp;action=edit&amp;section=4" title="Edit section: Query execution">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Carbonado queries are defined by a simple filter expression and an order-by specification. Compared to SQL, the filter closely resembles a "where" clause. Filters can include joined properties and they may also include sub filters. This simple example queries for entities with a given message:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+ <span class="n">Storage</span><span class="o">&lt;</span><span class="n">MyEntity</span><span class="o">&gt;</span> <span class="n">storage</span> <span class="o">=</span> <span class="n">repo</span><span class="o">.</span><span class="na">storageFor</span><span class="o">(</span><span class="n">MyEntity</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+ <span class="n">Query</span><span class="o">&lt;</span><span class="n">MyEntity</span><span class="o">&gt;</span> <span class="n">query</span> <span class="o">=</span> <span class="n">storage</span><span class="o">.</span><span class="na">query</span><span class="o">(</span><span class="s">"message = ?"</span><span class="o">).</span><span class="na">with</span><span class="o">(</span><span class="n">message</span><span class="o">);</span>
+ <span class="n">List</span><span class="o">&lt;</span><span class="n">MyEntity</span><span class="o">&gt;</span> <span class="n">matches</span> <span class="o">=</span> <span class="n">query</span><span class="o">.</span><span class="na">fetch</span><span class="o">().</span><span class="na">toList</span><span class="o">();</span>
+</pre></div>
+<h2><span class="mw-headline" id="Transactions">Transactions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Carbonado_(Java)&amp;action=edit&amp;section=5" title="Edit section: Transactions">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="https://en.wikipedia.org/wiki/Database_transaction" title="Database transaction">Transactions</a> are created from a Repository instance, and they define a <a href="https://en.wikipedia.org/wiki/Thread-local_storage" title="Thread-local storage">thread-local</a> scope. Multiple persist operations are automatically grouped together, and commit must be called to complete the transaction.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+ <span class="n">Transaction</span> <span class="n">txn</span> <span class="o">=</span> <span class="n">repo</span><span class="o">.</span><span class="na">enterTransaction</span><span class="o">();</span>
+ <span class="k">try</span> <span class="o">{</span>
+     <span class="n">MyEntity</span> <span class="n">entity</span> <span class="o">=</span> <span class="n">storage</span><span class="o">.</span><span class="na">prepare</span><span class="o">();</span>
+     <span class="n">entity</span><span class="o">.</span><span class="na">setEntityId</span><span class="o">(</span><span class="mi">1</span><span class="o">);</span>
+     <span class="n">entity</span><span class="o">.</span><span class="na">setMessage</span><span class="o">(</span><span class="s">"hello"</span><span class="o">);</span>
+     <span class="n">entity</span><span class="o">.</span><span class="na">insert</span><span class="o">();</span>
+ 
+     <span class="n">entity</span> <span class="o">=</span> <span class="n">storage</span><span class="o">.</span><span class="na">prepare</span><span class="o">();</span>
+     <span class="n">entity</span><span class="o">.</span><span class="na">setEntityId</span><span class="o">(</span><span class="mi">2</span><span class="o">);</span>
+     <span class="n">entity</span><span class="o">.</span><span class="na">setMessage</span><span class="o">(</span><span class="s">"world"</span><span class="o">);</span>
+     <span class="n">entity</span><span class="o">.</span><span class="na">insert</span><span class="o">();</span>
+ 
+     <span class="n">txn</span><span class="o">.</span><span class="na">commit</span><span class="o">();</span>
+ <span class="o">}</span> <span class="k">finally</span> <span class="o">{</span>
+     <span class="n">txn</span><span class="o">.</span><span class="na">exit</span><span class="o">();</span>
+ <span class="o">}</span>
+</pre></div>
+<p>This design approach shows how Carbonado is not like an O/R mapping framework. Such frameworks typically hide the concept of transactions entirely, often by using sessions which track changes. In Carbonado, all actions are direct.</p>
+<h2><span class="mw-headline" id="Notes">Notes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Carbonado_(Java)&amp;action=edit&amp;section=6" title="Edit section: Notes">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite class="citation web">Vogels, Werner (26 October 2006). <a rel="nofollow" class="external text" href="http://www.allthingsdistributed.com/2006/10/carbonado.html">"Carbonado"</a>. <i>All Things Distributed</i><span class="reference-accessdate">. Retrieved <span class="nowrap">25 December</span> 2010</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACarbonado+%28Java%29&amp;rft.atitle=Carbonado&amp;rft.aufirst=Werner&amp;rft.aulast=Vogels&amp;rft.date=2006-10-26&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.allthingsdistributed.com%2F2006%2F10%2Fcarbonado.html&amp;rft.jtitle=All+Things+Distributed&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Carbonado_(Java)&amp;action=edit&amp;section=7" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="https://github.com/Carbonado/Carbonado">Carbonado Home Page</a></li>
+</ul>
+<p><br /></p>
+<div role="navigation" class="navbox" aria-labelledby="Amazon.com" style="padding:3px">
+<table class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="https://en.wikipedia.org/wiki/Template:Amazon" title="Template:Amazon"><abbr title="View this template" style=";;background:none transparent;border:none;">v</abbr></a></li>
+<li class="nv-talk"><a href="https://en.wikipedia.org/wiki/Template_talk:Amazon" title="Template talk:Amazon"><abbr title="Discuss this template" style=";;background:none transparent;border:none;">t</abbr></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Amazon&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;">e</abbr></a></li>
+</ul>
+</div>
+<div id="Amazon.com" style="font-size:114%"><a href="https://en.wikipedia.org/wiki/Amazon.com" title="Amazon.com">Amazon.com</a></div>
+</th>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Category:Amazon.com_people" title="Category:Amazon.com people">People</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em"></div>
+<table class="nowraplinks navbox-subgroup" style="border-spacing:0">
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;">Current</div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Jeff_Bezos" title="Jeff Bezos">Jeff Bezos</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Tony_Hsieh" title="Tony Hsieh">Tony Hsieh</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Werner_Vogels" title="Werner Vogels">Werner Vogels</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Gregg_Zehr" class="mw-redirect" title="Gregg Zehr">Gregg Zehr</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;">Former</div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Rick_Dalzell" title="Rick Dalzell">Rick Dalzell</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Brian_McBride_(director)" title="Brian McBride (director)">Brian McBride</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Ram_Shriram" title="Ram Shriram">Ram Shriram</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Tom_Szkutak" title="Tom Szkutak">Tom Szkutak</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Brian_Valentine" title="Brian Valentine">Brian Valentine</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Christopher_North_(businessman)" title="Christopher North (businessman)">Christopher North</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Facilities</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Doppler_(building)" title="Doppler (building)">Doppler</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Day_One_(building)" class="mw-redirect" title="Day One (building)">Day One</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Products<br />
+and services</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em"></div>
+<table class="nowraplinks navbox-subgroup" style="border-spacing:0">
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;">Websites</div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/A9.com" title="A9.com">A9.com</a></li>
+<li><a href="https://en.wikipedia.org/wiki/AbeBooks" title="AbeBooks">AbeBooks</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Alexa_Internet" title="Alexa Internet">Alexa Internet</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Amapedia" title="Amapedia">Amapedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Askville" title="Askville">Askville</a></li>
+<li><a href="https://en.wikipedia.org/wiki/BookFinder" class="mw-redirect" title="BookFinder">BookFinder</a></li>
+<li><a href="https://en.wikipedia.org/wiki/CDNow" title="CDNow">CDNow</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Amazon_China" title="Amazon China">China</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Curse,_Inc." title="Curse, Inc.">Curse</a></li>
+<li><a href="https://en.wikipedia.org/wiki/The_Book_Depository" class="mw-redirect" title="The Book Depository">The Book Depository</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Amazon_Dash" title="Amazon Dash">Dash</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Diapers.com" title="Diapers.com">Diapers.com</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Digital_Photography_Review" title="Digital Photography Review">Digital Photography Review</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Endless.com" title="Endless.com">Endless.com</a></li>
+<li><a href="https://en.wikipedia.org/wiki/AmazonFresh" title="AmazonFresh">Fresh</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Goodreads" title="Goodreads">Goodreads</a></li>
+<li><a href="https://en.wikipedia.org/wiki/IMDb" title="IMDb">Internet Movie Database</a>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Box_Office_Mojo" title="Box Office Mojo">Box Office Mojo</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Withoutabox" title="Withoutabox">Withoutabox</a></li>
+</ul>
+</li>
+<li><a href="https://en.wikipedia.org/wiki/Junglee_(company)" title="Junglee (company)">Junglee.com</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Amazon.com#AmazonLocal" title="Amazon.com">Local</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Amazon_Marketplace" title="Amazon Marketplace">Marketplace</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Amazon_Payments" title="Amazon Payments">Payments</a></li>
+<li><a href="https://en.wikipedia.org/wiki/PlanetAll" title="PlanetAll">PlanetAll</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Shelfari" title="Shelfari">Shelfari</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Twitch.tv" title="Twitch.tv">Twitch.tv</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Amazon.com#AmazonWireless" title="Amazon.com">Wireless</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Woot" title="Woot">Woot.com</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Zappos" title="Zappos">Zappos</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;"><a href="https://en.wikipedia.org/wiki/Amazon_Web_Services" title="Amazon Web Services">Web services</a></div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Amazon_Machine_Image" title="Amazon Machine Image">AMI</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Amazon_CloudFront" title="Amazon CloudFront">CloudFront</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Amazon_DynamoDB" title="Amazon DynamoDB">DynamoDB</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Amazon_Elastic_Block_Store" title="Amazon Elastic Block Store">EBS</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Amazon_Elastic_Compute_Cloud" title="Amazon Elastic Compute Cloud">EC2</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Amazon_Mechanical_Turk" title="Amazon Mechanical Turk">MTurk</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Amazon_Product_Advertising_API" title="Amazon Product Advertising API">Product Advertising API</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Amazon_Relational_Database_Service" title="Amazon Relational Database Service">RDS</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Amazon_S3" title="Amazon S3">S3</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Amazon_Simple_Email_Service" class="mw-redirect" title="Amazon Simple Email Service">SES</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Amazon_SimpleDB" title="Amazon SimpleDB">SimpleDB</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Amazon_Simple_Queue_Service" title="Amazon Simple Queue Service">SQS</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Amazon_Virtual_Private_Cloud" title="Amazon Virtual Private Cloud">VPC</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Amazon_Silk" title="Amazon Silk">Silk</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Amazon_Glacier" title="Amazon Glacier">Glacier</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Amazon_Storywriter" title="Amazon Storywriter">Storywriter</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;">Digital</div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Amazon_Alexa" title="Amazon Alexa">Alexa</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Amazon_Appstore" title="Amazon Appstore">Appstore</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Audible_Inc." title="Audible Inc.">Audible Inc.</a></li>
+<li><a href="https://en.wikipedia.org/wiki/ComiXology" title="ComiXology">ComiXology</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Amazon_Drive" title="Amazon Drive">Amazon Drive</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Amazon_Echo" title="Amazon Echo">Echo</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Amazon_Video" title="Amazon Video">Video</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Amazon_Prime" class="mw-redirect" title="Amazon Prime">Prime</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Amazon_Kindle" title="Amazon Kindle">Kindle</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Kindle_Fire" title="Kindle Fire">Kindle Fire</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Fire_HD" title="Fire HD">Fire HD</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Fire_HDX" title="Fire HDX">Fire HDX</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Amazon_Fire_TV" title="Amazon Fire TV">Fire TV</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Fire_Phone" title="Fire Phone">Fire Phone</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Kindle_Store" title="Kindle Store">Kindle Store</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Lexcycle" title="Lexcycle">Lexcycle</a></li>
+<li><a href="https://en.wikipedia.org/wiki/LoveFilm" title="LoveFilm">LoveFilm</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Mobipocket" title="Mobipocket">Mobipocket</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Amazon_Music" title="Amazon Music">Music</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Reflexive_Entertainment" title="Reflexive Entertainment">Reflexive Entertainment</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Fire_OS" title="Fire OS">Fire OS</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Amazon_Digital_Game_Store" title="Amazon Digital Game Store">Amazon Digital Game Store</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;">Technology</div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/1-Click" title="1-Click">1-Click</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Amazon_Game_Studios" title="Amazon Game Studios">Amazon Game Studios</a></li>
+<li><strong class="selflink">Carbonado</strong></li>
+<li><a href="https://en.wikipedia.org/wiki/Dynamo_(storage_system)" title="Dynamo (storage system)">Dynamo</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Gurupa" title="Gurupa">Gurupa</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Lab126" class="mw-redirect" title="Lab126">Lab126</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Double_Helix_Games" title="Double Helix Games">Double Helix Games</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Obidos_(software)" title="Obidos (software)">Obidos</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Liquavista" title="Liquavista">Liquavista</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;">Publishing</div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Amazon_Publishing" title="Amazon Publishing">Amazon Publishing</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Amazon_Studios" title="Amazon Studios">Amazon Studios</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Amazon_Breakthrough_Novel_Award" title="Amazon Breakthrough Novel Award">Breakthrough Novel Award</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Amazon%27s_Best_Books_of_the_Year" title="Amazon's Best Books of the Year">Best Books of the Year</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Kindle_Direct_Publishing" title="Kindle Direct Publishing">Kindle Direct Publishing</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;">Investments</div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/43_Things" title="43 Things">43 Things</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Amie_Street" title="Amie Street">Amie Street</a> (<a href="https://en.wikipedia.org/wiki/Songza" title="Songza">Songza</a>)</li>
+<li><a href="https://en.wikipedia.org/wiki/LibraryThing" title="LibraryThing">LibraryThing</a></li>
+<li><a href="https://en.wikipedia.org/wiki/LivingSocial" title="LivingSocial">LivingSocial</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sellaband" title="Sellaband">Sellaband</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Other</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Amazon_Books" title="Amazon Books">Amazon Books</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Amazon_Light" title="Amazon Light">Amazon Light</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Amazon_Standard_Identification_Number" title="Amazon Standard Identification Number">ASIN</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Amazon.com_controversies" title="Amazon.com controversies">Controversies</a> (<a href="https://en.wikipedia.org/wiki/Amazon_tax" title="Amazon tax">tax</a>)</li>
+<li><a href="https://en.wikipedia.org/wiki/Amazon_Fishbowl" title="Amazon Fishbowl">Fishbowl</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Amazon_Locker" title="Amazon Locker">Locker</a></li>
+<li><i><a href="https://en.wikipedia.org/wiki/Perfect_10,_Inc._v._Amazon.com,_Inc." title="Perfect 10, Inc. v. Amazon.com, Inc.">Perfect 10, Inc. v. Amazon.com, Inc.</a></i></li>
+<li><a href="https://en.wikipedia.org/wiki/Statistically_improbable_phrase" title="Statistically improbable phrase">Statistically improbable phrase</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Amazon_Vine" title="Amazon Vine">Vine</a></li>
+<li><a href="https://en.wikipedia.org/wiki/List_of_Amazon.com_locations" title="List of Amazon.com locations">List of Amazon.com locations</a></li>
+<li><a href="https://en.wikipedia.org/wiki/List_of_mergers_and_acquisitions_by_Amazon.com" title="List of mergers and acquisitions by Amazon.com">List of mergers and acquisitions by Amazon.com</a></li>
+<li><a href="https://en.wikipedia.org/wiki/List_of_Amazon.com_products_and_services" title="List of Amazon.com products and services">List of Amazon.com products and services</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1253
+Cached time: 20170117105835
+Cache expiry: 2592000
+Dynamic content: false
+CPU time usage: 0.124 seconds
+Real time usage: 0.167 seconds
+Preprocessor visited node count: 1368/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 48643/2097152 bytes
+Template argument size: 3595/2097152 bytes
+Highest expansion depth: 25/40
+Expensive parser function count: 2/500
+Lua time usage: 0.047/10.000 seconds
+Lua memory usage: 1.96 MB/50 MB
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  128.914      1 - -total
+ 51.02%   65.777      2 - Template:Infobox
+ 39.98%   51.538      1 - Template:Infobox_software
+ 23.98%   30.918      3 - Template:Navbox
+ 23.57%   30.388      1 - Template:Cite_web
+ 18.02%   23.224      1 - Template:Amazon
+ 17.45%   22.496      1 - Template:Infobox_software/simple
+ 14.04%   18.103      1 - Template:About
+ 11.32%   14.591      2 - Template:Navbox_subgroup
+  4.70%    6.060      1 - Template:Release_date
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:17722081-0!*!0!!en!*!* and timestamp 20170117105835 and revision id 645919659
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Carbonado_(Java)&amp;oldid=645919659">https://en.wikipedia.org/w/index.php?title=Carbonado_(Java)&amp;oldid=645919659</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Help_Category.html" title="Help:Category">Categories</a>: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Amazon.com" title="Category:Amazon.com">Amazon.com</a></li><li><a href="Category_Java_platform_software.html" title="Category:Java platform software">Java platform software</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Persistence" title="Category:Persistence">Persistence</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="Special_MyTalk.html" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="Special_MyContributions.html" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&amp;returnto=Carbonado+%28Java%29" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Carbonado+%28Java%29" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="Carbonado_(Java).html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+															<li  id="ca-talk"><span><a href="https://en.wikipedia.org/wiki/Talk:Carbonado_(Java)"  title="Discussion about the content page [t]" accesskey="t" rel="discussion">Talk</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="Carbonado_(Java).html" >Read</a></span></li>
+															<li id="ca-edit"><span><a href="https://en.wikipedia.org/w/index.php?title=Carbonado_(Java)&amp;action=edit"  title="Edit this page [e]" accesskey="e">Edit</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="https://en.wikipedia.org/w/index.php?title=Carbonado_(Java)&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="https://en.wikipedia.org/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="Main_Page.html"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="Portal_Contents.html" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="Portal_Featured_content.html" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="Portal_Current_events.html" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="https://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="../../shop.wikimedia.org/index.html" title="Visit the Wikipedia store">Wikipedia store</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Interaction</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-help"><a href="Help_Contents.html" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="Wikipedia_About.html" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="Wikipedia_Community_portal.html" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="Wikipedia_Contact_us.html" title="How to contact Wikipedia">Contact page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="https://en.wikipedia.org/wiki/Special:WhatLinksHere/Carbonado_(Java)" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://en.wikipedia.org/wiki/Special:RecentChangesLinked/Carbonado_(Java)" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="Wikipedia_File_Upload_Wizard.html" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="https://en.wikipedia.org/w/index.php?title=Carbonado_(Java)&amp;oldid=645919659" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://en.wikipedia.org/w/index.php?title=Carbonado_(Java)&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q5038005" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="https://en.wikipedia.org/w/index.php?title=Special:CiteThisPage&amp;page=Carbonado_%28Java%29&amp;id=645919659" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Print/export</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Carbonado+%28Java%29">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Carbonado+%28Java%29&amp;returnto=Carbonado+%28Java%29&amp;oldid=645919659&amp;writer=rdf2latex">Download as PDF</a></li><li id="t-print"><a href="https://en.wikipedia.org/w/index.php?title=Carbonado_(Java)&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Languages</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Carbonado_(Java)" title="Carbonado (Java) – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q5038005#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 6 February 2015, at 17:34.</li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="Wikipedia_Text_of_Creative_Commons_Attribution-ShareAlike_3.html">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="../../creativecommons.org/licenses/by-sa/3.0/index.html" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="../../wikimediafoundation.org/wiki/Terms_of_Use.html">Terms of Use</a> and <a href="../../wikimediafoundation.org/wiki/Privacy_policy.html">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="../../www.wikimediafoundation.org/index.html">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../../wikimediafoundation.org/wiki/Privacy_policy.html" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="Wikipedia_About.html" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="Wikipedia_General_disclaimer.html" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="Wikipedia_Contact_us.html">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a href="../../www.mediawiki.org/wiki/Special_MyLanguage/How_to_contribute.html">Developers</a></li>
+											<li id="footer-places-cookiestatement"><a href="../../wikimediafoundation.org/wiki/Cookie_statement.html">Cookie statement</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/w/index.php?title=Carbonado_(Java)&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="../../www.wikimediafoundation.org/index.html"><img src="https://en.wikipedia.org/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="../../www.mediawiki.org/index.html"><img src="https://en.wikipedia.org/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":245,"wgHostname":"mw1253"});});</script>
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Carbonado_(Java) by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:52:45 GMT -->
+</html>

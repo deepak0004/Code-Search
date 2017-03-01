@@ -1,0 +1,16 @@
+    
+        I am developing an app that creates a large number of small, immutable Java objects. An example might be:
+
+public class Point {
+  final int x;
+  final int y;
+  final int z;
+  .....
+}
+
+
+Where it is likely that many instances of Point will need to refer to the same (x,y,z) location. 
+
+To what extent does it make sense to try to cache and re-use such objects during the lifetime of the application? Any special tricks to handle this kind of situation?
+
+                

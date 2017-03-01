@@ -1,0 +1,10 @@
+    
+        At the moment we use <a href="http://www.hsqldb.org/" rel="nofollow">HSQLDB as an embedded database, but we search for a database with less memory footprint as the data volume grows.
+
+<a href="http://developers.sun.com/javadb/" rel="nofollow">Derby / JavaDB is not an option at the moment because it stores properties globally in the system properties. So we thought of <a href="http://www.h2database.com/html/main.html" rel="nofollow">h2.
+
+While we used HSQLDB we created a Server-object, set the parameters and started it. This is described <a href="http://hsqldb.org/doc/guide/ch04.html#N10BBC" rel="nofollow">here (and given as example in the class org.hsqldb.test.TestBase).
+
+The question is: Can this be done analogous with the h2 database, too? Do you have any code samples for that? Scanning the h2-page, I did not find an example.
+
+                

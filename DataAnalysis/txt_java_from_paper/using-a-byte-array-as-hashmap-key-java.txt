@@ -1,0 +1,4 @@
+    
+        See topic - do you see any problem with this? I could also do new String(byte[]) and hash by String but it is more straightforward to use byte[]
+
+                

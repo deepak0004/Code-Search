@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Composite_pattern by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:52:50 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Composite pattern - Wikipedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Composite_pattern","wgTitle":"Composite pattern","wgCurRevisionId":755394959,"wgRevisionId":755394959,"wgArticleId":164853,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles with example Java code","Articles with example C Sharp code","Software design patterns"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Composite_pattern","wgRelevantArticleId":164853,"wgRequestId":"WHI-rwpAAD4AAeGEBK0AAACU","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgFlaggedRevsParams":{"tags":{}},"wgStableRevisionId":null,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"en","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgWikibaseItemId":"Q1061379","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.cite.styles":"ready","ext.pygments":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@1dqfd7l",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["ext.cite.a11y","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.legacy.wikibits","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.watchlist-notice","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.gadget.featured-articles-links","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.interface","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="https://en.wikipedia.org/w/load.php?debug=false&amp;lang=en&amp;modules=ext.cite.styles%7Cext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="../w/load2c8d.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../w/load18b6.css?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.29.0-wmf.7"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="https://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Composite_pattern"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Composite_pattern&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Composite_pattern&amp;action=edit"/>
+<link rel="apple-touch-icon" href="https://en.wikipedia.org/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="../static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../w/api251f.php?action=rsd"/>
+<link rel="copyright" href="../../creativecommons.org/licenses/by-sa/3.0/index.html"/>
+<link rel="canonical" href="Composite_pattern.html"/>
+<link rel="dns-prefetch" href="../../login.wikimedia.org/index.html"/>
+<link rel="dns-prefetch" href="../../meta.wikimedia.org/index.html" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Composite_pattern rootpage-Composite_pattern skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">Composite pattern</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><script>function mfTempOpenSection(id){var block=document.getElementById("mf-section-"+id);block.className+=" open-block";block.previousSibling.className+=" open-block";}</script><p>In <a href="https://en.wikipedia.org/wiki/Software_engineering" title="Software engineering">software engineering</a>, the <b>composite pattern</b> is a partitioning <a href="https://en.wikipedia.org/wiki/Design_pattern_(computer_science)" class="mw-redirect" title="Design pattern (computer science)">design pattern</a>. The composite pattern describes that a group of objects is to be treated in the same way as a single instance of an object. The intent of a composite is to "compose" objects into tree structures to represent part-whole hierarchies. Implementing the composite pattern lets clients treat individual objects and compositions uniformly.<sup id="cite_ref-GangOfFour_1-0" class="reference"><a href="#cite_note-GangOfFour-1">[1]</a></sup></p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Motivation"><span class="tocnumber">1</span> <span class="toctext">Motivation</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#When_to_use"><span class="tocnumber">2</span> <span class="toctext">When to use</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Structure"><span class="tocnumber">3</span> <span class="toctext">Structure</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Variation"><span class="tocnumber">4</span> <span class="toctext">Variation</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Example"><span class="tocnumber">5</span> <span class="toctext">Example</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#Java"><span class="tocnumber">5.1</span> <span class="toctext">Java</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#C.23"><span class="tocnumber">5.2</span> <span class="toctext">C#</span></a>
+<ul>
+<li class="toclevel-3 tocsection-8"><a href="#Simple_example"><span class="tocnumber">5.2.1</span> <span class="toctext">Simple example</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-9"><a href="#Crystal"><span class="tocnumber">5.3</span> <span class="toctext">Crystal</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#See_also"><span class="tocnumber">6</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#External_links"><span class="tocnumber">7</span> <span class="toctext">External links</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#References"><span class="tocnumber">8</span> <span class="toctext">References</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Motivation">Motivation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Composite_pattern&amp;action=edit&amp;section=1" title="Edit section: Motivation">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>When dealing with Tree-structured data, programmers often have to discriminate between a leaf-node and a branch. This makes code more complex, and therefore, error prone. The solution is an interface that allows treating complex and primitive objects uniformly. In <a href="https://en.wikipedia.org/wiki/Object-oriented_programming" title="Object-oriented programming">object-oriented programming</a>, a composite is an object designed as a composition of one-or-more similar objects, all exhibiting similar functionality. This is known as a "<a href="https://en.wikipedia.org/wiki/Has-a" title="Has-a">has-a</a>" relationship between objects.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">[2]</a></sup> The key concept is that you can manipulate a single instance of the object just as you would manipulate a group of them. The operations you can perform on all the composite objects often have a <a href="https://en.wikipedia.org/wiki/Least_common_denominator" class="mw-redirect" title="Least common denominator">least common denominator</a> relationship. For example, if defining a system to portray grouped shapes on a screen, it would be useful to define resizing a group of shapes to have the same effect (in some sense) as resizing a single shape.</p>
+<h2><span class="mw-headline" id="When_to_use">When to use</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Composite_pattern&amp;action=edit&amp;section=2" title="Edit section: When to use">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Composite should be used when clients ignore the difference between compositions of objects and individual objects.<sup id="cite_ref-GangOfFour_1-1" class="reference"><a href="#cite_note-GangOfFour-1">[1]</a></sup> If programmers find that they are using multiple objects in the same way, and often have nearly identical code to handle each of them, then composite is a good choice; it is less complex in this situation to treat primitives and composites as homogeneous.</p>
+<h2><span class="mw-headline" id="Structure">Structure</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Composite_pattern&amp;action=edit&amp;section=3" title="Edit section: Structure">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tnone">
+<div class="thumbinner" style="width:602px;"><a href="https://en.wikipedia.org/wiki/File:Composite_UML_class_diagram_(fixed).svg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Composite_UML_class_diagram_(fixed).svg/600px-Composite_UML_class_diagram_(fixed).svg.png" width="600" height="388" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Composite_UML_class_diagram_%28fixed%29.svg/900px-Composite_UML_class_diagram_%28fixed%29.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Composite_UML_class_diagram_%28fixed%29.svg/1200px-Composite_UML_class_diagram_%28fixed%29.svg.png 2x" data-file-width="960" data-file-height="620" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="https://en.wikipedia.org/wiki/File:Composite_UML_class_diagram_(fixed).svg" class="internal" title="Enlarge"></a></div>
+Composite pattern in <a href="https://en.wikipedia.org/wiki/Unified_Modeling_Language" title="Unified Modeling Language">UML</a>.</div>
+</div>
+</div>
+<dl>
+<dt>Component</dt>
+</dl>
+<ul>
+<li>is the abstraction for all components, including composite ones</li>
+<li>declares the interface for objects in the composition</li>
+<li>(optional) defines an interface for accessing a component's parent in the recursive structure, and implements it if that's appropriate</li>
+</ul>
+<dl>
+<dt>Leaf</dt>
+</dl>
+<ul>
+<li>represents leaf objects in the composition</li>
+<li>implements all Component methods</li>
+</ul>
+<dl>
+<dt>Composite</dt>
+</dl>
+<ul>
+<li>represents a composite Component (component having children)</li>
+<li>implements methods to manipulate children</li>
+<li>implements all Component methods, generally by delegating them to its children</li>
+</ul>
+<div class="thumb tnone">
+<div class="thumbinner" style="width:349px;"><a href="https://en.wikipedia.org/wiki/File:Composite_pattern_in_LePUS3.png" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/a/a9/Composite_pattern_in_LePUS3.png" width="347" height="311" class="thumbimage" data-file-width="347" data-file-height="311" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="https://en.wikipedia.org/wiki/File:Composite_pattern_in_LePUS3.png" class="internal" title="Enlarge"></a></div>
+Composite pattern in <a href="https://en.wikipedia.org/wiki/Lepus3" class="mw-redirect" title="Lepus3">LePUS3</a>.</div>
+</div>
+</div>
+<h2><span class="mw-headline" id="Variation">Variation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Composite_pattern&amp;action=edit&amp;section=4" title="Edit section: Variation">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>As it is described in <a href="https://en.wikipedia.org/wiki/Design_Patterns" title="Design Patterns">Design Patterns</a>, the pattern also involves including the child-manipulation methods in the main Component interface, not just the Composite subclass. More recent descriptions sometimes omit these methods.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">[3]</a></sup></p>
+<h2><span class="mw-headline" id="Example">Example</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Composite_pattern&amp;action=edit&amp;section=5" title="Edit section: Example">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The following example, written in <a href="Java_(programming_language).html" title="Java (programming language)">Java</a>, implements a graphic class, which can be either an ellipse or a composition of several graphics. Every graphic can be printed. In <a href="https://en.wikipedia.org/wiki/Backus-Naur_form" class="mw-redirect" title="Backus-Naur form">Backus-Naur form</a>,</p>
+<pre>
+       Graphic ::= ellipse | GraphicList
+       GraphicList ::= empty | Graphic GraphicList
+</pre>
+<p>It could be extended to implement several other shapes (rectangle, etc.) and methods (<a href="https://en.wikipedia.org/wiki/Translation_(geometry)" title="Translation (geometry)">translate</a>, etc.).</p>
+<h3><span class="mw-headline" id="Java">Java</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Composite_pattern&amp;action=edit&amp;section=6" title="Edit section: Java">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="cm">/** "Component" */</span>
+<span class="kd">interface</span> <span class="nc">Graphic</span> <span class="o">{</span>
+
+    <span class="c1">//Prints the graphic.</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">print</span><span class="o">();</span>
+<span class="o">}</span>
+
+<span class="cm">/** "Composite" */</span>
+<span class="kn">import</span> <span class="nn">java.util.List</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.ArrayList</span><span class="o">;</span>
+<span class="kd">class</span> <span class="nc">CompositeGraphic</span> <span class="kd">implements</span> <span class="n">Graphic</span> <span class="o">{</span>
+
+    <span class="c1">//Collection of child graphics.</span>
+    <span class="kd">private</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Graphic</span><span class="o">&gt;</span> <span class="n">childGraphics</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Graphic</span><span class="o">&gt;();</span>
+
+    <span class="c1">//Prints the graphic.</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">print</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">for</span> <span class="o">(</span><span class="n">Graphic</span> <span class="n">graphic</span> <span class="o">:</span> <span class="n">childGraphics</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">graphic</span><span class="o">.</span><span class="na">print</span><span class="o">();</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="c1">//Adds the graphic to the composition.</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">add</span><span class="o">(</span><span class="n">Graphic</span> <span class="n">graphic</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">childGraphics</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">graphic</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="c1">//Removes the graphic from the composition.</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">remove</span><span class="o">(</span><span class="n">Graphic</span> <span class="n">graphic</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">childGraphics</span><span class="o">.</span><span class="na">remove</span><span class="o">(</span><span class="n">graphic</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="cm">/** "Leaf" */</span>
+<span class="kd">class</span> <span class="nc">Ellipse</span> <span class="kd">implements</span> <span class="n">Graphic</span> <span class="o">{</span>
+
+    <span class="c1">//Prints the graphic.</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">print</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Ellipse"</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="cm">/** Client */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Program</span> <span class="o">{</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="c1">//Initialize four ellipses</span>
+        <span class="n">Ellipse</span> <span class="n">ellipse1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Ellipse</span><span class="o">();</span>
+        <span class="n">Ellipse</span> <span class="n">ellipse2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Ellipse</span><span class="o">();</span>
+        <span class="n">Ellipse</span> <span class="n">ellipse3</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Ellipse</span><span class="o">();</span>
+        <span class="n">Ellipse</span> <span class="n">ellipse4</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Ellipse</span><span class="o">();</span>
+
+        <span class="c1">//Initialize three composite graphics</span>
+        <span class="n">CompositeGraphic</span> <span class="n">graphic</span> <span class="o">=</span> <span class="k">new</span> <span class="n">CompositeGraphic</span><span class="o">();</span>
+        <span class="n">CompositeGraphic</span> <span class="n">graphic1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">CompositeGraphic</span><span class="o">();</span>
+        <span class="n">CompositeGraphic</span> <span class="n">graphic2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">CompositeGraphic</span><span class="o">();</span>
+
+        <span class="c1">//Composes the graphics</span>
+        <span class="n">graphic1</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">ellipse1</span><span class="o">);</span>
+        <span class="n">graphic1</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">ellipse2</span><span class="o">);</span>
+        <span class="n">graphic1</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">ellipse3</span><span class="o">);</span>
+
+        <span class="n">graphic2</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">ellipse4</span><span class="o">);</span>
+
+        <span class="n">graphic</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">graphic1</span><span class="o">);</span>
+        <span class="n">graphic</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">graphic2</span><span class="o">);</span>
+
+        <span class="c1">//Prints the complete graphic (four times the string "Ellipse").</span>
+        <span class="n">graphic</span><span class="o">.</span><span class="na">print</span><span class="o">();</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+<h3><span class="mw-headline" id="C.23">C#</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Composite_pattern&amp;action=edit&amp;section=7" title="Edit section: C#">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The following example, written in <a href="https://en.wikipedia.org/wiki/C_Sharp_(programming_language)" title="C Sharp (programming language)">C#</a>.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="k">namespace</span> <span class="nn">CompositePattern</span>
+<span class="p">{</span>
+    <span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+    <span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
+    <span class="k">using</span> <span class="nn">System.Linq</span><span class="p">;</span>
+    <span class="c1">//Client</span>
+    <span class="k">class</span> <span class="nc">Program</span>
+    <span class="p">{</span>
+        <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="c1">// initialize variables</span>
+            <span class="kt">var</span> <span class="n">compositeGraphic</span> <span class="p">=</span> <span class="k">new</span> <span class="n">CompositeGraphic</span><span class="p">();</span>
+            <span class="kt">var</span> <span class="n">compositeGraphic1</span> <span class="p">=</span> <span class="k">new</span> <span class="n">CompositeGraphic</span><span class="p">();</span>
+            <span class="kt">var</span> <span class="n">compositeGraphic2</span> <span class="p">=</span> <span class="k">new</span> <span class="n">CompositeGraphic</span><span class="p">();</span>
+
+            <span class="c1">//Add 1 Graphic to compositeGraphic1</span>
+            <span class="n">compositeGraphic1</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="k">new</span> <span class="n">Ellipse</span><span class="p">());</span>
+
+            <span class="c1">//Add 2 Graphic to compositeGraphic2</span>
+            <span class="n">compositeGraphic2</span><span class="p">.</span><span class="n">AddRange</span><span class="p">(</span><span class="k">new</span> <span class="n">Ellipse</span><span class="p">(),</span> 
+                <span class="k">new</span> <span class="nf">Ellipse</span><span class="p">());</span>
+
+            <span class="cm">/*Add 1 Graphic, compositeGraphic1, and </span>
+<span class="cm">              compositeGraphic2 to compositeGraphic */</span>
+            <span class="n">compositeGraphic</span><span class="p">.</span><span class="n">AddRange</span><span class="p">(</span><span class="k">new</span> <span class="n">Ellipse</span><span class="p">(),</span> 
+                <span class="n">compositeGraphic1</span><span class="p">,</span> 
+                <span class="n">compositeGraphic2</span><span class="p">);</span>
+
+            <span class="cm">/*Prints the complete graphic </span>
+<span class="cm">            (four times the string "Ellipse").*/</span>
+            <span class="n">compositeGraphic</span><span class="p">.</span><span class="n">Print</span><span class="p">();</span>
+            <span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">();</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="c1">//Component</span>
+    <span class="k">public</span> <span class="k">interface</span> <span class="n">IGraphic</span>
+    <span class="p">{</span>
+        <span class="k">void</span> <span class="nf">Print</span><span class="p">();</span>
+    <span class="p">}</span>
+    <span class="c1">//Leaf</span>
+    <span class="k">public</span> <span class="k">class</span> <span class="nc">Ellipse</span> <span class="p">:</span> <span class="n">IGraphic</span>
+    <span class="p">{</span>
+        <span class="c1">//Prints the graphic</span>
+    	<span class="k">public</span> <span class="k">void</span> <span class="nf">Print</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Ellipse"</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="c1">//Composite</span>
+    <span class="k">public</span> <span class="k">class</span> <span class="nc">CompositeGraphic</span> <span class="p">:</span> <span class="n">IGraphic</span>
+    <span class="p">{</span>
+        <span class="c1">//Collection of Graphics.</span>
+        <span class="k">private</span> <span class="k">readonly</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">IGraphic</span><span class="p">&gt;</span> <span class="n">graphics</span><span class="p">;</span>
+
+        <span class="c1">//Constructor </span>
+        <span class="k">public</span> <span class="nf">CompositeGraphic</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="c1">//initialize generic Collection(Composition)</span>
+            <span class="n">graphics</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">IGraphic</span><span class="p">&gt;();</span>
+        <span class="p">}</span>
+        <span class="c1">//Adds the graphic to the composition</span>
+        <span class="k">public</span> <span class="k">void</span> <span class="nf">Add</span><span class="p">(</span><span class="n">IGraphic</span> <span class="n">graphic</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">graphics</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">graphic</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="c1">//Adds multiple graphics to the composition</span>
+        <span class="k">public</span> <span class="k">void</span> <span class="nf">AddRange</span><span class="p">(</span><span class="k">params</span> <span class="n">IGraphic</span><span class="p">[]</span> <span class="n">graphic</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">graphics</span><span class="p">.</span><span class="n">AddRange</span><span class="p">(</span><span class="n">graphic</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="c1">//Removes the graphic from the composition</span>
+        <span class="k">public</span> <span class="k">void</span> <span class="nf">Delete</span><span class="p">(</span><span class="n">IGraphic</span> <span class="n">graphic</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">graphics</span><span class="p">.</span><span class="n">Remove</span><span class="p">(</span><span class="n">graphic</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="c1">//Prints the graphic.</span>
+        <span class="k">public</span> <span class="k">void</span> <span class="nf">Print</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">childGraphic</span> <span class="k">in</span> <span class="n">graphics</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">childGraphic</span><span class="p">.</span><span class="n">Print</span><span class="p">();</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="c1">//////Ad</span>
+</pre></div>
+<h4><span class="mw-headline" id="Simple_example">Simple example</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Composite_pattern&amp;action=edit&amp;section=8" title="Edit section: Simple example">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="c1">/// Treats elements as composition of one or more elements, so that components can be separated</span>
+<span class="c1">/// between one another</span>
+<span class="k">public</span> <span class="k">interface</span> <span class="n">IComposite</span>
+<span class="p">{</span>
+    <span class="k">void</span> <span class="nf">CompositeMethod</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="k">public</span> <span class="k">class</span> <span class="nc">LeafComposite</span> <span class="p">:</span><span class="n">IComposite</span> 
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">void</span> <span class="nf">CompositeMethod</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="c1">//To Do something</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">/// Elements from IComposite can be separated from others </span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">NormalComposite</span> <span class="p">:</span> <span class="n">IComposite</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">void</span> <span class="nf">CompositeMethod</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="c1">//To Do Something</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">void</span> <span class="nf">DoSomethingMore</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="c1">//Do Something more.</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+<h3><span class="mw-headline" id="Crystal">Crystal</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Composite_pattern&amp;action=edit&amp;section=9" title="Edit section: Crystal">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="n">abstract</span> <span class="k">class</span> <span class="nc">Graphic</span>
+  <span class="n">abstract</span> <span class="k">def</span> <span class="nf">print</span>
+<span class="k">end</span>
+
+<span class="c1"># Composite</span>
+<span class="k">class</span> <span class="nc">CompositeGraphic</span> <span class="o">&lt;</span> <span class="no">Graphic</span>
+  <span class="kp">private</span> <span class="n">getter</span> <span class="n">graphics</span>
+
+  <span class="k">def</span> <span class="nf">initialize</span>
+    <span class="vi">@graphics</span> <span class="o">=</span> <span class="o">[]</span> <span class="n">of</span> <span class="no">Graphic</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">print</span>
+    <span class="vi">@graphics</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">graphic</span><span class="o">|</span>
+      <span class="n">graphic</span><span class="o">.</span><span class="n">print</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">graphic</span> <span class="p">:</span> <span class="no">Graphic</span><span class="p">)</span>
+    <span class="vi">@graphics</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="n">graphic</span><span class="p">)</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">remove</span><span class="p">(</span><span class="n">graphic</span> <span class="p">:</span> <span class="no">Graphic</span><span class="p">)</span>
+    <span class="vi">@graphics</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">graphic</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="c1"># Leaf</span>
+<span class="k">class</span> <span class="nc">Ellipse</span> <span class="o">&lt;</span> <span class="no">Graphic</span>
+  <span class="kp">private</span> <span class="n">getter</span> <span class="nb">name</span> <span class="p">:</span> <span class="nb">String</span>
+
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="vi">@name</span><span class="p">)</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">print</span>
+    <span class="nb">puts</span> <span class="s2">"Ellipse </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="k">class</span> <span class="nc">Program</span>
+  <span class="k">def</span> <span class="nf">initialize</span>
+    <span class="n">ellipse1</span> <span class="o">=</span> <span class="no">Ellipse</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">"1"</span><span class="p">)</span>
+    <span class="n">ellipse2</span> <span class="o">=</span> <span class="no">Ellipse</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">"2"</span><span class="p">)</span>
+    <span class="n">ellipse3</span> <span class="o">=</span> <span class="no">Ellipse</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">"3"</span><span class="p">)</span>
+    <span class="n">ellipse4</span> <span class="o">=</span> <span class="no">Ellipse</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">"4"</span><span class="p">)</span>
+
+    <span class="n">graphic</span> <span class="o">=</span> <span class="no">CompositeGraphic</span><span class="o">.</span><span class="n">new</span>
+    <span class="n">graphic1</span> <span class="o">=</span> <span class="no">CompositeGraphic</span><span class="o">.</span><span class="n">new</span>
+    <span class="n">graphic2</span> <span class="o">=</span> <span class="no">CompositeGraphic</span><span class="o">.</span><span class="n">new</span>
+
+    <span class="c1"># graphic 1 contains 3 ellipses</span>
+    <span class="n">graphic1</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">ellipse1</span><span class="p">)</span>
+    <span class="n">graphic1</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">ellipse2</span><span class="p">)</span>
+    <span class="n">graphic1</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">ellipse3</span><span class="p">)</span>
+
+    <span class="c1"># graphic 2 contains 1 ellipse</span>
+    <span class="n">graphic2</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">ellipse4</span><span class="p">)</span>
+
+    <span class="c1"># graphic contains both graphic 1 and graphic 2</span>
+    <span class="n">graphic</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">graphic1</span><span class="p">)</span>
+    <span class="n">graphic</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">graphic2</span><span class="p">)</span>
+
+    <span class="c1"># now print the graphic</span>
+    <span class="n">graphic</span><span class="o">.</span><span class="n">print</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="no">Program</span><span class="o">.</span><span class="n">new</span>
+</pre></div>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Composite_pattern&amp;action=edit&amp;section=10" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Perl_Design_Patterns_Book" title="Perl Design Patterns Book">Perl Design Patterns Book</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Mixin" title="Mixin">Mixin</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Law_of_Demeter" title="Law of Demeter">Law of Demeter</a></li>
+</ul>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Composite_pattern&amp;action=edit&amp;section=11" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table role="presentation" class="mbox-small plainlinks sistersitebox" style="border:1px solid #aaa;background-color:#f9f9f9">
+<tr>
+<td class="mbox-image"><a href="https://en.wikipedia.org/wiki/File:Wikibooks-logo-en-noslogan.svg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/40px-Wikibooks-logo-en-noslogan.svg.png" width="40" height="40" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/60px-Wikibooks-logo-en-noslogan.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/80px-Wikibooks-logo-en-noslogan.svg.png 2x" data-file-width="400" data-file-height="400" /></a></td>
+<td class="mbox-text plainlist">The Wikibook <i><a href="http://en.wikibooks.org/wiki/Computer_Science_Design_Patterns" class="extiw" title="wikibooks:Computer Science Design Patterns">Computer Science Design Patterns</a></i> has a page on the topic of: <i><b><a href="http://en.wikibooks.org/wiki/Computer_Science_Design_Patterns/Composite" class="extiw" title="wikibooks:Computer Science Design Patterns/Composite">Composite implementations in various languages</a></b></i></td>
+</tr>
+</table>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://c2.com/cgi/wiki?CompositePattern">Composite pattern description from the Portland Pattern Repository</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.lepus.org.uk/ref/companion/Composite.xml">Composite pattern in UML and in LePUS3, a formal modelling language</a></li>
+<li><a rel="nofollow" class="external text" href="http://search.cpan.org/dist/Class-Delegation/lib/Class/Delegation.pm">Class::Delegation on CPAN</a></li>
+<li><a rel="nofollow" class="external text" href="http://aspn.activestate.com/ASPN/Cookbook/Python/Recipe/149878">"The End of Inheritance: Automatic Run-time Interface Building for Aggregated Objects"</a> by <a href="https://en.wikipedia.org/w/index.php?title=Paul_Baranowski&amp;action=edit&amp;redlink=1" class="new" title="Paul Baranowski (page does not exist)">Paul Baranowski</a></li>
+<li><a rel="nofollow" class="external text" href="http://perfectjpattern.sourceforge.net/dp-composite.html">PerfectJPattern Open Source Project</a>, Provides componentized implementation of the Composite Pattern in Java</li>
+<li><a rel="nofollow" class="external autonumber" href="http://www.theresearchkitchen.com/blog/archives/57">[1]</a> A persistent Java-based implementation</li>
+<li><a rel="nofollow" class="external text" href="http://sourcemaking.com/design_patterns/composite">Composite Design Pattern</a></li>
+<li><a rel="nofollow" class="external text" href="http://patterns.pl/composite.html">Composite Design Pattern implementation example</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Composite_pattern&amp;action=edit&amp;section=12" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-GangOfFour-1"><span class="mw-cite-backlink">^ <a href="#cite_ref-GangOfFour_1-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-GangOfFour_1-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation book">Gamma, Erich; Richard Helm; Ralph Johnson; John M. Vlissides (1995). <i>Design Patterns: Elements of Reusable Object-Oriented Software</i>. Addison-Wesley. p.&#160;395. <a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="https://en.wikipedia.org/wiki/Special:BookSources/0-201-63361-2" title="Special:BookSources/0-201-63361-2">0-201-63361-2</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AComposite+pattern&amp;rft.au=Gamma%2C+Erich&amp;rft.au=John+M.+Vlissides&amp;rft.au=Ralph+Johnson&amp;rft.au=Richard+Helm&amp;rft.btitle=Design+Patterns%3A+Elements+of+Reusable+Object-Oriented+Software&amp;rft.date=1995&amp;rft.genre=book&amp;rft.isbn=0-201-63361-2&amp;rft.pages=395&amp;rft.pub=Addison-Wesley&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><cite class="citation book">Scott Walters (2004). <a rel="nofollow" class="external text" href="http://perldesignpatterns.com/?CompositePattern"><i>Perl Design Patterns Book</i></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AComposite+pattern&amp;rft.au=Scott+Walters&amp;rft.btitle=Perl+Design+Patterns+Book&amp;rft.date=2004&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fperldesignpatterns.com%2F%3FCompositePattern&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><cite class="citation web">Geary, David (13 Sep 2002). <a rel="nofollow" class="external text" href="http://www.javaworld.com/javaworld/jw-09-2002/jw-0913-designpatterns.html">"A look at the Composite design pattern"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AComposite+pattern&amp;rft.aufirst=David&amp;rft.aulast=Geary&amp;rft.btitle=A+look+at+the+Composite+design+pattern&amp;rft.date=2002-09-13&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.javaworld.com%2Fjavaworld%2Fjw-09-2002%2Fjw-0913-designpatterns.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+</div>
+<div role="navigation" class="navbox" aria-labelledby="Software_design_patterns" style="padding:3px">
+<table class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="https://en.wikipedia.org/wiki/Template:Design_Patterns_patterns" title="Template:Design Patterns patterns"><abbr title="View this template" style=";;background:none transparent;border:none;">v</abbr></a></li>
+<li class="nv-talk"><a href="https://en.wikipedia.org/wiki/Template_talk:Design_Patterns_patterns" title="Template talk:Design Patterns patterns"><abbr title="Discuss this template" style=";;background:none transparent;border:none;">t</abbr></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Design_Patterns_patterns&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;">e</abbr></a></li>
+</ul>
+</div>
+<div id="Software_design_patterns" style="font-size:114%"><a href="https://en.wikipedia.org/wiki/Software_design_pattern" title="Software design pattern">Software design patterns</a></div>
+</th>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Design_Patterns" title="Design Patterns">Gang of Four<br />
+patterns</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em"></div>
+<table class="nowraplinks navbox-subgroup" style="border-spacing:0">
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;"><a href="https://en.wikipedia.org/wiki/Creational_pattern" title="Creational pattern">Creational</a></div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Abstract_factory_pattern.html" title="Abstract factory pattern">Abstract factory</a></li>
+<li><a href="Builder_pattern.html" title="Builder pattern">Builder</a></li>
+<li><a href="Factory_method_pattern.html" title="Factory method pattern">Factory method</a></li>
+<li><a href="Prototype_pattern.html" title="Prototype pattern">Prototype</a></li>
+<li><a href="Singleton_pattern.html" title="Singleton pattern">Singleton</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;"><a href="https://en.wikipedia.org/wiki/Structural_pattern" title="Structural pattern">Structural</a></div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Adapter_pattern.html" title="Adapter pattern">Adapter</a></li>
+<li><a href="Bridge_pattern.html" title="Bridge pattern">Bridge</a></li>
+<li><strong class="selflink">Composite</strong></li>
+<li><a href="Decorator_pattern.html" title="Decorator pattern">Decorator</a></li>
+<li><a href="Facade_pattern.html" title="Facade pattern">Facade</a></li>
+<li><a href="Flyweight_pattern.html" title="Flyweight pattern">Flyweight</a></li>
+<li><a href="Proxy_pattern.html" title="Proxy pattern">Proxy</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;"><a href="https://en.wikipedia.org/wiki/Behavioral_pattern" title="Behavioral pattern">Behavioral</a></div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Chain-of-responsibility_pattern.html" title="Chain-of-responsibility pattern">Chain of responsibility</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Command_pattern" title="Command pattern">Command</a></li>
+<li><a href="Interpreter_pattern.html" title="Interpreter pattern">Interpreter</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Iterator_pattern" title="Iterator pattern">Iterator</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Mediator_pattern" title="Mediator pattern">Mediator</a></li>
+<li><a href="Memento_pattern.html" title="Memento pattern">Memento</a></li>
+<li><a href="Observer_pattern.html" title="Observer pattern">Observer</a></li>
+<li><a href="https://en.wikipedia.org/wiki/State_pattern" title="State pattern">State</a></li>
+<li><a href="Strategy_pattern.html" title="Strategy pattern">Strategy</a></li>
+<li><a href="Template_method_pattern.html" title="Template method pattern">Template method</a></li>
+<li><a href="Visitor_pattern.html" title="Visitor pattern">Visitor</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Concurrency_pattern" title="Concurrency pattern">Concurrency<br />
+patterns</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Active_object" title="Active object">Active object</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Balking_pattern" title="Balking pattern">Balking</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Binding_properties_pattern" title="Binding properties pattern">Binding properties</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Double-checked_locking" title="Double-checked locking">Double-checked locking</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Asynchronous_method_invocation" title="Asynchronous method invocation">Event-based asynchronous</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Guarded_suspension" title="Guarded suspension">Guarded suspension</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Join-pattern" title="Join-pattern">Join</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Lock_pattern" class="mw-redirect" title="Lock pattern">Lock</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Monitor_(synchronization)" title="Monitor (synchronization)">Monitor</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Proactor_pattern" title="Proactor pattern">Proactor</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Reactor_pattern" title="Reactor pattern">Reactor</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Readers–writer_lock" title="Readers–writer lock">Read write lock</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Scheduler_pattern" class="mw-redirect" title="Scheduler pattern">Scheduler</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Thread_pool_pattern" class="mw-redirect" title="Thread pool pattern">Thread pool</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Thread-local_storage" title="Thread-local storage">Thread-local storage</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Architectural_pattern" title="Architectural pattern">Architectural<br />
+patterns</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Front_controller" title="Front controller">Front controller</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Interceptor_pattern" title="Interceptor pattern">Interceptor</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Model–view–controller" title="Model–view–controller">MVC</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Multitier_architecture" title="Multitier architecture"><i>n</i>-tier</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Specification_pattern" title="Specification pattern">Specification</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Publish–subscribe_pattern" title="Publish–subscribe pattern">Publish–subscribe</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Naked_objects" title="Naked objects">Naked objects</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Service_locator_pattern" title="Service locator pattern">Service locator</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Active_record_pattern" title="Active record pattern">Active record</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Identity_map_pattern" title="Identity map pattern">Identity map</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Data_access_object" title="Data access object">Data access object</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Data_transfer_object" title="Data transfer object">Data transfer object</a></li>
+<li><a href="https://en.wikipedia.org/w/index.php?title=Action%E2%80%93Domain%E2%80%93Responder&amp;action=edit&amp;redlink=1" class="new" title="Action–Domain–Responder (page does not exist)">ADR</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Inversion_of_control" title="Inversion of control">Inversion of control</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Other<br />
+patterns</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Blackboard_design_pattern" class="mw-redirect" title="Blackboard design pattern">Blackboard</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Business_delegate_pattern" title="Business delegate pattern">Business delegate</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Composite_entity_pattern" title="Composite entity pattern">Composite entity</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Dependency_injection" title="Dependency injection">Dependency injection</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Intercepting_filter_pattern" title="Intercepting filter pattern">Intercepting filter</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Lazy_loading" title="Lazy loading">Lazy loading</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Mock_object" title="Mock object">Mock object</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Null_object_pattern" class="mw-redirect" title="Null object pattern">Null object</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Object_pool_pattern" title="Object pool pattern">Object pool</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Servant_(design_pattern)" title="Servant (design pattern)">Servant</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Twin_pattern" title="Twin pattern">Twin</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Type_Tunnel_pattern" title="Type Tunnel pattern">Type tunnel</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Books</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><i><a href="https://en.wikipedia.org/wiki/Design_Patterns" title="Design Patterns">Design Patterns</a></i></li>
+<li><i><a href="https://en.wikipedia.org/wiki/Enterprise_Integration_Patterns" title="Enterprise Integration Patterns">Enterprise Integration Patterns</a></i></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">People</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Christopher_Alexander" title="Christopher Alexander">Christopher Alexander</a></li>
+<li><a href="Erich_Gamma.html" title="Erich Gamma">Erich Gamma</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Ralph_Johnson_(computer_scientist)" title="Ralph Johnson (computer scientist)">Ralph Johnson</a></li>
+<li><a href="https://en.wikipedia.org/wiki/John_Vlissides" title="John Vlissides">John Vlissides</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Grady_Booch" title="Grady Booch">Grady Booch</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Kent_Beck" title="Kent Beck">Kent Beck</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Ward_Cunningham" title="Ward Cunningham">Ward Cunningham</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Martin_Fowler" title="Martin Fowler">Martin Fowler</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Robert_Cecil_Martin" title="Robert Cecil Martin">Robert Martin</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Jim_Coplien" title="Jim Coplien">Jim Coplien</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Douglas_C._Schmidt" title="Douglas C. Schmidt">Douglas Schmidt</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Linda_Rising" title="Linda Rising">Linda Rising</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Communities</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/The_Hillside_Group" title="The Hillside Group">The Hillside Group</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Portland_Pattern_Repository" title="Portland Pattern Repository">The Portland Pattern Repository</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1278
+Cached time: 20161217194335
+Cache expiry: 2592000
+Dynamic content: false
+CPU time usage: 0.084 seconds
+Real time usage: 0.125 seconds
+Preprocessor visited node count: 828/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 33935/2097152 bytes
+Template argument size: 1651/2097152 bytes
+Highest expansion depth: 11/40
+Expensive parser function count: 0/500
+Lua time usage: 0.027/10.000 seconds
+Lua memory usage: 1.99 MB/50 MB
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   83.646      1 - -total
+ 49.34%   41.275      1 - Template:Reflist
+ 37.58%   31.434      2 - Template:Cite_book
+ 26.47%   22.142      1 - Template:Design_Patterns_Patterns
+ 25.95%   21.703      2 - Template:Navbox
+ 24.02%   20.091      1 - Template:Wikibooks
+ 22.29%   18.646      1 - Template:Sister_project
+ 20.25%   16.936      1 - Template:Side_box
+  9.02%    7.546      1 - Template:Navbox_subgroup
+  4.21%    3.524      1 - Template:Cite_web
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:164853-0!*!0!!en!4!* and timestamp 20161217194423 and revision id 755394959
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Composite_pattern&amp;oldid=755394959">https://en.wikipedia.org/w/index.php?title=Composite_pattern&amp;oldid=755394959</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Help_Category.html" title="Help:Category">Categories</a>: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Software_design_patterns" title="Category:Software design patterns">Software design patterns</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="Category_Articles_with_example_Java_code.html" title="Category:Articles with example Java code">Articles with example Java code</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Articles_with_example_C_Sharp_code" title="Category:Articles with example C Sharp code">Articles with example C Sharp code</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="Special_MyTalk.html" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="Special_MyContributions.html" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&amp;returnto=Composite+pattern" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Composite+pattern" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="Composite_pattern.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+															<li  id="ca-talk"><span><a href="https://en.wikipedia.org/wiki/Talk:Composite_pattern"  title="Discussion about the content page [t]" accesskey="t" rel="discussion">Talk</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="Composite_pattern.html" >Read</a></span></li>
+															<li id="ca-edit"><span><a href="https://en.wikipedia.org/w/index.php?title=Composite_pattern&amp;action=edit"  title="Edit this page [e]" accesskey="e">Edit</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="https://en.wikipedia.org/w/index.php?title=Composite_pattern&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="https://en.wikipedia.org/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="Main_Page.html"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="Portal_Contents.html" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="Portal_Featured_content.html" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="Portal_Current_events.html" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="https://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="../../shop.wikimedia.org/index.html" title="Visit the Wikipedia store">Wikipedia store</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Interaction</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-help"><a href="Help_Contents.html" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="Wikipedia_About.html" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="Wikipedia_Community_portal.html" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="Wikipedia_Contact_us.html" title="How to contact Wikipedia">Contact page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="https://en.wikipedia.org/wiki/Special:WhatLinksHere/Composite_pattern" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://en.wikipedia.org/wiki/Special:RecentChangesLinked/Composite_pattern" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="Wikipedia_File_Upload_Wizard.html" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="https://en.wikipedia.org/w/index.php?title=Composite_pattern&amp;oldid=755394959" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://en.wikipedia.org/w/index.php?title=Composite_pattern&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q1061379" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="https://en.wikipedia.org/w/index.php?title=Special:CiteThisPage&amp;page=Composite_pattern&amp;id=755394959" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Print/export</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Composite+pattern">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Composite+pattern&amp;returnto=Composite+pattern&amp;oldid=755394959&amp;writer=rdf2latex">Download as PDF</a></li><li id="t-print"><a href="https://en.wikipedia.org/w/index.php?title=Composite_pattern&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-wikibase-otherprojects' aria-labelledby='p-wikibase-otherprojects-label'>
+			<h3 id='p-wikibase-otherprojects-label'>In other projects</h3>
+
+			<div class="body">
+									<ul>
+						<li class="wb-otherproject-link wb-otherproject-commons"><a href="https://commons.wikimedia.org/wiki/Category:Composite_pattern" hreflang="en">Wikimedia Commons</a></li><li class="wb-otherproject-link wb-otherproject-wikibooks"><a href="https://en.wikibooks.org/wiki/Computer_Science_Design_Patterns/Composite" hreflang="en">Wikibooks</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Languages</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-bg"><a href="https://bg.wikipedia.org/wiki/Композиция_(шаблон)" title="Композиция (шаблон) – Bulgarian" lang="bg" hreflang="bg" class="interlanguage-link-target">Български</a></li><li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Composite" title="Composite – Catalan" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Composite" title="Composite – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Kompositum_(Entwurfsmuster)" title="Kompositum (Entwurfsmuster) – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Composite_(patrón_de_diseño)" title="Composite (patrón de diseño) – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Objet_composite" title="Objet composite – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-gl"><a href="https://gl.wikipedia.org/wiki/Composite_(padrón_de_deseño)" title="Composite (padrón de deseño) – Galician" lang="gl" hreflang="gl" class="interlanguage-link-target">Galego</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/컴포지트_패턴" title="컴포지트 패턴 – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-hy"><a href="https://hy.wikipedia.org/wiki/Կազմող_(նախագծման_ձևանմուշ)" title="Կազմող (նախագծման ձևանմուշ) – Armenian" lang="hy" hreflang="hy" class="interlanguage-link-target">Հայերեն</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Composite" title="Composite – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/Összetétel_programtervezési_minta" title="Összetétel programtervezési minta – Hungarian" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/Composite_パターン" title="Composite パターン – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Kompozyt_(wzorzec_projektowy)" title="Kompozyt (wzorzec projektowy) – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Composite" title="Composite – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/Компоновщик_(шаблон_проектирования)" title="Компоновщик (шаблон проектирования) – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-th"><a href="https://th.wikipedia.org/wiki/คอมโพสิตแพตเทิร์น" title="คอมโพสิตแพตเทิร์น – Thai" lang="th" hreflang="th" class="interlanguage-link-target">ไทย</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/Компонувальник_(шаблон_проектування)" title="Компонувальник (шаблон проектування) – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-vi"><a href="https://vi.wikipedia.org/wiki/Composite_pattern" title="Composite pattern – Vietnamese" lang="vi" hreflang="vi" class="interlanguage-link-target">Tiếng Việt</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q1061379#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 17 December 2016, at 19:44.</li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="Wikipedia_Text_of_Creative_Commons_Attribution-ShareAlike_3.html">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="../../creativecommons.org/licenses/by-sa/3.0/index.html" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="../../wikimediafoundation.org/wiki/Terms_of_Use.html">Terms of Use</a> and <a href="../../wikimediafoundation.org/wiki/Privacy_policy.html">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="../../www.wikimediafoundation.org/index.html">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../../wikimediafoundation.org/wiki/Privacy_policy.html" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="Wikipedia_About.html" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="Wikipedia_General_disclaimer.html" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="Wikipedia_Contact_us.html">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a href="../../www.mediawiki.org/wiki/Special_MyLanguage/How_to_contribute.html">Developers</a></li>
+											<li id="footer-places-cookiestatement"><a href="../../wikimediafoundation.org/wiki/Cookie_statement.html">Cookie statement</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/w/index.php?title=Composite_pattern&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="../../www.wikimediafoundation.org/index.html"><img src="https://en.wikipedia.org/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="../../www.mediawiki.org/index.html"><img src="https://en.wikipedia.org/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":71,"wgHostname":"mw1267"});});</script>
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Composite_pattern by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:52:50 GMT -->
+</html>

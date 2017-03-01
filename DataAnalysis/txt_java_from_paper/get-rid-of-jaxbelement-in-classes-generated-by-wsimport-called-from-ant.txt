@@ -1,0 +1,45 @@
+    
+        I have the following problem:
+I'm using the wsimport ant task to create a webservice client (for salesforce.com).
+Everything's working fine but the generated classes all use this strange JAXBElement class for all bean properties. 
+
+Eg:
+
+
+public void setLastName(JAXBElement&lt;String&gt; value) {
+    this.lastName = ((JAXBElement&lt;String&gt; ) value);
+}
+
+public JAXBElement&lt;String&gt; getCountry() {
+    return country;
+}
+
+
+
+Instead of wrapping all classes in JAXBElement I'd like to have simple methods like setLastName(String newLastName).
+That's how I'm calling the wsimport task.
+
+&lt;wsimport debug="false" verbose="false" keep="${keep}" 
+   extension="${extension}" destdir="${tmp.metro}" 
+   wsdl="${licensing.wsdl}" 
+   sourcedestdir="${licensingws.generated.src}"
+
+   &gt;
+
+   &lt;binding dir="${basedir}/etc" includes="${client.binding}"   
+     /&gt;
+    &lt;arg value="-B-XautoNameResolution" /&gt;
+
+  &lt;/wsimport&gt;
+
+
+The task is defined this way:
+
+
+  
+ 
+
+Does anybody know what I have to set so that wsimport generates the classes the way I want?
+Thanks a lot in advance!!!
+
+                

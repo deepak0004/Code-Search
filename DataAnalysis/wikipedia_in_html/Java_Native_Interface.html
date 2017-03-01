@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Java_Native_Interface by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:31 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Java Native Interface - Wikipedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Java_Native_Interface","wgTitle":"Java Native Interface","wgCurRevisionId":758229208,"wgRevisionId":758229208,"wgArticleId":230828,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles needing cleanup from April 2009","All articles needing cleanup","Cleanup tagged articles without a reason field from April 2009","Wikipedia pages needing cleanup from April 2009","All articles with dead external links","Articles with dead external links from June 2015","Java platform"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Java_Native_Interface","wgRelevantArticleId":230828,"wgRequestId":"WHL0YQpAAEUAABGDrIAAAABJ","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgFlaggedRevsParams":{"tags":{}},"wgStableRevisionId":null,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"en","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgWikibaseItemId":"Q168492","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.cite.styles":"ready","ext.pygments":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@1dqfd7l",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["ext.cite.a11y","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.legacy.wikibits","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.watchlist-notice","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.gadget.featured-articles-links","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.interface","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="https://en.wikipedia.org/w/load.php?debug=false&amp;lang=en&amp;modules=ext.cite.styles%7Cext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="../w/load2c8d.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../w/load18b6.css?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.29.0-wmf.7"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="https://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Java_Native_Interface"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Java_Native_Interface&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Java_Native_Interface&amp;action=edit"/>
+<link rel="apple-touch-icon" href="https://en.wikipedia.org/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="../static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../w/api251f.php?action=rsd"/>
+<link rel="copyright" href="../../creativecommons.org/licenses/by-sa/3.0/index.html"/>
+<link rel="canonical" href="Java_Native_Interface.html"/>
+<link rel="dns-prefetch" href="../../login.wikimedia.org/index.html"/>
+<link rel="dns-prefetch" href="../../meta.wikimedia.org/index.html" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Java_Native_Interface rootpage-Java_Native_Interface skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">Java Native Interface</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><script>function mfTempOpenSection(id){var block=document.getElementById("mf-section-"+id);block.className+=" open-block";block.previousSibling.className+=" open-block";}</script><div role="note" class="hatnote">"JNI" redirects here. For the city in the province of Buenos Aires, see <a href="https://en.wikipedia.org/wiki/Junín,_Buenos_Aires" title="Junín, Buenos Aires">Junín, Buenos Aires</a>.</div>
+<table class="plainlinks metadata ambox ambox-style ambox-Cleanup" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px"><img alt="" src="http://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/40px-Edit-clear.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/60px-Edit-clear.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/80px-Edit-clear.svg.png 2x" data-file-width="48" data-file-height="48" /></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article may <b>require <a href="https://en.wikipedia.org/wiki/Wikipedia:Cleanup" title="Wikipedia:Cleanup">cleanup</a></b> to meet Wikipedia's <a href="https://en.wikipedia.org/wiki/Wikipedia:Manual_of_Style" title="Wikipedia:Manual of Style">quality standards</a>. <span class="hide-when-compact">No <a href="https://en.wikipedia.org/wiki/Template:Cleanup/doc" title="Template:Cleanup/doc">cleanup reason</a> has been specified. Please help <a class="external text" href="http://en.wikipedia.org/w/index.php?title=Java_Native_Interface&amp;action=edit">improve this article</a> if you can.</span> <small><i>(April 2009)</i></small> <small class="hide-when-compact"><i>(<a href="https://en.wikipedia.org/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></span></td>
+</tr>
+</table>
+<p>In <a href="https://en.wikipedia.org/wiki/Computing" title="Computing">computing</a>, the <b>Java Native Interface</b> (<b>JNI</b>) is a <a href="https://en.wikipedia.org/wiki/Software_framework" title="Software framework">programming framework</a> that enables <a href="Java_(programming_language).html" title="Java (programming language)">Java</a> code running in a <a href="Java_Virtual_Machine.html" class="mw-redirect" title="Java Virtual Machine">Java Virtual Machine</a> (JVM) to call and be called by<sup id="cite_ref-role_1-0" class="reference"><a href="#cite_note-role-1">[1]</a></sup> native applications (programs specific to a hardware and <a href="https://en.wikipedia.org/wiki/Operating_system" title="Operating system">operating system</a> platform) and libraries written in other languages such as <a href="https://en.wikipedia.org/wiki/C_(programming_language)" title="C (programming language)">C</a>, <a href="https://en.wikipedia.org/wiki/C++" title="C++">C++</a> and <a href="https://en.wikipedia.org/wiki/Assembly_language" title="Assembly language">assembly</a>.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Purpose_and_features"><span class="tocnumber">1</span> <span class="toctext">Purpose and features</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Pitfalls"><span class="tocnumber">2</span> <span class="toctext">Pitfalls</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#How_the_JNI_works"><span class="tocnumber">3</span> <span class="toctext">How the JNI works</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Mapping_types"><span class="tocnumber">3.1</span> <span class="toctext">Mapping types</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#JNIEnv.2A"><span class="tocnumber">3.2</span> <span class="toctext">JNIEnv*</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#Advanced_uses"><span class="tocnumber">4</span> <span class="toctext">Advanced uses</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#Native_AWT_painting"><span class="tocnumber">4.1</span> <span class="toctext">Native AWT painting</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Access_to_assembly_code"><span class="tocnumber">4.2</span> <span class="toctext">Access to assembly code</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#Microsoft.27s_J.2FDirect_and_RNI"><span class="tocnumber">5</span> <span class="toctext">Microsoft's J/Direct and RNI</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Examples"><span class="tocnumber">6</span> <span class="toctext">Examples</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#HelloWorld"><span class="tocnumber">6.1</span> <span class="toctext">HelloWorld</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-12"><a href="#See_also"><span class="tocnumber">7</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#References"><span class="tocnumber">8</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#Bibliography"><span class="tocnumber">9</span> <span class="toctext">Bibliography</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#External_links"><span class="tocnumber">10</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Purpose_and_features">Purpose and features</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Native_Interface&amp;action=edit&amp;section=1" title="Edit section: Purpose and features">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>JNI enables programmers to write native methods to handle situations when an application cannot be written entirely in the Java programming language, e.g. when the standard Java <a href="https://en.wikipedia.org/wiki/Class_(computer_science)" class="mw-redirect" title="Class (computer science)">class</a> <a href="https://en.wikipedia.org/wiki/Library_(computer_science)" class="mw-redirect" title="Library (computer science)">library</a> does not support the platform-specific features or program library. It is also used to modify an existing application—written in another programming language—to be accessible to Java applications. Many of the standard library classes depend on JNI to provide functionality to the developer and the user, e.g. file I/O and sound capabilities. Including performance- and platform-sensitive API implementations in the standard library allows all Java applications to access this functionality in a safe and platform-independent manner.</p>
+<p>The JNI framework lets a native method use Java <a href="https://en.wikipedia.org/wiki/Object_(computer_science)" title="Object (computer science)">objects</a> in the same way that Java code uses these objects. A native method can create Java objects and then inspect and use these objects to perform its tasks. A native method can also inspect and use objects created by Java application code.</p>
+<h2><span class="mw-headline" id="Pitfalls">Pitfalls</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Native_Interface&amp;action=edit&amp;section=2" title="Edit section: Pitfalls">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li>Subtle errors in the use of JNI can destabilize the entire <a href="https://en.wikipedia.org/wiki/JVM" class="mw-redirect" title="JVM">JVM</a> in ways that are very difficult to reproduce and debug.</li>
+<li>Only applications and signed applets can invoke JNI.</li>
+<li>An application that relies on JNI loses the platform portability Java offers (a partial workaround is to write a separate implementation of JNI code for each platform and have Java detect the operating system and load the correct one at runtime).</li>
+<li>The JNI framework does not provide any automatic garbage collection for non-JVM memory resources allocated by code executing on the native side. Consequently, native side code (such as <a href="https://en.wikipedia.org/wiki/Assembly_language" title="Assembly language">assembly language</a>) assumes the responsibility for explicitly releasing any such memory resources that the native code acquires.</li>
+<li>On Linux and Solaris platforms, if the native code registers itself as a signal handler, it could intercept signals intended for the JVM. A <a href="Chain-of-responsibility_pattern.html" title="Chain-of-responsibility pattern">chain of responsibility</a> can be used to allow native code to better inter-operate with the JVM.</li>
+<li>On Windows platforms, <a href="https://en.wikipedia.org/wiki/Microsoft-specific_exception_handling_mechanisms#Structured_Exception_Handling" title="Microsoft-specific exception handling mechanisms">Structured Exception Handling (SEH)</a> may be employed to wrap native code in SEH try/catch blocks so as to capture machine (CPU/FPU) generated software interrupts (such as NULL pointer access violations and divide-by-zero operations), and to handle these situations before the interrupt is propagated back up into the JVM (i.e. Java side code), in all likelihood resulting in an unhandled exception.</li>
+<li>The encoding used for the NewStringUTF, GetStringUTFLength, GetStringUTFChars, ReleaseStringUTFChars and GetStringUTFRegion functions is "modified UTF-8",<sup id="cite_ref-jniModifiedUtf_2-0" class="reference"><a href="#cite_note-jniModifiedUtf-2">[2]</a></sup> which is not valid UTF-8 for all inputs, but a different encoding really. The null character (U+0000) and codepoints not on the <a href="https://en.wikipedia.org/wiki/Plane_(Unicode)#Basic_Multilingual_Plane" title="Plane (Unicode)">Basic Multilingual Plane</a> (greater than or equal to U+10000, i.e. those represented as <i>surrogate pairs</i> in UTF-16) are encoded differently in modified UTF-8. Many programs actually use these functions incorrectly and treat the UTF-8 strings returned or passed into the functions as standard UTF-8 strings instead of modified UTF-8 strings. Programs should use the NewString, GetStringLength, GetStringChars, ReleaseStringChars, GetStringRegion, GetStringCritical and ReleaseStringCritical functions, which use UTF-16LE encoding on little-endian architectures and UTF-16BE on big-endian architectures, and then use a UTF-16 to UTF-8 conversion routine.</li>
+<li>JNI incurs considerable overhead and performance loss under certain circumstances:<sup id="cite_ref-StackOverflow:_What_makes_JNI_calls_slow.3F_3-0" class="reference"><a href="#cite_note-StackOverflow:_What_makes_JNI_calls_slow.3F-3">[3]</a></sup>
+<ul>
+<li>Function calls to JNI methods are expensive, especially when calling a method repeatedly.</li>
+<li>Native methods are not inlined by the JVM, nor can the method be <a href="https://en.wikipedia.org/wiki/Just-in-time_compilation" title="Just-in-time compilation">JIT compiled</a>, as the method is already compiled.</li>
+<li>A Java array may be copied for access in native code, and later copied back. The cost can be linear in the size of the array.</li>
+<li>If the method is passed an object, or needs to make a callback, then the native method will likely be making its own calls to the JVM. Accessing Java fields, methods and types from the native code requires something similar to <a href="https://en.wikipedia.org/wiki/Reflection_(computer_programming)" title="Reflection (computer programming)">reflection</a>. Signatures are specified in strings and queried from the JVM. This is both slow and error-prone.</li>
+<li>Java Strings are objects, have length and are encoded. Accessing or creating a string may require an O(n) copy.</li>
+</ul>
+</li>
+</ul>
+<h2><span class="mw-headline" id="How_the_JNI_works">How the JNI works</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Native_Interface&amp;action=edit&amp;section=3" title="Edit section: How the JNI works">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>In the JNI framework, native functions are implemented in separate .c or .cpp files. (C++ provides a slightly simpler interface with JNI.) When the JVM invokes the function, it passes a <code>JNIEnv</code> pointer, a <code>jobject</code> pointer, and any Java arguments declared by the Java method. A JNI function may look like this:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="n">JNIEXPORT</span> <span class="kt">void</span> <span class="n">JNICALL</span> <span class="nf">Java_ClassName_MethodName</span>
+  <span class="p">(</span><span class="n">JNIEnv</span> <span class="o">*</span><span class="n">env</span><span class="p">,</span> <span class="n">jobject</span> <span class="n">obj</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="cm">/*Implement Native Method Here*/</span>
+<span class="p">}</span>
+</pre></div>
+<p>The <i><code>env</code></i> pointer is a structure that contains the interface to the JVM. It includes all of the functions necessary to interact with the JVM and to work with Java objects. Example JNI functions are converting native arrays to/from Java arrays, converting native strings to/from Java strings, instantiating objects, throwing exceptions, etc. Basically, anything that Java code can do can be done using <code>JNIEnv</code>, albeit with considerably less ease.</p>
+<p>The argument <i><code>obj</code></i> is a reference to the Java object inside which this native method has been declared.</p>
+<p>For example, the following converts a Java string to a native string:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="c1">//C++ code</span>
+<span class="k">extern</span> <span class="s">"C"</span>
+<span class="n">JNIEXPORT</span> <span class="kt">void</span> <span class="n">JNICALL</span> <span class="n">Java_ClassName_MethodName</span>
+  <span class="p">(</span><span class="n">JNIEnv</span> <span class="o">*</span><span class="n">env</span><span class="p">,</span> <span class="n">jobject</span> <span class="n">obj</span><span class="p">,</span> <span class="n">jstring</span> <span class="n">javaString</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">//Get the native string from javaString</span>
+    <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">nativeString</span> <span class="o">=</span> <span class="n">env</span><span class="o">-&gt;</span><span class="n">GetStringUTFChars</span><span class="p">(</span><span class="n">javaString</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+
+    <span class="c1">//Do something with the nativeString</span>
+
+    <span class="c1">//DON'T FORGET THIS LINE!!!</span>
+    <span class="n">env</span><span class="o">-&gt;</span><span class="n">ReleaseStringUTFChars</span><span class="p">(</span><span class="n">javaString</span><span class="p">,</span> <span class="n">nativeString</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="cm">/*C code*/</span>
+<span class="n">JNIEXPORT</span> <span class="kt">void</span> <span class="n">JNICALL</span> <span class="nf">Java_ClassName_MethodName</span>
+  <span class="p">(</span><span class="n">JNIEnv</span> <span class="o">*</span><span class="n">env</span><span class="p">,</span> <span class="n">jobject</span> <span class="n">obj</span><span class="p">,</span> <span class="n">jstring</span> <span class="n">javaString</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="cm">/*Get the native string from javaString*/</span>
+    <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">nativeString</span> <span class="o">=</span> <span class="p">(</span><span class="o">*</span><span class="n">env</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">GetStringUTFChars</span><span class="p">(</span><span class="n">env</span><span class="p">,</span> <span class="n">javaString</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+
+    <span class="cm">/*Do something with the nativeString*/</span>
+
+    <span class="cm">/*DON'T FORGET THIS LINE!!!*/</span>
+    <span class="p">(</span><span class="o">*</span><span class="n">env</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">ReleaseStringUTFChars</span><span class="p">(</span><span class="n">env</span><span class="p">,</span> <span class="n">javaString</span><span class="p">,</span> <span class="n">nativeString</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="cm">/*Objective-C code*/</span>
+<span class="n">JNIEXPORT</span> <span class="kt">void</span> <span class="n">JNICALL</span> <span class="nf">Java_ClassName_MethodName</span>
+  <span class="p">(</span><span class="n">JNIEnv</span> <span class="o">*</span><span class="n">env</span><span class="p">,</span> <span class="n">jobject</span> <span class="n">obj</span><span class="p">,</span> <span class="n">jstring</span> <span class="n">javaString</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="cm">/*DON'T FORGET THIS LINE!!!*/</span>
+    <span class="n">JNF_COCOA_ENTER</span><span class="p">(</span><span class="n">env</span><span class="p">);</span>
+
+    <span class="cm">/*Get the native string from javaString*/</span>
+    <span class="bp">NSString</span><span class="o">*</span> <span class="n">nativeString</span> <span class="o">=</span> <span class="n">JNFJavaToNSString</span><span class="p">(</span><span class="n">env</span><span class="p">,</span> <span class="n">javaString</span><span class="p">);</span>
+
+    <span class="cm">/*Do something with the nativeString*/</span>
+
+    <span class="cm">/*DON'T FORGET THIS LINE!!!*/</span>
+    <span class="n">JNF_COCOA_EXIT</span><span class="p">(</span><span class="n">env</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+<p>Native <a href="https://en.wikipedia.org/wiki/Data_type" title="Data type">data types</a> can be mapped to/from Java data types. For compound types such as objects, <a href="https://en.wikipedia.org/wiki/Array_data_structure" title="Array data structure">arrays</a> and <a href="https://en.wikipedia.org/wiki/String_(computer_science)" title="String (computer science)">strings</a> the native code must explicitly convert the data by calling methods in the <code>JNIEnv</code>.</p>
+<h3><span class="mw-headline" id="Mapping_types">Mapping types</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Native_Interface&amp;action=edit&amp;section=4" title="Edit section: Mapping types">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The following table shows the mapping of types between Java (JNI) and native code.</p>
+<table class="wikitable">
+<tr>
+<th>Native Type</th>
+<th>Java Language Type</th>
+<th>Description</th>
+<th>Type signature</th>
+</tr>
+<tr>
+<td>unsigned char</td>
+<td>jboolean</td>
+<td>unsigned 8 bits</td>
+<td>Z</td>
+</tr>
+<tr>
+<td>signed char</td>
+<td>jbyte</td>
+<td>signed 8 bits</td>
+<td>B</td>
+</tr>
+<tr>
+<td>unsigned short</td>
+<td>jchar</td>
+<td>unsigned 16 bits</td>
+<td>C</td>
+</tr>
+<tr>
+<td>short</td>
+<td>jshort</td>
+<td>signed 16 bits</td>
+<td>S</td>
+</tr>
+<tr>
+<td>long</td>
+<td>jint</td>
+<td>signed 32 bits</td>
+<td>I</td>
+</tr>
+<tr>
+<td>
+<p>long long<br />
+__int64</p>
+</td>
+<td>jlong</td>
+<td>signed 64 bits</td>
+<td>J</td>
+</tr>
+<tr>
+<td>float</td>
+<td>jfloat</td>
+<td>32 bits</td>
+<td>F</td>
+</tr>
+<tr>
+<td>double</td>
+<td>jdouble</td>
+<td>64 bits</td>
+<td>D</td>
+</tr>
+<tr>
+<td>void</td>
+<td></td>
+<td></td>
+<td>V</td>
+</tr>
+</table>
+<p>In addition, the signature <code>"L fully-qualified-class&#160;;"</code> would mean the class uniquely specified by that name; e.g., the signature <code>"Ljava/lang/String;"</code> refers to the class <code>java.lang.String</code>. Also, prefixing <code>[</code> to the signature makes the array of that type; for example, <code>[I</code> means the int array type. Finally, a <code>void</code> signature uses the <code>V</code> code.</p>
+<p>Here, these types are interchangeable. You can use <code>jint</code> where you normally use an <code>int</code>, and vice versa, without any <a href="https://en.wikipedia.org/wiki/Type_conversion" title="Type conversion">typecasting</a> required.</p>
+<p>However, mapping between Java Strings and arrays to native strings and arrays is different. If you use a <code>jstring</code> in where a <code>char *</code> would be, your code could crash the JVM.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="cm">/*C code*/</span>
+<span class="n">JNIEXPORT</span> <span class="kt">void</span> <span class="n">JNICALL</span> <span class="nf">Java_ClassName_MethodName</span>
+        <span class="p">(</span><span class="n">JNIEnv</span> <span class="o">*</span><span class="n">env</span><span class="p">,</span> <span class="n">jobject</span> <span class="n">obj</span><span class="p">,</span> <span class="n">jstring</span> <span class="n">javaString</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// printf("%s", javaString);        // INCORRECT: Could crash VM!</span>
+
+    <span class="c1">// Correct way: Create and release native string from Java string</span>
+    <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">nativeString</span> <span class="o">=</span> <span class="p">(</span><span class="o">*</span><span class="n">env</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">GetStringUTFChars</span><span class="p">(</span><span class="n">env</span><span class="p">,</span> <span class="n">javaString</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"%s"</span><span class="p">,</span> <span class="n">nativeString</span><span class="p">);</span>
+    <span class="p">(</span><span class="o">*</span><span class="n">env</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">ReleaseStringUTFChars</span><span class="p">(</span><span class="n">env</span><span class="p">,</span> <span class="n">javaString</span><span class="p">,</span> <span class="n">nativeString</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+<p>This is similar with Java arrays, as illustrated in the example below that takes the sum of all the elements in an array.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="n">JNIEXPORT</span> <span class="n">jint</span> <span class="n">JNICALL</span> <span class="nf">Java_IntArray_sumArray</span>
+        <span class="p">(</span><span class="n">JNIEnv</span> <span class="o">*</span><span class="n">env</span><span class="p">,</span> <span class="n">jobject</span> <span class="n">obj</span><span class="p">,</span> <span class="n">jintArray</span> <span class="n">arr</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">jint</span> <span class="n">buf</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span>
+    <span class="n">jint</span> <span class="n">i</span><span class="p">,</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="c1">// This line is necessary, since Java arrays are not guaranteed</span>
+    <span class="c1">// to have a continuous memory layout like C arrays.</span>
+    <span class="n">env</span><span class="o">-&gt;</span><span class="n">GetIntArrayRegion</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">buf</span><span class="p">);</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">sum</span> <span class="o">+=</span> <span class="n">buf</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">sum</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+<p>Of course, there is much more to it than this. Look for links below for more information.</p>
+<h3><span class="mw-headline" id="JNIEnv.2A">JNIEnv*</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Native_Interface&amp;action=edit&amp;section=5" title="Edit section: JNIEnv*">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>A JNI environment pointer (<tt>JNIEnv*</tt>) is passed as an argument for each native function mapped to a Java method, allowing for interaction with the JNI environment within the native method. This JNI interface pointer can be stored, but remains valid only in the current thread. Other threads must first call <tt>AttachCurrentThread()</tt> to attach themselves to the VM and obtain a JNI interface pointer. Once attached, a native thread works like a regular Java thread running within a native method. The native thread remains attached to the VM until it calls <tt>DetachCurrentThread()</tt> to detach itself.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">[4]</a></sup></p>
+<p>To attach to the current thread and get a JNI interface pointer:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+ <span class="n">JNIEnv</span> <span class="o">*</span><span class="n">env</span><span class="p">;</span>
+ <span class="p">(</span><span class="o">*</span><span class="n">g_vm</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">AttachCurrentThread</span> <span class="p">(</span><span class="n">g_vm</span><span class="p">,</span> <span class="p">(</span><span class="kt">void</span> <span class="o">**</span><span class="p">)</span> <span class="o">&amp;</span><span class="n">env</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
+</pre></div>
+<p>To detach from the current thread:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+ <span class="p">(</span><span class="o">*</span><span class="n">g_vm</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">DetachCurrentThread</span> <span class="p">(</span><span class="n">g_vm</span><span class="p">);</span>
+</pre></div>
+<h2><span class="mw-headline" id="Advanced_uses">Advanced uses</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Native_Interface&amp;action=edit&amp;section=6" title="Edit section: Advanced uses">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Native_AWT_painting">Native AWT painting</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Native_Interface&amp;action=edit&amp;section=7" title="Edit section: Native AWT painting">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Not only can native code interface with Java, it can also draw on a Java <code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/8/docs/api/java/awt/Canvas.html">Canvas</a></code>, which is possible with the <a href="Java_AWT_Native_Interface.html" title="Java AWT Native Interface">Java AWT Native Interface</a>. The process is almost the same, with just a few changes. The Java AWT Native Interface is only available since <a href="Java_Platform%2c_Standard_Edition.html" title="Java Platform, Standard Edition">J2SE</a> 1.3.</p>
+<h3><span class="mw-headline" id="Access_to_assembly_code">Access to assembly code</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Native_Interface&amp;action=edit&amp;section=8" title="Edit section: Access to assembly code">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>JNI also allows direct access to <a href="https://en.wikipedia.org/wiki/Assembly_language" title="Assembly language">assembly code</a>, without even going through a <a href="https://en.wikipedia.org/wiki/C_(programming_language)" title="C (programming language)">C</a> bridge.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">[5]</a></sup> Accessing Java applications from assembly is also possible in the same way.<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">[6]</a></sup></p>
+<h2><span class="mw-headline" id="Microsoft.27s_J.2FDirect_and_RNI">Microsoft's J/Direct and RNI</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Native_Interface&amp;action=edit&amp;section=9" title="Edit section: Microsoft's J/Direct and RNI">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Microsoft's discontinued proprietary implementation of a Java Virtual Machine (<a href="https://en.wikipedia.org/wiki/Visual_J++" title="Visual J++">Visual J++</a>) has a similar mechanism for calling native code from Java, called the <b>Raw Native Interface</b> (<b>RNI</b>). In addition, it has an easy way to call existing native code that isn't itself aware of Java, such as (but not limited to) the Windows API, called <b>J/Direct</b>. However, following the <a href="https://en.wikipedia.org/wiki/Visual_J++#Litigation_against_J.2B.2B" title="Visual J++">Sun - Microsoft litigation</a> about this implementation, <a href="https://en.wikipedia.org/wiki/Visual_J++" title="Visual J++">Visual J++</a> is no longer maintained.</p>
+<p>RNI was less clumsy to use than JNI, because no bookkeeping with a Java environment pointer was needed. Instead, all Java objects could be accessed directly. To facilitate this, a tool was used that generated header files from Java classes. Similarly, J/Direct was easier to use than using the necessary intermediate native library and JNI, although at present JNA is an alternative.</p>
+<h2><span class="mw-headline" id="Examples">Examples</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Native_Interface&amp;action=edit&amp;section=10" title="Edit section: Examples">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="HelloWorld">HelloWorld</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Native_Interface&amp;action=edit&amp;section=11" title="Edit section: HelloWorld">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>make.sh</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="ch">#!/bin/sh</span>
+
+<span class="c1"># Linux 2.6.32-358.el6.x86_64</span>
+<span class="c1"># gcc 4.4.7</span>
+<span class="c1"># openjdk 1.7.0</span>
+
+<span class="nb">export</span> <span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span>$LD_LIBRARY_PATH:.
+javac HelloWorld.java
+javah HelloWorld
+<span class="nb">export</span> <span class="nv">JAVA_HOME</span><span class="o">=</span>/usr/lib/jvm/java-7-openjdk
+gcc -shared -fPIC -I $JAVA_HOME/include -I $JAVA_HOME/include/linux libHelloWorld.c -o libHelloWorld.so
+java HelloWorld
+</pre></div>
+<p>build.bat</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="p">:</span><span class="c1">: Microsoft Visual Studio 2012 Visual C++ compiler</span>
+<span class="k">SET</span> <span class="nv">VC</span><span class="p">=</span>C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC
+<span class="p">:</span><span class="c1">: Microsoft Windows SDK for Windows 7 and .NET Framework 4 </span>
+<span class="k">SET</span> <span class="nv">MSDK</span><span class="p">=</span>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A
+<span class="p">:</span><span class="c1">: Java 1.7.0 update 21</span>
+<span class="k">SET</span> <span class="nv">JAVA_HOME</span><span class="p">=</span>C:\Program Files (x86)\Java\jdk1.7.0_21
+<span class="p">:</span><span class="c1">: Add compiler tools folder to the PATH variable.  Do not run this too many times or the PATH will exceed the maximum limit.</span>
+<span class="k">call</span> <span class="s2">"</span><span class="nv">%VC%</span><span class="s2">\vcvarsall.bat"</span>
+
+javac HelloWorld.java
+javah HelloWorld
+<span class="p">:</span><span class="c1">: On Windows, the JNI library should not have a "lib" prefix</span>
+<span class="nv">%VC%</span>\bin\cl <span class="s2">"/I</span><span class="nv">%JAVA_HOME%</span><span class="s2">\include"</span> <span class="s2">"/I</span><span class="nv">%JAVA_HOME%</span><span class="s2">\include\win32"</span> <span class="s2">"/I</span><span class="nv">%VC%</span><span class="s2">\include"</span> <span class="s2">"/I</span><span class="nv">%VC%</span><span class="s2">\lib"</span> <span class="s2">"/I</span><span class="nv">%MSDK%</span><span class="s2">\Lib"</span> <span class="s2">"libHelloWorld.c"</span> <span class="s2">"/FeHelloWorld.dll"</span> /LD
+java HelloWorld
+</pre></div>
+<p>HelloWorld.java</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kd">class</span> <span class="nc">HelloWorld</span>
+<span class="o">{</span>
+    <span class="kd">private</span> <span class="kd">native</span> <span class="kt">void</span> <span class="nf">print</span><span class="o">();</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span>
+    <span class="o">{</span>
+        <span class="k">new</span> <span class="n">HelloWorld</span><span class="o">().</span><span class="na">print</span><span class="o">();</span>
+    <span class="o">}</span>
+    <span class="kd">static</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">loadLibrary</span><span class="o">(</span><span class="s">"HelloWorld"</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+<p>HelloWorld.h</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="cm">/* DO NOT EDIT THIS FILE - it is machine generated */</span>
+<span class="cp">#include</span> <span class="cpf">&lt;jni.h&gt;</span>
+<span class="cm">/* Header for class HelloWorld */</span>
+
+<span class="cp">#ifndef _Included_HelloWorld</span>
+<span class="cp">#define _Included_HelloWorld</span>
+<span class="cp">#ifdef __cplusplus</span>
+<span class="k">extern</span> <span class="s">"C"</span> <span class="p">{</span>
+<span class="cp">#endif</span>
+<span class="cm">/*</span>
+<span class="cm"> * Class:     HelloWorld</span>
+<span class="cm"> * Method:    print</span>
+<span class="cm"> * Signature: ()V</span>
+<span class="cm"> */</span>
+<span class="n">JNIEXPORT</span> <span class="kt">void</span> <span class="n">JNICALL</span> <span class="n">Java_HelloWorld_print</span>
+  <span class="p">(</span><span class="n">JNIEnv</span> <span class="o">*</span><span class="p">,</span> <span class="n">jobject</span><span class="p">);</span>
+
+<span class="cp">#ifdef __cplusplus</span>
+<span class="p">}</span>
+<span class="cp">#endif</span>
+<span class="cp">#endif</span>
+</pre></div>
+<p>libHelloWorld.c</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+ <span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span>
+ <span class="cp">#include</span> <span class="cpf">"HelloWorld.h"</span>
+
+ <span class="n">JNIEXPORT</span> <span class="kt">void</span> <span class="n">JNICALL</span>
+ <span class="nf">Java_HelloWorld_print</span><span class="p">(</span><span class="n">JNIEnv</span> <span class="o">*</span><span class="n">env</span><span class="p">,</span> <span class="n">jobject</span> <span class="n">obj</span><span class="p">)</span>
+ <span class="p">{</span>
+     <span class="n">printf</span><span class="p">(</span><span class="s">"Hello World!</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+     <span class="k">return</span><span class="p">;</span>
+ <span class="p">}</span>
+</pre></div>
+<p>Invocation:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+$ chmod +x make.sh
+$ ./make.sh
+</pre></div>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Native_Interface&amp;action=edit&amp;section=12" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="Java_AWT_Native_Interface.html" title="Java AWT Native Interface">Java AWT Native Interface</a></li>
+<li><a href="Gluegen.html" class="mw-redirect" title="Gluegen">Gluegen</a>, a Java tool which automatically generates the Java and JNI code necessary to call C libraries from Java code</li>
+<li><a href="https://en.wikipedia.org/wiki/Platform_Invocation_Services" title="Platform Invocation Services">P/Invoke</a>, the .NET Framework method of calling native applications</li>
+<li><a href="https://en.wikipedia.org/wiki/SWIG" title="SWIG">SWIG</a>, a multilanguage interface-generator for C and C++ libraries that can generate JNI code</li>
+<li><a href="https://en.wikipedia.org/wiki/GIWS_(software)" title="GIWS (software)">GIWS</a>, a wrapper generator to simplify calling Java from C or C++, essentially the opposite of SWIG.</li>
+<li><a href="Java_Native_Access.html" title="Java Native Access">Java Native Access</a> provides Java programs easy access to native shared libraries without writing boilerplate code</li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Native_Interface&amp;action=edit&amp;section=13" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist columns references-column-count references-column-count-2" style="-moz-column-count: 2; -webkit-column-count: 2; column-count: 2; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-role-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-role_1-0">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://java.sun.com/docs/books/jni/html/intro.html#1811">"Role of the JNI"</a>. <i>The Java Native Interface Programmer's Guide and Specification</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2008-02-27</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+Native+Interface&amp;rft.atitle=Role+of+the+JNI&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fjava.sun.com%2Fdocs%2Fbooks%2Fjni%2Fhtml%2Fintro.html%231811&amp;rft.jtitle=The+Java+Native+Interface+Programmer%27s+Guide+and+Specification&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-jniModifiedUtf-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-jniModifiedUtf_2-0">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/1.5.0/docs/guide/jni/spec/types.html#wp16542">"JNI Types and Data Structures"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+Native+Interface&amp;rft.btitle=JNI+Types+and+Data+Structures&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fdocs.oracle.com%2Fjavase%2F1.5.0%2Fdocs%2Fguide%2Fjni%2Fspec%2Ftypes.html%23wp16542&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-StackOverflow:_What_makes_JNI_calls_slow.3F-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-StackOverflow:_What_makes_JNI_calls_slow.3F_3-0">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://stackoverflow.com/a/7809300/1068537">"java - What makes JNI calls slow? - Stack Overflow"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+Native+Interface&amp;rft.btitle=java+-+What+makes+JNI+calls+slow%3F+-+Stack+Overflow&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fstackoverflow.com%2Fa%2F7809300%2F1068537&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text">The Invocation API. Sun Microsystems. <a rel="nofollow" class="external free" href="http://java.sun.com/j2se/1.5.0/docs/guide/jni/spec/invocation.html">http://java.sun.com/j2se/1.5.0/docs/guide/jni/spec/invocation.html</a></span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://today.java.net/pub/a/today/2006/10/19/invoking-assembly-language-from-java.html">"Invoking Assembly Language Programs from Java"</a>. Java.net. 2006-10-19<span class="reference-accessdate">. Retrieved <span class="nowrap">2007-10-06</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+Native+Interface&amp;rft.btitle=Invoking+Assembly+Language+Programs+from+Java&amp;rft.date=2006-10-19&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Ftoday.java.net%2Fpub%2Fa%2Ftoday%2F2006%2F10%2F19%2Finvoking-assembly-language-from-java.html&amp;rft.pub=Java.net&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://today.java.net/pub/a/today/2007/10/04/launch-java-applications-from-assembly-language-programs.html">"Launch Java Applications from Assembly Language Programs"</a>. Java.net. 2006-10-19<span class="reference-accessdate">. Retrieved <span class="nowrap">2007-10-04</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+Native+Interface&amp;rft.btitle=Launch+Java+Applications+from+Assembly+Language+Programs&amp;rft.date=2006-10-19&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Ftoday.java.net%2Fpub%2Fa%2Ftoday%2F2007%2F10%2F04%2Flaunch-java-applications-from-assembly-language-programs.html&amp;rft.pub=Java.net&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="Bibliography">Bibliography</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Native_Interface&amp;action=edit&amp;section=14" title="Edit section: Bibliography">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="refbegin" style="">
+<ul>
+<li><cite class="citation book">Gordon, Rob (March 1998). <a rel="nofollow" class="external text" href="http://www.informit.com/store/product.aspx?isbn=9780136798958"><i>Essential Jni: Java Native Interface</i></a> (1st ed.). <a href="https://en.wikipedia.org/wiki/Prentice_Hall" title="Prentice Hall">Prentice Hall</a>. p.&#160;498. <a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="https://en.wikipedia.org/wiki/Special:BookSources/0-13-679895-0" title="Special:BookSources/0-13-679895-0">0-13-679895-0</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+Native+Interface&amp;rft.aufirst=Rob&amp;rft.aulast=Gordon&amp;rft.btitle=Essential+Jni%3A+Java+Native+Interface&amp;rft.date=1998-03&amp;rft.edition=1st&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.informit.com%2Fstore%2Fproduct.aspx%3Fisbn%3D9780136798958&amp;rft.isbn=0-13-679895-0&amp;rft.pages=498&amp;rft.pub=Prentice+Hall&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite class="citation book">Liang, Sheng (June 20, 1999). <a rel="nofollow" class="external text" href="http://www.informit.com/store/product.aspx?isbn=9780201325775"><i>Java(TM) Native Interface: Programmer's Guide and Specification</i></a> (1st ed.). <a href="https://en.wikipedia.org/wiki/Prentice_Hall" title="Prentice Hall">Prentice Hall</a>. p.&#160;320. <a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="https://en.wikipedia.org/wiki/Special:BookSources/0-201-32577-2" title="Special:BookSources/0-201-32577-2">0-201-32577-2</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+Native+Interface&amp;rft.aufirst=Sheng&amp;rft.aulast=Liang&amp;rft.btitle=Java%28TM%29+Native+Interface%3A+Programmer%27s+Guide+and+Specification&amp;rft.date=1999-06-20&amp;rft.edition=1st&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.informit.com%2Fstore%2Fproduct.aspx%3Fisbn%3D9780201325775&amp;rft.isbn=0-201-32577-2&amp;rft.pages=320&amp;rft.pub=Prentice+Hall&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+</ul>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Native_Interface&amp;action=edit&amp;section=15" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="https://docs.oracle.com/javase/8/docs/technotes/guides/jni/">Oracle's JNI 6.0 API Specification</a></li>
+<li><a rel="nofollow" class="external text" href="https://web.archive.org/web/20120728074805/http://java.sun.com/docs/books/jni/">Java Native Interface: Programmer's Guide and Specification</a> – a book by Sheng Liang, copyright 1999</li>
+<li><a rel="nofollow" class="external text" href="http://www.ibm.com/developerworks/java/library/j-jni/index.html">Best practices for using the Java Native Interface</a></li>
+<li><a rel="nofollow" class="external text" href="http://electrofriends.com/articles/jni/jni-part1-java-native-interface/">JNI Complete tutorial with examples</a></li>
+<li><a rel="nofollow" class="external text" href="https://gcc.gnu.org/onlinedocs/gcj/About-CNI.html">GNU CNI Tutorial</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.think-techie.com/2009/08/java-native-interface-jni.html">Multi-platform JNI Tutorial at Think-Techie.com</a></li>
+<li><a rel="nofollow" class="external text" href="https://web.archive.org/web/20051223075914/http://java.sun.com/docs/books/tutorial/native1.1">The old Sun JNI Tutorial</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.codeproject.com/java/jnibasics1.asp">A JNI Tutorial at CodeProject.com (Microsoft specific)</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.codetoad.com/java_simpleJNI.asp">JNI Tutorial at CodeToad.com</a></li>
+<li><a rel="nofollow" class="external text" href="http://codebazaar.blogspot.com/2010/08/package-codebazaar.html">JNI video tutorial with Eclipse and Visual Studio</a></li>
+<li><a rel="nofollow" class="external text" href="http://developer.apple.com/java/jniuniversal.html">JNI in XCode from Apple</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.codeproject.com/KB/debug/jni_ex.aspx">Exception handling in JNI</a></li>
+<li><a rel="nofollow" class="external text" href="http://hawtjni.fusesource.org/documentation/index.html">HawtJNI</a> – simplifies creating JNI libraries by code generating the JNI implementations using declarative annotations placed on your Java code</li>
+<li><a rel="nofollow" class="external text" href="http://reference.wolfram.com/mathematica/JLink/tutorial/Overview.html">J/Link</a> – lets you call Java from Mathematica in a completely transparent way, and it also lets you use and control the Mathematica kernel from a Java program (commercial)</li>
+<li><a rel="nofollow" class="external text" href="https://bitbucket.org/cowwoc/jace/wiki/Home">Jace</a> – a toolkit designed to make it easy to write JNI-based programs</li>
+<li><a rel="nofollow" class="external text" href="http://www.teamdev.com/jniwrapper/">JNIWrapper</a> – provides simplified access to native code from Java applications without using Java Native Interface</li>
+<li><a rel="nofollow" class="external text" href="http://jnative.sf.net/">Java to Native Interface</a> – LGPL library to call native functions from Java</li>
+<li><a rel="nofollow" class="external text" href="http://jna.dev.java.net/">Java Native Access</a><sup class="noprint Inline-Template"><span style="white-space: nowrap;">[<i><a href="https://en.wikipedia.org/wiki/Wikipedia:Link_rot" title="Wikipedia:Link rot"><span title="&#160;Dead link since June 2015">dead link</span></a></i>]</span></sup> – access to native libraries from Java without JNI</li>
+<li><a rel="nofollow" class="external text" href="http://nlink.dev.java.net/">NLink</a> – another library for access to native libraries without JNI</li>
+<li><a rel="nofollow" class="external text" href="http://johannburkard.de/software/nativecall/">NativeCall – call native methods from Java without JNI</a> – a library to access native code without JNI</li>
+<li><a rel="nofollow" class="external text" href="http://www.innowhere.com/">JNIEasy</a> – transparent Native Programming for C/C++, pure Java alternative to JNI using POJOS and JDO/JPA development style</li>
+<li><a rel="nofollow" class="external text" href="http://jni4net.sf.net/">jni4net</a> – a bridge between Java and .NET (intraprocess, fast, object oriented, open-source)</li>
+<li><a rel="nofollow" class="external text" href="http://www.simtel.net/product/view/id/93174">Object-Oriented JNI Advanced Add-in for VC6</a> – an Object-Oriented JNI with a number of helpers that includes the standard JNI SDK for regular C++ (commercial)</li>
+<li><a rel="nofollow" class="external text" href="http://www.simtel.net/product/view/id/95126">Object-Oriented JNI for .NET1.1 (low-level)</a> – an Object-Oriented JNI with a number of helpers that includes the standard JNI SDK for C#, Managed C++, VB#, J# (commercial)</li>
+<li><a rel="nofollow" class="external text" href="http://www.simtel.net/product/view/id/353400">Object-Oriented JNI for .NET2.0 (low-level)</a> – an Object-Oriented JNI with a number of helpers that includes the standard JNI SDK for C#, Managed C++, VB#, J# (commercial)</li>
+<li><a rel="nofollow" class="external text" href="http://www.simtel.net/product/view/id/348550">OOJNI Add-in (C#,VB#) for VS2005/2008</a> – generates object-oriented JNI code in C# or VB# for Java classes selected, implements Java interfaces and Java native methods in VB# and C#. Java Class methods and fields (which are represented as .NET Class properties) to be wrapped can be filtered. (commercial)</li>
+<li><a rel="nofollow" class="external text" href="http://www.mcobject.com/extremedb-jni"><i>e</i>X<i>treme</i>DB JNI</a> – uses Java <a href="https://en.wikipedia.org/wiki/Annotations" class="mw-redirect" title="Annotations">annotations</a> and <a href="https://en.wikipedia.org/wiki/Reflection_(computer_science)" class="mw-redirect" title="Reflection (computer science)">reflection</a> to enable Java applications to call the <a href="https://en.wikipedia.org/wiki/EXtremeDB" title="EXtremeDB"><i>e</i>X<i>treme</i>DB</a> database (written in C) without reliance on an external database definition language</li>
+<li><a rel="nofollow" class="external text" href="http://home.pacifier.com/~mmead/jni/delphi/JavaToDPR/">JavaToDPR</a> – a Delphi Project (.dpr) Stub File Generator that allows one to write an <a href="https://en.wikipedia.org/wiki/Embarcadero_Delphi" class="mw-redirect" title="Embarcadero Delphi">Embarcadero Delphi</a> DLL to handle the native methods declared in a Java .class file</li>
+<li><a rel="nofollow" class="external text" href="https://github.com/kivy/pyjnius">PyJNIus</a> — a Python library to allow calling java code from CPython, and implement java interfaces from CPython, using JNI and java instrospection to wrap class automatically in python objects.</li>
+</ul>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1196
+Cached time: 20170104055627
+Cache expiry: 2592000
+Dynamic content: false
+CPU time usage: 0.148 seconds
+Real time usage: 0.311 seconds
+Preprocessor visited node count: 859/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 20877/2097152 bytes
+Template argument size: 1840/2097152 bytes
+Highest expansion depth: 15/40
+Expensive parser function count: 6/500
+Lua time usage: 0.060/10.000 seconds
+Lua memory usage: 2.9 MB/50 MB
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  276.884      1 - -total
+ 57.95%  160.451      1 - Template:Cleanup
+ 46.89%  129.826      3 - Template:Category_handler
+ 42.13%  116.657      1 - Template:DMC
+ 41.36%  114.530      2 - Template:FULLROOTPAGENAME
+ 40.74%  112.810      2 - Template:Ns_has_subpages
+ 18.61%   51.516      1 - Template:Reflist
+ 15.28%   42.300      5 - Template:Cite_web
+ 10.70%   29.635      1 - Template:Main_other
+ 10.16%   28.138      1 - Template:Ambox
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:230828-0!*!0!!en!4!* and timestamp 20170104055629 and revision id 758229208
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Java_Native_Interface&amp;oldid=758229208">https://en.wikipedia.org/w/index.php?title=Java_Native_Interface&amp;oldid=758229208</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Help_Category.html" title="Help:Category">Categories</a>: <ul><li><a href="Category_Java_platform.html" title="Category:Java platform">Java platform</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Articles_needing_cleanup_from_April_2009" title="Category:Articles needing cleanup from April 2009">Articles needing cleanup from April 2009</a></li><li><a href="https://en.wikipedia.org/wiki/Category:All_articles_needing_cleanup" title="Category:All articles needing cleanup">All articles needing cleanup</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Cleanup_tagged_articles_without_a_reason_field_from_April_2009" title="Category:Cleanup tagged articles without a reason field from April 2009">Cleanup tagged articles without a reason field from April 2009</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Wikipedia_pages_needing_cleanup_from_April_2009" title="Category:Wikipedia pages needing cleanup from April 2009">Wikipedia pages needing cleanup from April 2009</a></li><li><a href="https://en.wikipedia.org/wiki/Category:All_articles_with_dead_external_links" title="Category:All articles with dead external links">All articles with dead external links</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Articles_with_dead_external_links_from_June_2015" title="Category:Articles with dead external links from June 2015">Articles with dead external links from June 2015</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="Special_MyTalk.html" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="Special_MyContributions.html" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&amp;returnto=Java+Native+Interface" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Java+Native+Interface" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="Java_Native_Interface.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+															<li  id="ca-talk"><span><a href="https://en.wikipedia.org/wiki/Talk:Java_Native_Interface"  title="Discussion about the content page [t]" accesskey="t" rel="discussion">Talk</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="Java_Native_Interface.html" >Read</a></span></li>
+															<li id="ca-edit"><span><a href="https://en.wikipedia.org/w/index.php?title=Java_Native_Interface&amp;action=edit"  title="Edit this page [e]" accesskey="e">Edit</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="https://en.wikipedia.org/w/index.php?title=Java_Native_Interface&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="https://en.wikipedia.org/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="Main_Page.html"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="Portal_Contents.html" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="Portal_Featured_content.html" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="Portal_Current_events.html" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="https://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="../../shop.wikimedia.org/index.html" title="Visit the Wikipedia store">Wikipedia store</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Interaction</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-help"><a href="Help_Contents.html" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="Wikipedia_About.html" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="Wikipedia_Community_portal.html" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="Wikipedia_Contact_us.html" title="How to contact Wikipedia">Contact page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="https://en.wikipedia.org/wiki/Special:WhatLinksHere/Java_Native_Interface" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://en.wikipedia.org/wiki/Special:RecentChangesLinked/Java_Native_Interface" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="Wikipedia_File_Upload_Wizard.html" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="https://en.wikipedia.org/w/index.php?title=Java_Native_Interface&amp;oldid=758229208" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://en.wikipedia.org/w/index.php?title=Java_Native_Interface&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q168492" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="https://en.wikipedia.org/w/index.php?title=Special:CiteThisPage&amp;page=Java_Native_Interface&amp;id=758229208" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Print/export</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Java+Native+Interface">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Java+Native+Interface&amp;returnto=Java+Native+Interface&amp;oldid=758229208&amp;writer=rdf2latex">Download as PDF</a></li><li id="t-print"><a href="https://en.wikipedia.org/w/index.php?title=Java_Native_Interface&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Languages</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Java_Native_Interface" title="Java Native Interface – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Java_Native_Interface" title="Java Native Interface – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Java_Native_Interface" title="Java Native Interface – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Java_Native_Interface" title="Java Native Interface – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/자바_네이티브_인터페이스" title="자바 네이티브 인터페이스 – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Java_Native_Interface" title="Java Native Interface – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/Java_Native_Interface" title="Java Native Interface – Dutch" lang="nl" hreflang="nl" class="interlanguage-link-target">Nederlands</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/Java_Native_Interface" title="Java Native Interface – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Java_Native_Interface" title="Java Native Interface – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Java_Native_Interface" title="Java Native Interface – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/Java_Native_Interface" title="Java Native Interface – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/Java_Native_Interface" title="Java Native Interface – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/Java本地接口" title="Java本地接口 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q168492#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 4 January 2017, at 05:56.</li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="Wikipedia_Text_of_Creative_Commons_Attribution-ShareAlike_3.html">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="../../creativecommons.org/licenses/by-sa/3.0/index.html" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="../../wikimediafoundation.org/wiki/Terms_of_Use.html">Terms of Use</a> and <a href="../../wikimediafoundation.org/wiki/Privacy_policy.html">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="../../www.wikimediafoundation.org/index.html">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../../wikimediafoundation.org/wiki/Privacy_policy.html" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="Wikipedia_About.html" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="Wikipedia_General_disclaimer.html" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="Wikipedia_Contact_us.html">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a href="../../www.mediawiki.org/wiki/Special_MyLanguage/How_to_contribute.html">Developers</a></li>
+											<li id="footer-places-cookiestatement"><a href="../../wikimediafoundation.org/wiki/Cookie_statement.html">Cookie statement</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/w/index.php?title=Java_Native_Interface&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="../../www.wikimediafoundation.org/index.html"><img src="https://en.wikipedia.org/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="../../www.mediawiki.org/index.html"><img src="https://en.wikipedia.org/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":53,"wgHostname":"mw1274"});});</script>
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Java_Native_Interface by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:31 GMT -->
+</html>

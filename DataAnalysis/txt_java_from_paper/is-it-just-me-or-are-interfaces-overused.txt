@@ -1,0 +1,21 @@
+    
+        Ok, I may resort to a tad ranting here, so let me apologize in advance, but I'm really curious if others find this pattern annoying too (and I wonder if it is a justifiable pattern)…
+
+So, after just looking at a <a href="http://stackoverflow.com/questions/90657/mocking-method-results">particular question, I noticed that almost all of the responses suggested creating an interface for injecting a mock in some test code.
+
+I don't mind using interfaces, and sometimes they can really help in static typed languages like C# and Java… but I do mind seeing interfaces for almost every class in a system (or in general being used where they aren't really needed).
+
+I have 2 major problems with using an interface when it isn't called for:
+
+
+You abstract away where the implementation is coming from. This problem has a couple consequences… in an IDE, it means that when I try to browse to the source of this method being called… I get taken to an interface instead of some code that I can look at and see what is going on. This bothers me a lot, but also this is a real problem to me to hide where the implementation is coming from (sometimes it can be in non-obvious locations).
+It adds ANOTHER file to the system. I tend to be a minimalist in my programming… if I don't really need another method, or another class, or even another file… not unless that extra thing is justified (flexibility that is going to be used, or makes the design cleaner, or provides some real benefit).
+
+
+Now… if you are testing something, and you create an interface JUST TO ALLOW MOCKING… this seems to be adding a layer of minor headaches for no real benefit. What does creating the interface do that just overriding the class won't do? What is so bad about having a mock that merely overrides some methods of the single implementation class?
+
+I guess it should be no surprise then that I much prefer Java's default virtual methods (ie requiring a final keyword to have a method that CAN'T be overriden) to C#'s default final methods… and I also tend to avoid the final keyword on methods and classes too.
+
+So is there something to using interfaces that I am missing? Is there some hidden benefit of using an interface when you have 1 version of a class and no immediate need to create an interface?
+
+                

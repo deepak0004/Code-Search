@@ -1,0 +1,5 @@
+    
+        Java has the generic keyword and C++ provides a very strong programming model with templates.
+So then, what is the difference between C++ and Java generics?
+
+                

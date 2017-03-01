@@ -1,0 +1,8 @@
+    
+        This is in relation to my answer to a question provided in this thread: <a href="http://stackoverflow.com/questions/4812464/are-inner-classes-lightweight/4812511#4812511">Are Inner Classes lightweight?
+
+I remember from my reading that if you can only create one object from a single anonymous inner class, and for this reason, if you want to say create an ActionListener class and want to create multiple objects from this one class (not using reflection), to not use an anonymous inner class but rather either a private inner class or a stand along class, but folks are telling me I'm wrong.  Can someone please clarify this for me?  Please check the link as it contains more details, but if anything is unclear, please ask away!
+
+Thanks in advance!
+
+                

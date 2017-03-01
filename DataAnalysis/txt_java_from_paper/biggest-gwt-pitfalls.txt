@@ -1,0 +1,13 @@
+    
+        I'm at the beginning/middle of a project that we chose to implement using GWT. Has anyone encountered any major pitfalls in using GWT (and GWT-EXT) that were unable to be overcome? How about from a performance perspective?
+
+A couple things that we've seen/heard already include:
+
+
+Google not being able to index content
+CSS and styling in general seems to be a bit flaky
+
+
+Looking for any additional feedback on these items as well. Thanks!
+
+                

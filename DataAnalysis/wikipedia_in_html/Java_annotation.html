@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Java_annotation by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:35 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Java annotation - Wikipedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Java_annotation","wgTitle":"Java annotation","wgCurRevisionId":755342341,"wgRevisionId":755342341,"wgArticleId":4093054,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles with example Java code","Java (programming language)"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Java_annotation","wgRelevantArticleId":4093054,"wgRequestId":"WHdNGApAME4AALe0GRcAAAJM","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgFlaggedRevsParams":{"tags":{}},"wgStableRevisionId":null,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"en","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgWikibaseItemId":"Q567345","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.cite.styles":"ready","ext.pygments":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@1dqfd7l",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["ext.cite.a11y","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.legacy.wikibits","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.watchlist-notice","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.gadget.featured-articles-links","ext.centralauth.centralautologin","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.interface","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="https://en.wikipedia.org/w/load.php?debug=false&amp;lang=en&amp;modules=ext.cite.styles%7Cext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="../w/load2c8d.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../w/load18b6.css?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.29.0-wmf.7"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="https://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Java_annotation"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Java_annotation&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Java_annotation&amp;action=edit"/>
+<link rel="apple-touch-icon" href="https://en.wikipedia.org/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="../static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../w/api251f.php?action=rsd"/>
+<link rel="copyright" href="../../creativecommons.org/licenses/by-sa/3.0/index.html"/>
+<link rel="canonical" href="Java_annotation.html"/>
+<link rel="dns-prefetch" href="../../login.wikimedia.org/index.html"/>
+<link rel="dns-prefetch" href="../../meta.wikimedia.org/index.html" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Java_annotation rootpage-Java_annotation skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">Java annotation</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><script>function mfTempOpenSection(id){var block=document.getElementById("mf-section-"+id);block.className+=" open-block";block.previousSibling.className+=" open-block";}</script><p>In the <a href="Java_(programming_language).html" title="Java (programming language)">Java computer programming language</a>, an <b>annotation</b> is a form of syntactic <a href="https://en.wikipedia.org/wiki/Metadata" title="Metadata">metadata</a> that can be added to <a href="Java_(programming_language).html" title="Java (programming language)">Java</a> source code.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[1]</a></sup> Classes, methods, variables, parameters and packages may be annotated. Unlike <a href="Javadoc.html" title="Javadoc">Javadoc</a> tags, Java annotations can be <a href="https://en.wikipedia.org/wiki/Reflection_(computer_science)" class="mw-redirect" title="Reflection (computer science)">reflective</a> in that they can be embedded in <a href="Class_(file_format).html" class="mw-redirect" title="Class (file format)">class files</a> generated by the compiler and may be retained by the Java VM to be made retrievable at <a href="https://en.wikipedia.org/wiki/Run_time_(program_lifecycle_phase)" title="Run time (program lifecycle phase)">run-time</a>.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">[2]</a></sup> It is possible to create meta-annotations out of the existing ones in Java.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">[3]</a></sup></p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#History"><span class="tocnumber">1</span> <span class="toctext">History</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Built-in_annotations"><span class="tocnumber">2</span> <span class="toctext">Built-in annotations</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Example"><span class="tocnumber">3</span> <span class="toctext">Example</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Built-in_annotations_2"><span class="tocnumber">3.1</span> <span class="toctext">Built-in annotations</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Custom_annotations"><span class="tocnumber">3.2</span> <span class="toctext">Custom annotations</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#Processing"><span class="tocnumber">4</span> <span class="toctext">Processing</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#See_also"><span class="tocnumber">5</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#References"><span class="tocnumber">6</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#External_links"><span class="tocnumber">7</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_annotation&amp;action=edit&amp;section=1" title="Edit section: History">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The Java platform has various <i>ad-hoc</i> annotation mechanisms—for example, the <i><tt>transient</tt></i> modifier, or the <i><tt>@deprecated</tt></i> javadoc tag. JSR-175 introduced the general-purpose annotation (also known as <i>metadata</i>) facility to the <a href="Java_Community_Process.html" title="Java Community Process">Java Community Process</a> in 2002; it gained approval in September 2004.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">[4]</a></sup> Annotations became available in the language itself beginning with version 1.5 of the JDK. The <a href="https://en.wikipedia.org/wiki/Annotation_processing_tool" class="mw-redirect" title="Annotation processing tool"><tt>apt</tt> tool</a> provided a provisional interface for compile-time annotation processing in JDK version 1.5; JSR-269 formalized this, and it became integrated into the <a href="Javac.html" title="Javac">javac</a> compiler in version 1.6.</p>
+<h2><span class="mw-headline" id="Built-in_annotations">Built-in annotations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_annotation&amp;action=edit&amp;section=2" title="Edit section: Built-in annotations">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Java defines a set of annotations that are built into the language. Of the seven standard annotations, three are part of java.lang, and the remaining four are imported from java.lang.annotation.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">[5]</a></sup><sup id="cite_ref-6" class="reference"><a href="#cite_note-6">[6]</a></sup></p>
+<p><b>Annotations applied to Java code:</b></p>
+<ul>
+<li><tt>@Override</tt> - Checks that the method is an override. Causes a compile error if the method is not found in one of the parent classes or implemented interfaces.</li>
+<li><tt>@Deprecated</tt> - Marks the method as obsolete. Causes a compile warning if the method is used.</li>
+<li><tt>@SuppressWarnings</tt> - Instructs the compiler to suppress the <a href="https://en.wikipedia.org/wiki/Compile_time" title="Compile time">compile time</a> warnings specified in the annotation parameters.</li>
+</ul>
+<p><b>Annotations applied to other annotations (also known as "Meta Annotations"):</b></p>
+<ul>
+<li><tt>@Retention</tt> - Specifies how the marked annotation is stored—Whether in code only, compiled into the class, or available at runtime through reflection.</li>
+<li><tt>@Documented</tt> - Marks another annotation for inclusion in the documentation.</li>
+<li><tt>@Target</tt> - Marks another annotation to restrict what kind of Java elements the annotation may be applied to.</li>
+<li><tt>@Inherited</tt> - Marks another annotation to be inherited to subclasses of annotated class (by default annotations are not inherited to subclasses).</li>
+</ul>
+<p>Since Java 7, three additional annotations has been added to the language.</p>
+<ul>
+<li><tt>@SafeVarargs</tt> - Suppress warnings for all callers of a method or constructor with a generics varargs parameter, since Java 7.</li>
+<li><tt>@FunctionalInterface</tt> - Specifies that the type declaration is intended to be a <a href="https://en.wikipedia.org/wiki/Anonymous_function" title="Anonymous function">functional interface</a>, since Java 8.</li>
+<li><tt>@Repeatable</tt> - Specifies that the annotation can be applied more than once to the same declaration, since Java 8.</li>
+</ul>
+<h2><span class="mw-headline" id="Example">Example</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_annotation&amp;action=edit&amp;section=3" title="Edit section: Example">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Built-in_annotations_2">Built-in annotations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_annotation&amp;action=edit&amp;section=4" title="Edit section: Built-in annotations">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>This example shows the use of the <tt>@Override</tt> annotation. It instructs the compiler to check parent classes for matching methods. In this case, an error is generated as the <tt>gettype()</tt> method of class Cat does not in fact override <tt>getType()</tt> of class Animal as desired. If the <tt>@Override</tt> annotation was absent, a new method of name gettype() would be created in class Cat.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Animal</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">speak</span><span class="o">()</span> <span class="o">{</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getType</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="s">"Generic animal"</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Cat</span> <span class="kd">extends</span> <span class="n">Animal</span> <span class="o">{</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">speak</span><span class="o">()</span> <span class="o">{</span> <span class="c1">// This is a good override.</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Meow."</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">gettype</span><span class="o">()</span> <span class="o">{</span> <span class="c1">// Compile-time error due to mistyped name.</span>
+        <span class="k">return</span> <span class="s">"Cat"</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+<h3><span class="mw-headline" id="Custom_annotations">Custom annotations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_annotation&amp;action=edit&amp;section=5" title="Edit section: Custom annotations">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Annotation type declarations are similar to normal interface declarations. An at-sign (@) precedes the interface keyword. Each method declaration defines an element of the annotation type. Method declarations must not have any parameters or a throws clause. Return types are restricted to primitives, String, Class, enums, annotations, and arrays of the preceding types. Methods can have default values.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+  <span class="c1">// @Twizzle is an annotation to method toggle().</span>
+  <span class="nd">@Twizzle</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">toggle</span><span class="o">()</span> <span class="o">{</span>
+  <span class="o">}</span>
+
+  <span class="c1">// Declares the annotation Twizzle.</span>
+  <span class="kd">public</span> <span class="nd">@interface</span> <span class="n">Twizzle</span> <span class="o">{</span>
+  <span class="o">}</span>
+</pre></div>
+<p>Annotations may include an optional list of key-value pairs:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+  <span class="c1">// Same as: @Edible(value = true)</span>
+  <span class="nd">@Edible</span><span class="o">(</span><span class="kc">true</span><span class="o">)</span>
+  <span class="n">Item</span> <span class="n">item</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Carrot</span><span class="o">();</span>
+
+  <span class="kd">public</span> <span class="nd">@interface</span> <span class="n">Edible</span> <span class="o">{</span>
+      <span class="kt">boolean</span> <span class="nf">value</span><span class="o">()</span> <span class="k">default</span> <span class="kc">false</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="nd">@Author</span><span class="o">(</span><span class="n">first</span> <span class="o">=</span> <span class="s">"Oompah"</span><span class="o">,</span> <span class="n">last</span> <span class="o">=</span> <span class="s">"Loompah"</span><span class="o">)</span>
+  <span class="n">Book</span> <span class="n">book</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Book</span><span class="o">();</span>
+
+  <span class="kd">public</span> <span class="nd">@interface</span> <span class="n">Author</span> <span class="o">{</span>
+      <span class="n">String</span> <span class="nf">first</span><span class="o">();</span>
+      <span class="n">String</span> <span class="nf">last</span><span class="o">();</span>
+  <span class="o">}</span>
+</pre></div>
+<p>Annotations themselves may be annotated to indicate where and when they can be used:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+  <span class="nd">@Retention</span><span class="o">(</span><span class="n">RetentionPolicy</span><span class="o">.</span><span class="na">RUNTIME</span><span class="o">)</span> <span class="c1">// Make this annotation accessible at runtime via reflection.</span>
+  <span class="nd">@Target</span><span class="o">({</span><span class="n">ElementType</span><span class="o">.</span><span class="na">METHOD</span><span class="o">})</span>       <span class="c1">// This annotation can only be applied to class methods.</span>
+  <span class="kd">public</span> <span class="nd">@interface</span> <span class="n">Tweezable</span> <span class="o">{</span>
+  <span class="o">}</span>
+</pre></div>
+<p>The compiler reserves a set of special annotations (including <tt>@Deprecated</tt>, <tt>@Override</tt> and <tt>@SuppressWarnings</tt>) for syntactic purposes.</p>
+<p>Annotations are often used by <a href="https://en.wikipedia.org/wiki/Software_framework" title="Software framework">frameworks</a> as a way of conveniently applying behaviours to user-defined classes and methods that must otherwise be declared in an external source (such as an XML configuration file) or programmatically (with API calls). The following, for example, is an annotated <a href="Java_Persistence_API.html" title="Java Persistence API">JPA</a> data class:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="nd">@Entity</span>                                             <span class="c1">// Declares this an entity bean</span>
+<span class="nd">@Table</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"people"</span><span class="o">)</span>                             <span class="c1">// Maps the bean to SQL table "people"</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Person</span> <span class="kd">implements</span> <span class="n">Serializable</span> <span class="o">{</span>
+    <span class="nd">@Id</span>                                             <span class="c1">// Map this to the primary key column.</span>
+    <span class="nd">@GeneratedValue</span><span class="o">(</span><span class="n">strategy</span> <span class="o">=</span> <span class="n">GenerationType</span><span class="o">.</span><span class="na">AUTO</span><span class="o">)</span> <span class="c1">// Database will generate new primary keys, not us.</span>
+    <span class="kd">private</span> <span class="n">Integer</span> <span class="n">id</span><span class="o">;</span>
+
+    <span class="nd">@Column</span><span class="o">(</span><span class="n">length</span> <span class="o">=</span> <span class="mi">32</span><span class="o">)</span>                            <span class="c1">// Truncate column values to 32 characters.</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">name</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="n">Integer</span> <span class="nf">getId</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">id</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setId</span><span class="o">(</span><span class="n">Integer</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">id</span> <span class="o">=</span> <span class="n">id</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getName</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">name</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setName</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+<p>The annotations are not method calls and will not, by themselves, do anything. Rather, the class object is passed to the <a href="Java_Persistence_API.html" title="Java Persistence API">JPA</a> implementation at <a href="https://en.wikipedia.org/wiki/Run_time_(program_lifecycle_phase)" title="Run time (program lifecycle phase)">run-time</a>, which then extracts the annotations to generate an <a href="https://en.wikipedia.org/wiki/Object-relational_mapping" title="Object-relational mapping">object-relational mapping</a>.</p>
+<p>A complete example is given below:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kn">package</span> <span class="nn">com.annotation</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">java.lang.annotation.Documented</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.lang.annotation.ElementType</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.lang.annotation.Inherited</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.lang.annotation.Retention</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.lang.annotation.RetentionPolicy</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.lang.annotation.Target</span><span class="o">;</span>
+
+<span class="nd">@Documented</span>
+<span class="nd">@Retention</span><span class="o">(</span><span class="n">RetentionPolicy</span><span class="o">.</span><span class="na">RUNTIME</span><span class="o">)</span>
+<span class="nd">@Target</span><span class="o">({</span><span class="n">ElementType</span><span class="o">.</span><span class="na">TYPE</span><span class="o">,</span><span class="n">ElementType</span><span class="o">.</span><span class="na">METHOD</span><span class="o">,</span>
+         <span class="n">ElementType</span><span class="o">.</span><span class="na">CONSTRUCTOR</span><span class="o">,</span><span class="n">ElementType</span><span class="o">.</span><span class="na">ANNOTATION_TYPE</span><span class="o">,</span>
+         <span class="n">ElementType</span><span class="o">.</span><span class="na">PACKAGE</span><span class="o">,</span><span class="n">ElementType</span><span class="o">.</span><span class="na">FIELD</span><span class="o">,</span><span class="n">ElementType</span><span class="o">.</span><span class="na">LOCAL_VARIABLE</span><span class="o">})</span>
+<span class="nd">@Inherited</span>
+
+<span class="kd">public</span> <span class="nd">@interface</span> <span class="n">Unfinished</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">enum</span> <span class="n">Priority</span> <span class="o">{</span> <span class="n">LOW</span><span class="o">,</span> <span class="n">MEDIUM</span><span class="o">,</span> <span class="n">HIGH</span> <span class="o">}</span>
+    <span class="n">String</span> <span class="nf">value</span><span class="o">();</span>
+    <span class="n">String</span><span class="o">[]</span> <span class="nf">changedBy</span><span class="o">()</span> <span class="k">default</span> <span class="s">""</span><span class="o">;</span>
+    <span class="n">String</span><span class="o">[]</span> <span class="nf">lastChangedBy</span><span class="o">()</span> <span class="k">default</span> <span class="s">""</span><span class="o">;</span>
+    <span class="n">Priority</span> <span class="nf">priority</span><span class="o">()</span> <span class="k">default</span> <span class="n">Priority</span><span class="o">.</span><span class="na">MEDIUM</span><span class="o">;</span>
+    <span class="n">String</span> <span class="nf">createdBy</span><span class="o">()</span> <span class="k">default</span> <span class="s">"James Gosling"</span><span class="o">;</span>
+    <span class="n">String</span> <span class="nf">lastChanged</span><span class="o">()</span> <span class="k">default</span> <span class="s">"2011-07-08"</span><span class="o">;</span>
+<span class="o">}</span>
+</pre></div>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kn">package</span> <span class="nn">com.annotation</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="nd">@interface</span> <span class="n">UnderConstruction</span> <span class="o">{</span>
+    <span class="n">String</span> <span class="nf">owner</span><span class="o">()</span> <span class="k">default</span> <span class="s">"Patrick Naughton"</span><span class="o">;</span>
+    <span class="n">String</span> <span class="nf">value</span><span class="o">()</span> <span class="k">default</span> <span class="s">"Object is Under Construction."</span><span class="o">;</span>
+    <span class="n">String</span> <span class="nf">createdBy</span><span class="o">()</span> <span class="k">default</span> <span class="s">"Mike Sheridan"</span><span class="o">;</span>
+    <span class="n">String</span> <span class="nf">lastChanged</span><span class="o">()</span> <span class="k">default</span> <span class="s">"2011-07-08"</span><span class="o">;</span>
+<span class="o">}</span>
+</pre></div>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kn">package</span> <span class="nn">com.validators</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">javax.faces.application.FacesMessage</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.faces.component.UIComponent</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.faces.context.FacesContext</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.faces.validator.Validator</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.faces.validator.ValidatorException</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">com.annotation.UnderConstruction</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.annotation.Unfinished</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.annotation.Unfinished.Priority</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.util.Util</span><span class="o">;</span>
+
+<span class="nd">@UnderConstruction</span><span class="o">(</span><span class="n">owner</span><span class="o">=</span><span class="s">"Navin Gujarish"</span><span class="o">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">DateValidator</span> <span class="kd">implements</span> <span class="n">Validator</span> <span class="o">{</span>
+	
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">validate</span><span class="o">(</span><span class="n">FacesContext</span> <span class="n">context</span><span class="o">,</span> <span class="n">UIComponent</span> <span class="n">component</span><span class="o">,</span> <span class="n">Object</span> <span class="n">value</span><span class="o">)</span>
+        <span class="kd">throws</span> <span class="n">ValidatorException</span>
+    <span class="o">{</span>
+        <span class="n">String</span> <span class="n">date</span> <span class="o">=</span> <span class="o">(</span><span class="n">String</span><span class="o">)</span> <span class="n">value</span><span class="o">;</span>
+        <span class="n">String</span> <span class="n">errorLabel</span> <span class="o">=</span> <span class="s">"Please enter a valid date."</span><span class="o">;</span>
+        <span class="k">if</span> <span class="o">(!</span><span class="n">component</span><span class="o">.</span><span class="na">getAttributes</span><span class="o">().</span><span class="na">isEmpty</span><span class="o">())</span>
+        <span class="o">{</span>
+            <span class="n">errorLabel</span> <span class="o">=</span> <span class="o">(</span><span class="n">String</span><span class="o">)</span> <span class="n">component</span><span class="o">.</span><span class="na">getAttributes</span><span class="o">().</span><span class="na">get</span><span class="o">(</span><span class="s">"errordisplayval"</span><span class="o">);</span>
+        <span class="o">}</span>
+
+        <span class="k">if</span> <span class="o">(!</span><span class="n">Util</span><span class="o">.</span><span class="na">validateAGivenDate</span><span class="o">(</span><span class="n">date</span><span class="o">))</span>
+        <span class="o">{</span>
+            <span class="nd">@Unfinished</span><span class="o">(</span><span class="n">changedBy</span> <span class="o">=</span> <span class="s">"Steve"</span><span class="o">,</span>
+                <span class="n">value</span> <span class="o">=</span> <span class="s">"whether to add message to context or not, confirm"</span><span class="o">,</span>
+                <span class="n">priority</span> <span class="o">=</span> <span class="n">Priority</span><span class="o">.</span><span class="na">HIGH</span>
+            <span class="o">)</span>
+            <span class="n">FacesMessage</span> <span class="n">message</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FacesMessage</span><span class="o">();</span>
+            <span class="n">message</span><span class="o">.</span><span class="na">setSeverity</span><span class="o">(</span><span class="n">FacesMessage</span><span class="o">.</span><span class="na">SEVERITY_ERROR</span><span class="o">);</span>
+            <span class="n">message</span><span class="o">.</span><span class="na">setSummary</span><span class="o">(</span><span class="n">errorLabel</span><span class="o">);</span>
+            <span class="n">message</span><span class="o">.</span><span class="na">setDetail</span><span class="o">(</span><span class="n">errorLabel</span><span class="o">);</span>
+            <span class="k">throw</span> <span class="k">new</span> <span class="n">ValidatorException</span><span class="o">(</span><span class="n">message</span><span class="o">);</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+<h2><span class="mw-headline" id="Processing">Processing</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_annotation&amp;action=edit&amp;section=6" title="Edit section: Processing">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>When Java source code is compiled, annotations can be processed by compiler plug-ins called annotation processors. Processors can produce informational messages or create additional Java source files or resources, which in turn may be compiled and processed, and also modify the annotated code itself. The Java compiler conditionally stores annotation metadata in the class files, if the annotation has a <tt>RetentionPolicy</tt> of <tt>CLASS</tt> or <tt>RUNTIME</tt>. Later, the <a href="https://en.wikipedia.org/wiki/Java_virtual_machine" title="Java virtual machine">JVM</a> or other programs can look for the metadata to determine how to interact with the program elements or change their behavior.</p>
+<p>In addition to processing an annotation using an annotation processor, a Java programmer can write their own code that uses reflections to process the annotation. <a href="Java_Platform%2c_Standard_Edition.html" title="Java Platform, Standard Edition">Java SE</a> 5 supports a new interface that is defined in the <tt>java.lang.reflect</tt> package. This package contains the interface called <tt>AnnotatedElement</tt> that is implemented by the Java reflection classes including <tt>Class</tt>, <tt>Constructor</tt>, <tt>Field</tt>, <tt>Method</tt>, and <tt>Package</tt>. The implementations of this interface are used to represent an annotated element of the program currently running in the Java Virtual Machine. This interface allows annotations to be read reflectively.</p>
+<p>The <tt>AnnotatedElement</tt> interface provides access to annotations having <tt>RUNTIME</tt> retention. This access is provided by the <tt>getAnnotation</tt>, <tt>getAnnotations</tt>, and <tt>isAnnotationPresent</tt> methods. Because annotation types are compiled and stored in byte code files just like classes, the annotations returned by these methods can be queried just like any regular Java object. A complete example of processing an annotation is provided below:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kn">import</span> <span class="nn">java.lang.annotation.Retention</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.lang.annotation.RetentionPolicy</span><span class="o">;</span>
+
+<span class="c1">// This is the annotation to be processed</span>
+<span class="c1">// Default for Target is all Java Elements</span>
+<span class="c1">// Change retention policy to RUNTIME (default is CLASS)</span>
+<span class="nd">@Retention</span><span class="o">(</span><span class="n">RetentionPolicy</span><span class="o">.</span><span class="na">RUNTIME</span><span class="o">)</span>
+<span class="kd">public</span> <span class="nd">@interface</span> <span class="n">TypeHeader</span> <span class="o">{</span>
+    <span class="c1">// Default value specified for developer attribute</span>
+    <span class="n">String</span> <span class="nf">developer</span><span class="o">()</span> <span class="k">default</span> <span class="s">"Unknown"</span><span class="o">;</span>
+    <span class="n">String</span> <span class="nf">lastModified</span><span class="o">();</span>
+    <span class="n">String</span> <span class="o">[]</span> <span class="n">teamMembers</span><span class="o">();</span>
+    <span class="kt">int</span> <span class="nf">meaningOfLife</span><span class="o">();</span>
+<span class="o">}</span>
+</pre></div>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="c1">// This is the annotation being applied to a class</span>
+<span class="nd">@TypeHeader</span><span class="o">(</span><span class="n">developer</span> <span class="o">=</span> <span class="s">"Bob Bee"</span><span class="o">,</span>
+    <span class="n">lastModified</span> <span class="o">=</span> <span class="s">"2013-02-12"</span><span class="o">,</span>
+    <span class="n">teamMembers</span> <span class="o">=</span> <span class="o">{</span> <span class="s">"Ann"</span><span class="o">,</span> <span class="s">"Dan"</span><span class="o">,</span> <span class="s">"Fran"</span> <span class="o">},</span>
+    <span class="n">meaningOfLife</span> <span class="o">=</span> <span class="mi">42</span><span class="o">)</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">SetCustomAnnotation</span> <span class="o">{</span>
+    <span class="c1">// Class contents go here</span>
+<span class="o">}</span>
+</pre></div>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="c1">// This is the example code that processes the annotation</span>
+<span class="kn">import</span> <span class="nn">java.lang.annotation.Annotation</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.lang.reflect.AnnotatedElement</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">UseCustomAnnotation</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span> <span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">Class</span><span class="o">&lt;</span><span class="n">SetCustomAnnotation</span><span class="o">&gt;</span> <span class="n">classObject</span> <span class="o">=</span> <span class="n">SetCustomAnnotation</span><span class="o">.</span><span class="na">class</span><span class="o">;</span>
+        <span class="n">readAnnotation</span><span class="o">(</span><span class="n">classObject</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="kd">static</span> <span class="kt">void</span> <span class="nf">readAnnotation</span><span class="o">(</span><span class="n">AnnotatedElement</span> <span class="n">element</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">try</span> <span class="o">{</span>
+            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Annotation element values: \n"</span><span class="o">);</span>
+            <span class="k">if</span> <span class="o">(</span><span class="n">element</span><span class="o">.</span><span class="na">isAnnotationPresent</span><span class="o">(</span><span class="n">TypeHeader</span><span class="o">.</span><span class="na">class</span><span class="o">))</span> <span class="o">{</span>
+                <span class="c1">// getAnnotation returns Annotation type</span>
+                <span class="n">Annotation</span> <span class="n">singleAnnotation</span> <span class="o">=</span> 
+                        <span class="n">element</span><span class="o">.</span><span class="na">getAnnotation</span><span class="o">(</span><span class="n">TypeHeader</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+                <span class="n">TypeHeader</span> <span class="n">header</span> <span class="o">=</span> <span class="o">(</span><span class="n">TypeHeader</span><span class="o">)</span> <span class="n">singleAnnotation</span><span class="o">;</span>
+
+                <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Developer: "</span> <span class="o">+</span> <span class="n">header</span><span class="o">.</span><span class="na">developer</span><span class="o">());</span>
+                <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Last Modified: "</span> <span class="o">+</span> <span class="n">header</span><span class="o">.</span><span class="na">lastModified</span><span class="o">());</span>
+
+                <span class="c1">// teamMembers returned as String []</span>
+                <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"Team members: "</span><span class="o">);</span>
+                <span class="k">for</span> <span class="o">(</span><span class="n">String</span> <span class="n">member</span> <span class="o">:</span> <span class="n">header</span><span class="o">.</span><span class="na">teamMembers</span><span class="o">())</span>
+                    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="n">member</span> <span class="o">+</span> <span class="s">", "</span><span class="o">);</span>
+                <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"\n"</span><span class="o">);</span>
+
+                <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Meaning of Life: "</span><span class="o">+</span> <span class="n">header</span><span class="o">.</span><span class="na">meaningOfLife</span><span class="o">());</span>
+            <span class="o">}</span>
+        <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">Exception</span> <span class="n">exception</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">exception</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_annotation&amp;action=edit&amp;section=7" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="JSR_250.html" title="JSR 250">JSR 250: Common Annotations for the Java Platform</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Metadata_(CLI)#Attributes" title="Metadata (CLI)">CLI Attributes</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Java_programming" class="mw-redirect" title="Java programming">Java programming</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Java_virtual_machine" title="Java virtual machine">Java virtual machine</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Model-driven_architecture" title="Model-driven architecture">Model-driven architecture</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Python_decorator" class="mw-redirect" title="Python decorator">Python decorators</a>, inspired by Java annotations, which have a similar syntax.</li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_annotation&amp;action=edit&amp;section=8" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist columns references-column-count references-column-count-2" style="-moz-column-count: 2; -webkit-column-count: 2; column-count: 2; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://download.oracle.com/javase/1,5.0/docs/guide/language/annotations.html">"Annotations"</a>. <a href="https://en.wikipedia.org/wiki/Sun_Microsystems" title="Sun Microsystems">Sun Microsystems</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2011-09-30</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+annotation&amp;rft.btitle=Annotations&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fdownload.oracle.com%2Fjavase%2F1%2C5.0%2Fdocs%2Fguide%2Flanguage%2Fannotations.html&amp;rft.pub=Sun+Microsystems&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span>.</span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><cite class="citation book"><a href="https://en.wikipedia.org/wiki/Sun_Microsystems" title="Sun Microsystems">Sun Microsystems</a> (2005). <a rel="nofollow" class="external text" href="http://java.sun.com/docs/books/jls/third_edition/html/j3TOC.html"><i>Java(TM) Language Specification</i></a> (3rd ed.). <a href="https://en.wikipedia.org/wiki/Prentice_Hall" title="Prentice Hall">Prentice Hall</a>. <a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="https://en.wikipedia.org/wiki/Special:BookSources/0-321-24678-0" title="Special:BookSources/0-321-24678-0">0-321-24678-0</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+annotation&amp;rft.au=Sun+Microsystems&amp;rft.btitle=Java%28TM%29+Language+Specification&amp;rft.date=2005&amp;rft.edition=3rd&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fjava.sun.com%2Fdocs%2Fbooks%2Fjls%2Fthird_edition%2Fhtml%2Fj3TOC.html&amp;rft.isbn=0-321-24678-0&amp;rft.pub=Prentice+Hall&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span>.</span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><cite class="citation web">Dare Obasanjo (2007). <a rel="nofollow" class="external text" href="http://www.25hoursaday.com/CsharpVsJava.html#attributes">"A COMPARISON OF MICROSOFT'S C# PROGRAMMING LANGUAGE TO SUN MICROSYSTEMS' JAVA PROGRAMMING LANGUAGE: Metadata Annotations"</a>. Dare Obasanjo. Archived from <a rel="nofollow" class="external text" href="http://www.25hoursaday.com/">the original</a> on 2007<span class="reference-accessdate">. Retrieved <span class="nowrap">2012-09-20</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+annotation&amp;rft.au=Dare+Obasanjo&amp;rft.btitle=A+COMPARISON+OF+MICROSOFT%27S+C%23+PROGRAMMING+LANGUAGE+TO+SUN+MICROSYSTEMS%27+JAVA+PROGRAMMING+LANGUAGE%3A+Metadata+Annotations&amp;rft.date=2007&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.25hoursaday.com%2F&amp;rft.pub=Dare+Obasanjo&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><cite class="citation web">Coward, Danny (2006-11-02). <a rel="nofollow" class="external text" href="http://www.jcp.org/en/jsr/detail?id=175#2">"JSR 175: A Metadata Facility for the JavaTM Programming Language"</a>. <a href="Java_Community_Process.html" title="Java Community Process">Java Community Process</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2008-03-05</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+annotation&amp;rft.aufirst=Danny&amp;rft.aulast=Coward&amp;rft.btitle=JSR+175%3A+A+Metadata+Facility+for+the+JavaTM+Programming+Language&amp;rft.date=2006-11-02&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.jcp.org%2Fen%2Fjsr%2Fdetail%3Fid%3D175%232&amp;rft.pub=Java+Community+Process&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://docs.oracle.com/javase/tutorial/java/annotations/predefined.html">"Predefined Annotation Types"</a>. <a href="https://en.wikipedia.org/wiki/Oracle_Corporation" title="Oracle Corporation">Oracle Corporation</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2016-12-17</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+annotation&amp;rft.btitle=Predefined+Annotation+Types&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fdocs.oracle.com%2Fjavase%2Ftutorial%2Fjava%2Fannotations%2Fpredefined.html&amp;rft.pub=Oracle+Corporation&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.java2s.com/Tutorial/Java/0020__Language/TheBuiltInAnnotations.htm">"The Built-In Annotations&#160;: Standard Annotations"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2016-12-17</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+annotation&amp;rft.btitle=The+Built-In+Annotations+%3A+Standard+Annotations&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.java2s.com%2FTutorial%2FJava%2F0020__Language%2FTheBuiltInAnnotations.htm&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_annotation&amp;action=edit&amp;section=9" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://www.developer.com/java/other/article.php/3556176">An Introduction to Java Annotations by M. M. Islam Chisty</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.javabeat.net/articles/java-5-0/2007/08/annotations/">Introduction to Java 5.0 Annotations by Joy Christy</a></li>
+<li><a rel="nofollow" class="external text" href="http://java.sun.com/javase/6/docs/technotes/guides/language/annotations.html">Introduction to Java 6 Annotations at Sun Developer Network Site</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.regdeveloper.co.uk/2006/02/24/java_annotations/">Of Java Annotations by John Hunt</a></li>
+<li><a rel="nofollow" class="external text" href="https://web.archive.org/web/20140223113106/http://www.somanyword.com/2014/02/how-to-create-and-implement-custom-annotations-in-java/">Custom Annotations in Java</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.tutorialsdesk.com/2014/10/java-annotations-tutorial-with-examples.html">Java Annotations Explained</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.javaquery.com/2015/10/understanding-annotations-in-java.html">Understanding Annotations in Java</a></li>
+</ul>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1277
+Cached time: 20161217125440
+Cache expiry: 2592000
+Dynamic content: false
+CPU time usage: 0.072 seconds
+Real time usage: 0.091 seconds
+Preprocessor visited node count: 352/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 9028/2097152 bytes
+Template argument size: 9/2097152 bytes
+Highest expansion depth: 7/40
+Expensive parser function count: 0/500
+Lua time usage: 0.029/10.000 seconds
+Lua memory usage: 2.24 MB/50 MB
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   63.570      1 - Template:Reflist
+100.00%   63.570      1 - -total
+ 76.23%   48.457      5 - Template:Cite_web
+  7.16%    4.553      1 - Template:Cite_book
+  1.61%    1.021      1 - Template:Column-count
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:4093054-0!*!0!!en!*!* and timestamp 20161217125440 and revision id 755342341
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Java_annotation&amp;oldid=755342341">https://en.wikipedia.org/w/index.php?title=Java_annotation&amp;oldid=755342341</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Help_Category.html" title="Help:Category">Categories</a>: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Java_(programming_language)" title="Category:Java (programming language)">Java (programming language)</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="Category_Articles_with_example_Java_code.html" title="Category:Articles with example Java code">Articles with example Java code</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="Special_MyTalk.html" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="Special_MyContributions.html" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&amp;returnto=Java+annotation" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Java+annotation" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="Java_annotation.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+															<li  id="ca-talk"><span><a href="https://en.wikipedia.org/wiki/Talk:Java_annotation"  title="Discussion about the content page [t]" accesskey="t" rel="discussion">Talk</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="Java_annotation.html" >Read</a></span></li>
+															<li id="ca-edit"><span><a href="https://en.wikipedia.org/w/index.php?title=Java_annotation&amp;action=edit"  title="Edit this page [e]" accesskey="e">Edit</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="https://en.wikipedia.org/w/index.php?title=Java_annotation&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="https://en.wikipedia.org/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="Main_Page.html"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="Portal_Contents.html" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="Portal_Featured_content.html" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="Portal_Current_events.html" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="https://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="../../shop.wikimedia.org/index.html" title="Visit the Wikipedia store">Wikipedia store</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Interaction</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-help"><a href="Help_Contents.html" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="Wikipedia_About.html" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="Wikipedia_Community_portal.html" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="Wikipedia_Contact_us.html" title="How to contact Wikipedia">Contact page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="https://en.wikipedia.org/wiki/Special:WhatLinksHere/Java_annotation" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://en.wikipedia.org/wiki/Special:RecentChangesLinked/Java_annotation" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="Wikipedia_File_Upload_Wizard.html" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="https://en.wikipedia.org/w/index.php?title=Java_annotation&amp;oldid=755342341" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://en.wikipedia.org/w/index.php?title=Java_annotation&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q567345" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="https://en.wikipedia.org/w/index.php?title=Special:CiteThisPage&amp;page=Java_annotation&amp;id=755342341" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Print/export</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Java+annotation">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Java+annotation&amp;returnto=Java+annotation&amp;oldid=755342341&amp;writer=rdf2latex">Download as PDF</a></li><li id="t-print"><a href="https://en.wikipedia.org/w/index.php?title=Java_annotation&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Languages</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Anotació_(Java)" title="Anotació (Java) – Catalan" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Annotation_(Java)" title="Annotation (Java) – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Anotación_Java" title="Anotación Java – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Annotation_(Java)" title="Annotation (Java) – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/자바_애너테이션" title="자바 애너테이션 – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Annotazione_(Java)" title="Annotazione (Java) – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-he"><a href="https://he.wikipedia.org/wiki/Java_annotation" title="Java annotation – Hebrew" lang="he" hreflang="he" class="interlanguage-link-target">עברית</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/Java_annotációk" title="Java annotációk – Hungarian" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/アノテーション" title="アノテーション – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Annotation_(java)" title="Annotation (java) – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/Аннотация_(Java)" title="Аннотация (Java) – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/Java注解" title="Java注解 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q567345#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 17 December 2016, at 12:54.</li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="Wikipedia_Text_of_Creative_Commons_Attribution-ShareAlike_3.html">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="../../creativecommons.org/licenses/by-sa/3.0/index.html" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="../../wikimediafoundation.org/wiki/Terms_of_Use.html">Terms of Use</a> and <a href="../../wikimediafoundation.org/wiki/Privacy_policy.html">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="../../www.wikimediafoundation.org/index.html">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../../wikimediafoundation.org/wiki/Privacy_policy.html" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="Wikipedia_About.html" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="Wikipedia_General_disclaimer.html" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="Wikipedia_Contact_us.html">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a href="../../www.mediawiki.org/wiki/Special_MyLanguage/How_to_contribute.html">Developers</a></li>
+											<li id="footer-places-cookiestatement"><a href="../../wikimediafoundation.org/wiki/Cookie_statement.html">Cookie statement</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/w/index.php?title=Java_annotation&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="../../www.wikimediafoundation.org/index.html"><img src="https://en.wikipedia.org/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="../../www.mediawiki.org/index.html"><img src="https://en.wikipedia.org/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":56,"wgHostname":"mw1243"});});</script>
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Java_annotation by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:35 GMT -->
+</html>

@@ -1,0 +1,4 @@
+    
+        Is there a standard and reliable way of creating a temporary directory inside a Java application? There's <a href="http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=4735419" rel="nofollow">an entry in Sun's issue database, which has a bit of code in the comments, but I wonder if there is a standard solution to be found in one of the usual libraries (Apache Commons etc.)
+
+                

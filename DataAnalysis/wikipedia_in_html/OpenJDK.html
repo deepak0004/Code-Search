@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from en.wikipedia.org/wiki/OpenJDK by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:51 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>OpenJDK - Wikipedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"OpenJDK","wgTitle":"OpenJDK","wgCurRevisionId":756212691,"wgRevisionId":756212691,"wgArticleId":8232236,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Use mdy dates from June 2013","Pages using deprecated image syntax","Articles containing potentially dated statements from 2016","All articles containing potentially dated statements","All articles with unsourced statements","Articles with unsourced statements from April 2016","Articles containing potentially dated statements from 2010","Free software programmed in C++","Free software programmed in Java (programming language)","Free virtualization software","Java (programming language)","Java (programming language) libraries","Java platform","Java virtual machine"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"OpenJDK","wgRelevantArticleId":8232236,"wgRequestId":"WH34qQpAMFkAAKUoqNIAAAHX","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgFlaggedRevsParams":{"tags":{}},"wgStableRevisionId":null,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"en","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgWikibaseItemId":"Q1461054","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.math.styles":"ready","ext.cite.styles":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@1dqfd7l",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["ext.cite.a11y","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.legacy.wikibits","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.watchlist-notice","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.gadget.featured-articles-links","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.interface","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="https://en.wikipedia.org/w/load.php?debug=false&amp;lang=en&amp;modules=ext.cite.styles%7Cext.math.scripts%2Cstyles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="../w/load2c8d.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../w/load18b6.css?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.29.0-wmf.7"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="https://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/OpenJDK"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=OpenJDK&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=OpenJDK&amp;action=edit"/>
+<link rel="apple-touch-icon" href="https://en.wikipedia.org/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="../static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../w/api251f.php?action=rsd"/>
+<link rel="copyright" href="../../creativecommons.org/licenses/by-sa/3.0/index.html"/>
+<link rel="canonical" href="OpenJDK.html"/>
+<link rel="dns-prefetch" href="../../login.wikimedia.org/index.html"/>
+<link rel="dns-prefetch" href="../../meta.wikimedia.org/index.html" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-OpenJDK rootpage-OpenJDK skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">OpenJDK</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><script>function mfTempOpenSection(id){var block=document.getElementById("mf-section-"+id);block.className+=" open-block";block.previousSibling.className+=" open-block";}</script><table class="infobox vevent" style="width:22em">
+<caption class="summary">OpenJDK</caption>
+<tr>
+<td colspan="2" style="text-align:center"><a href="https://en.wikipedia.org/wiki/File:OpenJDK_logo.png" class="image"><img alt="OpenJDK logo.png" src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/OpenJDK_logo.png/200px-OpenJDK_logo.png" width="200" height="55" srcset="//upload.wikimedia.org/wikipedia/commons/f/f5/OpenJDK_logo.png 1.5x" data-file-width="300" data-file-height="82" /></a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_developer" title="Software developer">Developer(s)</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Oracle_Corporation" title="Oracle Corporation">Oracle Corporation</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;">Initial release</th>
+<td>May&#160;8, 2007<span class="noprint">; 9 years ago</span><span style="display:none">&#160;(<span class="bday dtstart published updated">2007-05-08</span>)</span></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;">Written in</th>
+<td><a href="https://en.wikipedia.org/wiki/C++" title="C++">C++</a> and <a href="Java_(programming_language).html" title="Java (programming language)">Java</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Operating_system" title="Operating system">Operating system</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Linux" title="Linux">Linux</a>, <a href="https://en.wikipedia.org/wiki/FreeBSD" title="FreeBSD">FreeBSD</a>, <a href="https://en.wikipedia.org/wiki/OS_X" class="mw-redirect" title="OS X">Mac OS X</a>, <a href="https://en.wikipedia.org/wiki/Microsoft_Windows" title="Microsoft Windows">Microsoft Windows</a>, <a href="https://en.wikipedia.org/wiki/OpenIndiana" title="OpenIndiana">OpenIndiana</a>; several other ports in progress</td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_categories#Broad_categories" title="Software categories">Type</a></th>
+<td><a href="Java_(software_platform).html" title="Java (software platform)">Java platform</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_license" title="Software license">License</a></th>
+<td><a href="https://en.wikipedia.org/wiki/GNU_General_Public_License" title="GNU General Public License">GNU GPL</a>+<a href="https://en.wikipedia.org/wiki/GPL_linking_exception" title="GPL linking exception">linking exception</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;">Website</th>
+<td><span class="url"><a rel="nofollow" class="external text" href="http://openjdk.java.net/">openjdk<wbr />.java<wbr />.net</a></span></td>
+</tr>
+</table>
+<p><b>OpenJDK</b> (<b>Open Java Development Kit</b>) is a <a href="https://en.wikipedia.org/wiki/Free_and_open-source_software" title="Free and open-source software">free and open source</a> implementation of the <a href="Java_Platform%2c_Standard_Edition.html" title="Java Platform, Standard Edition">Java Platform, Standard Edition (Java SE)</a>.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[1]</a></sup> It is the result of an effort <a href="https://en.wikipedia.org/wiki/Sun_Microsystems" title="Sun Microsystems">Sun Microsystems</a> began in 2006. The implementation is licensed under the <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License" title="GNU General Public License">GNU General Public License</a> (GNU GPL) version 2 with a <a href="https://en.wikipedia.org/wiki/GPL_linking_exception" title="GPL linking exception">linking exception</a>. Were it not for the GPL linking exception, components that linked to the <a href="Java_Class_Library.html" title="Java Class Library">Java class library</a> would be subject to the terms of the GPL license. OpenJDK is the official <a href="https://en.wikipedia.org/wiki/Reference_implementation" title="Reference implementation">reference implementation</a> of Java SE since version 7.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">[2]</a></sup><sup id="cite_ref-3" class="reference"><a href="#cite_note-3">[3]</a></sup><sup id="cite_ref-4" class="reference"><a href="#cite_note-4">[4]</a></sup></p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Components"><span class="tocnumber">1</span> <span class="toctext">Components</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Supported_JDK_versions"><span class="tocnumber">2</span> <span class="toctext">Supported JDK versions</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#IcedTea_and_inclusion_in_software_distributions"><span class="tocnumber">3</span> <span class="toctext">IcedTea and inclusion in software distributions</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#History"><span class="tocnumber">4</span> <span class="toctext">History</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#Sun.27s_promise_and_initial_release"><span class="tocnumber">4.1</span> <span class="toctext">Sun's promise and initial release</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Release_of_the_class_library"><span class="tocnumber">4.2</span> <span class="toctext">Release of the class library</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Community_improvements"><span class="tocnumber">4.3</span> <span class="toctext">Community improvements</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Collaboration_with_IBM.2C_Apple.2C_and_SAP"><span class="tocnumber">4.4</span> <span class="toctext">Collaboration with IBM, Apple, and SAP</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#See_also"><span class="tocnumber">5</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#References"><span class="tocnumber">6</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#External_links"><span class="tocnumber">7</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Components">Components</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=OpenJDK&amp;action=edit&amp;section=1" title="Edit section: Components">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The OpenJDK project produces a number of components: most importantly the <a href="https://en.wikipedia.org/wiki/Virtual_machine" title="Virtual machine">virtual machine</a> (<a href="HotSpot.html" title="HotSpot">HotSpot</a>), the <a href="Java_Class_Library.html" title="Java Class Library">Java Class Library</a> and the Java compiler (<a href="Javac.html" title="Javac">javac</a>).</p>
+<p>The web-browser plugin and <a href="Java_Web_Start.html" title="Java Web Start">Web Start</a>, which form part of <a href="https://en.wikipedia.org/wiki/Oracle_Java" class="mw-redirect" title="Oracle Java">Oracle Java</a>, are not included in OpenJDK. Sun previously indicated that they would try to open-source these components, but neither Sun nor <a href="https://en.wikipedia.org/wiki/Oracle_Corporation" title="Oracle Corporation">Oracle</a> have done so.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">[5]</a></sup> The only currently available free plugin and Web Start implementations as of 2016<sup class="plainlinks noprint asof-tag update" style="display:none;"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=OpenJDK&amp;action=edit">[update]</a></sup> are those provided by <a href="IcedTea.html" title="IcedTea">IcedTea</a>.<sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">[<i><a href="https://en.wikipedia.org/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (April 2016)">citation needed</span></a></i>]</sup></p>
+<p>In September 2016, an Oracle employee detailed plans to add <a href="https://en.wikipedia.org/wiki/AOT_compilation" class="mw-redirect" title="AOT compilation">AOT compilation</a> to the OpenJDK using the <a href="https://en.wikipedia.org/wiki/Graal_(compiler)" title="Graal (compiler)">Graal compiler</a>.<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">[6]</a></sup></p>
+<h2><span class="mw-headline" id="Supported_JDK_versions">Supported JDK versions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=OpenJDK&amp;action=edit&amp;section=2" title="Edit section: Supported JDK versions">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>OpenJDK was initially based only on the <a href="https://en.wikipedia.org/wiki/Java_SE_7" class="mw-redirect" title="Java SE 7">JDK 7 version</a> of the Java platform.<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">[7]</a></sup></p>
+<p>There are several separate OpenJDK projects:</p>
+<ul>
+<li>The OpenJDK 9 project, which is the basis for JDK 9.</li>
+<li>The OpenJDK 8 project, which is the basis for JDK 8, was released on 18 March 2014.</li>
+<li>The OpenJDK 8u project, which is based on JDK 8 and produces updates to the existing Java 8 releases.</li>
+<li>The OpenJDK 7u project, which is based on JDK 7 and produces updates to the existing Java 7 releases.</li>
+<li>The OpenJDK 6 project, which is based on JDK 7, retrofitted to provide an open-source version of <a href="https://en.wikipedia.org/wiki/Java_6" class="mw-redirect" title="Java 6">Java 6</a>.<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">[8]</a></sup><sup id="cite_ref-9" class="reference"><a href="#cite_note-9">[9]</a></sup></li>
+</ul>
+<h2><span class="mw-headline" id="IcedTea_and_inclusion_in_software_distributions">IcedTea and inclusion in software distributions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=OpenJDK&amp;action=edit&amp;section=3" title="Edit section: IcedTea and inclusion in software distributions">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div role="note" class="hatnote">Main article: <a href="IcedTea.html" title="IcedTea">IcedTea</a></div>
+<p>In order to bundle OpenJDK in <a href="https://en.wikipedia.org/wiki/Fedora_(Linux_distribution)" class="mw-redirect" title="Fedora (Linux distribution)">Fedora</a> and other <a href="https://en.wikipedia.org/wiki/Free_software" title="Free software">free</a> <a href="https://en.wikipedia.org/wiki/GNU" title="GNU">GNU</a>/<a href="https://en.wikipedia.org/wiki/Linux" title="Linux">Linux</a> distributions, OpenJDK needed to be buildable using only <a href="https://en.wikipedia.org/wiki/Free_software" title="Free software">free software</a> components. Due to the <a href="https://en.wikipedia.org/wiki/Closed_source" class="mw-redirect" title="Closed source">encumbered</a> components in the <a href="Java_Class_Library.html" title="Java Class Library">class library</a> and implicit assumptions within the build system that the JDK being used to build OpenJDK was a Sun JDK, this was not possible. To achieve openness, <a href="https://en.wikipedia.org/wiki/Red_Hat" title="Red Hat">Red Hat</a> started the IcedTea project in June 2007.<sup id="cite_ref-10" class="reference"><a href="#cite_note-10">[10]</a></sup> It began life as an OpenJDK/<a href="GNU_Classpath.html" title="GNU Classpath">GNU Classpath</a> hybrid that could be used to <a href="https://en.wikipedia.org/wiki/Bootstrapping_(compilers)" title="Bootstrapping (compilers)">bootstrap</a> OpenJDK, replacing the encumbrances with code from GNU Classpath.<sup id="cite_ref-11" class="reference"><a href="#cite_note-11">[11]</a></sup><sup id="cite_ref-12" class="reference"><a href="#cite_note-12">[12]</a></sup></p>
+<p>On November 5, 2007, Red Hat signed both the Sun Contributor Agreement and the OpenJDK Community <a href="Technology_Compatibility_Kit.html" title="Technology Compatibility Kit">TCK</a> License.<sup id="cite_ref-fitzsimAnnounce_13-0" class="reference"><a href="#cite_note-fitzsimAnnounce-13">[13]</a></sup> One of the first benefits of this agreement is tighter alignment with the IcedTea project, which brings together <a href="https://en.wikipedia.org/wiki/Fedora_(Linux_distribution)" class="mw-redirect" title="Fedora (Linux distribution)">Fedora</a>, the Linux distribution, and <a href="JBoss_application_server.html" class="mw-redirect" title="JBoss application server">JBoss</a>, the application server, technologies in a Linux environment. IcedTea provided free software alternatives for the few remaining proprietary sections in the OpenJDK project.</p>
+<p>In May 2008, the <a href="https://en.wikipedia.org/wiki/Fedora_(operating_system)" title="Fedora (operating system)">Fedora</a> 9<sup id="cite_ref-fedora9redhat_14-0" class="reference"><a href="#cite_note-fedora9redhat-14">[14]</a></sup><sup id="cite_ref-15" class="reference"><a href="#cite_note-15">[15]</a></sup> and <a href="https://en.wikipedia.org/wiki/Ubuntu_(operating_system)" title="Ubuntu (operating system)">Ubuntu 8.04</a><sup id="cite_ref-ubuntu_openjdk-6_16-0" class="reference"><a href="#cite_note-ubuntu_openjdk-6-16">[16]</a></sup> distributions included IcedTea 6, based completely on <a href="https://en.wikipedia.org/wiki/Free_software" title="Free software">free</a> and <a href="https://en.wikipedia.org/wiki/Open_source" class="mw-redirect" title="Open source">open source</a> code.<sup id="cite_ref-17" class="reference"><a href="#cite_note-17">[17]</a></sup> <a href="https://en.wikipedia.org/wiki/Fedora_(Linux_distribution)" class="mw-redirect" title="Fedora (Linux distribution)">Fedora 9</a> was the first version to be shipped with IcedTea6, based on the OpenJDK6 sources from Sun rather than OpenJDK7. It was also the first to use OpenJDK for the package name (via the <a rel="nofollow" class="external text" href="http://openjdk.java.net/legal/openjdk-trademark-notice.html">OpenJDK trademark agreement</a>) instead of IcedTea.<sup id="cite_ref-fedora9redhat_14-1" class="reference"><a href="#cite_note-fedora9redhat-14">[14]</a></sup> <a href="https://en.wikipedia.org/wiki/Ubuntu_(operating_system)" title="Ubuntu (operating system)">Ubuntu</a> also first packaged IcedTea7<sup id="cite_ref-ubuntu_icedtea-java7_18-0" class="reference"><a href="#cite_note-ubuntu_icedtea-java7-18">[18]</a></sup> before later moving to IcedTea6. Packages for IcedTea6 were also created for <a href="https://en.wikipedia.org/wiki/Debian" title="Debian">Debian</a> and included in <i>lenny</i>. On July 12, 2008, <a href="https://en.wikipedia.org/wiki/Debian" title="Debian">Debian</a> accepted OpenJDK-6 in unstable,<sup id="cite_ref-19" class="reference"><a href="#cite_note-19">[19]</a></sup><sup id="cite_ref-20" class="reference"><a href="#cite_note-20">[20]</a></sup> and it is now in <a href="https://en.wikipedia.org/wiki/Debian#Package_life_cycle" title="Debian">stable</a>.<sup id="cite_ref-21" class="reference"><a href="#cite_note-21">[21]</a></sup> OpenJDK is also available on <a href="https://en.wikipedia.org/wiki/OpenSUSE" title="OpenSUSE">openSUSE</a>,<sup id="cite_ref-22" class="reference"><a href="#cite_note-22">[22]</a></sup> <a href="https://en.wikipedia.org/wiki/Red_Hat_Enterprise_Linux" title="Red Hat Enterprise Linux">Red Hat Enterprise Linux</a> and RHEL derivatives such as <a href="https://en.wikipedia.org/wiki/CentOS" title="CentOS">CentOS</a>.<sup id="cite_ref-23" class="reference"><a href="#cite_note-23">[23]</a></sup></p>
+<p>In June 2008, Red Hat announced that the packaged binaries for OpenJDK on <a href="https://en.wikipedia.org/wiki/Fedora_(Linux_distribution)" class="mw-redirect" title="Fedora (Linux distribution)">Fedora 9</a>, built using IcedTea 6, had passed the <a href="Technology_Compatibility_Kit.html" title="Technology Compatibility Kit">Technology Compatibility Kit</a> tests and could claim to be a fully compatible Java 6 implementation.<sup id="cite_ref-24" class="reference"><a href="#cite_note-24">[24]</a></sup> In July 2009, an IcedTea 6 binary build for <a href="https://en.wikipedia.org/wiki/Ubuntu_(operating_system)" title="Ubuntu (operating system)">Ubuntu 9.04</a> passed all of the compatibility tests in the Java SE 6 <a href="Technology_Compatibility_Kit.html" title="Technology Compatibility Kit">TCK</a>.<sup id="cite_ref-25" class="reference"><a href="#cite_note-25">[25]</a></sup></p>
+<p>Since August 2008, OpenJDK 7 is usable on <a href="https://en.wikipedia.org/wiki/Mac_OS_X" class="mw-redirect" title="Mac OS X">Mac OS X</a> and other <a href="https://en.wikipedia.org/wiki/Berkeley_Software_Distribution" title="Berkeley Software Distribution">BSD</a> variants.<sup id="cite_ref-26" class="reference"><a href="#cite_note-26">[26]</a></sup></p>
+<p>On <a href="https://en.wikipedia.org/wiki/Android_Nougat" title="Android Nougat">Android Nougat</a>, OpenJDK replaces the now-discontinued <a href="Apache_Harmony.html" title="Apache Harmony">Apache Harmony</a> as the Java libraries in the source code of the <a href="https://en.wikipedia.org/wiki/Mobile_operating_system" title="Mobile operating system">mobile operating system</a>. <a href="https://en.wikipedia.org/wiki/Google" title="Google">Google</a> has been in an <a href="https://en.wikipedia.org/wiki/Oracle_America,_Inc._v._Google,_Inc." title="Oracle America, Inc. v. Google, Inc.">ongoing legal dispute with Oracle</a> over claims of copyright and patent infringement through its use of re-implementations of copyrighted Java APIs via Harmony. While also stating that this change was to create a more consistent platform between Java on Android and other platforms, the company admitted that the switch was motivated by the lawsuit, arguing that Oracle had authorized its use of the OpenJDK code by licensing it under the GPL.<sup id="cite_ref-ars-njdk_27-0" class="reference"><a href="#cite_note-ars-njdk-27">[27]</a></sup></p>
+<h2><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=OpenJDK&amp;action=edit&amp;section=4" title="Edit section: History">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div role="note" class="hatnote">See also: <a href="https://en.wikipedia.org/wiki/Java_(Sun)#Licensing" class="mw-redirect" title="Java (Sun)">Java Licensing</a></div>
+<h3><span class="mw-headline" id="Sun.27s_promise_and_initial_release">Sun's promise and initial release</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=OpenJDK&amp;action=edit&amp;section=5" title="Edit section: Sun's promise and initial release">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="https://en.wikipedia.org/wiki/Sun_Microsystems" title="Sun Microsystems">Sun</a> announced in <a href="JavaOne.html" title="JavaOne">JavaOne 2006</a> that Java would become open-source software,<sup id="cite_ref-28" class="reference"><a href="#cite_note-28">[28]</a></sup><sup id="cite_ref-29" class="reference"><a href="#cite_note-29">[29]</a></sup> and on October 25, 2006, at the <a href="https://en.wikipedia.org/wiki/Oracle_OpenWorld" title="Oracle OpenWorld">Oracle OpenWorld</a> conference, <a href="https://en.wikipedia.org/wiki/Jonathan_I._Schwartz" title="Jonathan I. Schwartz">Jonathan Schwartz</a> said that the company intended to announce the open-sourcing of the core <a href="https://en.wikipedia.org/wiki/Java_Platform" class="mw-redirect" title="Java Platform">Java Platform</a> within 30 to 60 days.<sup id="cite_ref-30" class="reference"><a href="#cite_note-30">[30]</a></sup></p>
+<p>Sun released the Java <a href="HotSpot.html" title="HotSpot">HotSpot</a> virtual machine and compiler as <a href="https://en.wikipedia.org/wiki/Free_software" title="Free software">free software</a> under the <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License" title="GNU General Public License">GNU General Public License</a> on November 13, 2006, with a promise that the rest of the JDK (which includes the <a href="https://en.wikipedia.org/wiki/Java_Runtime_Environment" class="mw-redirect" title="Java Runtime Environment">Java Runtime Environment</a>) would be placed under the GPL by March 2007, "except for a few components that Sun does not have the right to publish in source form under the GPL".<sup id="cite_ref-31" class="reference"><a href="#cite_note-31">[31]</a></sup> According to free-software advocate <a href="https://en.wikipedia.org/wiki/Richard_Stallman" title="Richard Stallman">Richard Stallman</a>, this would end the "Java trap", the <a href="https://en.wikipedia.org/wiki/Vendor_lock-in" title="Vendor lock-in">vendor lock-in</a> that he argues applied to Java and programs written in Java.<sup id="cite_ref-32" class="reference"><a href="#cite_note-32">[32]</a></sup></p>
+<h3><span class="mw-headline" id="Release_of_the_class_library">Release of the class library</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=OpenJDK&amp;action=edit&amp;section=6" title="Edit section: Release of the class library">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Following their promise to release a <a href="Java_Development_Kit.html" title="Java Development Kit">Java Development Kit</a> (JDK) based almost completely on free and open source code in the first half of 2007,<sup id="cite_ref-33" class="reference"><a href="#cite_note-33">[33]</a></sup> Sun released the complete <a href="https://en.wikipedia.org/wiki/Source_code" title="Source code">source code</a> of the Java Class Library under the GPL on May 8, 2007, except for some limited parts that had been licensed to Sun by third parties and Sun was unable to <a href="https://en.wikipedia.org/wiki/Software_relicensing" title="Software relicensing">re-license</a> under the GPL.<sup id="cite_ref-34" class="reference"><a href="#cite_note-34">[34]</a></sup> Included in the list of encumbered parts were several major components of the Java <a href="https://en.wikipedia.org/wiki/Graphical_user_interface" title="Graphical user interface">graphical user interface</a> (GUI). Sun stated that it planned to replace the remaining <a href="https://en.wikipedia.org/wiki/Proprietary_software" title="Proprietary software">proprietary</a> components with alternative implementations and to make the class library completely free.</p>
+<p>When initially released in May 2007, 4% of the OpenJDK class library remained proprietary.<sup id="cite_ref-35" class="reference"><a href="#cite_note-35">[35]</a></sup> By the appearance of OpenJDK 6 in May 2008, less than 1% (the <a href="https://en.wikipedia.org/wiki/Simple_Network_Management_Protocol" title="Simple Network Management Protocol">SNMP</a> implementation,<sup id="cite_ref-openjdk_b10_36-0" class="reference"><a href="#cite_note-openjdk_b10-36">[36]</a></sup> which is not part of the Java specification) remained,<sup id="cite_ref-fedora9redhat_14-2" class="reference"><a href="#cite_note-fedora9redhat-14">[14]</a></sup> making it possible to build OpenJDK without any binary plugs.<sup id="cite_ref-openjdk_b10_36-1" class="reference"><a href="#cite_note-openjdk_b10-36">[36]</a></sup> The binary plug requirement was later dropped from OpenJDK 7 as part of b53 in April 2009.<sup id="cite_ref-37" class="reference"><a href="#cite_note-37">[37]</a></sup></p>
+<p>This was made possible, over the course of the first year, by the work of <a href="https://en.wikipedia.org/wiki/Sun_Microsystems" title="Sun Microsystems">Sun Microsystems</a> and the OpenJDK community. Each encumbrance<sup id="cite_ref-38" class="reference"><a href="#cite_note-38">[38]</a></sup> was either released as <a href="https://en.wikipedia.org/wiki/Free_and_open_source_software" class="mw-redirect" title="Free and open source software">free and open source software</a> or replaced with an alternative. Beginning in December 2010, all the so-called <i>binary plugs</i> were replaced by <a href="https://en.wikipedia.org/wiki/Open_source" class="mw-redirect" title="Open source">Open source</a> replacements, making the whole JDK open sourced and the <i>binary plugs</i> not necessary anymore.<sup id="cite_ref-39" class="reference"><a href="#cite_note-39">[39]</a></sup></p>
+<h3><span class="mw-headline" id="Community_improvements">Community improvements</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=OpenJDK&amp;action=edit&amp;section=7" title="Edit section: Community improvements">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>On November 5, 2007, <a href="https://en.wikipedia.org/wiki/Red_Hat" title="Red Hat">Red Hat</a> announced an agreement with Sun, signing Sun's broad contributor agreement (which covers participation in all Sun-led free and open source software projects by all Red Hat engineers) and Sun's OpenJDK Community <a href="Technology_Compatibility_Kit.html" title="Technology Compatibility Kit">Technology Compatibility Kit</a> (TCK) License Agreement (which gives the company access to the test suite that determines whether a project based on OpenJDK complies with the Java SE 6 specification).<sup id="cite_ref-40" class="reference"><a href="#cite_note-40">[40]</a></sup></p>
+<p>Also on November 2007, the <i>Porters Group</i> was created on OpenJDK to aid in efforts to port OpenJDK to different <a href="https://en.wikipedia.org/wiki/Microarchitecture" title="Microarchitecture">processor architectures</a> and <a href="https://en.wikipedia.org/wiki/Operating_system" title="Operating system">operating systems</a>. The <a href="https://en.wikipedia.org/wiki/BSD" class="mw-redirect" title="BSD">BSD</a> porting project is led by Kurt Miller and Greg Lewis and the <a href="https://en.wikipedia.org/wiki/Mac_OS_X" class="mw-redirect" title="Mac OS X">Mac OS X</a> porting project (based on the BSD one) led by Landon Fuller have expressed interest in joining OpenJDK via the Porters Group and as of January 2008 are part of the mailing list discussions. Another project pending formalization on the Porters Group is the <a href="https://en.wikipedia.org/wiki/Haiku_(operating_system)" title="Haiku (operating system)">Haiku</a> Java Team, led by Bryan Varner.<sup id="cite_ref-41" class="reference"><a href="#cite_note-41">[41]</a></sup></p>
+<p>On December 2007, Sun moved the <a href="https://en.wikipedia.org/wiki/Revision_control" class="mw-redirect" title="Revision control">revision control</a> of OpenJDK from <a href="https://en.wikipedia.org/wiki/Sun_WorkShop_TeamWare" title="Sun WorkShop TeamWare">TeamWare</a> to <a href="https://en.wikipedia.org/wiki/Mercurial_(software)" class="mw-redirect" title="Mercurial (software)">Mercurial</a>, as part of the process of releasing it to <a href="https://en.wikipedia.org/wiki/Open_source" class="mw-redirect" title="Open source">open source</a> communities.<sup id="cite_ref-42" class="reference"><a href="#cite_note-42">[42]</a></sup><sup id="cite_ref-43" class="reference"><a href="#cite_note-43">[43]</a></sup></p>
+<p>OpenJDK has comparatively strict procedures of accepting code contributions: every proposed contribution must be reviewed by another OpenJDK committer and the contributor must have signed the Sun/Oracle Contributor Agreement.(SCA/OCA<sup id="cite_ref-44" class="reference"><a href="#cite_note-44">[44]</a></sup>) Preferably, there should also be a <a href="https://en.wikipedia.org/wiki/JavaTest_harness" title="JavaTest harness">jtreg</a><sup id="cite_ref-45" class="reference"><a href="#cite_note-45">[45]</a></sup> test demonstrating that the bug has been fixed. Initially, the external patch submission process was slow<sup id="cite_ref-46" class="reference"><a href="#cite_note-46">[46]</a></sup> and commits to the <a href="https://en.wikipedia.org/wiki/Codebase" title="Codebase">codebase</a> were only made by Sun engineers, until September 2008.<sup id="cite_ref-47" class="reference"><a href="#cite_note-47">[47]</a></sup> The process has improved and, as of 2010<sup class="plainlinks noprint asof-tag update" style="display:none;"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=OpenJDK&amp;action=edit">[update]</a></sup>, simple patches and backports from OpenJDK 7 to OpenJDK 6 can take place within hours rather than days.<sup id="cite_ref-48" class="reference"><a href="#cite_note-48">[48]</a></sup></p>
+<p>On 25 September 2013, Microsoft and <a href="https://en.wikipedia.org/wiki/Azul_Systems" title="Azul Systems">Azul Systems</a> collaborated to create Zulu,<sup id="cite_ref-49" class="reference"><a href="#cite_note-49">[49]</a></sup> a build of OpenJDK for users of the Windows Azure cloud. Zulu is available as a free download from the community site at <a rel="nofollow" class="external text" href="http://zulu.org/">Zulu.org</a>. You can also get Zulu on Amazon Web Services,<sup id="cite_ref-50" class="reference"><a href="#cite_note-50">[50]</a></sup> via Canonical’s Juju Charm Store,<sup id="cite_ref-51" class="reference"><a href="#cite_note-51">[51]</a></sup> the Docker Hub,<sup id="cite_ref-52" class="reference"><a href="#cite_note-52">[52]</a></sup> and Azul Systems repositories.</p>
+<h3><span class="mw-headline" id="Collaboration_with_IBM.2C_Apple.2C_and_SAP">Collaboration with IBM, Apple, and SAP</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=OpenJDK&amp;action=edit&amp;section=8" title="Edit section: Collaboration with IBM, Apple, and SAP">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>On October 11, 2010, <a href="https://en.wikipedia.org/wiki/IBM" title="IBM">IBM</a>, by far the biggest participant in the <a href="Apache_Harmony.html" title="Apache Harmony">Apache Harmony</a> project, decided to join <a href="https://en.wikipedia.org/wiki/Oracle_Corporation" title="Oracle Corporation">Oracle</a> on the OpenJDK project, effectively shifting its efforts from Harmony to OpenJDK.<sup id="cite_ref-53" class="reference"><a href="#cite_note-53">[53]</a></sup><sup id="cite_ref-54" class="reference"><a href="#cite_note-54">[54]</a></sup> Bob Sutor, IBM's head of Linux and open source, blogged that "IBM will be shifting its development effort from the Apache Project Harmony to OpenJDK".<sup id="cite_ref-55" class="reference"><a href="#cite_note-55">[55]</a></sup></p>
+<p>On November 12, 2010, <a href="https://en.wikipedia.org/wiki/Apple_Inc." title="Apple Inc.">Apple Inc.</a> (just three weeks after deprecating its own Java runtime port<sup id="cite_ref-56" class="reference"><a href="#cite_note-56">[56]</a></sup>) and Oracle Corporation announced the OpenJDK project for Mac OS X. Apple will contribute most of the key components, tools and technology required for a Java SE 7 implementation on Mac OS X, including a 32-bit and 64-bit HotSpot-based Java virtual machine, class libraries, a networking stack and the foundation for a new graphical client.<sup id="cite_ref-57" class="reference"><a href="#cite_note-57">[57]</a></sup></p>
+<p>On January 11, 2011, the Mac OS X Port Project was created on OpenJDK, and <a href="https://en.wikipedia.org/wiki/Apple_Inc." title="Apple Inc.">Apple</a> made the first public contribution of code to the project. The initial Apple contribution built on the OpenJDK <a href="https://en.wikipedia.org/wiki/Berkeley_Software_Distribution" title="Berkeley Software Distribution">BSD</a> port.<sup id="cite_ref-58" class="reference"><a href="#cite_note-58">[58]</a></sup></p>
+<p>In July 2011, <a href="https://en.wikipedia.org/wiki/SAP_AG" class="mw-redirect" title="SAP AG">SAP AG</a> announced that SAP officially joined the OpenJDK project.<sup id="cite_ref-59" class="reference"><a href="#cite_note-59">[59]</a></sup></p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=OpenJDK&amp;action=edit&amp;section=9" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div role="navigation" aria-label="Portals" class="noprint portal plainlist tright" style="margin:0.5em 0 0.5em 1em;border:solid #aaa 1px">
+<ul style="display:table;box-sizing:border-box;padding:0.1em;max-width:175px;background:#f9f9f9;font-size:85%;line-height:110%;font-style:italic;font-weight:bold">
+<li style="display:table-row"><span style="display:table-cell;padding:0.2em;vertical-align:middle;text-align:center"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_(2009).svg/28px-Free_and_open-source_software_logo_(2009).svg.png" width="28" height="28" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/42px-Free_and_open-source_software_logo_%282009%29.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/56px-Free_and_open-source_software_logo_%282009%29.svg.png 2x" data-file-width="512" data-file-height="512" /></span><span style="display:table-cell;padding:0.2em 0.2em 0.2em 0.3em;vertical-align:middle"><a href="https://en.wikipedia.org/wiki/Portal:Free_software" class="mw-redirect" title="Portal:Free software">Free software portal</a></span></li>
+<li style="display:table-row"><span style="display:table-cell;padding:0.2em;vertical-align:middle;text-align:center"><a href="https://en.wikipedia.org/wiki/File:Wave.svg" class="image"><img alt="icon" src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/15px-Wave.svg.png" width="15" height="28" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/23px-Wave.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/31px-Wave.svg.png 2x" data-file-width="226" data-file-height="407" /></a></span><span style="display:table-cell;padding:0.2em 0.2em 0.2em 0.3em;vertical-align:middle"><a href="https://en.wikipedia.org/wiki/Portal:Java" title="Portal:Java">Java portal</a></span></li>
+</ul>
+</div>
+<ul>
+<li><a href="Javac.html" title="Javac">javac</a>, Oracle Corporation's Java compiler, now under a <a href="https://en.wikipedia.org/wiki/GPL" class="mw-redirect" title="GPL">GPL</a> license</li>
+<li><a href="HotSpot.html" title="HotSpot">HotSpot</a>, Oracle Corporation's Java virtual machine, now under a <a href="https://en.wikipedia.org/wiki/GPL" class="mw-redirect" title="GPL">GPL</a> license</li>
+<li><a href="Java_Class_Library.html" title="Java Class Library">Java Class Library</a></li>
+<li><a href="Free_Java_implementations.html" title="Free Java implementations">Free Java implementations</a></li>
+<li><a href="Java_Platform%2c_Standard_Edition.html" title="Java Platform, Standard Edition">Java Platform, Standard Edition</a></li>
+<li><a href="IcedTea.html" title="IcedTea">IcedTea</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=OpenJDK&amp;action=edit&amp;section=10" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist columns references-column-width" style="-moz-column-width: 30em; -webkit-column-width: 30em; column-width: 30em; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://openjdk.java.net/">"OpenJDK homepage"</a>. <a href="https://en.wikipedia.org/wiki/Oracle_Corporation" title="Oracle Corporation">Oracle Corporation</a> and/or its affiliates<span class="reference-accessdate">. Retrieved <span class="nowrap">January 1,</span> 2013</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOpenJDK&amp;rft.btitle=OpenJDK+homepage&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fopenjdk.java.net%2F&amp;rft.pub=Oracle+Corporation+and%2For+its+affiliates&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://blogs.oracle.com/henrik/entry/moving_to_openjdk_as_the">Moving to OpenJDK as the official Java SE 7 Reference Implementation</a></span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://jdk7.java.net/java-se-7-ri/">Java Platform, Standard Edition 7 Reference Implementations</a></span></li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://jdk8.java.net/java-se-8-ri/">Java Platform, Standard Edition 8 Reference Implementations</a></span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><cite class="citation web">Darcy, Joe (June 8, 2009). <a rel="nofollow" class="external text" href="http://mail.openjdk.java.net/pipermail/jdk6-dev/2009-June/000604.html">"OpenJDK and the new plugin"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">September 5,</span> 2009</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOpenJDK&amp;rft.aufirst=Joe&amp;rft.aulast=Darcy&amp;rft.btitle=OpenJDK+and+the+new+plugin&amp;rft.date=2009-06-08&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fmail.openjdk.java.net%2Fpipermail%2Fjdk6-dev%2F2009-June%2F000604.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://www.infoq.com/news/2016/10/AOT-HotSpot-OpenJDK-9">"Ahead-of-Time (AOT) Compilation May Come to OpenJDK HotSpot in Java 9"</a>. InfoQ.com. 2016-10-01<span class="reference-accessdate">. Retrieved <span class="nowrap">2016-10-06</span></span>. <q><i>AOT brings about a new tool called ‘jaotc' which uses Graal as the backend (to generate code)</i></q></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOpenJDK&amp;rft.btitle=Ahead-of-Time+%28AOT%29+Compilation+May+Come+to+OpenJDK+HotSpot+in+Java+9&amp;rft.date=2016-10-01&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fwww.infoq.com%2Fnews%2F2016%2F10%2FAOT-HotSpot-OpenJDK-9&amp;rft.pub=InfoQ.com&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.sun.com/software/opensource/java/faq.jsp#b10">"Didn't you promise to open source both JDK 6 and JDK 7 last November? What happened to JDK 6?"</a>. Sun Microsystems<span class="reference-accessdate">. Retrieved <span class="nowrap">October 14,</span> 2007</span>. <q><i>Sun did make that promise, and we plan to keep it. But in the six months since the November 2006 announcement, it has become clear that doing this is far more complex than just changing the license and publishing the source code.</i></q></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOpenJDK&amp;rft.btitle=Didn%27t+you+promise+to+open+source+both+JDK+6+and+JDK+7+last+November%3F+What+happened+to+JDK+6%3F&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.sun.com%2Fsoftware%2Fopensource%2Fjava%2Ffaq.jsp%23b10&amp;rft.pub=Sun+Microsystems&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://weblogs.java.net/blog/robogeek/archive/2009/01/it_will_be_open.html">It will be (Open)JDK7 where OpenJDK==JDK | Java.net</a>. Weblogs.java.net. Retrieved on 2013-08-09.</span></li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><cite class="citation web">Darcy, Joe (February 11, 2008). <a rel="nofollow" class="external text" href="http://mail.openjdk.java.net/pipermail/jdk6-dev/2008-February/000001.html">"The code is coming! The code is coming!"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">February 16,</span> 2008</span>. <q><i>At Sun we're making final preparations for the first source release for the OpenJDK 6 project. We plan to release a tarball of the source, along with matching binary plugs, by February 15, 2008.</i></q></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOpenJDK&amp;rft.aufirst=Joe&amp;rft.aulast=Darcy&amp;rft.btitle=The+code+is+coming%21+The+code+is+coming%21&amp;rft.date=2008-02-11&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fmail.openjdk.java.net%2Fpipermail%2Fjdk6-dev%2F2008-February%2F000001.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><cite class="citation web">Fitzsimmons, Thomas (June 8, 2007). <a rel="nofollow" class="external text" href="http://mail.openjdk.java.net/pipermail/distro-pkg-dev/2007-June/000032.html">"Credits"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">June 8,</span> 2007</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOpenJDK&amp;rft.aufirst=Thomas&amp;rft.aulast=Fitzsimmons&amp;rft.btitle=Credits&amp;rft.date=2007-06-08&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fmail.openjdk.java.net%2Fpipermail%2Fdistro-pkg-dev%2F2007-June%2F000032.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text"><cite class="citation web">Andrew, Haley (June 7, 2007). <a rel="nofollow" class="external text" href="http://article.gmane.org/gmane.comp.java.openjdk.distro-packaging.devel/5">"Experimental Build Repository at icedtea.classpath.org"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">June 9,</span> 2007</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOpenJDK&amp;rft.aufirst=Haley&amp;rft.aulast=Andrew&amp;rft.btitle=Experimental+Build+Repository+at+icedtea.classpath.org&amp;rft.date=2007-06-07&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Farticle.gmane.org%2Fgmane.comp.java.openjdk.distro-packaging.devel%2F5&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text"><cite class="citation web">Mark, Wielaard (June 7, 2007). <a rel="nofollow" class="external text" href="http://developer.classpath.org/pipermail/classpath/2007-June/002109.html">"Experimental Build Repository at icedtea.classpath.org"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">June 9,</span> 2007</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOpenJDK&amp;rft.aufirst=Wielaard&amp;rft.aulast=Mark&amp;rft.btitle=Experimental+Build+Repository+at+icedtea.classpath.org&amp;rft.date=2007-06-07&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fdeveloper.classpath.org%2Fpipermail%2Fclasspath%2F2007-June%2F002109.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-fitzsimAnnounce-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-fitzsimAnnounce_13-0">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://home.businesswire.com/portal/site/google/index.jsp?ndmViewId=news_view&amp;newsId=20071105005882&amp;newsLang=en">"Red Hat and Sun Collaborate to Advance Open Source Java Technology"</a>. <a href="https://en.wikipedia.org/wiki/Red_Hat" title="Red Hat">Red Hat</a>. November 5, 2007<span class="reference-accessdate">. Retrieved <span class="nowrap">November 6,</span> 2007</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOpenJDK&amp;rft.btitle=Red+Hat+and+Sun+Collaborate+to+Advance+Open+Source+Java+Technology&amp;rft.date=2007-11-05&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fhome.businesswire.com%2Fportal%2Fsite%2Fgoogle%2Findex.jsp%3FndmViewId%3Dnews_view%26newsId%3D20071105005882%26newsLang%3Den&amp;rft.pub=Red+Hat&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-fedora9redhat-14"><span class="mw-cite-backlink">^ <a href="#cite_ref-fedora9redhat_14-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-fedora9redhat_14-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-fedora9redhat_14-2"><sup><i><b>c</b></i></sup></a></span> <span class="reference-text"><cite class="citation web">Wade, Karsten (March 13, 2008). <a rel="nofollow" class="external text" href="http://developer.redhatmagazine.com/2008/03/12/openjdk-to-replace-icedtea-in-fedora-9/">"OpenJDK in Fedora 9!"</a>. redhatmagazine.com<span class="reference-accessdate">. Retrieved <span class="nowrap">April 5,</span> 2008</span>. <q><i>Thomas Fitzsimmons updated the Fedora 9 release notes source pages to reflect that Fedora 9 would ship with OpenJDK 6 instead of the IcedTea implementation of OpenJDK 7. Fedora 9 (Sulphur) is due to release in May 2008.</i></q></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOpenJDK&amp;rft.aufirst=Karsten&amp;rft.aulast=Wade&amp;rft.btitle=OpenJDK+in+Fedora+9%21&amp;rft.date=2008-03-13&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fdeveloper.redhatmagazine.com%2F2008%2F03%2F12%2Fopenjdk-to-replace-icedtea-in-fedora-9%2F&amp;rft.pub=redhatmagazine.com&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-15">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.sun.com/aboutsun/pr/2008-04/sunflash.20080430.1.xml">"Open Source Java Technology Debuts In GNU/Linux Distributions"</a>. Sun Microsystems<span class="reference-accessdate">. Retrieved <span class="nowrap">May 2,</span> 2008</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOpenJDK&amp;rft.btitle=Open+Source+Java+Technology+Debuts+In+GNU%2FLinux+Distributions&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.sun.com%2Faboutsun%2Fpr%2F2008-04%2Fsunflash.20080430.1.xml&amp;rft.pub=Sun+Microsystems&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-ubuntu_openjdk-6-16"><span class="mw-cite-backlink"><b><a href="#cite_ref-ubuntu_openjdk-6_16-0">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://launchpad.net/ubuntu/+source/openjdk-6">"openjdk-6 in Ubuntu"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">April 19,</span> 2008</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOpenJDK&amp;rft.btitle=openjdk-6+in+Ubuntu&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Flaunchpad.net%2Fubuntu%2F%2Bsource%2Fopenjdk-6&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-17"><span class="mw-cite-backlink"><b><a href="#cite_ref-17">^</a></b></span> <span class="reference-text"><cite class="citation web">Reinhold, Mark (April 24, 2008). <a rel="nofollow" class="external text" href="http://blogs.sun.com/mr/entry/in_hardy_heron">"There's not a moment to lose!"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">April 19,</span> 2008</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOpenJDK&amp;rft.aufirst=Mark&amp;rft.aulast=Reinhold&amp;rft.btitle=There%99s+not+a+moment+to+lose%21&amp;rft.date=2008-04-24&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fblogs.sun.com%2Fmr%2Fentry%2Fin_hardy_heron&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-ubuntu_icedtea-java7-18"><span class="mw-cite-backlink"><b><a href="#cite_ref-ubuntu_icedtea-java7_18-0">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://launchpad.net/ubuntu/+source/icedtea-java7">"icedtea-java7 in Ubuntu"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">April 19,</span> 2008</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOpenJDK&amp;rft.btitle=icedtea-java7+in+Ubuntu&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Flaunchpad.net%2Fubuntu%2F%2Bsource%2Ficedtea-java7&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-19"><span class="mw-cite-backlink"><b><a href="#cite_ref-19">^</a></b></span> <span class="reference-text"><cite class="citation web">Topic, Dalibor (July 14, 2008). <a rel="nofollow" class="external text" href="http://robilad.livejournal.com/33750.html">"QotD: Debian Overview of openjdk-6 source package"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">July 15,</span> 2008</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOpenJDK&amp;rft.aufirst=Dalibor&amp;rft.aulast=Topic&amp;rft.btitle=QotD%3A+Debian+Overview+of+openjdk-6+source+package&amp;rft.date=2008-07-14&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Frobilad.livejournal.com%2F33750.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-20"><span class="mw-cite-backlink"><b><a href="#cite_ref-20">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://packages.qa.debian.org/o/openjdk-6.html">"Overview of openjdk-6 source package"</a>. debian.org<span class="reference-accessdate">. Retrieved <span class="nowrap">July 15,</span> 2008</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOpenJDK&amp;rft.btitle=Overview+of+openjdk-6+source+package&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fpackages.qa.debian.org%2Fo%2Fopenjdk-6.html&amp;rft.pub=debian.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-21"><span class="mw-cite-backlink"><b><a href="#cite_ref-21">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://packages.debian.org/stable/openjdk-6-jdk">"Package: openjdk-6-jdk"</a>. debian.org. February 14, 2009<span class="reference-accessdate">. Retrieved <span class="nowrap">February 16,</span> 2009</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOpenJDK&amp;rft.btitle=Package%3A+openjdk-6-jdk&amp;rft.date=2009-02-14&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fpackages.debian.org%2Fstable%2Fopenjdk-6-jdk&amp;rft.pub=debian.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-22"><span class="mw-cite-backlink"><b><a href="#cite_ref-22">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://web.archive.org/web/20090527021318/http://en.opensuse.org/OpenJDK">"Package: OpenJDK"</a>. opensuse.org. Archived from <a rel="nofollow" class="external text" href="http://en.opensuse.org/OpenJDK">the original</a> on May 27, 2009<span class="reference-accessdate">. Retrieved <span class="nowrap">June 1,</span> 2009</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOpenJDK&amp;rft.btitle=Package%3A+OpenJDK&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fen.opensuse.org%2FOpenJDK&amp;rft.pub=opensuse.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-23"><span class="mw-cite-backlink"><b><a href="#cite_ref-23">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://openjdk.java.net/install/#epel">"How to download and install prebuilt OpenJDK packages"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">March 3,</span> 2010</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOpenJDK&amp;rft.btitle=How+to+download+and+install+prebuilt+OpenJDK+packages&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fopenjdk.java.net%2Finstall%2F%23epel&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-24"><span class="mw-cite-backlink"><b><a href="#cite_ref-24">^</a></b></span> <span class="reference-text"><cite class="citation web">Sharples, Rich (June 19, 2008). <a rel="nofollow" class="external text" href="http://blog.softwhere.org/archives/196">"Java is finally Free and Open"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOpenJDK&amp;rft.aufirst=Rich&amp;rft.aulast=Sharples&amp;rft.btitle=Java+is+finally+Free+and+Open&amp;rft.date=2008-06-19&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fblog.softwhere.org%2Farchives%2F196&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-25"><span class="mw-cite-backlink"><b><a href="#cite_ref-25">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://lists.ubuntu.com/archives/ubuntu-devel-announce/2009-July/000587.html">Announcing OpenJDK 6 Certification for Ubuntu 9.04 (jaunty)</a></span></li>
+<li id="cite_note-26"><span class="mw-cite-backlink"><b><a href="#cite_ref-26">^</a></b></span> <span class="reference-text"><cite class="citation web">Fuller, Landon (August 19, 2008). <a rel="nofollow" class="external text" href="http://landonf.bikemonkey.org/code/java/SoyLatte_Meets_OpenJDK.20080819.html">"SoyLatte, Meet OpenJDK: OpenJDK 7 for Mac OS X"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">August 22,</span> 2008</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOpenJDK&amp;rft.aufirst=Landon&amp;rft.aulast=Fuller&amp;rft.btitle=SoyLatte%2C+Meet+OpenJDK%3A+OpenJDK+7+for+Mac+OS+X&amp;rft.date=2008-08-19&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Flandonf.bikemonkey.org%2Fcode%2Fjava%2FSoyLatte_Meets_OpenJDK.20080819.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-ars-njdk-27"><span class="mw-cite-backlink"><b><a href="#cite_ref-ars-njdk_27-0">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://arstechnica.com/tech-policy/2016/01/android-n-switches-to-openjdk-google-tells-oracle-it-is-protected-by-the-gpl/">"Android N switches to OpenJDK, Google tells Oracle it is protected by the GPL"</a>. <i>Ars Technica</i><span class="reference-accessdate">. Retrieved <span class="nowrap">7 January</span> 2016</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOpenJDK&amp;rft.atitle=Android+N+switches+to+OpenJDK%2C+Google+tells+Oracle+it+is+protected+by+the+GPL&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Farstechnica.com%2Ftech-policy%2F2016%2F01%2Fandroid-n-switches-to-openjdk-google-tells-oracle-it-is-protected-by-the-gpl%2F&amp;rft.jtitle=Ars+Technica&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-28"><span class="mw-cite-backlink"><b><a href="#cite_ref-28">^</a></b></span> <span class="reference-text"><cite class="citation web">Schwartz, Jonathan (May 23, 2006). <a rel="nofollow" class="external text" href="https://web.archive.org/web/20060717164412/http://blogs.sun.com/roller/page/jonathan/200605">"Busy Week..."</a>. Sun Microsystems. Archived from <a rel="nofollow" class="external text" href="http://blogs.sun.com/roller/page/jonathan/200605#busy_week1">the original</a> on July 17, 2006<span class="reference-accessdate">. Retrieved <span class="nowrap">May 9,</span> 2007</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOpenJDK&amp;rft.aufirst=Jonathan&amp;rft.aulast=Schwartz&amp;rft.btitle=Busy+Week...&amp;rft.date=2006-05-23&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fblogs.sun.com%2Froller%2Fpage%2Fjonathan%2F200605%23busy_week1&amp;rft.pub=Sun+Microsystems&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-29"><span class="mw-cite-backlink"><b><a href="#cite_ref-29">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://web.archive.org/web/20090319020035/http://mediacast.sun.com/share/tmarble/Sun_Opens_Java.ogg">"Sun Opens Java"</a>. <a href="https://en.wikipedia.org/wiki/Sun_Microsystems" title="Sun Microsystems">Sun Microsystems</a>. Archived from <a rel="nofollow" class="external text" href="http://mediacast.sun.com/share/tmarble/Sun_Opens_Java.ogg">the original</a> <span style="font-size:85%;">(<a href="https://en.wikipedia.org/wiki/OGG_Theora" class="mw-redirect" title="OGG Theora">OGG Theora</a>)</span> on March 19, 2009.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOpenJDK&amp;rft.btitle=Sun+Opens+Java&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fmediacast.sun.com%2Fshare%2Ftmarble%2FSun_Opens_Java.ogg&amp;rft.pub=Sun+Microsystems&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-30"><span class="mw-cite-backlink"><b><a href="#cite_ref-30">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.infoworld.com/d/developer-world/sun-ceo-sets-open-source-java-time-frame-558">"Sun CEO sets open source Java time frame - Announcement set for 30 to 60 days"</a>. <a href="https://en.wikipedia.org/wiki/InfoWorld" title="InfoWorld">InfoWorld</a>. October 25, 2006<span class="reference-accessdate">. Retrieved <span class="nowrap">2011-12-22</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOpenJDK&amp;rft.btitle=Sun+CEO+sets+open+source+Java+time+frame+-+Announcement+set+for+30+to+60+days&amp;rft.date=2006-10-25&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.infoworld.com%2Fd%2Fdeveloper-world%2Fsun-ceo-sets-open-source-java-time-frame-558&amp;rft.pub=InfoWorld&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-31"><span class="mw-cite-backlink"><b><a href="#cite_ref-31">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://web.archive.org/web/20070421151747/http://www.sun.com/2006-1113/feature/index.jsp">"Sun Opens Java"</a>. Sun Microsystems. November 13, 2006. Archived from <a rel="nofollow" class="external text" href="http://www.sun.com/2006-1113/feature/index.jsp">the original</a> on April 21, 2007<span class="reference-accessdate">. Retrieved <span class="nowrap">May 9,</span> 2007</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOpenJDK&amp;rft.btitle=Sun+Opens+Java&amp;rft.date=2006-11-13&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.sun.com%2F2006-1113%2Ffeature%2Findex.jsp&amp;rft.pub=Sun+Microsystems&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-32"><span class="mw-cite-backlink"><b><a href="#cite_ref-32">^</a></b></span> <span class="reference-text"><cite class="citation web">Stallman, Richard. <a rel="nofollow" class="external text" href="https://www.gnu.org/philosophy/java-trap.html">"Free But Shackled—The Java Trap"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">December 4,</span> 2007</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOpenJDK&amp;rft.aufirst=Richard&amp;rft.aulast=Stallman&amp;rft.btitle=Free+But+Shackled%94The+Java+Trap&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fwww.gnu.org%2Fphilosophy%2Fjava-trap.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-33"><span class="mw-cite-backlink"><b><a href="#cite_ref-33">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.sun.com/software/opensource/java/faq.jsp#b4">Oracle and Sun</a>. Sun.com (2011-10-04). Retrieved on 2013-08-09.</span></li>
+<li id="cite_note-34"><span class="mw-cite-backlink"><b><a href="#cite_ref-34">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://mail.openjdk.java.net/pipermail/announce/2007-May.txt">"Open JDK is here!"</a>. Sun Microsystems. May 8, 2007<span class="reference-accessdate">. Retrieved <span class="nowrap">May 9,</span> 2007</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOpenJDK&amp;rft.btitle=Open+JDK+is+here%21&amp;rft.date=2007-05-08&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fmail.openjdk.java.net%2Fpipermail%2Fannounce%2F2007-May.txt&amp;rft.pub=Sun+Microsystems&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-35"><span class="mw-cite-backlink"><b><a href="#cite_ref-35">^</a></b></span> <span class="reference-text"><cite class="citation web">Fitzsimmons, Thomas (May 18, 2007). <a rel="nofollow" class="external text" href="http://fitzsim.org/blog/?p=17">"Plans for OpenJDK"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">May 22,</span> 2007</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOpenJDK&amp;rft.aufirst=Thomas&amp;rft.aulast=Fitzsimmons&amp;rft.btitle=Plans+for+OpenJDK&amp;rft.date=2007-05-18&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Ffitzsim.org%2Fblog%2F%3Fp%3D17&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-openjdk_b10-36"><span class="mw-cite-backlink">^ <a href="#cite_ref-openjdk_b10_36-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-openjdk_b10_36-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://mail.openjdk.java.net/pipermail/jdk6-dev/2008-May/000058.html">"OpenJDK 6 b10 source posted"</a>. May 30, 2008<span class="reference-accessdate">. Retrieved <span class="nowrap">June 1,</span> 2008</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOpenJDK&amp;rft.btitle=OpenJDK+6+b10+source+posted&amp;rft.date=2008-05-30&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fmail.openjdk.java.net%2Fpipermail%2Fjdk6-dev%2F2008-May%2F000058.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-37"><span class="mw-cite-backlink"><b><a href="#cite_ref-37">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://download.java.net/jdk7/changes/jdk7-b53.html">"Changes in OpenJDK7 b53"</a>. April 2, 2009<span class="reference-accessdate">. Retrieved <span class="nowrap">September 5,</span> 2009</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOpenJDK&amp;rft.btitle=Changes+in+OpenJDK7+b53&amp;rft.date=2009-04-02&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fdownload.java.net%2Fjdk7%2Fchanges%2Fjdk7-b53.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-38"><span class="mw-cite-backlink"><b><a href="#cite_ref-38">^</a></b></span> <span class="reference-text"><cite class="citation web">Herron, David (October 4, 2007). <a rel="nofollow" class="external text" href="http://weblogs.java.net/blog/robogeek/archive/2007/10/openjdk_encumbr.html">"Plans for OpenJDK"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">October 9,</span> 2007</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOpenJDK&amp;rft.aufirst=David&amp;rft.aulast=Herron&amp;rft.btitle=Plans+for+OpenJDK&amp;rft.date=2007-10-04&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fweblogs.java.net%2Fblog%2Frobogeek%2Farchive%2F2007%2F10%2Fopenjdk_encumbr.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-39"><span class="mw-cite-backlink"><b><a href="#cite_ref-39">^</a></b></span> <span class="reference-text"><cite class="citation web">Kelly O'Hair (December 2010). <a rel="nofollow" class="external text" href="http://mail.openjdk.java.net/pipermail/build-dev/2010-December/003881.html">"OpenJDK7 and OpenJDK6 Binary Plugs Logic Removed"</a>. <a href="https://en.wikipedia.org/wiki/Oracle_Corporation" title="Oracle Corporation">Oracle Corporation</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2011-11-25</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOpenJDK&amp;rft.au=Kelly+O%27Hair&amp;rft.btitle=OpenJDK7+and+OpenJDK6+Binary+Plugs+Logic+Removed&amp;rft.date=2010-12&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fmail.openjdk.java.net%2Fpipermail%2Fbuild-dev%2F2010-December%2F003881.html&amp;rft.pub=Oracle+Corporation&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-40"><span class="mw-cite-backlink"><b><a href="#cite_ref-40">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.businesswire.com/portal/site/google/index.jsp?ndmViewId=news_view&amp;newsId=20071105005882&amp;newsLang=en">Broad contributor agreement and TCK License pave way for a fully compatible, free and open source Java Development Kit for Red Hat Enterprise Linux</a></span></li>
+<li id="cite_note-41"><span class="mw-cite-backlink"><b><a href="#cite_ref-41">^</a></b></span> <span class="reference-text"><cite class="citation web">koki (January 3, 2008). <a rel="nofollow" class="external text" href="http://haiku-os.org/news/2008-01-03/new_java_for_haiku_team_formed">"New java for haiku team formed"</a>. Haiku.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOpenJDK&amp;rft.au=koki&amp;rft.btitle=New+java+for+haiku+team+formed&amp;rft.date=2008-01-03&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fhaiku-os.org%2Fnews%2F2008-01-03%2Fnew_java_for_haiku_team_formed&amp;rft.pub=Haiku&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-42"><span class="mw-cite-backlink"><b><a href="#cite_ref-42">^</a></b></span> <span class="reference-text"><cite class="citation interview"><a href="James_Gosling.html" title="James Gosling">James Gosling</a> (October 2006). <a rel="nofollow" class="external text" href="http://java.sun.com/developer/technicalArticles/Interviews/gosling_os1_qa.html">"James Gosling on Open Sourcing Sun's Java Platform Implementations, Part 1"</a> (Interview). Interview with Robert Eckstein.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOpenJDK&amp;rft.au=James+Gosling&amp;rft.btitle=James+Gosling+on+Open+Sourcing+Sun%27s+Java+Platform+Implementations%2C+Part+1&amp;rft.date=2006-10&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fjava.sun.com%2Fdeveloper%2FtechnicalArticles%2FInterviews%2Fgosling_os1_qa.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-43"><span class="mw-cite-backlink"><b><a href="#cite_ref-43">^</a></b></span> <span class="reference-text"><cite class="citation web">O'Hair, Kelly (December 12, 2007). <a rel="nofollow" class="external text" href="http://blogs.sun.com/kto/entry/mercurial_openjdk_questions">"Mercurial OpenJDK Questions"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOpenJDK&amp;rft.aufirst=Kelly&amp;rft.aulast=O%27Hair&amp;rft.btitle=Mercurial+OpenJDK+Questions&amp;rft.date=2007-12-12&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fblogs.sun.com%2Fkto%2Fentry%2Fmercurial_openjdk_questions&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-44"><span class="mw-cite-backlink"><b><a href="#cite_ref-44">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://oss.oracle.com/oca.pdf">"Sun Microsystems Inc. Contributor Agreement"</a> <span style="font-size:85%;">(PDF)</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOpenJDK&amp;rft.btitle=Sun+Microsystems+Inc.+Contributor+Agreement&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Foss.oracle.com%2Foca.pdf&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-45"><span class="mw-cite-backlink"><b><a href="#cite_ref-45">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://openjdk.java.net/jtreg/">"Regression Test Harness for the OpenJDK platform: jtreg"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">August 26,</span> 2008</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOpenJDK&amp;rft.btitle=Regression+Test+Harness+for+the+OpenJDK+platform%3A+jtreg&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fopenjdk.java.net%2Fjtreg%2F&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-46"><span class="mw-cite-backlink"><b><a href="#cite_ref-46">^</a></b></span> <span class="reference-text"><cite class="citation web">Tripp, Andy (July 16, 2007). <a rel="nofollow" class="external text" href="http://www.javalobby.org/java/forums/t98834.html">"Classpath hackers frustrated with slow OpenJDK process"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">April 20,</span> 2008</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOpenJDK&amp;rft.aufirst=Andy&amp;rft.aulast=Tripp&amp;rft.btitle=Classpath+hackers+frustrated+with+slow+OpenJDK+process&amp;rft.date=2007-07-16&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.javalobby.org%2Fjava%2Fforums%2Ft98834.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-47"><span class="mw-cite-backlink"><b><a href="#cite_ref-47">^</a></b></span> <span class="reference-text"><cite class="citation web">Kennke, Roman (September 29, 2008). <a rel="nofollow" class="external text" href="https://web.archive.org/web/20081003094214/http://kennke.org/blog/2008/09/29/a-small-step-for-me/">"A small step for me"</a>. Archived from <a rel="nofollow" class="external text" href="http://kennke.org/blog/2008/09/29/a-small-step-for-me/">the original</a> on October 3, 2008<span class="reference-accessdate">. Retrieved <span class="nowrap">October 19,</span> 2008</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOpenJDK&amp;rft.aufirst=Roman&amp;rft.aulast=Kennke&amp;rft.btitle=A+small+step+for+me&amp;rft.date=2008-09-29&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fkennke.org%2Fblog%2F2008%2F09%2F29%2Fa-small-step-for-me%2F&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-48"><span class="mw-cite-backlink"><b><a href="#cite_ref-48">^</a></b></span> <span class="reference-text"><cite class="citation web">Darcy, Joe (June 10, 2010). <a rel="nofollow" class="external text" href="http://mail.openjdk.java.net/pipermail/jdk6-dev/2010-June/001708.html">"Backporting changeset from 7 to 6 for bugfix"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOpenJDK&amp;rft.aufirst=Joe&amp;rft.aulast=Darcy&amp;rft.btitle=Backporting+changeset+from+7+to+6+for+bugfix&amp;rft.date=2010-06-10&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fmail.openjdk.java.net%2Fpipermail%2Fjdk6-dev%2F2010-June%2F001708.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-49"><span class="mw-cite-backlink"><b><a href="#cite_ref-49">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.eweek.com/developer/microsoft-azul-bring-openjdk-to-windows-azure-with-zulu.html">"Microsoft, Azul Bring OpenJDK to Windows Azure With 'Zulu<span style="padding-right:0.2em;">'</span>"</a>. <i>www.eweek.com</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2015-12-03</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOpenJDK&amp;rft.atitle=Microsoft%2C+Azul+Bring+OpenJDK+to+Windows+Azure+With+%27Zulu%27&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.eweek.com%2Fdeveloper%2Fmicrosoft-azul-bring-openjdk-to-windows-azure-with-zulu.html&amp;rft.jtitle=www.eweek.com&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-50"><span class="mw-cite-backlink"><b><a href="#cite_ref-50">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.automatedtrader.net/news/at/154682/azul-zing-goes-live-on-red-hat-enterprise-linux-on-amazon-web--services">"Azul Zing goes live on Red Hat Enterprise Linux on Amazon Web Services | Financial Industry &amp; Algorithmic Trading News | Automated Trader"</a>. <i>www.automatedtrader.net</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2015-12-03</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOpenJDK&amp;rft.atitle=Azul+Zing+goes+live+on+Red+Hat+Enterprise+Linux+on+Amazon+Web++Services+%7C+Financial+Industry+%26+Algorithmic+Trading+News+%7C+Automated+Trader&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.automatedtrader.net%2Fnews%2Fat%2F154682%2Fazul-zing-goes-live-on-red-hat-enterprise-linux-on-amazon-web--services&amp;rft.jtitle=www.automatedtrader.net&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-51"><span class="mw-cite-backlink"><b><a href="#cite_ref-51">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.enterprisetech.com/2015/07/22/azul-systems-joins-canonicals-charm-partner-program/">"Azul Systems Joins Canonical's Charm Partner Program"</a>. <i>EnterpriseTech</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2015-12-03</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOpenJDK&amp;rft.atitle=Azul+Systems+Joins+Canonical%99s+Charm+Partner+Program&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.enterprisetech.com%2F2015%2F07%2F22%2Fazul-systems-joins-canonicals-charm-partner-program%2F&amp;rft.jtitle=EnterpriseTech&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-52"><span class="mw-cite-backlink"><b><a href="#cite_ref-52">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.v3.co.uk/v3-uk/news/2371497/azul-systems-puts-java-8-into-docker-containers-for-linux-users">"Azul Systems puts Java 8 into Docker containers for Linux users"</a>. <i>www.v3.co.uk</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2015-12-03</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOpenJDK&amp;rft.atitle=Azul+Systems+puts+Java+8+into+Docker+containers+for+Linux+users&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.v3.co.uk%2Fv3-uk%2Fnews%2F2371497%2Fazul-systems-puts-java-8-into-docker-containers-for-linux-users&amp;rft.jtitle=www.v3.co.uk&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-53"><span class="mw-cite-backlink"><b><a href="#cite_ref-53">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.marketwire.com/press-release/Oracle-and-IBM-Collaborate-to-Accelerate-Java-Innovation-Through-OpenJDK-NASDAQ-ORCL-1332855.htm">"Oracle and IBM Collaborate to Accelerate Java Innovation Through OpenJDK"</a>. <a href="https://en.wikipedia.org/wiki/Oracle_Corporation" title="Oracle Corporation">Oracle Corporation</a><span class="reference-accessdate">. Retrieved <span class="nowrap">October 22,</span> 2010</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOpenJDK&amp;rft.btitle=Oracle+and+IBM+Collaborate+to+Accelerate+Java+Innovation+Through+OpenJDK&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.marketwire.com%2Fpress-release%2FOracle-and-IBM-Collaborate-to-Accelerate-Java-Innovation-Through-OpenJDK-NASDAQ-ORCL-1332855.htm&amp;rft.pub=Oracle+Corporation&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-54"><span class="mw-cite-backlink"><b><a href="#cite_ref-54">^</a></b></span> <span class="reference-text"><cite class="citation web">Ryan Paul. <a rel="nofollow" class="external text" href="http://arstechnica.com/open-source/news/2010/10/ibm-joins-openjdk-as-oracle-shuns-apache-harmony.ars">"Java wars: IBM joins OpenJDK as Oracle shuns Apache Harmony"</a>. Ars Technica<span class="reference-accessdate">. Retrieved <span class="nowrap">October 22,</span> 2010</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOpenJDK&amp;rft.au=Ryan+Paul&amp;rft.btitle=Java+wars%3A+IBM+joins+OpenJDK+as+Oracle+shuns+Apache+Harmony&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Farstechnica.com%2Fopen-source%2Fnews%2F2010%2F10%2Fibm-joins-openjdk-as-oracle-shuns-apache-harmony.ars&amp;rft.pub=Ars+Technica&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-55"><span class="mw-cite-backlink"><b><a href="#cite_ref-55">^</a></b></span> <span class="reference-text"><cite class="citation web">Bob Sutor. <a rel="nofollow" class="external text" href="http://www.sutor.com/c/2010/10/ibm-joins-the-openjdk-community/">"IBM joins the OpenJDK community, will help unify open source Java efforts"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">October 22,</span> 2010</span>. <q><i>IBM will be shifting its development effort from the Apache Project Harmony to OpenJDK. For others who wish to do the same, we’ll work together to make the transition as easy as possible. IBM will still be vigorously involved in other Apache projects.</i></q></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOpenJDK&amp;rft.au=Bob+Sutor&amp;rft.btitle=IBM+joins+the+OpenJDK+community%2C+will+help+unify+open+source+Java+efforts&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.sutor.com%2Fc%2F2010%2F10%2Fibm-joins-the-openjdk-community%2F&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-56"><span class="mw-cite-backlink"><b><a href="#cite_ref-56">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://developer.apple.com/library/mac/#releasenotes/Java/JavaSnowLeopardUpdate3LeopardUpdate8RN/NewandNoteworthy/NewandNoteworthy.html">"Java for Mac OS X 10.6 Update 3 and 10.5 Update 8 Release Notes"</a>. October 20, 2010.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOpenJDK&amp;rft.btitle=Java+for+Mac+OS+X+10.6+Update+3+and+10.5+Update+8+Release+Notes&amp;rft.date=2010-10-20&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fdeveloper.apple.com%2Flibrary%2Fmac%2F%23releasenotes%2FJava%2FJavaSnowLeopardUpdate3LeopardUpdate8RN%2FNewandNoteworthy%2FNewandNoteworthy.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-57"><span class="mw-cite-backlink"><b><a href="#cite_ref-57">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.businesswire.com/news/home/20101112005253/en/Oracle-Apple-Announce-OpenJDK-Project-Mac-OS">"Oracle and Apple Announce OpenJDK Project for Mac OS X"</a>. <a href="https://en.wikipedia.org/wiki/Business_Wire" title="Business Wire">Business Wire</a>. November 12, 2010<span class="reference-accessdate">. Retrieved <span class="nowrap">2010-11-12</span></span>. <q><i>Oracle and Apple today announced the OpenJDK project for Mac OS X. Apple will contribute most of the key components, tools and technology required for a Java SE 7 implementation on Mac OS X, including a 32-bit and 64-bit HotSpot-based Java virtual machine, class libraries, a networking stack and the foundation for a new graphical client. OpenJDK will make Apple’s Java technology available to open source developers so they can access and contribute to the effort.</i></q></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOpenJDK&amp;rft.btitle=Oracle+and+Apple+Announce+OpenJDK+Project+for+Mac+OS+X&amp;rft.date=2010-11-12&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.businesswire.com%2Fnews%2Fhome%2F20101112005253%2Fen%2FOracle-Apple-Announce-OpenJDK-Project-Mac-OS&amp;rft.pub=Business+Wire&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-58"><span class="mw-cite-backlink"><b><a href="#cite_ref-58">^</a></b></span> <span class="reference-text"><cite class="citation web">Mike Swingler (<a href="https://en.wikipedia.org/wiki/Apple_Inc." title="Apple Inc.">Apple</a>) (January 11, 2011). <a rel="nofollow" class="external text" href="http://mail.openjdk.java.net/pipermail/macosx-port-dev/2011-January/000007.html">"Announcing: OpenJDK for Mac OS X source repository, mailing list, project home"</a>. OpenJDK<span class="reference-accessdate">. Retrieved <span class="nowrap">2010-11-12</span></span>. <q><i>I'm very happy to let you know that today we made the first public contribution of code to the OpenJDK project for Mac OS X. This initial contribution builds on the hard work of the BSD port, and initially has the same functionality. Today's contribution simply modifies the build process to create universal binary, and produces a .jdk bundle which is recognized by Java Preferences and the JVM detection logic in Mac OS X.</i></q></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOpenJDK&amp;rft.au=Mike+Swingler+%28Apple%29&amp;rft.btitle=Announcing%3A+OpenJDK+for+Mac+OS+X+source+repository%2C+mailing+list%2C+project+home&amp;rft.date=2011-01-11&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fmail.openjdk.java.net%2Fpipermail%2Fmacosx-port-dev%2F2011-January%2F000007.html&amp;rft.pub=OpenJDK&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-59"><span class="mw-cite-backlink"><b><a href="#cite_ref-59">^</a></b></span> <span class="reference-text"><cite class="citation web">Volker Simonis (<a href="https://en.wikipedia.org/wiki/SAP_AG" class="mw-redirect" title="SAP AG">SAP AG</a>) (July 14, 2011). <a rel="nofollow" class="external text" href="http://mail.openjdk.java.net/pipermail/discuss/2011-July/001982.html">"SAP joins the OpenJDK"</a>. OpenJDK<span class="reference-accessdate">. Retrieved <span class="nowrap">2010-11-12</span></span>. <q><i>I'm really happy that as of today, SAP has signed the Oracle Contributor Agreement (OCA). This means that with immediate effect the SAP JVM developers can officially join the discussions on the various OpenJDK mailing lists and contribute patches and enhancements to the project.</i></q></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOpenJDK&amp;rft.au=Volker+Simonis+%28SAP+AG%29&amp;rft.btitle=SAP+joins+the+OpenJDK&amp;rft.date=2011-07-14&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fmail.openjdk.java.net%2Fpipermail%2Fdiscuss%2F2011-July%2F001982.html&amp;rft.pub=OpenJDK&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=OpenJDK&amp;action=edit&amp;section=11" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://openjdk.java.net/">Main site</a></li>
+<li><a rel="nofollow" class="external text" href="http://parleys.com/display/PARLEYS/OpenJDK+-+The+First+Year?showComments=true">OpenJDK – The First Year</a> by Mark Reinhold</li>
+<li><a rel="nofollow" class="external text" href="http://today.java.net/pub/a/today/2009/05/21/zero-and-shark-openjdk-port.html">Zero and Shark: a Zero-Assembly Port of OpenJDK</a></li>
+</ul>
+<div role="navigation" class="navbox" aria-labelledby="Java" style="padding:3px">
+<table class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit">
+<tr>
+<th scope="col" class="navbox-title" colspan="3">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="https://en.wikipedia.org/wiki/Template:Java_(software_platform)" title="Template:Java (software platform)"><abbr title="View this template" style=";;background:none transparent;border:none;">v</abbr></a></li>
+<li class="nv-talk"><a href="https://en.wikipedia.org/wiki/Template_talk:Java_(software_platform)" title="Template talk:Java (software platform)"><abbr title="Discuss this template" style=";;background:none transparent;border:none;">t</abbr></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Java_(software_platform)&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;">e</abbr></a></li>
+</ul>
+</div>
+<div id="Java" style="font-size:114%"><a href="Java_(software_platform).html" title="Java (software platform)">Java</a></div>
+</th>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Java platforms</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Java_(programming_language).html" title="Java (programming language)">Java language</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Java_virtual_machine" title="Java virtual machine">JVM</a></li>
+<li><a href="Java_Platform%2c_Micro_Edition.html" title="Java Platform, Micro Edition">Micro Edition</a></li>
+<li><a href="Java_Platform%2c_Standard_Edition.html" title="Java Platform, Standard Edition">Standard Edition</a></li>
+<li><a href="Java_Platform%2c_Enterprise_Edition.html" title="Java Platform, Enterprise Edition">Enterprise Edition</a></li>
+<li><a href="Java_Card.html" title="Java Card">Java Card</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Android_software_development#SDK" title="Android software development">Android SDK</a></li>
+</ul>
+</div>
+</td>
+<td class="navbox-image" rowspan="13" style="width:0%;padding:0px 0px 0px 2px">
+<div><a href="https://en.wikipedia.org/wiki/File:Wave.svg" class="image"><img alt="Wave.svg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/75px-Wave.svg.png" width="75" height="135" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/113px-Wave.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/150px-Wave.svg.png 2x" data-file-width="226" data-file-height="407" /></a></div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Oracle technologies</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Squawk_virtual_machine.html" title="Squawk virtual machine">Squawk</a></li>
+<li><a href="Java_Development_Kit.html" title="Java Development Kit">Java Development Kit</a></li>
+<li><strong class="selflink">OpenJDK</strong></li>
+<li><a href="https://en.wikipedia.org/wiki/Java_virtual_machine" title="Java virtual machine">Java virtual machine</a></li>
+<li><a href="JavaFX.html" title="JavaFX">JavaFX</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Maxine_Virtual_Machine" title="Maxine Virtual Machine">Maxine VM</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Platform technologies</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Java_applet.html" title="Java applet">Applets</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Java_servlet" title="Java servlet">Servlets</a></li>
+<li><a href="MIDlet.html" title="MIDlet">MIDlets</a></li>
+<li><a href="JavaServer_Pages.html" title="JavaServer Pages">JSP</a></li>
+<li><a href="Java_Web_Start.html" title="Java Web Start">Web Start (JNLP)</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Major third-party technologies</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Blackdown_Java.html" title="Blackdown Java">Blackdown</a></li>
+<li><a href="Eclipse_(software).html" title="Eclipse (software)">Eclipse</a></li>
+<li><a href="GNU_Classpath.html" title="GNU Classpath">GNU Classpath</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Google_Web_Toolkit" title="Google Web Toolkit">GWT</a></li>
+<li><a href="Apache_Harmony.html" title="Apache Harmony">Harmony</a></li>
+<li><a href="Hibernate_(Java).html" class="mw-redirect" title="Hibernate (Java)">Hibernate</a></li>
+<li><a href="IcedTea.html" title="IcedTea">IcedTea</a></li>
+<li><a href="Jazelle.html" title="Jazelle">Jazelle</a></li>
+<li><a href="Spring_Framework.html" title="Spring Framework">Spring</a></li>
+<li><a href="Apache_Struts.html" class="mw-redirect" title="Apache Struts">Struts</a></li>
+<li><a href="TopLink.html" title="TopLink">TopLink</a></li>
+<li><a href="https://en.wikipedia.org/wiki/WildFly" title="WildFly">WildFly</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">History</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Java_version_history.html" title="Java version history">Java version history</a></li>
+<li><a href="Java_Community_Process.html" title="Java Community Process">Java Community Process</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sun_Microsystems" title="Sun Microsystems">Sun Microsystems</a></li>
+<li><a href="Free_Java_implementations.html" title="Free Java implementations">Free Java implementations</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="List_of_JVM_languages.html" title="List of JVM languages">Major programming languages</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="BeanShell.html" title="BeanShell">BeanShell</a></li>
+<li><a href="Clojure.html" title="Clojure">Clojure</a></li>
+<li><a href="Groovy_(programming_language).html" title="Groovy (programming language)">Groovy</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Oxygene_(programming_language)" title="Oxygene (programming language)">Oxygene</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Tcl/Java" title="Tcl/Java">Java Tcl</a></li>
+<li><a href="JRuby.html" title="JRuby">JRuby</a></li>
+<li><a href="Jython.html" title="Jython">Jython</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Kotlin_(programming_language)" title="Kotlin (programming language)">Kotlin</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Processing_(programming_language)" title="Processing (programming language)">Processing</a></li>
+<li><a href="Rhino_(JavaScript_engine).html" title="Rhino (JavaScript engine)">Rhino</a></li>
+<li><a href="Scala_(programming_language).html" title="Scala (programming language)">Scala</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Java conferences</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="JavaOne.html" title="JavaOne">JavaOne</a></li>
+<li><a href="Devoxx.html" title="Devoxx">Devoxx</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div role="navigation" class="navbox" aria-labelledby="Java_virtual_machines_.28comparison.29" style="padding:3px">
+<table class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="https://en.wikipedia.org/wiki/Template:Java_Virtual_Machine" title="Template:Java Virtual Machine"><abbr title="View this template" style=";;background:none transparent;border:none;">v</abbr></a></li>
+<li class="nv-talk"><a href="https://en.wikipedia.org/wiki/Template_talk:Java_Virtual_Machine" title="Template talk:Java Virtual Machine"><abbr title="Discuss this template" style=";;background:none transparent;border:none;">t</abbr></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Java_Virtual_Machine&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;">e</abbr></a></li>
+</ul>
+</div>
+<div id="Java_virtual_machines_.28comparison.29" style="font-size:114%"><a href="https://en.wikipedia.org/wiki/Java_virtual_machine" title="Java virtual machine">Java virtual machines</a> (<a href="https://en.wikipedia.org/wiki/Comparison_of_Java_virtual_machines" title="Comparison of Java virtual machines">comparison</a>)</div>
+</th>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Sun/Oracle</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="HotSpot.html" title="HotSpot">HotSpot</a></li>
+<li><a href="K_virtual_machine.html" title="K virtual machine">KVM</a></li>
+<li><strong class="selflink">OpenJDK</strong></li>
+<li><a href="https://en.wikipedia.org/wiki/Maxine_Virtual_Machine" title="Maxine Virtual Machine">Maxine VM</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Major implementations</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Excelsior_JET.html" title="Excelsior JET">Excelsior JET</a></li>
+<li><a href="JamVM.html" title="JamVM">JamVM</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Jikes_RVM" title="Jikes RVM">Jikes RVM</a></li>
+<li><a href="IKVM.html" title="IKVM.NET">IKVM.NET</a></li>
+<li><a href="IBM_J9.html" title="IBM J9">IBM J9</a></li>
+<li><a href="JRockit.html" title="JRockit">JRockit</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Embedded</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Excelsior_JET.html" title="Excelsior JET">Excelsior JET Embedded</a></li>
+<li><a href="https://en.wikipedia.org/wiki/JamaicaVM" title="JamaicaVM">JamaicaVM</a></li>
+<li><a href="Mika_VM.html" title="Mika VM">Mika VM</a></li>
+<li><a href="Mysaifu_JVM.html" title="Mysaifu JVM">Mysaifu</a></li>
+<li><a href="Squawk_virtual_machine.html" title="Squawk virtual machine">Squawk (Sun)</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Others</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="CACAO.html" title="CACAO">CACAO</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Dalvik_(software)" title="Dalvik (software)">Dalvik</a></li>
+<li><a href="JX_(operating_system).html" title="JX (operating system)">JX</a></li>
+<li><i><a href="List_of_Java_virtual_machines.html" title="List of Java virtual machines">more…</a></i></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Discontinued</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Apache_Harmony.html" title="Apache Harmony">Apache Harmony</a></li>
+<li><a href="GNU_Compiler_for_Java.html" title="GNU Compiler for Java">GCJ</a></li>
+<li><a href="Kaffe.html" title="Kaffe">Kaffe</a></li>
+<li><a href="Microsoft_Java_Virtual_Machine.html" title="Microsoft Java Virtual Machine">Microsoft JVM</a></li>
+<li><a href="SableVM.html" title="SableVM">SableVM</a></li>
+<li><a href="Jupiter_JVM.html" title="Jupiter JVM">Jupiter</a></li>
+<li><i><a href="https://en.wikipedia.org/wiki/Category:Discontinued_Java_virtual_machines" title="Category:Discontinued Java virtual machines">more…</a></i></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div role="navigation" class="navbox" aria-labelledby="Oracle_Corporation" style="padding:3px">
+<table class="nowraplinks hlist collapsible collapsed navbox-inner" style="border-spacing:0;background:transparent;color:inherit">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="https://en.wikipedia.org/wiki/Template:Oracle" title="Template:Oracle"><abbr title="View this template" style=";;background:none transparent;border:none;">v</abbr></a></li>
+<li class="nv-talk"><a href="https://en.wikipedia.org/wiki/Template_talk:Oracle" title="Template talk:Oracle"><abbr title="Discuss this template" style=";;background:none transparent;border:none;">t</abbr></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Oracle&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;">e</abbr></a></li>
+</ul>
+</div>
+<div id="Oracle_Corporation" style="font-size:114%"><a href="https://en.wikipedia.org/wiki/Oracle_Corporation" title="Oracle Corporation">Oracle Corporation</a></div>
+</th>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Corporation" title="Corporation">Corporate</a> <a href="https://en.wikipedia.org/wiki/Board_of_directors" title="Board of directors">directors</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/w/index.php?title=Jeffrey_Berg&amp;action=edit&amp;redlink=1" class="new" title="Jeffrey Berg (page does not exist)">Jeffrey Berg</a></li>
+<li><a href="https://en.wikipedia.org/w/index.php?title=H._Raymond_Bingham&amp;action=edit&amp;redlink=1" class="new" title="H. Raymond Bingham (page does not exist)">H. Raymond Bingham</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Michael_Boskin" title="Michael Boskin">Michael Boskin</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Safra_A._Catz" title="Safra A. Catz">Safra A. Catz</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Larry_Ellison" title="Larry Ellison">Larry Ellison</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Héctor_García-Molina" title="Héctor García-Molina">Héctor García-Molina</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Joseph_Grundfest" title="Joseph Grundfest">Joseph Grundfest</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Jeffrey_O._Henley" class="mw-redirect" title="Jeffrey O. Henley">Jeffrey O. Henley</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Mark_Hurd" title="Mark Hurd">Mark Hurd</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Jack_Kemp" title="Jack Kemp">Jack F. Kemp</a></li>
+<li><a href="https://en.wikipedia.org/w/index.php?title=Donald_L._Lucas&amp;action=edit&amp;redlink=1" class="new" title="Donald L. Lucas (page does not exist)">Donald L. Lucas</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Naomi_O._Seligman" title="Naomi O. Seligman">Naomi O. Seligman</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Mergers_and_acquisitions" title="Mergers and acquisitions">Acquisitions</a> (<a href="https://en.wikipedia.org/wiki/List_of_acquisitions_by_Oracle" title="List of acquisitions by Oracle">list</a>)</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Sun_Microsystems" title="Sun Microsystems">Sun</a></li>
+<li><a href="https://en.wikipedia.org/wiki/PeopleSoft" title="PeopleSoft">PeopleSoft</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Oracle_Hyperion" title="Oracle Hyperion">Hyperion</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Siebel_Systems" title="Siebel Systems">Siebel</a></li>
+<li><a href="https://en.wikipedia.org/wiki/BEA_Systems" title="BEA Systems">BEA</a></li>
+<li><a href="https://en.wikipedia.org/wiki/JD_Edwards" title="JD Edwards">JD Edwards</a></li>
+<li><a href="https://en.wikipedia.org/wiki/RightNow_Technologies" title="RightNow Technologies">RightNow</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Virtual_Iron" title="Virtual Iron">Virtual Iron</a></li>
+<li><a href="https://en.wikipedia.org/wiki/TimesTen" title="TimesTen">TimesTen</a></li>
+<li><a href="https://en.wikipedia.org/w/index.php?title=Retek&amp;action=edit&amp;redlink=1" class="new" title="Retek (page does not exist)">Retek</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sunopsis" title="Sunopsis">Sunopsis</a></li>
+<li><a href="https://en.wikipedia.org/wiki/NetSuite" title="NetSuite">NetSuite</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Database" title="Database">DBMS</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Oracle_Database" title="Oracle Database">Oracle Database</a></li>
+<li><a href="https://en.wikipedia.org/wiki/MySQL" title="MySQL">MySQL</a></li>
+<li><a href="https://en.wikipedia.org/wiki/InnoDB" title="InnoDB">InnoDB</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Berkeley_DB" title="Berkeley DB">Berkeley DB</a></li>
+<li><a href="https://en.wikipedia.org/wiki/TimesTen" title="TimesTen">TimesTen</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Oracle_Rdb" title="Oracle Rdb">Rdb</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Essbase" title="Essbase">Essbase</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Programming_language" title="Programming language">Programming languages</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Java_(programming_language).html" title="Java (programming language)">Java</a></li>
+<li><a href="https://en.wikipedia.org/wiki/PL/SQL" title="PL/SQL">PL/SQL</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Integrated_development_environment" title="Integrated development environment">IDE</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="JDeveloper.html" title="JDeveloper">JDeveloper</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Oracle_Forms" title="Oracle Forms">Forms</a></li>
+<li><a href="NetBeans.html" title="NetBeans">NetBeans</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Oracle_Application_Express" title="Oracle Application Express">Apex</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Oracle_SQL_Developer" title="Oracle SQL Developer">SQL Developer</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Oracle_Developer_Studio" title="Oracle Developer Studio">Developer Studio</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Middleware_(distributed_applications)" title="Middleware (distributed applications)">Middleware</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Oracle_Fusion_Middleware" title="Oracle Fusion Middleware">Fusion Middleware</a></li>
+<li><a href="Oracle_WebCenter.html" title="Oracle WebCenter">WebCenter</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Oracle_SOA_Suite" title="Oracle SOA Suite">SOA Suite</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Oracle_WebLogic_Server" title="Oracle WebLogic Server">WebLogic Server</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Oracle_Coherence" title="Oracle Coherence">Coherence</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Tuxedo_(software)" title="Tuxedo (software)">Tuxedo</a></li>
+<li><a href="GlassFish.html" title="GlassFish">GlassFish</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Operating_system" title="Operating system">Operating systems</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Oracle_Linux" title="Oracle Linux">Oracle Linux</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Solaris_(operating_system)" title="Solaris (operating system)">Oracle Solaris</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Computer_hardware" title="Computer hardware">Computer hardware</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Sun_Fire" title="Sun Fire">Sun Fire</a></li>
+<li><a href="https://en.wikipedia.org/wiki/SPARC" title="SPARC">SPARC</a> (<a href="https://en.wikipedia.org/wiki/SPARC_T-Series" title="SPARC T-Series">T-Series</a>, <a href="https://en.wikipedia.org/wiki/SPARC_Enterprise" title="SPARC Enterprise">Enterprise</a>)</li>
+<li><a href="https://en.wikipedia.org/wiki/Storage_Technology_Corporation" title="Storage Technology Corporation">StorageTek</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Computer_appliance" title="Computer appliance">Computer appliances</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Oracle_Exadata" title="Oracle Exadata">Oracle Exadata</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Oracle_Exalogic" title="Oracle Exalogic">Oracle Exalogic</a></li>
+<li><a href="https://en.wikipedia.org/w/index.php?title=Oracle_Exalytics&amp;action=edit&amp;redlink=1" class="new" title="Oracle Exalytics (page does not exist)">Oracle Exalytics</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Oracle_Big_Data_Appliance" title="Oracle Big Data Appliance">Big Data Appliance</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Education and recognition</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Oracle_Certification_Program" title="Oracle Certification Program">Oracle Certification Program</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td class="navbox-abovebelow" colspan="2">
+<div>
+<ul>
+<li><img alt="Category" src="http://upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/16px-Folder_Hexagonal_Icon.svg.png" title="Category" width="16" height="14" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/24px-Folder_Hexagonal_Icon.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/32px-Folder_Hexagonal_Icon.svg.png 2x" data-file-width="36" data-file-height="31" /> <b><a href="https://en.wikipedia.org/wiki/Category:Oracle_Corporation" title="Category:Oracle Corporation">Category</a></b></li>
+<li><img alt="Commons page" src="http://upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/12px-Commons-logo.svg.png" title="Commons page" width="12" height="16" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/18px-Commons-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/24px-Commons-logo.svg.png 2x" data-file-width="1024" data-file-height="1376" /> <a href="https://commons.wikimedia.org/wiki/Category:Oracle_Corporation" class="extiw" title="commons:Category:Oracle Corporation"><b>Commons</b></a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1254
+Cached time: 20170117105745
+Cache expiry: 2592000
+Dynamic content: false
+CPU time usage: 0.384 seconds
+Real time usage: 0.458 seconds
+Preprocessor visited node count: 3131/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 127910/2097152 bytes
+Template argument size: 2288/2097152 bytes
+Highest expansion depth: 17/40
+Expensive parser function count: 6/500
+Lua time usage: 0.191/10.000 seconds
+Lua memory usage: 5.77 MB/50 MB
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  386.350      1 - -total
+ 55.55%  214.605      1 - Template:Reflist
+ 42.34%  163.578     51 - Template:Cite_web
+ 12.42%   48.003      1 - Template:Infobox_software
+ 11.65%   45.022      1 - Template:Infobox
+  8.37%   32.331      1 - Template:Citation_needed
+  7.84%   30.277      1 - Template:Fix
+  4.64%   17.935      1 - Template:Use_mdy_dates
+  4.49%   17.354      3 - Template:Navbox
+  4.32%   16.684      2 - Template:Category_handler
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:8232236-0!*!0!!en!4!* and timestamp 20170117105745 and revision id 756212691
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=OpenJDK&amp;oldid=756212691">https://en.wikipedia.org/w/index.php?title=OpenJDK&amp;oldid=756212691</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Help_Category.html" title="Help:Category">Categories</a>: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Free_software_programmed_in_C++" title="Category:Free software programmed in C++">Free software programmed in C++</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Free_software_programmed_in_Java_(programming_language)" title="Category:Free software programmed in Java (programming language)">Free software programmed in Java (programming language)</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Free_virtualization_software" title="Category:Free virtualization software">Free virtualization software</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Java_(programming_language)" title="Category:Java (programming language)">Java (programming language)</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Java_(programming_language)_libraries" title="Category:Java (programming language) libraries">Java (programming language) libraries</a></li><li><a href="Category_Java_platform.html" title="Category:Java platform">Java platform</a></li><li><a href="Category_Java_virtual_machine.html" title="Category:Java virtual machine">Java virtual machine</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Use_mdy_dates_from_June_2013" title="Category:Use mdy dates from June 2013">Use mdy dates from June 2013</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Pages_using_deprecated_image_syntax" title="Category:Pages using deprecated image syntax">Pages using deprecated image syntax</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Articles_containing_potentially_dated_statements_from_2016" title="Category:Articles containing potentially dated statements from 2016">Articles containing potentially dated statements from 2016</a></li><li><a href="https://en.wikipedia.org/wiki/Category:All_articles_containing_potentially_dated_statements" title="Category:All articles containing potentially dated statements">All articles containing potentially dated statements</a></li><li><a href="https://en.wikipedia.org/wiki/Category:All_articles_with_unsourced_statements" title="Category:All articles with unsourced statements">All articles with unsourced statements</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Articles_with_unsourced_statements_from_April_2016" title="Category:Articles with unsourced statements from April 2016">Articles with unsourced statements from April 2016</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Articles_containing_potentially_dated_statements_from_2010" title="Category:Articles containing potentially dated statements from 2010">Articles containing potentially dated statements from 2010</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="Special_MyTalk.html" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="Special_MyContributions.html" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&amp;returnto=OpenJDK" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=OpenJDK" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="OpenJDK.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+															<li  id="ca-talk"><span><a href="https://en.wikipedia.org/wiki/Talk:OpenJDK"  title="Discussion about the content page [t]" accesskey="t" rel="discussion">Talk</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="OpenJDK.html" >Read</a></span></li>
+															<li id="ca-edit"><span><a href="https://en.wikipedia.org/w/index.php?title=OpenJDK&amp;action=edit"  title="Edit this page [e]" accesskey="e">Edit</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="https://en.wikipedia.org/w/index.php?title=OpenJDK&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="https://en.wikipedia.org/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="Main_Page.html"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="Portal_Contents.html" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="Portal_Featured_content.html" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="Portal_Current_events.html" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="https://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="../../shop.wikimedia.org/index.html" title="Visit the Wikipedia store">Wikipedia store</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Interaction</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-help"><a href="Help_Contents.html" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="Wikipedia_About.html" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="Wikipedia_Community_portal.html" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="Wikipedia_Contact_us.html" title="How to contact Wikipedia">Contact page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="https://en.wikipedia.org/wiki/Special:WhatLinksHere/OpenJDK" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://en.wikipedia.org/wiki/Special:RecentChangesLinked/OpenJDK" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="Wikipedia_File_Upload_Wizard.html" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="https://en.wikipedia.org/w/index.php?title=OpenJDK&amp;oldid=756212691" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://en.wikipedia.org/w/index.php?title=OpenJDK&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q1461054" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="https://en.wikipedia.org/w/index.php?title=Special:CiteThisPage&amp;page=OpenJDK&amp;id=756212691" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Print/export</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=OpenJDK">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=OpenJDK&amp;returnto=OpenJDK&amp;oldid=756212691&amp;writer=rdf2latex">Download as PDF</a></li><li id="t-print"><a href="https://en.wikipedia.org/w/index.php?title=OpenJDK&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Languages</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-ar"><a href="https://ar.wikipedia.org/wiki/اوبن_جي_دي_كي" title="اوبن جي دي كي – Arabic" lang="ar" hreflang="ar" class="interlanguage-link-target">العربية</a></li><li class="interlanguage-link interwiki-bg"><a href="https://bg.wikipedia.org/wiki/OpenJDK" title="OpenJDK – Bulgarian" lang="bg" hreflang="bg" class="interlanguage-link-target">Български</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/OpenJDK" title="OpenJDK – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/OpenJDK" title="OpenJDK – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/OpenJDK" title="OpenJDK – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/اوپن‌جی‌دی‌کی" title="اوپن‌جی‌دی‌کی – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/OpenJDK" title="OpenJDK – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/OpenJDK" title="OpenJDK – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/OpenJDK" title="OpenJDK – Dutch" lang="nl" hreflang="nl" class="interlanguage-link-target">Nederlands</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/OpenJDK" title="OpenJDK – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-no"><a href="https://no.wikipedia.org/wiki/OpenJDK" title="OpenJDK – Norwegian" lang="no" hreflang="no" class="interlanguage-link-target">Norsk bokmål</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/OpenJDK" title="OpenJDK – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/OpenJDK" title="OpenJDK – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/OpenJDK" title="OpenJDK – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-tr"><a href="https://tr.wikipedia.org/wiki/OpenJDK" title="OpenJDK – Turkish" lang="tr" hreflang="tr" class="interlanguage-link-target">Türkçe</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/OpenJDK" title="OpenJDK – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/OpenJDK" title="OpenJDK – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q1461054#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 22 December 2016, at 19:00.</li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="Wikipedia_Text_of_Creative_Commons_Attribution-ShareAlike_3.html">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="../../creativecommons.org/licenses/by-sa/3.0/index.html" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="../../wikimediafoundation.org/wiki/Terms_of_Use.html">Terms of Use</a> and <a href="../../wikimediafoundation.org/wiki/Privacy_policy.html">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="../../www.wikimediafoundation.org/index.html">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../../wikimediafoundation.org/wiki/Privacy_policy.html" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="Wikipedia_About.html" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="Wikipedia_General_disclaimer.html" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="Wikipedia_Contact_us.html">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a href="../../www.mediawiki.org/wiki/Special_MyLanguage/How_to_contribute.html">Developers</a></li>
+											<li id="footer-places-cookiestatement"><a href="../../wikimediafoundation.org/wiki/Cookie_statement.html">Cookie statement</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/w/index.php?title=OpenJDK&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="../../www.wikimediafoundation.org/index.html"><img src="https://en.wikipedia.org/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="../../www.mediawiki.org/index.html"><img src="https://en.wikipedia.org/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":522,"wgHostname":"mw1254"});});</script>
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/OpenJDK by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:52 GMT -->
+</html>

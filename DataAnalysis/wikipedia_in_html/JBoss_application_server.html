@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from en.wikipedia.org/wiki/JBoss_application_server by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:12 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>WildFly - Wikipedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"WildFly","wgTitle":"WildFly","wgCurRevisionId":756446296,"wgRevisionId":756446296,"wgArticleId":36533156,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles lacking reliable references from June 2011","All articles lacking reliable references","Articles with a promotional tone from May 2012","All articles with a promotional tone","Incomplete lists from August 2015","CS1 errors: chapter ignored","Cross-platform software","Free software programmed in Java (programming language)","Java enterprise platform","Portal software","Red Hat software","Web server software programmed in Java"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"WildFly","wgRelevantArticleId":36533156,"wgRequestId":"WHVzDApAADoAATLytS4AAAAP","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"JBoss_application_server","wgFlaggedRevsParams":{"tags":{}},"wgStableRevisionId":null,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"en","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgInternalRedirectTargetUrl":"/wiki/WildFly","wgWikibaseItemId":"Q68850","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.cite.styles":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@1dqfd7l",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["mediawiki.action.view.redirect","ext.cite.a11y","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.legacy.wikibits","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.watchlist-notice","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.gadget.featured-articles-links","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.interface","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="https://en.wikipedia.org/w/load.php?debug=false&amp;lang=en&amp;modules=ext.cite.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="../w/load2c8d.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../w/load18b6.css?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.29.0-wmf.7"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="https://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/WildFly"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=WildFly&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=WildFly&amp;action=edit"/>
+<link rel="apple-touch-icon" href="https://en.wikipedia.org/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="../static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../w/api251f.php?action=rsd"/>
+<link rel="copyright" href="../../creativecommons.org/licenses/by-sa/3.0/index.html"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/WildFly"/>
+<link rel="dns-prefetch" href="../../login.wikimedia.org/index.html"/>
+<link rel="dns-prefetch" href="../../meta.wikimedia.org/index.html" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-WildFly rootpage-WildFly skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">WildFly</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"><span class="mw-redirectedfrom">  (Redirected from <a href="https://en.wikipedia.org/w/index.php?title=JBoss_application_server&amp;redirect=no" class="mw-redirect" title="JBoss application server">JBoss application server</a>)</span></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><script>function mfTempOpenSection(id){var block=document.getElementById("mf-section-"+id);block.className+=" open-block";block.previousSibling.className+=" open-block";}</script><table class="plainlinks metadata ambox ambox-content ambox-multiple_issues compact-ambox" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Ambox_important.svg/40px-Ambox_important.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Ambox_important.svg/60px-Ambox_important.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Ambox_important.svg/80px-Ambox_important.svg.png 2x" data-file-width="40" data-file-height="40" /></div>
+</td>
+<td class="mbox-text">
+<div class="mw-collapsible" style="width:95%; margin: 0.2em 0;"><span class="mbox-text-span"><b>This article has multiple issues.</b> Please help <b><a class="external text" href="http://en.wikipedia.org/w/index.php?title=WildFly&amp;action=edit">improve it</a></b> or discuss these issues on the <b><a href="https://en.wikipedia.org/wiki/Talk:WildFly" title="Talk:WildFly">talk page</a></b>. <small><i>(<a href="https://en.wikipedia.org/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove these template messages</a>)</i></small></span>
+<div class="mw-collapsible-content" style="margin-top: 0.3em;">
+<table class="plainlinks metadata ambox ambox-content ambox-Primary_sources" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px"><a href="https://en.wikipedia.org/wiki/File:Question_book-new.svg" class="image"><img alt="Question book-new.svg" src="http://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/50px-Question_book-new.svg.png" width="50" height="39" srcset="//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/75px-Question_book-new.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/100px-Question_book-new.svg.png 2x" data-file-width="512" data-file-height="399" /></a></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article <b>relies too much on <a href="https://en.wikipedia.org/wiki/Wikipedia:Verifiability" title="Wikipedia:Verifiability">references</a> to <a href="https://en.wikipedia.org/wiki/Wikipedia:No_original_research#Primary.2C_secondary_and_tertiary_sources" title="Wikipedia:No original research">primary sources</a></b>. <span class="hide-when-compact">Please improve this by adding <a href="https://en.wikipedia.org/wiki/Wikipedia:No_original_research#Primary.2C_secondary_and_tertiary_sources" title="Wikipedia:No original research">secondary or tertiary sources</a>.</span> <small><i>(June 2011)</i></small> <small class="hide-when-compact"><i>(<a href="https://en.wikipedia.org/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></span></td>
+</tr>
+</table>
+<table class="plainlinks metadata ambox ambox-content ambox-Advert" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Ambox_important.svg/40px-Ambox_important.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Ambox_important.svg/60px-Ambox_important.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Ambox_important.svg/80px-Ambox_important.svg.png 2x" data-file-width="40" data-file-height="40" /></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article <b>contains content that is written like <a href="https://en.wikipedia.org/wiki/Wikipedia:What_Wikipedia_is_not#Wikipedia_is_not_a_soapbox_or_means_of_promotion" title="Wikipedia:What Wikipedia is not">an advertisement</a></b>. <span class="hide-when-compact">Please help <a class="external text" href="http://en.wikipedia.org/w/index.php?title=WildFly&amp;action=edit">improve it</a> by removing <a href="https://en.wikipedia.org/wiki/Wikipedia:Spam" title="Wikipedia:Spam">promotional content</a> and inappropriate <a href="https://en.wikipedia.org/wiki/Wikipedia:External_links" title="Wikipedia:External links">external links</a>, and by adding encyclopedic content written from a <a href="https://en.wikipedia.org/wiki/Wikipedia:Neutral_point_of_view" title="Wikipedia:Neutral point of view">neutral point of view</a>.</span> <small><i>(May 2012)</i></small> <small class="hide-when-compact"><i>(<a href="https://en.wikipedia.org/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></span></td>
+</tr>
+</table>
+</div>
+</div>
+<small class="hide-when-compact"><i>(<a href="https://en.wikipedia.org/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></td>
+</tr>
+</table>
+<table class="infobox vevent" style="width:22em">
+<caption class="summary">WildFly</caption>
+<tr>
+<td colspan="2" style="text-align:center"><a href="https://en.wikipedia.org/wiki/File:Wildfly_logo.png" class="image"><img alt="Wildfly logo.png" src="http://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Wildfly_logo.png/200px-Wildfly_logo.png" width="200" height="62" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Wildfly_logo.png/300px-Wildfly_logo.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Wildfly_logo.png/400px-Wildfly_logo.png 2x" data-file-width="1111" data-file-height="343" /></a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_developer" title="Software developer">Original author(s)</a></th>
+<td><a href="https://en.wikipedia.org/wiki/JBoss_(company)" title="JBoss (company)">JBoss</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_developer" title="Software developer">Developer(s)</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Red_Hat" title="Red Hat">Red Hat</a></td>
+</tr>
+<tr>
+<td colspan="2" style="text-align:center"></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_release_life_cycle" title="Software release life cycle">Stable release</a></th>
+<td>
+<div style="margin:0px;">10.1 / August&#160;19,&#160;2016<span style="display:none">&#160;(<span class="bday dtstart published updated">2016-08-19</span>)</span></div>
+</td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Source_code_repository" class="mw-redirect" title="Source code repository">Repository</a></th>
+<td><span class="url"><a rel="nofollow" class="external text" href="https://github.com/wildfly/wildfly">github<wbr />.com<wbr />/wildfly<wbr />/wildfly</a></span></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;">Written in</th>
+<td><a href="Java_(programming_language).html" title="Java (programming language)">Java</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Operating_system" title="Operating system">Operating system</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Cross-platform" title="Cross-platform">Cross-platform</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/List_of_software_categories" class="mw-redirect" title="List of software categories">Type</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Application_server" title="Application server">Application server</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_license" title="Software license">License</a></th>
+<td><a href="https://en.wikipedia.org/wiki/GNU_Lesser_General_Public_License" title="GNU Lesser General Public License">GNU Lesser General Public License</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;">Website</th>
+<td><span class="url"><a rel="nofollow" class="external text" href="http://www.wildfly.org/">www<wbr />.wildfly<wbr />.org</a></span></td>
+</tr>
+</table>
+<p><b>WildFly</b>,<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[1]</a></sup> formerly known as <b>JBoss AS</b>, or simply <b>JBoss,</b> is an <a href="https://en.wikipedia.org/wiki/Application_server" title="Application server">application server</a> authored by <a href="https://en.wikipedia.org/wiki/JBoss_(company)" title="JBoss (company)">JBoss</a>, now developed by <a href="https://en.wikipedia.org/wiki/Red_Hat" title="Red Hat">Red Hat</a>. WildFly is written in <a href="Java_(programming_language).html" title="Java (programming language)">Java</a>, and implements the <a href="Java_Platform%2c_Enterprise_Edition.html" title="Java Platform, Enterprise Edition">Java Platform, Enterprise Edition</a> (Java EE) specification. It runs on <a href="https://en.wikipedia.org/wiki/Cross-platform" title="Cross-platform">multiple platforms</a>.</p>
+<p>WildFly is <a href="https://en.wikipedia.org/wiki/Free_and_open-source_software" title="Free and open-source software">free and open-source software</a>, subject to the requirements of the <a href="https://en.wikipedia.org/wiki/GNU_Lesser_General_Public_License" title="GNU Lesser General Public License">GNU Lesser General Public License</a> (LGPL), version 2.1.</p>
+<p>On 20 November 2014, JBoss Application Server was renamed WildFly. The JBoss Community and other Red Hat JBoss products like <a href="https://en.wikipedia.org/wiki/JBoss_Enterprise_Application_Platform" title="JBoss Enterprise Application Platform">JBoss Enterprise Application Platform</a> were not renamed.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">[2]</a></sup></p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Origin"><span class="tocnumber">1</span> <span class="toctext">Origin</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Versions"><span class="tocnumber">2</span> <span class="toctext">Versions</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Product_features"><span class="tocnumber">3</span> <span class="toctext">Product features</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Licensing_and_pricing"><span class="tocnumber">4</span> <span class="toctext">Licensing and pricing</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#See_also"><span class="tocnumber">5</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Notes"><span class="tocnumber">6</span> <span class="toctext">Notes</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#References"><span class="tocnumber">7</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#External_links"><span class="tocnumber">8</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Origin">Origin</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=WildFly&amp;action=edit&amp;section=1" title="Edit section: Origin">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>In 1999, <a href="https://en.wikipedia.org/wiki/Marc_Fleury" title="Marc Fleury">Marc Fleury</a> started a free software project named <i>EJB-OSS</i> (stands for <i>Enterprise Java Bean Open Source Software</i>) implementing the <a href="https://en.wikipedia.org/wiki/Enterprise_JavaBeans" title="Enterprise JavaBeans">EJB</a> <a href="https://en.wikipedia.org/wiki/API" class="mw-redirect" title="API">API</a> from <a href="https://en.wikipedia.org/wiki/Java_EE" class="mw-redirect" title="Java EE">J2EE (Java 2 Enterprise Edition)</a>. <a href="https://en.wikipedia.org/wiki/Sun_Microsystems" title="Sun Microsystems">Sun Microsystems</a> asked the project to stop using the trademarked <i>EJB</i> within its name. <i>EJB-OSS</i> was then renamed to <i>JBOSS</i>, then <i>JBoss</i> later.<sup id="cite_ref-FOOTNOTEJamaeJohnson20104_3-0" class="reference"><a href="#cite_note-FOOTNOTEJamaeJohnson20104-3">[3]</a></sup></p>
+<h2><span class="mw-headline" id="Versions">Versions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=WildFly&amp;action=edit&amp;section=2" title="Edit section: Versions">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div role="note" class="hatnote plainlinks">This list is <a href="Wikipedia_WikiProject_Lists.html#Incomplete_lists" title="Wikipedia:WikiProject Lists">incomplete</a>; you can help by <a class="external text" href="http://en.wikipedia.org/w/index.php?title=WildFly&amp;action=edit">expanding it</a>.</div>
+<table class="wikitable">
+<tr>
+<th>Product version</th>
+<th>Java EE version</th>
+<th><a href="https://en.wikipedia.org/wiki/Release_to_web" class="mw-redirect" title="Release to web">Release to web</a></th>
+<th>Description</th>
+</tr>
+<tr>
+<td>0.0.4</td>
+<td style="background: #ececec; color: #2C2C2C; font-size: smaller; vertical-align: middle; text-align: center;" class="unknown table-unknown">?</td>
+<td>24 February 1999</td>
+<td>Early access release</td>
+</tr>
+<tr>
+<td>2.2</td>
+<td style="background: #ececec; color: #2C2C2C; font-size: smaller; vertical-align: middle; text-align: center;" class="unknown table-unknown">?</td>
+<td style="background: #ececec; color: #2C2C2C; font-size: smaller; vertical-align: middle; text-align: center;" class="unknown table-unknown">?</td>
+<td></td>
+</tr>
+<tr>
+<td>2.4</td>
+<td style="background: #ececec; color: #2C2C2C; font-size: smaller; vertical-align: middle; text-align: center;" class="unknown table-unknown">?</td>
+<td style="background: #ececec; color: #2C2C2C; font-size: smaller; vertical-align: middle; text-align: center;" class="unknown table-unknown">?</td>
+<td>Integration with Tomcat 3.2</td>
+</tr>
+<tr>
+<td>3.0 "Rabbit Hole"</td>
+<td style="background: #ececec; color: #2C2C2C; font-size: smaller; vertical-align: middle; text-align: center;" class="unknown table-unknown">?</td>
+<td>31 May 2002</td>
+<td></td>
+</tr>
+<tr>
+<td>3.2</td>
+<td style="background: #ececec; color: #2C2C2C; font-size: smaller; vertical-align: middle; text-align: center;" class="unknown table-unknown">?</td>
+<td>2 June 2003</td>
+<td></td>
+</tr>
+<tr>
+<td>4.0</td>
+<td>1.4</td>
+<td>20 September 2004</td>
+<td>v4.0 features an embedded <a href="Apache_Tomcat.html" title="Apache Tomcat">Apache Tomcat</a> 5.5 <a href="https://en.wikipedia.org/wiki/Servlet_container" class="mw-redirect" title="Servlet container">servlet container</a>, and supports any <a href="Java_Virtual_Machine.html" class="mw-redirect" title="Java Virtual Machine">Java Virtual Machine</a> (JVM) versions 1.4 through 1.6.</td>
+</tr>
+<tr>
+<td>4.2</td>
+<td>1.4</td>
+<td>11 May 2007</td>
+<td>Deploys <a href="https://en.wikipedia.org/wiki/Enterprise_JavaBeans" title="Enterprise JavaBeans">Enterprise JavaBeans</a> 3.0 by default. It requires the <a href="Java_Development_Kit.html" title="Java Development Kit">Java Development Kit</a> version 5, and includes Tomcat 5.5.</td>
+</tr>
+<tr>
+<td>5.1</td>
+<td>5.0</td>
+<td>23 May 2009</td>
+<td>A minor update of the major release JBoss AS 5.0, which was in development for at least three years and was built on top of a new JBoss microcontainer.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">[4]</a></sup> JBoss AS 5.1 contains a preview of some elements from the Java EE 6 specification.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">[5]</a></sup></td>
+</tr>
+<tr>
+<td>6.0<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">[6]</a></sup></td>
+<td>6.0</td>
+<td>28 December 2010</td>
+<td>Although JBoss AS 6 does support the full Java EE 6 stack,<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">[7]</a></sup> Red Hat elected not to certify it with Oracle<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">[8]</a></sup><sup id="cite_ref-9" class="reference"><a href="#cite_note-9">[9]</a></sup> It is, however, officially certified to support the Java EE 6 Web Profile.</td>
+</tr>
+<tr>
+<td>7.0<sup id="cite_ref-JBoss_downloads_10-0" class="reference"><a href="#cite_note-JBoss_downloads-10">[10]</a></sup> "Lightning"</td>
+<td>6.0</td>
+<td>12 July 2011</td>
+<td>The Java EE profile is only partially implemented: It includes MDBs, but listening to JMS destinations is not supported.<sup id="cite_ref-11" class="reference"><a href="#cite_note-11">[11]</a></sup> It is, however, certified for the Web Profile. The software code has been completely rewritten for JBoss AS 7.<sup id="cite_ref-12" class="reference"><a href="#cite_note-12">[12]</a></sup><sup id="cite_ref-13" class="reference"><a href="#cite_note-13">[13]</a></sup> Major changes visible to the user are the inability to define resources like JMS destinations and datasources inside archives (war/ear),<sup id="cite_ref-14" class="reference"><a href="#cite_note-14">[14]</a></sup><sup id="cite_ref-15" class="reference"><a href="#cite_note-15">[15]</a></sup> the way datasources are defined,<sup id="cite_ref-16" class="reference"><a href="#cite_note-16">[16]</a></sup><sup id="cite_ref-17" class="reference"><a href="#cite_note-17">[17]</a></sup> a much smaller size (less than half of JBoss AS 6)<sup id="cite_ref-JBoss_downloads_10-1" class="reference"><a href="#cite_note-JBoss_downloads-10">[10]</a></sup> and a 10-<a href="https://en.wikipedia.org/wiki/Fold_change" title="Fold change">fold</a> reduction in startup time.<sup id="cite_ref-18" class="reference"><a href="#cite_note-18">[18]</a></sup></td>
+</tr>
+<tr>
+<td>7.1</td>
+<td>6.0</td>
+<td>16 February 2012</td>
+<td>Red Hat implemented the remaining parts of the EE spec, and this version was certified for the EE full profile.<sup id="cite_ref-19" class="reference"><a href="#cite_note-19">[19]</a></sup></td>
+</tr>
+<tr>
+<td>8.0.0</td>
+<td>7.0</td>
+<td>20 November 2014<sup id="cite_ref-Downloads_WildFly_20-0" class="reference"><a href="#cite_note-Downloads_WildFly-20">[20]</a></sup></td>
+<td>JBoss renamed to WildFly. Undertow replaced JBossWeb as web container</td>
+</tr>
+<tr>
+<td>9.0.0 "Kenny"</td>
+<td>7.0</td>
+<td>2 July 2015<sup id="cite_ref-Downloads_WildFly_20-1" class="reference"><a href="#cite_note-Downloads_WildFly-20">[20]</a></sup></td>
+<td>WildFly/WildFly Core split.</td>
+</tr>
+<tr>
+<td>10.0.0</td>
+<td>7.0</td>
+<td>9 February 2016<sup id="cite_ref-Downloads_WildFly_20-2" class="reference"><a href="#cite_note-Downloads_WildFly-20">[20]</a></sup></td>
+<td>Java 8+ support (Java 7 support discontinued), <a href="https://en.wikipedia.org/wiki/Apache_ActiveMQ" title="Apache ActiveMQ">ActiveMQ Artemis</a>, <a href="https://en.wikipedia.org/wiki/High_availability" title="High availability">HA</a> Singleton Deployments, HA Singleton <a href="https://en.wikipedia.org/wiki/Message_Driven_Bean" class="mw-redirect" title="Message Driven Bean">Message Driven Beans</a> (MDBs) and MDB Delivery Groups, <a href="https://en.wikipedia.org/wiki/SLSB" class="mw-redirect" title="SLSB">Stateless Session Bean</a> and Message Driven Bean Automatic Pool Sizing, <a href="https://en.wikipedia.org/wiki/Hibernate_(framework)" title="Hibernate (framework)">Hibernate 5</a></td>
+</tr>
+</table>
+<h2><span class="mw-headline" id="Product_features">Product features</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=WildFly&amp;action=edit&amp;section=3" title="Edit section: Product features">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Computer_cluster" title="Computer cluster">Clustering</a></li>
+<li>Deployment API</li>
+<li>Distributed <a href="https://en.wikipedia.org/wiki/Cache_(computing)" title="Cache (computing)">caching</a> (using <a href="https://en.wikipedia.org/wiki/Infinispan" title="Infinispan">Infinispan</a>, a standalone project)</li>
+<li><a href="https://en.wikipedia.org/wiki/Distributed_computing" title="Distributed computing">Distributed</a> deployment</li>
+<li><a href="https://en.wikipedia.org/wiki/Enterprise_JavaBeans" title="Enterprise JavaBeans">Enterprise JavaBeans</a> versions 3 and 2.1</li>
+<li><a href="https://en.wikipedia.org/wiki/Failover" title="Failover">Failover</a> (including Web and EJB sessions)</li>
+<li><a href="Hibernate_(Java).html" class="mw-redirect" title="Hibernate (Java)">Hibernate</a> integration (for persistence programming; <a href="Java_Persistence_API.html" title="Java Persistence API">Java Persistence API</a> or JPA)</li>
+<li><a href="Java_Authentication_and_Authorization_Service.html" title="Java Authentication and Authorization Service">Java Authentication and Authorization Service</a> (JAAS)</li>
+<li><a href="Java_EE_Connector_Architecture.html" title="Java EE Connector Architecture">Java EE Connector Architecture</a> (JCA) integration</li>
+<li><a href="Java_Management_Extensions.html" title="Java Management Extensions">Java Management Extensions</a></li>
+<li><a href="Java_Message_Service.html" title="Java Message Service">Java Message Service</a> (JMS) integration</li>
+<li><a href="Java_Naming_and_Directory_Interface.html" title="Java Naming and Directory Interface">Java Naming and Directory Interface</a> (JNDI)</li>
+<li><a href="Java_Transaction_API.html" title="Java Transaction API">Java Transaction API</a> (JTA)</li>
+<li><a href="Java_EE_version_history.html" title="Java EE version history">Java Authorization Contract for Containers</a> (JACC) integration</li>
+<li><a href="https://en.wikipedia.org/wiki/JavaMail" title="JavaMail">JavaMail</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Java_Server_Faces" class="mw-redirect" title="Java Server Faces">Java Server Faces</a> 2.2 (Mojarra)</li>
+<li><a href="https://en.wikipedia.org/wiki/Java_Server_Pages" class="mw-redirect" title="Java Server Pages">Java Server Pages</a> (JSP) / <a href="Java_Servlet.html" class="mw-redirect" title="Java Servlet">Java Servlet</a> 2.1/2.5 (<a href="Apache_Tomcat.html" title="Apache Tomcat">Tomcat</a>)</li>
+<li>JBossWS (JBoss Web Services) for Java EE web services like <a href="Java_API_for_XML_Web_Services.html" title="Java API for XML Web Services">JAX-WS</a></li>
+<li><a href="https://en.wikipedia.org/wiki/JDBC" class="mw-redirect" title="JDBC">JDBC</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Load_balancing_(computing)" title="Load balancing (computing)">Load balancing</a></li>
+<li>Management API</li>
+<li><a href="https://en.wikipedia.org/wiki/OSGi" title="OSGi">OSGi</a> framework</li>
+<li><a href="RMI-IIOP.html" title="RMI-IIOP">RMI-IIOP</a> (<a href="https://en.wikipedia.org/w/index.php?title=JacORB&amp;action=edit&amp;redlink=1" class="new" title="JacORB (page does not exist)">JacORB</a>, contraction of Java and CORBA)</li>
+<li><a href="SOAP_with_Attachments_API_for_Java.html" title="SOAP with Attachments API for Java">SOAP with Attachments API for Java</a> (SAAJ)</li>
+<li><a href="https://en.wikipedia.org/wiki/JBoss_Developer_Studio#Features" title="JBoss Developer Studio">Teiid</a> data virtualization system</li>
+</ul>
+<h2><span class="mw-headline" id="Licensing_and_pricing">Licensing and pricing</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=WildFly&amp;action=edit&amp;section=4" title="Edit section: Licensing and pricing">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>JBoss EAP itself is open source, but Red Hat charges to provide a support subscription for JBoss Enterprise Middleware. Before November 2010 JBoss was licensed as annual subscription in bundles of 4 and 32 CPU sockets. As of November 2010 the licensing changed and all cores on the system are now counted. The core bundles licensing is available for 16 and 64 cores.<sup id="cite_ref-21" class="reference"><a href="#cite_note-21">[21]</a></sup></p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=WildFly&amp;action=edit&amp;section=5" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div role="navigation" aria-label="Portals" class="noprint portal plainlist tright" style="margin:0.5em 0 0.5em 1em;border:solid #aaa 1px">
+<ul style="display:table;box-sizing:border-box;padding:0.1em;max-width:175px;background:#f9f9f9;font-size:85%;line-height:110%;font-style:italic;font-weight:bold">
+<li style="display:table-row"><span style="display:table-cell;padding:0.2em;vertical-align:middle;text-align:center"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_(2009).svg/28px-Free_and_open-source_software_logo_(2009).svg.png" width="28" height="28" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/42px-Free_and_open-source_software_logo_%282009%29.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/56px-Free_and_open-source_software_logo_%282009%29.svg.png 2x" data-file-width="512" data-file-height="512" /></span><span style="display:table-cell;padding:0.2em 0.2em 0.2em 0.3em;vertical-align:middle"><a href="https://en.wikipedia.org/wiki/Portal:Free_Software" class="mw-redirect" title="Portal:Free Software">Free Software portal</a></span></li>
+</ul>
+</div>
+<ul>
+<li><a href="Comparison_of_application_servers.html" title="Comparison of application servers">Comparison of application servers</a></li>
+<li><a href="https://en.wikipedia.org/wiki/JBoss_Enterprise_Application_Platform" title="JBoss Enterprise Application Platform">JBoss Enterprise Application Platform</a></li>
+<li><a href="https://en.wikipedia.org/wiki/List_of_JBoss_software" title="List of JBoss software">List of JBoss software</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_TomEE" title="Apache TomEE">Apache TomEE</a></li>
+<li><a href="Apache_Geronimo.html" title="Apache Geronimo">Apache Geronimo</a></li>
+<li><a href="IBM_WebSphere_Application_Server.html" title="IBM WebSphere Application Server">IBM WebSphere Application Server</a></li>
+<li><a href="JOnAS.html" title="JOnAS">JOnAS application server</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Oracle_WebLogic_Server" title="Oracle WebLogic Server">Oracle WebLogic Server</a></li>
+<li><a href="GlassFish.html" title="GlassFish">GlassFish</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Payara_Server" title="Payara Server">Payara Server</a></li>
+</ul>
+<h2><span class="mw-headline" id="Notes">Notes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=WildFly&amp;action=edit&amp;section=6" title="Edit section: Notes">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist columns references-column-width" style="-moz-column-width: 30em; -webkit-column-width: 30em; column-width: 30em; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://wildfly.org/">"JBoss Application Server has a new name... WildFly"</a>. Wildfly<span class="reference-accessdate">. Retrieved <span class="nowrap">2013-04-23</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWildFly&amp;rft.btitle=JBoss+Application+Server+has+a+new+name...+WildFly&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwildfly.org%2F&amp;rft.pub=Wildfly&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.wildfly.org/faq/">"Frequently Asked Questions"</a>. WildFly<span class="reference-accessdate">. Retrieved <span class="nowrap">2013-04-23</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWildFly&amp;rft.btitle=Frequently+Asked+Questions&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.wildfly.org%2Ffaq%2F&amp;rft.pub=WildFly&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-FOOTNOTEJamaeJohnson20104-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-FOOTNOTEJamaeJohnson20104_3-0">^</a></b></span> <span class="reference-text"><a href="#CITEREFJamaeJohnson2010">Jamae &amp; Johnson 2010</a>, p.&#160;4.</span></li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.jboss.com/index.html?module=bb&amp;op=viewtopic&amp;t=146773">"JBossAS 5.0.0.GA Released"</a>. 2008-12-05.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWildFly&amp;rft.btitle=JBossAS+5.0.0.GA+Released&amp;rft.date=2008-12-05&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.jboss.com%2Findex.html%3Fmodule%3Dbb%26op%3Dviewtopic%26t%3D146773&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://anonsvn.jboss.org/repos/jbossas/tags/JBoss_5_1_0_GA/build/docs/readme.html">"JBoss 5.1.0.GA Release Notes"</a>. 2009-05-23.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWildFly&amp;rft.btitle=JBoss+5.1.0.GA+Release+Notes&amp;rft.date=2009-05-23&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fanonsvn.jboss.org%2Frepos%2Fjbossas%2Ftags%2FJBoss_5_1_0_GA%2Fbuild%2Fdocs%2Freadme.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://sourceforge.net/projects/jboss/files/JBoss/JBoss-6.0.0.Final">"Home / JBoss / 6.0.0.Final"</a>. JBoss Community. 2010-12-28.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWildFly&amp;rft.btitle=Home+%2F+JBoss+%2F+6.0.0.Final&amp;rft.date=2010-12-28&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fsourceforge.net%2Fprojects%2Fjboss%2Ffiles%2FJBoss%2FJBoss-6.0.0.Final&amp;rft.pub=JBoss+Community&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://community.jboss.org/thread/160813">http://community.jboss.org/thread/160813</a></span></li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><cite class="citation web">Dimitris Andreadis (2011-01-05). <a rel="nofollow" class="external text" href="http://dandreadis.blogspot.com/2011/01/introducing-brand-new-jboss-as-60.html">"Introducing the Brand New JBoss AS 6.0!"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2015-05-27</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWildFly&amp;rft.au=Dimitris+Andreadis&amp;rft.btitle=Introducing+the+Brand+New+JBoss+AS+6.0%21&amp;rft.date=2011-01-05&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fdandreadis.blogspot.com%2F2011%2F01%2Fintroducing-brand-new-jboss-as-60.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://community.jboss.org/message/574581">http://community.jboss.org/message/574581</a></span></li>
+<li id="cite_note-JBoss_downloads-10"><span class="mw-cite-backlink">^ <a href="#cite_ref-JBoss_downloads_10-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-JBoss_downloads_10-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.jboss.org/jbossas/downloads">"JBoss Application Server downloads"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWildFly&amp;rft.btitle=JBoss+Application+Server+downloads&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.jboss.org%2Fjbossas%2Fdownloads&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://community.jboss.org/thread/169508">http://community.jboss.org/thread/169508</a></span></li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://community.jboss.org/message/595453">http://community.jboss.org/message/595453</a></span></li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-13">^</a></b></span> <span class="reference-text"><cite class="citation web">Jason Greene (2011-07-25). <a rel="nofollow" class="external text" href="http://planet.jboss.org/post/why_is_jboss_as_7_so_fast">"Why is JBoss AS 7 so fast?"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2015-05-27</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWildFly&amp;rft.au=Jason+Greene&amp;rft.btitle=Why+is+JBoss+AS+7+so+fast%3F&amp;rft.date=2011-07-25&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fplanet.jboss.org%2Fpost%2Fwhy_is_jboss_as_7_so_fast&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-14"><span class="mw-cite-backlink"><b><a href="#cite_ref-14">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://community.jboss.org/message/606449">http://community.jboss.org/message/606449</a></span></li>
+<li id="cite_note-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-15">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://community.jboss.org/wiki/JBossAS7VsAS6">http://community.jboss.org/wiki/JBossAS7VsAS6</a></span></li>
+<li id="cite_note-16"><span class="mw-cite-backlink"><b><a href="#cite_ref-16">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://community.jboss.org/wiki/DataSourceConfigurationInAS7">http://community.jboss.org/wiki/DataSourceConfigurationInAS7</a></span></li>
+<li id="cite_note-17"><span class="mw-cite-backlink"><b><a href="#cite_ref-17">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.javalinux.it/wordpress/2011/07/14/how-to-create-an-manage-datasources-in-as7/">How to create and manage datasources in AS7</a></span></li>
+<li id="cite_note-18"><span class="mw-cite-backlink"><b><a href="#cite_ref-18">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.jboss.org/as7.html">JBoss Application Server 7</a>.</span></li>
+<li id="cite_note-19"><span class="mw-cite-backlink"><b><a href="#cite_ref-19">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://planet.jboss.org/post/jboss_as_7_1_0_final_thunder_released_java_ee_6_full_profile_certified">"JBoss AS 7.1.0.Final "Thunder" released - Java EE 6 Full Profile certified!"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2015-05-27</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWildFly&amp;rft.btitle=JBoss+AS+7.1.0.Final+%22Thunder%22+released+-+Java+EE+6+Full+Profile+certified%21&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fplanet.jboss.org%2Fpost%2Fjboss_as_7_1_0_final_thunder_released_java_ee_6_full_profile_certified&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-Downloads_WildFly-20"><span class="mw-cite-backlink">^ <a href="#cite_ref-Downloads_WildFly_20-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Downloads_WildFly_20-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-Downloads_WildFly_20-2"><sup><i><b>c</b></i></sup></a></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.wildfly.org/downloads/">"Downloads · WildFly"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWildFly&amp;rft.btitle=Downloads+%B7+WildFly&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.wildfly.org%2Fdownloads%2F&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-21"><span class="mw-cite-backlink"><b><a href="#cite_ref-21">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.redhat.com/f/html/jboss_channel_skus.html">"JBOSS NA Channel SKUs: Production Subscription SKUs"</a>. <a href="https://en.wikipedia.org/wiki/Red_Hat" title="Red Hat">Red Hat</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWildFly&amp;rft.btitle=JBOSS+NA+Channel+SKUs%3A+Production+Subscription+SKUs&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.redhat.com%2Ff%2Fhtml%2Fjboss_channel_skus.html&amp;rft.pub=Red+Hat&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=WildFly&amp;action=edit&amp;section=7" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="refbegin" style="">
+<ul>
+<li><cite class="citation journal">Marchioni, Francesco (January 2, 2014). <a rel="nofollow" class="external text" href="http://www.itbuzzpress.com/ebooks/wildfly-8-book.html">"WildFly 8 Administration guide"</a>. ItBuzzPress.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWildFly&amp;rft.atitle=WildFly+8+Administration+guide&amp;rft.aufirst=Francesco&amp;rft.aulast=Marchioni&amp;rft.date=2014-01-02&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fwww.itbuzzpress.com%2Febooks%2Fwildfly-8-book.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span> 255 pp.</li>
+<li><cite class="citation journal">Marrs, Tom; Davis, Scott (July 1, 2009). <a rel="nofollow" class="external text" href="http://oreilly.com/catalog/9780596007348/">"JBoss At Work: A Practical Guide"</a>. <a href="https://en.wikipedia.org/wiki/O%27Reilly" title="O'Reilly">O'Reilly</a>. <a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="https://en.wikipedia.org/wiki/Special:BookSources/0596007345" title="Special:BookSources/0596007345">0596007345</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWildFly&amp;rft.atitle=JBoss+At+Work%3A+A+Practical+Guide&amp;rft.au=Davis%2C+Scott&amp;rft.aufirst=Tom&amp;rft.aulast=Marrs&amp;rft.date=2009-07-01&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Foreilly.com%2Fcatalog%2F9780596007348%2F&amp;rft.isbn=0596007345&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span> 306 pp.</li>
+<li><cite class="citation journal">Jamae, Javid; Johnson, Peter (January 28, 2010) [2009-01-20]. "JBoss in Action: Configuring the JBoss Application Server". <a href="https://en.wikipedia.org/wiki/Manning_Publications" title="Manning Publications">Manning Publications</a>. <a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="https://en.wikipedia.org/wiki/Special:BookSources/978-1-933988-02-3" title="Special:BookSources/978-1-933988-02-3">978-1-933988-02-3</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2011-12-01</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWildFly&amp;rft.atitle=JBoss+in+Action%3A+Configuring+the+JBoss+Application+Server&amp;rft.aufirst=Javid&amp;rft.au=Johnson%2C+Peter&amp;rft.aulast=Jamae&amp;rft.date=2010-01-28&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fmy.safaribooksonline.com%2Fbook%2Fprogramming%2Fjava%2F9781933988023%2Fvote-for-jboss%2Fch01lev1sec1&amp;rft.isbn=978-1-933988-02-3&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span> <span style="font-size:100%" class="error citation-comment"><code style="color:inherit; border:inherit; padding:inherit;">|chapter=</code> ignored (<a href="https://en.wikipedia.org/wiki/Help:CS1_errors#chapter_ignored" title="Help:CS1 errors">help</a>)</span> 496 pp.</li>
+<li><cite class="citation journal">Stark, Scott; Fleury, Marc; Richards, Norman (April 30, 2005). <a rel="nofollow" class="external text" href="http://www.informit.com/store/product.aspx?isbn=0672326485">"JBoss 4.0 The Official Guide"</a>. <a href="https://en.wikipedia.org/wiki/Sams_Publishing" title="Sams Publishing">Sams</a>. <a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="https://en.wikipedia.org/wiki/Special:BookSources/978-0-67232648-6" title="Special:BookSources/978-0-67232648-6">978-0-67232648-6</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWildFly&amp;rft.atitle=JBoss+4.0+The+Official+Guide&amp;rft.aufirst=Scott&amp;rft.au=Fleury%2C+Marc&amp;rft.aulast=Stark&amp;rft.au=Richards%2C+Norman&amp;rft.date=2005-04-30&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fwww.informit.com%2Fstore%2Fproduct.aspx%3Fisbn%3D0672326485&amp;rft.isbn=978-0-67232648-6&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span> 648 pp.</li>
+</ul>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=WildFly&amp;action=edit&amp;section=8" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://jboss.org/jbossas/">JBoss application server website</a></li>
+<li><a rel="nofollow" class="external text" href="http://jboss.org/">JBoss Community Projects</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.mastertheboss.com/">WildFly and JBoss tutorials</a></li>
+<li><a rel="nofollow" class="external text" href="http://developer.apple.com/library/mac/#documentation/WebObjects/Conceptual/J2EE_JavaAppServerGuide/Introduction/Introduction.html">Java Application Server Guide (Mac OS X Developer Library)</a></li>
+<li><a rel="nofollow" class="external text" href="http://community.jboss.org/en/jbossas">JBoss Wiki</a></li>
+</ul>
+<div role="navigation" class="navbox" aria-labelledby="Red_Hat" style="padding:3px">
+<table class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="https://en.wikipedia.org/wiki/Template:Red_Hat" title="Template:Red Hat"><abbr title="View this template" style=";;background:none transparent;border:none;">v</abbr></a></li>
+<li class="nv-talk"><a href="https://en.wikipedia.org/wiki/Template_talk:Red_Hat" title="Template talk:Red Hat"><abbr title="Discuss this template" style=";;background:none transparent;border:none;">t</abbr></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Red_Hat&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;">e</abbr></a></li>
+</ul>
+</div>
+<div id="Red_Hat" style="font-size:114%"><a href="https://en.wikipedia.org/wiki/Red_Hat" title="Red Hat">Red Hat</a></div>
+</th>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Major products</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Red_Hat_Enterprise_Linux" title="Red Hat Enterprise Linux">Red Hat Enterprise Linux</a></li>
+<li><a href="https://en.wikipedia.org/wiki/389_Directory_Server" title="389 Directory Server">Directory Server</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Red_Hat_cluster_suite" title="Red Hat cluster suite">Cluster Suite</a></li>
+<li><a href="https://en.wikipedia.org/wiki/GFS2" title="GFS2">GFS2</a></li>
+<li><strong class="selflink">WildFly</strong> (JBoss)</li>
+<li><a href="https://en.wikipedia.org/wiki/Fedora_(operating_system)" title="Fedora (operating system)">Fedora</a> (<i><a href="https://en.wikipedia.org/wiki/List_of_Fedora_releases" class="mw-redirect" title="List of Fedora releases">List of Fedora releases</a></i>)</li>
+<li><a href="https://en.wikipedia.org/wiki/Virtual_Machine_Manager" title="Virtual Machine Manager">Virtual Machine Manager</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Anaconda_(installer)" title="Anaconda (installer)">Anaconda</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Ceph_(software)" title="Ceph (software)">Ceph</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Yellowdog_Updater,_Modified" title="Yellowdog Updater, Modified">yum</a></li>
+<li><a href="https://en.wikipedia.org/wiki/RPM_Package_Manager" title="RPM Package Manager">RPM</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Satellite_(software)" title="Satellite (software)">Satellite</a></li>
+<li><a href="https://en.wikipedia.org/wiki/SPICE_(protocol)" title="SPICE (protocol)">SPICE</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Ansible_(software)" title="Ansible (software)">Ansible</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Services</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Red_Hat_Network" title="Red Hat Network">RHN</a></li>
+<li><a href="https://en.wikipedia.org/wiki/OpenShift" title="OpenShift">OpenShift</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Projects</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Fedora_Project" title="Fedora Project">Fedora Project</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Spacewalk_(software)" title="Spacewalk (software)">Spacewalk</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Defunct</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Red_Hat_Linux" title="Red Hat Linux">Red Hat Linux</a></li>
+<li><a href="https://en.wikipedia.org/wiki/PostgreSQL#Red_Hat_Edition" title="PostgreSQL">Red Hat Database</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Fedora_Legacy" title="Fedora Legacy">Fedora Legacy</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Mugshot_(website)" title="Mugshot (website)">Mugshot</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Important people</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Jim_Whitehurst" title="Jim Whitehurst">Jim Whitehurst</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Matthew_Szulik" title="Matthew Szulik">Matthew Szulik</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Bob_Young_(businessman)" title="Bob Young (businessman)">Bob Young</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Marc_Ewing" title="Marc Ewing">Marc Ewing</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Michael_Tiemann" title="Michael Tiemann">Michael Tiemann</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Mergers and acquisitions</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Red_Hat#Mergers_and_acquisitions" title="Red Hat">Mergers and acquisitions</a></li>
+<li><a href="https://en.wikipedia.org/wiki/C2Net" title="C2Net">C2Net</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Cygnus_Solutions" title="Cygnus Solutions">Cygnus Solutions</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Inktank_Storage" title="Inktank Storage">Inktank Storage</a></li>
+<li><a href="https://en.wikipedia.org/wiki/JBoss_(company)" title="JBoss (company)">JBoss</a></li>
+<li><a href="https://en.wikipedia.org/wiki/MetaMatrix" title="MetaMatrix">MetaMatrix</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Qumranet" title="Qumranet">Qumranet</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Related</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Red_Hat_Certification_Program" title="Red Hat Certification Program">Red Hat Certification Program</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Red_Hat_Enterprise_Linux_derivatives" title="Red Hat Enterprise Linux derivatives">Red Hat Enterprise Linux derivatives</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1265
+Cached time: 20170109071201
+Cache expiry: 2592000
+Dynamic content: false
+CPU time usage: 0.256 seconds
+Real time usage: 0.328 seconds
+Preprocessor visited node count: 2966/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 66476/2097152 bytes
+Template argument size: 8598/2097152 bytes
+Highest expansion depth: 25/40
+Expensive parser function count: 5/500
+Lua time usage: 0.100/10.000 seconds
+Lua memory usage: 4.28 MB/50 MB
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  281.668      1 - -total
+ 27.84%   78.424      3 - Template:Ambox
+ 27.20%   76.614      2 - Template:Infobox
+ 24.52%   69.067      1 - Template:Reflist
+ 23.16%   65.247      1 - Template:Multiple_issues
+ 22.38%   63.030      1 - Template:Infobox_software
+ 19.39%   54.624     11 - Template:Cite_web
+  7.82%   22.027      1 - Template:Infobox_software/simple
+  7.46%   21.017     12 - Template:Date
+  7.17%   20.197      1 - Template:Primary_sources
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:36533156-0!*!0!!en!4!* and timestamp 20170109071201 and revision id 756446296
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=WildFly&amp;oldid=756446296">https://en.wikipedia.org/w/index.php?title=WildFly&amp;oldid=756446296</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Help_Category.html" title="Help:Category">Categories</a>: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Cross-platform_software" title="Category:Cross-platform software">Cross-platform software</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Free_software_programmed_in_Java_(programming_language)" title="Category:Free software programmed in Java (programming language)">Free software programmed in Java (programming language)</a></li><li><a href="Category_Java_enterprise_platform.html" title="Category:Java enterprise platform">Java enterprise platform</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Portal_software" title="Category:Portal software">Portal software</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Red_Hat_software" title="Category:Red Hat software">Red Hat software</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Web_server_software_programmed_in_Java" title="Category:Web server software programmed in Java">Web server software programmed in Java</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Articles_lacking_reliable_references_from_June_2011" title="Category:Articles lacking reliable references from June 2011">Articles lacking reliable references from June 2011</a></li><li><a href="https://en.wikipedia.org/wiki/Category:All_articles_lacking_reliable_references" title="Category:All articles lacking reliable references">All articles lacking reliable references</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Articles_with_a_promotional_tone_from_May_2012" title="Category:Articles with a promotional tone from May 2012">Articles with a promotional tone from May 2012</a></li><li><a href="https://en.wikipedia.org/wiki/Category:All_articles_with_a_promotional_tone" title="Category:All articles with a promotional tone">All articles with a promotional tone</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Incomplete_lists_from_August_2015" title="Category:Incomplete lists from August 2015">Incomplete lists from August 2015</a></li><li><a href="https://en.wikipedia.org/wiki/Category:CS1_errors:_chapter_ignored" title="Category:CS1 errors: chapter ignored">CS1 errors: chapter ignored</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="Special_MyTalk.html" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="Special_MyContributions.html" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&amp;returnto=WildFly" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=WildFly" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="https://en.wikipedia.org/wiki/WildFly"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+															<li  id="ca-talk"><span><a href="https://en.wikipedia.org/wiki/Talk:WildFly"  title="Discussion about the content page [t]" accesskey="t" rel="discussion">Talk</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="https://en.wikipedia.org/wiki/WildFly" >Read</a></span></li>
+															<li id="ca-edit"><span><a href="https://en.wikipedia.org/w/index.php?title=WildFly&amp;action=edit"  title="Edit this page [e]" accesskey="e">Edit</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="https://en.wikipedia.org/w/index.php?title=WildFly&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="https://en.wikipedia.org/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="Main_Page.html"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="Portal_Contents.html" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="Portal_Featured_content.html" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="Portal_Current_events.html" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="https://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="../../shop.wikimedia.org/index.html" title="Visit the Wikipedia store">Wikipedia store</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Interaction</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-help"><a href="Help_Contents.html" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="Wikipedia_About.html" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="Wikipedia_Community_portal.html" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="Wikipedia_Contact_us.html" title="How to contact Wikipedia">Contact page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="https://en.wikipedia.org/wiki/Special:WhatLinksHere/WildFly" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://en.wikipedia.org/wiki/Special:RecentChangesLinked/WildFly" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="Wikipedia_File_Upload_Wizard.html" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="https://en.wikipedia.org/w/index.php?title=WildFly&amp;oldid=756446296" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://en.wikipedia.org/w/index.php?title=WildFly&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q68850" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="https://en.wikipedia.org/w/index.php?title=Special:CiteThisPage&amp;page=WildFly&amp;id=756446296" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Print/export</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=WildFly">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=WildFly&amp;returnto=WildFly&amp;oldid=756446296&amp;writer=rdf2latex">Download as PDF</a></li><li id="t-print"><a href="https://en.wikipedia.org/w/index.php?title=WildFly&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-wikibase-otherprojects' aria-labelledby='p-wikibase-otherprojects-label'>
+			<h3 id='p-wikibase-otherprojects-label'>In other projects</h3>
+
+			<div class="body">
+									<ul>
+						<li class="wb-otherproject-link wb-otherproject-wikibooks"><a href="https://en.wikibooks.org/wiki/Java_EE_Programming/WildFly" hreflang="en">Wikibooks</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Languages</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/JBoss" title="JBoss – Catalan" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/WildFly" title="WildFly – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/WildFly" title="WildFly – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/WildFly" title="WildFly – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/제이보스" title="제이보스 – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/WildFly" title="WildFly – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-kk"><a href="https://kk.wikipedia.org/wiki/WildFly" title="WildFly – Kazakh" lang="kk" hreflang="kk" class="interlanguage-link-target">Қазақша</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/WildFly" title="WildFly – Hungarian" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/WildFly" title="WildFly – Dutch" lang="nl" hreflang="nl" class="interlanguage-link-target">Nederlands</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/JBoss" title="JBoss – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-no"><a href="https://no.wikipedia.org/wiki/WildFly" title="WildFly – Norwegian" lang="no" hreflang="no" class="interlanguage-link-target">Norsk bokmål</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/JBoss_Application_Server" title="JBoss Application Server – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/JBoss_Application_Server" title="JBoss Application Server – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/WildFly" title="WildFly – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-fi"><a href="https://fi.wikipedia.org/wiki/WildFly" title="WildFly – Finnish" lang="fi" hreflang="fi" class="interlanguage-link-target">Suomi</a></li><li class="interlanguage-link interwiki-sv"><a href="https://sv.wikipedia.org/wiki/JBoss" title="JBoss – Swedish" lang="sv" hreflang="sv" class="interlanguage-link-target">Svenska</a></li><li class="interlanguage-link interwiki-tr"><a href="https://tr.wikipedia.org/wiki/WildFly" title="WildFly – Turkish" lang="tr" hreflang="tr" class="interlanguage-link-target">Türkçe</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/WildFly" title="WildFly – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/WildFly" title="WildFly – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q68850#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 24 December 2016, at 07:56.</li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="Wikipedia_Text_of_Creative_Commons_Attribution-ShareAlike_3.html">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="../../creativecommons.org/licenses/by-sa/3.0/index.html" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="../../wikimediafoundation.org/wiki/Terms_of_Use.html">Terms of Use</a> and <a href="../../wikimediafoundation.org/wiki/Privacy_policy.html">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="../../www.wikimediafoundation.org/index.html">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../../wikimediafoundation.org/wiki/Privacy_policy.html" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="Wikipedia_About.html" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="Wikipedia_General_disclaimer.html" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="Wikipedia_Contact_us.html">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a href="../../www.mediawiki.org/wiki/Special_MyLanguage/How_to_contribute.html">Developers</a></li>
+											<li id="footer-places-cookiestatement"><a href="../../wikimediafoundation.org/wiki/Cookie_statement.html">Cookie statement</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/w/index.php?title=WildFly&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="../../www.wikimediafoundation.org/index.html"><img src="https://en.wikipedia.org/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="../../www.mediawiki.org/index.html"><img src="https://en.wikipedia.org/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":73,"wgHostname":"mw1263"});});</script>
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/JBoss_application_server by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:12 GMT -->
+</html>

@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Function_object by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:03 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Function object - Wikipedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Function_object","wgTitle":"Function object","wgCurRevisionId":758578843,"wgRevisionId":758578843,"wgArticleId":509999,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles needing additional references from February 2009","All articles needing additional references","Articles with example C code","Articles with example C++ code","Articles with example Java code","Articles with example Perl code","Articles with example Python code","Pages using ISBN magic links","Object (computer science)","Subroutines","Articles with example Ruby code"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Function_object","wgRelevantArticleId":509999,"wgRequestId":"WHLxXQpAAEMAAgT8F8IAAACH","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgFlaggedRevsParams":{"tags":{}},"wgStableRevisionId":null,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"en","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgWikibaseItemId":"Q2072111","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.cite.styles":"ready","ext.pygments":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@1dqfd7l",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["ext.cite.a11y","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.legacy.wikibits","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.watchlist-notice","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.gadget.featured-articles-links","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.interface","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="https://en.wikipedia.org/w/load.php?debug=false&amp;lang=en&amp;modules=ext.cite.styles%7Cext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="../w/load2c8d.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../w/load18b6.css?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.29.0-wmf.7"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="https://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Function_object"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Function_object&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Function_object&amp;action=edit"/>
+<link rel="apple-touch-icon" href="https://en.wikipedia.org/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="../static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../w/api251f.php?action=rsd"/>
+<link rel="copyright" href="../../creativecommons.org/licenses/by-sa/3.0/index.html"/>
+<link rel="canonical" href="Function_object.html"/>
+<link rel="dns-prefetch" href="../../login.wikimedia.org/index.html"/>
+<link rel="dns-prefetch" href="../../meta.wikimedia.org/index.html" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Function_object rootpage-Function_object skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">Function object</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><script>function mfTempOpenSection(id){var block=document.getElementById("mf-section-"+id);block.className+=" open-block";block.previousSibling.className+=" open-block";}</script><div role="note" class="hatnote">This article is about the computer programming concept. For functors in category theory, see <a href="https://en.wikipedia.org/wiki/Functor" title="Functor">Functor</a>.</div>
+<table class="plainlinks metadata ambox ambox-content ambox-Refimprove" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px"><a href="https://en.wikipedia.org/wiki/File:Question_book-new.svg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/50px-Question_book-new.svg.png" width="50" height="39" srcset="//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/75px-Question_book-new.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/100px-Question_book-new.svg.png 2x" data-file-width="512" data-file-height="399" /></a></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article <b>needs additional citations for <a href="https://en.wikipedia.org/wiki/Wikipedia:Verifiability" title="Wikipedia:Verifiability">verification</a></b>. <span class="hide-when-compact">Please help <a class="external text" href="http://en.wikipedia.org/w/index.php?title=Function_object&amp;action=edit">improve this article</a> by <a href="https://en.wikipedia.org/wiki/Help:Introduction_to_referencing_with_Wiki_Markup/1" title="Help:Introduction to referencing with Wiki Markup/1">adding citations to reliable sources</a>. Unsourced material may be challenged and removed.</span> <small><i>(February 2009)</i></small> <small class="hide-when-compact"><i>(<a href="https://en.wikipedia.org/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></span></td>
+</tr>
+</table>
+<p>A <b>function object</b><sup id="cite_ref-2" class="reference"><a href="#cite_note-2">[a]</a></sup> is a <a href="https://en.wikipedia.org/wiki/Computer_programming" title="Computer programming">computer programming</a> construct allowing an <a href="https://en.wikipedia.org/wiki/Object_(computer_science)" title="Object (computer science)">object</a> to be invoked or called as if it were an ordinary <a href="https://en.wikipedia.org/wiki/Subroutine" title="Subroutine">function</a>, usually with the same syntax (a function parameter that can also be a function).</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Description"><span class="tocnumber">1</span> <span class="toctext">Description</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#In_C_and_C.2B.2B"><span class="tocnumber">2</span> <span class="toctext">In C and C++</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Maintaining_state"><span class="tocnumber">2.1</span> <span class="toctext">Maintaining state</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#In_C.23"><span class="tocnumber">3</span> <span class="toctext">In C#</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#In_D"><span class="tocnumber">4</span> <span class="toctext">In D</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#In_Eiffel"><span class="tocnumber">5</span> <span class="toctext">In Eiffel</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#In_Java"><span class="tocnumber">6</span> <span class="toctext">In Java</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#In_JavaScript"><span class="tocnumber">7</span> <span class="toctext">In JavaScript</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#In_Lisp_and_Scheme"><span class="tocnumber">8</span> <span class="toctext">In Lisp and Scheme</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#In_Objective-C"><span class="tocnumber">9</span> <span class="toctext">In Objective-C</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#In_Perl"><span class="tocnumber">10</span> <span class="toctext">In Perl</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#In_PHP"><span class="tocnumber">11</span> <span class="toctext">In PHP</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#In_PowerShell"><span class="tocnumber">12</span> <span class="toctext">In PowerShell</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#In_Python"><span class="tocnumber">13</span> <span class="toctext">In Python</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#In_Ruby"><span class="tocnumber">14</span> <span class="toctext">In Ruby</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#Other_meanings"><span class="tocnumber">15</span> <span class="toctext">Other meanings</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#See_also"><span class="tocnumber">16</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="#Notes"><span class="tocnumber">17</span> <span class="toctext">Notes</span></a></li>
+<li class="toclevel-1 tocsection-19"><a href="#References"><span class="tocnumber">18</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="#Further_reading"><span class="tocnumber">19</span> <span class="toctext">Further reading</span></a></li>
+<li class="toclevel-1 tocsection-21"><a href="#External_links"><span class="tocnumber">20</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Description">Description</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Function_object&amp;action=edit&amp;section=1" title="Edit section: Description">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>A typical use of a function object is in writing <a href="https://en.wikipedia.org/wiki/Callback_(computer_science)" class="mw-redirect" title="Callback (computer science)">callback</a> functions. A callback in <a href="https://en.wikipedia.org/wiki/Procedural_programming" title="Procedural programming">procedural languages</a>, such as <a href="https://en.wikipedia.org/wiki/C_(programming_language)" title="C (programming language)">C</a>, may be performed by using <a href="https://en.wikipedia.org/wiki/Function_pointer" title="Function pointer">function pointers</a>.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">[2]</a></sup> However it can be difficult or awkward to pass a state into or out of the callback function. This restriction also inhibits more dynamic behavior of the function. A function object solves those problems since the function is really a <a href="Facade_pattern.html" title="Facade pattern">façade</a> for a full object, carrying its own state.</p>
+<p>Many modern (and some older) languages, e.g. <a href="https://en.wikipedia.org/wiki/C++" title="C++">C++</a>, <a href="https://en.wikipedia.org/wiki/Eiffel_(programming_language)" title="Eiffel (programming language)">Eiffel</a>, <a href="Groovy_(programming_language).html" title="Groovy (programming language)">Groovy</a>, <a href="https://en.wikipedia.org/wiki/Lisp_(programming_language)" title="Lisp (programming language)">Lisp</a>, <a href="https://en.wikipedia.org/wiki/Smalltalk" title="Smalltalk">Smalltalk</a>, <a href="https://en.wikipedia.org/wiki/Perl" title="Perl">Perl</a>, <a href="https://en.wikipedia.org/wiki/PHP" title="PHP">PHP</a>, <a href="https://en.wikipedia.org/wiki/Python_(programming_language)" title="Python (programming language)">Python</a>, <a href="https://en.wikipedia.org/wiki/Ruby_(programming_language)" title="Ruby (programming language)">Ruby</a>, <a href="Scala_(programming_language).html" title="Scala (programming language)">Scala</a>, and many others, support <a href="https://en.wikipedia.org/wiki/First-class_function" title="First-class function">first-class function</a> objects and may even make significant use of them.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">[3]</a></sup> <a href="https://en.wikipedia.org/wiki/Functional_programming" title="Functional programming">Functional programming</a> languages additionally support <a href="https://en.wikipedia.org/wiki/Closure_(computer_science)" class="mw-redirect" title="Closure (computer science)">closures</a>, i.e. first-class functions that can 'close over' variables in their surrounding environment at creation time. During compilation, a transformation known as <a href="https://en.wikipedia.org/wiki/Lambda_lifting" title="Lambda lifting">lambda lifting</a> converts the closures into function objects.</p>
+<h2><span class="mw-headline" id="In_C_and_C.2B.2B">In C and C++</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Function_object&amp;action=edit&amp;section=2" title="Edit section: In C and C++">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Consider the example of a sorting routine that uses a callback function to define an ordering relation between a pair of items. A C program using function pointers may appear as:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span>
+
+<span class="cm">/* qsort() callback function, returns &lt; 0 if a &lt; b, &gt; 0 if a &gt; b, 0 if a == b */</span>
+<span class="kt">int</span> <span class="nf">compareInts</span><span class="p">(</span><span class="k">const</span> <span class="kt">void</span><span class="o">*</span> <span class="n">a</span><span class="p">,</span> <span class="k">const</span> <span class="kt">void</span><span class="o">*</span> <span class="n">b</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span><span class="o">*</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="p">)</span><span class="n">a</span> <span class="o">&gt;</span> <span class="o">*</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="p">)</span><span class="n">b</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="o">*</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="p">)</span><span class="n">a</span> <span class="o">&lt;</span> <span class="o">*</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="p">)</span><span class="n">b</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="p">...</span>
+<span class="c1">// prototype of qsort is</span>
+<span class="c1">// void qsort(void *base, size_t nel, size_t width, int (*compar)(const void *, const void *));</span>
+<span class="p">...</span>
+<span class="kt">int</span> <span class="n">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">items</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span> <span class="p">};</span>
+    <span class="n">qsort</span><span class="p">(</span><span class="n">items</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">items</span><span class="p">)</span> <span class="o">/</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">items</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">items</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="n">compareInts</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+<p>In C++, a function object may be used instead of an ordinary function by defining a class that <a href="https://en.wikipedia.org/wiki/Operator_overloading" title="Operator overloading">overloads</a> the <a href="https://en.wikipedia.org/wiki/Function_call_operator" class="mw-redirect" title="Function call operator">function call operator</a> by defining an <code>operator()</code> member function. In C++, this may appear as follows:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="c1">// comparator predicate: returns true if a &lt; b, false otherwise</span>
+<span class="k">struct</span> <span class="n">IntComparator</span>
+<span class="p">{</span>
+  <span class="kt">bool</span> <span class="k">operator</span><span class="p">()(</span><span class="k">const</span> <span class="kt">int</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="k">const</span> <span class="kt">int</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">)</span> <span class="k">const</span>
+  <span class="p">{</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="n">b</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">items</span> <span class="p">{</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span> <span class="p">};</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">sort</span><span class="p">(</span><span class="n">items</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">items</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span> <span class="n">IntComparator</span><span class="p">());</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+<p>Notice that the syntax for providing the callback to the <code>std::sort()</code> function is identical, but an object is passed instead of a function pointer. When invoked, the callback function is executed just as any other member function, and therefore has full access to the other members (data or functions) of the object. Of course, this is just a trivial example. To understand what power a functor provides more than a regular function, consider the common use case of sorting objects by a particular field. In the following example, a functor is used to sort a simple employee database by each employee's ID number.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="k">struct</span> <span class="n">CompareBy</span>
+<span class="p">{</span>
+    <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">SORT_FIELD</span><span class="p">;</span>
+    <span class="n">CompareBy</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">sort_field</span><span class="o">=</span><span class="s">"name"</span><span class="p">)</span>
+      <span class="o">:</span> <span class="n">SORT_FIELD</span><span class="p">(</span><span class="n">sort_field</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="cm">/* validate sort_field */</span>
+    <span class="p">}</span>
+    
+    <span class="kt">bool</span> <span class="k">operator</span><span class="p">()(</span><span class="k">const</span> <span class="n">Employee</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="k">const</span> <span class="n">Employee</span><span class="o">&amp;</span> <span class="n">b</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">SORT_FIELD</span> <span class="o">==</span> <span class="s">"name"</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">a</span><span class="p">.</span><span class="n">name</span> <span class="o">&lt;</span> <span class="n">b</span><span class="p">.</span><span class="n">name</span><span class="p">;</span>
+        <span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="n">SORT_FIELD</span> <span class="o">==</span> <span class="s">"age"</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">a</span><span class="p">.</span><span class="n">age</span> <span class="o">&lt;</span> <span class="n">b</span><span class="p">.</span><span class="n">age</span><span class="p">;</span>
+        <span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="n">SORT_FIELD</span> <span class="o">==</span> <span class="s">"idnum"</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">a</span><span class="p">.</span><span class="n">idnum</span> <span class="o">&lt;</span> <span class="n">b</span><span class="p">.</span><span class="n">idnum</span><span class="p">;</span>
+        <span class="k">else</span>
+            <span class="cm">/* throw exception or something */</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">&gt;</span> <span class="n">emps</span><span class="p">;</span>
+    
+    <span class="cm">/* code to populate database */</span>
+    
+    <span class="c1">// Sort the database by employee ID number</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">sort</span><span class="p">(</span><span class="n">emps</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">emps</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span> <span class="n">CompareBy</span><span class="p">(</span><span class="s">"idnum"</span><span class="p">));</span>
+    
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+<p>In <a href="https://en.wikipedia.org/wiki/C++11" title="C++11">C++11</a>, the lambda expression provides a more succinct way to do the same thing.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">&gt;</span> <span class="n">emps</span><span class="p">;</span>
+    <span class="cm">/* code to populate database */</span>
+    <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">sort_field</span> <span class="o">=</span> <span class="s">"idnum"</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">sort</span><span class="p">(</span><span class="n">emps</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">emps</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span> <span class="p">[</span><span class="o">&amp;</span><span class="n">sort_field</span><span class="p">](</span><span class="k">const</span> <span class="n">Employee</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="k">const</span> <span class="n">Employee</span><span class="o">&amp;</span> <span class="n">b</span><span class="p">){</span> <span class="cm">/* code to select and compare field */</span> <span class="p">});</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+<p><br />
+It is possible to use function objects in situations other than as callback functions. In this case, the shortened term <i>functor</i> is normally <i>not</i> used about the function object. Continuing the example,</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+  <span class="n">IntComparator</span> <span class="n">cpm</span><span class="p">;</span>
+  <span class="kt">bool</span> <span class="n">result</span> <span class="o">=</span> <span class="n">cpm</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span>
+</pre></div>
+<p>In addition to class type functors, other kinds of function objects are also possible in C++. They can take advantage of C++'s member-pointer or <a href="https://en.wikipedia.org/wiki/Generic_programming" title="Generic programming">template</a> facilities. The expressiveness of templates allows some <a href="https://en.wikipedia.org/wiki/Functional_programming" title="Functional programming">functional programming</a> techniques to be used, such as defining function objects in terms of other function objects (like <a href="https://en.wikipedia.org/wiki/Function_composition_(computer_science)" title="Function composition (computer science)">function composition</a>). Much of the C++ <a href="https://en.wikipedia.org/wiki/Standard_Template_Library" title="Standard Template Library">Standard Template Library</a> (STL) makes heavy use of template-based function objects.</p>
+<h3><span class="mw-headline" id="Maintaining_state">Maintaining state</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Function_object&amp;action=edit&amp;section=3" title="Edit section: Maintaining state">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Another advantage of function objects is their ability to maintain a state that affects <code>operator()</code> between calls. For example, the following code defines a <a href="https://en.wikipedia.org/wiki/Generator_(computer_science)" class="mw-redirect" title="Generator (computer science)">generator</a> counting from 10 upwards and is invoked 11 times.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span>
+<span class="cp">#include</span> <span class="cpf">&lt;iterator&gt;</span>
+<span class="cp">#include</span> <span class="cpf">&lt;algorithm&gt;</span>
+
+<span class="k">class</span> <span class="nc">CountFrom</span> <span class="p">{</span>
+<span class="k">private</span><span class="o">:</span>
+  <span class="kt">int</span> <span class="o">&amp;</span><span class="n">count</span><span class="p">;</span>
+<span class="k">public</span><span class="o">:</span>
+  <span class="n">CountFrom</span><span class="p">(</span><span class="kt">int</span> <span class="o">&amp;</span><span class="n">n</span><span class="p">)</span> <span class="o">:</span> <span class="n">count</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="p">{}</span>
+  <span class="kt">int</span> <span class="k">operator</span><span class="p">()()</span> <span class="p">{</span> <span class="k">return</span> <span class="n">count</span><span class="o">++</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="kt">int</span> <span class="n">state</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">generate_n</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">ostream_iterator</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="p">,</span> <span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">),</span> <span class="mi">11</span><span class="p">,</span> <span class="n">CountFrom</span><span class="p">(</span><span class="n">state</span><span class="p">));</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+<h2><span class="mw-headline" id="In_C.23">In C#</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Function_object&amp;action=edit&amp;section=4" title="Edit section: In C#">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>In <a href="https://en.wikipedia.org/wiki/C_Sharp_(programming_language)" title="C Sharp (programming language)">C#</a>, function objects are declared via <a href="https://en.wikipedia.org/wiki/Delegate_(CLI)" title="Delegate (CLI)">delegates</a>. A delegate can be declared using a named method or a <a href="https://en.wikipedia.org/wiki/Lambda_(programming)" class="mw-redirect" title="Lambda (programming)">lambda expression</a>. Here is an example using a named method.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
+
+<span class="k">public</span> <span class="k">class</span> <span class="nc">ComparisonClass1</span> <span class="p">{</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="kt">int</span> <span class="nf">CompareFunction</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">x</span> <span class="p">-</span> <span class="n">y</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">List</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span> <span class="n">items</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span> <span class="p">{</span> <span class="m">4</span><span class="p">,</span> <span class="m">3</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">2</span> <span class="p">};</span>
+
+        <span class="n">Comparison</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span> <span class="n">del</span> <span class="p">=</span> <span class="n">CompareFunction</span><span class="p">;</span>
+
+        <span class="n">items</span><span class="p">.</span><span class="n">Sort</span><span class="p">(</span><span class="n">del</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+<p>Here is an example using a lambda expression.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
+
+<span class="k">public</span> <span class="k">class</span> <span class="nc">ComparisonClass2</span> <span class="p">{</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">List</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span> <span class="n">items</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span> <span class="p">{</span> <span class="m">4</span><span class="p">,</span> <span class="m">3</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">2</span> <span class="p">};</span>
+        <span class="n">items</span><span class="p">.</span><span class="n">Sort</span><span class="p">((</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="n">x</span> <span class="p">-</span> <span class="n">y</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+<h2><span class="mw-headline" id="In_D">In D</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Function_object&amp;action=edit&amp;section=5" title="Edit section: In D">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="https://en.wikipedia.org/wiki/D_(programming_language)" title="D (programming language)">D</a> provides several ways to declare function objects: Lisp/Python-style via <a href="https://en.wikipedia.org/wiki/Closure_(computer_science)" class="mw-redirect" title="Closure (computer science)">closures</a> or C#-style via <a href="https://en.wikipedia.org/wiki/Delegate_(CLI)" title="Delegate (CLI)">delegates</a>, respectively:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kt">bool</span> <span class="n">find</span><span class="p">(</span><span class="n">T</span><span class="p">)(</span><span class="n">T</span><span class="p">[]</span> <span class="n">haystack</span><span class="p">,</span> <span class="kt">bool</span> <span class="k">delegate</span><span class="p">(</span><span class="n">T</span><span class="p">)</span> <span class="n">needle_test</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">foreach</span> <span class="p">(</span><span class="n">straw</span><span class="p">;</span> <span class="n">haystack</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">needle_test</span><span class="p">(</span><span class="n">straw</span><span class="p">))</span>
+      <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">int</span><span class="p">[]</span> <span class="n">haystack</span> <span class="p">=</span> <span class="p">[</span><span class="mi">345</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">457</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="mi">123</span><span class="p">,</span> <span class="mi">456</span><span class="p">];</span>
+    <span class="kt">int</span>   <span class="n">needle</span> <span class="p">=</span> <span class="mi">123</span><span class="p">;</span>
+    <span class="kt">bool</span> <span class="n">needleTest</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="n">n</span> <span class="p">==</span> <span class="n">needle</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">assert</span><span class="p">(</span>
+      <span class="n">find</span><span class="p">(</span><span class="n">haystack</span><span class="p">,</span> <span class="p">&amp;</span><span class="n">needleTest</span><span class="p">)</span>
+    <span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+<p>The difference between a <a href="https://en.wikipedia.org/wiki/Delegate_(CLI)" title="Delegate (CLI)">delegate</a> and a <a href="https://en.wikipedia.org/wiki/Closure_(computer_science)" class="mw-redirect" title="Closure (computer science)">closure</a> in D is automatically and conservatively determined by the compiler. D also supports function literals, that allow a lambda-style definition:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kt">void</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">int</span><span class="p">[]</span> <span class="n">haystack</span> <span class="p">=</span> <span class="p">[</span><span class="mi">345</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">457</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="mi">123</span><span class="p">,</span> <span class="mi">456</span><span class="p">];</span>
+    <span class="kt">int</span>   <span class="n">needle</span> <span class="p">=</span> <span class="mi">123</span><span class="p">;</span>
+    <span class="k">assert</span><span class="p">(</span>
+       <span class="n">find</span><span class="p">(</span><span class="n">haystack</span><span class="p">,</span> <span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">n</span> <span class="p">==</span> <span class="n">needle</span><span class="p">;</span> <span class="p">})</span>
+   <span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+<p>To allow the compiler to inline the code (see above), function objects can also be specified C++-style via <a href="https://en.wikipedia.org/wiki/Operator_overloading" title="Operator overloading">operator overloading</a>:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kt">bool</span> <span class="n">find</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">F</span><span class="p">)(</span><span class="n">T</span><span class="p">[]</span> <span class="n">haystack</span><span class="p">,</span> <span class="n">F</span> <span class="n">needle_test</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">foreach</span> <span class="p">(</span><span class="n">straw</span><span class="p">;</span> <span class="n">haystack</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">needle_test</span><span class="p">(</span><span class="n">straw</span><span class="p">))</span>
+      <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">int</span><span class="p">[]</span> <span class="n">haystack</span> <span class="p">=</span> <span class="p">[</span><span class="mi">345</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">457</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="mi">123</span><span class="p">,</span> <span class="mi">456</span><span class="p">];</span>
+    <span class="kt">int</span>   <span class="n">needle</span> <span class="p">=</span> <span class="mi">123</span><span class="p">;</span>
+    <span class="k">class</span> <span class="n">NeedleTest</span> <span class="p">{</span>
+      <span class="kt">int</span> <span class="n">needle</span><span class="p">;</span>
+      <span class="k">this</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span> <span class="n">needle</span> <span class="p">=</span> <span class="n">n</span><span class="p">;</span> <span class="p">}</span>
+      <span class="kt">bool</span> <span class="n">opCall</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">n</span> <span class="p">==</span> <span class="n">needle</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">assert</span><span class="p">(</span>
+      <span class="n">find</span><span class="p">(</span><span class="n">haystack</span><span class="p">,</span> <span class="k">new</span> <span class="n">NeedleTest</span><span class="p">(</span><span class="n">needle</span><span class="p">))</span>
+   <span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+<h2><span class="mw-headline" id="In_Eiffel">In Eiffel</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Function_object&amp;action=edit&amp;section=6" title="Edit section: In Eiffel">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>In the <a href="https://en.wikipedia.org/wiki/Eiffel_(programming_language)" title="Eiffel (programming language)">Eiffel</a> software development method and language, operations and objects are seen always as separate concepts. However, the <a href="https://en.wikipedia.org/wiki/Eiffel_(programming_language)#Agents" title="Eiffel (programming language)">agent</a> mechanism facilitates the modeling of operations as runtime objects. Agents satisfy the range of application attributed to function objects, such as being passed as arguments in procedural calls or specified as callback routines. The design of the agent mechanism in Eiffel attempts to reflect the object-oriented nature of the method and language. An agent is an object that generally is a direct instance of one of the two library classes, which model the two types of routines in Eiffel: <code>PROCEDURE</code> and <code>FUNCTION</code>. These two classes descend from the more abstract <code>ROUTINE</code>.</p>
+<p>Within software text, the language keyword <code>agent</code> allows agents to be constructed in a compact form. In the following example, the goal is to add the action of stepping the gauge forward to the list of actions to be executed in the event that a button is clicked.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+            <span class="n">my_button</span><span class="p">.</span><span class="n">select_actions</span><span class="p">.</span><span class="n">extend</span> <span class="p">(</span><span class="kr">agent</span> <span class="n">my_gauge</span><span class="p">.</span><span class="n">step_forward</span><span class="p">)</span>
+</pre></div>
+<p>The routine <code>extend</code> referenced in the example above is a feature of a class in a graphical user interface (GUI) library to provide <a href="https://en.wikipedia.org/wiki/Event-driven_programming" title="Event-driven programming">event-driven programming</a> capabilities.</p>
+<p>In other library classes, agents are seen to be used for different purposes. In a library supporting data structures, for example, a class modeling linear structures effects <a href="https://en.wikipedia.org/wiki/Universal_quantification" title="Universal quantification">universal quantification</a> with a function <code>for_all</code> of type <code>BOOLEAN</code> that accepts an agent, an instance of <code>FUNCTION</code>, as an argument. So, in the following example, <code>my_action</code> is executed only if all members of <code>my_list</code> contain the character '!':</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+    <span class="n">my_list</span><span class="p">:</span> <span class="nc">LINKED_LIST</span> <span class="o">[</span><span class="nc">STRING</span><span class="o">]</span>
+        <span class="p">...</span>
+            <span class="kr">if</span> <span class="n">my_list</span><span class="p">.</span><span class="n">for_all</span> <span class="p">(</span><span class="kr">agent</span> <span class="p">{</span><span class="nc">STRING</span><span class="p">}.</span><span class="n">has</span> <span class="p">(</span><span class="sc">'!'</span><span class="p">))</span> <span class="kr">then</span>
+                <span class="n">my_action</span>
+            <span class="kr">end</span>
+        <span class="p">...</span>
+</pre></div>
+<p>When agents are created, the arguments to the routines they model and even the target object to which they are applied can be either <i>closed</i> or left <i>open</i>. Closed arguments and targets are given values at agent creation time. The assignment of values for open arguments and targets is deferred until some point after the agent is created. The routine <code>for_all</code> expects as an argument an agent representing a function with one open argument or target that conforms to actual generic parameter for the structure (<code>STRING</code> in this example.)</p>
+<p>When the target of an agent is left open, the class name of the expected target, enclosed in braces, is substituted for an object reference as shown in the text <code>agent {STRING}.has ('!')</code> in the example above. When an argument is left open, the question mark character ('?') is coded as a placeholder for the open argument.</p>
+<p>The ability to close or leave open targets and arguments is intended to improve the flexibility of the agent mechanism. Consider a class that contains the following procedure to print a string on standard output after a new line:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+    <span class="n">print_on_new_line</span> <span class="p">(</span><span class="n">s</span><span class="p">:</span> <span class="nc">STRING</span><span class="p">)</span>
+            <span class="c1">-- Print `s' preceded by a new line</span>
+        <span class="kr">do</span>
+            <span class="n">print</span> <span class="p">(</span><span class="s">"%N"</span> <span class="o">+</span> <span class="n">s</span><span class="p">)</span>
+        <span class="kr">end</span>
+</pre></div>
+<p>The following snippet, assumed to be in the same class, uses <code>print_on_new_line</code> to demonstrate the mixing of open arguments and open targets in agents used as arguments to the same routine.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+    <span class="n">my_list</span><span class="p">:</span> <span class="nc">LINKED_LIST</span> <span class="o">[</span><span class="nc">STRING</span><span class="o">]</span>
+        <span class="p">...</span>
+            <span class="n">my_list</span><span class="p">.</span><span class="n">do_all</span> <span class="p">(</span><span class="kr">agent</span> <span class="n">print_on_new_line</span> <span class="p">(</span><span class="o">?</span><span class="p">))</span>
+            <span class="n">my_list</span><span class="p">.</span><span class="n">do_all</span> <span class="p">(</span><span class="kr">agent</span> <span class="p">{</span><span class="nc">STRING</span><span class="p">}.</span><span class="n">to_lower</span><span class="p">)</span>
+            <span class="n">my_list</span><span class="p">.</span><span class="n">do_all</span> <span class="p">(</span><span class="kr">agent</span> <span class="n">print_on_new_line</span> <span class="p">(</span><span class="o">?</span><span class="p">))</span>
+        <span class="p">...</span>
+</pre></div>
+<p>This example uses the procedure <code>do_all</code> for linear structures, which executes the routine modeled by an agent for each item in the structure.</p>
+<p>The sequence of three instructions prints the strings in <code>my_list</code>, converts the strings to lowercase, and then prints them again.</p>
+<p>Procedure <code>do_all</code> iterates across the structure executing the routine substituting the current item for either the open argument (in the case of the agents based on <code>print_on_new_line</code>), or the open target (in the case of the agent based on <code>to_lower</code>).</p>
+<p>Open and closed arguments and targets also allow the use of routines that call for more arguments than are required by closing all but the necessary number of arguments:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+            <span class="n">my_list</span><span class="p">.</span><span class="n">do_all</span> <span class="p">(</span><span class="kr">agent</span> <span class="n">my_multi_arg_procedure</span> <span class="p">(</span><span class="n">closed_arg_1</span><span class="p">,</span> <span class="o">?</span><span class="p">,</span> <span class="n">closed_arg_2</span><span class="p">,</span> <span class="n">closed_arg_3</span><span class="p">)</span>
+</pre></div>
+<p>The Eiffel agent mechanism is detailed in the <a rel="nofollow" class="external text" href="http://www.ecma-international.org/publications/standards/Ecma-367.htm">Eiffel ISO/ECMA standard document</a>.</p>
+<h2><span class="mw-headline" id="In_Java">In Java</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Function_object&amp;action=edit&amp;section=7" title="Edit section: In Java">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="Java_(programming_language).html" title="Java (programming language)">Java</a> has no <a href="https://en.wikipedia.org/wiki/First-class_function" title="First-class function">first-class functions</a>, so function objects are usually expressed by an interface with a single method (most commonly the <code>Callable</code> interface), typically with the implementation being an anonymous <a href="Inner_class.html" title="Inner class">inner class</a>, or, starting in Java 8, a <a href="https://en.wikipedia.org/wiki/Anonymous_function" title="Anonymous function">lambda</a>.</p>
+<p>For an example from Java's standard library, <code>java.util.Collections.sort()</code> takes a <code>List</code> and a functor whose role is to compare objects in the List. Without first-class functions, the function is part of the Comparator interface. This could be used as follows.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="n">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="s">"10"</span><span class="o">,</span> <span class="s">"1"</span><span class="o">,</span> <span class="s">"20"</span><span class="o">,</span> <span class="s">"11"</span><span class="o">,</span> <span class="s">"21"</span><span class="o">,</span> <span class="s">"12"</span><span class="o">);</span>
+		
+<span class="n">Comparator</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">numStringComparator</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Comparator</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;()</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">compare</span><span class="o">(</span><span class="n">String</span> <span class="n">str1</span><span class="o">,</span> <span class="n">String</span> <span class="n">str2</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">Integer</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">str1</span><span class="o">).</span><span class="na">compareTo</span><span class="o">(</span><span class="n">Integer</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">str2</span><span class="o">));</span>
+    <span class="o">}</span>
+<span class="o">};</span>
+
+<span class="n">Collections</span><span class="o">.</span><span class="na">sort</span><span class="o">(</span><span class="n">list</span><span class="o">,</span> <span class="n">numStringComparator</span><span class="o">);</span>
+</pre></div>
+<p>In Java 8+, this can be written as:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="n">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="s">"10"</span><span class="o">,</span> <span class="s">"1"</span><span class="o">,</span> <span class="s">"20"</span><span class="o">,</span> <span class="s">"11"</span><span class="o">,</span> <span class="s">"21"</span><span class="o">,</span> <span class="s">"12"</span><span class="o">);</span>
+		
+<span class="n">Comparator</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">numStringComparator</span> <span class="o">=</span> <span class="o">(</span><span class="n">str1</span><span class="o">,</span> <span class="n">str2</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="n">Integer</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">str1</span><span class="o">).</span><span class="na">compareTo</span><span class="o">(</span><span class="n">Integer</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">str2</span><span class="o">));</span>
+
+<span class="n">Collections</span><span class="o">.</span><span class="na">sort</span><span class="o">(</span><span class="n">list</span><span class="o">,</span> <span class="n">numStringComparator</span><span class="o">);</span>
+</pre></div>
+<h2><span class="mw-headline" id="In_JavaScript">In JavaScript</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Function_object&amp;action=edit&amp;section=8" title="Edit section: In JavaScript">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>In <a href="https://en.wikipedia.org/wiki/JavaScript" title="JavaScript">JavaScript</a>, functions are first class objects. JavaScript also supports closures.</p>
+<p>Compare the following with the subsequent Python example.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kd">function</span> <span class="nx">Accumulator</span><span class="p">(</span><span class="nx">start</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">current</span> <span class="o">=</span> <span class="nx">start</span><span class="p">;</span>
+  <span class="k">return</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">current</span> <span class="o">+=</span> <span class="nx">x</span><span class="p">;</span>
+  <span class="p">};</span>
+<span class="p">}</span>
+</pre></div>
+<p>An example of this in use:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="nx">Accumulator</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="nx">a</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>   <span class="c1">// x has value 9</span>
+<span class="nx">x</span> <span class="o">=</span> <span class="nx">a</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>       <span class="c1">// x has value 11</span>
+
+<span class="kd">var</span> <span class="nx">b</span> <span class="o">=</span> <span class="nx">Accumulator</span><span class="p">(</span><span class="mi">42</span><span class="p">);</span>
+<span class="nx">x</span> <span class="o">=</span> <span class="nx">b</span><span class="p">(</span><span class="mi">7</span><span class="p">);</span>       <span class="c1">// x has value 49 (current = 42 in closure b)</span>
+<span class="nx">x</span> <span class="o">=</span> <span class="nx">a</span><span class="p">(</span><span class="mi">7</span><span class="p">);</span>       <span class="c1">// x has value 18 (current = 11 in closure a)</span>
+</pre></div>
+<h2><span class="mw-headline" id="In_Lisp_and_Scheme">In Lisp and Scheme</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Function_object&amp;action=edit&amp;section=9" title="Edit section: In Lisp and Scheme">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>In Lisp family languages such as <a href="https://en.wikipedia.org/wiki/Common_Lisp" title="Common Lisp">Common Lisp</a>, <a href="https://en.wikipedia.org/wiki/Scheme_(programming_language)" title="Scheme (programming language)">Scheme</a>, and others, functions are objects, just like strings, vectors, lists, and numbers. A closure-constructing operator creates a <i>function object</i> from a part of the program: the part of code given as an argument to the operator is part of the function, and so is the lexical environment: the bindings of the lexically visible variables are <i>captured</i> and stored in the function object, which is more commonly called a <a href="https://en.wikipedia.org/wiki/Closure_(computer_science)" class="mw-redirect" title="Closure (computer science)">closure</a>. The captured bindings play the role of <i>member variables</i>, and the code part of the closure plays the role of the <i>anonymous member function</i>, just like operator () in C++.</p>
+<p>The closure constructor has the syntax <code>(lambda (parameters ...) code ...)</code>. The <code>(parameters ...)</code> part allows an interface to be declared, so that the function takes the declared parameters. The <code>code ...</code> part consists of expressions that are evaluated when the functor is called.</p>
+<p>Many uses of functors in languages like C++ are simply emulations of the missing closure constructor. Since the programmer cannot directly construct a closure, they must define a class that has all of the necessary state variables, and also a member function. Then, construct an instance of that class instead, ensuring that all the member variables are initialized through its constructor. The values are derived precisely from those local variables that ought to be captured directly by a closure.</p>
+<p>A function-object using the class system, no use of closures:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="p">(</span><span class="nb">defclass</span> <span class="nv">counter</span> <span class="p">()</span>
+  <span class="p">((</span><span class="nv">value</span> <span class="ss">:initarg</span> <span class="ss">:value</span> <span class="ss">:accessor</span> <span class="nv">value-of</span><span class="p">)))</span>
+
+<span class="p">(</span><span class="nb">defmethod</span> <span class="nv">functor-call</span> <span class="p">((</span><span class="nv">c</span> <span class="nv">counter</span><span class="p">))</span>
+  <span class="p">(</span><span class="nb">incf</span> <span class="p">(</span><span class="nv">value-of</span> <span class="nv">c</span><span class="p">)))</span>
+
+<span class="p">(</span><span class="nb">defun</span> <span class="nv">make-counter</span> <span class="p">(</span><span class="nv">initial-value</span><span class="p">)</span>
+  <span class="p">(</span><span class="nb">make-instance</span> <span class="ss">'counter</span> <span class="ss">:value</span> <span class="nv">initial-value</span><span class="p">))</span>
+
+<span class="c1">;;; use the counter:</span>
+<span class="p">(</span><span class="nb">defvar</span> <span class="vg">*c*</span> <span class="p">(</span><span class="nv">make-counter</span> <span class="mi">10</span><span class="p">))</span>
+<span class="p">(</span><span class="nv">functor-call</span> <span class="vg">*c*</span><span class="p">)</span> <span class="nv">--&gt;</span> <span class="mi">11</span>
+<span class="p">(</span><span class="nv">functor-call</span> <span class="vg">*c*</span><span class="p">)</span> <span class="nv">--&gt;</span> <span class="mi">12</span>
+</pre></div>
+<p>Since there is no standard way to make funcallable objects in Lisp, we fake it by defining a generic function called FUNCTOR-CALL. This can be specialized for any class whatsoever. The standard FUNCALL function is not generic; it only takes function objects.</p>
+<p>It is this FUNCTOR-CALL generic function that gives us function objects, which are <i>a computer programming construct allowing an object to be invoked or called as if it were an ordinary function, usually with the same syntax.</i> We have <i>almost</i> the same syntax: FUNCTOR-CALL instead of FUNCALL. Some Lisps provide <i>funcallable</i> objects as a simple extension. Making objects callable using the same syntax as functions is a fairly trivial business. Making a function call operator work with different kinds of <i>function things</i>, whether they be class objects or closures is no more complicated than making a + operator that works with different kinds of numbers, such as integers, reals or complex numbers.</p>
+<p>Now, a counter implemented using a closure. This is much more brief and direct. The INITIAL-VALUE argument of the MAKE-COUNTER <a href="https://en.wikipedia.org/wiki/Factory_function" class="mw-redirect" title="Factory function">factory function</a> is captured and used directly. It does not have to be copied into some auxiliary class object through a constructor. It <i>is</i> the counter. An auxiliary object is created, but that happens <i>behind the scenes</i>.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="p">(</span><span class="nb">defun</span> <span class="nv">make-counter</span> <span class="p">(</span><span class="nv">value</span><span class="p">)</span>
+  <span class="p">(</span><span class="k">lambda</span> <span class="p">()</span> <span class="p">(</span><span class="nb">incf</span> <span class="nv">value</span><span class="p">)))</span>
+
+<span class="c1">;;; use the counter</span>
+<span class="p">(</span><span class="nb">defvar</span> <span class="vg">*c*</span> <span class="p">(</span><span class="nv">make-counter</span> <span class="mi">10</span><span class="p">))</span>
+<span class="p">(</span><span class="nb">funcall</span> <span class="vg">*c*</span><span class="p">)</span> <span class="c1">; --&gt; 11</span>
+<span class="p">(</span><span class="nb">funcall</span> <span class="vg">*c*</span><span class="p">)</span> <span class="c1">; --&gt; 12</span>
+</pre></div>
+<p>Scheme makes closures even simpler, and Scheme code tends to use such higher-order programming somewhat more idiomatically.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">make-counter</span> <span class="nv">value</span><span class="p">)</span>
+  <span class="p">(</span><span class="k">lambda </span><span class="p">()</span> <span class="p">(</span><span class="k">set! </span><span class="nv">value</span> <span class="p">(</span><span class="nb">+ </span><span class="nv">value</span> <span class="mi">1</span><span class="p">))</span> <span class="nv">value</span><span class="p">))</span>
+<span class="c1">;;; use the counter</span>
+<span class="p">(</span><span class="k">define </span><span class="nv">c</span> <span class="p">(</span><span class="nf">make-counter</span> <span class="mi">10</span><span class="p">))</span>
+<span class="p">(</span><span class="nf">c</span><span class="p">)</span> <span class="c1">; --&gt; 11</span>
+<span class="p">(</span><span class="nf">c</span><span class="p">)</span> <span class="c1">; --&gt; 12</span>
+</pre></div>
+<p>More than one closure can be created in the same lexical environment. A vector of closures, each implementing a specific kind of operation, can quite faithfully emulate an object that has a set of virtual operations. That type of <a href="https://en.wikipedia.org/wiki/Single_dispatch" class="mw-redirect" title="Single dispatch">single dispatch</a> object-oriented programming can be done fully with closures.</p>
+<p>Thus there exists a kind of tunnel being dug from both sides of the proverbial mountain. Programmers in OOP languages discover function objects by restricting objects to have one <i>main</i> function to <i>do</i> that object's functional purpose, and even eliminate its name so that it looks like the object is being called! While programmers who use closures are not surprised that an object is called like a function, they discover that multiple closures sharing the same environment can provide a complete set of abstract operations like a virtual table for <a href="https://en.wikipedia.org/wiki/Single_dispatch" class="mw-redirect" title="Single dispatch">single dispatch</a> type OOP.</p>
+<h2><span class="mw-headline" id="In_Objective-C">In Objective-C</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Function_object&amp;action=edit&amp;section=10" title="Edit section: In Objective-C">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>In <a href="https://en.wikipedia.org/wiki/Objective-C" title="Objective-C">Objective-C</a>, a function object can be created from the <code>NSInvocation</code> class. Construction of a function object requires a method signature, the target object, and the target selector. Here is an example for creating an invocation to the current object's <code>myMethod</code>:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="c1">// Construct a function object</span>
+<span class="kt">SEL</span> <span class="n">sel</span> <span class="o">=</span> <span class="k">@selector</span><span class="p">(</span><span class="n">myMethod</span><span class="p">);</span>
+<span class="bp">NSInvocation</span><span class="o">*</span> <span class="n">inv</span> <span class="o">=</span> <span class="p">[</span><span class="bp">NSInvocation</span> <span class="nl">invocationWithMethodSignature</span><span class="p">:</span>
+                     <span class="p">[</span><span class="nb">self</span> <span class="nl">methodSignatureForSelector</span><span class="p">:</span><span class="n">sel</span><span class="p">]];</span>
+<span class="p">[</span><span class="n">inv</span> <span class="nl">setTarget</span><span class="p">:</span><span class="nb">self</span><span class="p">];</span>
+<span class="p">[</span><span class="n">inv</span> <span class="nl">setSelector</span><span class="p">:</span><span class="n">sel</span><span class="p">];</span>
+
+<span class="c1">// Do the actual invocation</span>
+<span class="p">[</span><span class="n">inv</span> <span class="n">invoke</span><span class="p">];</span>
+</pre></div>
+<p>An advantage of <code>NSInvocation</code> is that the target object can be modified after creation. A single <code>NSInvocation</code> can be created and then called for each of any number of targets, for instance from an observable object. An <code>NSInvocation</code> can be created from only a protocol, but it is not straightforward. See <a rel="nofollow" class="external text" href="http://www.a-coding.com/2010/10/making-nsinvocations.html">here</a>.</p>
+<h2><span class="mw-headline" id="In_Perl">In Perl</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Function_object&amp;action=edit&amp;section=11" title="Edit section: In Perl">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>In <a href="https://en.wikipedia.org/wiki/Perl" title="Perl">Perl</a>, a function object can be created either from a class's constructor returning a function closed over the object's instance data, blessed into the class:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="nb">package</span> <span class="n">Acc1</span><span class="p">;</span>
+<span class="k">sub </span><span class="nf">new</span> <span class="p">{</span>
+    <span class="k">my</span> <span class="nv">$class</span> <span class="o">=</span> <span class="nb">shift</span><span class="p">;</span>
+    <span class="k">my</span> <span class="nv">$arg</span> <span class="o">=</span> <span class="nb">shift</span><span class="p">;</span>
+    <span class="k">my</span> <span class="nv">$obj</span> <span class="o">=</span> <span class="k">sub </span><span class="p">{</span>
+        <span class="k">my</span> <span class="nv">$num</span> <span class="o">=</span> <span class="nb">shift</span><span class="p">;</span>
+        <span class="nv">$arg</span> <span class="o">+=</span> <span class="nv">$num</span><span class="p">;</span>
+    <span class="p">};</span>
+    <span class="nb">bless</span> <span class="nv">$obj</span><span class="p">,</span> <span class="nv">$class</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="mi">1</span><span class="p">;</span>
+</pre></div>
+<p>or by overloading the &amp;{} operator so that the object can be used as a function:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="nb">package</span> <span class="n">Acc2</span><span class="p">;</span>
+<span class="k">use</span> <span class="n">overload</span>
+    <span class="s">'&amp;{}'</span> <span class="o">=&gt;</span>
+        <span class="k">sub </span><span class="p">{</span>
+            <span class="k">my</span> <span class="nv">$self</span> <span class="o">=</span> <span class="nb">shift</span><span class="p">;</span>
+            <span class="k">sub </span><span class="p">{</span>
+                <span class="nv">$num</span> <span class="o">=</span> <span class="nb">shift</span><span class="p">;</span>
+                <span class="nv">$self</span><span class="o">-&gt;</span><span class="p">{</span><span class="n">arg</span><span class="p">}</span> <span class="o">+=</span> <span class="nv">$num</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">};</span>
+
+<span class="k">sub </span><span class="nf">new</span> <span class="p">{</span>
+    <span class="k">my</span> <span class="nv">$class</span> <span class="o">=</span> <span class="nb">shift</span><span class="p">;</span>
+    <span class="k">my</span> <span class="nv">$arg</span> <span class="o">=</span> <span class="nb">shift</span><span class="p">;</span>
+    <span class="k">my</span> <span class="nv">$obj</span> <span class="o">=</span> <span class="p">{</span> <span class="n">arg</span> <span class="o">=&gt;</span> <span class="nv">$arg</span> <span class="p">};</span>
+    <span class="nb">bless</span> <span class="nv">$obj</span><span class="p">,</span> <span class="nv">$class</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="mi">1</span><span class="p">;</span>
+</pre></div>
+<p>In both cases the function object can be used either using the dereferencing arrow syntax <i>$ref-&gt;(@arguments)</i>:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="k">use</span> <span class="n">Acc1</span><span class="p">;</span>
+<span class="k">my</span> <span class="nv">$a</span> <span class="o">=</span> <span class="n">Acc1</span><span class="o">-&gt;</span><span class="k">new</span><span class="p">(</span><span class="mi">42</span><span class="p">);</span>
+<span class="c1"># prints '52'</span>
+<span class="k">print</span> <span class="nv">$a</span><span class="o">-&gt;</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span> <span class="s">"\n"</span><span class="p">;</span>
+<span class="c1"># prints '60'</span>
+<span class="k">print</span> <span class="nv">$a</span><span class="o">-&gt;</span><span class="p">(</span><span class="mi">8</span><span class="p">),</span> <span class="s">"\n"</span><span class="p">;</span>
+</pre></div>
+<p>or using the coderef dereferencing syntax <i>&amp;$ref(@arguments)</i>:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="k">use</span> <span class="n">Acc2</span><span class="p">;</span>
+<span class="k">my</span> <span class="nv">$a</span> <span class="o">=</span> <span class="n">Acc2</span><span class="o">-&gt;</span><span class="k">new</span><span class="p">(</span><span class="mi">12</span><span class="p">);</span>
+<span class="c1"># prints '22'</span>
+<span class="k">print</span> <span class="o">&amp;</span><span class="nv">$a</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span> <span class="s">"\n"</span><span class="p">;</span>
+<span class="c1"># prints '30'</span>
+<span class="k">print</span> <span class="o">&amp;</span><span class="nv">$a</span><span class="p">(</span><span class="mi">8</span><span class="p">),</span> <span class="s">"\n"</span><span class="p">;</span>
+</pre></div>
+<h2><span class="mw-headline" id="In_PHP">In PHP</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Function_object&amp;action=edit&amp;section=12" title="Edit section: In PHP">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="https://en.wikipedia.org/wiki/PHP" title="PHP">PHP</a> 5.3+ has <a href="https://en.wikipedia.org/wiki/First-class_function" title="First-class function">first-class functions</a> that can be used e.g. as parameter to the usort() function:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="nv">$a</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">);</span>
+<span class="nb">usort</span><span class="p">(</span><span class="nv">$a</span><span class="p">,</span> <span class="k">function</span> <span class="p">(</span><span class="nv">$x</span><span class="p">,</span> <span class="nv">$y</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="nv">$x</span> <span class="o">-</span> <span class="nv">$y</span><span class="p">;</span> <span class="p">});</span>
+</pre></div>
+<p>It is also possible in PHP 5.3+ to make objects invokable by adding a magic __invoke() method to their class:<sup id="cite_ref-phpinvoke_5-0" class="reference"><a href="#cite_note-phpinvoke-5">[4]</a></sup></p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="k">class</span> <span class="nc">Minus</span> <span class="p">{</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">__invoke</span><span class="p">(</span><span class="nv">$x</span><span class="p">,</span> <span class="nv">$y</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nv">$x</span> <span class="o">-</span> <span class="nv">$y</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nv">$a</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">);</span>
+<span class="nb">usort</span><span class="p">(</span><span class="nv">$a</span><span class="p">,</span> <span class="k">new</span> <span class="nx">Minus</span><span class="p">());</span>
+</pre></div>
+<h2><span class="mw-headline" id="In_PowerShell">In PowerShell</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Function_object&amp;action=edit&amp;section=13" title="Edit section: In PowerShell">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>In the <a href="https://en.wikipedia.org/wiki/Windows_PowerShell" class="mw-redirect" title="Windows PowerShell">Windows PowerShell</a> language, a script block is a collection of statements or expressions that can be used as a single unit. A script block can accept arguments and return values. A script block is an instance of a Microsoft <a href="https://en.wikipedia.org/wiki/.NET_Framework" title=".NET Framework">.NET Framework</a> type System.Management.Automation.ScriptBlock.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="k">Function</span> <span class="nb">Get-Accumulator</span><span class="p">(</span><span class="nv">$x</span><span class="p">)</span> <span class="p">{</span>
+    <span class="p">{</span>
+        <span class="k">param</span><span class="p">(</span><span class="nv">$y</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nv">$script:x</span> <span class="p">+=</span> <span class="nv">$y</span>
+    <span class="p">}.</span><span class="n">GetNewClosure</span><span class="p">()</span>
+<span class="p">}</span>
+</pre></div>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="gp">PS C:\&gt; </span><span class="nv">$a</span> <span class="p">=</span> <span class="nb">Get-Accumulator</span> <span class="n">4</span>
+<span class="gp">PS C:\&gt; </span><span class="p">&amp;</span> <span class="nv">$a</span> <span class="n">5</span>
+<span class="go">9</span>
+<span class="gp">PS C:\&gt; </span><span class="p">&amp;</span> <span class="nv">$a</span> <span class="n">2</span>
+<span class="go">11</span>
+<span class="gp">PS C:\&gt; </span><span class="nv">$b</span> <span class="p">=</span> <span class="nb">Get-Accumulator</span> <span class="n">32</span>
+<span class="gp">PS C:\&gt; </span><span class="p">&amp;</span> <span class="nv">$b</span> <span class="n">10</span>
+<span class="go">42</span>
+</pre></div>
+<h2><span class="mw-headline" id="In_Python">In Python</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Function_object&amp;action=edit&amp;section=14" title="Edit section: In Python">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>In <a href="https://en.wikipedia.org/wiki/Python_(programming_language)" title="Python (programming language)">Python</a>, functions are first-class objects, just like strings, numbers, lists etc. This feature eliminates the need to write a function object in many cases. Any object with a <code>__call__()</code> method can be called using function-call syntax.</p>
+<p>An example is this accumulator class (based on <a href="https://en.wikipedia.org/wiki/Paul_Graham_(computer_programmer)" title="Paul Graham (computer programmer)">Paul Graham's</a> study on programming language syntax and clarity):<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">[5]</a></sup></p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="k">class</span> <span class="nc">Accumulator</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">n</span> <span class="o">=</span> <span class="n">n</span>
+
+    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">n</span> <span class="o">+=</span> <span class="n">x</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">n</span>
+</pre></div>
+<p>An example of this in use (using the interactive interpreter):</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">Accumulator</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="go">9</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="go">11</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="n">Accumulator</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<span class="go">49</span>
+</pre></div>
+<p>Since functions are objects, they can also be defined locally, given attributes, and returned by other functions ,<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">[6]</a></sup> as demonstrated in the following two examples:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="k">def</span> <span class="nf">Accumulator</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">inc</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+        <span class="n">inc</span><span class="o">.</span><span class="n">n</span> <span class="o">+=</span> <span class="n">x</span>
+        <span class="k">return</span> <span class="n">inc</span><span class="o">.</span><span class="n">n</span>
+    <span class="n">inc</span><span class="o">.</span><span class="n">n</span> <span class="o">=</span> <span class="n">n</span>
+    <span class="k">return</span> <span class="n">inc</span>
+</pre></div>
+<p>Function object creation using a <a href="https://en.wikipedia.org/wiki/Closure_(computer_science)" class="mw-redirect" title="Closure (computer science)">closure</a> referencing a <a href="https://en.wikipedia.org/wiki/Non-local_variable" title="Non-local variable">non-local variable</a> in Python 3:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="k">def</span> <span class="nf">Accumulator</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">inc</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+        <span class="k">nonlocal</span> <span class="n">n</span>
+        <span class="n">n</span> <span class="o">+=</span> <span class="n">x</span>
+        <span class="k">return</span> <span class="n">n</span>
+    <span class="k">return</span> <span class="n">inc</span>
+</pre></div>
+<h2><span class="mw-headline" id="In_Ruby">In Ruby</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Function_object&amp;action=edit&amp;section=15" title="Edit section: In Ruby">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>In <a href="https://en.wikipedia.org/wiki/Ruby_(programming_language)" title="Ruby (programming language)">Ruby</a>, several objects can be considered function objects, in particular Method and Proc objects. Ruby also has two kinds of objects that can be thought of as semi-function objects: UnboundMethod and block. UnboundMethods must first be bound to an object (thus becoming a Method) before they can be used as a function object. Blocks can be called like function objects, but to be used in any other capacity as an object (e.g. passed as an argument) they must first be converted to a Proc. More recently, symbols (accessed via the literal unary indicator <code>:</code>) can also be converted to <code>Proc</code>s. Using Ruby's unary <code>&amp;</code> operator—equivalent to calling <code>to_proc</code> on an object, and <a href="https://en.wikipedia.org/wiki/Duck_typing" title="Duck typing">assuming that method exists</a>—the <a href="https://en.wikipedia.org/w/index.php?title=Ruby_Extensions_Project&amp;action=edit&amp;redlink=1" class="new" title="Ruby Extensions Project (page does not exist)">Ruby Extensions Project</a> <a rel="nofollow" class="external text" href="https://web.archive.org/web/20060425104650/http://blogs.pragprog.com:80/cgi-bin/pragdave.cgi/Tech/Ruby/ToProc.rdoc">created a simple hack.</a></p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="k">class</span> <span class="nc">Symbol</span>
+  <span class="k">def</span> <span class="nf">to_proc</span>
+    <span class="nb">proc</span> <span class="p">{</span> <span class="o">|</span><span class="n">obj</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="o">|</span> <span class="n">obj</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="nb">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span> <span class="p">}</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+<p>Now, method <code>foo</code> can be a function object, i.e. a <code>Proc</code>, via <code>&amp;:foo</code> and used via <code>takes_a_functor(&amp;:foo)</code>. <code>Symbol.to_proc</code> was officially added to Ruby on June 11, 2006 during RubyKaiga2006. <a rel="nofollow" class="external autonumber" href="https://web.archive.org/web/20060820025032/http://redhanded.hobix.com:80/cult/symbolTo_procExonerated.html">[1]</a></p>
+<p>Because of the variety of forms, the term Functor is not generally used in Ruby to mean a Function object. Just a type of dispatch <a href="https://en.wikipedia.org/wiki/Delegation_(programming)" class="mw-redirect" title="Delegation (programming)">delegation</a> introduced by the <a rel="nofollow" class="external text" href="https://web.archive.org/web/20070107205748/http://facets.rubyforge.org:80/">Ruby Facets</a> project is named as Functor. The most basic definition of which is:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="k">class</span> <span class="nc">Functor</span>
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="o">&amp;</span><span class="n">func</span><span class="p">)</span>
+    <span class="vi">@func</span> <span class="o">=</span> <span class="n">func</span>
+  <span class="k">end</span>
+  <span class="k">def</span> <span class="nf">method_missing</span><span class="p">(</span><span class="n">op</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">blk</span><span class="p">)</span>
+    <span class="vi">@func</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="n">op</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">blk</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+<p>This usage is more akin to that used by functional programming languages, like <a href="https://en.wikipedia.org/wiki/ML_(programming_language)" title="ML (programming language)">ML</a>, and the original mathematical terminology.</p>
+<h2><span class="mw-headline" id="Other_meanings">Other meanings</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Function_object&amp;action=edit&amp;section=16" title="Edit section: Other meanings">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>In a more theoretical context a <i>function object</i> may be considered to be any instance of the class of functions, especially in languages such as <a href="https://en.wikipedia.org/wiki/Common_Lisp" title="Common Lisp">Common Lisp</a> in which functions are <a href="https://en.wikipedia.org/wiki/First-class_object" class="mw-redirect" title="First-class object">first-class objects</a>.</p>
+<p>The <a href="https://en.wikipedia.org/wiki/Functional_programming" title="Functional programming">functional programming</a> languages <a href="https://en.wikipedia.org/wiki/ML_(programming_language)" title="ML (programming language)">ML</a> and <a href="https://en.wikipedia.org/wiki/Haskell_(programming_language)" title="Haskell (programming language)">Haskell</a> use the term <i>functor</i> to represent a <a href="https://en.wikipedia.org/wiki/Function_(mathematics)" title="Function (mathematics)">mapping</a> from modules to modules, or from types to types and is a technique for reusing code. Functors used in this manner are analogous to the original mathematical meaning of <a href="https://en.wikipedia.org/wiki/Functor" title="Functor">functor</a> in <a href="https://en.wikipedia.org/wiki/Category_theory" title="Category theory">category theory</a>, or to the use of generic programming in C++, Java or <a href="https://en.wikipedia.org/wiki/Ada_(programming_language)" title="Ada (programming language)">Ada</a>.</p>
+<p>In <a href="https://en.wikipedia.org/wiki/Prolog" title="Prolog">Prolog</a> and related languages, functor is a synonym for <a href="https://en.wikipedia.org/wiki/Function_symbol" class="mw-redirect" title="Function symbol">function symbol</a>.</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Function_object&amp;action=edit&amp;section=17" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Callback_(computer_science)" class="mw-redirect" title="Callback (computer science)">Callback (computer science)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Closure_(computer_science)" class="mw-redirect" title="Closure (computer science)">Closure (computer science)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Function_pointer" title="Function pointer">Function pointer</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Higher-order_function" title="Higher-order function">Higher-order function</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Command_pattern" title="Command pattern">Command pattern</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Currying" title="Currying">Currying</a></li>
+</ul>
+<h2><span class="mw-headline" id="Notes">Notes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Function_object&amp;action=edit&amp;section=18" title="Edit section: Notes">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: lower-alpha;">
+<ol class="references">
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text">In C++, a <b>functionoid</b> is an object that has one major method, and a <b>functor</b> is a special case of a functionoid.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[1]</a></sup> They are similar to a function object, <i>but not the same</i>.</span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Function_object&amp;action=edit&amp;section=19" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://isocpp.org/wiki/faq/pointers-to-members#functor-vs-functionoid">What's the difference between a functionoid and a functor?</a></span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><cite class="citation web">Silan Liu. <a rel="nofollow" class="external text" href="http://progtutorials.tripod.com/cpp1.htm#_Toc50820124">"C++ Tutorial Part I - Basic: 5.10 Function pointers are mainly used to achieve call back technique, which will be discussed right after."</a>. TRIPOD: Programming Tutorials Copyright © Silan Liu 2002<span class="reference-accessdate">. Retrieved <span class="nowrap">2012-09-07</span></span>. <q>Function pointers are mainly used to achieve call back technique, which will be discussed right after.</q></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFunction+object&amp;rft.au=Silan+Liu&amp;rft.btitle=C%2B%2B+Tutorial+Part+I+-+Basic%3A+5.10+Function+pointers+are+mainly+used+to+achieve+call+back+technique%2C+which+will+be+discussed+right+after.&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fprogtutorials.tripod.com%2Fcpp1.htm%23_Toc50820124&amp;rft.pub=TRIPOD%3A+Programming+Tutorials+Copyright+%A9+Silan+Liu+2002&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><cite class="citation web">Paweł Turlejski (2009-10-02). <a rel="nofollow" class="external text" href="http://progtutorials.tripod.com/cpp1.htm#_Toc50820124">"C++ Tutorial Part I - Basic: 5.10 Function pointers are mainly used to achieve call back technique, which will be discussed right after."</a>. Just a Few Lines<span class="reference-accessdate">. Retrieved <span class="nowrap">2012-09-07</span></span>. <q>PHP 5.3, along with many other features, introduced closures. So now we can finally do all the cool stuff that Ruby / Groovy / Scala / any_modern_language guys can do, right? Well, we can, but we probably won’t… Here's why.</q></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFunction+object&amp;rft.au=Pawe%C5%82+Turlejski&amp;rft.btitle=C%2B%2B+Tutorial+Part+I+-+Basic%3A+5.10+Function+pointers+are+mainly+used+to+achieve+call+back+technique%2C+which+will+be+discussed+right+after.&amp;rft.date=2009-10-02&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fprogtutorials.tripod.com%2Fcpp1.htm%23_Toc50820124&amp;rft.pub=Just+a+Few+Lines&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-phpinvoke-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-phpinvoke_5-0">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://php.net/manual/en/language.oop5.magic.php#object.invoke">PHP Documentation on Magic Methods</a></span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.paulgraham.com/accgen.html">Accumulator Generator</a></span></li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://docs.python.org/3/reference/compound_stmts.html#function-definitions">Python reference manual - Function definitions</a></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="Further_reading">Further reading</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Function_object&amp;action=edit&amp;section=20" title="Edit section: Further reading">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li>David Vandevoorde &amp; Nicolai M Josuttis (2006). <i>C++ Templates: The Complete Guide</i>, <a href="https://en.wikipedia.org/wiki/Special:BookSources/0201734842" class="internal mw-magiclink-isbn">ISBN 0-201-73484-2</a>: Specifically, chapter 22 is devoted to function objects.</li>
+</ul>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Function_object&amp;action=edit&amp;section=21" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://c2.com/cgi/wiki?FunctorObject">Description from the Portland Pattern Repository</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.two-sdg.demon.co.uk/curbralan/papers/AsynchronousC++.pdf">C++ Advanced Design Issues - Asynchronous C++</a> by <a href="https://en.wikipedia.org/wiki/Kevlin_Henney" title="Kevlin Henney">Kevlin Henney</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.newty.de/fpt/index.html">The Function Pointer Tutorials</a> by Lars Haendel (2000/2001)</li>
+<li>Article "<a rel="nofollow" class="external text" href="https://web.archive.org/web/20041009232434/http://www.cuj.com:80/documents/s=8464/cujcexp0308sutter/">Generalized Function Pointers</a>" by <a href="https://en.wikipedia.org/wiki/Herb_Sutter" title="Herb Sutter">Herb Sutter</a></li>
+<li><a rel="nofollow" class="external text" href="http://jga.sourceforge.net/">Generic Algorithms for Java</a></li>
+<li><a rel="nofollow" class="external text" href="https://web.archive.org/web/20100330073950/http://www.amcgowan.ca:80/blog/computer-science/php-functors-function-objects-in-php/">PHP Functors - Function Objects in PHP</a></li>
+<li><a rel="nofollow" class="external text" href="https://web.archive.org/web/20041013202445/http://www.parashift.com:80/c++-faq-lite/pointers-to-members.html#faq-33.10">What the heck is a functionoid, and why would I use one?</a> (C++ FAQ)</li>
+</ul>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1279
+Cached time: 20170106082537
+Cache expiry: 2592000
+Dynamic content: false
+CPU time usage: 0.116 seconds
+Real time usage: 1.222 seconds
+Preprocessor visited node count: 644/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 9005/2097152 bytes
+Template argument size: 261/2097152 bytes
+Highest expansion depth: 6/40
+Expensive parser function count: 1/500
+Lua time usage: 0.035/10.000 seconds
+Lua memory usage: 1.8 MB/50 MB
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00% 1181.234      1 - -total
+  3.29%   38.885      2 - Template:Reflist
+  2.68%   31.651      2 - Template:Cite_web
+  2.19%   25.927      1 - Template:Refimprove
+  1.87%   22.055      1 - Template:Ambox
+  1.66%   19.598      1 - Template:About
+  0.33%    3.898      1 - Template:Notelist
+  0.32%    3.796      1 - Template:Efn
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:509999-0!*!0!!en!4!* and timestamp 20170106082537 and revision id 758578843
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Function_object&amp;oldid=758578843">https://en.wikipedia.org/w/index.php?title=Function_object&amp;oldid=758578843</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Help_Category.html" title="Help:Category">Categories</a>: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Object_(computer_science)" title="Category:Object (computer science)">Object (computer science)</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Subroutines" title="Category:Subroutines">Subroutines</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Articles_with_example_Ruby_code" title="Category:Articles with example Ruby code">Articles with example Ruby code</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Articles_needing_additional_references_from_February_2009" title="Category:Articles needing additional references from February 2009">Articles needing additional references from February 2009</a></li><li><a href="https://en.wikipedia.org/wiki/Category:All_articles_needing_additional_references" title="Category:All articles needing additional references">All articles needing additional references</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Articles_with_example_C_code" title="Category:Articles with example C code">Articles with example C code</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Articles_with_example_C++_code" title="Category:Articles with example C++ code">Articles with example C++ code</a></li><li><a href="Category_Articles_with_example_Java_code.html" title="Category:Articles with example Java code">Articles with example Java code</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Articles_with_example_Perl_code" title="Category:Articles with example Perl code">Articles with example Perl code</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Articles_with_example_Python_code" title="Category:Articles with example Python code">Articles with example Python code</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Pages_using_ISBN_magic_links" title="Category:Pages using ISBN magic links">Pages using ISBN magic links</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="Special_MyTalk.html" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="Special_MyContributions.html" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&amp;returnto=Function+object" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Function+object" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="Function_object.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+															<li  id="ca-talk"><span><a href="https://en.wikipedia.org/wiki/Talk:Function_object"  title="Discussion about the content page [t]" accesskey="t" rel="discussion">Talk</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="Function_object.html" >Read</a></span></li>
+															<li id="ca-edit"><span><a href="https://en.wikipedia.org/w/index.php?title=Function_object&amp;action=edit"  title="Edit this page [e]" accesskey="e">Edit</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="https://en.wikipedia.org/w/index.php?title=Function_object&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="https://en.wikipedia.org/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="Main_Page.html"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="Portal_Contents.html" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="Portal_Featured_content.html" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="Portal_Current_events.html" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="https://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="../../shop.wikimedia.org/index.html" title="Visit the Wikipedia store">Wikipedia store</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Interaction</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-help"><a href="Help_Contents.html" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="Wikipedia_About.html" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="Wikipedia_Community_portal.html" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="Wikipedia_Contact_us.html" title="How to contact Wikipedia">Contact page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="https://en.wikipedia.org/wiki/Special:WhatLinksHere/Function_object" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://en.wikipedia.org/wiki/Special:RecentChangesLinked/Function_object" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="Wikipedia_File_Upload_Wizard.html" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="https://en.wikipedia.org/w/index.php?title=Function_object&amp;oldid=758578843" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://en.wikipedia.org/w/index.php?title=Function_object&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q2072111" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="https://en.wikipedia.org/w/index.php?title=Special:CiteThisPage&amp;page=Function_object&amp;id=758578843" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Print/export</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Function+object">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Function+object&amp;returnto=Function+object&amp;oldid=758578843&amp;writer=rdf2latex">Download as PDF</a></li><li id="t-print"><a href="https://en.wikipedia.org/w/index.php?title=Function_object&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Languages</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Funtore_(programmazione)" title="Funtore (programmazione) – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/関数オブジェクト" title="関数オブジェクト – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/Функциональный_объект" title="Функциональный объект – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/Функтор_(програмування)" title="Функтор (програмування) – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/函数对象" title="函数对象 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q2072111#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 6 January 2017, at 08:25.</li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="Wikipedia_Text_of_Creative_Commons_Attribution-ShareAlike_3.html">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="../../creativecommons.org/licenses/by-sa/3.0/index.html" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="../../wikimediafoundation.org/wiki/Terms_of_Use.html">Terms of Use</a> and <a href="../../wikimediafoundation.org/wiki/Privacy_policy.html">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="../../www.wikimediafoundation.org/index.html">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../../wikimediafoundation.org/wiki/Privacy_policy.html" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="Wikipedia_About.html" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="Wikipedia_General_disclaimer.html" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="Wikipedia_Contact_us.html">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a href="../../www.mediawiki.org/wiki/Special_MyLanguage/How_to_contribute.html">Developers</a></li>
+											<li id="footer-places-cookiestatement"><a href="../../wikimediafoundation.org/wiki/Cookie_statement.html">Cookie statement</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/w/index.php?title=Function_object&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="../../www.wikimediafoundation.org/index.html"><img src="https://en.wikipedia.org/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="../../www.mediawiki.org/index.html"><img src="https://en.wikipedia.org/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":63,"wgHostname":"mw1272"});});</script>
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Function_object by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:03 GMT -->
+</html>

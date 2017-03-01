@@ -1,0 +1,6 @@
+    
+        I have a generics class Foo&lt;T&gt;. In a method of Foo, i want to get the class instance of type T. But i just can't call T.class
+
+Please tell me your preferred way to get around with the T.class ?
+
+                

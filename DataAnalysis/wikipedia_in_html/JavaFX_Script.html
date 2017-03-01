@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from en.wikipedia.org/wiki/JavaFX_Script by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:22 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>JavaFX Script - Wikipedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"JavaFX_Script","wgTitle":"JavaFX Script","wgCurRevisionId":749305119,"wgRevisionId":749305119,"wgArticleId":11117691,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles lacking in-text citations from April 2011","All articles lacking in-text citations","Pages using deprecated image syntax","Webarchive template archiveis links","Scripting languages","Declarative programming languages","Java programming language family","JVM programming languages"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"JavaFX_Script","wgRelevantArticleId":11117691,"wgRequestId":"WHVtOwpAAEYAAWc7yR0AAAAP","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgFlaggedRevsParams":{"tags":{}},"wgStableRevisionId":null,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"en","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgWikibaseItemId":"Q609804","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.cite.styles":"ready","ext.pygments":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@1dqfd7l",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["ext.cite.a11y","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.legacy.wikibits","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.watchlist-notice","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.gadget.featured-articles-links","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.interface","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="https://en.wikipedia.org/w/load.php?debug=false&amp;lang=en&amp;modules=ext.cite.styles%7Cext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="../w/load2c8d.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../w/load18b6.css?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.29.0-wmf.7"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="https://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/JavaFX_Script"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=JavaFX_Script&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=JavaFX_Script&amp;action=edit"/>
+<link rel="apple-touch-icon" href="https://en.wikipedia.org/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="../static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../w/api251f.php?action=rsd"/>
+<link rel="copyright" href="../../creativecommons.org/licenses/by-sa/3.0/index.html"/>
+<link rel="canonical" href="JavaFX_Script.html"/>
+<link rel="dns-prefetch" href="../../login.wikimedia.org/index.html"/>
+<link rel="dns-prefetch" href="../../meta.wikimedia.org/index.html" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-JavaFX_Script rootpage-JavaFX_Script skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">JavaFX Script</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><script>function mfTempOpenSection(id){var block=document.getElementById("mf-section-"+id);block.className+=" open-block";block.previousSibling.className+=" open-block";}</script><table class="plainlinks metadata ambox ambox-style ambox-More_footnotes" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/40px-Text_document_with_red_question_mark.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/60px-Text_document_with_red_question_mark.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/80px-Text_document_with_red_question_mark.svg.png 2x" data-file-width="48" data-file-height="48" /></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article includes a <a href="https://en.wikipedia.org/wiki/Wikipedia:Citing_sources" title="Wikipedia:Citing sources">list of references</a>, but <b>its sources remain unclear</b> because it has <b>insufficient <a href="https://en.wikipedia.org/wiki/Wikipedia:Citing_sources#Inline_citations" title="Wikipedia:Citing sources">inline citations</a></b>. <span class="hide-when-compact">Please help to <a href="https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Fact_and_Reference_Check" title="Wikipedia:WikiProject Fact and Reference Check">improve</a> this article by <a href="https://en.wikipedia.org/wiki/Wikipedia:When_to_cite" title="Wikipedia:When to cite">introducing</a> more precise citations.</span> <small><i>(April 2011)</i></small> <small class="hide-when-compact"><i>(<a href="https://en.wikipedia.org/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></span></td>
+</tr>
+</table>
+<table class="infobox vevent" style="width:22em">
+<caption class="summary">JavaFX</caption>
+<tr>
+<td colspan="2" style="text-align:center"><a href="https://en.wikipedia.org/wiki/File:JavaFX.png" class="image"><img alt="JavaFX.png" src="http://upload.wikimedia.org/wikipedia/en/3/39/JavaFX.png" width="200" height="87" data-file-width="200" data-file-height="87" /></a></td>
+</tr>
+<tr>
+<th scope="row"><a href="https://en.wikipedia.org/wiki/Software_developer" title="Software developer">Developer</a></th>
+<td class="organiser"><a href="https://en.wikipedia.org/wiki/Sun_Microsystems" title="Sun Microsystems">Sun Microsystems</a></td>
+</tr>
+<tr>
+<td colspan="2" style="text-align:center"></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_release_life_cycle" title="Software release life cycle">Stable release</a></th>
+<td>
+<div style="margin:0px;">1.2 / June&#160;2,&#160;2009<span style="display:none">&#160;(<span class="bday dtstart published updated">2009-06-02</span>)</span></div>
+</td>
+</tr>
+<tr>
+<th scope="row"><a href="https://en.wikipedia.org/wiki/Computing_platform" title="Computing platform">Platform</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Java_Runtime_Environment" class="mw-redirect" title="Java Runtime Environment">Java Runtime Environment</a></td>
+</tr>
+<tr>
+<th scope="row"><a href="https://en.wikipedia.org/wiki/Operating_system" title="Operating system">OS</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Cross-platform" title="Cross-platform">Cross-platform</a></td>
+</tr>
+<tr>
+<th scope="row"><a href="https://en.wikipedia.org/wiki/Software_license" title="Software license">License</a></th>
+<td><a href="https://en.wikipedia.org/wiki/GNU_General_Public_License" title="GNU General Public License">GPL</a></td>
+</tr>
+<tr>
+<th scope="row">Website</th>
+<td><a rel="nofollow" class="external free" href="http://javafx.com/">http://javafx.com/</a></td>
+</tr>
+</table>
+<p><b>JavaFX Script</b> is a <a href="https://en.wikipedia.org/wiki/Scripting_language" title="Scripting language">scripting language</a> designed by <a href="https://en.wikipedia.org/wiki/Sun_Microsystems" title="Sun Microsystems">Sun Microsystems</a>, forming part of the <a href="JavaFX.html" title="JavaFX">JavaFX</a> family of technologies on the <a href="https://en.wikipedia.org/wiki/Java_Platform" class="mw-redirect" title="Java Platform">Java Platform</a>.</p>
+<p>JavaFX targets the <a href="https://en.wikipedia.org/wiki/Rich_Internet_Application" class="mw-redirect" title="Rich Internet Application">Rich Internet Application</a> domain (competing with <a href="https://en.wikipedia.org/wiki/Adobe_Flex" class="mw-redirect" title="Adobe Flex">Adobe Flex</a> and <a href="https://en.wikipedia.org/wiki/Microsoft_Silverlight" title="Microsoft Silverlight">Microsoft Silverlight</a>), specializing in rapid development of visually rich applications for the desktop and mobile markets. JavaFX Script works with <a href="https://en.wikipedia.org/wiki/Integrated_development_environment" title="Integrated development environment">integrated development environments</a> such as <a href="NetBeans.html" title="NetBeans">NetBeans</a>, <a href="Eclipse_(software).html" title="Eclipse (software)">Eclipse</a> and <a href="IntelliJ_IDEA.html" title="IntelliJ IDEA">IntelliJ IDEA</a>. JavaFX is released under the <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License" title="GNU General Public License">GNU General Public License</a>, via the Sun sponsored <a rel="nofollow" class="external text" href="https://openjfx.dev.java.net/">OpenJFX project</a>.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#History"><span class="tocnumber">1</span> <span class="toctext">History</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Features"><span class="tocnumber">2</span> <span class="toctext">Features</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Syntax"><span class="tocnumber">3</span> <span class="toctext">Syntax</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#See_also"><span class="tocnumber">4</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#References"><span class="tocnumber">5</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Bibliography"><span class="tocnumber">6</span> <span class="toctext">Bibliography</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#External_links"><span class="tocnumber">7</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=JavaFX_Script&amp;action=edit&amp;section=1" title="Edit section: History">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>JavaFX Script used to be called <b>F3</b> for <b>F</b>orm <b>F</b>ollows <b>F</b>unction. F3 was primarily developed by <a href="https://en.wikipedia.org/wiki/Chris_Oliver_(software_engineer)" title="Chris Oliver (software engineer)">Chris Oliver</a>, who became a <a href="https://en.wikipedia.org/wiki/Sun_Microsystems" title="Sun Microsystems">Sun</a> employee through their acquisition of <a href="https://en.wikipedia.org/wiki/SeeBeyond_Technology_Corporation" class="mw-redirect" title="SeeBeyond Technology Corporation">SeeBeyond Technology Corporation</a> in September 2005.</p>
+<p>Its name was changed to JavaFX Script, and it became <a href="https://en.wikipedia.org/wiki/Open_source" class="mw-redirect" title="Open source">open sourced</a> at <a href="JavaOne.html" title="JavaOne">JavaOne</a> 2007.</p>
+<p>All the code, documentation and demos are shared in the <a rel="nofollow" class="external text" href="https://openjfx.dev.java.net/">Project OpenJFX</a> Development Website. JavaFX 1.0 was released on December 4, 2008.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[1]</a></sup></p>
+<p>On September 10, 2010 Oracle announced at <a href="JavaOne.html" title="JavaOne">JavaOne</a> that JavaFX Script would be discontinued, although the JavaFX API would be made available to other languages for the Java Virtual Machine.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">[2]</a></sup></p>
+<p>On September 27, 2010 Stephen Chin announced <a rel="nofollow" class="external text" href="https://github.com/visage-lang">Visage</a> a declarative user-interface language based on the JavaFX script with enhancements.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">[3]</a></sup></p>
+<p>More recently, the original <a rel="nofollow" class="external text" href="https://github.com/unktomi/form-follows-function/">F3 programming language</a> is now in the process of being resurrected and enhanced.</p>
+<h2><span class="mw-headline" id="Features">Features</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=JavaFX_Script&amp;action=edit&amp;section=2" title="Edit section: Features">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>JavaFX Script is a compiled, <a href="https://en.wikipedia.org/wiki/Type_system#Static_typing" title="Type system">statically typed</a>, <a href="https://en.wikipedia.org/wiki/Declarative_programming_language" class="mw-redirect" title="Declarative programming language">declarative</a>, <a href="https://en.wikipedia.org/wiki/Scripting_language" title="Scripting language">scripting language</a> for the <a href="https://en.wikipedia.org/wiki/Java_Platform" class="mw-redirect" title="Java Platform">Java Platform</a>. It provides automatic data-binding, <a href="https://en.wikipedia.org/w/index.php?title=Mutation_trigger&amp;action=edit&amp;redlink=1" class="new" title="Mutation trigger (page does not exist)">mutation triggers</a> and <a href="https://en.wikipedia.org/w/index.php?title=Declarative_animation&amp;action=edit&amp;redlink=1" class="new" title="Declarative animation (page does not exist)">declarative animation</a>, using an expression language syntax (all code blocks potentially yield values.)</p>
+<p>Through its standard <a href="JavaFX.html" title="JavaFX">JavaFX</a> APIs it supports <a href="https://en.wikipedia.org/wiki/Retained_mode" title="Retained mode">retained mode</a> vector graphics, video playback and standard <a href="Swing_(Java).html" title="Swing (Java)">Swing</a> components.</p>
+<p>Although F3 began life as an interpreted language, prior to the first preview release (Q3 2008) JavaFX Script had shifted focus to being predominantly compiled. Interpreted JavaFX Script is still possible, via the <a href="https://en.wikipedia.org/wiki/JSR_223" class="mw-redirect" title="JSR 223">JSR 223</a> 'Scripting for Java' bridge. Because it is built on top of the <a href="https://en.wikipedia.org/wiki/Java_Platform" class="mw-redirect" title="Java Platform">Java Platform</a>, it is easy to use <a href="Java_(programming_language).html" title="Java (programming language)">Java</a> classes in JavaFX Script code. Compiled JavaFX Script is able to run on any platform which has a recent <a href="https://en.wikipedia.org/wiki/Java_Runtime_Environment" class="mw-redirect" title="Java Runtime Environment">Java Runtime</a> installed.</p>
+<h2><span class="mw-headline" id="Syntax">Syntax</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=JavaFX_Script&amp;action=edit&amp;section=3" title="Edit section: Syntax">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="JavaFX.html" title="JavaFX">JavaFX</a> Script's declarative syntax for constructing user interfaces contrasts sharply with the more verbose series of method calls required to construct an equivalent interface in <a href="Swing_(Java).html" title="Swing (Java)">Swing</a> directly.</p>
+<p>Here is a simple <a href="https://en.wikipedia.org/wiki/Hello_world_program" class="mw-redirect" title="Hello world program">Hello world program</a> for JavaFX Script&#160;:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+ <span class="kn">import</span> <span class="nn">javafx.stage.Stage</span><span class="o">;</span>
+ <span class="kn">import</span> <span class="nn">javafx.scene.Scene</span><span class="o">;</span>
+ <span class="kn">import</span> <span class="nn">javafx.scene.text.Text</span><span class="o">;</span>
+ <span class="kn">import</span> <span class="nn">javafx.scene.text.Font</span><span class="o">;</span>
+ 
+ <span class="n">Stage</span> <span class="o">{</span>
+     <span class="n">title</span><span class="o">:</span> <span class="s">"Hello World"</span>
+     <span class="n">width</span><span class="o">:</span> <span class="mi">250</span>
+     <span class="n">height</span><span class="o">:</span> <span class="mi">80</span>
+     <span class="n">scene</span><span class="o">:</span> <span class="n">Scene</span> <span class="o">{</span>
+         <span class="n">content</span><span class="o">:</span> <span class="n">Text</span> <span class="o">{</span>
+             <span class="n">font</span> <span class="o">:</span> <span class="n">Font</span> <span class="o">{</span>
+                 <span class="n">size</span> <span class="o">:</span> <span class="mi">24</span>
+             <span class="o">}</span>
+             <span class="n">x</span><span class="o">:</span> <span class="mi">10</span><span class="o">,</span> <span class="n">y</span><span class="o">:</span> <span class="mi">30</span>
+             <span class="n">content</span><span class="o">:</span> <span class="s">"Hello World"</span>
+         <span class="o">}</span>
+     <span class="o">}</span> 
+ <span class="o">}</span>
+</pre></div>
+<p>It shows the following window/frame&#160;:</p>
+<p><a href="https://en.wikipedia.org/wiki/File:HelloWorld_Java_FX.jpg" class="image"><img alt="HelloWorld Java FX.jpg" src="http://upload.wikimedia.org/wikipedia/commons/6/63/HelloWorld_Java_FX.jpg" width="260" height="85" data-file-width="260" data-file-height="85" /></a></p>
+<p>This program can also be written in this way:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+ <span class="kn">import</span> <span class="nn">javafx.ext.swing.*</span><span class="o">;</span>
+ 
+ <span class="n">var</span> <span class="n">myFrame</span><span class="o">:</span><span class="n">SwingFrame</span> <span class="o">=</span> <span class="k">new</span> <span class="n">SwingFrame</span><span class="o">();</span>
+ <span class="n">var</span> <span class="n">myLabel</span><span class="o">:</span><span class="n">Label</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Label</span><span class="o">();</span>
+ 
+ <span class="n">myLabel</span><span class="o">.</span><span class="na">text</span> <span class="o">=</span> <span class="s">"Hello World!"</span><span class="o">;</span>
+ <span class="n">myFrame</span><span class="o">.</span><span class="na">width</span> <span class="o">=</span> <span class="mi">200</span><span class="o">;</span>
+ <span class="n">myFrame</span><span class="o">.</span><span class="na">height</span> <span class="o">=</span> <span class="mi">50</span><span class="o">;</span>
+ <span class="n">myFrame</span><span class="o">.</span><span class="na">visible</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
+ <span class="n">myFrame</span><span class="o">.</span><span class="na">content</span> <span class="o">=</span> <span class="n">myLabel</span><span class="o">;</span>
+</pre></div>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=JavaFX_Script&amp;action=edit&amp;section=4" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div role="navigation" aria-label="Portals" class="noprint portal plainlist tright" style="margin:0.5em 0 0.5em 1em;border:solid #aaa 1px">
+<ul style="display:table;box-sizing:border-box;padding:0.1em;max-width:175px;background:#f9f9f9;font-size:85%;line-height:110%;font-style:italic;font-weight:bold">
+<li style="display:table-row"><span style="display:table-cell;padding:0.2em;vertical-align:middle;text-align:center"><a href="https://en.wikipedia.org/wiki/File:Wave.svg" class="image"><img alt="icon" src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/15px-Wave.svg.png" width="15" height="28" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/23px-Wave.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/31px-Wave.svg.png 2x" data-file-width="226" data-file-height="407" /></a></span><span style="display:table-cell;padding:0.2em 0.2em 0.2em 0.3em;vertical-align:middle"><a href="https://en.wikipedia.org/wiki/Portal:Java" title="Portal:Java">Java portal</a></span></li>
+<li style="display:table-row"><span style="display:table-cell;padding:0.2em;vertical-align:middle;text-align:center"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_(2009).svg/28px-Free_and_open-source_software_logo_(2009).svg.png" width="28" height="28" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/42px-Free_and_open-source_software_logo_%282009%29.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/56px-Free_and_open-source_software_logo_%282009%29.svg.png 2x" data-file-width="512" data-file-height="512" /></span><span style="display:table-cell;padding:0.2em 0.2em 0.2em 0.3em;vertical-align:middle"><a href="https://en.wikipedia.org/wiki/Portal:Free_software" class="mw-redirect" title="Portal:Free software">Free software portal</a></span></li>
+</ul>
+</div>
+<ul>
+<li><a href="Java_applet.html" title="Java applet">Java applet</a>, a means of deploying Java applications inside a web page.</li>
+<li><a href="JavaFX.html" title="JavaFX">JavaFX</a>, a family of products and technologies intended to be used to create <a href="https://en.wikipedia.org/wiki/Rich_Internet_application" title="Rich Internet application">Rich Internet Applications (RIAs)</a>.</li>
+<li><a href="Swing_(Java).html" title="Swing (Java)">Swing</a>, the underlying user interface library employed by JavaFX Script.</li>
+<li><a href="https://en.wikipedia.org/wiki/Curl_(programming_language)" title="Curl (programming language)">Curl (programming language)</a>, also with a declarative mode with optional typing</li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=JavaFX_Script&amp;action=edit&amp;section=5" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.sun.com/aboutsun/pr/2008-12/sunflash.20081204.1.xml">JavaFX 1.0 released</a></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://javafx.com/roadmap/">JavaFX 2010-2011 Roadmap</a></span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://steveonjava.com/accouncing-visage/">http://steveonjava.com/accouncing-visage/</a></span></li>
+</ol>
+<h2><span class="mw-headline" id="Bibliography">Bibliography</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=JavaFX_Script&amp;action=edit&amp;section=6" title="Edit section: Bibliography">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="refbegin" style="">
+<ul>
+<li><cite id="CITEREFMorris2009" class="citation">Morris, Simon (November 23, 2009), <i>JavaFX in Action</i>, <a href="https://en.wikipedia.org/wiki/Manning" title="Manning">Manning</a>, p.&#160;375, <a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="https://en.wikipedia.org/wiki/Special:BookSources/1-933988-99-1" title="Special:BookSources/1-933988-99-1">1-933988-99-1</a></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJavaFX+Script&amp;rft.aufirst=Simon&amp;rft.aulast=Morris&amp;rft.btitle=JavaFX+in+Action&amp;rft.date=2009-11-23&amp;rft.genre=book&amp;rft.isbn=1-933988-99-1&amp;rft.pages=375&amp;rft.pub=Manning&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite id="CITEREFTopley2009" class="citation">Topley, Kim (October 12, 2009), <a rel="nofollow" class="external text" href="http://www.informit.com/store/product.aspx?isbn=0321648978"><i>JavaFX Developer's Guide</i></a>, <a href="https://en.wikipedia.org/wiki/Addison-Wesley_Professional" class="mw-redirect" title="Addison-Wesley Professional">Addison-Wesley Professional</a>, p.&#160;640, <a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="https://en.wikipedia.org/wiki/Special:BookSources/0-321-60165-3" title="Special:BookSources/0-321-60165-3">0-321-60165-3</a></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJavaFX+Script&amp;rft.aufirst=Kim&amp;rft.aulast=Topley&amp;rft.btitle=JavaFX+Developer%27s+Guide&amp;rft.date=2009-10-12&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.informit.com%2Fstore%2Fproduct.aspx%3Fisbn%3D0321648978&amp;rft.isbn=0-321-60165-3&amp;rft.pages=640&amp;rft.pub=Addison-Wesley+Professional&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite id="CITEREFWeaverGaoChinIverson2009" class="citation">Weaver, James L.; Gao, Weiqi; Chin, Stephen; Iverson, Dean (June 22, 2009), <a rel="nofollow" class="external text" href="http://www.apress.com/book/view/1430218754"><i>Pro JavaFX Platform: Script, Desktop and Mobile RIA with Java Technology</i></a>, <a href="https://en.wikipedia.org/wiki/Apress" title="Apress">Apress</a>, p.&#160;500, <a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="https://en.wikipedia.org/wiki/Special:BookSources/1-4302-1875-4" title="Special:BookSources/1-4302-1875-4">1-4302-1875-4</a></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJavaFX+Script&amp;rft.au=Chin%2C+Stephen&amp;rft.aufirst=James+L.&amp;rft.au=Gao%2C+Weiqi&amp;rft.au=Iverson%2C+Dean&amp;rft.aulast=Weaver&amp;rft.btitle=Pro+JavaFX+Platform%3A+Script%2C+Desktop+and+Mobile+RIA+with+Java+Technology&amp;rft.date=2009-06-22&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.apress.com%2Fbook%2Fview%2F1430218754&amp;rft.isbn=1-4302-1875-4&amp;rft.pages=500&amp;rft.pub=Apress&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite id="CITEREFClarkeConnorsJ._Bruno2009" class="citation">Clarke, Jim; Connors, Jim; J. Bruno, Eric (June 15, 2009), <a rel="nofollow" class="external text" href="http://www.informit.com/store/product.aspx?isbn=0137013531"><i>JavaFX: Developing Rich Internet Applications</i></a>, <a href="https://en.wikipedia.org/wiki/Prentice_Hall" title="Prentice Hall">Prentice Hall</a>, p.&#160;384, <a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="https://en.wikipedia.org/wiki/Special:BookSources/0-13-701287-X" title="Special:BookSources/0-13-701287-X">0-13-701287-X</a></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJavaFX+Script&amp;rft.au=Connors%2C+Jim&amp;rft.aufirst=Jim&amp;rft.au=J.+Bruno%2C+Eric&amp;rft.aulast=Clarke&amp;rft.btitle=JavaFX%3A+Developing+Rich+Internet+Applications&amp;rft.date=2009-06-15&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.informit.com%2Fstore%2Fproduct.aspx%3Fisbn%3D0137013531&amp;rft.isbn=0-13-701287-X&amp;rft.pages=384&amp;rft.pub=Prentice+Hall&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite id="CITEREFAndersonAnderson2009" class="citation">Anderson, Gail; Anderson, Paul (June 15, 2009), <a rel="nofollow" class="external text" href="http://www.informit.com/store/product.aspx?isbn=0137042795"><i>Essential JavaFX</i></a>, <a href="https://en.wikipedia.org/wiki/Prentice_Hall" title="Prentice Hall">Prentice Hall</a>, p.&#160;360, <a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="https://en.wikipedia.org/wiki/Special:BookSources/0-13-704279-5" title="Special:BookSources/0-13-704279-5">0-13-704279-5</a></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJavaFX+Script&amp;rft.au=Anderson%2C+Paul&amp;rft.aufirst=Gail&amp;rft.aulast=Anderson&amp;rft.btitle=Essential+JavaFX&amp;rft.date=2009-06-15&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.informit.com%2Fstore%2Fproduct.aspx%3Fisbn%3D0137042795&amp;rft.isbn=0-13-704279-5&amp;rft.pages=360&amp;rft.pub=Prentice+Hall&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite id="CITEREFWeaver2009" class="citation">Weaver, James L. (May 4, 2009), <a rel="nofollow" class="external text" href="http://www.apress.com/book/view/1590599454"><i>JavaFX Script: Dynamic Java Scripting for Rich Internet/Client-side Applications</i></a>, <a href="https://en.wikipedia.org/wiki/Apress" title="Apress">Apress</a>, p.&#160;200, <a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="https://en.wikipedia.org/wiki/Special:BookSources/1-59059-945-4" title="Special:BookSources/1-59059-945-4">1-59059-945-4</a></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJavaFX+Script&amp;rft.aufirst=James+L.&amp;rft.aulast=Weaver&amp;rft.btitle=JavaFX+Script%3A+Dynamic+Java+Scripting+for+Rich+Internet%2FClient-side+Applications&amp;rft.date=2009-05-04&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.apress.com%2Fbook%2Fview%2F1590599454&amp;rft.isbn=1-59059-945-4&amp;rft.pages=200&amp;rft.pub=Apress&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+</ul>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=JavaFX_Script&amp;action=edit&amp;section=7" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://javafx.com/">JavaFX Main Site</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.sun.com/software/javafx/index.jsp">Sun's JavaFX overview</a></li>
+<li><a rel="nofollow" class="external text" href="http://blogs.oracle.com/chrisoliver/category/F3">Chris Oliver's blog, F3 category</a></li>
+<li><a rel="nofollow" class="external text" href="http://learnjavafx.typepad.com/">James Weaver's Learn JavaFX Weblog</a></li>
+<li><a rel="nofollow" class="external text" href="http://java.sun.com/developer/technicalArticles/scripting/javafxpart1/">Sun.com - Learning JavaFX Script: An Introduction for Java Programmers</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.nytimes.com/2007/05/08/technology/08sun.html">Sun Plans Version of Java for Web-Linked Cellphones</a> (<a href="https://en.wikipedia.org/wiki/New_York_Times" class="mw-redirect" title="New York Times">New York Times</a> article)</li>
+<li><a rel="nofollow" class="external text" href="http://archive.is/20130119171232/http://news.com.com/Sun+tries+again+with+consumer-flavored+Java/2100-1007_3-6181922.html">Sun tries again with consumer-flavored Java</a> at <a href="https://en.wikipedia.org/wiki/Archive.is" title="Archive.is">Archive.is</a> (archived 2013-01-19) (<a href="https://en.wikipedia.org/wiki/CNET" title="CNET">CNET</a> article)</li>
+<li><a rel="nofollow" class="external text" href="http://jfx.wikia.com/wiki/Main_Page">Planet JFX Community Wiki</a> (how-to's, code samples, tutorials)</li>
+</ul>
+<div role="navigation" class="navbox" aria-labelledby="Sun_Microsystems_.28acquired_by_Oracle_Corp.2C_2010.29" style="padding:3px">
+<table class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="https://en.wikipedia.org/wiki/Template:Sun_Microsystems" title="Template:Sun Microsystems"><abbr title="View this template" style=";;background:none transparent;border:none;">v</abbr></a></li>
+<li class="nv-talk"><a href="https://en.wikipedia.org/wiki/Template_talk:Sun_Microsystems" title="Template talk:Sun Microsystems"><abbr title="Discuss this template" style=";;background:none transparent;border:none;">t</abbr></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Sun_Microsystems&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;">e</abbr></a></li>
+</ul>
+</div>
+<div id="Sun_Microsystems_.28acquired_by_Oracle_Corp.2C_2010.29" style="font-size:114%"><a href="https://en.wikipedia.org/wiki/Sun_Microsystems" title="Sun Microsystems">Sun Microsystems</a> <small>(<a href="https://en.wikipedia.org/wiki/Sun_acquisition_by_Oracle" title="Sun acquisition by Oracle">acquired</a> by <a href="https://en.wikipedia.org/wiki/Oracle_Corporation" title="Oracle Corporation">Oracle Corp</a>, 2010)</small></div>
+</th>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">People</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Bill_Joy" title="Bill Joy">Bill Joy</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Andy_Bechtolsheim" title="Andy Bechtolsheim">Andy Bechtolsheim</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Scott_McNealy" title="Scott McNealy">Scott McNealy</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Vinod_Khosla" title="Vinod Khosla">Vinod Khosla</a></li>
+<li><a href="https://en.wikipedia.org/wiki/List_of_Sun_Microsystems_employees" title="List of Sun Microsystems employees">List of notable employees</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Hardware</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Sun-1" title="Sun-1">Sun-1</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sun-2" title="Sun-2">Sun-2</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sun-3" title="Sun-3">Sun-3</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sun386i" title="Sun386i">Sun386i</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sun-4" title="Sun-4">Sun-4</a></li>
+<li><a href="https://en.wikipedia.org/wiki/SPARCstation" title="SPARCstation">SPARCstation</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sun_Netra" title="Sun Netra">Netra</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sun_Ultra_series" title="Sun Ultra series">Ultra</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sun_Enterprise" title="Sun Enterprise">Enterprise</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sun_Blade" title="Sun Blade">Sun Blade</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sun_Fire" title="Sun Fire">Sun Fire</a></li>
+<li><a href="https://en.wikipedia.org/wiki/SPARC_Enterprise" title="SPARC Enterprise">SPARC Enterprise</a></li>
+<li><a href="https://en.wikipedia.org/wiki/SPARC" title="SPARC">SPARC</a></li>
+<li><a href="https://en.wikipedia.org/wiki/JavaStation" title="JavaStation">JavaStation</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sun_Ray" title="Sun Ray">Sun Ray</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sun_Modular_Datacenter" title="Sun Modular Datacenter">Sun Modular Datacenter</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Category:Sun_Microsystems_hardware" title="Category:Sun Microsystems hardware"><i>more...</i></a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Software</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/SunOS" title="SunOS">SunOS</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Solaris_(operating_system)" title="Solaris (operating system)">Solaris</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Network_Information_Service" title="Network Information Service">NIS</a> (<a href="https://en.wikipedia.org/wiki/NIS+" title="NIS+">+</a>)</li>
+<li><a href="https://en.wikipedia.org/wiki/Network_File_System" title="Network File System">NFS</a></li>
+<li><a href="https://en.wikipedia.org/wiki/ZFS" title="ZFS">ZFS</a></li>
+<li><a href="https://en.wikipedia.org/wiki/SunView" title="SunView">SunView</a></li>
+<li><a href="https://en.wikipedia.org/wiki/NeWS" title="NeWS">NeWS</a></li>
+<li><a href="https://en.wikipedia.org/wiki/OpenWindows" title="OpenWindows">OpenWindows</a></li>
+<li><a href="Java_Desktop_System.html" title="Java Desktop System">Java Desktop System</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Oracle_Solaris_Studio" class="mw-redirect" title="Oracle Solaris Studio">Sun Studio</a></li>
+<li><a href="Java_(software_platform).html" title="Java (software platform)">Java</a></li>
+<li><a href="https://en.wikipedia.org/wiki/StarOffice" title="StarOffice">StarOffice</a></li>
+<li><a href="https://en.wikipedia.org/wiki/IPlanet" title="IPlanet">iPlanet</a>/<a href="https://en.wikipedia.org/wiki/Sun_ONE" title="Sun ONE">Sun ONE</a>/<a href="https://en.wikipedia.org/wiki/Sun_Java_System" title="Sun Java System">Java Enterprise System</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Oracle_Secure_Global_Desktop" title="Oracle Secure Global Desktop">Sun Secure Global Desktop</a></li>
+<li><a href="https://en.wikipedia.org/wiki/MySQL" title="MySQL">MySQL</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sun_xVM" title="Sun xVM">Sun xVM</a></li>
+<li><a href="GlassFish.html" title="GlassFish">GlassFish</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Category:Sun_Microsystems_software" title="Category:Sun Microsystems software"><i>more...</i></a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Storage</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Storage_Technology_Corporation" title="Storage Technology Corporation">StorageTek</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sun_Open_Storage" title="Sun Open Storage">Sun Open Storage</a></li>
+<li><a href="https://en.wikipedia.org/wiki/QFS" title="QFS">QFS</a></li>
+<li><a href="https://en.wikipedia.org/wiki/ZFS" title="ZFS">ZFS</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">High-performance computing</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Sun_Cloud" title="Sun Cloud">Sun Cloud</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sun_Constellation_System" title="Sun Constellation System">Sun Constellation System</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sun_Visualization_System" title="Sun Visualization System">Sun Visualization System</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Oracle_Grid_Engine" title="Oracle Grid Engine">Sun Grid Engine</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Lustre_(file_system)" title="Lustre (file system)">Lustre</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Research</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Sun_Microsystems_Laboratories" title="Sun Microsystems Laboratories">Sun Labs</a></li>
+<li><a href="PicoJava.html" title="PicoJava">picoJava</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Fortress_(programming_language)" title="Fortress (programming language)">Fortress</a></li>
+<li><a href="Project_Looking_Glass.html" title="Project Looking Glass">Project Looking Glass</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Education</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Oracle_Certification_Program" title="Oracle Certification Program">SCPs</a></li>
+<li><a href="BlueJ.html" title="BlueJ">BlueJ</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Community</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Common_Development_and_Distribution_License" title="Common Development and Distribution License">Common Development and Distribution License</a></li>
+<li><a href="Java_Community_Process.html" title="Java Community Process">Java Community Process</a></li>
+<li><a href="NetBeans.html" title="NetBeans">NetBeans</a></li>
+<li><a href="OpenOffice.html" title="OpenOffice.org">OpenOffice.org</a></li>
+<li><a href="https://en.wikipedia.org/wiki/OpenSolaris" title="OpenSolaris">OpenSolaris</a></li>
+<li><a href="https://en.wikipedia.org/wiki/OpenSPARC" title="OpenSPARC">OpenSPARC</a></li>
+<li><a href="OpenJDK.html" title="OpenJDK">OpenJDK</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Open_Source_University_Meetup" title="Open Source University Meetup">OSUM</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1271
+Cached time: 20170105120908
+Cache expiry: 2592000
+Dynamic content: false
+CPU time usage: 0.188 seconds
+Real time usage: 0.524 seconds
+Preprocessor visited node count: 1007/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 41279/2097152 bytes
+Template argument size: 979/2097152 bytes
+Highest expansion depth: 25/40
+Expensive parser function count: 3/500
+Lua time usage: 0.082/10.000 seconds
+Lua memory usage: 3.06 MB/50 MB
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  467.225      1 - -total
+ 13.78%   64.391      6 - Template:Citation
+ 13.47%   62.919      2 - Template:Infobox
+  9.82%   45.861      1 - Template:Infobox_programming_language
+  8.26%   38.615      1 - Template:More_footnotes
+  5.36%   25.062      1 - Template:Infobox_software/simple
+  4.98%   23.252      1 - Template:Ambox
+  2.72%   12.720      1 - Template:Portal
+  2.43%   11.338      1 - Template:Sun_Microsystems
+  2.04%    9.515      1 - Template:Navbox
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:11117691-0!*!0!!en!4!* and timestamp 20170105120907 and revision id 749305119
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=JavaFX_Script&amp;oldid=749305119">https://en.wikipedia.org/w/index.php?title=JavaFX_Script&amp;oldid=749305119</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Help_Category.html" title="Help:Category">Categories</a>: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Scripting_languages" title="Category:Scripting languages">Scripting languages</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Declarative_programming_languages" title="Category:Declarative programming languages">Declarative programming languages</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Java_programming_language_family" title="Category:Java programming language family">Java programming language family</a></li><li><a href="Category_JVM_programming_languages.html" title="Category:JVM programming languages">JVM programming languages</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Articles_lacking_in-text_citations_from_April_2011" title="Category:Articles lacking in-text citations from April 2011">Articles lacking in-text citations from April 2011</a></li><li><a href="https://en.wikipedia.org/wiki/Category:All_articles_lacking_in-text_citations" title="Category:All articles lacking in-text citations">All articles lacking in-text citations</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Pages_using_deprecated_image_syntax" title="Category:Pages using deprecated image syntax">Pages using deprecated image syntax</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Webarchive_template_archiveis_links" title="Category:Webarchive template archiveis links">Webarchive template archiveis links</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="Special_MyTalk.html" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="Special_MyContributions.html" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&amp;returnto=JavaFX+Script" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=JavaFX+Script" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="JavaFX_Script.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+															<li  id="ca-talk"><span><a href="https://en.wikipedia.org/wiki/Talk:JavaFX_Script"  title="Discussion about the content page [t]" accesskey="t" rel="discussion">Talk</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="JavaFX_Script.html" >Read</a></span></li>
+															<li id="ca-edit"><span><a href="https://en.wikipedia.org/w/index.php?title=JavaFX_Script&amp;action=edit"  title="Edit this page [e]" accesskey="e">Edit</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="https://en.wikipedia.org/w/index.php?title=JavaFX_Script&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="https://en.wikipedia.org/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="Main_Page.html"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="Portal_Contents.html" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="Portal_Featured_content.html" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="Portal_Current_events.html" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="https://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="../../shop.wikimedia.org/index.html" title="Visit the Wikipedia store">Wikipedia store</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Interaction</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-help"><a href="Help_Contents.html" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="Wikipedia_About.html" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="Wikipedia_Community_portal.html" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="Wikipedia_Contact_us.html" title="How to contact Wikipedia">Contact page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="https://en.wikipedia.org/wiki/Special:WhatLinksHere/JavaFX_Script" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://en.wikipedia.org/wiki/Special:RecentChangesLinked/JavaFX_Script" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="Wikipedia_File_Upload_Wizard.html" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="https://en.wikipedia.org/w/index.php?title=JavaFX_Script&amp;oldid=749305119" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://en.wikipedia.org/w/index.php?title=JavaFX_Script&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q609804" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="https://en.wikipedia.org/w/index.php?title=Special:CiteThisPage&amp;page=JavaFX_Script&amp;id=749305119" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Print/export</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=JavaFX+Script">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=JavaFX+Script&amp;returnto=JavaFX+Script&amp;oldid=749305119&amp;writer=rdf2latex">Download as PDF</a></li><li id="t-print"><a href="https://en.wikipedia.org/w/index.php?title=JavaFX_Script&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Languages</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/JavaFX_Script" title="JavaFX Script – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/JavaFX_Script" title="JavaFX Script – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/JavaFX_Script" title="JavaFX Script – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/JavaFX_Script" title="JavaFX Script – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/JavaFX_Script" title="JavaFX Script – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-sk"><a href="https://sk.wikipedia.org/wiki/JavaFX_Script" title="JavaFX Script – Slovak" lang="sk" hreflang="sk" class="interlanguage-link-target">Slovenčina</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q609804#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 13 November 2016, at 17:29.</li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="Wikipedia_Text_of_Creative_Commons_Attribution-ShareAlike_3.html">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="../../creativecommons.org/licenses/by-sa/3.0/index.html" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="../../wikimediafoundation.org/wiki/Terms_of_Use.html">Terms of Use</a> and <a href="../../wikimediafoundation.org/wiki/Privacy_policy.html">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="../../www.wikimediafoundation.org/index.html">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../../wikimediafoundation.org/wiki/Privacy_policy.html" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="Wikipedia_About.html" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="Wikipedia_General_disclaimer.html" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="Wikipedia_Contact_us.html">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a href="../../www.mediawiki.org/wiki/Special_MyLanguage/How_to_contribute.html">Developers</a></li>
+											<li id="footer-places-cookiestatement"><a href="../../wikimediafoundation.org/wiki/Cookie_statement.html">Cookie statement</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/w/index.php?title=JavaFX_Script&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="../../www.wikimediafoundation.org/index.html"><img src="https://en.wikipedia.org/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="../../www.mediawiki.org/index.html"><img src="https://en.wikipedia.org/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":69,"wgHostname":"mw1275"});});</script>
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/JavaFX_Script by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:22 GMT -->
+</html>

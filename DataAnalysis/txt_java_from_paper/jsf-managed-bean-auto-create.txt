@@ -1,0 +1,11 @@
+    
+        Is it possible to have a JSF managed bean be automatically created?
+
+For example I have several session scoped beans. Sometimes it becomes necessary to access these instances in code (rather than just in JSF) this is done by:
+
+PageBean pageBean = (PageBean) FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("pages");
+
+
+However if no page has already been visited which calls to '#{pages}' this resolves to null ... is there anyway to get JSF to create a bean when the scope 'begins'? So in this case ideally when a user session begins the 'pages' bean would be instantiated in the session immediately?
+
+                

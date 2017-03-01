@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Java_logging_framework by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:36 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Java logging framework - Wikipedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Java_logging_framework","wgTitle":"Java logging framework","wgCurRevisionId":757516953,"wgRevisionId":757516953,"wgArticleId":4904971,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles needing additional references from June 2008","All articles needing additional references","Articles that may contain original research from June 2008","All articles that may contain original research","Java platform","Computer logging"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Java_logging_framework","wgRelevantArticleId":4904971,"wgRequestId":"WHSOngpAAEYAAJ816FkAAABT","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgFlaggedRevsParams":{"tags":{}},"wgStableRevisionId":null,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"en","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgWikibaseItemId":"Q6165043","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.cite.styles":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@1dqfd7l",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["ext.cite.a11y","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.legacy.wikibits","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.watchlist-notice","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.gadget.featured-articles-links","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.interface","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="https://en.wikipedia.org/w/load.php?debug=false&amp;lang=en&amp;modules=ext.cite.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="../w/load2c8d.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../w/load18b6.css?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.29.0-wmf.7"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="https://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Java_logging_framework"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Java_logging_framework&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Java_logging_framework&amp;action=edit"/>
+<link rel="apple-touch-icon" href="https://en.wikipedia.org/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="../static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../w/api251f.php?action=rsd"/>
+<link rel="copyright" href="../../creativecommons.org/licenses/by-sa/3.0/index.html"/>
+<link rel="canonical" href="Java_logging_framework.html"/>
+<link rel="dns-prefetch" href="../../login.wikimedia.org/index.html"/>
+<link rel="dns-prefetch" href="../../meta.wikimedia.org/index.html" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Java_logging_framework rootpage-Java_logging_framework skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">Java logging framework</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><script>function mfTempOpenSection(id){var block=document.getElementById("mf-section-"+id);block.className+=" open-block";block.previousSibling.className+=" open-block";}</script><table class="plainlinks metadata ambox ambox-content ambox-multiple_issues compact-ambox" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Ambox_important.svg/40px-Ambox_important.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Ambox_important.svg/60px-Ambox_important.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Ambox_important.svg/80px-Ambox_important.svg.png 2x" data-file-width="40" data-file-height="40" /></div>
+</td>
+<td class="mbox-text">
+<div class="mw-collapsible" style="width:95%; margin: 0.2em 0;"><span class="mbox-text-span"><b>This article has multiple issues.</b> Please help <b><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Java_logging_framework&amp;action=edit">improve it</a></b> or discuss these issues on the <b><a href="https://en.wikipedia.org/wiki/Talk:Java_logging_framework" title="Talk:Java logging framework">talk page</a></b>. <small><i>(<a href="https://en.wikipedia.org/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove these template messages</a>)</i></small></span>
+<div class="mw-collapsible-content" style="margin-top: 0.3em;">
+<table class="plainlinks metadata ambox ambox-content ambox-Refimprove" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px"><a href="https://en.wikipedia.org/wiki/File:Question_book-new.svg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/50px-Question_book-new.svg.png" width="50" height="39" srcset="//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/75px-Question_book-new.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/100px-Question_book-new.svg.png 2x" data-file-width="512" data-file-height="399" /></a></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article <b>needs additional citations for <a href="https://en.wikipedia.org/wiki/Wikipedia:Verifiability" title="Wikipedia:Verifiability">verification</a></b>. <span class="hide-when-compact">Please help <a class="external text" href="http://en.wikipedia.org/w/index.php?title=Java_logging_framework&amp;action=edit">improve this article</a> by <a href="https://en.wikipedia.org/wiki/Help:Introduction_to_referencing_with_Wiki_Markup/1" title="Help:Introduction to referencing with Wiki Markup/1">adding citations to reliable sources</a>. Unsourced material may be challenged and removed.</span> <small><i>(June 2008)</i></small> <small class="hide-when-compact"><i>(<a href="https://en.wikipedia.org/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></span></td>
+</tr>
+</table>
+<table class="plainlinks metadata ambox ambox-content ambox-Original_research" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Ambox_important.svg/40px-Ambox_important.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Ambox_important.svg/60px-Ambox_important.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Ambox_important.svg/80px-Ambox_important.svg.png 2x" data-file-width="40" data-file-height="40" /></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article <b>possibly contains <a href="https://en.wikipedia.org/wiki/Wikipedia:No_original_research" title="Wikipedia:No original research">original research</a></b>. <span class="hide-when-compact">Please <a class="external text" href="http://en.wikipedia.org/w/index.php?title=Java_logging_framework&amp;action=edit">improve it</a> by <a href="https://en.wikipedia.org/wiki/Wikipedia:Verifiability" title="Wikipedia:Verifiability">verifying</a> the claims made and adding <a href="https://en.wikipedia.org/wiki/Wikipedia:Citing_sources#Inline_citations" title="Wikipedia:Citing sources">inline citations</a>. Statements consisting only of original research should be removed.</span> <small><i>(June 2008)</i></small> <small class="hide-when-compact"><i>(<a href="https://en.wikipedia.org/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></span></td>
+</tr>
+</table>
+</div>
+</div>
+<small class="hide-when-compact"><i>(<a href="https://en.wikipedia.org/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></td>
+</tr>
+</table>
+<p>A <b>Java logging framework</b> is a <a href="https://en.wikipedia.org/wiki/Computer_data_logging" class="mw-redirect" title="Computer data logging">computer data logging</a> package for the <a href="https://en.wikipedia.org/wiki/Java_platform" class="mw-redirect" title="Java platform">Java platform</a>.</p>
+<p>Logging refers to the recording of activity. Logging is a common issue for development teams. Several frameworks ease and standardize the process of logging for the Java platform. This article covers general purpose logging frameworks.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Functionality_overview"><span class="tocnumber">1</span> <span class="toctext">Functionality overview</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Logger"><span class="tocnumber">1.1</span> <span class="toctext">Logger</span></a>
+<ul>
+<li class="toclevel-3 tocsection-3"><a href="#Name"><span class="tocnumber">1.1.1</span> <span class="toctext">Name</span></a></li>
+<li class="toclevel-3 tocsection-4"><a href="#Severity_level"><span class="tocnumber">1.1.2</span> <span class="toctext">Severity level</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-5"><a href="#Formatters_or_renderers"><span class="tocnumber">1.2</span> <span class="toctext">Formatters or renderers</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Appenders_or_handlers"><span class="tocnumber">1.3</span> <span class="toctext">Appenders or handlers</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Feature_comparison"><span class="tocnumber">1.4</span> <span class="toctext">Feature comparison</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#Summary"><span class="tocnumber">2</span> <span class="toctext">Summary</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#See_also"><span class="tocnumber">3</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#References"><span class="tocnumber">4</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#External_links"><span class="tocnumber">5</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Functionality_overview">Functionality overview</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_logging_framework&amp;action=edit&amp;section=1" title="Edit section: Functionality overview">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Logging is broken into three major pieces: the Logger, Formatter and the Handler (Appender). The Logger is responsible for capturing the message to be logged along with certain metadata and passing it to the logging framework. After receiving the message, the framework calls the Formatter with the message. The Formatter formats it for output. The framework then hands the formatted message to the appropriate Appender for disposition. This might include a console display, writing to disk, appending to a database, or email.</p>
+<p>Simpler logging frameworks, like Java Logging Framework by the Object Guy, combine the logger and the appender. This simplifies default operation, but it is less configurable, especially if the project is moved across environments.</p>
+<h3><span class="mw-headline" id="Logger">Logger</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_logging_framework&amp;action=edit&amp;section=2" title="Edit section: Logger">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>A Logger is an object that allows the application to log without regard to where the output is sent/stored. The application logs a message by passing an object or an object and an <a href="https://en.wikipedia.org/wiki/Exception_handling" title="Exception handling">exception</a> with an optional severity level to the logger object under a given a name/identifier.</p>
+<h4><span class="mw-headline" id="Name">Name</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_logging_framework&amp;action=edit&amp;section=3" title="Edit section: Name">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>A logger has a name. The name is usually structured hierarchically, with periods (.) separating the levels. A common scheme is to use the name of the class or package that is doing the logging. Both <a href="Log4j.html" title="Log4j">log4j</a> and the Java logging <a href="https://en.wikipedia.org/wiki/API" class="mw-redirect" title="API">API</a> support defining Handlers higher up the hierarchy.</p>
+<p>For example, the logger might be named "<code>com.sun.some.UsefulClass</code>". The handler can be defined for any of the following:</p>
+<ul>
+<li><code>com</code></li>
+<li><code>com.sun</code></li>
+<li><code>com.sun.some</code></li>
+<li><code>com.sun.some.UsefulClass</code></li>
+</ul>
+<h4><span class="mw-headline" id="Severity_level">Severity level</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_logging_framework&amp;action=edit&amp;section=4" title="Edit section: Severity level">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>The message is logged at a certain level. Common levels are from <a rel="nofollow" class="external text" href="http://commons.apache.org/logging/guide.html#Message%20Priorities/Levels">Apache Commons Logging</a>:</p>
+<table class="wikitable">
+<caption><b>Common levels</b></caption>
+<tr>
+<th>Level</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><b>FATAL</b></td>
+<td>Severe errors that cause premature termination. Expect these to be immediately visible on a status console.</td>
+</tr>
+<tr>
+<td><b>ERROR</b></td>
+<td>Other runtime errors or unexpected conditions. Expect these to be immediately visible on a status console.</td>
+</tr>
+<tr>
+<td><b>WARNING</b></td>
+</tr>
+<tr>
+<td><b>INFO</b></td>
+<td>Interesting runtime events (startup/shutdown). Expect these to be immediately visible on a console, so be conservative and keep to a minimum.</td>
+</tr>
+<tr>
+<td><b>DEBUG</b></td>
+<td>detailed information on the flow through the system. Expect these to be written to logs only.</td>
+</tr>
+<tr>
+<td><b>TRACE</b></td>
+<td>more detailed information. Expect these to be written to logs only.</td>
+</tr>
+</table>
+<p>The logging framework maintains the current logging level for each logger. The logging level can be set more or less restrictive. For example, if the logging level is set to "WARNING", then all messages of that level or higher are logged, ERROR and FATAL.</p>
+<h3><span class="mw-headline" id="Formatters_or_renderers">Formatters or renderers</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_logging_framework&amp;action=edit&amp;section=5" title="Edit section: Formatters or renderers">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>A Formatter is an object that formats a given object. Mostly this consists of taking the binary object and converting it to a string representation.</p>
+<h3><span class="mw-headline" id="Appenders_or_handlers">Appenders or handlers</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_logging_framework&amp;action=edit&amp;section=6" title="Edit section: Appenders or handlers">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Appenders listen for messages at or above a specified minimum severity level. The Appender takes the message it is passed and posts it appropriately. Message dispositions include:</p>
+<ul>
+<li>display on the console</li>
+<li>write to a file or syslog</li>
+<li>append to a database table</li>
+<li>distribute via Java Messaging Services</li>
+<li>send via email</li>
+<li>write to a socket</li>
+<li>discard to the "bit-bucket" (/dev/null)</li>
+</ul>
+<h3><span class="mw-headline" id="Feature_comparison">Feature comparison</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_logging_framework&amp;action=edit&amp;section=7" title="Edit section: Feature comparison">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<table class="wikitable">
+<caption><b>Features</b></caption>
+<tr>
+<th>Framework</th>
+<th>Supported log levels</th>
+<th>Standard appenders</th>
+<th>Popularity</th>
+<th>Cost / licence</th>
+</tr>
+<tr>
+<th><a href="https://en.wikipedia.org/wiki/Log4J" class="mw-redirect" title="Log4J">Log4J</a></th>
+<td>FATAL ERROR WARN INFO DEBUG TRACE</td>
+<td>AsyncAppender, JDBCAppender, JMSAppender, LF5Appender, NTEventLogAppender, NullAppender, SMTPAppender, SocketAppender, SocketHubAppender, SyslogAppender, TelnetAppender, WriterAppender</td>
+<td>Widely used in many projects and platforms</td>
+<td>Apache License, Version 2.0</td>
+</tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="http://java.sun.com/javase/6/docs/technotes/guides/logging/">Java Logging API</a></th>
+<td>SEVERE WARNING INFO CONFIG FINE FINER FINEST</td>
+<td>Sun's default Java Virtual Machine (JVM) has the following: ConsoleHandler, FileHandler, SocketHandler, MemoryHandler</td>
+<td></td>
+<td>Comes with the JRE</td>
+</tr>
+<tr>
+<th><a href="https://en.wikipedia.org/wiki/Apache_Commons_Logging" title="Apache Commons Logging">Logging</a></th>
+<td>FATAL ERROR WARN INFO DEBUG TRACE</td>
+<td>Depends on the underlying framework</td>
+<td>Widely used, in conjunction with log4j</td>
+<td>Apache License, Version 2.0</td>
+</tr>
+<tr>
+<th><a href="SLF4J.html" title="SLF4J">SLF4J</a></th>
+<td>ERROR WARN INFO DEBUG TRACE</td>
+<td>Depends on the underlying framework, which is pluggable</td>
+<td></td>
+<td><a href="https://en.wikipedia.org/wiki/MIT_License" title="MIT License">MIT License</a></td>
+</tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="http://www.tinylog.org/">tinylog</a></th>
+<td>ERROR WARNING INFO DEBUG TRACE</td>
+<td>ConsoleWriter, FileWriter, LogcatWriter, JdbcWriter, RollingFileWriter, SharedFileWriter and <i>null</i> (discards all log entries) <sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[1]</a></sup></td>
+<td></td>
+<td>Apache License, Version 2.0</td>
+</tr>
+<tr>
+<th><a rel="nofollow" class="external text" href="http://logback.qos.ch/">Logback</a></th>
+<td>ERROR WARN INFO DEBUG TRACE</td>
+<td>Too many to list: see <a rel="nofollow" class="external text" href="http://logback.qos.ch/apidocs/ch/qos/logback/core/Appender.html">Appender JavaDoc</a></td>
+<td>Used in many projects like <a href="https://en.wikipedia.org/wiki/Akka_(toolkit)" title="Akka (toolkit)">Akka</a>, <a href="Apache_Camel.html" title="Apache Camel">Apache Camel</a>, <a href="Apache_Cocoon.html" title="Apache Cocoon">Apache Cocoon</a>, <a href="https://en.wikipedia.org/w/index.php?title=Artifactory&amp;action=edit&amp;redlink=1" class="new" title="Artifactory (page does not exist)">Artifactory</a>, <a href="https://en.wikipedia.org/wiki/Gradle" title="Gradle">Gradle</a>, <a href="Lift_(web_framework).html" title="Lift (web framework)">Lift Framework</a>, <a href="https://en.wikipedia.org/wiki/Play_Framework" title="Play Framework">Play Framework</a>, <a href="https://en.wikipedia.org/wiki/Scalatra" title="Scalatra">Scalatra</a>, <a href="https://en.wikipedia.org/wiki/SonarQube" title="SonarQube">SonarQube</a>, etc...</td>
+<td><a href="https://en.wikipedia.org/wiki/LGPL" class="mw-redirect" title="LGPL">LGPL</a>, Version 2.1</td>
+</tr>
+</table>
+<h2><span class="mw-headline" id="Summary">Summary</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_logging_framework&amp;action=edit&amp;section=8" title="Edit section: Summary">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Apache Commons Logging isn't really a logging framework, but a wrapper for one. As such, it requires a logging framework underneath it. It is particularly useful when developing reusable libraries which need to write to whichever underlying logging system is being used by the application. It also provides flexibility in heterogeneous environments where the logging framework is likely to change, although in most cases, once a logging framework has been chosen, there is little need to change it over the life of the project.</p>
+<p>The Java Logging API is also not a logging framework, but a standard API for accessing a logging framework. Compatible frameworks can be loaded into JVM and accessed via the API. There is also a logging implementation supplied with the Sun JVM which is the default logging framework accessed by the API. Many developers confuse this implementation with the Java Logging API.</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_logging_framework&amp;action=edit&amp;section=9" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="SLF4J.html" title="SLF4J">SLF4J</a></li>
+<li><a href="Log4j.html" title="Log4j">log4j</a></li>
+<li><a href="https://en.wikipedia.org/w/index.php?title=Logback&amp;action=edit&amp;redlink=1" class="new" title="Logback (page does not exist)">logback</a></li>
+<li><a href="Javolution.html" title="Javolution">Javolution</a> LogContext based on <a rel="nofollow" class="external text" href="http://javolution.org/apidocs/javolution/context/package-summary.html#package_description">context programming</a> (actual logging framework selectable at run-time).</li>
+<li><a href="https://en.wikipedia.org/wiki/Runtime_intelligence" class="mw-redirect" title="Runtime intelligence">Runtime intelligence</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_logging_framework&amp;action=edit&amp;section=10" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.tinylog.org/user-manual">"User manual of tinylog"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+logging+framework&amp;rft.btitle=User+manual+of+tinylog&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.tinylog.org%2Fuser-manual&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_logging_framework&amp;action=edit&amp;section=11" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://java.sun.com/javase/6/docs/technotes/guides/logging/">Java 6.0 Logging API</a></li>
+<li><a rel="nofollow" class="external text" href="http://jakarta.apache.org/commons/logging/">Commons Logging</a></li>
+<li><a rel="nofollow" class="external text" href="http://protomatter.sourceforge.net/">Protomatter</a></li>
+<li><a rel="nofollow" class="external text" href="http://java-source.net/open-source/logging">Open Source Logging Tools in Java</a></li>
+<li><a rel="nofollow" class="external text" href="http://apache.org/licenses/LICENSE-2.0">The Apache 2.0 license.</a></li>
+<li><a rel="nofollow" class="external text" href="http://logback.qos.ch/">Logback - A successor to the popular log4j project</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.tinylog.org/">tinylog - Minimalist logging utility with a static logger</a></li>
+<li><a rel="nofollow" class="external text" href="http://loggifier.unkrig.de/">Loggifier</a> A tool that inserts logging code into .class, .jar and .ear files</li>
+<li><a rel="nofollow" class="external text" href="https://github.com/rdiachenko/jlv">JLV - Java logging viewer which is currently available as a plugin for Eclipse IDE</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.javavillage.in/perf4j.php">Perf4j</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.javavillage.in/slf4j.php">SLF4J</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.javavillage.in/log4j.php">Log4j</a></li>
+</ul>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1275
+Cached time: 20161231032029
+Cache expiry: 2592000
+Dynamic content: false
+CPU time usage: 0.092 seconds
+Real time usage: 0.125 seconds
+Preprocessor visited node count: 329/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 21912/2097152 bytes
+Template argument size: 5968/2097152 bytes
+Highest expansion depth: 10/40
+Expensive parser function count: 2/500
+Lua time usage: 0.042/10.000 seconds
+Lua memory usage: 1.67 MB/50 MB
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  103.874      1 - -total
+ 76.90%   79.875      3 - Template:Ambox
+ 65.33%   67.860      1 - Template:Multiple_issues
+ 33.30%   34.587      1 - Template:Reflist
+ 30.19%   31.358      1 - Template:Cite_web
+ 18.79%   19.515      1 - Template:Refimprove
+  5.67%    5.890      1 - Template:Original_research
+  1.43%    1.486      1 - Template:Main_other
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:4904971-0!*!0!!en!4!* and timestamp 20161231032029 and revision id 757516953
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Java_logging_framework&amp;oldid=757516953">https://en.wikipedia.org/w/index.php?title=Java_logging_framework&amp;oldid=757516953</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Help_Category.html" title="Help:Category">Categories</a>: <ul><li><a href="Category_Java_platform.html" title="Category:Java platform">Java platform</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Computer_logging" title="Category:Computer logging">Computer logging</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Articles_needing_additional_references_from_June_2008" title="Category:Articles needing additional references from June 2008">Articles needing additional references from June 2008</a></li><li><a href="https://en.wikipedia.org/wiki/Category:All_articles_needing_additional_references" title="Category:All articles needing additional references">All articles needing additional references</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Articles_that_may_contain_original_research_from_June_2008" title="Category:Articles that may contain original research from June 2008">Articles that may contain original research from June 2008</a></li><li><a href="https://en.wikipedia.org/wiki/Category:All_articles_that_may_contain_original_research" title="Category:All articles that may contain original research">All articles that may contain original research</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="Special_MyTalk.html" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="Special_MyContributions.html" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&amp;returnto=Java+logging+framework" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Java+logging+framework" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="Java_logging_framework.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+															<li  id="ca-talk"><span><a href="https://en.wikipedia.org/wiki/Talk:Java_logging_framework"  title="Discussion about the content page [t]" accesskey="t" rel="discussion">Talk</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="Java_logging_framework.html" >Read</a></span></li>
+															<li id="ca-edit"><span><a href="https://en.wikipedia.org/w/index.php?title=Java_logging_framework&amp;action=edit"  title="Edit this page [e]" accesskey="e">Edit</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="https://en.wikipedia.org/w/index.php?title=Java_logging_framework&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="https://en.wikipedia.org/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="Main_Page.html"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="Portal_Contents.html" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="Portal_Featured_content.html" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="Portal_Current_events.html" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="https://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="../../shop.wikimedia.org/index.html" title="Visit the Wikipedia store">Wikipedia store</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Interaction</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-help"><a href="Help_Contents.html" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="Wikipedia_About.html" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="Wikipedia_Community_portal.html" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="Wikipedia_Contact_us.html" title="How to contact Wikipedia">Contact page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="https://en.wikipedia.org/wiki/Special:WhatLinksHere/Java_logging_framework" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://en.wikipedia.org/wiki/Special:RecentChangesLinked/Java_logging_framework" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="Wikipedia_File_Upload_Wizard.html" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="https://en.wikipedia.org/w/index.php?title=Java_logging_framework&amp;oldid=757516953" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://en.wikipedia.org/w/index.php?title=Java_logging_framework&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q6165043" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="https://en.wikipedia.org/w/index.php?title=Special:CiteThisPage&amp;page=Java_logging_framework&amp;id=757516953" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Print/export</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Java+logging+framework">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Java+logging+framework&amp;returnto=Java+logging+framework&amp;oldid=757516953&amp;writer=rdf2latex">Download as PDF</a></li><li id="t-print"><a href="https://en.wikipedia.org/w/index.php?title=Java_logging_framework&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Languages</h3>
+
+			<div class="body">
+									<ul>
+						<li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-add wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q6165043#sitelinks-wikipedia" title="Add interlanguage links" class="wbc-editpage">Add links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 31 December 2016, at 03:20.</li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="Wikipedia_Text_of_Creative_Commons_Attribution-ShareAlike_3.html">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="../../creativecommons.org/licenses/by-sa/3.0/index.html" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="../../wikimediafoundation.org/wiki/Terms_of_Use.html">Terms of Use</a> and <a href="../../wikimediafoundation.org/wiki/Privacy_policy.html">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="../../www.wikimediafoundation.org/index.html">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../../wikimediafoundation.org/wiki/Privacy_policy.html" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="Wikipedia_About.html" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="Wikipedia_General_disclaimer.html" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="Wikipedia_Contact_us.html">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a href="../../www.mediawiki.org/wiki/Special_MyLanguage/How_to_contribute.html">Developers</a></li>
+											<li id="footer-places-cookiestatement"><a href="../../wikimediafoundation.org/wiki/Cookie_statement.html">Cookie statement</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/w/index.php?title=Java_logging_framework&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="../../www.wikimediafoundation.org/index.html"><img src="https://en.wikipedia.org/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="../../www.mediawiki.org/index.html"><img src="https://en.wikipedia.org/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":53,"wgHostname":"mw1275"});});</script>
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Java_logging_framework by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:36 GMT -->
+</html>

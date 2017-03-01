@@ -1,0 +1,19 @@
+    
+        I am starting to use MySQL with JDBC.
+
+Class.forName("com.mysql.jdbc.Driver");
+conn = DriverManager.getConnection("jdbc:mysql:///x", "x", "x");
+stmt = conn.createStatement();
+stmt.execute( "CREATE TABLE amigos" +
+            "("+
+            "id          int AUTO_INCREMENT          not null,"+
+            "nombre      char(20)                    not null,"+
+            "primary key(id)" +
+            ")");
+
+
+I have 3-4 tables to create and this doesn't look good.
+
+Is there a way to run a .sql script from MySQL JDBC?
+
+                

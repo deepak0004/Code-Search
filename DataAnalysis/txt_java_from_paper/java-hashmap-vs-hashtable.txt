@@ -1,0 +1,4 @@
+    
+        What is the difference between a hashmap and a hashtable in Java, and which is more efficient for non-threaded applications?
+
+                

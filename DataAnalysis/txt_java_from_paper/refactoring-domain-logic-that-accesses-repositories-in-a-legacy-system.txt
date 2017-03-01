@@ -1,0 +1,32 @@
+    
+        I am working with a legacy system that has an anemic domain model.
+
+The domain has the following entity classses: Car, CarType, CarComponent, CarComponentType.
+
+For each of these, there is a separate repository. There is also a number of services that access these repositories and contain basically all logic.
+
+I need to implement a method that determines if a CarComponentType can be discontinued by the vendor. The logic is as follows: a component can be discontinued only if there are no existing cars with that component today.
+
+Initially, I implemented this in a service class.
+
+public boolean canBeDiscontinued(CarComponentType carComponentType) {
+    List&lt;Car&gt; cars = carRepository.getCarsWithComponent(carComponentType);
+    return cars.isEmpty();
+}
+
+
+This works - but this logic is used from several other places in the code. It might grow, and it looks like something that could fit inside the CarComponentType class instead:
+
+public boolean canBeDiscontinued() {
+    List&lt;Car&gt; cars = carRepository.getCarsWithComponent(this);
+    return cars.isEmpty();   
+}
+
+
+However, I can't put it there, since it needs to access the repository (and as I understand it is a very serious antipattern for entities to be aware of the data access layer). When loading a component type I can't load all cars of that type since that could be thousands of objects. We are not using any ORM, so making a lazy loaded collection for not only be bulky but also very error-prone.
+
+Is it more appropriate to actually have this method in a service class as I first did? Is it not important? Is there another alternative? Should I start refactoring from another starting point?
+
+There is a similar question <a href="http://stackoverflow.com/questions/596285/in-domain-driven-design-would-it-be-a-violation-of-ddd-to-put-calls-to-other-obj">here. But my question relates to Java, so I don't think that solution is applicable in my case. Also, sorry in advance for using cars and components as my domain model. :)
+
+                

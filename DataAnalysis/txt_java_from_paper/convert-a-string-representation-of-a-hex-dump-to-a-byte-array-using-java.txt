@@ -1,0 +1,12 @@
+    
+        I am looking for a way to convert a long string (from a dump), that represents hex values into a byte array.
+
+I couldn't have phrased it better than the person that posted the same question here:
+
+<a href="http://www.experts-exchange.com/Programming/Programming_Languages/Java/Q_21062554.html" rel="nofollow">http://www.experts-exchange.com/Programming/Programming_Languages/Java/Q_21062554.html
+
+But to keep it original, I'll phrase it my own way: suppose I have a string "00A0BF" that I would like interpreted as the byte[] {0x00,0xA0,0xBf} what should I do?
+
+I am a Java novice and ended up using BigInteger and watching out for leading hex zeros. But I think it is ugly and I am sure I am missing something simple... 
+
+                

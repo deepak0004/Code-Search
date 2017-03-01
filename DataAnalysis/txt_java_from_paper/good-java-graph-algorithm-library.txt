@@ -1,0 +1,6 @@
+    
+        Has anyone had good experiences with any Java libraries for Graph algorithms. I've tried <a href="http://www.jgraph.com" rel="nofollow">JGraph and found it ok, and there are a lot of different ones in google. Are there any that people are actually using successfully in production code or would recommend?
+
+To clarify, I'm not looking for a library that produces graphs/charts, I'm looking for one that helps with Graph algorithms, eg minimum spanning tree, Kruskal's algorithm Nodes, Edges, etc. Ideally one with some good algorithms/data structures in a nice Java OO API.
+
+                

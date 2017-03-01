@@ -1,0 +1,10 @@
+    
+        I tried searching in Google, but I could not find any good examples where a username and password are checked with a database for authentication purposes.
+
+In further simple words, how can I create a simple login form using Spring and Hibernate where the credentials are checked with the database.
+
+Update
+
+Cam anyone come up with a simple example where I can see how the flow goes and how the input data is passed to hibernate?
+
+                

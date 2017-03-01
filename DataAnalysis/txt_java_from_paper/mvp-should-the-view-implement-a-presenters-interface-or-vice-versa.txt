@@ -1,0 +1,48 @@
+    
+        I am doing my first steps with GWT.
+I have a question after reading:
+
+
+<a href="http://code.google.com/webtoolkit/articles/mvp-architecture.html" rel="nofollow">Large scale application development and MVP
+<a href="http://code.google.com/webtoolkit/articles/mvp-architecture-2.html" rel="nofollow">Large scale application development and MVP - Part II
+
+
+In the first example the Presenter defines the interface for the View.
+
+public class ContactsPresenter implements Presenter {
+  ...
+  public interface Display extends HasValue&lt;List&lt;String&gt;&gt; {
+    HasClickHandlers getAddButton();
+    HasClickHandlers getDeleteButton();
+    HasClickHandlers getList();
+    void setData(List&lt;String&gt; data);
+    int getClickedRow(ClickEvent event);
+    List&lt;Integer&gt; getSelectedRows();
+    Widget asWidget();
+  }
+}
+
+
+And in the second one, the View defines the interface for the Presenter.
+
+public interface ContactsView&lt;T&gt; {
+
+  public interface Presenter&lt;T&gt; {
+    void onAddButtonClicked();
+    void onDeleteButtonClicked();
+    void onItemClicked(T clickedItem);
+    void onItemSelected(T selectedItem);
+  }
+
+  void setPresenter(Presenter&lt;T&gt; presenter);
+  void setColumnDefinitions(List&lt;ColumnDefinition&lt;T&gt;&gt; columnDefinitions);
+  void setRowData(List&lt;T&gt; rowData);
+  Widget asWidget();
+}
+
+
+What's the idea of this difference?
+
+Which should I choose?
+
+                

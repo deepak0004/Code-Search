@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Java_Transaction_API by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:34 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Java Transaction API - Wikipedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Java_Transaction_API","wgTitle":"Java Transaction API","wgCurRevisionId":730493588,"wgRevisionId":730493588,"wgArticleId":42759,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Wikipedia articles needing clarification from May 2012","Articles with example Java code","Java enterprise platform","Java specification requests","Java APIs"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Java_Transaction_API","wgRelevantArticleId":42759,"wgRequestId":"WG-f3QpAADkAAH3G9HsAAABI","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgFlaggedRevsParams":{"tags":{}},"wgStableRevisionId":null,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"en","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgWikibaseItemId":"Q156763","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.pygments":"ready","ext.cite.styles":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@1dqfd7l",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["ext.cite.a11y","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.legacy.wikibits","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.watchlist-notice","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.gadget.featured-articles-links","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.interface","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="https://en.wikipedia.org/w/load.php?debug=false&amp;lang=en&amp;modules=ext.cite.styles%7Cext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="../w/load2c8d.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../w/load18b6.css?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.29.0-wmf.7"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="https://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Java_Transaction_API"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Java_Transaction_API&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Java_Transaction_API&amp;action=edit"/>
+<link rel="apple-touch-icon" href="https://en.wikipedia.org/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="../static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../w/api251f.php?action=rsd"/>
+<link rel="copyright" href="../../creativecommons.org/licenses/by-sa/3.0/index.html"/>
+<link rel="canonical" href="Java_Transaction_API.html"/>
+<link rel="dns-prefetch" href="../../login.wikimedia.org/index.html"/>
+<link rel="dns-prefetch" href="../../meta.wikimedia.org/index.html" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Java_Transaction_API rootpage-Java_Transaction_API skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">Java Transaction API</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><script>function mfTempOpenSection(id){var block=document.getElementById("mf-section-"+id);block.className+=" open-block";block.previousSibling.className+=" open-block";}</script><p>The <b>Java Transaction API</b> (<b>JTA</b>), one of the <a href="https://en.wikipedia.org/wiki/Java_EE" class="mw-redirect" title="Java EE">Java Enterprise Edition</a> (Java EE) <a href="https://en.wikipedia.org/wiki/Application_programming_interface" title="Application programming interface">APIs</a>, enables <a href="https://en.wikipedia.org/wiki/Distributed_transaction" title="Distributed transaction">distributed transactions</a> to be done across multiple <a href="https://en.wikipedia.org/wiki/X/Open_XA" title="X/Open XA">X/Open XA</a> resources in a <a href="Java_(programming_language).html" title="Java (programming language)">Java</a> environment. JTA is a specification developed under the <a href="Java_Community_Process.html" title="Java Community Process">Java Community Process</a> as <a rel="nofollow" class="external text" href="http://jcp.org/en/jsr/detail?id=907">JSR 907</a>. JTA provides for:</p>
+<ul>
+<li>demarcation<sup class="noprint Inline-Template" style="margin-left:0.1em; white-space:nowrap;">[<i><a href="https://en.wikipedia.org/wiki/Wikipedia:Please_clarify" title="Wikipedia:Please clarify"><span title="The text near this tag may need clarification or removal of jargon. (May 2012)">clarification needed</span></a></i>]</sup> of transaction boundaries</li>
+<li><a href="https://en.wikipedia.org/wiki/X/Open_XA" title="X/Open XA">X/Open XA</a> API allowing resources to participate in transactions.</li>
+</ul>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#X.2FOpen_XA_architecture"><span class="tocnumber">1</span> <span class="toctext">X/Open XA architecture</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#JTA_implementation_of_the_X.2FOpen_XA_architecture"><span class="tocnumber">2</span> <span class="toctext">JTA implementation of the X/Open XA architecture</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Java_Transaction_API"><span class="tocnumber">3</span> <span class="toctext">Java Transaction API</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#UserTransaction_interface"><span class="tocnumber">3.1</span> <span class="toctext">UserTransaction interface</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#.40Transactional_annotation"><span class="tocnumber">3.2</span> <span class="toctext">@Transactional annotation</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#.40TransactionScoped_annotation"><span class="tocnumber">3.3</span> <span class="toctext">@TransactionScoped annotation</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#UserTransaction_support_in_EJB_server"><span class="tocnumber">4</span> <span class="toctext">UserTransaction support in EJB server</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#UserTransaction_support_in_JNDI"><span class="tocnumber">5</span> <span class="toctext">UserTransaction support in JNDI</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Open_source_JTA_implementations"><span class="tocnumber">6</span> <span class="toctext">Open source JTA implementations</span></a>
+<ul>
+<li class="toclevel-2 tocsection-10"><a href="#Narayana"><span class="tocnumber">6.1</span> <span class="toctext">Narayana</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Atomikos_TransactionsEssentials"><span class="tocnumber">6.2</span> <span class="toctext">Atomikos TransactionsEssentials</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Bitronix_JTA"><span class="tocnumber">6.3</span> <span class="toctext">Bitronix JTA</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-13"><a href="#See_also"><span class="tocnumber">7</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#References"><span class="tocnumber">8</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#External_links"><span class="tocnumber">9</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="X.2FOpen_XA_architecture">X/Open XA architecture</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Transaction_API&amp;action=edit&amp;section=1" title="Edit section: X/Open XA architecture">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>In the X/Open XA architecture, a transaction manager or <a href="https://en.wikipedia.org/wiki/Transaction_processing_monitor" class="mw-redirect" title="Transaction processing monitor">transaction processing monitor</a> (TP monitor) coordinates the transactions across multiple resources such as databases and message queues. Each resource has its own resource manager. The resource manager typically has its own API for manipulating the resource, for example the <a href="Java_Database_Connectivity.html" title="Java Database Connectivity">JDBC</a> API to work with relational databases. In addition, the resource manager allows a TP monitor to coordinate a distributed transaction between its own and other resource managers. Finally, there is the application which communicates with the TP monitor to begin, <a href="https://en.wikipedia.org/wiki/Commit_(data_management)" title="Commit (data management)">commit</a> or <a href="https://en.wikipedia.org/wiki/Rollback_(data_management)" title="Rollback (data management)">rollback</a> the transactions. The application also communicates with the individual resources using their own API to modify the resource.</p>
+<h2><span class="mw-headline" id="JTA_implementation_of_the_X.2FOpen_XA_architecture">JTA implementation of the X/Open XA architecture</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Transaction_API&amp;action=edit&amp;section=2" title="Edit section: JTA implementation of the X/Open XA architecture">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The JTA API consists of classes in two <a href="Java_package.html" title="Java package">Java packages</a>:</p>
+<ul>
+<li><code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javaee/7/api/javax/transaction/package-summary.html">javax.transaction</a></code></li>
+<li><code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javaee/7/api/javax/transaction/xa/package-summary.html">javax.transaction.xa</a></code></li>
+</ul>
+<p>The JTA is modelled on the X/Open XA architecture, but it defines two different APIs for demarcating transaction boundaries. It distinguishes between an <a href="https://en.wikipedia.org/wiki/Application_server" title="Application server">application server</a> such as an <a href="Enterprise_JavaBean.html" class="mw-redirect" title="Enterprise JavaBean">EJB</a> server and an application component. It provides an interface, <code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javaee/7/api/javax/transaction/TransactionManager.html">javax.transaction.TransactionManager</a></code>, that is used by the application server itself to begin, commit and rollback the transactions. It provides a different interface, the <code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javaee/7/api/javax/transaction/UserTransaction.html">javax.transaction.UserTransaction</a></code>, that is used by general client code such as a servlet or an EJB to manage the transactions.</p>
+<p>The JTA architecture requires that each resource manager must implement the <code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javaee/7/api/javax/transaction/xa/XAResource.html">javax.transaction.xa.XAResource</a></code> interface in order to be managed by the TP monitor. As stated previously, each resource will have its own specific API, for instance:</p>
+<ul>
+<li>relational databases use JDBC</li>
+<li>messaging services use <a href="Java_Message_Service.html" title="Java Message Service">JMS</a></li>
+<li>generalized EIS (<a href="https://en.wikipedia.org/wiki/Enterprise_Information_System" class="mw-redirect" title="Enterprise Information System">Enterprise Information System</a>) resources <sup class="noprint Inline-Template" style="margin-left:0.1em; white-space:nowrap;">[<i><a href="https://en.wikipedia.org/wiki/Wikipedia:Please_clarify" title="Wikipedia:Please clarify"><span title="The text near this tag may need clarification or removal of jargon. (May 2012)">clarification needed</span></a></i>]</sup> use <a href="Java_EE_Connector_Architecture.html" title="Java EE Connector Architecture">Java EE Connector API</a>.</li>
+</ul>
+<h2><span class="mw-headline" id="Java_Transaction_API">Java Transaction API</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Transaction_API&amp;action=edit&amp;section=3" title="Edit section: Java Transaction API">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The Java Transaction API consists of three elements: a high-level application transaction demarcation interface, a high-level transaction manager interface intended for an application server, and a standard Java mapping of the X/Open XA protocol intended for a transactional resource manager.</p>
+<h3><span class="mw-headline" id="UserTransaction_interface">UserTransaction interface</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Transaction_API&amp;action=edit&amp;section=4" title="Edit section: UserTransaction interface">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The <code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javaee/7/api/javax/transaction/UserTransaction.html">javax.transaction.UserTransaction</a></code> interface provides the application the ability to control transaction boundaries programmatically. This interface may be used by Java client programs or EJB beans.</p>
+<p>The <code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javaee/7/api/javax/transaction/UserTransaction.html#begin()">UserTransaction.begin()</a></code> method starts a global transaction and associates the transaction with the calling thread. The transaction-to-thread association is managed transparently by the Transaction Manager.</p>
+<p>Support for nested transactions is not required. The UserTransaction.begin method throws the NotSupportedException when the calling thread is already associated with a transaction and the transaction manager implementation does not support nested transactions.</p>
+<p>Transaction context propagation between application programs is provided by the underlying transaction manager implementations on the client and server machines. The transaction context format used for propagation is protocol dependent and must be negotiated between the client and server hosts. For example, if the transaction manager is an implementation of the <a href="Java_transaction_service.html" title="Java transaction service">JTS</a> specification, it will use the transaction context propagation format as specified in the CORBA OTS 1.1 specification. Transaction propagation is transparent to application programs.</p>
+<h3><span class="mw-headline" id=".40Transactional_annotation">@Transactional annotation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Transaction_API&amp;action=edit&amp;section=5" title="Edit section: @Transactional annotation">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The <code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javaee/7/api/javax/transaction/Transactional.html">javax.transaction.Transactional</a></code> annotation provides the application the ability to control transaction boundaries declaratively. This annotation can be applied to any class that the Java EE specification defines as a managed bean (which includes CDI managed beans).</p>
+<p>The code sample below illustrates the usage of @Transactional in a request scoped CDI managed bean:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="nd">@RequestScoped</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ExampleBean</span> <span class="o">{</span>
+
+    <span class="nd">@Transactional</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">foo</span><span class="o">()</span> <span class="o">{</span> <span class="c1">// A transaction is active here</span>
+        
+        <span class="c1">// Do work</span>
+
+    <span class="o">}</span> <span class="c1">// After the method returns transaction is committed or rolled back</span>
+<span class="o">}</span>
+</pre></div>
+<p>Transactional behavior can be configured via an attribute on the annotation. The available options closely mirror those of the <a href="https://en.wikipedia.org/wiki/EJB#Transactions" class="mw-redirect" title="EJB">EJB</a> specification.</p>
+<h3><span class="mw-headline" id=".40TransactionScoped_annotation">@TransactionScoped annotation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Transaction_API&amp;action=edit&amp;section=6" title="Edit section: @TransactionScoped annotation">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The <code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javaee/7/api/javax/transaction/TransactionScoped.html">javax.transaction.TransactionScoped</a></code> annotation provides the application the ability to declare that the scope during which a bean lives is tied to the time a given transaction is active.</p>
+<p>The code sample below illustrates the usage of @TransactionScoped in a request scoped CDI managed bean:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="nd">@TransactionScoped</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">TxScopedBean</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="n">number</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getNumber</span><span class="o">()</span> <span class="o">{</span><span class="k">return</span> <span class="n">number</span><span class="o">;}</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setNumber</span><span class="o">(</span><span class="kt">int</span> <span class="n">number</span><span class="o">)</span> <span class="o">{</span><span class="k">this</span><span class="o">.</span><span class="na">number</span> <span class="o">=</span> <span class="n">number</span><span class="o">;}</span>
+<span class="o">}</span>
+
+<span class="nd">@RequestScoped</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ExampleBean</span> <span class="o">{</span>
+
+    <span class="nd">@Inject</span>
+    <span class="kd">private</span> <span class="n">TxScopedBean</span> <span class="n">tXscopedBean</span><span class="o">;</span>
+
+    <span class="nd">@Transactional</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">foo</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">tXscopedBean</span><span class="o">.</span><span class="na">setNumber</span><span class="o">(</span><span class="mi">1</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Transactional</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">bar</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="n">tXscopedBean</span><span class="o">.</span><span class="na">getNumber</span><span class="o">());</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+<p>If method <i>foo()</i> is first called on a managed instance of ExampleBean and then subsequently method <i>bar()</i> is called, the number printed will be 0 and not 1. This is because each method had its own transaction and therefore its own instance of TxScopedBean. The number 1 that was set during the call to <i>foo()</i> will therefore not be seen during the call to <i>bar()</i>.</p>
+<h2><span class="mw-headline" id="UserTransaction_support_in_EJB_server">UserTransaction support in EJB server</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Transaction_API&amp;action=edit&amp;section=7" title="Edit section: UserTransaction support in EJB server">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="https://en.wikipedia.org/wiki/EJB" class="mw-redirect" title="EJB">EJB</a> servers are required to support the UserTransaction interface for use by EJB beans with the BEAN value in the <code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javaee/7/api/javax/ejb/TransactionManagement.html">javax.ejb.TransactionManagement</a></code> annotation (this is called bean-managed transactions or BMT). The UserTransaction interface is exposed to EJB components through either the EJBContext interface using the getUserTransaction method, or directly via injection using the general <code>@Resource</code> annotation. Thus, an EJB application does not interface with the Transaction Manager directly for transaction demarcation; instead, the EJB bean relies on the EJB server to provide support for all of its transaction work as defined in the Enterprise JavaBeans Specification. (The underlying interaction between the EJB Server and the TM is transparent to the application; the burden of implementing transaction management is on the EJB container and server provider.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[1]</a></sup>)</p>
+<p>The code sample below illustrates the usage of UserTransaction via bean-managed transactions in an EJB session bean:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="nd">@Stateless</span>
+<span class="nd">@TransactionManagement</span><span class="o">(</span><span class="n">BEAN</span><span class="o">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ExampleBean</span> <span class="o">{</span>
+
+    <span class="nd">@Resource</span>
+    <span class="kd">private</span> <span class="n">UserTransaction</span> <span class="n">utx</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">foo</span><span class="o">()</span> <span class="o">{</span>
+        <span class="c1">// start a transaction</span>
+        <span class="n">utx</span><span class="o">.</span><span class="na">begin</span><span class="o">();</span>
+
+        <span class="c1">// Do work</span>
+
+        <span class="c1">// Commit it</span>
+        <span class="n">utx</span><span class="o">.</span><span class="na">commit</span><span class="o">();</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+<p>Alternatively, the UserTransaction can be obtained from the SessionContext:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="nd">@Stateless</span>
+<span class="nd">@TransactionManagement</span><span class="o">(</span><span class="n">BEAN</span><span class="o">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ExampleBean</span> <span class="o">{</span>
+
+    <span class="nd">@Resource</span>
+    <span class="kd">private</span> <span class="n">SessionContext</span> <span class="n">ctx</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">foo</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">UserTransaction</span> <span class="n">utx</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="na">getUserTransaction</span><span class="o">();</span>
+
+        <span class="c1">// start a transaction</span>
+        <span class="n">utx</span><span class="o">.</span><span class="na">begin</span><span class="o">();</span>
+
+        <span class="c1">// Do work</span>
+
+        <span class="c1">// Commit it</span>
+        <span class="n">utx</span><span class="o">.</span><span class="na">commit</span><span class="o">();</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+<p>Note though that in the example above if the <code>@TransactionManagement(BEAN)</code> annotation is omitted, a JTA transaction is automatically started whenever <code>foo()</code> is called and is automatically committed or rolled back when <code>foo()</code> is exited. Making use of a UserTransaction is thus not necessary in EJB programming, but might be needed for very specialized code.</p>
+<h2><span class="mw-headline" id="UserTransaction_support_in_JNDI">UserTransaction support in JNDI</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Transaction_API&amp;action=edit&amp;section=8" title="Edit section: UserTransaction support in JNDI">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The UserTransaction should be available under <code>java:comp/UserTransaction</code> (if a JTA implementation is installed in the environment).</p>
+<h2><span class="mw-headline" id="Open_source_JTA_implementations">Open source JTA implementations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Transaction_API&amp;action=edit&amp;section=9" title="Edit section: Open source JTA implementations">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>There exist a number of active (as of September 2010) open source JTA implementations.</p>
+<h3><span class="mw-headline" id="Narayana">Narayana</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Transaction_API&amp;action=edit&amp;section=10" title="Edit section: Narayana">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="https://en.wikipedia.org/w/index.php?title=Narayana_(TM)&amp;action=edit&amp;redlink=1" class="new" title="Narayana (TM) (page does not exist)">Narayana (TM)</a>, formerly known as JBossTS and Arjuna Transaction Service, comes with a very robust implementation, which supports both the JTA and <a href="Java_transaction_service.html" title="Java transaction service">JTS</a> APIs. Narayana comes with a recovery service, which could be run as a separate process from your application processes. Narayana is the default transaction manager for Java EE <a href="https://en.wikipedia.org/wiki/WildFly" title="WildFly">WildFly</a> and <a href="https://en.wikipedia.org/wiki/JBoss_Enterprise_Application_Platform" title="JBoss Enterprise Application Platform">JBoss EAP</a> application servers. It supports for three Extended Transaction models: Nested Top Level Transactions, Nested Transactions and a compensation-based model based on "Sagas".<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">[2]</a></sup> Webservice and RESTful Transactions are supported as well.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">[3]</a></sup> Narayana could be used out-of-the box with Spring Boot.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">[4]</a></sup><sup id="cite_ref-5" class="reference"><a href="#cite_note-5">[5]</a></sup> There is need a manual integration with Spring framework, but it is easy task to do.<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">[6]</a></sup></p>
+<h3><span class="mw-headline" id="Atomikos_TransactionsEssentials">Atomikos TransactionsEssentials</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Transaction_API&amp;action=edit&amp;section=11" title="Edit section: Atomikos TransactionsEssentials">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Atomikos <a href="https://en.wikipedia.org/w/index.php?title=TransactionsEssentials&amp;action=edit&amp;redlink=1" class="new" title="TransactionsEssentials (page does not exist)">TransactionsEssentials</a>'s documentation and literature on the internet show that it is a production quality implementation, which also supports recovery and some exotic features beyond the JTA API. Atomikos provides out-of-the-box Spring integration along with some nice examples. It also provides support for pooled connections for both database and JMS resources.</p>
+<h3><span class="mw-headline" id="Bitronix_JTA">Bitronix JTA</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Transaction_API&amp;action=edit&amp;section=12" title="Edit section: Bitronix JTA">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="https://en.wikipedia.org/w/index.php?title=Bitronix&amp;action=edit&amp;redlink=1" class="new" title="Bitronix (page does not exist)">Bitronix</a> claims to support transaction recovery as well as or even better than some of the commercial products. Bitronix also provides <a href="https://en.wikipedia.org/wiki/Connection_pool" title="Connection pool">connection pooling</a> and session pooling out of the box.</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Transaction_API&amp;action=edit&amp;section=13" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div role="navigation" aria-label="Portals" class="noprint portal plainlist tright" style="margin:0.5em 0 0.5em 1em;border:solid #aaa 1px">
+<ul style="display:table;box-sizing:border-box;padding:0.1em;max-width:175px;background:#f9f9f9;font-size:85%;line-height:110%;font-style:italic;font-weight:bold">
+<li style="display:table-row"><span style="display:table-cell;padding:0.2em;vertical-align:middle;text-align:center"><a href="https://en.wikipedia.org/wiki/File:Wave.svg" class="image"><img alt="icon" src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/15px-Wave.svg.png" width="15" height="28" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/23px-Wave.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/31px-Wave.svg.png 2x" data-file-width="226" data-file-height="407" /></a></span><span style="display:table-cell;padding:0.2em 0.2em 0.2em 0.3em;vertical-align:middle"><a href="https://en.wikipedia.org/wiki/Portal:Java" title="Portal:Java">Java portal</a></span></li>
+</ul>
+</div>
+<ul>
+<li><a href="Java_transaction_service.html" title="Java transaction service">Java transaction service</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Transaction_API&amp;action=edit&amp;section=14" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://cds-esd.sun.com/ESD24/JSCDL/ejb/3.0-fr/ejb-3_0-fr-spec-ejbcore.pdf?AuthParam=1269290256_bf79870723e592b88232b28f0bc403bc&amp;TicketId=B%2Fw2nRyGS1lMTR1LO1BbkAHl&amp;GroupName=CDS&amp;FilePath=/ESD24/JSCDL/ejb/3.0-fr/ejb-3_0-fr-spec-ejbcore.pdf&amp;File=ejb-3_0-fr-spec-ejbcore.pdf">JSR 220: Enterprise JavaBeans,Version 3.0, EJB 3.0 Expert Group, Sun Microsystems, 2006</a></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://developer.jboss.org/wiki/CompensatingTransactionsWhenACIDIsTooMuch">"Compensating Transactions: When ACID is too much | JBoss Developer"</a>. <i>developer.jboss.org</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2016-01-08</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+Transaction+API&amp;rft.atitle=Compensating+Transactions%3A+When+ACID+is+too+much+%7C+JBoss+Developer&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fdeveloper.jboss.org%2Fwiki%2FCompensatingTransactionsWhenACIDIsTooMuch&amp;rft.jtitle=developer.jboss.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://jbossts.blogspot.cz/2013/07/out-of-box-support-for-restful.html">"Narayana team blog: Out of the Box Support for RESTful Transactions"</a>. <i>jbossts.blogspot.cz</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2016-01-08</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+Transaction+API&amp;rft.atitle=Narayana+team+blog%3A+Out+of+the+Box+Support+for+RESTful+Transactions&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fjbossts.blogspot.cz%2F2013%2F07%2Fout-of-box-support-for-restful.html&amp;rft.jtitle=jbossts.blogspot.cz&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://jbossts.blogspot.co.uk/2016/06/narayana-in-spring-boot.html">"Narayana in Spring Boot"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2016-07-19</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+Transaction+API&amp;rft.btitle=Narayana+in+Spring+Boot&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fjbossts.blogspot.co.uk%2F2016%2F06%2Fnarayana-in-spring-boot.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://github.com/spring-projects/spring-boot/tree/master/spring-boot-starters/spring-boot-starter-jta-narayanal">"Spring Boot starter"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2016-07-19</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+Transaction+API&amp;rft.btitle=Spring+Boot+starter&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fgithub.com%2Fspring-projects%2Fspring-boot%2Ftree%2Fmaster%2Fspring-boot-starters%2Fspring-boot-starter-jta-narayanal&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://github.com/jbosstm/quickstart/tree/master/spring">"Narayana Quickstart to integrate with Spring"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2016-03-07</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+Transaction+API&amp;rft.btitle=Narayana+Quickstart+to+integrate+with+Spring&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fgithub.com%2Fjbosstm%2Fquickstart%2Ftree%2Fmaster%2Fspring&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Transaction_API&amp;action=edit&amp;section=15" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://www.oracle.com/technetwork/java/javaee/jta/index.html">JTA specifications</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.jcp.org/en/jsr/detail?id=907">JSR 907</a></li>
+<li><a rel="nofollow" class="external text" href="http://narayana.io/">Narayana transaction manager website</a></li>
+</ul>
+<div role="navigation" class="navbox" aria-labelledby="Java_EE_7_specifications" style="padding:3px">
+<table class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="https://en.wikipedia.org/wiki/Template:Java_EE_7" title="Template:Java EE 7"><abbr title="View this template" style=";;background:none transparent;border:none;">v</abbr></a></li>
+<li class="nv-talk"><a href="https://en.wikipedia.org/wiki/Template_talk:Java_EE_7" title="Template talk:Java EE 7"><abbr title="Discuss this template" style=";;background:none transparent;border:none;">t</abbr></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Java_EE_7&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;">e</abbr></a></li>
+</ul>
+</div>
+<div id="Java_EE_7_specifications" style="font-size:114%"><a href="Java_EE_version_history.html#Java_EE_7_.28June_12.2C_2013.29" title="Java EE version history">Java EE 7</a> specifications</div>
+</th>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Web_Application" class="mw-redirect" title="Web Application">Web Application</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Java_Servlet.html" class="mw-redirect" title="Java Servlet">Servlet</a></li>
+<li><a href="JavaServer_Pages.html" title="JavaServer Pages">JavaServer Pages</a></li>
+<li><a href="Unified_Expression_Language.html" title="Unified Expression Language">Expression Language</a></li>
+<li><a href="JavaServer_Pages_Standard_Tag_Library.html" title="JavaServer Pages Standard Tag Library">JSTL</a></li>
+<li><a href="JavaServer_Faces.html" title="JavaServer Faces">JavaServer Faces</a></li>
+<li><a href="https://en.wikipedia.org/wiki/WebSocket" title="WebSocket">WebSocket</a></li>
+<li><a href="https://en.wikipedia.org/w/index.php?title=JSON_Processing&amp;action=edit&amp;redlink=1" class="new" title="JSON Processing (page does not exist)">JSON Processing</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Enterprise_Application" class="mw-redirect" title="Enterprise Application">Enterprise Application</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li>CDI</li>
+<li><a href="https://en.wikipedia.org/wiki/Dependency_injection" title="Dependency injection">Dependency Injection</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Bean_Validation" title="Bean Validation">Bean Validation</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Enterprise_JavaBeans" title="Enterprise JavaBeans">Enterprise JavaBeans</a></li>
+<li><a href="Java_Persistence_API.html" title="Java Persistence API">JPA</a></li>
+<li><a href="Java_Message_Service.html" title="Java Message Service">JMS</a></li>
+<li><strong class="selflink">JTA</strong></li>
+<li><a href="https://en.wikipedia.org/wiki/JavaMail" title="JavaMail">JavaMail</a></li>
+<li>Interceptors</li>
+<li><a href="Java_EE_Connector_Architecture.html" title="Java EE Connector Architecture">JCA</a></li>
+<li><a href="JSR_250.html" title="JSR 250">Common Annotations</a></li>
+<li><a href="https://en.wikipedia.org/w/index.php?title=Batch_Applications&amp;action=edit&amp;redlink=1" class="new" title="Batch Applications (page does not exist)">Batch Applications</a></li>
+<li><a href="https://en.wikipedia.org/w/index.php?title=Concurrency_Utilities&amp;action=edit&amp;redlink=1" class="new" title="Concurrency Utilities (page does not exist)">Concurrency Utilities</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Web_Services" class="mw-redirect" title="Web Services">Web Services</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Java_API_for_RESTful_Web_Services" title="Java API for RESTful Web Services">JAX-RS</a></li>
+<li><a href="https://en.wikipedia.org/w/index.php?title=Enterprise_Web_Services&amp;action=edit&amp;redlink=1" class="new" title="Enterprise Web Services (page does not exist)">Enterprise Web Services</a></li>
+<li><a href="Java_API_for_XML_Web_Services.html" title="Java API for XML Web Services">JAX-WS</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Web_Services_Metadata_for_Java" title="Web Services Metadata for Java">Web Services Metadata</a></li>
+<li><a href="Java_API_for_XML_Messaging.html" title="Java API for XML Messaging">Java API for XML Messaging</a></li>
+<li><a href="Java_API_for_XML_Registries.html" title="Java API for XML Registries">JAXR</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Application_performance_management" title="Application performance management">Management</a> and <a href="https://en.wikipedia.org/wiki/Application_security" title="Application security">Security</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/w/index.php?title=Java_Authentication_SPI&amp;action=edit&amp;redlink=1" class="new" title="Java Authentication SPI (page does not exist)">Java Authentication SPI</a></li>
+<li><a href="https://en.wikipedia.org/w/index.php?title=Java_Authorization_SPI&amp;action=edit&amp;redlink=1" class="new" title="Java Authorization SPI (page does not exist)">Java Authorization SPI</a></li>
+<li><a href="https://en.wikipedia.org/wiki/J2EE_Management" title="J2EE Management">J2EE Management</a></li>
+<li>Debugging for Other Languages</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Related Specs in Java SE</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Java_Architecture_for_XML_Binding.html" title="Java Architecture for XML Binding">JAXB</a></li>
+<li><a href="Java_API_for_XML_Processing.html" title="Java API for XML Processing">JAXP</a></li>
+<li><a href="Java_Database_Connectivity.html" title="Java Database Connectivity">JDBC</a></li>
+<li><a href="Java_Management_Extensions.html" title="Java Management Extensions">JMX</a></li>
+<li><a href="JavaBeans_Activation_Framework.html" title="JavaBeans Activation Framework">JavaBeans Activation Framework</a></li>
+<li><a href="StAX.html" title="StAX">Streaming API for XML</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1237
+Cached time: 20161230151809
+Cache expiry: 2592000
+Dynamic content: false
+CPU time usage: 0.112 seconds
+Real time usage: 0.153 seconds
+Preprocessor visited node count: 996/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 27122/2097152 bytes
+Template argument size: 2037/2097152 bytes
+Highest expansion depth: 11/40
+Expensive parser function count: 1/500
+Lua time usage: 0.053/10.000 seconds
+Lua memory usage: 2.68 MB/50 MB
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  125.753      1 - -total
+ 43.99%   55.315      2 - Template:Clarify
+ 36.07%   45.363      1 - Template:Reflist
+ 34.09%   42.873      2 - Template:Fix-span
+ 30.56%   38.433      5 - Template:Cite_web
+ 17.72%   22.281      4 - Template:Category_handler
+ 14.22%   17.885      2 - Template:Replace
+ 10.33%   12.993      2 - Template:Delink
+  6.06%    7.615      1 - Template:Java_EE_7
+  5.04%    6.333      1 - Template:Navbox
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:42759-0!*!0!!en!4!* and timestamp 20161230151809 and revision id 730493588
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Java_Transaction_API&amp;oldid=730493588">https://en.wikipedia.org/w/index.php?title=Java_Transaction_API&amp;oldid=730493588</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Help_Category.html" title="Help:Category">Categories</a>: <ul><li><a href="Category_Java_enterprise_platform.html" title="Category:Java enterprise platform">Java enterprise platform</a></li><li><a href="Category_Java_specification_requests.html" title="Category:Java specification requests">Java specification requests</a></li><li><a href="Category_Java_APIs.html" title="Category:Java APIs">Java APIs</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Wikipedia_articles_needing_clarification_from_May_2012" title="Category:Wikipedia articles needing clarification from May 2012">Wikipedia articles needing clarification from May 2012</a></li><li><a href="Category_Articles_with_example_Java_code.html" title="Category:Articles with example Java code">Articles with example Java code</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="Special_MyTalk.html" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="Special_MyContributions.html" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&amp;returnto=Java+Transaction+API" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Java+Transaction+API" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="Java_Transaction_API.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+															<li  id="ca-talk"><span><a href="https://en.wikipedia.org/wiki/Talk:Java_Transaction_API"  title="Discussion about the content page [t]" accesskey="t" rel="discussion">Talk</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="Java_Transaction_API.html" >Read</a></span></li>
+															<li id="ca-edit"><span><a href="https://en.wikipedia.org/w/index.php?title=Java_Transaction_API&amp;action=edit"  title="Edit this page [e]" accesskey="e">Edit</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="https://en.wikipedia.org/w/index.php?title=Java_Transaction_API&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="https://en.wikipedia.org/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="Main_Page.html"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="Portal_Contents.html" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="Portal_Featured_content.html" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="Portal_Current_events.html" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="https://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="../../shop.wikimedia.org/index.html" title="Visit the Wikipedia store">Wikipedia store</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Interaction</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-help"><a href="Help_Contents.html" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="Wikipedia_About.html" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="Wikipedia_Community_portal.html" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="Wikipedia_Contact_us.html" title="How to contact Wikipedia">Contact page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="https://en.wikipedia.org/wiki/Special:WhatLinksHere/Java_Transaction_API" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://en.wikipedia.org/wiki/Special:RecentChangesLinked/Java_Transaction_API" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="Wikipedia_File_Upload_Wizard.html" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="https://en.wikipedia.org/w/index.php?title=Java_Transaction_API&amp;oldid=730493588" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://en.wikipedia.org/w/index.php?title=Java_Transaction_API&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q156763" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="https://en.wikipedia.org/w/index.php?title=Special:CiteThisPage&amp;page=Java_Transaction_API&amp;id=730493588" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Print/export</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Java+Transaction+API">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Java+Transaction+API&amp;returnto=Java+Transaction+API&amp;oldid=730493588&amp;writer=rdf2latex">Download as PDF</a></li><li id="t-print"><a href="https://en.wikipedia.org/w/index.php?title=Java_Transaction_API&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Languages</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Java_Transaction_API" title="Java Transaction API – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Java_Transaction_API" title="Java Transaction API – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Java_Transaction_API" title="Java Transaction API – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/자바_트랜잭션_API" title="자바 트랜잭션 API – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/Java_Transaction_API" title="Java Transaction API – Hungarian" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-ms"><a href="https://ms.wikipedia.org/wiki/Java_Transaction_API" title="Java Transaction API – Malay" lang="ms" hreflang="ms" class="interlanguage-link-target">Bahasa Melayu</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/Java_Transaction_API" title="Java Transaction API – Dutch" lang="nl" hreflang="nl" class="interlanguage-link-target">Nederlands</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/Java_Transaction_API" title="Java Transaction API – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Java_Transaction_API" title="Java Transaction API – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/Java_Transaction_API" title="Java Transaction API – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/Java事务API" title="Java事务API – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q156763#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 19 July 2016, at 10:25.</li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="Wikipedia_Text_of_Creative_Commons_Attribution-ShareAlike_3.html">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="../../creativecommons.org/licenses/by-sa/3.0/index.html" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="../../wikimediafoundation.org/wiki/Terms_of_Use.html">Terms of Use</a> and <a href="../../wikimediafoundation.org/wiki/Privacy_policy.html">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="../../www.wikimediafoundation.org/index.html">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../../wikimediafoundation.org/wiki/Privacy_policy.html" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="Wikipedia_About.html" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="Wikipedia_General_disclaimer.html" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="Wikipedia_Contact_us.html">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a href="../../www.mediawiki.org/wiki/Special_MyLanguage/How_to_contribute.html">Developers</a></li>
+											<li id="footer-places-cookiestatement"><a href="../../wikimediafoundation.org/wiki/Cookie_statement.html">Cookie statement</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/w/index.php?title=Java_Transaction_API&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="../../www.wikimediafoundation.org/index.html"><img src="https://en.wikipedia.org/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="../../www.mediawiki.org/index.html"><img src="https://en.wikipedia.org/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":66,"wgHostname":"mw1262"});});</script>
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Java_Transaction_API by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:34 GMT -->
+</html>

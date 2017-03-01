@@ -1,0 +1,47 @@
+    
+        My question is about order of execution guarantees in C# (and presumably .Net in general). I give Java examples I know something about to compare with.
+
+For Java (from "Java Concurrency in Practice")
+
+
+  There is no guarantee that operations in one thread will be performed in the order given by the program, as long as the reordering is not detectable from within that thread-even if the reordering is apparent to other threads.
+
+
+So the code 
+
+  y = 10;
+  x = 5;
+  a = b + 10;
+
+
+may actually assign a=b+10 Before assigning y = 10
+
+And in Java (from the same book)
+
+
+  Everything thread A does in or prior to a synchronized block is visible to thread B when it starts a synchronized block guarded by the same lock.
+
+
+so in Java
+
+ y = 10;
+ synchronized(lockObject) {
+     x = 5;
+ }
+ a = b + 10;
+
+
+y = 10 and x = 5 are guaranteed to both run before a = b + 10 (I don't know whether y = 10 is guaranteed to run before x = 5).
+
+What guarantees does C# code make for the order of execution for the C# statements
+
+ y = 10;
+ lock(lockObject) {
+     x = 5;
+ }
+ a = b + 10;
+
+
+I am particularly interested in an answer that can provide a definitive reference or some other really meaningful justification as guarantees like this are hard to test because they are about what the compiler is allowed to do, not what it does every time and because when they fail you are going to have very hard to reproduce intermittent bugs when threads hit things in just the wrong order.
+
+                

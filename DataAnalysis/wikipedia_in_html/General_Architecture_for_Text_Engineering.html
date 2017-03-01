@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from en.wikipedia.org/wiki/General_Architecture_for_Text_Engineering by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:04 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>General Architecture for Text Engineering - Wikipedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"General_Architecture_for_Text_Engineering","wgTitle":"General Architecture for Text Engineering","wgCurRevisionId":755401228,"wgRevisionId":755401228,"wgArticleId":11270152,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Pages using deprecated image syntax","Data mining and machine learning software","Free computer libraries","Free science software","Free software programmed in Java (programming language)","Free integrated development environments","Knowledge representation","Natural language processing toolkits","Ontology editors"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"General_Architecture_for_Text_Engineering","wgRelevantArticleId":11270152,"wgRequestId":"WH33bQpAEKYAAF49eFgAAAJX","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgFlaggedRevsParams":{"tags":{}},"wgStableRevisionId":null,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"en","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgWikibaseItemId":"Q975453","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.cite.styles":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@1dqfd7l",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["ext.cite.a11y","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.legacy.wikibits","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.watchlist-notice","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.gadget.featured-articles-links","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.interface","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="https://en.wikipedia.org/w/load.php?debug=false&amp;lang=en&amp;modules=ext.cite.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="../w/load2c8d.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../w/load18b6.css?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.29.0-wmf.7"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="https://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/General_Architecture_for_Text_Engineering"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=General_Architecture_for_Text_Engineering&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=General_Architecture_for_Text_Engineering&amp;action=edit"/>
+<link rel="apple-touch-icon" href="https://en.wikipedia.org/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="../static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../w/api251f.php?action=rsd"/>
+<link rel="copyright" href="../../creativecommons.org/licenses/by-sa/3.0/index.html"/>
+<link rel="canonical" href="General_Architecture_for_Text_Engineering.html"/>
+<link rel="dns-prefetch" href="../../login.wikimedia.org/index.html"/>
+<link rel="dns-prefetch" href="../../meta.wikimedia.org/index.html" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-General_Architecture_for_Text_Engineering rootpage-General_Architecture_for_Text_Engineering skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">General Architecture for Text Engineering</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><script>function mfTempOpenSection(id){var block=document.getElementById("mf-section-"+id);block.className+=" open-block";block.previousSibling.className+=" open-block";}</script><table class="infobox vevent" style="width:22em">
+<caption class="summary">GATE</caption>
+<tr>
+<td colspan="2" style="text-align:center"><a href="https://en.wikipedia.org/wiki/File:GATE5_main_window.png" class="image"><img alt="GATE5 main window.png" src="http://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/GATE5_main_window.png/250px-GATE5_main_window.png" width="250" height="232" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/0a/GATE5_main_window.png/375px-GATE5_main_window.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/0a/GATE5_main_window.png/500px-GATE5_main_window.png 2x" data-file-width="817" data-file-height="757" /></a>
+<div>GATE Developer v5 main window</div>
+</td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_developer" title="Software developer">Developer(s)</a></th>
+<td><a rel="nofollow" class="external text" href="http://gate.ac.uk/people">GATE research team</a>, <a rel="nofollow" class="external text" href="http://www.dcs.shef.ac.uk/">Dept. Computer Science, University of Sheffield</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;">Initial release</th>
+<td>1995<span class="noprint">; 22&#160;years ago</span><span style="display:none">&#160;(<span class="bday dtstart published updated">1995</span>)</span></td>
+</tr>
+<tr>
+<td colspan="2" style="text-align:center"></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_release_life_cycle" title="Software release life cycle">Stable release</a></th>
+<td>8.2 <small>(May&#160;31, 2016<span class="noprint">; 7 months ago</span><span style="display:none">&#160;(<span class="bday dtstart published updated">2016-05-31</span>)</span>)</small> <small class="plainlinks"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Latest_stable_software_release/GATE&amp;action=edit">[±]</a></small></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_release_life_cycle" title="Software release life cycle">Preview release</a></th>
+<td>8.2 <small>(January 17, 2017 (Nightly builds released every day))</small> <small class="plainlinks"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Latest_preview_software_release/GATE&amp;action=edit">[±]</a></small></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Repository_(version_control)" title="Repository (version control)">Repository</a></th>
+<td><span class="url"><a rel="nofollow" class="external text" href="https://sourceforge.net/p/gate/code/HEAD/tree/">sourceforge<wbr />.net<wbr />/p<wbr />/gate<wbr />/code<wbr />/HEAD<wbr />/tree<wbr />/</a></span></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;">Written in</th>
+<td><a href="Java_(programming_language).html" title="Java (programming language)">Java</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Operating_system" title="Operating system">Operating system</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Cross-platform" title="Cross-platform">Cross-platform</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;">Available in</th>
+<td>English</td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_categories#Broad_categories" title="Software categories">Type</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Text_mining" title="Text mining">Text mining</a> <a href="https://en.wikipedia.org/wiki/Information_Extraction" class="mw-redirect" title="Information Extraction">Information Extraction</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_license" title="Software license">License</a></th>
+<td><a href="https://en.wikipedia.org/wiki/LGPL" class="mw-redirect" title="LGPL">LGPL</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;">Website</th>
+<td><span class="url"><a rel="nofollow" class="external text" href="http://gate.ac.uk/">gate<wbr />.ac<wbr />.uk</a></span></td>
+</tr>
+</table>
+<p><b>General Architecture for Text Engineering</b> or <b>GATE</b> is a <a href="Java_(programming_language).html" title="Java (programming language)">Java</a> suite of tools originally developed at the <a href="https://en.wikipedia.org/wiki/University_of_Sheffield" title="University of Sheffield">University of Sheffield</a> beginning in 1995 and now used worldwide by a wide community of scientists, companies, teachers and students for many <a href="https://en.wikipedia.org/wiki/Natural_language_processing" title="Natural language processing">natural language processing</a> tasks, including <a href="https://en.wikipedia.org/wiki/Information_extraction" title="Information extraction">information extraction</a> in many languages.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[1]</a></sup></p>
+<p>GATE has been compared to <a href="https://en.wikipedia.org/wiki/NLTK" class="mw-redirect" title="NLTK">NLTK</a>, <a href="https://en.wikipedia.org/wiki/R_(programming_language)" title="R (programming language)">R</a> and <a href="RapidMiner.html" title="RapidMiner">RapidMiner</a>.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">[2]</a></sup> As well as being widely used in its own right, it forms the basis of the KIM semantic platform.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">[3]</a></sup></p>
+<p>GATE community and research has been involved in several European research projects including <a href="https://en.wikipedia.org/w/index.php?title=Transitioning_Applications_to_Ontologies&amp;action=edit&amp;redlink=1" class="new" title="Transitioning Applications to Ontologies (page does not exist)">TAO</a>, <a href="https://en.wikipedia.org/w/index.php?title=SEKT&amp;action=edit&amp;redlink=1" class="new" title="SEKT (page does not exist)">SEKT</a>, NeOn, Media-Campaign, Musing, <a href="https://en.wikipedia.org/w/index.php?title=Service-Finder&amp;action=edit&amp;redlink=1" class="new" title="Service-Finder (page does not exist)">Service-Finder</a>, LIRICS and <a href="https://en.wikipedia.org/wiki/KnowledgeWeb_Project" class="mw-redirect" title="KnowledgeWeb Project">KnowledgeWeb</a>, as well as many other projects.</p>
+<p>As of May 28, 2011, 881 people are on the gate-users mailing list at SourceForge.net, and 111,932 downloads from <a href="https://en.wikipedia.org/wiki/SourceForge" title="SourceForge">SourceForge</a> are recorded since the project moved to SourceForge in 2005.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">[4]</a></sup> The paper "GATE: A Framework and Graphical Development Environment for Robust NLP Tools and Applications"<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">[5]</a></sup> has received over 800 citations in the seven years since publication (according to Google Scholar). Books covering the use of GATE, in addition to the GATE User Guide,<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">[6]</a></sup> include "Building Search Applications: Lucene, LingPipe, and Gate", by Manu Konchady,<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">[7]</a></sup> and "Introduction to Linguistic Annotation and Text Analytics", by Graham Wilcock.<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">[8]</a></sup></p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Features"><span class="tocnumber">1</span> <span class="toctext">Features</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#GATE_Developer"><span class="tocnumber">2</span> <span class="toctext">GATE Developer</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#GATE_M.C3.ADmir"><span class="tocnumber">3</span> <span class="toctext">GATE Mímir</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#See_also"><span class="tocnumber">4</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#References"><span class="tocnumber">5</span> <span class="toctext">References</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Features">Features</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=General_Architecture_for_Text_Engineering&amp;action=edit&amp;section=1" title="Edit section: Features">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>GATE includes an <a href="https://en.wikipedia.org/wiki/Information_extraction" title="Information extraction">information extraction</a> system called <b>ANNIE</b> (<b>A Nearly-New Information Extraction System</b>) which is a set of modules comprising a <a href="https://en.wikipedia.org/wiki/Lexical_analysis" title="Lexical analysis">tokenizer</a>, a <a href="https://en.wikipedia.org/wiki/Gazetteer" title="Gazetteer">gazetteer</a>, a <a href="https://en.wikipedia.org/wiki/Sentence_boundary_disambiguation" title="Sentence boundary disambiguation">sentence splitter</a>, a <a href="https://en.wikipedia.org/wiki/Part-of-speech_tagging" title="Part-of-speech tagging">part of speech tagger</a>, a <a href="https://en.wikipedia.org/wiki/Named_entity_recognition" class="mw-redirect" title="Named entity recognition">named entities</a> transducer and a <a href="https://en.wikipedia.org/wiki/Coreference" title="Coreference">coreference</a> tagger. ANNIE can be used as-is to provide basic <a href="https://en.wikipedia.org/wiki/Information_extraction" title="Information extraction">information extraction</a> functionality, or provide a starting point for more specific tasks.</p>
+<p>Languages currently handled in GATE include <a href="https://en.wikipedia.org/wiki/English_language" title="English language">English</a>, <a href="https://en.wikipedia.org/wiki/Mandarin_Chinese" title="Mandarin Chinese">Chinese</a>, <a href="https://en.wikipedia.org/wiki/Arabic" title="Arabic">Arabic</a>, <a href="https://en.wikipedia.org/wiki/Bulgarian_language" title="Bulgarian language">Bulgarian</a>, <a href="https://en.wikipedia.org/wiki/French_language" title="French language">French</a>, <a href="https://en.wikipedia.org/wiki/German_language" title="German language">German</a>, <a href="https://en.wikipedia.org/wiki/Hindi" title="Hindi">Hindi</a>, <a href="https://en.wikipedia.org/wiki/Italian_language" title="Italian language">Italian</a>, <a href="https://en.wikipedia.org/wiki/Cebuano_language" title="Cebuano language">Cebuano</a>, <a href="https://en.wikipedia.org/wiki/Romanian_language" title="Romanian language">Romanian</a>, <a href="https://en.wikipedia.org/wiki/Russian_language" title="Russian language">Russian</a>, <a href="https://en.wikipedia.org/wiki/Danish_language" title="Danish language">Danish</a>.</p>
+<p>Plugins are included for <a href="https://en.wikipedia.org/wiki/Machine_learning" title="Machine learning">machine learning</a> with <a href="https://en.wikipedia.org/wiki/Weka_(machine_learning)" title="Weka (machine learning)">Weka</a>, RASP, MAXENT, SVM Light, as well as a <a href="https://en.wikipedia.org/wiki/LIBSVM" title="LIBSVM">LIBSVM</a> integration and an in-house <a href="https://en.wikipedia.org/wiki/Perceptron" title="Perceptron">perceptron</a> implementation, for managing <a href="https://en.wikipedia.org/wiki/Ontology_(information_science)" title="Ontology (information science)">ontologies</a> like <a href="https://en.wikipedia.org/wiki/WordNet" title="WordNet">WordNet</a>, for querying <a href="https://en.wikipedia.org/wiki/Search_engines" class="mw-redirect" title="Search engines">search engines</a> like <a href="https://en.wikipedia.org/wiki/Google" title="Google">Google</a> or <a href="https://en.wikipedia.org/wiki/Yahoo" class="mw-redirect" title="Yahoo">Yahoo</a>, for <a href="https://en.wikipedia.org/wiki/Part_of_speech_tagging" class="mw-redirect" title="Part of speech tagging">part of speech tagging</a> with <a href="https://en.wikipedia.org/wiki/Brill_tagger" title="Brill tagger">Brill</a> or TreeTagger, and many more. Many external plugins are also available, for handling e.g. <a href="https://en.wikipedia.org/wiki/Twitter" title="Twitter">tweets</a>.<sup id="cite_ref-9" class="reference"><a href="#cite_note-9">[9]</a></sup></p>
+<p>GATE accepts input in various formats, such as <a href="https://en.wikipedia.org/wiki/Text_file" title="Text file">TXT</a>, <a href="https://en.wikipedia.org/wiki/HTML" title="HTML">HTML</a>, <a href="https://en.wikipedia.org/wiki/XML" title="XML">XML</a>, <a href="https://en.wikipedia.org/wiki/DOC_(computing)" class="mw-redirect" title="DOC (computing)">Doc</a>, <a href="https://en.wikipedia.org/wiki/PDF" class="mw-redirect" title="PDF">PDF</a> documents, and <a href="https://en.wikipedia.org/wiki/Serialization" title="Serialization">Java Serial</a>, <a href="https://en.wikipedia.org/wiki/PostgreSQL" title="PostgreSQL">PostgreSQL</a>, <a href="Lucene.html" class="mw-redirect" title="Lucene">Lucene</a>, <a href="https://en.wikipedia.org/wiki/Oracle_database" class="mw-redirect" title="Oracle database">Oracle</a> Databases with help of <a href="https://en.wikipedia.org/wiki/RDBMS" class="mw-redirect" title="RDBMS">RDBMS</a> storage over <a href="https://en.wikipedia.org/wiki/JDBC" class="mw-redirect" title="JDBC">JDBC</a>.</p>
+<p><a href="https://en.wikipedia.org/wiki/JAPE_(linguistics)" title="JAPE (linguistics)">JAPE</a> transducers are used within GATE to manipulate annotations on text. Documentation is provided in the GATE User Guide.<sup id="cite_ref-10" class="reference"><a href="#cite_note-10">[10]</a></sup> A tutorial has also been written by Press Association Images.<sup id="cite_ref-11" class="reference"><a href="#cite_note-11">[11]</a></sup></p>
+<h2><span class="mw-headline" id="GATE_Developer">GATE Developer</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=General_Architecture_for_Text_Engineering&amp;action=edit&amp;section=2" title="Edit section: GATE Developer">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright">
+<div class="thumbinner" style="width:402px;"><a href="https://en.wikipedia.org/wiki/File:GATE5_main_window.png" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/GATE5_main_window.png/400px-GATE5_main_window.png" width="400" height="371" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/0a/GATE5_main_window.png/600px-GATE5_main_window.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/0a/GATE5_main_window.png/800px-GATE5_main_window.png 2x" data-file-width="817" data-file-height="757" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="https://en.wikipedia.org/wiki/File:GATE5_main_window.png" class="internal" title="Enlarge"></a></div>
+GATE 5 main window.</div>
+</div>
+</div>
+<p>The screenshot shows the document viewer used to display a document and its annotations. In pink are &lt;A&gt; hyperlink annotations from an <a href="https://en.wikipedia.org/wiki/Hypertext_Markup_Language" class="mw-redirect" title="Hypertext Markup Language">HTML</a> file. The right list is the annotation sets list, and the bottom table is the annotation list. In the center is the annotation editor window.</p>
+<h2><span class="mw-headline" id="GATE_M.C3.ADmir">GATE Mímir</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=General_Architecture_for_Text_Engineering&amp;action=edit&amp;section=3" title="Edit section: GATE Mímir">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<pre>
+Generate vast quantities of information including; natural language text, semantic annotations, and ontological information. Sometimes the data itself is the end product of an application but often the information would be more useful if it could be efficiently searched. GATE Mimir provides support for indexing and searching the linguistic and semantic information generated by such applications and allows for querying the information using arbitrary combinations of text, structural information, and <a href="https://en.wikipedia.org/wiki/SPARQL" title="SPARQL">SPARQL</a>.
+</pre>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=General_Architecture_for_Text_Engineering&amp;action=edit&amp;section=4" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div role="navigation" aria-label="Portals" class="noprint portal plainlist tright" style="margin:0.5em 0 0.5em 1em;border:solid #aaa 1px">
+<ul style="display:table;box-sizing:border-box;padding:0.1em;max-width:175px;background:#f9f9f9;font-size:85%;line-height:110%;font-style:italic;font-weight:bold">
+<li style="display:table-row"><span style="display:table-cell;padding:0.2em;vertical-align:middle;text-align:center"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_(2009).svg/28px-Free_and_open-source_software_logo_(2009).svg.png" width="28" height="28" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/42px-Free_and_open-source_software_logo_%282009%29.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/56px-Free_and_open-source_software_logo_%282009%29.svg.png 2x" data-file-width="512" data-file-height="512" /></span><span style="display:table-cell;padding:0.2em 0.2em 0.2em 0.3em;vertical-align:middle"><a href="https://en.wikipedia.org/wiki/Portal:Free_software" class="mw-redirect" title="Portal:Free software">Free software portal</a></span></li>
+</ul>
+</div>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Unstructured_Information_Management_Architecture" class="mw-redirect" title="Unstructured Information Management Architecture">Unstructured Information Management Architecture</a> (UIMA)</li>
+<li><a href="https://en.wikipedia.org/wiki/OpenNLP" title="OpenNLP">OpenNLP</a></li>
+<li><a href="https://en.wikipedia.org/wiki/List_of_natural_language_processing_toolkits" class="mw-redirect" title="List of natural language processing toolkits">List of natural language processing toolkits</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Pheme_(project)" title="Pheme (project)">Pheme</a>, a major EU project managed by the GATE group on early detection of false information in social media</li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=General_Architecture_for_Text_Engineering&amp;action=edit&amp;section=5" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text">Languages mentioned on <a rel="nofollow" class="external free" href="http://gate.ac.uk/gate/plugins/">http://gate.ac.uk/gate/plugins/</a> include Arabic, Bulgarian, Cebuano, Chinese, French, German, Hindi, Italian, Romanian and Russian.</span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.b-eye-network.com/view/9516">"Open Source Text Analytics by Seth Grimes - BeyeNETWORK"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">17 December</span> 2016</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGeneral+Architecture+for+Text+Engineering&amp;rft.btitle=Open+Source+Text+Analytics+by+Seth+Grimes+-+BeyeNETWORK&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.b-eye-network.com%2Fview%2F9516&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><cite class="citation journal">Popov, Borislav; Kiryakov, Atanas; Ognyanoff, Damyan; Manov, Dimitar; Kirilov, Angel (1 September 2004). <a rel="nofollow" class="external text" href="https://www.cambridge.org/core/journals/natural-language-engineering/article/div-classtitlekim-a-semantic-platform-for-information-extraction-and-retrievaldiv/7249CC61F5AB25CBC7AAE182509DFEDE">"KIM – a semantic platform for information extraction and retrieval"</a>. <b>10</b> (3-4): 375–392. <a href="https://en.wikipedia.org/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1017%2FS135132490400347X">10.1017/S135132490400347X</a><span class="reference-accessdate">. Retrieved <span class="nowrap">17 December</span> 2016</span> – via Cambridge Core.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGeneral+Architecture+for+Text+Engineering&amp;rft.atitle=KIM+%93+a+semantic+platform+for+information+extraction+and+retrieval&amp;rft.aufirst=Borislav&amp;rft.au=Kirilov%2C+Angel&amp;rft.au=Kiryakov%2C+Atanas&amp;rft.aulast=Popov&amp;rft.au=Manov%2C+Dimitar&amp;rft.au=Ognyanoff%2C+Damyan&amp;rft.date=2004-09-01&amp;rft.genre=article&amp;rft_id=https%3A%2F%2Fwww.cambridge.org%2Fcore%2Fjournals%2Fnatural-language-engineering%2Farticle%2Fdiv-classtitlekim-a-semantic-platform-for-information-extraction-and-retrievaldiv%2F7249CC61F5AB25CBC7AAE182509DFEDE&amp;rft_id=info%3Adoi%2F10.1017%2FS135132490400347X&amp;rft.issue=3-4&amp;rft.pages=375-392&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=10" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://sourceforge.net/projects/gate/">"GATE"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">17 December</span> 2016</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGeneral+Architecture+for+Text+Engineering&amp;rft.btitle=GATE&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fsourceforge.net%2Fprojects%2Fgate%2F&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://gate.ac.uk/sale/acl02/acl-main.pdf">"GATE: A Framework and Graphical Development Environment for Robust NLP Tools and Applications", by Cunningham H., Maynard D., Bontcheva K. and Tablan V. (In proc. of the 40th Anniversary Meeting of the Association for Computational Linguistics, 2002)</a></span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://gate.ac.uk/userguide/">"GATE.ac.uk - sale/tao/split.html"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">17 December</span> 2016</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGeneral+Architecture+for+Text+Engineering&amp;rft.btitle=GATE.ac.uk++-+sale%2Ftao%2Fsplit.html&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fgate.ac.uk%2Fuserguide%2F&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text">Konchady, Manu. <a rel="nofollow" class="external text" href="https://books.google.com/books?id=mcM-OAAACAAJ&amp;dq=Building+Search+Applications:+Lucene,+LingPipe,+and+Gate&amp;hl=en&amp;ei=avbDTczPJITqrQfk1IXQBA&amp;sa=X&amp;oi=book_result&amp;ct=result&amp;resnum=1&amp;ved=0CDEQ6AEwAA">Building Search Applications: Lucene, LingPipe, and Gate</a>. Mustru Publishing. 2008.</span></li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><cite class="citation web">Wilcock, Graham (1 January 2009). <a rel="nofollow" class="external text" href="https://books.google.com/books?id=TDQJb1UgVywC&amp;dq=Introduction%20to%20Linguistic%20Annotation%20and%20Text%20Analytics&amp;printsec=frontcover&amp;source=bl&amp;ots=bAF26ZQSTx&amp;sig=TbxZ_-3tRy3IeDBKFofeVN6bAIc&amp;hl=en&amp;ei=vc0gS7PlLo-64QaSgqnfCQ&amp;sa=X&amp;oi=book_result&amp;ct=result&amp;resnum=2&amp;ved=0CBcQ6AEwAQ#v=onepage&amp;q=&amp;f=false">"Introduction to Linguistic Annotation and Text Analytics"</a>. Morgan &amp; Claypool Publishers<span class="reference-accessdate">. Retrieved <span class="nowrap">17 December</span> 2016</span> – via Google Books.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGeneral+Architecture+for+Text+Engineering&amp;rft.aufirst=Graham&amp;rft.aulast=Wilcock&amp;rft.btitle=Introduction+to+Linguistic+Annotation+and+Text+Analytics&amp;rft.date=2009-01-01&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DTDQJb1UgVywC%26dq%3DIntroduction%2520to%2520Linguistic%2520Annotation%2520and%2520Text%2520Analytics%26printsec%3Dfrontcover%26source%3Dbl%26ots%3DbAF26ZQSTx%26sig%3DTbxZ_-3tRy3IeDBKFofeVN6bAIc%26hl%3Den%26ei%3Dvc0gS7PlLo-64QaSgqnfCQ%26sa%3DX%26oi%3Dbook_result%26ct%3Dresult%26resnum%3D2%26ved%3D0CBcQ6AEwAQ%23v%3Donepage%26q%3D%26f%3Dfalse&amp;rft.pub=Morgan+%26+Claypool+Publishers&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://gate.ac.uk/wiki/twitie.html">"GATE.ac.uk - wiki/twitie.html"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">17 December</span> 2016</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGeneral+Architecture+for+Text+Engineering&amp;rft.btitle=GATE.ac.uk++-+wiki%2Ftwitie.html&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fgate.ac.uk%2Fwiki%2Ftwitie.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://gate.ac.uk/userguide/chap:jape">"GATE.ac.uk - sale/tao/splitch8.html"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">17 December</span> 2016</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGeneral+Architecture+for+Text+Engineering&amp;rft.btitle=GATE.ac.uk++-+sale%2Ftao%2Fsplitch8.html&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fgate.ac.uk%2Fuserguide%2Fchap%3Ajape&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text"><cite class="citation web">Thakker, Dhavalkumar (17 July 2009). <a rel="nofollow" class="external text" href="http://realizingsemanticweb.blogspot.com/2009/07/jape-grammar-tutorial.html">"Realizing Semantic Web: JAPE grammar tutorial"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">17 December</span> 2016</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGeneral+Architecture+for+Text+Engineering&amp;rft.aufirst=Dhavalkumar&amp;rft.aulast=Thakker&amp;rft.btitle=Realizing+Semantic+Web%3A+JAPE+grammar+tutorial&amp;rft.date=2009-07-17&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Frealizingsemanticweb.blogspot.com%2F2009%2F07%2Fjape-grammar-tutorial.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1189
+Cached time: 20170117105048
+Cache expiry: 86400
+Dynamic content: true
+CPU time usage: 0.188 seconds
+Real time usage: 0.225 seconds
+Preprocessor visited node count: 1146/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 31082/2097152 bytes
+Template argument size: 1517/2097152 bytes
+Highest expansion depth: 29/40
+Expensive parser function count: 2/500
+Lua time usage: 0.077/10.000 seconds
+Lua memory usage: 3 MB/50 MB
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  184.345      1 - -total
+ 78.98%  145.596      2 - Template:Infobox
+ 58.82%  108.429      1 - Template:Infobox_software
+ 29.68%   54.712      7 - Template:Cite_web
+ 23.70%   43.687      1 - Template:Infobox_software/simple
+ 12.91%   23.798      2 - Template:Start_date_and_age
+  9.83%   18.115      1 - Template:Latest_stable_software_release/GATE
+  9.41%   17.349      1 - Template:LSR
+  5.31%    9.780      1 - Template:Time_ago
+  3.44%    6.334      1 - Template:Cite_journal
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:11270152-0!*!0!!en!4!* and timestamp 20170117105048 and revision id 755401228
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=General_Architecture_for_Text_Engineering&amp;oldid=755401228">https://en.wikipedia.org/w/index.php?title=General_Architecture_for_Text_Engineering&amp;oldid=755401228</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Help_Category.html" title="Help:Category">Categories</a>: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Data_mining_and_machine_learning_software" title="Category:Data mining and machine learning software">Data mining and machine learning software</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Free_computer_libraries" title="Category:Free computer libraries">Free computer libraries</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Free_science_software" title="Category:Free science software">Free science software</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Free_software_programmed_in_Java_(programming_language)" title="Category:Free software programmed in Java (programming language)">Free software programmed in Java (programming language)</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Free_integrated_development_environments" title="Category:Free integrated development environments">Free integrated development environments</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Knowledge_representation" title="Category:Knowledge representation">Knowledge representation</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Natural_language_processing_toolkits" title="Category:Natural language processing toolkits">Natural language processing toolkits</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Ontology_editors" title="Category:Ontology editors">Ontology editors</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Pages_using_deprecated_image_syntax" title="Category:Pages using deprecated image syntax">Pages using deprecated image syntax</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="Special_MyTalk.html" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="Special_MyContributions.html" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&amp;returnto=General+Architecture+for+Text+Engineering" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=General+Architecture+for+Text+Engineering" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="General_Architecture_for_Text_Engineering.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+															<li  id="ca-talk"><span><a href="https://en.wikipedia.org/wiki/Talk:General_Architecture_for_Text_Engineering"  title="Discussion about the content page [t]" accesskey="t" rel="discussion">Talk</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="General_Architecture_for_Text_Engineering.html" >Read</a></span></li>
+															<li id="ca-edit"><span><a href="https://en.wikipedia.org/w/index.php?title=General_Architecture_for_Text_Engineering&amp;action=edit"  title="Edit this page [e]" accesskey="e">Edit</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="https://en.wikipedia.org/w/index.php?title=General_Architecture_for_Text_Engineering&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="https://en.wikipedia.org/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="Main_Page.html"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="Portal_Contents.html" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="Portal_Featured_content.html" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="Portal_Current_events.html" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="https://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="../../shop.wikimedia.org/index.html" title="Visit the Wikipedia store">Wikipedia store</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Interaction</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-help"><a href="Help_Contents.html" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="Wikipedia_About.html" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="Wikipedia_Community_portal.html" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="Wikipedia_Contact_us.html" title="How to contact Wikipedia">Contact page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="https://en.wikipedia.org/wiki/Special:WhatLinksHere/General_Architecture_for_Text_Engineering" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://en.wikipedia.org/wiki/Special:RecentChangesLinked/General_Architecture_for_Text_Engineering" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="Wikipedia_File_Upload_Wizard.html" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="https://en.wikipedia.org/w/index.php?title=General_Architecture_for_Text_Engineering&amp;oldid=755401228" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://en.wikipedia.org/w/index.php?title=General_Architecture_for_Text_Engineering&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q975453" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="https://en.wikipedia.org/w/index.php?title=Special:CiteThisPage&amp;page=General_Architecture_for_Text_Engineering&amp;id=755401228" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Print/export</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=General+Architecture+for+Text+Engineering">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=General+Architecture+for+Text+Engineering&amp;returnto=General+Architecture+for+Text+Engineering&amp;oldid=755401228&amp;writer=rdf2latex">Download as PDF</a></li><li id="t-print"><a href="https://en.wikipedia.org/w/index.php?title=General_Architecture_for_Text_Engineering&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-wikibase-otherprojects' aria-labelledby='p-wikibase-otherprojects-label'>
+			<h3 id='p-wikibase-otherprojects-label'>In other projects</h3>
+
+			<div class="body">
+									<ul>
+						<li class="wb-otherproject-link wb-otherproject-commons"><a href="https://commons.wikimedia.org/wiki/Category:General_Architecture_for_Text_Engineering" hreflang="en">Wikimedia Commons</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Languages</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/General_Architecture_for_Text_Engineering" title="General Architecture for Text Engineering – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Architecture_générale_pour_le_traitement_de_texte" title="Architecture générale pour le traitement de texte – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-gl"><a href="https://gl.wikipedia.org/wiki/GATE" title="GATE – Galician" lang="gl" hreflang="gl" class="interlanguage-link-target">Galego</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/GATE_(программа)" title="GATE (программа) – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q975453#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 17 December 2016, at 20:31.</li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="Wikipedia_Text_of_Creative_Commons_Attribution-ShareAlike_3.html">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="../../creativecommons.org/licenses/by-sa/3.0/index.html" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="../../wikimediafoundation.org/wiki/Terms_of_Use.html">Terms of Use</a> and <a href="../../wikimediafoundation.org/wiki/Privacy_policy.html">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="../../www.wikimediafoundation.org/index.html">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../../wikimediafoundation.org/wiki/Privacy_policy.html" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="Wikipedia_About.html" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="Wikipedia_General_disclaimer.html" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="Wikipedia_Contact_us.html">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a href="../../www.mediawiki.org/wiki/Special_MyLanguage/How_to_contribute.html">Developers</a></li>
+											<li id="footer-places-cookiestatement"><a href="../../wikimediafoundation.org/wiki/Cookie_statement.html">Cookie statement</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/w/index.php?title=General_Architecture_for_Text_Engineering&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="../../www.wikimediafoundation.org/index.html"><img src="https://en.wikipedia.org/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="../../www.mediawiki.org/index.html"><img src="https://en.wikipedia.org/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":56,"wgHostname":"mw1211"});});</script>
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/General_Architecture_for_Text_Engineering by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:04 GMT -->
+</html>

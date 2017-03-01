@@ -1,0 +1,23 @@
+    
+        I'm currently taking a course in Java and I've run into some confusing code.
+
+Example:
+
+Runnable runnable = new Runnable()
+        {
+            public void run()
+            {
+                //doStuff
+            }
+        };
+
+
+I don't really get what this code is doing.
+
+How can the run method be associated with an instance of a class?
+
+I googled "Runnable" and found out that it is an interface. Am I implementing the interface by declaring the run method between curly brackets ? Can this be done for any interface in java ?
+
+I could use some links/explanations. Thank you!
+
+                

@@ -1,0 +1,29 @@
+    
+        Is there a not so ugly way of treat the close() exception to close both streams then:
+
+    InputStream in = new FileInputStream(inputFileName);
+    OutputStream out = new FileOutputStream(outputFileName);
+
+    try {
+    copy(in, out);
+    } finally {
+    try {
+        in.close();
+    } catch (Exception e) {
+        try {
+        // event if in.close fails, need to close the out
+        out.close();
+        } catch (Exception e2) {}
+        throw e; // and throw the 'in' exception
+    }
+    out.close();
+    }
+
+
+update: All the above code is within one more try-catch, thanks for the warnings.
+
+--FINALLY (after the answers)
+
+And a good utility method can be done using <a href="http://stackoverflow.com/questions/341971/what-is-the-execute-around-idiom">Execute Around idiom (thanks Tom Hawtin).
+
+                

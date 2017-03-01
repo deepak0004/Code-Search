@@ -1,0 +1,6 @@
+    
+        in c# what does exactly happen in the background when you do a comparison with the "==" operator on two objects? does it just compare the addresses? or does it something like Equals() or CompareTo() ?
+
+PS: what about the "==" operator in java? does it behave the same?
+
+                

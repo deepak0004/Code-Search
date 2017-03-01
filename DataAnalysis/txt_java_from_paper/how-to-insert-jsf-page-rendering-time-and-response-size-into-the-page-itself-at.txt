@@ -1,0 +1,17 @@
+    
+        I realize it's a chicken and egg problem and that it's not possible to accurately resolve the time it took to render a page (or the size of response) and insert that number into the page itself without affecting either measure. Nevertheless, I'm looking for a way to insert either number partially in a page of a JSF/Facelets/Seam application.
+
+E.g., at the bottom of a .jsf page somewhere:
+
+&lt;!-- page size: 10.3Kb --&gt;
+&lt;!-- render time: 0.2s --&gt;
+
+
+I've come across JSFUnit's <a href="http://community.jboss.org/wiki/JSFUnitPerformanceAnalysis" rel="nofollow">JSFTimer, which is really handy. However, the phase listener approach doesn't allow the results of RENDER_RESPONSE phase to be inserted into the page. Not sure how to access the size of the response encoded so far either.
+
+Is there a quick and dirty way to hook up to some sort of post-processing event at or after the end of RENDER_RESPONSE and to inject both numbers into the page about to be rendered? One way of approaching this is perhaps through servlet filters, but I'm looking for something simpler; perhaps a trick with Seam or Facelets...
+
+Thanks,
+-A
+
+                

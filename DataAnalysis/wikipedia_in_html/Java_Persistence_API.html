@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Java_Persistence_API by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:32 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Java Persistence API - Wikipedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Java_Persistence_API","wgTitle":"Java Persistence API","wgCurRevisionId":748692649,"wgRevisionId":748692649,"wgArticleId":7811267,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles needing additional references from June 2010","All articles needing additional references","Articles containing potentially dated statements from 2009","All articles containing potentially dated statements","Wikipedia articles with GND identifiers","Java APIs","Java enterprise platform","Java specification requests","Object-relational mapping","Persistence"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Java_Persistence_API","wgRelevantArticleId":7811267,"wgRequestId":"WHy4ywpAMFkAAA5x9eIAAAFH","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgFlaggedRevsParams":{"tags":{}},"wgStableRevisionId":null,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"en","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgWikibaseItemId":"Q908660","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.cite.styles":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@1dqfd7l",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["ext.cite.a11y","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.legacy.wikibits","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.watchlist-notice","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.gadget.featured-articles-links","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.interface","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="https://en.wikipedia.org/w/load.php?debug=false&amp;lang=en&amp;modules=ext.cite.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="../w/load2c8d.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../w/load18b6.css?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.29.0-wmf.7"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="https://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Java_Persistence_API"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Java_Persistence_API&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Java_Persistence_API&amp;action=edit"/>
+<link rel="apple-touch-icon" href="https://en.wikipedia.org/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="../static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../w/api251f.php?action=rsd"/>
+<link rel="copyright" href="../../creativecommons.org/licenses/by-sa/3.0/index.html"/>
+<link rel="canonical" href="Java_Persistence_API.html"/>
+<link rel="dns-prefetch" href="../../login.wikimedia.org/index.html"/>
+<link rel="dns-prefetch" href="../../meta.wikimedia.org/index.html" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Java_Persistence_API rootpage-Java_Persistence_API skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">Java Persistence API</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><script>function mfTempOpenSection(id){var block=document.getElementById("mf-section-"+id);block.className+=" open-block";block.previousSibling.className+=" open-block";}</script><table class="plainlinks metadata ambox ambox-content ambox-Refimprove" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px"><a href="https://en.wikipedia.org/wiki/File:Question_book-new.svg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/50px-Question_book-new.svg.png" width="50" height="39" srcset="//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/75px-Question_book-new.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/100px-Question_book-new.svg.png 2x" data-file-width="512" data-file-height="399" /></a></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article <b>needs additional citations for <a href="https://en.wikipedia.org/wiki/Wikipedia:Verifiability" title="Wikipedia:Verifiability">verification</a></b>. <span class="hide-when-compact">Please help <a class="external text" href="http://en.wikipedia.org/w/index.php?title=Java_Persistence_API&amp;action=edit">improve this article</a> by <a href="https://en.wikipedia.org/wiki/Help:Introduction_to_referencing_with_Wiki_Markup/1" title="Help:Introduction to referencing with Wiki Markup/1">adding citations to reliable sources</a>. Unsourced material may be challenged and removed.</span> <small><i>(June 2010)</i></small> <small class="hide-when-compact"><i>(<a href="https://en.wikipedia.org/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></span></td>
+</tr>
+</table>
+<p>The <b>Java Persistence API</b> (<b>JPA</b>) is a <a href="Java_(programming_language).html" title="Java (programming language)">Java</a> <a href="https://en.wikipedia.org/wiki/Application_programming_interface" title="Application programming interface">application programming interface</a> specification that describes the management of <a href="https://en.wikipedia.org/wiki/Relational_data_model" class="mw-redirect" title="Relational data model">relational data</a> in applications using <a href="Java_Platform%2c_Standard_Edition.html" title="Java Platform, Standard Edition">Java Platform, Standard Edition</a> and <a href="Java_Platform%2c_Enterprise_Edition.html" title="Java Platform, Enterprise Edition">Java Platform, Enterprise Edition</a>.</p>
+<p><a href="https://en.wikipedia.org/wiki/Persistence_(computer_science)" title="Persistence (computer science)">Persistence</a> in this context covers three areas:</p>
+<ul>
+<li>the <a href="https://en.wikipedia.org/wiki/Application_programming_interface" title="Application programming interface">API</a> itself, defined in the <tt>javax.persistence</tt> package</li>
+<li>the <a href="Java_Persistence_Query_Language.html" title="Java Persistence Query Language">Java Persistence Query Language</a> (JPQL)</li>
+<li>object/relational metadata</li>
+</ul>
+<p>The <a href="https://en.wikipedia.org/wiki/Reference_implementation" title="Reference implementation">reference implementation</a> for JPA is <a href="EclipseLink.html" title="EclipseLink">EclipseLink</a>.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#History"><span class="tocnumber">1</span> <span class="toctext">History</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Entities"><span class="tocnumber">2</span> <span class="toctext">Entities</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#The_Java_Persistence_Query_Language"><span class="tocnumber">3</span> <span class="toctext">The Java Persistence Query Language</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Motivation"><span class="tocnumber">4</span> <span class="toctext">Motivation</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Related_technologies"><span class="tocnumber">5</span> <span class="toctext">Related technologies</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#Enterprise_JavaBeans"><span class="tocnumber">5.1</span> <span class="toctext">Enterprise JavaBeans</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Java_Data_Objects_API"><span class="tocnumber">5.2</span> <span class="toctext">Java Data Objects API</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Service_Data_Object_API"><span class="tocnumber">5.3</span> <span class="toctext">Service Data Object API</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Hibernate"><span class="tocnumber">5.4</span> <span class="toctext">Hibernate</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#JPA_2.0"><span class="tocnumber">6</span> <span class="toctext">JPA 2.0</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#JPA_2.1"><span class="tocnumber">7</span> <span class="toctext">JPA 2.1</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#JPA_Future_Work"><span class="tocnumber">8</span> <span class="toctext">JPA Future Work</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#Tools"><span class="tocnumber">9</span> <span class="toctext">Tools</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#See_also"><span class="tocnumber">10</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#References"><span class="tocnumber">11</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#External_links"><span class="tocnumber">12</span> <span class="toctext">External links</span></a>
+<ul>
+<li class="toclevel-2 tocsection-17"><a href="#General_info"><span class="tocnumber">12.1</span> <span class="toctext">General info</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#Tutorials"><span class="tocnumber">12.2</span> <span class="toctext">Tutorials</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Persistence_API&amp;action=edit&amp;section=1" title="Edit section: History">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The final release date of the JPA 1.0 specification was 11 May 2006 as part of <a href="Java_Community_Process.html" title="Java Community Process">Java Community Process</a> JSR 220. The JPA 2.0 specification was released 10 December 2009. The JPA 2.1 specification was released 22 April 2013.</p>
+<h2><span class="mw-headline" id="Entities">Entities</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Persistence_API&amp;action=edit&amp;section=2" title="Edit section: Entities">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>A persistence <a href="https://en.wikipedia.org/wiki/Entity_class" class="mw-redirect" title="Entity class">entity</a> is a lightweight <a href="https://en.wikipedia.org/wiki/Java_class" class="mw-redirect" title="Java class">Java class</a> whose state is typically persisted to a <a href="https://en.wikipedia.org/wiki/Table_(database)" title="Table (database)">table</a> in a <a href="https://en.wikipedia.org/wiki/Relational_database" title="Relational database">relational database</a>. Instances of such an entity correspond to individual <a href="https://en.wikipedia.org/wiki/Row_(database)" title="Row (database)">rows</a> in the table. Entities typically have relationships with other entities, and these relationships are expressed through object/relational metadata. Object/relational metadata can be specified directly in the entity class file by using <a href="Java_annotation.html" title="Java annotation">annotations</a>, or in a separate <a href="https://en.wikipedia.org/wiki/XML" title="XML">XML</a> descriptor file distributed with the application.</p>
+<h2><span class="mw-headline" id="The_Java_Persistence_Query_Language">The Java Persistence Query Language</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Persistence_API&amp;action=edit&amp;section=3" title="Edit section: The Java Persistence Query Language">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div role="note" class="hatnote">Further information: Detailed information is available at <a href="https://en.wikibooks.org/wiki/Java_Persistence/Querying" class="extiw" title="b:Java Persistence/Querying">Wikibook's Java Persistence/Querying article</a></div>
+<p>The <a href="Java_Persistence_Query_Language.html" title="Java Persistence Query Language">Java Persistence Query Language</a> (JPQL) makes queries against entities stored in a relational database. Queries resemble <a href="https://en.wikipedia.org/wiki/SQL" title="SQL">SQL</a> queries in syntax, but operate against entity objects rather than directly with database tables.</p>
+<h2><span class="mw-headline" id="Motivation">Motivation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Persistence_API&amp;action=edit&amp;section=4" title="Edit section: Motivation">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Prior to the introduction of <a href="https://en.wikipedia.org/wiki/EJB" class="mw-redirect" title="EJB">EJB</a> 3.0 specification, many enterprise Java developers used lightweight persistent objects, provided by either persistence frameworks (for example <a href="Hibernate_(Java).html" class="mw-redirect" title="Hibernate (Java)">Hibernate</a>) or <a href="https://en.wikipedia.org/wiki/Data_access_object" title="Data access object">data access objects</a> instead of <a href="Entity_Bean.html" title="Entity Bean">entity beans</a>. This is because entity beans, in previous EJB specifications, called for too much complicated code and heavy resource footprint, and they could be used only in <a href="https://en.wikipedia.org/wiki/Application_server#Java_application_servers" title="Application server">Java EE application servers</a> because of interconnections and dependencies in the source code between beans and DAO objects or persistence framework. Thus, many of the features originally presented in third-party persistence frameworks were incorporated into the Java Persistence API, and, as of 2006, projects like <a href="Hibernate_(Java).html" class="mw-redirect" title="Hibernate (Java)">Hibernate</a> (version 3.2) and <a href="TopLink.html" title="TopLink">TopLink Essentials</a> have become themselves implementations of the Java Persistence API specification.</p>
+<h2><span class="mw-headline" id="Related_technologies">Related technologies</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Persistence_API&amp;action=edit&amp;section=5" title="Edit section: Related technologies">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Enterprise_JavaBeans">Enterprise JavaBeans</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Persistence_API&amp;action=edit&amp;section=6" title="Edit section: Enterprise JavaBeans">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The <a href="Enterprise_JavaBean.html#EJB_3.0.2C_final_release_.282006-05-02.29" class="mw-redirect" title="Enterprise JavaBean">EJB 3.0</a> specification (itself part of the Java EE 5 platform) included a definition of the Java Persistence API. However, end-users do not need an EJB container or a Java EE application server in order to run applications that use this persistence API.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[1]</a></sup> Future versions of the Java Persistence API will be defined in a separate <a href="Java_Community_Process.html" title="Java Community Process">JSR</a> and specification rather than in the EJB JSR/specification.</p>
+<p>The Java Persistence API replaces the persistence solution of EJB 2.0 CMP (Container Managed Persistence).</p>
+<h3><span class="mw-headline" id="Java_Data_Objects_API">Java Data Objects API</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Persistence_API&amp;action=edit&amp;section=7" title="Edit section: Java Data Objects API">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div role="note" class="hatnote">Main article: <a href="Java_Data_Objects.html" title="Java Data Objects">Java Data Objects</a></div>
+<p>The Java Persistence API was developed in part to unify the <i>Java Data Objects API</i>, and the <i>EJB 2.0 Container Managed Persistence (CMP) API</i>. As of 2009<sup class="plainlinks noprint asof-tag update" style="display:none;"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Java_Persistence_API&amp;action=edit">[update]</a></sup> most products supporting each of those APIs support the Java Persistence API.</p>
+<p>The Java Persistence API specifies persistence only for <a href="https://en.wikipedia.org/wiki/Relational_database_management_system" title="Relational database management system">relational database management systems</a>. That is, JPA focuses on <a href="https://en.wikipedia.org/wiki/Object-relational_mapping" title="Object-relational mapping">object-relational mapping</a> (ORM) (note that there are JPA providers who support other <a href="https://en.wikipedia.org/wiki/Database_model" title="Database model">database models</a> besides relational database, but this is outside the scope of what JPA was designed for). Refer to JPA 2 spec section 1 introduction for clarification of the role of JPA, which states very clearly <i>"The technical objective of this work is to provide an object/relational mapping facility for the Java application developer using a Java domain model to manage a relational database."</i></p>
+<p>The <a href="Java_Data_Objects.html" title="Java Data Objects">Java Data Objects</a> specification supports ORM, as well as persistence to other types of database models, for example <a href="https://en.wikipedia.org/wiki/Flat_file_database" title="Flat file database">flat file databases</a> and <a href="https://en.wikipedia.org/wiki/NoSQL" title="NoSQL">NoSQL</a> databases, including <a href="https://en.wikipedia.org/wiki/Document_database" class="mw-redirect" title="Document database">document databases</a>, <a href="https://en.wikipedia.org/wiki/Graph_database" title="Graph database">graph databases</a>, as well as literally any other conceivable datastore.</p>
+<h3><span class="mw-headline" id="Service_Data_Object_API">Service Data Object API</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Persistence_API&amp;action=edit&amp;section=8" title="Edit section: Service Data Object API">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div role="note" class="hatnote">Main article: <a href="https://en.wikipedia.org/wiki/Service_Data_Objects" title="Service Data Objects">Service Data Objects</a></div>
+<p>The designers<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">[2]</a></sup> of the Java Persistence API aimed to provide for relational persistence, with many of the key areas taken from <a href="https://en.wikipedia.org/wiki/Object-relational_mapping" title="Object-relational mapping">object-relational mapping</a> tools such as <a href="Hibernate_(Java).html" class="mw-redirect" title="Hibernate (Java)">Hibernate</a> and <a href="TopLink.html" title="TopLink">TopLink</a>. Java Persistence API improved on and replaced EJB 2.0, evidenced by its inclusion in EJB 3.0. The Service Data Objects (SDO) API (JSR 235) has a very different objective to the Java Persistence API and is considered <sup id="cite_ref-3" class="reference"><a href="#cite_note-3">[3]</a></sup><sup id="cite_ref-4" class="reference"><a href="#cite_note-4">[4]</a></sup> complementary. The SDO API is designed for <a href="https://en.wikipedia.org/wiki/Service-oriented_architecture" title="Service-oriented architecture">service-oriented architectures</a>, multiple data formats rather than only relational data, and multiple programming languages. The <a href="Java_Community_Process.html" title="Java Community Process">Java Community Process</a> manages the Java version of the SDO API; the <a href="https://en.wikipedia.org/wiki/C++" title="C++">C++</a> version of the SDO API is managed via <a href="https://en.wikipedia.org/wiki/OASIS_(organization)" title="OASIS (organization)">OASIS</a>.</p>
+<h3><span class="mw-headline" id="Hibernate">Hibernate</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Persistence_API&amp;action=edit&amp;section=9" title="Edit section: Hibernate">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div role="note" class="hatnote">Main article: <a href="Hibernate_(Java).html" class="mw-redirect" title="Hibernate (Java)">Hibernate (Java)</a></div>
+<p>Hibernate provides an <a href="https://en.wikipedia.org/wiki/Open_source" class="mw-redirect" title="Open source">open source</a> <a href="https://en.wikipedia.org/wiki/Object-relational_mapping" title="Object-relational mapping">object-relational mapping</a> framework for <a href="Java_(programming_language).html" title="Java (programming language)">Java</a>. Versions 3.2 and later provide an implementation for the Java Persistence API.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">[5]</a></sup> <a href="https://en.wikipedia.org/w/index.php?title=Gavin_King_(Developer)&amp;action=edit&amp;redlink=1" class="new" title="Gavin King (Developer) (page does not exist)">Gavin King</a> founded the Hibernate project.<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">[6]</a></sup> He represented <a href="https://en.wikipedia.org/wiki/JBoss_(company)" title="JBoss (company)">JBoss</a> on JSR 220,<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">[7]</a></sup> the <a href="Java_Community_Process.html" title="Java Community Process">JCP</a> expert group charged with developing JPA. This led to ongoing controversy and speculation surrounding the relationship between JPA and Hibernate. <a href="https://en.wikipedia.org/wiki/Sun_Microsystems" title="Sun Microsystems">Sun Microsystems</a> has stated<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">[8]</a></sup> that ideas came from several frameworks, including Hibernate and <a href="Java_Data_Objects.html" title="Java Data Objects">Java Data Objects</a></p>
+<h2><span class="mw-headline" id="JPA_2.0">JPA 2.0</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Persistence_API&amp;action=edit&amp;section=10" title="Edit section: JPA 2.0">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Development of a new version of JPA 2.0 was started in July 2007 in the Java Community Process as JSR 317. JPA 2.0 was approved as final on 10 December 2009. The focus of JPA 2.0 was to address features that were present in some of the popular ORM vendors, but could not gain consensus approval for JPA 1.0.</p>
+<p>Main features included were:</p>
+<ul>
+<li>Expanded object-relational mapping functionality
+<ul>
+<li>support for collections of embedded objects, linked in the ORM with a <a href="https://en.wikipedia.org/wiki/Cardinality_(data_modeling)" title="Cardinality (data modeling)">many-to-one relationship</a></li>
+<li>ordered lists</li>
+<li>combinations of access types</li>
+</ul>
+</li>
+<li>A criteria query API</li>
+<li>standardization of <a href="https://en.wikipedia.org/wiki/SQL_Hints" class="mw-redirect" title="SQL Hints">SQL Hints</a></li>
+<li>standardization of additional metadata to support DDL generation</li>
+<li>support for validation</li>
+<li>Shared object cache support.</li>
+</ul>
+<p>Vendors supporting JPA 2.0:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Batoo_JPA" title="Batoo JPA">Batoo JPA</a></li>
+<li><a href="DataNucleus.html" title="DataNucleus">DataNucleus</a> (formerly JPOX)</li>
+<li><a href="EclipseLink.html" title="EclipseLink">EclipseLink</a> (formerly <a href="TopLink.html" title="TopLink">Oracle TopLink</a>)</li>
+<li><a href="https://en.wikipedia.org/wiki/IBM" title="IBM">IBM</a>, for <a href="https://en.wikipedia.org/wiki/WebSphere_Application_Server" class="mw-redirect" title="WebSphere Application Server">WebSphere Application Server</a><sup id="cite_ref-9" class="reference"><a href="#cite_note-9">[9]</a></sup></li>
+<li><a href="https://en.wikipedia.org/wiki/JBoss" class="mw-redirect" title="JBoss">JBoss</a> with <a href="Hibernate_(Java).html" class="mw-redirect" title="Hibernate (Java)">Hibernate</a></li>
+<li><a rel="nofollow" class="external text" href="https://github.com/impetus-opensource/Kundera">Kundera</a></li>
+<li><a href="https://en.wikipedia.org/wiki/ObjectDB" title="ObjectDB">ObjectDB</a></li>
+<li><a href="https://en.wikipedia.org/wiki/OpenJPA" class="mw-redirect" title="OpenJPA">OpenJPA</a></li>
+<li><a href="https://en.wikipedia.org/wiki/OrientDB" title="OrientDB">OrientDB</a> from <a href="https://en.wikipedia.org/w/index.php?title=Orient_Technologies&amp;action=edit&amp;redlink=1" class="new" title="Orient Technologies (page does not exist)">Orient Technologies</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Versant_Corporation" title="Versant Corporation">Versant Corporation</a> JPA (not relational, object database)<sup id="cite_ref-10" class="reference"><a href="#cite_note-10">[10]</a></sup></li>
+</ul>
+<h2><span class="mw-headline" id="JPA_2.1">JPA 2.1</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Persistence_API&amp;action=edit&amp;section=11" title="Edit section: JPA 2.1">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Development of a new version of JPA 2.1 was started in July 2011 as JSR 338. JPA 2.1 was approved as final on 22 May 2013.</p>
+<p>Main features included were:</p>
+<ul>
+<li>Converters - allowing custom code conversions between database and object types.</li>
+<li>Criteria Update/Delete - allows bulk updates and deletes through the Criteria API.</li>
+<li>Entity Graphs - allow partial or specified fetching or merging of objects.</li>
+<li>JPQL/Criteria enhancements - arithmetic sub-queries, generic database functions, join ON clause, TREAT option.</li>
+<li>Schema Generation</li>
+<li>Stored Procedures - allows queries to be defined for database stored procedures.</li>
+</ul>
+<p>Vendors supporting JPA 2.1</p>
+<ul>
+<li><a href="DataNucleus.html" title="DataNucleus">DataNucleus</a></li>
+<li><a href="EclipseLink.html" title="EclipseLink">EclipseLink</a></li>
+<li><a href="Hibernate_(Java).html" class="mw-redirect" title="Hibernate (Java)">Hibernate</a></li>
+</ul>
+<h2><span class="mw-headline" id="JPA_Future_Work">JPA Future Work</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Persistence_API&amp;action=edit&amp;section=12" title="Edit section: JPA Future Work">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Future JPA specification information is available here:</p>
+<ul>
+<li><a rel="nofollow" class="external text" href="https://java.net/projects/jpa-spec/lists">JPA Specification Mailing Lists</a></li>
+<li><a rel="nofollow" class="external text" href="https://java.net/jira/browse/JPA_SPEC">JPA Specification JIRA</a></li>
+</ul>
+<p>In November 2015, Linda DeMichiel announced on the javaee-spec users mailing that Lukas Jungmann took over as the specification lead. Linda's announcement also stated, "[w]e plan to do an MR for JPA 2.2 in the Java EE 8 time frame".<sup id="cite_ref-11" class="reference"><a href="#cite_note-11">[11]</a></sup><sup id="cite_ref-12" class="reference"><a href="#cite_note-12">[12]</a></sup><sup id="cite_ref-13" class="reference"><a href="#cite_note-13">[13]</a></sup></p>
+<h2><span class="mw-headline" id="Tools">Tools</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Persistence_API&amp;action=edit&amp;section=13" title="Edit section: Tools">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="https://en.wikipedia.org/w/index.php?title=Eclipse_JPA_(Dali)&amp;action=edit&amp;redlink=1" class="new" title="Eclipse JPA (Dali) (page does not exist)">Eclipse JPA (Dali)</a></li>
+<li><a href="https://en.wikipedia.org/w/index.php?title=NetBeans_JPA_Modeler&amp;action=edit&amp;redlink=1" class="new" title="NetBeans JPA Modeler (page does not exist)">NetBeans JPA Modeler</a></li>
+</ul>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Persistence_API&amp;action=edit&amp;section=14" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/.NET_Persistence_API" title=".NET Persistence API">.NET Persistence API (NPA)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/JDBC" class="mw-redirect" title="JDBC">JDBC</a></li>
+<li><a href="https://en.wikipedia.org/wiki/MyBatis" title="MyBatis">MyBatis</a></li>
+<li><a href="OpenXava.html" title="OpenXava">OpenXava</a></li>
+<li><a href="https://en.wikipedia.org/wiki/PureQuery" class="mw-redirect" title="PureQuery">pureQuery</a></li>
+<li><a href="https://en.wikipedia.org/wiki/SAP_NetWeaver_Application_Server" title="SAP NetWeaver Application Server">SAP NetWeaver Application Server</a></li>
+<li><a href="https://en.wikipedia.org/wiki/XQuery_API_for_Java" title="XQuery API for Java">XQJ</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Persistence_API&amp;action=edit&amp;section=15" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://docs.jboss.org/hibernate/entitymanager/3.5/reference/en/html_single/#architecture-javase">Hibernate EntityManager: Java SE environments</a><br />
+<a rel="nofollow" class="external text" href="http://docs.jboss.org/hibernate/entitymanager/3.5/reference/en/html_single/#d0e980">Hibernate EntityManager: Obtaining an EntityManager in a Java SE environment</a></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://jcp.org/en/jsr/detail?id=220">"JSR 220 Members"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+Persistence+API&amp;rft.btitle=JSR+220+Members&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fjcp.org%2Fen%2Fjsr%2Fdetail%3Fid%3D220&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><cite class="citation web">Barreto, Charlton. <a rel="nofollow" class="external text" href="http://charltonb.typepad.com/weblog/2007/10/sdo-and-jpa.html">"SDO and JPA"</a>. <i>Digital Walkabout</i><span class="reference-accessdate">. Retrieved <span class="nowrap">5 May</span> 2011</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+Persistence+API&amp;rft.atitle=SDO+and+JPA&amp;rft.aufirst=Charlton&amp;rft.aulast=Barreto&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fcharltonb.typepad.com%2Fweblog%2F2007%2F10%2Fsdo-and-jpa.html&amp;rft.jtitle=Digital+Walkabout&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><cite class="citation web">Edwards, Mike. <a rel="nofollow" class="external text" href="http://www.osoa.org/display/Main/SDO+and+Java+Persistence+Architecture+(JPA)">"SDO and Java Persistence Architecture (JPA)"</a>. <i>Open SOA</i>. osoa.org<span class="reference-accessdate">. Retrieved <span class="nowrap">5 May</span> 2011</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+Persistence+API&amp;rft.atitle=SDO+and+Java+Persistence+Architecture+%28JPA%29&amp;rft.aufirst=Mike&amp;rft.aulast=Edwards&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.osoa.org%2Fdisplay%2FMain%2FSDO%2Band%2BJava%2BPersistence%2BArchitecture%2B%2528JPA%2529&amp;rft.jtitle=Open+SOA&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.hibernate.org/397.html">"hibernate.org - Java Persistence with Hibernate"</a>. JBoss<span class="reference-accessdate">. Retrieved <span class="nowrap">2008-11-17</span></span>. <q>Hibernate implements the Java Persistence object/relational javaAPI and persistence management interfaces</q></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+Persistence+API&amp;rft.btitle=hibernate.org+-+Java+Persistence+with+Hibernate&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.hibernate.org%2F397.html&amp;rft.pub=JBoss&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><cite class="citation book"><a rel="nofollow" class="external text" href="https://books.google.com/books?id=EWVnnAEACAAJ"><i>Java Persistence with Hibernate</i></a>. Manning Publications. <a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="https://en.wikipedia.org/wiki/Special:BookSources/9781617290459" title="Special:BookSources/9781617290459">9781617290459</a><span class="reference-accessdate">. Retrieved <span class="nowrap">8 December</span> 2013</span>. <q>Gavin King is the founder of the Hibernate project</q></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+Persistence+API&amp;rft.btitle=Java+Persistence+with+Hibernate&amp;rft.genre=book&amp;rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DEWVnnAEACAAJ&amp;rft.isbn=9781617290459&amp;rft.pub=Manning+Publications&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.jboss.com/company/leadership">"JBoss.com - Industry Leadership"</a>. JBoss<span class="reference-accessdate">. Retrieved <span class="nowrap">2008-11-17</span></span>. <q>JSR 220, EJB 3.0 Spec Committee, Gavin King, Bill Burke, Marc Fleury</q></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+Persistence+API&amp;rft.btitle=JBoss.com+-+Industry+Leadership&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.jboss.com%2Fcompany%2Fleadership&amp;rft.pub=JBoss&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://web.archive.org/web/20080822023926/http://java.sun.com/javaee/overview/faq/persistence.jsp">"Java Persistence API FAQ"</a>. Sun Microsystems. Archived from <a rel="nofollow" class="external text" href="http://java.sun.com/javaee/overview/faq/persistence.jsp">the original</a> on 2008-08-22<span class="reference-accessdate">. Retrieved <span class="nowrap">2010-07-01</span></span>. <q>The Java Persistence API draws upon the best ideas from persistence technologies such as Hibernate, TopLink, and JDO</q></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+Persistence+API&amp;rft.btitle=Java+Persistence+API+FAQ&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fjava.sun.com%2Fjavaee%2Foverview%2Ffaq%2Fpersistence.jsp&amp;rft.pub=Sun+Microsystems&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www-01.ibm.com/common/ssi/cgi-bin/ssialias?subtype=ca&amp;infotype=an&amp;appname=iSource&amp;supplier=897&amp;letternum=ENUS210-129">"IBM WebSphere Application Server V7 Feature Pack for OSGi Applications and Java Persistence API"</a>. <i>Download web site</i>. IBM. 27 April 2010<span class="reference-accessdate">. Retrieved <span class="nowrap">8 December</span> 2013</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+Persistence+API&amp;rft.atitle=IBM+WebSphere+Application+Server+V7+Feature+Pack+for+OSGi+Applications+and+Java+Persistence+API&amp;rft.date=2010-04-27&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww-01.ibm.com%2Fcommon%2Fssi%2Fcgi-bin%2Fssialias%3Fsubtype%3Dca%26infotype%3Dan%26appname%3DiSource%26supplier%3D897%26letternum%3DENUS210-129&amp;rft.jtitle=Download+web+site&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://community.versant.com/jpa.aspx">"Versant JPA 2-Step Download"</a>. <i>Download web site</i>. <a href="https://en.wikipedia.org/wiki/Actian" title="Actian">Actian</a><span class="reference-accessdate">. Retrieved <span class="nowrap">8 December</span> 2013</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+Persistence+API&amp;rft.atitle=Versant+JPA+2-Step+Download&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fcommunity.versant.com%2Fjpa.aspx&amp;rft.jtitle=Download+web+site&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://java.net/projects/javaee-spec/lists/users/archive/2015-11/message/1">"Java EE Platform Specification: users@javaee-spec.java.net: Archive — Project Kenai"</a>. <i>java.net</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2016-11-08</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+Persistence+API&amp;rft.atitle=Java+EE+Platform+Specification%3A+users%40javaee-spec.java.net%3A+Archive+%94+Project+Kenai&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fjava.net%2Fprojects%2Fjavaee-spec%2Flists%2Fusers%2Farchive%2F2015-11%2Fmessage%2F1&amp;rft.jtitle=java.net&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text"><cite id="CITEREFJava2015" class="citation">Java (2015-10-27), <a rel="nofollow" class="external text" href="https://www.youtube.com/watch?v=1OKEpg5zpsU#t=4h19m26s"><i>JavaOne LIVE - Tuesday, Mission</i></a><span class="reference-accessdate">, retrieved <span class="nowrap">2016-11-08</span></span></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+Persistence+API&amp;rft.au=Java&amp;rft.btitle=JavaOne+LIVE+-+Tuesday%2C+Mission&amp;rft.date=2015-10-27&amp;rft.genre=book&amp;rft_id=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D1OKEpg5zpsU%23t%3D4h19m26s&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-13">^</a></b></span> <span class="reference-text"><cite class="citation news">Jungmann, Lukas (10 October 2015). <a rel="nofollow" class="external text" href="https://events.rainfocus.com/oow15/catalog/oracle.jsp?event=javaone&amp;search=jungmann&amp;search.event=javaoneEvent">"What's New in the Java Persistence API (JSR 338) [CON7631]"</a>. <i>JavaOne 2015 Session Catalog</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2016-11-08</span></span> – via rainfocus.com.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+Persistence+API&amp;rft.atitle=What%99s+New+in+the+Java+Persistence+API+%28JSR+338%29+%5BCON7631%5D&amp;rft.aufirst=Lukas&amp;rft.aulast=Jungmann&amp;rft.date=2015-10-10&amp;rft.genre=article&amp;rft_id=https%3A%2F%2Fevents.rainfocus.com%2Foow15%2Fcatalog%2Foracle.jsp%3Fevent%3Djavaone%26search%3Djungmann%26search.event%3DjavaoneEvent&amp;rft.jtitle=JavaOne+2015+Session+Catalog&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Persistence_API&amp;action=edit&amp;section=16" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table role="presentation" class="mbox-small plainlinks sistersitebox" style="border:1px solid #aaa;background-color:#f9f9f9">
+<tr>
+<td class="mbox-image"><a href="https://en.wikipedia.org/wiki/File:Wikibooks-logo-en-noslogan.svg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/40px-Wikibooks-logo-en-noslogan.svg.png" width="40" height="40" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/60px-Wikibooks-logo-en-noslogan.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/80px-Wikibooks-logo-en-noslogan.svg.png 2x" data-file-width="400" data-file-height="400" /></a></td>
+<td class="mbox-text plainlist">Wikibooks has a book on the topic of: <i><b><a href="https://en.wikibooks.org/wiki/Java_Persistence" class="extiw" title="wikibooks:Java Persistence">Java Persistence</a></b></i></td>
+</tr>
+</table>
+<h3><span class="mw-headline" id="General_info">General info</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Persistence_API&amp;action=edit&amp;section=17" title="Edit section: General info">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://jcp.org/aboutJava/communityprocess/final/jsr220/index.html">Documentation for the final version of the EJB3 spec (called JSR220)</a></li>
+<li><a rel="nofollow" class="external text" href="http://glassfish.dev.java.net/javaee5/persistence/">GlassFish's Persistence page</a></li>
+<li><a rel="nofollow" class="external text" href="http://jcp.org/aboutJava/communityprocess/final/jsr317/index.html">JCP Persistence page</a></li>
+</ul>
+<h3><span class="mw-headline" id="Tutorials">Tutorials</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Persistence_API&amp;action=edit&amp;section=18" title="Edit section: Tutorials">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://docs.oracle.com/javaee/6/api/javax/persistence/package-summary.html">Java EE 6 Persistence API Javadoc</a></li>
+<li><a rel="nofollow" class="external text" href="http://docs.oracle.com/javaee/6/tutorial/doc/bnbpy.html">Java EE 6 Persistence API tutorial</a></li>
+<li><a rel="nofollow" class="external text" href="http://docs.oracle.com/javaee/7/api/javax/persistence/package-summary.html">Java EE 7 Persistence API Javadoc</a></li>
+<li><a rel="nofollow" class="external text" href="http://docs.oracle.com/javaee/7/tutorial/partpersist.htm">Java EE 7 Persistence API tutorial</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.thejavageek.com/jpa-tutorials/">JPA Tutorial by Prasad Kharkar</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.javacodegeeks.com/2015/02/jpa-tutorial.html">JPA Tutorial from Java Code Geeks</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.coderpanda.com/jpa-tutorial/">JPA Tutorial using OpenJPA as implementation</a></li>
+<li><a rel="nofollow" class="external text" href="http://java.sun.com/javaee/5/docs/tutorial/doc/?wp406141&amp;JavaEETutorialPartFour.html#wp996871">Persistence in the Java EE 5 tutorial</a></li>
+</ul>
+<div role="navigation" class="navbox" aria-labelledby="Java_Persistence_API" style="padding:3px">
+<table class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="https://en.wikipedia.org/wiki/Template:Java_Persistence_API" title="Template:Java Persistence API"><abbr title="View this template" style=";;background:none transparent;border:none;">v</abbr></a></li>
+<li class="nv-talk"><a href="https://en.wikipedia.org/wiki/Template_talk:Java_Persistence_API" title="Template talk:Java Persistence API"><abbr title="Discuss this template" style=";;background:none transparent;border:none;">t</abbr></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Java_Persistence_API&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;">e</abbr></a></li>
+</ul>
+</div>
+<div id="Java_Persistence_API" style="font-size:114%"><strong class="selflink">Java Persistence API</strong></div>
+</th>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td colspan="2" class="navbox-list navbox-odd hlist" style="width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="DataNucleus.html" title="DataNucleus">DataNucleus</a></li>
+<li><a href="EclipseLink.html" title="EclipseLink">EclipseLink</a></li>
+<li><a href="Hibernate_(Java).html" class="mw-redirect" title="Hibernate (Java)">Hibernate</a></li>
+<li><a href="https://en.wikipedia.org/wiki/ObjectDB" title="ObjectDB">ObjectDB</a></li>
+<li><a href="Apache_OpenJPA.html" title="Apache OpenJPA">OpenJPA</a></li>
+<li><a href="TopLink.html" title="TopLink">TopLink</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div role="navigation" class="navbox" aria-labelledby="Java_EE_7_specifications" style="padding:3px">
+<table class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="https://en.wikipedia.org/wiki/Template:Java_EE_7" title="Template:Java EE 7"><abbr title="View this template" style=";;background:none transparent;border:none;">v</abbr></a></li>
+<li class="nv-talk"><a href="https://en.wikipedia.org/wiki/Template_talk:Java_EE_7" title="Template talk:Java EE 7"><abbr title="Discuss this template" style=";;background:none transparent;border:none;">t</abbr></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Java_EE_7&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;">e</abbr></a></li>
+</ul>
+</div>
+<div id="Java_EE_7_specifications" style="font-size:114%"><a href="Java_EE_version_history.html#Java_EE_7_.28June_12.2C_2013.29" title="Java EE version history">Java EE 7</a> specifications</div>
+</th>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Web_Application" class="mw-redirect" title="Web Application">Web Application</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Java_Servlet.html" class="mw-redirect" title="Java Servlet">Servlet</a></li>
+<li><a href="JavaServer_Pages.html" title="JavaServer Pages">JavaServer Pages</a></li>
+<li><a href="Unified_Expression_Language.html" title="Unified Expression Language">Expression Language</a></li>
+<li><a href="JavaServer_Pages_Standard_Tag_Library.html" title="JavaServer Pages Standard Tag Library">JSTL</a></li>
+<li><a href="JavaServer_Faces.html" title="JavaServer Faces">JavaServer Faces</a></li>
+<li><a href="https://en.wikipedia.org/wiki/WebSocket" title="WebSocket">WebSocket</a></li>
+<li><a href="https://en.wikipedia.org/w/index.php?title=JSON_Processing&amp;action=edit&amp;redlink=1" class="new" title="JSON Processing (page does not exist)">JSON Processing</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Enterprise_Application" class="mw-redirect" title="Enterprise Application">Enterprise Application</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li>CDI</li>
+<li><a href="https://en.wikipedia.org/wiki/Dependency_injection" title="Dependency injection">Dependency Injection</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Bean_Validation" title="Bean Validation">Bean Validation</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Enterprise_JavaBeans" title="Enterprise JavaBeans">Enterprise JavaBeans</a></li>
+<li><strong class="selflink">JPA</strong></li>
+<li><a href="Java_Message_Service.html" title="Java Message Service">JMS</a></li>
+<li><a href="Java_Transaction_API.html" title="Java Transaction API">JTA</a></li>
+<li><a href="https://en.wikipedia.org/wiki/JavaMail" title="JavaMail">JavaMail</a></li>
+<li>Interceptors</li>
+<li><a href="Java_EE_Connector_Architecture.html" title="Java EE Connector Architecture">JCA</a></li>
+<li><a href="JSR_250.html" title="JSR 250">Common Annotations</a></li>
+<li><a href="https://en.wikipedia.org/w/index.php?title=Batch_Applications&amp;action=edit&amp;redlink=1" class="new" title="Batch Applications (page does not exist)">Batch Applications</a></li>
+<li><a href="https://en.wikipedia.org/w/index.php?title=Concurrency_Utilities&amp;action=edit&amp;redlink=1" class="new" title="Concurrency Utilities (page does not exist)">Concurrency Utilities</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Web_Services" class="mw-redirect" title="Web Services">Web Services</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Java_API_for_RESTful_Web_Services" title="Java API for RESTful Web Services">JAX-RS</a></li>
+<li><a href="https://en.wikipedia.org/w/index.php?title=Enterprise_Web_Services&amp;action=edit&amp;redlink=1" class="new" title="Enterprise Web Services (page does not exist)">Enterprise Web Services</a></li>
+<li><a href="Java_API_for_XML_Web_Services.html" title="Java API for XML Web Services">JAX-WS</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Web_Services_Metadata_for_Java" title="Web Services Metadata for Java">Web Services Metadata</a></li>
+<li><a href="Java_API_for_XML_Messaging.html" title="Java API for XML Messaging">Java API for XML Messaging</a></li>
+<li><a href="Java_API_for_XML_Registries.html" title="Java API for XML Registries">JAXR</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Application_performance_management" title="Application performance management">Management</a> and <a href="https://en.wikipedia.org/wiki/Application_security" title="Application security">Security</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/w/index.php?title=Java_Authentication_SPI&amp;action=edit&amp;redlink=1" class="new" title="Java Authentication SPI (page does not exist)">Java Authentication SPI</a></li>
+<li><a href="https://en.wikipedia.org/w/index.php?title=Java_Authorization_SPI&amp;action=edit&amp;redlink=1" class="new" title="Java Authorization SPI (page does not exist)">Java Authorization SPI</a></li>
+<li><a href="https://en.wikipedia.org/wiki/J2EE_Management" title="J2EE Management">J2EE Management</a></li>
+<li>Debugging for Other Languages</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Related Specs in Java SE</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Java_Architecture_for_XML_Binding.html" title="Java Architecture for XML Binding">JAXB</a></li>
+<li><a href="Java_API_for_XML_Processing.html" title="Java API for XML Processing">JAXP</a></li>
+<li><a href="Java_Database_Connectivity.html" title="Java Database Connectivity">JDBC</a></li>
+<li><a href="Java_Management_Extensions.html" title="Java Management Extensions">JMX</a></li>
+<li><a href="JavaBeans_Activation_Framework.html" title="JavaBeans Activation Framework">JavaBeans Activation Framework</a></li>
+<li><a href="StAX.html" title="StAX">Streaming API for XML</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div role="navigation" class="navbox" aria-label="Navbox" style="padding:3px">
+<table class="nowraplinks hlist navbox-inner" style="border-spacing:0;background:transparent;color:inherit">
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Help:Authority_control" title="Help:Authority control">Authority control</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><span style="white-space:nowrap;"><a href="https://en.wikipedia.org/wiki/Integrated_Authority_File" title="Integrated Authority File">GND</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://d-nb.info/gnd/7702016-9">7702016-9</a></span></span></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1254
+Cached time: 20170116121259
+Cache expiry: 2592000
+Dynamic content: false
+CPU time usage: 0.156 seconds
+Real time usage: 0.216 seconds
+Preprocessor visited node count: 1028/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 42380/2097152 bytes
+Template argument size: 787/2097152 bytes
+Highest expansion depth: 12/40
+Expensive parser function count: 2/500
+Lua time usage: 0.073/10.000 seconds
+Lua memory usage: 3.73 MB/50 MB
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  178.685      1 - -total
+ 41.98%   75.010      1 - Template:Reflist
+ 26.53%   47.405      9 - Template:Cite_web
+ 21.16%   37.809      1 - Template:Refimprove
+ 14.15%   25.292      1 - Template:Ambox
+  9.59%   17.134      1 - Template:Authority_control
+  5.74%   10.262      1 - Template:As_of
+  5.41%    9.665      2 - Template:Navbox
+  4.34%    7.758      1 - Template:Wikibooks
+  4.29%    7.670      1 - Template:Java_Persistence_API
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:7811267-0!*!0!!en!4!* and timestamp 20170116121259 and revision id 748692649
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Java_Persistence_API&amp;oldid=748692649">https://en.wikipedia.org/w/index.php?title=Java_Persistence_API&amp;oldid=748692649</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Help_Category.html" title="Help:Category">Categories</a>: <ul><li><a href="Category_Java_APIs.html" title="Category:Java APIs">Java APIs</a></li><li><a href="Category_Java_enterprise_platform.html" title="Category:Java enterprise platform">Java enterprise platform</a></li><li><a href="Category_Java_specification_requests.html" title="Category:Java specification requests">Java specification requests</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Object-relational_mapping" title="Category:Object-relational mapping">Object-relational mapping</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Persistence" title="Category:Persistence">Persistence</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Articles_needing_additional_references_from_June_2010" title="Category:Articles needing additional references from June 2010">Articles needing additional references from June 2010</a></li><li><a href="https://en.wikipedia.org/wiki/Category:All_articles_needing_additional_references" title="Category:All articles needing additional references">All articles needing additional references</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Articles_containing_potentially_dated_statements_from_2009" title="Category:Articles containing potentially dated statements from 2009">Articles containing potentially dated statements from 2009</a></li><li><a href="https://en.wikipedia.org/wiki/Category:All_articles_containing_potentially_dated_statements" title="Category:All articles containing potentially dated statements">All articles containing potentially dated statements</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Wikipedia_articles_with_GND_identifiers" title="Category:Wikipedia articles with GND identifiers">Wikipedia articles with GND identifiers</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="Special_MyTalk.html" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="Special_MyContributions.html" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&amp;returnto=Java+Persistence+API" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Java+Persistence+API" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="Java_Persistence_API.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+															<li  id="ca-talk"><span><a href="https://en.wikipedia.org/wiki/Talk:Java_Persistence_API"  title="Discussion about the content page [t]" accesskey="t" rel="discussion">Talk</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="Java_Persistence_API.html" >Read</a></span></li>
+															<li id="ca-edit"><span><a href="https://en.wikipedia.org/w/index.php?title=Java_Persistence_API&amp;action=edit"  title="Edit this page [e]" accesskey="e">Edit</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="https://en.wikipedia.org/w/index.php?title=Java_Persistence_API&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="https://en.wikipedia.org/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="Main_Page.html"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="Portal_Contents.html" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="Portal_Featured_content.html" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="Portal_Current_events.html" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="https://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="../../shop.wikimedia.org/index.html" title="Visit the Wikipedia store">Wikipedia store</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Interaction</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-help"><a href="Help_Contents.html" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="Wikipedia_About.html" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="Wikipedia_Community_portal.html" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="Wikipedia_Contact_us.html" title="How to contact Wikipedia">Contact page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="https://en.wikipedia.org/wiki/Special:WhatLinksHere/Java_Persistence_API" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://en.wikipedia.org/wiki/Special:RecentChangesLinked/Java_Persistence_API" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="Wikipedia_File_Upload_Wizard.html" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="https://en.wikipedia.org/w/index.php?title=Java_Persistence_API&amp;oldid=748692649" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://en.wikipedia.org/w/index.php?title=Java_Persistence_API&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q908660" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="https://en.wikipedia.org/w/index.php?title=Special:CiteThisPage&amp;page=Java_Persistence_API&amp;id=748692649" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Print/export</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Java+Persistence+API">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Java+Persistence+API&amp;returnto=Java+Persistence+API&amp;oldid=748692649&amp;writer=rdf2latex">Download as PDF</a></li><li id="t-print"><a href="https://en.wikipedia.org/w/index.php?title=Java_Persistence_API&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Languages</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Java_Persistence_API" title="Java Persistence API – Catalan" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Java_Persistence_API" title="Java Persistence API – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Java_Persistence_API" title="Java Persistence API – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Java_Persistence_API" title="Java Persistence API – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Java_Persistence_API" title="Java Persistence API – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/JPA" title="JPA – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Java_Persistence_API" title="Java Persistence API – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-kk"><a href="https://kk.wikipedia.org/wiki/Java_Persistence_API" title="Java Persistence API – Kazakh" lang="kk" hreflang="kk" class="interlanguage-link-target">Қазақша</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/Java_Persistence_API" title="Java Persistence API – Hungarian" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/Java_Persistence_API" title="Java Persistence API – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Java_Persistence_API" title="Java Persistence API – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Java_Persistence_API" title="Java Persistence API – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ro"><a href="https://ro.wikipedia.org/wiki/Java_Persistence_API" title="Java Persistence API – Romanian" lang="ro" hreflang="ro" class="interlanguage-link-target">Română</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/Java_Persistence_API" title="Java Persistence API – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/Java_Persistence_API" title="Java Persistence API – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q908660#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 9 November 2016, at 19:18.</li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="Wikipedia_Text_of_Creative_Commons_Attribution-ShareAlike_3.html">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="../../creativecommons.org/licenses/by-sa/3.0/index.html" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="../../wikimediafoundation.org/wiki/Terms_of_Use.html">Terms of Use</a> and <a href="../../wikimediafoundation.org/wiki/Privacy_policy.html">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="../../www.wikimediafoundation.org/index.html">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../../wikimediafoundation.org/wiki/Privacy_policy.html" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="Wikipedia_About.html" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="Wikipedia_General_disclaimer.html" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="Wikipedia_Contact_us.html">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a href="../../www.mediawiki.org/wiki/Special_MyLanguage/How_to_contribute.html">Developers</a></li>
+											<li id="footer-places-cookiestatement"><a href="../../wikimediafoundation.org/wiki/Cookie_statement.html">Cookie statement</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/w/index.php?title=Java_Persistence_API&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="../../www.wikimediafoundation.org/index.html"><img src="https://en.wikipedia.org/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="../../www.mediawiki.org/index.html"><img src="https://en.wikipedia.org/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":282,"wgHostname":"mw1254"});});</script>
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Java_Persistence_API by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:32 GMT -->
+</html>

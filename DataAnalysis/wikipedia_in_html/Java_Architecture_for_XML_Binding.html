@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Java_Architecture_for_XML_Binding by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:26 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Java Architecture for XML Binding - Wikipedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Java_Architecture_for_XML_Binding","wgTitle":"Java Architecture for XML Binding","wgCurRevisionId":729449408,"wgRevisionId":729449408,"wgArticleId":705688,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Java API for XML","Java specification requests"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Java_Architecture_for_XML_Binding","wgRelevantArticleId":705688,"wgRequestId":"WHkcIQpAICwAAHXulCEAAACB","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgFlaggedRevsParams":{"tags":{}},"wgStableRevisionId":null,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"en","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgWikibaseItemId":"Q518797","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.cite.styles":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@1dqfd7l",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["ext.cite.a11y","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.legacy.wikibits","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.watchlist-notice","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.gadget.featured-articles-links","ext.centralauth.centralautologin","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.interface","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="https://en.wikipedia.org/w/load.php?debug=false&amp;lang=en&amp;modules=ext.cite.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="../w/load2c8d.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../w/load18b6.css?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.29.0-wmf.7"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="https://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Java_Architecture_for_XML_Binding"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Java_Architecture_for_XML_Binding&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Java_Architecture_for_XML_Binding&amp;action=edit"/>
+<link rel="apple-touch-icon" href="https://en.wikipedia.org/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="../static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../w/api251f.php?action=rsd"/>
+<link rel="copyright" href="../../creativecommons.org/licenses/by-sa/3.0/index.html"/>
+<link rel="canonical" href="Java_Architecture_for_XML_Binding.html"/>
+<link rel="dns-prefetch" href="../../login.wikimedia.org/index.html"/>
+<link rel="dns-prefetch" href="../../meta.wikimedia.org/index.html" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Java_Architecture_for_XML_Binding rootpage-Java_Architecture_for_XML_Binding skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">Java Architecture for XML Binding</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><script>function mfTempOpenSection(id){var block=document.getElementById("mf-section-"+id);block.className+=" open-block";block.previousSibling.className+=" open-block";}</script><p><b>Java Architecture for XML Binding</b> (<b>JAXB</b>) is a <a href="https://en.wikipedia.org/wiki/Software_framework" title="Software framework">software framework</a> that allows <a href="Java_(programming_language).html" title="Java (programming language)">Java</a> developers to map Java <a href="https://en.wikipedia.org/wiki/Class_(computer_science)" class="mw-redirect" title="Class (computer science)">classes</a> to <a href="https://en.wikipedia.org/wiki/XML" title="XML">XML</a> representations. JAXB provides two main features: the ability to <a href="https://en.wikipedia.org/wiki/Serialization" title="Serialization"><i>marshal</i></a> Java <a href="https://en.wikipedia.org/wiki/Object_(computer_science)" title="Object (computer science)">objects</a> into XML and the inverse, i.e. to <i>unmarshal</i> XML back into Java objects. In other words, JAXB allows storing and retrieving data in memory in any XML format, without the need to implement a specific set of XML loading and saving routines for the program's class structure. It is similar to <code>xsd.exe</code> and <code>XmlSerializer</code> in the <a href="https://en.wikipedia.org/wiki/.NET_Framework" title=".NET Framework">.NET Framework</a>.</p>
+<p>JAXB is particularly useful when the specification is complex and changing. In such a case, regularly changing the <a href="https://en.wikipedia.org/wiki/XML_Schema_(W3C)" title="XML Schema (W3C)">XML Schema</a> definitions to keep them synchronised with the Java definitions can be time consuming and error-prone.</p>
+<p>JAXB is a part of the <a href="https://en.wikipedia.org/wiki/Java_SE" class="mw-redirect" title="Java SE">Java SE</a> platform and one of the <a href="https://en.wikipedia.org/wiki/Application_programming_interface" title="Application programming interface">APIs</a> in <a href="Java_Platform%2c_Enterprise_Edition.html" title="Java Platform, Enterprise Edition">the Java EE platform</a>, and is part of the <a href="Java_Web_Services_Development_Pack.html" title="Java Web Services Development Pack">Java Web Services Development Pack</a> (JWSDP). It is also one of the foundations for <a href="https://en.wikipedia.org/wiki/Web_Services_Interoperability_Technology" title="Web Services Interoperability Technology">WSIT</a>.</p>
+<p>JAXB 1.0 was developed under the <a href="Java_Community_Process.html" title="Java Community Process">Java Community Process</a> as JSR 31.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[1]</a></sup> In 2006 JAXB 2.0 was released under JSR 222 and Maintenance Release 2 released in December 2009.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">[2]</a></sup> <a href="https://en.wikipedia.org/wiki/Reference_implementation" title="Reference implementation">Reference implementations</a> for these specifications are available under the <a href="https://en.wikipedia.org/wiki/CDDL" class="mw-redirect" title="CDDL">CDDL open source license</a> at <a href="https://en.wikipedia.org/wiki/Java.net" title="Java.net">java.net</a>.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Usage"><span class="tocnumber">1</span> <span class="toctext">Usage</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Default_data_type_bindings"><span class="tocnumber">2</span> <span class="toctext">Default data type bindings</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Versions"><span class="tocnumber">3</span> <span class="toctext">Versions</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#See_also"><span class="tocnumber">4</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#References"><span class="tocnumber">5</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#External_links"><span class="tocnumber">6</span> <span class="toctext">External links</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#Articles"><span class="tocnumber">6.1</span> <span class="toctext">Articles</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Usage">Usage</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Architecture_for_XML_Binding&amp;action=edit&amp;section=1" title="Edit section: Usage">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The tool "<tt>xjc</tt>" can be used to convert <a href="https://en.wikipedia.org/wiki/XML_Schema_(W3C)" title="XML Schema (W3C)">XML Schema</a> and other schema file types (as of Java 1.6, <a href="https://en.wikipedia.org/wiki/RELAX_NG" title="RELAX NG">RELAX NG</a>, XML <a href="https://en.wikipedia.org/wiki/Document_Type_Definition" class="mw-redirect" title="Document Type Definition">DTD</a>, and <a href="https://en.wikipedia.org/wiki/Web_Services_Description_Language" title="Web Services Description Language">WSDL</a> are supported experimentally) to class representations.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">[3]</a></sup> Classes are marked up using <a href="Java_annotation.html" title="Java annotation">annotations</a> from <tt>javax.xml.bind.annotation.*</tt> namespace, for example, <tt>@XmlRootElement</tt> and <tt>@XmlElement</tt>. XML list sequences are represented by attributes of type <tt>java.util.List</tt>. Marshallers and Unmarshallers are created through an instance of JAXBContext.</p>
+<p>In addition, JAXB includes a "<tt>schemagen</tt>" tool that can essentially perform the inverse of "<tt>xjc</tt>", creating an XML Schema from a set of annotated classes.</p>
+<h2><span class="mw-headline" id="Default_data_type_bindings">Default data type bindings</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Architecture_for_XML_Binding&amp;action=edit&amp;section=2" title="Edit section: Default data type bindings">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The table below lists the mappings of <a href="https://en.wikipedia.org/wiki/XML_Schema_(W3C)" title="XML Schema (W3C)">XML Schema</a> (XSD) data types to Java data types in JAXB.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">[4]</a></sup></p>
+<table class="wikitable sortable" style="font-size: 100%; text-align: left; width: 35%;">
+<tr>
+<th>XML Schema Type</th>
+<th>Java Data Type</th>
+</tr>
+<tr>
+<td><code>xsd:string</code></td>
+<td><code>java.lang.String</code></td>
+</tr>
+<tr>
+<td><code>xsd:integer</code></td>
+<td><code>java.math.BigInteger</code></td>
+</tr>
+<tr>
+<td><code>xsd:positiveInteger</code></td>
+<td><code>java.math.BigInteger</code></td>
+</tr>
+<tr>
+<td><code>xsd:int</code></td>
+<td><code><b>int</b></code></td>
+</tr>
+<tr>
+<td><code>xsd:long</code></td>
+<td><code><b>long</b></code></td>
+</tr>
+<tr>
+<td><code>xsd:short</code></td>
+<td><code><b>short</b></code></td>
+</tr>
+<tr>
+<td><code>xsd:decimal</code></td>
+<td><code>java.math.BigDecimal</code></td>
+</tr>
+<tr>
+<td><code>xsd:float</code></td>
+<td><code><b>float</b></code></td>
+</tr>
+<tr>
+<td><code>xsd:double</code></td>
+<td><code><b>double</b></code></td>
+</tr>
+<tr>
+<td><code>xsd:boolean</code></td>
+<td><code><b>boolean</b></code></td>
+</tr>
+<tr>
+<td><code>xsd:byte</code></td>
+<td><code><b>byte</b></code></td>
+</tr>
+<tr>
+<td><code>xsd:QName</code></td>
+<td><code>javax.xml.namespace.QName</code></td>
+</tr>
+<tr>
+<td><code>xsd:dateTime</code></td>
+<td><code>javax.xml.datatype.XMLGregorianCalendar</code></td>
+</tr>
+<tr>
+<td><code>xsd:base64Binary</code></td>
+<td><code><b>byte[]</b></code></td>
+</tr>
+<tr>
+<td><code>xsd:hexBinary</code></td>
+<td><code><b>byte[]</b></code></td>
+</tr>
+<tr>
+<td><code>xsd:unsignedInt</code></td>
+<td><code><b>long</b></code></td>
+</tr>
+<tr>
+<td><code>xsd:unsignedShort</code></td>
+<td><code><b>int</b></code></td>
+</tr>
+<tr>
+<td><code>xsd:unsignedByte</code></td>
+<td><code><b>short</b></code></td>
+</tr>
+<tr>
+<td><code>xsd:unsignedLong</code></td>
+<td><code>java.math.BigDecimal</code></td>
+</tr>
+<tr>
+<td><code>xsd:time</code></td>
+<td><code>javax.xml.datatype.XMLGregorianCalendar</code></td>
+</tr>
+<tr>
+<td><code>xsd:date</code></td>
+<td><code>javax.xml.datatype.XMLGregorianCalendar</code></td>
+</tr>
+<tr>
+<td><code>xsd:g</code></td>
+<td><code>javax.xml.datatype.XMLGregorianCalendar</code></td>
+</tr>
+<tr>
+<td><code>xsd:anySimpleType</code><sup id="cite_ref-5" class="reference"><a href="#cite_note-5">[5]</a></sup></td>
+<td><code>java.lang.Object</code></td>
+</tr>
+<tr>
+<td><code>xsd:anySimpleType</code><sup id="cite_ref-6" class="reference"><a href="#cite_note-6">[6]</a></sup></td>
+<td><code>java.lang.String</code></td>
+</tr>
+<tr>
+<td><code>xsd:duration</code></td>
+<td><code>javax.xml.datatype.Duration</code></td>
+</tr>
+<tr>
+<td><code>xsd:NOTATION</code></td>
+<td><code>javax.xml.namespace.QName</code></td>
+</tr>
+</table>
+<h2><span class="mw-headline" id="Versions">Versions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Architecture_for_XML_Binding&amp;action=edit&amp;section=3" title="Edit section: Versions">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li>Java SE 8: JAXB 2.2.8 <sup id="cite_ref-7" class="reference"><a href="#cite_note-7">[7]</a></sup></li>
+<li>Java SE 7: JAXB 2.2.3 (JSR 222, maintenance release 2) <sup id="cite_ref-8" class="reference"><a href="#cite_note-8">[8]</a></sup></li>
+<li>Java SE 6: JAXB 2.0 (JSR 222) <sup id="cite_ref-9" class="reference"><a href="#cite_note-9">[9]</a></sup></li>
+</ul>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Architecture_for_XML_Binding&amp;action=edit&amp;section=4" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/XML_data_binding" title="XML data binding">XML data binding</a></li>
+<li><a href="JiBX.html" title="JiBX">JiBX</a> – one of the fastest XML data binders <sup id="cite_ref-10" class="reference"><a href="#cite_note-10">[10]</a></sup><sup id="cite_ref-11" class="reference"><a href="#cite_note-11">[11]</a></sup></li>
+<li><a href="XMLBeans.html" title="XMLBeans">XMLBeans</a> – a similar and complementary technology to <a href="https://en.wikipedia.org/wiki/JAXB" class="mw-redirect" title="JAXB">JAXB</a> from <a href="https://en.wikipedia.org/wiki/Apache_Software_Foundation" title="Apache Software Foundation">Apache Software Foundation</a></li>
+<li><a href="TopLink.html" title="TopLink">TopLink</a> – an object to relational and object to <a href="https://en.wikipedia.org/wiki/XML" title="XML">XML</a> mapper from <a href="https://en.wikipedia.org/wiki/Oracle_Corporation" title="Oracle Corporation">Oracle</a> that supports JAXB 1.0</li>
+<li><a href="EclipseLink.html" title="EclipseLink">EclipseLink</a> MOXy – <a href="https://en.wikipedia.org/wiki/Open_source" class="mw-redirect" title="Open source">open source</a> implementation of JAXB and object XML mapping services under the <a href="https://en.wikipedia.org/wiki/Eclipse_Foundation" title="Eclipse Foundation">Eclipse Foundation</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Liquid_XML_Studio" title="Liquid XML Studio">Liquid XML Studio</a> - Commercial tool for XML data binding code generation</li>
+<li><a rel="nofollow" class="external text" href="http://simple.sourceforge.net/">Simple XML Serialization</a> - An alternative to JAXB, enabling rapid development of XML configuration and communication systems</li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Architecture_for_XML_Binding&amp;action=edit&amp;section=5" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist columns references-column-count references-column-count-2" style="-moz-column-count: 2; -webkit-column-count: 2; column-count: 2; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://jcp.org/en/jsr/detail?id=031">"JSRs: Java Specification Requests. JSR 31: XML Data Binding Specification"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2011-02-15</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+Architecture+for+XML+Binding&amp;rft.btitle=JSRs%3A+Java+Specification+Requests.+JSR+31%3A+XML+Data+Binding+Specification&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fjcp.org%2Fen%2Fjsr%2Fdetail%3Fid%3D031&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://jcp.org/en/jsr/detail?id=222">"JSRs: Java Specification Requests. JSR 222: Java Architecture for XML Binding (JAXB) 2.0"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2011-02-15</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+Architecture+for+XML+Binding&amp;rft.btitle=JSRs%3A+Java+Specification+Requests.+JSR+222%3A+Java+Architecture+for+XML+Binding+%28JAXB%29+2.0&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fjcp.org%2Fen%2Fjsr%2Fdetail%3Fid%3D222&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://download.oracle.com/javase/6/docs/technotes/tools/share/xjc.html">"xjc - Java Architecture for XML Binding"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2011-02-15</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+Architecture+for+XML+Binding&amp;rft.btitle=xjc+-+Java+Architecture+for+XML+Binding&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fdownload.oracle.com%2Fjavase%2F6%2Fdocs%2Ftechnotes%2Ftools%2Fshare%2Fxjc.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://download.oracle.com/docs/cd/E12840_01/wls/docs103/webserv/data_types.html#wp223908">"Using JAXB Data Binding: Standard Data Type Mapping"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+Architecture+for+XML+Binding&amp;rft.btitle=Using+JAXB+Data+Binding%3A+Standard+Data+Type+Mapping&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fdownload.oracle.com%2Fdocs%2Fcd%2FE12840_01%2Fwls%2Fdocs103%2Fwebserv%2Fdata_types.html%23wp223908&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text">for <code>xsd:element</code> of this type</span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text">for <code>xsd:attribute</code> of this type</span></li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://java.net/jira/browse/JAXB/fixforversion/16521">"Jaxb 2.2.8 (JDK 8)"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2015-03-01</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+Architecture+for+XML+Binding&amp;rft.btitle=Jaxb+2.2.8+%28JDK+8%29&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fjava.net%2Fjira%2Fbrowse%2FJAXB%2Ffixforversion%2F16521&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/7/docs/technotes/guides/xml/enhancements.html">"Java SE 7: Java XML Technology Enhancements"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2012-03-21</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+Architecture+for+XML+Binding&amp;rft.btitle=Java+SE+7%3A+Java+XML+Technology+Enhancements&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fdocs.oracle.com%2Fjavase%2F7%2Fdocs%2Ftechnotes%2Fguides%2Fxml%2Fenhancements.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.oracle.com/technetwork/java/javase/features-141434.html">"Java SE 6: Features and Enhancements"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2012-03-21</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+Architecture+for+XML+Binding&amp;rft.btitle=Java+SE+6%3A+Features+and+Enhancements&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.oracle.com%2Ftechnetwork%2Fjava%2Fjavase%2Ffeatures-141434.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><cite class="citation web">Dennis Sosnoski. <a rel="nofollow" class="external text" href="http://www.ibm.com/developerworks/xml/library/x-databdopt2/">"XML and Java technologies: Data binding, Part 2: Performance"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2011-02-15</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+Architecture+for+XML+Binding&amp;rft.au=Dennis+Sosnoski&amp;rft.btitle=XML+and+Java+technologies%3A+Data+binding%2C+Part+2%3A+Performance&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.ibm.com%2Fdeveloperworks%2Fxml%2Flibrary%2Fx-databdopt2%2F&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://soa.sys-con.com/node/114130?page=0,2">"XML Binding Frameworks in the Context of Service-Oriented Architecture"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2011-02-15</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+Architecture+for+XML+Binding&amp;rft.btitle=XML+Binding+Frameworks+in+the+Context+of+Service-Oriented+Architecture&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fsoa.sys-con.com%2Fnode%2F114130%3Fpage%3D0%2C2&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Architecture_for_XML_Binding&amp;action=edit&amp;section=6" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://jaxb.java.net/">JAXB home page</a> Reference Implementation on Project <a href="GlassFish.html" title="GlassFish">GlassFish</a></li>
+<li><a rel="nofollow" class="external text" href="http://java.sun.com/xml/jaxb/index.jsp">previous JAXB home page</a></li>
+<li><a rel="nofollow" class="external text" href="http://jaxb.java.net/tutorial/">A JAXB Tutorial</a> by Wolfgang Laun</li>
+<li><a rel="nofollow" class="external text" href="http://www.jcp.org/en/jsr/detail?id=222">JSR 222</a> (JAXB 2.0)</li>
+<li><a rel="nofollow" class="external text" href="http://www.jcp.org/en/jsr/detail?id=31">JSR 31</a> (JAXB 1.0)</li>
+<li><a rel="nofollow" class="external text" href="http://docs.oracle.com/javaee/5/tutorial/doc/bnazf.html">The Java EE 5 Tutorial - Binding between XML Schema and Java Classes</a> JAXB chapter of the Java EE 5 Tutorial</li>
+<li><a rel="nofollow" class="external text" href="http://wiki.netbeans.org/JAXBWizard">JAXB Wizard</a></li>
+<li><a rel="nofollow" class="external text" href="http://memorynotfound.com/category/java/xml/jax-b/">JAXB Tutorials</a></li>
+</ul>
+<h3><span class="mw-headline" id="Articles">Articles</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Architecture_for_XML_Binding&amp;action=edit&amp;section=7" title="Edit section: Articles">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://www.devx.com/Java/Article/34069">Generate an XML Document from an Object Model with JAXB 2</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.techrepublic.com/blog/software-engineer/jaxb-20-offers-improved-xml-binding-in-java/">JAXB 2.0 offers improved XML binding in Java</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.ibm.com/developerworks/xml/library/x-databdopt2/">XML and Java technologies: Data binding, Part 2: Performance</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.javacodegeeks.com/2014/12/jaxb-tutorial-xml-binding.html">JAXB Tutorial for Java XML Binding by Java Code Geeks</a></li>
+</ul>
+<div role="navigation" class="navbox" aria-labelledby="Java_EE_7_specifications" style="padding:3px">
+<table class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="https://en.wikipedia.org/wiki/Template:Java_EE_7" title="Template:Java EE 7"><abbr title="View this template" style=";;background:none transparent;border:none;">v</abbr></a></li>
+<li class="nv-talk"><a href="https://en.wikipedia.org/wiki/Template_talk:Java_EE_7" title="Template talk:Java EE 7"><abbr title="Discuss this template" style=";;background:none transparent;border:none;">t</abbr></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Java_EE_7&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;">e</abbr></a></li>
+</ul>
+</div>
+<div id="Java_EE_7_specifications" style="font-size:114%"><a href="Java_EE_version_history.html#Java_EE_7_.28June_12.2C_2013.29" title="Java EE version history">Java EE 7</a> specifications</div>
+</th>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Web_Application" class="mw-redirect" title="Web Application">Web Application</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Java_Servlet.html" class="mw-redirect" title="Java Servlet">Servlet</a></li>
+<li><a href="JavaServer_Pages.html" title="JavaServer Pages">JavaServer Pages</a></li>
+<li><a href="Unified_Expression_Language.html" title="Unified Expression Language">Expression Language</a></li>
+<li><a href="JavaServer_Pages_Standard_Tag_Library.html" title="JavaServer Pages Standard Tag Library">JSTL</a></li>
+<li><a href="JavaServer_Faces.html" title="JavaServer Faces">JavaServer Faces</a></li>
+<li><a href="https://en.wikipedia.org/wiki/WebSocket" title="WebSocket">WebSocket</a></li>
+<li><a href="https://en.wikipedia.org/w/index.php?title=JSON_Processing&amp;action=edit&amp;redlink=1" class="new" title="JSON Processing (page does not exist)">JSON Processing</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Enterprise_Application" class="mw-redirect" title="Enterprise Application">Enterprise Application</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li>CDI</li>
+<li><a href="https://en.wikipedia.org/wiki/Dependency_injection" title="Dependency injection">Dependency Injection</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Bean_Validation" title="Bean Validation">Bean Validation</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Enterprise_JavaBeans" title="Enterprise JavaBeans">Enterprise JavaBeans</a></li>
+<li><a href="Java_Persistence_API.html" title="Java Persistence API">JPA</a></li>
+<li><a href="Java_Message_Service.html" title="Java Message Service">JMS</a></li>
+<li><a href="Java_Transaction_API.html" title="Java Transaction API">JTA</a></li>
+<li><a href="https://en.wikipedia.org/wiki/JavaMail" title="JavaMail">JavaMail</a></li>
+<li>Interceptors</li>
+<li><a href="Java_EE_Connector_Architecture.html" title="Java EE Connector Architecture">JCA</a></li>
+<li><a href="JSR_250.html" title="JSR 250">Common Annotations</a></li>
+<li><a href="https://en.wikipedia.org/w/index.php?title=Batch_Applications&amp;action=edit&amp;redlink=1" class="new" title="Batch Applications (page does not exist)">Batch Applications</a></li>
+<li><a href="https://en.wikipedia.org/w/index.php?title=Concurrency_Utilities&amp;action=edit&amp;redlink=1" class="new" title="Concurrency Utilities (page does not exist)">Concurrency Utilities</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Web_Services" class="mw-redirect" title="Web Services">Web Services</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Java_API_for_RESTful_Web_Services" title="Java API for RESTful Web Services">JAX-RS</a></li>
+<li><a href="https://en.wikipedia.org/w/index.php?title=Enterprise_Web_Services&amp;action=edit&amp;redlink=1" class="new" title="Enterprise Web Services (page does not exist)">Enterprise Web Services</a></li>
+<li><a href="Java_API_for_XML_Web_Services.html" title="Java API for XML Web Services">JAX-WS</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Web_Services_Metadata_for_Java" title="Web Services Metadata for Java">Web Services Metadata</a></li>
+<li><a href="Java_API_for_XML_Messaging.html" title="Java API for XML Messaging">Java API for XML Messaging</a></li>
+<li><a href="Java_API_for_XML_Registries.html" title="Java API for XML Registries">JAXR</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Application_performance_management" title="Application performance management">Management</a> and <a href="https://en.wikipedia.org/wiki/Application_security" title="Application security">Security</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/w/index.php?title=Java_Authentication_SPI&amp;action=edit&amp;redlink=1" class="new" title="Java Authentication SPI (page does not exist)">Java Authentication SPI</a></li>
+<li><a href="https://en.wikipedia.org/w/index.php?title=Java_Authorization_SPI&amp;action=edit&amp;redlink=1" class="new" title="Java Authorization SPI (page does not exist)">Java Authorization SPI</a></li>
+<li><a href="https://en.wikipedia.org/wiki/J2EE_Management" title="J2EE Management">J2EE Management</a></li>
+<li>Debugging for Other Languages</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Related Specs in Java SE</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><strong class="selflink">JAXB</strong></li>
+<li><a href="Java_API_for_XML_Processing.html" title="Java API for XML Processing">JAXP</a></li>
+<li><a href="Java_Database_Connectivity.html" title="Java Database Connectivity">JDBC</a></li>
+<li><a href="Java_Management_Extensions.html" title="Java Management Extensions">JMX</a></li>
+<li><a href="JavaBeans_Activation_Framework.html" title="JavaBeans Activation Framework">JavaBeans Activation Framework</a></li>
+<li><a href="StAX.html" title="StAX">Streaming API for XML</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1187
+Cached time: 20161217015435
+Cache expiry: 2592000
+Dynamic content: false
+CPU time usage: 0.096 seconds
+Real time usage: 0.116 seconds
+Preprocessor visited node count: 436/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 22937/2097152 bytes
+Template argument size: 9/2097152 bytes
+Highest expansion depth: 7/40
+Expensive parser function count: 0/500
+Lua time usage: 0.043/10.000 seconds
+Lua memory usage: 2.87 MB/50 MB
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   85.021      1 - -total
+ 86.56%   73.593      1 - Template:Reflist
+ 72.13%   61.328      9 - Template:Cite_web
+ 13.31%   11.313      1 - Template:Java_EE_7
+ 11.33%    9.629      1 - Template:Navbox
+  1.32%    1.119      1 - Template:Column-count
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:705688-0!*!0!!en!*!* and timestamp 20161217015434 and revision id 729449408
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Java_Architecture_for_XML_Binding&amp;oldid=729449408">https://en.wikipedia.org/w/index.php?title=Java_Architecture_for_XML_Binding&amp;oldid=729449408</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Help_Category.html" title="Help:Category">Categories</a>: <ul><li><a href="Category_Java_API_for_XML.html" title="Category:Java API for XML">Java API for XML</a></li><li><a href="Category_Java_specification_requests.html" title="Category:Java specification requests">Java specification requests</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="Special_MyTalk.html" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="Special_MyContributions.html" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&amp;returnto=Java+Architecture+for+XML+Binding" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Java+Architecture+for+XML+Binding" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="Java_Architecture_for_XML_Binding.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+															<li  id="ca-talk"><span><a href="https://en.wikipedia.org/wiki/Talk:Java_Architecture_for_XML_Binding"  title="Discussion about the content page [t]" accesskey="t" rel="discussion">Talk</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="Java_Architecture_for_XML_Binding.html" >Read</a></span></li>
+															<li id="ca-edit"><span><a href="https://en.wikipedia.org/w/index.php?title=Java_Architecture_for_XML_Binding&amp;action=edit"  title="Edit this page [e]" accesskey="e">Edit</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="https://en.wikipedia.org/w/index.php?title=Java_Architecture_for_XML_Binding&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="https://en.wikipedia.org/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="Main_Page.html"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="Portal_Contents.html" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="Portal_Featured_content.html" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="Portal_Current_events.html" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="../../shop.wikimedia.org/index.html" title="Visit the Wikipedia store">Wikipedia store</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Interaction</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-help"><a href="Help_Contents.html" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="Wikipedia_About.html" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="Wikipedia_Community_portal.html" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="Wikipedia_Contact_us.html" title="How to contact Wikipedia">Contact page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="https://en.wikipedia.org/wiki/Special:WhatLinksHere/Java_Architecture_for_XML_Binding" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://en.wikipedia.org/wiki/Special:RecentChangesLinked/Java_Architecture_for_XML_Binding" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="Wikipedia_File_Upload_Wizard.html" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="https://en.wikipedia.org/w/index.php?title=Java_Architecture_for_XML_Binding&amp;oldid=729449408" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://en.wikipedia.org/w/index.php?title=Java_Architecture_for_XML_Binding&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q518797" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="https://en.wikipedia.org/w/index.php?title=Special:CiteThisPage&amp;page=Java_Architecture_for_XML_Binding&amp;id=729449408" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Print/export</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Java+Architecture+for+XML+Binding">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Java+Architecture+for+XML+Binding&amp;returnto=Java+Architecture+for+XML+Binding&amp;oldid=729449408&amp;writer=rdf2latex">Download as PDF</a></li><li id="t-print"><a href="https://en.wikipedia.org/w/index.php?title=Java_Architecture_for_XML_Binding&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Languages</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Java_Architecture_for_XML_Binding" title="Java Architecture for XML Binding – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/JAXB" title="JAXB – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Java_Architecture_for_XML_Binding" title="Java Architecture for XML Binding – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/JAXB" title="JAXB – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Java_Architecture_for_XML_Binding" title="Java Architecture for XML Binding – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/JAX-B" title="JAX-B – Hungarian" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/Java_Architecture_for_XML_Binding" title="Java Architecture for XML Binding – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/Java_Architecture_for_XML_Binding" title="Java Architecture for XML Binding – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/JAXB" title="JAXB – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/JAXB" title="JAXB – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q518797#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 12 July 2016, at 08:14.</li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="Wikipedia_Text_of_Creative_Commons_Attribution-ShareAlike_3.html">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="../../creativecommons.org/licenses/by-sa/3.0/index.html" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="../../wikimediafoundation.org/wiki/Terms_of_Use.html">Terms of Use</a> and <a href="../../wikimediafoundation.org/wiki/Privacy_policy.html">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="../../www.wikimediafoundation.org/index.html">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../../wikimediafoundation.org/wiki/Privacy_policy.html" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="Wikipedia_About.html" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="Wikipedia_General_disclaimer.html" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="Wikipedia_Contact_us.html">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a href="../../www.mediawiki.org/wiki/Special_MyLanguage/How_to_contribute.html">Developers</a></li>
+											<li id="footer-places-cookiestatement"><a href="../../wikimediafoundation.org/wiki/Cookie_statement.html">Cookie statement</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/w/index.php?title=Java_Architecture_for_XML_Binding&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="../../www.wikimediafoundation.org/index.html"><img src="https://en.wikipedia.org/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="../../www.mediawiki.org/index.html"><img src="https://en.wikipedia.org/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":71,"wgHostname":"mw1174"});});</script>
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Java_Architecture_for_XML_Binding by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:26 GMT -->
+</html>

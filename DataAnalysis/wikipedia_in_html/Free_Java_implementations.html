@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Free_Java_implementations by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:02 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Free Java implementations - Wikipedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Free_Java_implementations","wgTitle":"Free Java implementations","wgCurRevisionId":752635271,"wgRevisionId":752635271,"wgArticleId":1107856,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Webarchive template wayback links","Wikipedia articles in need of updating from January 2014","All Wikipedia articles in need of updating","All articles with unsourced statements","Articles with unsourced statements from December 2011","Java virtual machine","Free virtualization software"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Free_Java_implementations","wgRelevantArticleId":1107856,"wgRequestId":"WHNtwwpAMFkAAFkkNe0AAAAT","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgFlaggedRevsParams":{"tags":{}},"wgStableRevisionId":null,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"en","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgWikibaseItemId":"Q1453971","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.cite.styles":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@1dqfd7l",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["ext.cite.a11y","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.legacy.wikibits","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.watchlist-notice","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.gadget.featured-articles-links","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.interface","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="https://en.wikipedia.org/w/load.php?debug=false&amp;lang=en&amp;modules=ext.cite.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="../w/load2c8d.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../w/load18b6.css?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.29.0-wmf.7"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="https://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Free_Java_implementations"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Free_Java_implementations&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Free_Java_implementations&amp;action=edit"/>
+<link rel="apple-touch-icon" href="https://en.wikipedia.org/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="../static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../w/api251f.php?action=rsd"/>
+<link rel="copyright" href="../../creativecommons.org/licenses/by-sa/3.0/index.html"/>
+<link rel="canonical" href="Free_Java_implementations.html"/>
+<link rel="dns-prefetch" href="../../login.wikimedia.org/index.html"/>
+<link rel="dns-prefetch" href="../../meta.wikimedia.org/index.html" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Free_Java_implementations rootpage-Free_Java_implementations skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">Free Java implementations</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><script>function mfTempOpenSection(id){var block=document.getElementById("mf-section-"+id);block.className+=" open-block";block.previousSibling.className+=" open-block";}</script><p><b>Free Java implementations</b> are software projects that implement Oracle's <a href="Java_(software_platform).html" title="Java (software platform)">Java</a> technologies and are distributed under <a href="https://en.wikipedia.org/wiki/Free_software_licences" class="mw-redirect" title="Free software licences">free software licences</a>, thus making them <a href="https://en.wikipedia.org/wiki/Free_software" title="Free software">free software</a>. Sun released most of its Java source code as free software in May 2007, so it can now almost be considered a free Java implementation.</p>
+<p>Java implementations include compilers, runtimes, class libraries, etc.</p>
+<p>Advocates of free and open source software refer to free or open source <a href="https://en.wikipedia.org/wiki/Java_virtual_machine" title="Java virtual machine">Java virtual machine</a> software as <b>free runtimes</b> or <b>free Java runtimes</b>.</p>
+<p>Some advocates in this movement prefer not to use the term "Java" as it has <a href="https://en.wikipedia.org/wiki/Trademark" title="Trademark">trademark</a> issues associated with it. Hence, even though it is a "free Java movement", the term "free Java runtimes" is avoided by them.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Mid-1990s_to_2006"><span class="tocnumber">1</span> <span class="toctext">Mid-1990s to 2006</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Sun.27s_November_2006_announcement"><span class="tocnumber">2</span> <span class="toctext">Sun's November 2006 announcement</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#After_the_May_2007_code_release"><span class="tocnumber">3</span> <span class="toctext">After the May 2007 code release</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#See_also"><span class="tocnumber">4</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#References"><span class="tocnumber">5</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#External_links"><span class="tocnumber">6</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Mid-1990s_to_2006">Mid-1990s to 2006</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Free_Java_implementations&amp;action=edit&amp;section=1" title="Edit section: Mid-1990s to 2006">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Probably the first free project to offer substantial parts of Java platform functionality was guavac, which began some time before November 1995.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[1]</a></sup><sup id="cite_ref-2" class="reference"><a href="#cite_note-2">[2]</a></sup></p>
+<p>Since then, the <a href="https://en.wikipedia.org/wiki/Free_software_movement" title="Free software movement">free software movement</a> developed other Java compilers, most notably the <a href="GNU_Compiler_for_Java.html" title="GNU Compiler for Java">GNU Compiler for Java</a>. Others include the <a href="Eclipse_(software).html" title="Eclipse (software)">Eclipse</a> Java Compiler (ECJ), which is maintained by the <a href="https://en.wikipedia.org/wiki/Eclipse_Foundation" title="Eclipse Foundation">Eclipse Foundation</a>, and <a href="Jikes.html" title="Jikes">Jikes</a>, which is no longer actively maintained. Since the <a href="GNU_Compiler_Collection.html" title="GNU Compiler Collection">GNU Compiler Collection</a>'s 4.3 release, GCJ (its Java compiler) is using the ECJ <a href="https://en.wikipedia.org/wiki/Parsing" title="Parsing">parser</a> front-end for parsing Java.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">[3]</a></sup></p>
+<p>Examples of free <a href="List_of_Java_virtual_machines.html" title="List of Java virtual machines">runtime environments</a> include <a href="Kaffe.html" title="Kaffe">Kaffe</a>, <a href="SableVM.html" title="SableVM">SableVM</a> and <a href="https://en.wikipedia.org/wiki/Gcj" class="mw-redirect" title="Gcj">gcj</a>.</p>
+<p><a href="GNU_Classpath.html" title="GNU Classpath">GNU Classpath</a> is the main free software <a href="Java_Class_Library.html" title="Java Class Library">class library</a> for Java. Most free runtimes use GNU Classpath as their class library.</p>
+<p>In May 2005, <a href="Apache_Harmony.html" title="Apache Harmony">Apache Harmony</a> was announced, however, the project chose the <a href="https://en.wikipedia.org/wiki/Apache_License" title="Apache License">Apache License</a>, which was at the time incompatible with all existing free Java implementations.</p>
+<p>Another event in May 2005 was the announcement that <a href="OpenOffice.html#Use_of_Java" title="OpenOffice.org">OpenOffice.org</a> 2.0 would depend on Java features which free software implementations couldn't provide. Following controversy, OpenOffice.org adopted a guideline requiring it to work with free Java implementations.</p>
+<p>Notable applications that already worked with free software Java implementations before November 2006 include <a href="OpenOffice.html" title="OpenOffice.org">OpenOffice.org</a> and <a href="Vuze.html" title="Vuze">Vuze</a>, both of which work when compiled with GCJ.</p>
+<h2><span class="mw-headline" id="Sun.27s_November_2006_announcement">Sun's November 2006 announcement</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Free_Java_implementations&amp;action=edit&amp;section=2" title="Edit section: Sun's November 2006 announcement">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>On 13 November 2006, Sun released its compiler, <a href="Javac.html" title="Javac">javac</a>, under the <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License" title="GNU General Public License">GNU General Public License</a>.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">[4]</a></sup></p>
+<p>As of September 2007, as well as javac, Sun has released the code of <a href="HotSpot.html" title="HotSpot">HotSpot</a> (the <a href="https://en.wikipedia.org/wiki/Virtual_machine" title="Virtual machine">virtual machine</a>) and almost all the <a href="Java_Class_Library.html" title="Java Class Library">Java Class Library</a> as free software.</p>
+<p>Following their promise to release a fully buildable <a href="Java_Development_Kit.html" title="Java Development Kit">JDK</a> based almost completely on free and open source code in the first half of 2007,<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">[5]</a></sup> Sun released the complete <a href="https://en.wikipedia.org/wiki/Source_code" title="Source code">source code</a> of the Class library under the GPL on May 8, 2007, except some limited parts that were licensed by Sun from 3rd parties who did not want their code to be released under a free software licence.<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">[6]</a></sup> Sun has stated that it aims to replace the parts that remain proprietary and closed source with alternative implementations and make the class library completely free and open source. Since there's some <a href="https://en.wikipedia.org/wiki/Proprietary_software" title="Proprietary software">encumbered code</a> in the JDK, Sun will continue to use that code in commercial releases until it's replaced by fully functional free and open-source alternatives.</p>
+<h2><span class="mw-headline" id="After_the_May_2007_code_release">After the May 2007 code release</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Free_Java_implementations&amp;action=edit&amp;section=3" title="Edit section: After the May 2007 code release">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div role="note" class="hatnote">See also: <a href="OpenJDK.html" title="OpenJDK">OpenJDK</a></div>
+<table class="plainlinks metadata ambox ambox-content ambox-Update" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px"><a href="https://en.wikipedia.org/wiki/File:Ambox_current_red.svg" class="image"><img alt="Ambox current red.svg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Ambox_current_red.svg/42px-Ambox_current_red.svg.png" width="42" height="34" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/98/Ambox_current_red.svg/63px-Ambox_current_red.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/98/Ambox_current_red.svg/84px-Ambox_current_red.svg.png 2x" data-file-width="360" data-file-height="290" /></a></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This section needs to be <b>updated</b>. <span class="hide-when-compact">Please update this article to reflect recent events or newly available information.</span> <small><i>(January 2014)</i></small></span></td>
+</tr>
+</table>
+<p>As of May 2008, the only part of the Class library that remains proprietary (4% as of May 2007 for OpenJDK 7, <sup id="cite_ref-openJDK_plan_7-0" class="reference"><a href="#cite_note-openJDK_plan-7">[7]</a></sup><sup id="cite_ref-8" class="reference"><a href="#cite_note-8">[8]</a></sup> and less than 1% as of May 2008 in OpenJDK 6<sup id="cite_ref-fedora9la_9-0" class="reference"><a href="#cite_note-fedora9la-9">[9]</a></sup><sup id="cite_ref-fedora9redhat_10-0" class="reference"><a href="#cite_note-fedora9redhat-10">[10]</a></sup>) is the <a href="https://en.wikipedia.org/wiki/Simple_Network_Management_Protocol" title="Simple Network Management Protocol">SNMP</a> implementation.<sup id="cite_ref-openJDK_b10_11-0" class="reference"><a href="#cite_note-openJDK_b10-11">[11]</a></sup></p>
+<p>Since the first May 2007 release, <a href="https://en.wikipedia.org/wiki/Sun_Microsystems" title="Sun Microsystems">Sun Microsystems</a>, with the help of the community, has released as free software (or replaced with free-software alternatives) almost all the encumbered code:</p>
+<ul>
+<li>All the audio engine code, including the <a href="https://en.wikipedia.org/wiki/Musical_Instrument_Digital_Interface" class="mw-redirect" title="Musical Instrument Digital Interface">software synthesizer</a>, has been released as open-source.<sup id="cite_ref-openJDK_b10_11-1" class="reference"><a href="#cite_note-openJDK_b10-11">[11]</a></sup><sup id="cite_ref-12" class="reference"><a href="#cite_note-12">[12]</a></sup> The closed-source software synthesizer has been replaced by a new synthesizer developed specifically for OpenJDK called <i>Gervill</i>,<sup id="cite_ref-13" class="reference"><a href="#cite_note-13">[13]</a></sup></li>
+<li>All <a href="https://en.wikipedia.org/wiki/Cryptography" title="Cryptography">cryptography</a> classes used in the Class library have been released as free software,<sup id="cite_ref-14" class="reference"><a href="#cite_note-14">[14]</a></sup></li>
+<li><a href="https://en.wikipedia.org/wiki/FreeType" title="FreeType">FreeType</a> has replaced the code that scales and <a href="https://en.wikipedia.org/wiki/Rasterisation" title="Rasterisation">rasterizes</a> <a href="https://en.wikipedia.org/wiki/Computer_font" title="Computer font">fonts</a>.<sup id="cite_ref-15" class="reference"><a href="#cite_note-15">[15]</a></sup><sup id="cite_ref-2dproject_16-0" class="reference"><a href="#cite_note-2dproject-16">[16]</a></sup><sup id="cite_ref-17" class="reference"><a href="#cite_note-17">[17]</a></sup></li>
+<li><a href="https://en.wikipedia.org/wiki/LittleCMS" class="mw-redirect" title="LittleCMS">LittleCMS</a> has replaced the native <a href="https://en.wikipedia.org/wiki/Color_management" title="Color management">color-management</a> system.<sup id="cite_ref-2dproject_16-1" class="reference"><a href="#cite_note-2dproject-16">[16]</a></sup> There is a pluggable layer in the JDK, so that the commercial version can use the old color management system and OpenJDK can use LittleCMS.</li>
+<li>The open-sourced Pisces renderer used in the <a href="PhoneME.html" title="PhoneME">phoneME</a> project has replaced the <a href="https://en.wikipedia.org/wiki/Spatial_anti-aliasing" title="Spatial anti-aliasing">anti-aliasing</a> graphics <a href="https://en.wikipedia.org/wiki/Rasterisation" title="Rasterisation">rasterizer</a> code.<sup id="cite_ref-2dproject_16-2" class="reference"><a href="#cite_note-2dproject-16">[16]</a></sup><sup id="cite_ref-18" class="reference"><a href="#cite_note-18">[18]</a></sup><sup id="cite_ref-19" class="reference"><a href="#cite_note-19">[19]</a></sup> This code is fully functional, but still needs some performance enhancements,<sup id="cite_ref-20" class="reference"><a href="#cite_note-20">[20]</a></sup></li>
+<li>The <a href="https://en.wikipedia.org/wiki/JavaScript" title="JavaScript">JavaScript</a> plugin has been open-sourced (<a href="Rhino_(JavaScript_engine).html" title="Rhino (JavaScript engine)">the JavaScript engine</a> itself was open-sourced from the beginning).<sup id="cite_ref-21" class="reference"><a href="#cite_note-21">[21]</a></sup></li>
+</ul>
+<p>Because of these previously encumbered components, it was not possible to build <a href="OpenJDK.html" title="OpenJDK">OpenJDK</a> only with free software components. In order to be able to do this before the whole <a href="Java_Class_Library.html" title="Java Class Library">class library</a> is made free, and to be able to bundle <a href="OpenJDK.html" title="OpenJDK">OpenJDK</a> in <a href="https://en.wikipedia.org/wiki/Fedora_(operating_system)" title="Fedora (operating system)">Fedora Core</a> and other free <a href="https://en.wikipedia.org/wiki/Linux" title="Linux">Linux</a> distributions, <a href="https://en.wikipedia.org/wiki/Red_Hat" title="Red Hat">Red Hat</a> has started a project called <a href="IcedTea.html" title="IcedTea">IcedTea</a>. It is basically an OpenJDK/<a href="GNU_Classpath.html" title="GNU Classpath">GNU Classpath</a> hybrid that can be used to bootstrap OpenJDK using only free software.<sup id="cite_ref-22" class="reference"><a href="#cite_note-22">[22]</a></sup><sup id="cite_ref-23" class="reference"><a href="#cite_note-23">[23]</a></sup></p>
+<p>As of March 2008, the <a href="https://en.wikipedia.org/wiki/Fedora_(operating_system)" title="Fedora (operating system)">Fedora 9</a> distribution has been released with OpenJDK 6 instead of the IcedTea implementation of OpenJDK 7.<sup id="cite_ref-fedora9redhat_10-1" class="reference"><a href="#cite_note-fedora9redhat-10">[10]</a></sup> Some of the stated reasons for this change are:</p>
+<ul>
+<li>Sun has replaced most of the encumbrances for which IcedTea was providing replacements (less than 1% of encumbered code remains in the <a href="Java_Class_Library.html" title="Java Class Library">class library</a>, and this code is not necessary to run OpenJDK).</li>
+<li>OpenJDK 6 is a stable branch, whereas OpenJDK 7 is unstable and not expected to ship a stable release until 2009.</li>
+<li>Sun has licensed the OpenJDK trademark for use in Fedora.<sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">[<i><a href="https://en.wikipedia.org/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="non-primary (December 2011)">citation needed</span></a></i>]</sup></li>
+</ul>
+<p>In June 2008, it was announced that <a href="IcedTea.html" title="IcedTea">IcedTea</a>6 (as the packaged version of OpenJDK on <a href="https://en.wikipedia.org/wiki/Fedora_(operating_system)" title="Fedora (operating system)">Fedora 9</a>) had passed the <a href="Technology_Compatibility_Kit.html" title="Technology Compatibility Kit">Technology Compatibility Kit</a> tests and can claim to be a fully compatible Java 6 implementation.<sup id="cite_ref-24" class="reference"><a href="#cite_note-24">[24]</a></sup><sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">[<i><a href="https://en.wikipedia.org/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="non-primary (December 2011)">citation needed</span></a></i>]</sup></p>
+<p>In September 2013, Azul Systems released Zulu, a free, open source build of <a href="OpenJDK.html" title="OpenJDK">OpenJDK</a> for <a href="https://en.wikipedia.org/wiki/Windows_Server" title="Windows Server">Windows Server</a> and the <a href="https://en.wikipedia.org/wiki/Microsoft_Azure" title="Microsoft Azure">Microsoft Azure</a> Cloud. Later releases added support for <a href="https://en.wikipedia.org/wiki/Mac_OS_X" class="mw-redirect" title="Mac OS X">Mac OS X</a>, multiple versions of <a href="https://en.wikipedia.org/wiki/Linux" title="Linux">Linux</a> and the <a href="Java_Platform%2c_Standard_Edition.html" title="Java Platform, Standard Edition">Java Platform, Standard Edition</a> version 8. Zulu is certified compliant with Java SE 8, 7 and 6 using the OpenJDK Community <a href="Technology_Compatibility_Kit.html" title="Technology Compatibility Kit">Technology Compatibility Kit</a>.<sup id="cite_ref-25" class="reference"><a href="#cite_note-25">[25]</a></sup></p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Free_Java_implementations&amp;action=edit&amp;section=4" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div role="navigation" aria-label="Portals" class="noprint portal plainlist tright" style="margin:0.5em 0 0.5em 1em;border:solid #aaa 1px">
+<ul style="display:table;box-sizing:border-box;padding:0.1em;max-width:175px;background:#f9f9f9;font-size:85%;line-height:110%;font-style:italic;font-weight:bold">
+<li style="display:table-row"><span style="display:table-cell;padding:0.2em;vertical-align:middle;text-align:center"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_(2009).svg/28px-Free_and_open-source_software_logo_(2009).svg.png" width="28" height="28" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/42px-Free_and_open-source_software_logo_%282009%29.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/56px-Free_and_open-source_software_logo_%282009%29.svg.png 2x" data-file-width="512" data-file-height="512" /></span><span style="display:table-cell;padding:0.2em 0.2em 0.2em 0.3em;vertical-align:middle"><a href="https://en.wikipedia.org/wiki/Portal:Free_software" class="mw-redirect" title="Portal:Free software">Free software portal</a></span></li>
+<li style="display:table-row"><span style="display:table-cell;padding:0.2em;vertical-align:middle;text-align:center"><a href="https://en.wikipedia.org/wiki/File:Wave.svg" class="image"><img alt="icon" src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/15px-Wave.svg.png" width="15" height="28" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/23px-Wave.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/31px-Wave.svg.png 2x" data-file-width="226" data-file-height="407" /></a></span><span style="display:table-cell;padding:0.2em 0.2em 0.2em 0.3em;vertical-align:middle"><a href="https://en.wikipedia.org/wiki/Portal:Java" title="Portal:Java">Java portal</a></span></li>
+</ul>
+</div>
+<ul>
+<li><a href="Java_(software_platform).html" title="Java (software platform)">Java (software platform)</a></li>
+<li><a href="Javac.html" title="Javac">Javac</a></li>
+<li><a href="HotSpot.html" title="HotSpot">HotSpot</a></li>
+<li><a href="Apache_Harmony.html" title="Apache Harmony">Apache Harmony</a></li>
+<li><a href="OpenJDK.html" title="OpenJDK">OpenJDK</a></li>
+<li><a href="GNU_Classpath.html" title="GNU Classpath">GNU Classpath</a>, <a href="https://en.wikipedia.org/wiki/GCJ" class="mw-redirect" title="GCJ">GCJ</a>, and <a href="GNU_Interpreter_for_Java.html" title="GNU Interpreter for Java">GIJ</a></li>
+<li><a href="IcedTea.html" title="IcedTea">IcedTea</a></li>
+<li><a href="JamVM.html" title="JamVM">JamVM</a></li>
+<li><a href="IKVM.html" title="IKVM.NET">IKVM.NET</a></li>
+<li><a href="List_of_Java_virtual_machines.html" title="List of Java virtual machines">List of Java virtual machines</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Comparison_of_Java_virtual_machines" title="Comparison of Java virtual machines">Comparison of Java virtual machines</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Free_Java_implementations&amp;action=edit&amp;section=5" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist columns references-column-width" style="-moz-column-width: 30em; -webkit-column-width: 30em; column-width: 30em; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.ccs.neu.edu/research/demeter/course/f96/hw/1/guavac-info">"Announcing: guavac 0.2.5, A free compiler for the Java language"</a>. 1996-09-07<span class="reference-accessdate">. Retrieved <span class="nowrap">2007-06-24</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFree+Java+implementations&amp;rft.btitle=Announcing%3A+guavac+0.2.5%2C+A+free+compiler+for+the+Java+language&amp;rft.date=1996-09-07&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.ccs.neu.edu%2Fresearch%2Fdemeter%2Fcourse%2Ff96%2Fhw%2F1%2Fguavac-info&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://fresh.t-systems-sfr.com/unix/src/www/guavac-1.2.tar.gz:a/guavac-1.2/compiler/ChangeLog">"Changelog of guavac, showing the first release happening in January 1996"</a>. <q>Wed Nov 22 05:43:07 1995 [...] CompilerMain.C, Compiler. C, Compiler.h, lexer.l, parser.y: Initial revision</q></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFree+Java+implementations&amp;rft.btitle=Changelog+of+guavac%2C+showing+the+first+release+happening+in+January+1996&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Ffresh.t-systems-sfr.com%2Funix%2Fsrc%2Fwww%2Fguavac-1.2.tar.gz%3Aa%2Fguavac-1.2%2Fcompiler%2FChangeLog&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://gcc.gnu.org/gcc-4.3/changes.html">"GCC 4.3 Release Series -- Changes, New Features, and Fixes"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2007-10-08</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFree+Java+implementations&amp;rft.btitle=GCC+4.3+Release+Series+--+Changes%2C+New+Features%2C+and+Fixes&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fgcc.gnu.org%2Fgcc-4.3%2Fchanges.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://news.cnet.com/Sun-picks-GPL-license-for-Java-code/2100-7344_3-6134584.html">Sun picks GPL license for Java code</a></span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.sun.com/software/opensource/java/faq.jsp#b4">OpenJDK FAQ</a> <a rel="nofollow" class="external text" href="https://web.archive.org/web/20070402155851/http://www.sun.com/software/opensource/java/faq.jsp#b4">Archived</a> April 2, 2007, at the <a href="https://en.wikipedia.org/wiki/Wayback_Machine" title="Wayback Machine">Wayback Machine</a>.</span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://mail.openjdk.java.net/pipermail/announce/2007-May.txt">"Open JDK is here!"</a>. Sun Microsystems. 2007-05-08<span class="reference-accessdate">. Retrieved <span class="nowrap">2007-05-09</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFree+Java+implementations&amp;rft.btitle=Open+JDK+is+here%21&amp;rft.date=2007-05-08&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fmail.openjdk.java.net%2Fpipermail%2Fannounce%2F2007-May.txt&amp;rft.pub=Sun+Microsystems&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-openJDK_plan-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-openJDK_plan_7-0">^</a></b></span> <span class="reference-text"><cite class="citation web">Herron, David (2007-10-04). <a rel="nofollow" class="external text" href="http://weblogs.java.net/blog/robogeek/archive/2007/10/openjdk_encumbr.html">"Plans for OpenJDK"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2007-10-09</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFree+Java+implementations&amp;rft.aufirst=David&amp;rft.aulast=Herron&amp;rft.btitle=Plans+for+OpenJDK&amp;rft.date=2007-10-04&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fweblogs.java.net%2Fblog%2Frobogeek%2Farchive%2F2007%2F10%2Fopenjdk_encumbr.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><cite class="citation web">Fitzsimmons, Thomas (2007-05-18). <a rel="nofollow" class="external text" href="http://fitzsim.org/blog/?p=17">"Plans for OpenJDK"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2007-05-22</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFree+Java+implementations&amp;rft.aufirst=Thomas&amp;rft.aulast=Fitzsimmons&amp;rft.btitle=Plans+for+OpenJDK&amp;rft.date=2007-05-18&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Ffitzsim.org%2Fblog%2F%3Fp%3D17&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-fedora9la-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-fedora9la_9-0">^</a></b></span> <span class="reference-text"><cite class="citation web">Angel, Lillian (2008-03-13). <a rel="nofollow" class="external text" href="http://langel.wordpress.com/2008/03/13/openjdk-in-fedora-9/">"OpenJDK to replace IcedTea in Fedora 9"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2008-04-05</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFree+Java+implementations&amp;rft.aufirst=Lillian&amp;rft.aulast=Angel&amp;rft.btitle=OpenJDK+to+replace+IcedTea+in+Fedora+9&amp;rft.date=2008-03-13&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Flangel.wordpress.com%2F2008%2F03%2F13%2Fopenjdk-in-fedora-9%2F&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-fedora9redhat-10"><span class="mw-cite-backlink">^ <a href="#cite_ref-fedora9redhat_10-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-fedora9redhat_10-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation web">Wade, Karsten (2008-03-13). <a rel="nofollow" class="external text" href="http://developer.redhatmagazine.com/2008/03/12/openjdk-to-replace-icedtea-in-fedora-9/">"OpenJDK in Fedora 9!"</a>. redhatmagazine.com<span class="reference-accessdate">. Retrieved <span class="nowrap">2008-04-05</span></span>. <q><i>Thomas Fitzsimmons updated the Fedora 9 release notes source pages to reflect that Fedora 9 would ship with OpenJDK 6 instead of the IcedTea implementation of OpenJDK 7. Fedora 9 (Sulphur) is due to release in May 2008.</i></q></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFree+Java+implementations&amp;rft.aufirst=Karsten&amp;rft.aulast=Wade&amp;rft.btitle=OpenJDK+in+Fedora+9%21&amp;rft.date=2008-03-13&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fdeveloper.redhatmagazine.com%2F2008%2F03%2F12%2Fopenjdk-to-replace-icedtea-in-fedora-9%2F&amp;rft.pub=redhatmagazine.com&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-openJDK_b10-11"><span class="mw-cite-backlink">^ <a href="#cite_ref-openJDK_b10_11-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-openJDK_b10_11-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://mail.openjdk.java.net/pipermail/jdk6-dev/2008-May/000058.html">"OpenJDK 6 b10 source posted"</a>. 2008-05-30<span class="reference-accessdate">. Retrieved <span class="nowrap">2008-06-01</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFree+Java+implementations&amp;rft.btitle=OpenJDK+6+b10+source+posted&amp;rft.date=2008-05-30&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fmail.openjdk.java.net%2Fpipermail%2Fjdk6-dev%2F2008-May%2F000058.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://openjdk.java.net/projects/audio-engine/">audio-engine project page</a></span></li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-13">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://gervill.dev.java.net/">"Gervill - Software Synthesizer"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2008-06-01</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFree+Java+implementations&amp;rft.btitle=Gervill+-+Software+Synthesizer&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fgervill.dev.java.net%2F&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-14"><span class="mw-cite-backlink"><b><a href="#cite_ref-14">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://mail.openjdk.java.net/pipermail/security-dev/2007-September/000015.html">"Crypto has been added to OpenJDK"</a>. 2007-09-27<span class="reference-accessdate">. Retrieved <span class="nowrap">2007-10-07</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFree+Java+implementations&amp;rft.btitle=Crypto+has+been+added+to+OpenJDK&amp;rft.date=2007-09-27&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fmail.openjdk.java.net%2Fpipermail%2Fsecurity-dev%2F2007-September%2F000015.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-15">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://openjdk.java.net/projects/font-scaler/">font-scaler projectpage</a></span></li>
+<li id="cite_note-2dproject-16"><span class="mw-cite-backlink">^ <a href="#cite_ref-2dproject_16-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-2dproject_16-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-2dproject_16-2"><sup><i><b>c</b></i></sup></a></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://openjdk.java.net/groups/2d/">Java2D project page</a></span></li>
+<li id="cite_note-17"><span class="mw-cite-backlink"><b><a href="#cite_ref-17">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://mail.openjdk.java.net/pipermail/font-scaler-dev/2007-August/000011.html">"Freetype font rasteriser"</a>. 2007-08-07<span class="reference-accessdate">. Retrieved <span class="nowrap">2007-11-24</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFree+Java+implementations&amp;rft.btitle=Freetype+font+rasteriser&amp;rft.date=2007-08-07&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fmail.openjdk.java.net%2Fpipermail%2Ffont-scaler-dev%2F2007-August%2F000011.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-18"><span class="mw-cite-backlink"><b><a href="#cite_ref-18">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://phoneme.dev.java.net/">phoneme.dev.java.net/</a></span></li>
+<li id="cite_note-19"><span class="mw-cite-backlink"><b><a href="#cite_ref-19">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://openjdk.java.net/projects/graphics-rasterizer/">graphics-rasterizer project page</a></span></li>
+<li id="cite_note-20"><span class="mw-cite-backlink"><b><a href="#cite_ref-20">^</a></b></span> <span class="reference-text"><cite class="citation web">Graham, Jim (2007-10-03). <a rel="nofollow" class="external text" href="http://mail.openjdk.java.net/pipermail/2d-dev/2007-October/000078.html">"Open Source rasterizer"</a>. Sun Microsystems<span class="reference-accessdate">. Retrieved <span class="nowrap">2007-05-09</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFree+Java+implementations&amp;rft.aufirst=Jim&amp;rft.aulast=Graham&amp;rft.btitle=Open+Source+rasterizer&amp;rft.date=2007-10-03&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fmail.openjdk.java.net%2Fpipermail%2F2d-dev%2F2007-October%2F000078.html&amp;rft.pub=Sun+Microsystems&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-21"><span class="mw-cite-backlink"><b><a href="#cite_ref-21">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://icedtea.classpath.org/bugzilla/show_bug.cgi?id=85">"Javascript is encumbered and there is no javascript plugin support."</a>. <a href="IcedTea.html" title="IcedTea">IcedTea</a>. 2008-03-11<span class="reference-accessdate">. Retrieved <span class="nowrap">2008-06-01</span></span>. <q><i>Changing Summary. JavaScript is no longer encumbered, but we still need liveconnect support.</i></q></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFree+Java+implementations&amp;rft.btitle=Javascript+is+encumbered+and+there+is+no+javascript+plugin+support.&amp;rft.date=2008-03-11&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Ficedtea.classpath.org%2Fbugzilla%2Fshow_bug.cgi%3Fid%3D85&amp;rft.pub=IcedTea&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-22"><span class="mw-cite-backlink"><b><a href="#cite_ref-22">^</a></b></span> <span class="reference-text"><cite class="citation web">Andrew, Haley (2007-06-07). <a rel="nofollow" class="external text" href="http://article.gmane.org/gmane.comp.java.openjdk.distro-packaging.devel/5">"Experimental Build Repository at icedtea.classpath.org"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2007-06-09</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFree+Java+implementations&amp;rft.aufirst=Haley&amp;rft.aulast=Andrew&amp;rft.btitle=Experimental+Build+Repository+at+icedtea.classpath.org&amp;rft.date=2007-06-07&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Farticle.gmane.org%2Fgmane.comp.java.openjdk.distro-packaging.devel%2F5&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-23"><span class="mw-cite-backlink"><b><a href="#cite_ref-23">^</a></b></span> <span class="reference-text"><cite class="citation web">Mark, Wielaard (2007-06-07). <a rel="nofollow" class="external text" href="http://developer.classpath.org/pipermail/classpath/2007-June/002109.html">"Experimental Build Repository at icedtea.classpath.org"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2007-06-09</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFree+Java+implementations&amp;rft.aufirst=Wielaard&amp;rft.aulast=Mark&amp;rft.btitle=Experimental+Build+Repository+at+icedtea.classpath.org&amp;rft.date=2007-06-07&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fdeveloper.classpath.org%2Fpipermail%2Fclasspath%2F2007-June%2F002109.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-24"><span class="mw-cite-backlink"><b><a href="#cite_ref-24">^</a></b></span> <span class="reference-text"><cite class="citation web">Sharples, Rich (2008-06-19). <a rel="nofollow" class="external text" href="http://blog.softwhere.org/archives/196">"Java is finally Free and Open"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFree+Java+implementations&amp;rft.aufirst=Rich&amp;rft.aulast=Sharples&amp;rft.btitle=Java+is+finally+Free+and+Open&amp;rft.date=2008-06-19&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fblog.softwhere.org%2Farchives%2F196&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-25"><span class="mw-cite-backlink"><b><a href="#cite_ref-25">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://www.azulsystems.com/products/zulu">http://www.azulsystems.com/products/zulu</a></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Free_Java_implementations&amp;action=edit&amp;section=6" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="https://www.gnu.org/philosophy/java-trap.html">Free But Shackled - The Java Trap</a></li>
+<li><a rel="nofollow" class="external text" href="http://developer.classpath.org/support/">Escaping the Java Trap: A practical road map to the Free Software and Open Source alternatives</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.infoq.com/news/2007/06/openjdk-hybrids">Hybrids Combine GNU Classpath and OpenJDK</a></li>
+<li><a rel="nofollow" class="external text" href="http://meetings-archive.debian.net/pub/debian-meetings/2007/debconf7/low/115_State_of_the_Coffee_Cup.ogg">Hour long 2007 video of a workshop with Sun, GGJ, and GNU Classpath developers</a></li>
+<li><a rel="nofollow" class="external text" href="http://wiki.debian.org/Java/ResolveJavaNaming">Java Trademark Issues</a></li>
+</ul>
+<div role="navigation" class="navbox" aria-labelledby="Java_virtual_machines_.28comparison.29" style="padding:3px">
+<table class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="https://en.wikipedia.org/wiki/Template:Java_Virtual_Machine" title="Template:Java Virtual Machine"><abbr title="View this template" style=";;background:none transparent;border:none;">v</abbr></a></li>
+<li class="nv-talk"><a href="https://en.wikipedia.org/wiki/Template_talk:Java_Virtual_Machine" title="Template talk:Java Virtual Machine"><abbr title="Discuss this template" style=";;background:none transparent;border:none;">t</abbr></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Java_Virtual_Machine&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;">e</abbr></a></li>
+</ul>
+</div>
+<div id="Java_virtual_machines_.28comparison.29" style="font-size:114%"><a href="https://en.wikipedia.org/wiki/Java_virtual_machine" title="Java virtual machine">Java virtual machines</a> (<a href="https://en.wikipedia.org/wiki/Comparison_of_Java_virtual_machines" title="Comparison of Java virtual machines">comparison</a>)</div>
+</th>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Sun/Oracle</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="HotSpot.html" title="HotSpot">HotSpot</a></li>
+<li><a href="K_virtual_machine.html" title="K virtual machine">KVM</a></li>
+<li><a href="OpenJDK.html" title="OpenJDK">OpenJDK</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Maxine_Virtual_Machine" title="Maxine Virtual Machine">Maxine VM</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Major implementations</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Excelsior_JET.html" title="Excelsior JET">Excelsior JET</a></li>
+<li><a href="JamVM.html" title="JamVM">JamVM</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Jikes_RVM" title="Jikes RVM">Jikes RVM</a></li>
+<li><a href="IKVM.html" title="IKVM.NET">IKVM.NET</a></li>
+<li><a href="IBM_J9.html" title="IBM J9">IBM J9</a></li>
+<li><a href="JRockit.html" title="JRockit">JRockit</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Embedded</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Excelsior_JET.html" title="Excelsior JET">Excelsior JET Embedded</a></li>
+<li><a href="https://en.wikipedia.org/wiki/JamaicaVM" title="JamaicaVM">JamaicaVM</a></li>
+<li><a href="Mika_VM.html" title="Mika VM">Mika VM</a></li>
+<li><a href="Mysaifu_JVM.html" title="Mysaifu JVM">Mysaifu</a></li>
+<li><a href="Squawk_virtual_machine.html" title="Squawk virtual machine">Squawk (Sun)</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Others</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="CACAO.html" title="CACAO">CACAO</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Dalvik_(software)" title="Dalvik (software)">Dalvik</a></li>
+<li><a href="JX_(operating_system).html" title="JX (operating system)">JX</a></li>
+<li><i><a href="List_of_Java_virtual_machines.html" title="List of Java virtual machines">more…</a></i></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Discontinued</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Apache_Harmony.html" title="Apache Harmony">Apache Harmony</a></li>
+<li><a href="GNU_Compiler_for_Java.html" title="GNU Compiler for Java">GCJ</a></li>
+<li><a href="Kaffe.html" title="Kaffe">Kaffe</a></li>
+<li><a href="Microsoft_Java_Virtual_Machine.html" title="Microsoft Java Virtual Machine">Microsoft JVM</a></li>
+<li><a href="SableVM.html" title="SableVM">SableVM</a></li>
+<li><a href="Jupiter_JVM.html" title="Jupiter JVM">Jupiter</a></li>
+<li><i><a href="https://en.wikipedia.org/wiki/Category:Discontinued_Java_virtual_machines" title="Category:Discontinued Java virtual machines">more…</a></i></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div role="navigation" class="navbox" aria-labelledby="Java" style="padding:3px">
+<table class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit">
+<tr>
+<th scope="col" class="navbox-title" colspan="3">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="https://en.wikipedia.org/wiki/Template:Java_(software_platform)" title="Template:Java (software platform)"><abbr title="View this template" style=";;background:none transparent;border:none;">v</abbr></a></li>
+<li class="nv-talk"><a href="https://en.wikipedia.org/wiki/Template_talk:Java_(software_platform)" title="Template talk:Java (software platform)"><abbr title="Discuss this template" style=";;background:none transparent;border:none;">t</abbr></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Java_(software_platform)&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;">e</abbr></a></li>
+</ul>
+</div>
+<div id="Java" style="font-size:114%"><a href="Java_(software_platform).html" title="Java (software platform)">Java</a></div>
+</th>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Java platforms</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Java_(programming_language).html" title="Java (programming language)">Java language</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Java_virtual_machine" title="Java virtual machine">JVM</a></li>
+<li><a href="Java_Platform%2c_Micro_Edition.html" title="Java Platform, Micro Edition">Micro Edition</a></li>
+<li><a href="Java_Platform%2c_Standard_Edition.html" title="Java Platform, Standard Edition">Standard Edition</a></li>
+<li><a href="Java_Platform%2c_Enterprise_Edition.html" title="Java Platform, Enterprise Edition">Enterprise Edition</a></li>
+<li><a href="Java_Card.html" title="Java Card">Java Card</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Android_software_development#SDK" title="Android software development">Android SDK</a></li>
+</ul>
+</div>
+</td>
+<td class="navbox-image" rowspan="13" style="width:0%;padding:0px 0px 0px 2px">
+<div><a href="https://en.wikipedia.org/wiki/File:Wave.svg" class="image"><img alt="Wave.svg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/75px-Wave.svg.png" width="75" height="135" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/113px-Wave.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/150px-Wave.svg.png 2x" data-file-width="226" data-file-height="407" /></a></div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Oracle technologies</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Squawk_virtual_machine.html" title="Squawk virtual machine">Squawk</a></li>
+<li><a href="Java_Development_Kit.html" title="Java Development Kit">Java Development Kit</a></li>
+<li><a href="OpenJDK.html" title="OpenJDK">OpenJDK</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Java_virtual_machine" title="Java virtual machine">Java virtual machine</a></li>
+<li><a href="JavaFX.html" title="JavaFX">JavaFX</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Maxine_Virtual_Machine" title="Maxine Virtual Machine">Maxine VM</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Platform technologies</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Java_applet.html" title="Java applet">Applets</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Java_servlet" title="Java servlet">Servlets</a></li>
+<li><a href="MIDlet.html" title="MIDlet">MIDlets</a></li>
+<li><a href="JavaServer_Pages.html" title="JavaServer Pages">JSP</a></li>
+<li><a href="Java_Web_Start.html" title="Java Web Start">Web Start (JNLP)</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Major third-party technologies</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Blackdown_Java.html" title="Blackdown Java">Blackdown</a></li>
+<li><a href="Eclipse_(software).html" title="Eclipse (software)">Eclipse</a></li>
+<li><a href="GNU_Classpath.html" title="GNU Classpath">GNU Classpath</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Google_Web_Toolkit" title="Google Web Toolkit">GWT</a></li>
+<li><a href="Apache_Harmony.html" title="Apache Harmony">Harmony</a></li>
+<li><a href="Hibernate_(Java).html" class="mw-redirect" title="Hibernate (Java)">Hibernate</a></li>
+<li><a href="IcedTea.html" title="IcedTea">IcedTea</a></li>
+<li><a href="Jazelle.html" title="Jazelle">Jazelle</a></li>
+<li><a href="Spring_Framework.html" title="Spring Framework">Spring</a></li>
+<li><a href="Apache_Struts.html" class="mw-redirect" title="Apache Struts">Struts</a></li>
+<li><a href="TopLink.html" title="TopLink">TopLink</a></li>
+<li><a href="https://en.wikipedia.org/wiki/WildFly" title="WildFly">WildFly</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">History</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Java_version_history.html" title="Java version history">Java version history</a></li>
+<li><a href="Java_Community_Process.html" title="Java Community Process">Java Community Process</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sun_Microsystems" title="Sun Microsystems">Sun Microsystems</a></li>
+<li><strong class="selflink">Free Java implementations</strong></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="List_of_JVM_languages.html" title="List of JVM languages">Major programming languages</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="BeanShell.html" title="BeanShell">BeanShell</a></li>
+<li><a href="Clojure.html" title="Clojure">Clojure</a></li>
+<li><a href="Groovy_(programming_language).html" title="Groovy (programming language)">Groovy</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Oxygene_(programming_language)" title="Oxygene (programming language)">Oxygene</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Tcl/Java" title="Tcl/Java">Java Tcl</a></li>
+<li><a href="JRuby.html" title="JRuby">JRuby</a></li>
+<li><a href="Jython.html" title="Jython">Jython</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Kotlin_(programming_language)" title="Kotlin (programming language)">Kotlin</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Processing_(programming_language)" title="Processing (programming language)">Processing</a></li>
+<li><a href="Rhino_(JavaScript_engine).html" title="Rhino (JavaScript engine)">Rhino</a></li>
+<li><a href="Scala_(programming_language).html" title="Scala (programming language)">Scala</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Java conferences</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="JavaOne.html" title="JavaOne">JavaOne</a></li>
+<li><a href="Devoxx.html" title="Devoxx">Devoxx</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1178
+Cached time: 20170105033048
+Cache expiry: 2592000
+Dynamic content: false
+CPU time usage: 0.216 seconds
+Real time usage: 0.269 seconds
+Preprocessor visited node count: 1314/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 56338/2097152 bytes
+Template argument size: 1578/2097152 bytes
+Highest expansion depth: 11/40
+Expensive parser function count: 2/500
+Lua time usage: 0.103/10.000 seconds
+Lua memory usage: 5.11 MB/50 MB
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  220.413      1 - -total
+ 48.49%  106.883      1 - Template:Reflist
+ 35.59%   78.454     17 - Template:Cite_web
+ 13.45%   29.656      1 - Template:Update
+ 12.19%   26.865      2 - Template:Citation_needed
+ 11.29%   24.889      1 - Template:Main_other
+ 10.75%   23.690      2 - Template:Fix
+ 10.67%   23.522      1 - Template:Ambox
+  8.81%   19.425      1 - Template:See_also
+  5.45%   12.017      2 - Template:Delink
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:1107856-0!*!0!!en!4!* and timestamp 20170105033048 and revision id 752635271
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Free_Java_implementations&amp;oldid=752635271">https://en.wikipedia.org/w/index.php?title=Free_Java_implementations&amp;oldid=752635271</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Help_Category.html" title="Help:Category">Categories</a>: <ul><li><a href="Category_Java_virtual_machine.html" title="Category:Java virtual machine">Java virtual machine</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Free_virtualization_software" title="Category:Free virtualization software">Free virtualization software</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Webarchive_template_wayback_links" title="Category:Webarchive template wayback links">Webarchive template wayback links</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Wikipedia_articles_in_need_of_updating_from_January_2014" title="Category:Wikipedia articles in need of updating from January 2014">Wikipedia articles in need of updating from January 2014</a></li><li><a href="https://en.wikipedia.org/wiki/Category:All_Wikipedia_articles_in_need_of_updating" title="Category:All Wikipedia articles in need of updating">All Wikipedia articles in need of updating</a></li><li><a href="https://en.wikipedia.org/wiki/Category:All_articles_with_unsourced_statements" title="Category:All articles with unsourced statements">All articles with unsourced statements</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Articles_with_unsourced_statements_from_December_2011" title="Category:Articles with unsourced statements from December 2011">Articles with unsourced statements from December 2011</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="Special_MyTalk.html" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="Special_MyContributions.html" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&amp;returnto=Free+Java+implementations" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Free+Java+implementations" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="Free_Java_implementations.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+															<li  id="ca-talk"><span><a href="https://en.wikipedia.org/wiki/Talk:Free_Java_implementations"  title="Discussion about the content page [t]" accesskey="t" rel="discussion">Talk</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="Free_Java_implementations.html" >Read</a></span></li>
+															<li id="ca-edit"><span><a href="https://en.wikipedia.org/w/index.php?title=Free_Java_implementations&amp;action=edit"  title="Edit this page [e]" accesskey="e">Edit</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="https://en.wikipedia.org/w/index.php?title=Free_Java_implementations&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="https://en.wikipedia.org/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="Main_Page.html"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="Portal_Contents.html" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="Portal_Featured_content.html" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="Portal_Current_events.html" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="https://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="../../shop.wikimedia.org/index.html" title="Visit the Wikipedia store">Wikipedia store</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Interaction</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-help"><a href="Help_Contents.html" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="Wikipedia_About.html" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="Wikipedia_Community_portal.html" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="Wikipedia_Contact_us.html" title="How to contact Wikipedia">Contact page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="https://en.wikipedia.org/wiki/Special:WhatLinksHere/Free_Java_implementations" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://en.wikipedia.org/wiki/Special:RecentChangesLinked/Free_Java_implementations" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="Wikipedia_File_Upload_Wizard.html" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="https://en.wikipedia.org/w/index.php?title=Free_Java_implementations&amp;oldid=752635271" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://en.wikipedia.org/w/index.php?title=Free_Java_implementations&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q1453971" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="https://en.wikipedia.org/w/index.php?title=Special:CiteThisPage&amp;page=Free_Java_implementations&amp;id=752635271" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Print/export</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Free+Java+implementations">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Free+Java+implementations&amp;returnto=Free+Java+implementations&amp;oldid=752635271&amp;writer=rdf2latex">Download as PDF</a></li><li id="t-print"><a href="https://en.wikipedia.org/w/index.php?title=Free_Java_implementations&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Languages</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Freie_Java-Implementierung" title="Freie Java-Implementierung – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q1453971#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 2 December 2016, at 11:21.</li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="Wikipedia_Text_of_Creative_Commons_Attribution-ShareAlike_3.html">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="../../creativecommons.org/licenses/by-sa/3.0/index.html" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="../../wikimediafoundation.org/wiki/Terms_of_Use.html">Terms of Use</a> and <a href="../../wikimediafoundation.org/wiki/Privacy_policy.html">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="../../www.wikimediafoundation.org/index.html">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../../wikimediafoundation.org/wiki/Privacy_policy.html" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="Wikipedia_About.html" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="Wikipedia_General_disclaimer.html" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="Wikipedia_Contact_us.html">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a href="../../www.mediawiki.org/wiki/Special_MyLanguage/How_to_contribute.html">Developers</a></li>
+											<li id="footer-places-cookiestatement"><a href="../../wikimediafoundation.org/wiki/Cookie_statement.html">Cookie statement</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/w/index.php?title=Free_Java_implementations&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="../../www.wikimediafoundation.org/index.html"><img src="https://en.wikipedia.org/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="../../www.mediawiki.org/index.html"><img src="https://en.wikipedia.org/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":53,"wgHostname":"mw1254"});});</script>
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Free_Java_implementations by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:02 GMT -->
+</html>

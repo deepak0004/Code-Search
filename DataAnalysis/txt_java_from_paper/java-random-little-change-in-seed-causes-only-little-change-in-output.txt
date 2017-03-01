@@ -1,0 +1,19 @@
+    
+        While making a map generator in Java I found a rather unnerving problem with their random number generator, to specify, when two RNGs have very similar seeds (differing in small integers) their first output value will become very similar!
+
+Example code:
+
+Random r = new Random();
+long n = 100000; //Choose any number
+r.setSeed(n);  
+System.out.println(r.nextInt());
+r.setSeed(n+1);
+System.out.println(r.nextInt());
+
+
+This pretty much broke my faith in the original Java RNG, since I use coordinates to seed a map generator.
+Could someone suggest either a redefinition for the Random.next(int bits) method, or some other fix for this problem?
+
+Thank you for your help!
+
+                

@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Java_API_for_XML_Web_Services by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:25 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Java API for XML Web Services - Wikipedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Java_API_for_XML_Web_Services","wgTitle":"Java API for XML Web Services","wgCurRevisionId":737498867,"wgRevisionId":737498867,"wgArticleId":6982955,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Java platform","Java enterprise platform","Java API for XML","Web service specifications"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Java_API_for_XML_Web_Services","wgRelevantArticleId":6982955,"wgRequestId":"WH32ugpAICsAADx7WeIAAAHQ","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgFlaggedRevsParams":{"tags":{}},"wgStableRevisionId":null,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"en","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgWikibaseItemId":"Q1099069","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.math.styles":"ready","ext.cite.styles":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@1dqfd7l",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["ext.cite.a11y","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.legacy.wikibits","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.watchlist-notice","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.gadget.featured-articles-links","ext.centralauth.centralautologin","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.interface","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="https://en.wikipedia.org/w/load.php?debug=false&amp;lang=en&amp;modules=ext.cite.styles%7Cext.math.scripts%2Cstyles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="../w/load2c8d.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../w/load18b6.css?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.29.0-wmf.7"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="https://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Java_API_for_XML_Web_Services"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Java_API_for_XML_Web_Services&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Java_API_for_XML_Web_Services&amp;action=edit"/>
+<link rel="apple-touch-icon" href="https://en.wikipedia.org/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="../static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../w/api251f.php?action=rsd"/>
+<link rel="copyright" href="../../creativecommons.org/licenses/by-sa/3.0/index.html"/>
+<link rel="canonical" href="Java_API_for_XML_Web_Services.html"/>
+<link rel="dns-prefetch" href="../../login.wikimedia.org/index.html"/>
+<link rel="dns-prefetch" href="../../meta.wikimedia.org/index.html" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Java_API_for_XML_Web_Services rootpage-Java_API_for_XML_Web_Services skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">Java API for XML Web Services</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><script>function mfTempOpenSection(id){var block=document.getElementById("mf-section-"+id);block.className+=" open-block";block.previousSibling.className+=" open-block";}</script><table class="infobox vevent" style="width:22em">
+<caption class="summary">Java API for XML Web Services (JAX-WS)</caption>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_developer" title="Software developer">Developer(s)</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Oracle_Corporation" title="Oracle Corporation">Oracle Corporation</a> (initial code from <a href="https://en.wikipedia.org/wiki/Sun_Microsystems" title="Sun Microsystems">Sun Microsystems</a>)</td>
+</tr>
+<tr>
+<td colspan="2" style="text-align:center"></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_release_life_cycle" title="Software release life cycle">Stable release</a></th>
+<td>
+<div style="margin:0px;">2.2.10 / January&#160;14,&#160;2015<span style="display:none">&#160;(<span class="bday dtstart published updated">2015-01-14</span>)</span></div>
+</td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;">Development status</th>
+<td>Active</td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;">Written in</th>
+<td><a href="Java_(programming_language).html" title="Java (programming language)">Java</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Operating_system" title="Operating system">Operating system</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Cross-platform" title="Cross-platform">Cross-platform</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Computing_platform" title="Computing platform">Platform</a></th>
+<td><a href="Java_Virtual_Machine.html" class="mw-redirect" title="Java Virtual Machine">Java Virtual Machine</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_categories#Broad_categories" title="Software categories">Type</a></th>
+<td>Application framework</td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_license" title="Software license">License</a></th>
+<td>CDDL v1.1 and GPL v2</td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;">Website</th>
+<td><span class="url"><a rel="nofollow" class="external text" href="https://jax-ws.java.net/">jax-ws<wbr />.java<wbr />.net</a></span></td>
+</tr>
+</table>
+<p>The <b>Java API for XML Web Services</b> (<b>JAX-WS</b>) is a <a href="Java_(programming_language).html" title="Java (programming language)">Java programming language</a> <a href="https://en.wikipedia.org/wiki/Application_programming_interface" title="Application programming interface">API</a> for creating <a href="https://en.wikipedia.org/wiki/Web_service" title="Web service">web services</a>, particularly <a href="https://en.wikipedia.org/wiki/SOAP" title="SOAP">SOAP</a> services. JAX-WS is one of the <a href="Java_XML.html" title="Java XML">Java XML</a> programming APIs. It is part of the <a href="Java_Platform%2c_Enterprise_Edition.html" title="Java Platform, Enterprise Edition">Java EE platform</a>.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Overview"><span class="tocnumber">1</span> <span class="toctext">Overview</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Standards_Supported"><span class="tocnumber">2</span> <span class="toctext">Standards Supported</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Main_JWS_Packages"><span class="tocnumber">3</span> <span class="toctext">Main JWS Packages</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#XML_Web_Services_related_Specs"><span class="tocnumber">4</span> <span class="toctext">XML Web Services related Specs</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Implementations"><span class="tocnumber">5</span> <span class="toctext">Implementations</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#References"><span class="tocnumber">6</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#External_links"><span class="tocnumber">7</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Overview">Overview</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_API_for_XML_Web_Services&amp;action=edit&amp;section=1" title="Edit section: Overview">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The JAX-WS 2.2 specification <a rel="nofollow" class="external text" href="http://jcp.org/en/jsr/detail?id=224">JSR 224</a> defines a standard Java- to-WSDL mapping which determines how <a href="https://en.wikipedia.org/wiki/Web_Services_Description_Language" title="Web Services Description Language">WSDL</a> operations are bound to Java methods when a SOAP message invokes a WSDL operation. This Java-to-WSDL mapping determines which Java method gets invoked and how that SOAP message is mapped to the method’s parameters.</p>
+<p>This mapping also determines how the method’s return value gets mapped to the SOAP response.</p>
+<p>JAX-WS uses <a href="Java_annotation.html" title="Java annotation">annotations</a>, introduced in <a href="Java_Platform%2c_Standard_Edition.html" title="Java Platform, Standard Edition">Java SE 5</a>, to simplify the development and deployment of web service clients and endpoints. It is part of the <a href="Java_Web_Services_Development_Pack.html" title="Java Web Services Development Pack">Java Web Services Development Pack</a>. JAX-WS can be used in <a href="Java_Platform%2c_Standard_Edition.html" title="Java Platform, Standard Edition">Java SE</a> starting with version 6.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[1]</a></sup> JAX-WS 2.0 replaced the <a href="Java_API_for_XML-based_RPC.html" title="Java API for XML-based RPC">JAX-RPC</a> API in <a href="Java_Platform%2c_Enterprise_Edition.html" title="Java Platform, Enterprise Edition">Java Platform, Enterprise Edition</a> 5 which leans more towards document style Web Services.</p>
+<p>This API provides the core of <a href="https://en.wikipedia.org/wiki/Project_Metro" title="Project Metro">Project Metro</a>, inside the <a href="GlassFish.html" title="GlassFish">GlassFish</a> open-source Application Server community of <a href="https://en.wikipedia.org/wiki/Oracle_Corporation" title="Oracle Corporation">Oracle Corporation</a>.</p>
+<p>JAX-WS also is one of the foundations of <a href="https://en.wikipedia.org/wiki/Web_Services_Interoperability_Technology" title="Web Services Interoperability Technology">WSIT</a>.</p>
+<h2><span class="mw-headline" id="Standards_Supported">Standards Supported</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_API_for_XML_Web_Services&amp;action=edit&amp;section=2" title="Edit section: Standards Supported">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li>JAX-WS 2.0/2.1/2.2 (JSR 224)</li>
+<li>WS-I Basic Profile 1.2 and 2.0</li>
+<li>WS-I Attachments Profile 1.0</li>
+<li>WS-I Simple SOAP Binding Profile 1.0</li>
+<li>WS-Addressing 1.0 - Core, SOAP Binding, WSDL Binding</li>
+</ul>
+<h2><span class="mw-headline" id="Main_JWS_Packages">Main JWS Packages</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_API_for_XML_Web_Services&amp;action=edit&amp;section=3" title="Edit section: Main JWS Packages">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="wikitable" width="80%">
+<tr>
+<th>Package</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><i>javax.xml.ws</i></td>
+<td>Has the Core JAX-WS APIs</td>
+</tr>
+<tr>
+<td><i>javax.xml.ws.http</i></td>
+<td>Has APIs specific to XML/HTTP Binding</td>
+</tr>
+<tr>
+<td><i>javax.xml.ws.soap</i></td>
+<td>Has APIs specific to SOAP/HTTP Binding</td>
+</tr>
+<tr>
+<td><i>javax.xml.ws.handler</i></td>
+<td>Has APIs for message handlers</td>
+</tr>
+<tr>
+<td><i>javax.xml.ws.spi</i></td>
+<td>defines SPIs for JAX-WS</td>
+</tr>
+<tr>
+<td><i>javax.xml.ws.spi.http</i></td>
+<td>Provides HTTP SPI that is used for portable deployment of JAX-WS in containers</td>
+</tr>
+<tr>
+<td><i>javax.xml.ws.wsaddressing</i></td>
+<td>Has APIs related to WS-Addressing</td>
+</tr>
+<tr>
+<td><i>javax.jws</i></td>
+<td>Has APIs specific to Java to WSDL mapping annotations</td>
+</tr>
+<tr>
+<td><i>javax.jws.soap</i></td>
+<td>Has APIs for mapping the Web Service onto the SOAP protocol</td>
+</tr>
+</table>
+<h2><span class="mw-headline" id="XML_Web_Services_related_Specs">XML Web Services related Specs</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_API_for_XML_Web_Services&amp;action=edit&amp;section=4" title="Edit section: XML Web Services related Specs">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="wikitable" width="60%">
+<tr>
+<td colspan="4" align="center"><b>Java EE 7</b></td>
+</tr>
+<tr>
+<th>Specification</th>
+<th>Version</th>
+<th>Stds. Body</th>
+<th>JSR/Url</th>
+</tr>
+<tr>
+<td><i>JAX-WS</i></td>
+<td>2.2</td>
+<td>JCP</td>
+<td><a rel="nofollow" class="external text" href="http://jcp.org/en/jsr/detail?id=224">224</a></td>
+</tr>
+<tr>
+<td><i>Web Services</i></td>
+<td>1.3</td>
+<td>JCP</td>
+<td><a rel="nofollow" class="external text" href="http://jcp.org/en/jsr/detail?id=109">109</a></td>
+</tr>
+<tr>
+<td><i>WS Metadata</i></td>
+<td>2.1</td>
+<td>JCP</td>
+<td><a rel="nofollow" class="external text" href="http://jcp.org/en/jsr/detail?id=181">181</a></td>
+</tr>
+<tr>
+<td><i><a href="Java_Architecture_for_XML_Binding.html" title="Java Architecture for XML Binding">JAXB</a></i></td>
+<td>2.2</td>
+<td>JCP</td>
+<td><a rel="nofollow" class="external text" href="http://jcp.org/en/jsr/detail?id=222">222</a></td>
+</tr>
+<tr>
+<td><i>SAAJ</i></td>
+<td>1.3</td>
+<td>JCP</td>
+<td><a rel="nofollow" class="external text" href="http://jcp.org/en/jsr/detail?id=67">67</a></td>
+</tr>
+<tr>
+<td><i>SOAP</i></td>
+<td>1.2</td>
+<td>W3C</td>
+<td><a rel="nofollow" class="external text" href="http://www.w3.org/TR/soap/">soap</a></td>
+</tr>
+<tr>
+<td><i>XML</i></td>
+<td>1.1</td>
+<td>W3C</td>
+<td><a rel="nofollow" class="external text" href="http://www.w3.org/TR/xml">xml</a></td>
+</tr>
+<tr>
+<td><i>WSDL</i></td>
+<td>1.1</td>
+<td>W3C</td>
+<td><a rel="nofollow" class="external text" href="http://www.w3.org/TR/wsdl">wsdl</a></td>
+</tr>
+</table>
+<h2><span class="mw-headline" id="Implementations">Implementations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_API_for_XML_Web_Services&amp;action=edit&amp;section=5" title="Edit section: Implementations">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="GlassFish_Metro.html" title="GlassFish Metro">Metro Project</a> in <a href="GlassFish.html" title="GlassFish">GlassFish</a></li>
+<li><a href="Apache_CXF.html" title="Apache CXF">Apache CXF</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_Axis2" title="Apache Axis2">Apache Axis2</a></li>
+<li><a href="https://en.wikipedia.org/wiki/JBossWS" class="mw-redirect" title="JBossWS">JBossWS</a> in <a href="https://en.wikipedia.org/wiki/JBoss" class="mw-redirect" title="JBoss">JBoss</a></li>
+<li><a href="https://en.wikipedia.org/w/index.php?title=IBM_WebSphere_Jax-Ws&amp;action=edit&amp;redlink=1" class="new" title="IBM WebSphere Jax-Ws (page does not exist)">IBM WebSphere Jax-Ws</a> in <a href="https://en.wikipedia.org/wiki/WebSphere" class="mw-redirect" title="WebSphere">WebSphere</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Oracle_Weblogic" class="mw-redirect" title="Oracle Weblogic">Oracle Weblogic</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_API_for_XML_Web_Services&amp;action=edit&amp;section=6" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://today.java.net/pub/a/today/2007/07/03/jax-ws-web-services-without-ee-containers.html">JAX-WS Web Services Without Java EE Containers</a></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_API_for_XML_Web_Services&amp;action=edit&amp;section=7" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li>java.net project pages
+<ul>
+<li><a rel="nofollow" class="external text" href="http://jax-ws.java.net/">JAX-WS java.net project page</a></li>
+<li><a rel="nofollow" class="external text" href="http://glassfish.dev.java.net/">GlassFish java.net project page</a></li>
+</ul>
+</li>
+<li>Documentation
+<ul>
+<li><a rel="nofollow" class="external text" href="http://jax-ws.java.net/nonav/jaxws-api/2.2/index.html">JAX-WS 2.2 Javadoc</a></li>
+<li><a rel="nofollow" class="external text" href="http://docs.oracle.com/javaee/5/tutorial/doc/?wp405739&amp;JAXWS.html#wp72279">JAX-WS in the Java EE 5 Tutorial</a></li>
+</ul>
+</li>
+<li>Tutorials
+<ul>
+<li><a rel="nofollow" class="external text" href="http://memorynotfound.com/category/java/jax-ws/">JAX-WS Tutorials</a></li>
+</ul>
+</li>
+</ul>
+<div role="navigation" class="navbox" aria-labelledby="Java_EE_7_specifications" style="padding:3px">
+<table class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="https://en.wikipedia.org/wiki/Template:Java_EE_7" title="Template:Java EE 7"><abbr title="View this template" style=";;background:none transparent;border:none;">v</abbr></a></li>
+<li class="nv-talk"><a href="https://en.wikipedia.org/wiki/Template_talk:Java_EE_7" title="Template talk:Java EE 7"><abbr title="Discuss this template" style=";;background:none transparent;border:none;">t</abbr></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Java_EE_7&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;">e</abbr></a></li>
+</ul>
+</div>
+<div id="Java_EE_7_specifications" style="font-size:114%"><a href="Java_EE_version_history.html#Java_EE_7_.28June_12.2C_2013.29" title="Java EE version history">Java EE 7</a> specifications</div>
+</th>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Web_Application" class="mw-redirect" title="Web Application">Web Application</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Java_Servlet.html" class="mw-redirect" title="Java Servlet">Servlet</a></li>
+<li><a href="JavaServer_Pages.html" title="JavaServer Pages">JavaServer Pages</a></li>
+<li><a href="Unified_Expression_Language.html" title="Unified Expression Language">Expression Language</a></li>
+<li><a href="JavaServer_Pages_Standard_Tag_Library.html" title="JavaServer Pages Standard Tag Library">JSTL</a></li>
+<li><a href="JavaServer_Faces.html" title="JavaServer Faces">JavaServer Faces</a></li>
+<li><a href="https://en.wikipedia.org/wiki/WebSocket" title="WebSocket">WebSocket</a></li>
+<li><a href="https://en.wikipedia.org/w/index.php?title=JSON_Processing&amp;action=edit&amp;redlink=1" class="new" title="JSON Processing (page does not exist)">JSON Processing</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Enterprise_Application" class="mw-redirect" title="Enterprise Application">Enterprise Application</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li>CDI</li>
+<li><a href="https://en.wikipedia.org/wiki/Dependency_injection" title="Dependency injection">Dependency Injection</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Bean_Validation" title="Bean Validation">Bean Validation</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Enterprise_JavaBeans" title="Enterprise JavaBeans">Enterprise JavaBeans</a></li>
+<li><a href="Java_Persistence_API.html" title="Java Persistence API">JPA</a></li>
+<li><a href="Java_Message_Service.html" title="Java Message Service">JMS</a></li>
+<li><a href="Java_Transaction_API.html" title="Java Transaction API">JTA</a></li>
+<li><a href="https://en.wikipedia.org/wiki/JavaMail" title="JavaMail">JavaMail</a></li>
+<li>Interceptors</li>
+<li><a href="Java_EE_Connector_Architecture.html" title="Java EE Connector Architecture">JCA</a></li>
+<li><a href="JSR_250.html" title="JSR 250">Common Annotations</a></li>
+<li><a href="https://en.wikipedia.org/w/index.php?title=Batch_Applications&amp;action=edit&amp;redlink=1" class="new" title="Batch Applications (page does not exist)">Batch Applications</a></li>
+<li><a href="https://en.wikipedia.org/w/index.php?title=Concurrency_Utilities&amp;action=edit&amp;redlink=1" class="new" title="Concurrency Utilities (page does not exist)">Concurrency Utilities</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Web_Services" class="mw-redirect" title="Web Services">Web Services</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Java_API_for_RESTful_Web_Services" title="Java API for RESTful Web Services">JAX-RS</a></li>
+<li><a href="https://en.wikipedia.org/w/index.php?title=Enterprise_Web_Services&amp;action=edit&amp;redlink=1" class="new" title="Enterprise Web Services (page does not exist)">Enterprise Web Services</a></li>
+<li><strong class="selflink">JAX-WS</strong></li>
+<li><a href="https://en.wikipedia.org/wiki/Web_Services_Metadata_for_Java" title="Web Services Metadata for Java">Web Services Metadata</a></li>
+<li><a href="Java_API_for_XML_Messaging.html" title="Java API for XML Messaging">Java API for XML Messaging</a></li>
+<li><a href="Java_API_for_XML_Registries.html" title="Java API for XML Registries">JAXR</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Application_performance_management" title="Application performance management">Management</a> and <a href="https://en.wikipedia.org/wiki/Application_security" title="Application security">Security</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/w/index.php?title=Java_Authentication_SPI&amp;action=edit&amp;redlink=1" class="new" title="Java Authentication SPI (page does not exist)">Java Authentication SPI</a></li>
+<li><a href="https://en.wikipedia.org/w/index.php?title=Java_Authorization_SPI&amp;action=edit&amp;redlink=1" class="new" title="Java Authorization SPI (page does not exist)">Java Authorization SPI</a></li>
+<li><a href="https://en.wikipedia.org/wiki/J2EE_Management" title="J2EE Management">J2EE Management</a></li>
+<li>Debugging for Other Languages</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Related Specs in Java SE</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Java_Architecture_for_XML_Binding.html" title="Java Architecture for XML Binding">JAXB</a></li>
+<li><a href="Java_API_for_XML_Processing.html" title="Java API for XML Processing">JAXP</a></li>
+<li><a href="Java_Database_Connectivity.html" title="Java Database Connectivity">JDBC</a></li>
+<li><a href="Java_Management_Extensions.html" title="Java Management Extensions">JMX</a></li>
+<li><a href="JavaBeans_Activation_Framework.html" title="JavaBeans Activation Framework">JavaBeans Activation Framework</a></li>
+<li><a href="StAX.html" title="StAX">Streaming API for XML</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1173
+Cached time: 20170117104931
+Cache expiry: 2592000
+Dynamic content: false
+CPU time usage: 0.072 seconds
+Real time usage: 0.104 seconds
+Preprocessor visited node count: 545/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 18250/2097152 bytes
+Template argument size: 1305/2097152 bytes
+Highest expansion depth: 25/40
+Expensive parser function count: 2/500
+Lua time usage: 0.024/10.000 seconds
+Lua memory usage: 1.05 MB/50 MB
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   78.014      1 - -total
+ 98.66%   76.971      2 - Template:Infobox
+ 80.75%   62.994      1 - Template:Infobox_software
+ 27.49%   21.449      1 - Template:Infobox_software/simple
+ 14.31%   11.167      1 - Template:Java_EE_7
+  9.68%    7.555      1 - Template:Navbox
+  8.51%    6.637      1 - Template:Release_date
+  4.91%    3.828      1 - Template:URL
+  3.91%    3.052      1 - Template:MONTHNAME
+  3.29%    2.570      1 - Template:Reflist
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:6982955-0!*!0!!en!*!* and timestamp 20170117104930 and revision id 737498867
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Java_API_for_XML_Web_Services&amp;oldid=737498867">https://en.wikipedia.org/w/index.php?title=Java_API_for_XML_Web_Services&amp;oldid=737498867</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Help_Category.html" title="Help:Category">Categories</a>: <ul><li><a href="Category_Java_platform.html" title="Category:Java platform">Java platform</a></li><li><a href="Category_Java_enterprise_platform.html" title="Category:Java enterprise platform">Java enterprise platform</a></li><li><a href="Category_Java_API_for_XML.html" title="Category:Java API for XML">Java API for XML</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Web_service_specifications" title="Category:Web service specifications">Web service specifications</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="Special_MyTalk.html" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="Special_MyContributions.html" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&amp;returnto=Java+API+for+XML+Web+Services" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Java+API+for+XML+Web+Services" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="Java_API_for_XML_Web_Services.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+															<li  id="ca-talk"><span><a href="https://en.wikipedia.org/wiki/Talk:Java_API_for_XML_Web_Services"  title="Discussion about the content page [t]" accesskey="t" rel="discussion">Talk</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="Java_API_for_XML_Web_Services.html" >Read</a></span></li>
+															<li id="ca-edit"><span><a href="https://en.wikipedia.org/w/index.php?title=Java_API_for_XML_Web_Services&amp;action=edit"  title="Edit this page [e]" accesskey="e">Edit</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="https://en.wikipedia.org/w/index.php?title=Java_API_for_XML_Web_Services&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="https://en.wikipedia.org/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="Main_Page.html"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="Portal_Contents.html" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="Portal_Featured_content.html" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="Portal_Current_events.html" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="https://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="../../shop.wikimedia.org/index.html" title="Visit the Wikipedia store">Wikipedia store</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Interaction</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-help"><a href="Help_Contents.html" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="Wikipedia_About.html" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="Wikipedia_Community_portal.html" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="Wikipedia_Contact_us.html" title="How to contact Wikipedia">Contact page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="https://en.wikipedia.org/wiki/Special:WhatLinksHere/Java_API_for_XML_Web_Services" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://en.wikipedia.org/wiki/Special:RecentChangesLinked/Java_API_for_XML_Web_Services" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="Wikipedia_File_Upload_Wizard.html" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="https://en.wikipedia.org/w/index.php?title=Java_API_for_XML_Web_Services&amp;oldid=737498867" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://en.wikipedia.org/w/index.php?title=Java_API_for_XML_Web_Services&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q1099069" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="https://en.wikipedia.org/w/index.php?title=Special:CiteThisPage&amp;page=Java_API_for_XML_Web_Services&amp;id=737498867" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Print/export</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Java+API+for+XML+Web+Services">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Java+API+for+XML+Web+Services&amp;returnto=Java+API+for+XML+Web+Services&amp;oldid=737498867&amp;writer=rdf2latex">Download as PDF</a></li><li id="t-print"><a href="https://en.wikipedia.org/w/index.php?title=Java_API_for_XML_Web_Services&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Languages</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Java_API_for_XML_Web_Services" title="Java API for XML Web Services – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/JAX-WS" title="JAX-WS – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/JAX-WS" title="JAX-WS – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/JAX-WS" title="JAX-WS – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/JAX-WS" title="JAX-WS – Hungarian" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/JAX-WS" title="JAX-WS – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/JAX-WS" title="JAX-WS – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/JAX-WS" title="JAX-WS – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/JAX-WS" title="JAX-WS – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q1099069#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 3 September 2016, at 06:05.</li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="Wikipedia_Text_of_Creative_Commons_Attribution-ShareAlike_3.html">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="../../creativecommons.org/licenses/by-sa/3.0/index.html" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="../../wikimediafoundation.org/wiki/Terms_of_Use.html">Terms of Use</a> and <a href="../../wikimediafoundation.org/wiki/Privacy_policy.html">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="../../www.wikimediafoundation.org/index.html">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../../wikimediafoundation.org/wiki/Privacy_policy.html" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="Wikipedia_About.html" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="Wikipedia_General_disclaimer.html" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="Wikipedia_Contact_us.html">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a href="../../www.mediawiki.org/wiki/Special_MyLanguage/How_to_contribute.html">Developers</a></li>
+											<li id="footer-places-cookiestatement"><a href="../../wikimediafoundation.org/wiki/Cookie_statement.html">Cookie statement</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/w/index.php?title=Java_API_for_XML_Web_Services&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="../../www.wikimediafoundation.org/index.html"><img src="https://en.wikipedia.org/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="../../www.mediawiki.org/index.html"><img src="https://en.wikipedia.org/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":171,"wgHostname":"mw1173"});});</script>
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Java_API_for_XML_Web_Services by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:25 GMT -->
+</html>

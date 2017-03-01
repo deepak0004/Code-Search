@@ -1,0 +1,4 @@
+    
+        How can i find the string length without using the length() method in java
+
+                

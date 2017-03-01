@@ -1,0 +1,13 @@
+    
+        This is a follow up to my <a href="http://stackoverflow.com/questions/490792/error-1053-while-trying-to-restart-stop-tomcat-5-0-30-installed-as-a-windows-ser">earlier question.
+
+Tomcat 5.0.28 had a bug where the Servlet's destroy() method was not being invoked by the container on a shutdown. This is fixed in Tomcat 5.0.30, but if the Servlet's destroy() method had a System.exit(), it would result in the Tomcat windows service throwing the Error 1053 and refusing to shutdown gracefully (see above link for more details on this error)
+
+Anybody has any idea on whether:
+
+
+Calling System.exit() inside a Servlet's destroy() method to forcefully kill any non-daemon threads is a good idea?
+Why does Tomcat 5.0.30 and (later versions including Tomcat 6.x.x) fail to shutdown properly if there's a System.exit() in the destroy() method of the Servlet.
+
+
+                

@@ -1,0 +1,40 @@
+    
+        Perhap this is a simple basic question
+
+Having an enum
+
+public enum TK{
+        ID,GROUP,DATA,FAIL;
+        }
+
+
+Can I get the order number for example ID=0, GROUP=2, DATA=3, FAIL=4 ?
+
+This is a way to to that, but a weird and long one! =S 
+
+public enum TK{
+        ID(0),GROUP(1),DATA(2),FAIL(3);
+
+        int num;
+        TK(int n)
+        {
+           this.num=n;
+        }
+
+        public int get()
+        {
+           return num;
+        }
+
+  };
+
+
+to get numbers so I write TK.ID.get(), TK.GROUP.get(), etc... I don't like that
+
+there is a better way?
+
+( C enums, C macros..I miss you both )
+
+thanks
+
+                

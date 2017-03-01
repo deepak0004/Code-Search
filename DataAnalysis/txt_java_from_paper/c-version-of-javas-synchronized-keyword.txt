@@ -1,0 +1,22 @@
+    
+        Does c# have its own version of the java "synchronized" keyword? 
+
+I.e. in java it can be specified either to a function, an object or a block of code, like so:
+
+public synchronized void doImportantStuff() {
+   // dangerous code goes here.
+}
+
+
+or
+
+public void doImportantStuff() {
+   // trivial stuff
+
+   synchronized {
+      // dangerous code goes here.
+   }
+}
+
+
+                

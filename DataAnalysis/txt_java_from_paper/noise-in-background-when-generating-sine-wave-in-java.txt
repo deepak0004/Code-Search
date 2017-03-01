@@ -1,0 +1,60 @@
+    
+        I'm getting a slight distortion (sounds like buzzing) in the background when I run the following code. Because of its subtle nature it makes believe there is some sort of aliasing going on with the byte casting.
+
+AudioFormat = PCM_SIGNED 44100.0 Hz, 16 bit, stereo, 4 bytes/frame, big-endian
+
+Note: code assumes (for now) that the data is in big endian.
+
+public static void playFreq(AudioFormat audioFormat, double frequency, SourceDataLine sourceDataLine)
+{
+	System.out.println(audioFormat);
+	double sampleRate = audioFormat.getSampleRate();
+	int sampleSizeInBytes = audioFormat.getSampleSizeInBits() / 8;
+	int channels = audioFormat.getChannels();
+
+	byte audioBuffer[] = new byte[(int)Math.pow(2.0, 19.0) * channels * sampleSizeInBytes];
+
+	for ( int i = 0; i &lt; audioBuffer.length; i+=sampleSizeInBytes*channels )
+	{
+		int wave = (int) (127.0 * Math.sin( 2.0 * Math.PI * frequency * i / (sampleRate * sampleSizeInBytes * channels) )  );
+
+		//wave = (wave &gt; 0 ? 127 : -127);
+
+		if ( channels == 1 )
+		{
+			if ( sampleSizeInBytes == 1 )
+			{
+				audioBuffer[i] = (byte) (wave);
+			}
+
+			else if ( sampleSizeInBytes == 2 )
+			{
+				audioBuffer[i] = (byte) (wave);
+				audioBuffer[i+1] = (byte)(wave &gt;&gt;&gt; 8);
+			}
+		}
+
+		else if ( channels == 2 )
+		{
+			if ( sampleSizeInBytes == 1 )
+			{
+				audioBuffer[i] = (byte) (wave);
+				audioBuffer[i+1] = (byte) (wave);
+			}
+
+			else if ( sampleSizeInBytes == 2 )
+			{
+				audioBuffer[i] = (byte) (wave);
+				audioBuffer[i+1] = (byte)(wave &gt;&gt;&gt; 8);
+
+				audioBuffer[i+2] = (byte) (wave);
+				audioBuffer[i+3] = (byte)(wave &gt;&gt;&gt; 8);
+			}
+		}
+	}
+
+	sourceDataLine.write(audioBuffer, 0, audioBuffer.length);
+}
+
+
+                

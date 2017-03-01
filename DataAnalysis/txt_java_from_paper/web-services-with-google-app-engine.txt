@@ -1,0 +1,8 @@
+    
+        I see that Google App Engine can host  web applications that will return html, etc. But what about web services that communicate over http and accept / return xml?
+
+Does anyone know how this is being done in Goggle App Engine with Python or for that matter in Java (JAS-WX is not supported)? Any links o samples or articles is greatly appreciated.
+
+Thanks // :)
+
+                

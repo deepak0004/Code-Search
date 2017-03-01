@@ -1,0 +1,6 @@
+    
+        I am aware that you can lock an object in c# using lock but can you give up the lock and wait for something else to notify you that it's changed like you can in java with wait and notify?
+
+It seems to me that synchronised and lock in java and c# respectively are synonomous.
+
+                

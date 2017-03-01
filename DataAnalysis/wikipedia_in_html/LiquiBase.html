@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from en.wikipedia.org/wiki/LiquiBase by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:42 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Liquibase - Wikipedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Liquibase","wgTitle":"Liquibase","wgCurRevisionId":748992142,"wgRevisionId":748992142,"wgArticleId":13585914,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles needing additional references from November 2014","All articles needing additional references","Database administration tools","Java platform","Agile software development"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Liquibase","wgRelevantArticleId":13585914,"wgRequestId":"WHHxagpAEK4AAHla-wQAAABL","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"LiquiBase","wgFlaggedRevsParams":{"tags":{}},"wgStableRevisionId":null,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"en","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgInternalRedirectTargetUrl":"/wiki/Liquibase","wgWikibaseItemId":"Q17097280","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.cite.styles":"ready","ext.pygments":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@1dqfd7l",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["mediawiki.action.view.redirect","ext.cite.a11y","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.legacy.wikibits","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.watchlist-notice","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.gadget.featured-articles-links","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.interface","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="https://en.wikipedia.org/w/load.php?debug=false&amp;lang=en&amp;modules=ext.cite.styles%7Cext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="../w/load2c8d.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../w/load18b6.css?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.29.0-wmf.7"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="https://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Liquibase"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Liquibase&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Liquibase&amp;action=edit"/>
+<link rel="apple-touch-icon" href="https://en.wikipedia.org/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="../static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../w/api251f.php?action=rsd"/>
+<link rel="copyright" href="../../creativecommons.org/licenses/by-sa/3.0/index.html"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Liquibase"/>
+<link rel="dns-prefetch" href="../../login.wikimedia.org/index.html"/>
+<link rel="dns-prefetch" href="../../meta.wikimedia.org/index.html" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Liquibase rootpage-Liquibase skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">Liquibase</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"><span class="mw-redirectedfrom">  (Redirected from <a href="https://en.wikipedia.org/w/index.php?title=LiquiBase&amp;redirect=no" class="mw-redirect" title="LiquiBase">LiquiBase</a>)</span></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><script>function mfTempOpenSection(id){var block=document.getElementById("mf-section-"+id);block.className+=" open-block";block.previousSibling.className+=" open-block";}</script><table class="plainlinks metadata ambox ambox-content ambox-Refimprove" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px"><a href="https://en.wikipedia.org/wiki/File:Question_book-new.svg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/50px-Question_book-new.svg.png" width="50" height="39" srcset="//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/75px-Question_book-new.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/100px-Question_book-new.svg.png 2x" data-file-width="512" data-file-height="399" /></a></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article <b>needs additional citations for <a href="https://en.wikipedia.org/wiki/Wikipedia:Verifiability" title="Wikipedia:Verifiability">verification</a></b>. <span class="hide-when-compact">Please help <a class="external text" href="http://en.wikipedia.org/w/index.php?title=Liquibase&amp;action=edit">improve this article</a> by <a href="https://en.wikipedia.org/wiki/Help:Introduction_to_referencing_with_Wiki_Markup/1" title="Help:Introduction to referencing with Wiki Markup/1">adding citations to reliable sources</a>. Unsourced material may be challenged and removed.</span> <small><i>(November 2014)</i></small> <small class="hide-when-compact"><i>(<a href="https://en.wikipedia.org/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></span></td>
+</tr>
+</table>
+<table class="infobox vevent" style="width:22em">
+<caption class="summary">Liquibase</caption>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_developer" title="Software developer">Developer(s)</a></th>
+<td>Nathan Voxland</td>
+</tr>
+<tr>
+<td colspan="2" style="text-align:center"></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_release_life_cycle" title="Software release life cycle">Stable release</a></th>
+<td>
+<div style="margin:0px;">3.5.3 / October&#160;13,&#160;2016<span style="display:none">&#160;(<span class="bday dtstart published updated">2016-10-13</span>)</span><sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[1]</a></sup></div>
+</td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;">Development status</th>
+<td>Active</td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;">Written in</th>
+<td><a href="Java_(programming_language).html" title="Java (programming language)">Java</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Operating_system" title="Operating system">Operating system</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Cross-platform" title="Cross-platform">Cross-platform</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/List_of_software_categories" class="mw-redirect" title="List of software categories">Type</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Software_development" title="Software development">Software development</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_license" title="Software license">License</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Apache_License_2.0" class="mw-redirect" title="Apache License 2.0">Apache License 2.0</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;">Website</th>
+<td><a rel="nofollow" class="external free" href="http://www.liquibase.org/">http://www.liquibase.org/</a></td>
+</tr>
+</table>
+<p><b>Liquibase</b> is an <a href="https://en.wikipedia.org/wiki/Open_source" class="mw-redirect" title="Open source">open source</a> database-independent library for tracking, managing and applying database schema changes. It was started in 2006 to allow easier tracking of database changes, especially in an <a href="https://en.wikipedia.org/wiki/Agile_software_development" title="Agile software development">agile software development</a> environment.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Overview"><span class="tocnumber">1</span> <span class="toctext">Overview</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Major_functionality"><span class="tocnumber">2</span> <span class="toctext">Major functionality</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Commercial_Version"><span class="tocnumber">3</span> <span class="toctext">Commercial Version</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Sample_Liquibase_ChangeLog_file"><span class="tocnumber">4</span> <span class="toctext">Sample Liquibase ChangeLog file</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Related_tools"><span class="tocnumber">5</span> <span class="toctext">Related tools</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#References"><span class="tocnumber">6</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#External_links"><span class="tocnumber">7</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Overview">Overview</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Liquibase&amp;action=edit&amp;section=1" title="Edit section: Overview">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>All changes to the database are stored in text files (<a href="https://en.wikipedia.org/wiki/XML" title="XML">XML</a>, <a href="https://en.wikipedia.org/wiki/YAML" title="YAML">YAML</a>, <a href="https://en.wikipedia.org/wiki/JSON" title="JSON">JSON</a> or <a href="https://en.wikipedia.org/wiki/SQL" title="SQL">SQL</a>) and identified by a combination of an "id" and "author" tag as well as the name of the file itself. A list of all applied changes is stored in each database which is consulted on all database updates to determine what new changes need to be applied. As a result, there is no database version number but this approach allows it to work in environments with multiple developers and code branches.</p>
+<p>Automatically creates DatabaseChangeLog Table and DatabaseChangeLogLock Table when you first execute a changeLog File.</p>
+<h2><span class="mw-headline" id="Major_functionality">Major functionality</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Liquibase&amp;action=edit&amp;section=2" title="Edit section: Major functionality">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li>Over 30 built-in <a href="https://en.wikipedia.org/wiki/Database_refactoring" title="Database refactoring">database refactorings</a></li>
+<li>Extensibility to create custom changes</li>
+<li>Update database to current version</li>
+<li>Rollback last X changes to database</li>
+<li>Rollback database changes to particular date/time</li>
+<li>Rollback database to "tag"</li>
+<li>SQL for Database Updates and Rollbacks can be saved for manual review</li>
+<li>Stand-alone IDE and <a href="Eclipse_(software).html" title="Eclipse (software)">Eclipse</a> plug-in</li>
+<li>"Contexts" for including/excluding change sets to execute</li>
+<li>Database diff report</li>
+<li>Database diff changelog generation</li>
+<li>Ability to create changelog to generate an existing database</li>
+<li>Database change documentation generation</li>
+<li>DBMS Check, user check, and SQL check preconditions</li>
+<li>Ability to split change log into multiple files for easier management</li>
+<li>Executable via command line, <a href="Apache_Ant.html" title="Apache Ant">Apache Ant</a>, <a href="Apache_Maven.html" title="Apache Maven">Apache Maven</a>, <a href="https://en.wikipedia.org/wiki/Servlet_container" class="mw-redirect" title="Servlet container">servlet container</a>, or <a href="Spring_Framework.html" title="Spring Framework">Spring Framework</a>.</li>
+<li>Support for 10 database systems</li>
+</ul>
+<h2><span class="mw-headline" id="Commercial_Version">Commercial Version</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Liquibase&amp;action=edit&amp;section=3" title="Edit section: Commercial Version">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a rel="nofollow" class="external text" href="http://www.datical.com/">Datical</a> is both the largest contributor to the Liquibase project and the developer of Datical DB – a commercial product which provides the core Liquibase functionality plus additional features to remove complexity, simplify deployment and bridge the gap between development and operations. Datical DB was created to satisfy the Application Schema management requirements of large enterprises as they move from Continuous Integration to Continuous Delivery.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">[2]</a></sup></p>
+<ul>
+<li>Change Forecasting: Forecast upcoming changes to be executed before they are run to determine how those changes will impact your data.</li>
+<li>Rules Engine to enforce Corporate Standards and Policies.</li>
+<li>Supports database Stored Logic: functions, stored procedures, packages, table spaces, triggers, sequences, user defined types, synonyms, etc.</li>
+<li>Compare Databases enables you to compare two database schemas to identify change and easily move it to your change log.</li>
+<li>Change Set Wizard to easily define and capture database changes in a database neutral manner.</li>
+<li>Deployment Plan Wizard for modeling and managing your logical deployment workflow</li>
+<li>Plug-ins to <a href="https://en.wikipedia.org/wiki/Jenkins_(software)" title="Jenkins (software)">Jenkins</a>, Bamboo, UrbanCode, CA Release Automation (Nolio), Serena Release Automation, BMC Bladelogic, <a href="https://en.wikipedia.org/wiki/Puppet_(software)" title="Puppet (software)">Puppet</a>, <a href="https://en.wikipedia.org/wiki/Chef_(software)" title="Chef (software)">Chef</a>,<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">[3]</a></sup> as well all popular source control systems like <a href="https://en.wikipedia.org/wiki/Apache_Subversion" title="Apache Subversion">SVN</a>, <a href="https://en.wikipedia.org/wiki/Git_(software)" class="mw-redirect" title="Git (software)">Git</a>, TFS, CVS, etc.</li>
+</ul>
+<p>Datical DB is used by DBAs, Release Managers, DevOps teams, Application Owners, Architects, and Developers involved in the Application Release process. It manages Database Schema changes together with application code in a programmatic fashion that eliminates errors and delays and enables rapid Agile releases. Datical DB builds upon the Liquibase Data Model Approach for managing data structure specific content across application versions as they advance from Development to Test to Production environments. Datical previews the impact of Schema changes in any environment before deployment thus mitigating risk and resulting in smoother and faster application changes.</p>
+<p>Liquibase developer, Nathan Voxland, is an executive at Datical.</p>
+<h2><span class="mw-headline" id="Sample_Liquibase_ChangeLog_file">Sample Liquibase ChangeLog file</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Liquibase&amp;action=edit&amp;section=4" title="Edit section: Sample Liquibase ChangeLog file">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+
+<span class="nt">&lt;databaseChangeLog</span>
+        <span class="na">xmlns=</span><span class="s">"http://www.liquibase.org/xml/ns/dbchangelog/1.3"</span>
+        <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span>
+        <span class="na">xsi:schemaLocation=</span><span class="s">"http://www.liquibase.org/xml/ns/dbchangelog/1.3</span>
+<span class="s">        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.3.xsd"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;preConditions&gt;</span>
+            <span class="nt">&lt;dbms</span> <span class="na">type=</span><span class="s">"oracle"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/preConditions&gt;</span>
+
+    <span class="nt">&lt;changeSet</span> <span class="na">id=</span><span class="s">"1"</span> <span class="na">author=</span><span class="s">"alice"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;createTable</span> <span class="na">tableName=</span><span class="s">"news"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;column</span> <span class="na">name=</span><span class="s">"id"</span> <span class="na">type=</span><span class="s">"int"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;constraints</span> <span class="na">primaryKey=</span><span class="s">"true"</span> <span class="na">nullable=</span><span class="s">"false"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;/column&gt;</span>
+            <span class="nt">&lt;column</span> <span class="na">name=</span><span class="s">"title"</span> <span class="na">type=</span><span class="s">"varchar(50)"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/createTable&gt;</span>
+    <span class="nt">&lt;/changeSet&gt;</span>
+
+    <span class="nt">&lt;changeSet</span> <span class="na">id=</span><span class="s">"12"</span> <span class="na">author=</span><span class="s">"bob"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;createSequence</span> <span class="na">sequenceName=</span><span class="s">"seq_news"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/changeSet&gt;</span>
+
+    <span class="nt">&lt;changeSet</span> <span class="na">id=</span><span class="s">"2"</span> <span class="na">author=</span><span class="s">"cpa"</span> <span class="na">context=</span><span class="s">"test"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;insert</span> <span class="na">tableName=</span><span class="s">"news"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;column</span> <span class="na">name=</span><span class="s">"id"</span> <span class="na">value=</span><span class="s">"1"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;column</span> <span class="na">name=</span><span class="s">"title"</span> <span class="na">value=</span><span class="s">"Liquibase 0.8 Released"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/insert&gt;</span>
+        <span class="nt">&lt;insert</span> <span class="na">tableName=</span><span class="s">"news"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;column</span> <span class="na">name=</span><span class="s">"id"</span> <span class="na">value=</span><span class="s">"2"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;column</span> <span class="na">name=</span><span class="s">"title"</span> <span class="na">value=</span><span class="s">"Liquibase 0.9 Released"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/insert&gt;</span>
+    <span class="nt">&lt;/changeSet&gt;</span>
+<span class="nt">&lt;/databaseChangeLog&gt;</span>
+</pre></div>
+<h2><span class="mw-headline" id="Related_tools">Related tools</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Liquibase&amp;action=edit&amp;section=5" title="Edit section: Related tools">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Flyway_(software)" title="Flyway (software)">Flyway</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Liquibase&amp;action=edit&amp;section=6" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://liquibase.org/download">"Liquibase Downloads"</a>. Liquibase<span class="reference-accessdate">. Retrieved <span class="nowrap">2016-11-11</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALiquibase&amp;rft.btitle=Liquibase+Downloads&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fliquibase.org%2Fdownload&amp;rft.pub=Liquibase&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.datical.com/">"Datical"</a>. Datical<span class="reference-accessdate">. Retrieved <span class="nowrap">2014-12-03</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALiquibase&amp;rft.btitle=Datical&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.datical.com&amp;rft.pub=Datical&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.datical.com/integrations/">"Datical integrations"</a>. Datical<span class="reference-accessdate">. Retrieved <span class="nowrap">2014-12-03</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALiquibase&amp;rft.btitle=Datical+integrations&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.datical.com%2Fintegrations%2F&amp;rft.pub=Datical&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Liquibase&amp;action=edit&amp;section=7" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><span class="official-website"><span class="url"><a rel="nofollow" class="external text" href="http://www.liquibase.org/">Official website</a></span></span></li>
+<li><a rel="nofollow" class="external text" href="http://www.datical.com/">Datical - Commercial Version for Enterprises</a></li>
+</ul>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1273
+Cached time: 20161231055933
+Cache expiry: 2592000
+Dynamic content: false
+CPU time usage: 0.148 seconds
+Real time usage: 0.208 seconds
+Preprocessor visited node count: 623/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 13275/2097152 bytes
+Template argument size: 898/2097152 bytes
+Highest expansion depth: 25/40
+Expensive parser function count: 3/500
+Lua time usage: 0.071/10.000 seconds
+Lua memory usage: 2.35 MB/50 MB
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  187.348      1 - -total
+ 45.93%   86.051      2 - Template:Infobox
+ 38.22%   71.603      1 - Template:Infobox_Software
+ 27.78%   52.044      1 - Template:Refimprove
+ 25.87%   48.470      1 - Template:Reflist
+ 22.82%   42.762      3 - Template:Cite_web
+ 16.87%   31.612      1 - Template:Ambox
+ 13.38%   25.069      1 - Template:Infobox_software/simple
+  6.93%   12.976      1 - Template:Official_website
+  4.13%    7.732      1 - Template:Release_date
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:13585914-0!*!0!!en!4!* and timestamp 20161231055933 and revision id 748992142
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Liquibase&amp;oldid=748992142">https://en.wikipedia.org/w/index.php?title=Liquibase&amp;oldid=748992142</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Help_Category.html" title="Help:Category">Categories</a>: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Database_administration_tools" title="Category:Database administration tools">Database administration tools</a></li><li><a href="Category_Java_platform.html" title="Category:Java platform">Java platform</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Agile_software_development" title="Category:Agile software development">Agile software development</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Articles_needing_additional_references_from_November_2014" title="Category:Articles needing additional references from November 2014">Articles needing additional references from November 2014</a></li><li><a href="https://en.wikipedia.org/wiki/Category:All_articles_needing_additional_references" title="Category:All articles needing additional references">All articles needing additional references</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="Special_MyTalk.html" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="Special_MyContributions.html" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&amp;returnto=Liquibase" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Liquibase" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="https://en.wikipedia.org/wiki/Liquibase"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+															<li  id="ca-talk"><span><a href="https://en.wikipedia.org/wiki/Talk:Liquibase"  title="Discussion about the content page [t]" accesskey="t" rel="discussion">Talk</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="https://en.wikipedia.org/wiki/Liquibase" >Read</a></span></li>
+															<li id="ca-edit"><span><a href="https://en.wikipedia.org/w/index.php?title=Liquibase&amp;action=edit"  title="Edit this page [e]" accesskey="e">Edit</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="https://en.wikipedia.org/w/index.php?title=Liquibase&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="https://en.wikipedia.org/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="Main_Page.html"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="Portal_Contents.html" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="Portal_Featured_content.html" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="Portal_Current_events.html" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="https://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="../../shop.wikimedia.org/index.html" title="Visit the Wikipedia store">Wikipedia store</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Interaction</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-help"><a href="Help_Contents.html" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="Wikipedia_About.html" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="Wikipedia_Community_portal.html" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="Wikipedia_Contact_us.html" title="How to contact Wikipedia">Contact page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="https://en.wikipedia.org/wiki/Special:WhatLinksHere/Liquibase" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://en.wikipedia.org/wiki/Special:RecentChangesLinked/Liquibase" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="Wikipedia_File_Upload_Wizard.html" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="https://en.wikipedia.org/w/index.php?title=Liquibase&amp;oldid=748992142" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://en.wikipedia.org/w/index.php?title=Liquibase&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q17097280" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="https://en.wikipedia.org/w/index.php?title=Special:CiteThisPage&amp;page=Liquibase&amp;id=748992142" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Print/export</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Liquibase">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Liquibase&amp;returnto=Liquibase&amp;oldid=748992142&amp;writer=rdf2latex">Download as PDF</a></li><li id="t-print"><a href="https://en.wikipedia.org/w/index.php?title=Liquibase&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Languages</h3>
+
+			<div class="body">
+									<ul>
+						<li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-add wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q17097280#sitelinks-wikipedia" title="Add interlanguage links" class="wbc-editpage">Add links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 11 November 2016, at 17:31.</li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="Wikipedia_Text_of_Creative_Commons_Attribution-ShareAlike_3.html">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="../../creativecommons.org/licenses/by-sa/3.0/index.html" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="../../wikimediafoundation.org/wiki/Terms_of_Use.html">Terms of Use</a> and <a href="../../wikimediafoundation.org/wiki/Privacy_policy.html">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="../../www.wikimediafoundation.org/index.html">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../../wikimediafoundation.org/wiki/Privacy_policy.html" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="Wikipedia_About.html" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="Wikipedia_General_disclaimer.html" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="Wikipedia_Contact_us.html">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a href="../../www.mediawiki.org/wiki/Special_MyLanguage/How_to_contribute.html">Developers</a></li>
+											<li id="footer-places-cookiestatement"><a href="../../wikimediafoundation.org/wiki/Cookie_statement.html">Cookie statement</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/w/index.php?title=Liquibase&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="../../www.wikimediafoundation.org/index.html"><img src="https://en.wikipedia.org/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="../../www.mediawiki.org/index.html"><img src="https://en.wikipedia.org/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":63,"wgHostname":"mw1219"});});</script>
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/LiquiBase by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:42 GMT -->
+</html>

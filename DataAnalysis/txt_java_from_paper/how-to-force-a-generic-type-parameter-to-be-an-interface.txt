@@ -1,0 +1,67 @@
+    
+        Is there a way in java to specify, that the type parameter of a generic class must be an interface (not just extending it!)
+
+What I want to do is the following:
+
+public class MyClass&lt;X extends SomeInterface, Y extends SomeOtherClass &amp; X&gt;
+
+
+Meaning that Y must be a subclass of SomeOtherClass AND implement X.
+What I currently get by the compiler is
+
+
+  The type X is not an interface; it cannot be specified as a bounded parameter
+
+
+So, how can I tell the compiler that X must always be an interface?
+
+Edit:
+OK, I guess I oversimplified my problem a bit. Let's use my actual application domain to make it more clear:
+
+I have an API for representing diagrams. A Diagram contains Node and Edge objects. All these three classes implement the Shape interface. Shapes may have child shapes, a parent shape and belong to a diagram.
+
+The thing is, that I need to make two versions of this API: one open-source with just basic functionality and an extended one with more features. However, the extended API must only provide methods, which return the extended types (ExtendedDiagram, ExtendedNode, ExtendedEdge and (here comes the problem) ExtendedShape).
+So I have something like this:
+
+/* BASIC CLASSES */
+public interface Shape&lt;X extends Shape&lt;X,Y&gt;, Y extends Diagram&lt;X,Y&gt;&gt;{
+    public List&lt;X&gt; getChildShapes();
+    public X getParent();
+    public Y getDiagram();
+    ...
+}
+
+public class Diagram&lt;X extends Shape&lt;X,Y&gt;, Y extends Diagram&lt;X,Y&gt;&gt; implements Shape&lt;X,Y&gt;{...}
+public class Edge&lt;X extends Shape&lt;X,Y&gt;, Y extends Diagram&lt;X,Y&gt;&gt; implements Shape&lt;X,Y&gt;{...}
+...
+
+/* EXTENDED CLASSES */
+public interface ExtendedShape extends Shape&lt;ExtendedShape,ExtendedDiagram&gt; { ... }
+
+public class ExtendedDiagram extends Diagram&lt;ExtendedShape,ExtenedDiagram&gt; implements ExtendedShape { ... }
+public class ExtendedEdge extends Edge&lt;ExtendedShape,ExtenedDiagram&gt; implements ExtendedShape { ... }
+...
+
+
+The extended API works fine and the basic API code gives some warnings, but the main problem occurs when using the basic API:
+
+public class SomeImporter&lt;X extends Shape&lt;X,Y&gt;, Y extends Diagram&lt;X,Y&gt;, E extends Edge&lt;X,Y&gt;&gt;{
+    private Y diagram;
+
+    public void addNewEdge(E newEdge){
+        diagram.addChildShape(newEdge);
+    ...
+
+
+That last line gives me the following warning:
+
+
+  The method addChildShape(X) in the type Diagram is not applicable for the arguments (E)
+
+
+So now, I would just like to specify that E also needs to implement X and all would be fine - I hope ;)
+
+Does all that make sense? Do you guys know a way to do that? Or is there even a better way to get the extended API with the said restrictions?
+Thanks for sticking with me, any help is greatly appreciated!
+
+                

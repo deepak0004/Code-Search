@@ -1,0 +1,4 @@
+    
+        Following my previous question, <a href="http://stackoverflow.com/questions/3882108/dao-and-service-layers-jpa-hibernate-spring">DAO and Service layers (JPA/Hibernate + Spring), I decided to use just a single DAO for my data layer (at least at the beginning) in an application using JPA/Hibernate, Spring and Wicket. The use of generic CRUD methods was proposed, but I'm not very sure how to implement this using JPA. Could you please give me an example or share a link regarding this?
+
+                

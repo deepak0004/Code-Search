@@ -1,0 +1,47 @@
+    
+        Consider this example (typical in OOP books):
+I have an Animal class, where each Animal can have many friends.
+And subclasses like Dog, Duck, Mouse etc which add specific behavior like bark(), quack() etc.
+
+Here's the Animal class:
+
+public class Animal {
+    private Map&lt;String,Animal&gt; friends = new HashMap&lt;String,Animal&gt;();
+
+    public void addFriend(String name, Animal animal){
+        friends.put(name,animal);
+    }
+
+    public Animal callFriend(String name){
+        return friends.get(name);
+    }
+}
+
+
+And here's some code snippet with lots of typecasting:
+
+Mouse jerry = new Mouse();
+jerry.addFriend("spike", new Dog());
+jerry.addFriend("quacker", new Duck());
+
+((Dog) jerry.callFriend("spike")).bark();
+((Duck) jerry.callFriend("quacker")).quack();
+
+
+Is there any way i can use Generics for the return type to get rid of the typecasting so that i can say    
+
+jerry.callFriend("spike").bark();
+jerry.callFriend("quacker").quack();
+
+
+Here's some initial code with Return type conveyed to the method as a parameter thats never used. 
+
+public&lt;T extends Animal&gt; T callFriend(String name, T unusedTypeObj){
+    return (T)friends.get(name);        
+}
+
+
+Is there a way to figure out the Return type at runtime without the extra parameter using instanceof. Or atleast by passing a class of the Type instead of a dummy instance.
+I understand Generics is for compile time typechecking, but is there a workaround for this?
+
+                

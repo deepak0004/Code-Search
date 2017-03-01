@@ -1,0 +1,24 @@
+    
+        An 64-bit double can represent integer +/- 253 exactly
+
+Given this fact I choose to use a double type as a single type for all my types, since my largest integer is unsigned 32-bit.
+
+But now I have to print these pseudo integers, but the problem is they are also mixed in with actual doubles.
+
+So how do I print these doubles nicely in Java?
+
+I have tried String.format("%f", value), which is close, except I get a lot of trailing zeros for small values.
+
+Here's an example output of of %f
+
+
+232.00000000
+0.18000000000
+1237875192.0
+4.5800000000
+0.00000000
+
+
+Sure I can write a function to trim those zeros, but that's lot of performance loss due to String manipulation.  Can I do better with another format code?
+
+                

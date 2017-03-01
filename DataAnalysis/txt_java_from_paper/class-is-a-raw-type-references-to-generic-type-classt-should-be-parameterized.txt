@@ -1,0 +1,44 @@
+    
+        There are lots of threads about this type of question, but I want to get a complete answer and actually understand it without 'hiding' the problem with a @SupressWarnings !
+
+I have the following class (from a simple Spring tutorial)
+
+public class CarValidator implements Validator {
+
+public boolean supports(Class aClass) {
+	return Car.class.equals(aClass);
+}
+
+public void validate(Object obj, Errors errors) {
+	Car car = (Car) obj;
+
+	ValidationUtils.rejectIfEmptyOrWhitespace(errors, "model", "field.required", "Required field");
+
+	ValidationUtils.rejectIfEmptyOrWhitespace(errors, "price", "field.required", "Required field");
+
+	if( ! errors.hasFieldErrors("price")) {
+		if (car.getPrice().intValue() == 0)
+			errors.rejectValue("price", "not_zero", "Can't be free!");
+	}
+
+}
+
+
+}
+
+Where the Validator class is the org.springframework.validation.Validator class from Spring 2.5.
+
+The supports method is showing a warning (Class is a raw type. References to generic type Class should be parameterized), if I try to add parameters to this such as 
+
+public boolean supports(Class&lt;?&gt; aClass) ...
+
+
+I get the follwing error:
+
+The method supports(Class) of type CarValidator has the same erasure as supports(Class) of type Validator but does not override it
+
+I would be very grateful if someone could fully explain this please and put me out of my misery. 
+
+My applogies in advance, I've been in a 1.4 world for too long!
+
+                

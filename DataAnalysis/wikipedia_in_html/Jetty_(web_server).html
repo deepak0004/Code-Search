@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Jetty_(web_server) by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:39 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Jetty (web server) - Wikipedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Jetty_(web_server)","wgTitle":"Jetty (web server)","wgCurRevisionId":755010172,"wgRevisionId":755010172,"wgArticleId":4630356,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Pages using deprecated image syntax","Free software programmed in Java (programming language)","Free web server software","Web server software programmed in Java","Software using the Apache license","Software using the Eclipse license"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Jetty_(web_server)","wgRelevantArticleId":4630356,"wgRequestId":"WH312gpAME0AAKvAJccAAABQ","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgFlaggedRevsParams":{"tags":{}},"wgStableRevisionId":null,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"en","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgWikibaseItemId":"Q1085688","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.math.styles":"ready","ext.cite.styles":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@1dqfd7l",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["ext.cite.a11y","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.legacy.wikibits","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.watchlist-notice","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.gadget.featured-articles-links","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.interface","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="https://en.wikipedia.org/w/load.php?debug=false&amp;lang=en&amp;modules=ext.cite.styles%7Cext.math.scripts%2Cstyles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="../w/load2c8d.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../w/load18b6.css?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.29.0-wmf.7"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="https://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Jetty_(web_server)"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Jetty_(web_server)&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Jetty_(web_server)&amp;action=edit"/>
+<link rel="apple-touch-icon" href="https://en.wikipedia.org/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="../static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../w/api251f.php?action=rsd"/>
+<link rel="copyright" href="../../creativecommons.org/licenses/by-sa/3.0/index.html"/>
+<link rel="canonical" href="Jetty_(web_server).html"/>
+<link rel="dns-prefetch" href="../../login.wikimedia.org/index.html"/>
+<link rel="dns-prefetch" href="../../meta.wikimedia.org/index.html" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Jetty_web_server rootpage-Jetty_web_server skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">Jetty (web server)</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><script>function mfTempOpenSection(id){var block=document.getElementById("mf-section-"+id);block.className+=" open-block";block.previousSibling.className+=" open-block";}</script><table class="infobox vevent" style="width:22em">
+<caption class="summary">Jetty</caption>
+<tr>
+<td colspan="2" style="text-align:center"><a href="https://en.wikipedia.org/wiki/File:Jetty_logo.png" class="image"><img alt="Jetty logo.png" src="http://upload.wikimedia.org/wikipedia/en/a/a1/Jetty_logo.png" width="240" height="69" data-file-width="240" data-file-height="69" /></a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_developer" title="Software developer">Developer(s)</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Eclipse_Foundation" title="Eclipse Foundation">Eclipse Foundation</a></td>
+</tr>
+<tr>
+<td colspan="2" style="text-align:center"></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_release_life_cycle" title="Software release life cycle">Stable release</a></th>
+<td>
+<div style="margin:0px;">9.4.0 / 12&#160;December 2016<span class="noprint">; 36 days ago</span><span style="display:none">&#160;(<span class="bday dtstart published updated">2016-12-12</span>)</span><sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[1]</a></sup></div>
+</td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Repository_(version_control)" title="Repository (version control)">Repository</a></th>
+<td><span class="url"><a rel="nofollow" class="external text" href="https://github.com/eclipse/jetty.project">github<wbr />.com<wbr />/eclipse<wbr />/jetty<wbr />.project</a></span></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;">Written in</th>
+<td><a href="Java_(programming_language).html" title="Java (programming language)">Java</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Operating_system" title="Operating system">Operating system</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Cross-platform" title="Cross-platform">Cross-platform</a> (<a href="https://en.wikipedia.org/wiki/JVM" class="mw-redirect" title="JVM">JVM</a>)</td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_categories#Broad_categories" title="Software categories">Type</a></th>
+<td>
+<p><a href="https://en.wikipedia.org/wiki/Web_server" title="Web server">Web server</a></p>
+<a href="Web_container.html" title="Web container">Servlet container</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_license" title="Software license">License</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Apache_License" title="Apache License">Apache License</a> 2.0, <a href="https://en.wikipedia.org/wiki/Eclipse_Public_License" title="Eclipse Public License">Eclipse Public License</a> 1.0</td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;">Website</th>
+<td><a rel="nofollow" class="external text" href="http://www.eclipse.org/jetty/">eclipse.org/jetty</a></td>
+</tr>
+</table>
+<p><b>Jetty</b> is a <a href="Java_(programming_language).html" title="Java (programming language)">Java</a> <a href="https://en.wikipedia.org/wiki/Web_server" title="Web server">HTTP (Web) server</a> and <a href="Java_Servlet.html" class="mw-redirect" title="Java Servlet">Java Servlet</a> container. While Web Servers are usually associated with serving documents to people, Jetty is now often used for machine to machine communications, usually within larger software frameworks. Jetty is developed as a <a href="https://en.wikipedia.org/wiki/Free_software" title="Free software">free</a> and <a href="https://en.wikipedia.org/wiki/Open_source" class="mw-redirect" title="Open source">open source</a> project as part of the <a href="https://en.wikipedia.org/wiki/Eclipse_Foundation" title="Eclipse Foundation">Eclipse Foundation</a>. The web server is used in products such as <a href="https://en.wikipedia.org/wiki/Apache_ActiveMQ" title="Apache ActiveMQ">Apache ActiveMQ</a>,<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">[2]</a></sup> <a href="Alfresco_(software).html" title="Alfresco (software)">Alfresco</a>,<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">[3]</a></sup> <a href="Apache_Geronimo.html" title="Apache Geronimo">Apache Geronimo</a>,<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">[4]</a></sup> <a href="Apache_Maven.html" title="Apache Maven">Apache Maven</a>, <a href="https://en.wikipedia.org/wiki/Spark_(cluster_computing_framework)" class="mw-redirect" title="Spark (cluster computing framework)">Apache Spark</a>, <a href="https://en.wikipedia.org/wiki/Google_App_Engine" title="Google App Engine">Google App Engine</a>,<sup id="cite_ref-support_5-0" class="reference"><a href="#cite_note-support-5">[5]</a></sup> <a href="Eclipse_(software).html" title="Eclipse (software)">Eclipse</a>,<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">[6]</a></sup> <a href="https://en.wikipedia.org/wiki/Fuse_Services_Framework" title="Fuse Services Framework">FUSE</a>,<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">[7]</a></sup> <a href="https://en.wikipedia.org/wiki/IDempiere" title="IDempiere">iDempiere</a>,<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">[8]</a></sup> <a href="https://en.wikipedia.org/wiki/HOSEbird" class="mw-redirect" title="HOSEbird">Twitter's Streaming API</a><sup id="cite_ref-9" class="reference"><a href="#cite_note-9">[9]</a></sup> and <a href="https://en.wikipedia.org/wiki/Zimbra" title="Zimbra">Zimbra</a>.<sup id="cite_ref-10" class="reference"><a href="#cite_note-10">[10]</a></sup> Jetty is also the server in open source projects such as <a href="Lift_(web_framework).html" title="Lift (web framework)">Lift</a>, <a href="https://en.wikipedia.org/wiki/Eucalyptus_(computing)" class="mw-redirect" title="Eucalyptus (computing)">Eucalyptus</a>, <a href="https://en.wikipedia.org/wiki/Red5_(media_server)" title="Red5 (media server)">Red5</a>, <a href="Hadoop.html" class="mw-redirect" title="Hadoop">Hadoop</a> and <a href="https://en.wikipedia.org/wiki/I2P" title="I2P">I2P</a>.<sup id="cite_ref-11" class="reference"><a href="#cite_note-11">[11]</a></sup> Jetty supports the latest Java Servlet API (with <a href="JavaServer_Pages.html" title="JavaServer Pages">JSP</a> support) as well as protocols <a href="https://en.wikipedia.org/wiki/HTTP/2" title="HTTP/2">HTTP/2</a> and <a href="https://en.wikipedia.org/wiki/WebSocket" title="WebSocket">WebSocket</a>.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Overview"><span class="tocnumber">1</span> <span class="toctext">Overview</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#History"><span class="tocnumber">2</span> <span class="toctext">History</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#See_also"><span class="tocnumber">3</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#References"><span class="tocnumber">4</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#External_links"><span class="tocnumber">5</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Overview">Overview</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Jetty_(web_server)&amp;action=edit&amp;section=1" title="Edit section: Overview">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Developed as an independent open source project, in 2009 Jetty moved to <a href="Eclipse_(software).html" title="Eclipse (software)">Eclipse</a>.<sup id="cite_ref-12" class="reference"><a href="#cite_note-12">[12]</a></sup><sup id="cite_ref-13" class="reference"><a href="#cite_note-13">[13]</a></sup> Jetty provides <a href="https://en.wikipedia.org/wiki/Web_services" class="mw-redirect" title="Web services">Web services</a> in an <a href="https://en.wikipedia.org/wiki/Embedded_system" title="Embedded system">embedded</a> Java application and it is already a component of the <a href="Eclipse_(software).html" title="Eclipse (software)">Eclipse IDE</a>. It supports <a href="https://en.wikipedia.org/wiki/Apache_JServ_Protocol" title="Apache JServ Protocol">AJP</a>, JASPI, <a href="Java_Management_Extensions.html" title="Java Management Extensions">JMX</a>, <a href="https://en.wikipedia.org/wiki/JNDI" class="mw-redirect" title="JNDI">JNDI</a>, <a href="https://en.wikipedia.org/wiki/OSGi" title="OSGi">OSGi</a>, <a href="https://en.wikipedia.org/wiki/WebSocket" title="WebSocket">WebSocket</a> and other Java technologies.<sup id="cite_ref-support_5-1" class="reference"><a href="#cite_note-support-5">[5]</a></sup></p>
+<h2><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Jetty_(web_server)&amp;action=edit&amp;section=2" title="Edit section: History">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Originally developed in the <a href="https://en.wikipedia.org/wiki/Sydney" title="Sydney">Sydney</a> suburb of <a href="https://en.wikipedia.org/wiki/Balmain,_New_South_Wales" title="Balmain, New South Wales">Balmain</a> by software engineer Greg Wilkins, Jetty was originally an HTTP server component of Mort Bay Server (Mort Bay is an area of Balmain).<sup id="cite_ref-Eclipse_wiki_14-0" class="reference"><a href="#cite_note-Eclipse_wiki-14">[14]</a></sup></p>
+<p>Jetty was originally called IssueTracker (its original application) and then MBServler (Mort Bay Servlet server). Neither of these were much liked, so Jetty was finally picked.<sup id="cite_ref-Eclipse_wiki_14-1" class="reference"><a href="#cite_note-Eclipse_wiki-14">[14]</a></sup></p>
+<p>Jetty was started in 1995 and was hosted by MortBay, creating version 1.x and 2.x, until 2000. From 2000 to 2005, Jetty was hosted by sourceforge.net where version 3.x, 4.x, and 5.x were produced. In 2005, the entire Jetty project moved to codehaus.org.<sup id="cite_ref-15" class="reference"><a href="#cite_note-15">[15]</a></sup> As of 2009, the core components of Jetty have been moved to Eclipse.org, and Codehaus.org continued to provide integrations, extensions, and packaging of Jetty versions 7.x and 8.x (not 9.x)<sup id="cite_ref-Codehaus_16-0" class="reference"><a href="#cite_note-Codehaus-16">[16]</a></sup><sup id="cite_ref-Eclipse_17-0" class="reference"><a href="#cite_note-Eclipse-17">[17]</a></sup> In 2016, the main repository of Jetty moved to <a rel="nofollow" class="external text" href="https://github.com/eclipse/jetty.project">Github</a>,<sup id="cite_ref-GitHubMove_18-0" class="reference"><a href="#cite_note-GitHubMove-18">[18]</a></sup> but it is still developed under the <a rel="nofollow" class="external text" href="https://www.eclipse.org/projects/dev_process/ip-process-in-cartoons.php">Eclipse IP Process</a>.</p>
+<table class="wikitable">
+<tr>
+<th>Version</th>
+<th>Home</th>
+<th>Java Version</th>
+<th>Protocols</th>
+<th>Servlet Version</th>
+<th>JSP Version</th>
+<th>Status</th>
+</tr>
+<tr>
+<td>9.4.x</td>
+<td>Eclipse<sup id="cite_ref-Eclipse_17-1" class="reference"><a href="#cite_note-Eclipse-17">[17]</a></sup></td>
+<td>1.8</td>
+<td>HTTP/1.1, <a href="https://en.wikipedia.org/wiki/HTTP/2" title="HTTP/2">HTTP/2</a>, <a href="https://en.wikipedia.org/wiki/WebSocket" title="WebSocket">WebSocket</a> JSR356</td>
+<td>3.1</td>
+<td>2.3</td>
+<td>Stable since 2016-12-12</td>
+</tr>
+<tr>
+<td>9.3.x</td>
+<td>Eclipse<sup id="cite_ref-Eclipse_17-2" class="reference"><a href="#cite_note-Eclipse-17">[17]</a></sup></td>
+<td>1.8</td>
+<td>HTTP/1.1, <a href="https://en.wikipedia.org/wiki/HTTP/2" title="HTTP/2">HTTP/2</a>, <a href="https://en.wikipedia.org/wiki/WebSocket" title="WebSocket">WebSocket</a> JSR356</td>
+<td>3.1</td>
+<td>2.3</td>
+<td>Stable since 2015-02-25<sup id="cite_ref-19" class="reference"><a href="#cite_note-19">[19]</a></sup><sup id="cite_ref-20" class="reference"><a href="#cite_note-20">[20]</a></sup></td>
+</tr>
+<tr>
+<td>9.2.x</td>
+<td>Eclipse<sup id="cite_ref-Eclipse_17-3" class="reference"><a href="#cite_note-Eclipse-17">[17]</a></sup></td>
+<td>1.7</td>
+<td>HTTP/1.1, <a href="https://en.wikipedia.org/wiki/WebSocket" title="WebSocket">WebSocket</a> JSR356, <a href="https://en.wikipedia.org/wiki/SPDY" title="SPDY">SPDY</a></td>
+<td>3.1</td>
+<td>2.3</td>
+<td>Stable since 2014-04-16<sup id="cite_ref-21" class="reference"><a href="#cite_note-21">[21]</a></sup></td>
+</tr>
+<tr>
+<td>9.1.x</td>
+<td>Eclipse<sup id="cite_ref-Eclipse_17-4" class="reference"><a href="#cite_note-Eclipse-17">[17]</a></sup></td>
+<td>1.7</td>
+<td>HTTP/1.1, <a href="https://en.wikipedia.org/wiki/WebSocket" title="WebSocket">WebSocket</a> JSR356, <a href="https://en.wikipedia.org/wiki/SPDY" title="SPDY">SPDY</a></td>
+<td>3.1</td>
+<td>2.3</td>
+<td>Stable since 2013-11-18<sup id="cite_ref-22" class="reference"><a href="#cite_note-22">[22]</a></sup></td>
+</tr>
+<tr>
+<td>9.0.x</td>
+<td>Eclipse<sup id="cite_ref-Eclipse_17-5" class="reference"><a href="#cite_note-Eclipse-17">[17]</a></sup></td>
+<td>1.7</td>
+<td>HTTP/1.1, <a href="https://en.wikipedia.org/wiki/WebSocket" title="WebSocket">WebSocket</a>, <a href="https://en.wikipedia.org/wiki/SPDY" title="SPDY">SPDY</a></td>
+<td>3.0 (tracking 3.1 drafts)</td>
+<td>2.2</td>
+<td>Stable since 2013-03-08<sup id="cite_ref-23" class="reference"><a href="#cite_note-23">[23]</a></sup></td>
+</tr>
+<tr>
+<td>8.x</td>
+<td>Eclipse,<sup id="cite_ref-Eclipse_17-6" class="reference"><a href="#cite_note-Eclipse-17">[17]</a></sup> Codehaus<sup id="cite_ref-Codehaus_16-1" class="reference"><a href="#cite_note-Codehaus-16">[16]</a></sup></td>
+<td>1.6</td>
+<td>HTTP/1.1, <a href="https://en.wikipedia.org/wiki/WebSocket" title="WebSocket">WebSocket</a>, <a href="https://en.wikipedia.org/wiki/SPDY" title="SPDY">SPDY</a></td>
+<td>3.0</td>
+<td>2.1</td>
+<td>End of Life<sup id="cite_ref-jettyDownloads_24-0" class="reference"><a href="#cite_note-jettyDownloads-24">[24]</a></sup></td>
+</tr>
+<tr>
+<td>7.x</td>
+<td>Eclipse,<sup id="cite_ref-Eclipse_17-7" class="reference"><a href="#cite_note-Eclipse-17">[17]</a></sup> Codehaus<sup id="cite_ref-Codehaus_16-2" class="reference"><a href="#cite_note-Codehaus-16">[16]</a></sup></td>
+<td>1.5, J2ME</td>
+<td>HTTP/1.1, <a href="https://en.wikipedia.org/wiki/WebSocket" title="WebSocket">WebSocket</a>, <a href="https://en.wikipedia.org/wiki/SPDY" title="SPDY">SPDY</a></td>
+<td>2.5</td>
+<td>2.1</td>
+<td>End of Life<sup id="cite_ref-jettyDownloads_24-1" class="reference"><a href="#cite_note-jettyDownloads-24">[24]</a></sup></td>
+</tr>
+<tr>
+<td>6.x</td>
+<td>Codehaus<sup id="cite_ref-Codehaus_16-3" class="reference"><a href="#cite_note-Codehaus-16">[16]</a></sup></td>
+<td>1.4–1.5</td>
+<td>HTTP/1.1</td>
+<td>2.5</td>
+<td>2.0</td>
+<td>Deprecated<sup id="cite_ref-25" class="reference"><a href="#cite_note-25">[25]</a></sup></td>
+</tr>
+<tr>
+<td>5.x</td>
+<td>SourceForge</td>
+<td>1.2–1.5</td>
+<td>HTTP/1.1</td>
+<td>2.4</td>
+<td>2.0</td>
+<td>Antediluvian</td>
+</tr>
+<tr>
+<td>4.x</td>
+<td>SourceForge</td>
+<td>1.2, J2ME</td>
+<td>HTTP/1.1</td>
+<td>2.3</td>
+<td>1.2</td>
+<td>Ancient</td>
+</tr>
+<tr>
+<td>3.x</td>
+<td>SourceForge</td>
+<td>1.2</td>
+<td>HTTP/1.1 RFC2068</td>
+<td>2.2</td>
+<td>1.1</td>
+<td>Fossilized</td>
+</tr>
+<tr>
+<td>2.x</td>
+<td>Mortbay</td>
+<td>1.1</td>
+<td>HTTP/1.0 RFC1945</td>
+<td>2.1</td>
+<td>1.0</td>
+<td>Legendary</td>
+</tr>
+<tr>
+<td>1.x</td>
+<td>Mortbay</td>
+<td>1.0</td>
+<td>HTTP/1.0 RFC1945</td>
+<td></td>
+<td></td>
+<td>Mythical</td>
+</tr>
+</table>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Jetty_(web_server)&amp;action=edit&amp;section=3" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div role="navigation" aria-label="Portals" class="noprint portal plainlist tright" style="margin:0.5em 0 0.5em 1em;border:solid #aaa 1px">
+<ul style="display:table;box-sizing:border-box;padding:0.1em;max-width:175px;background:#f9f9f9;font-size:85%;line-height:110%;font-style:italic;font-weight:bold">
+<li style="display:table-row"><span style="display:table-cell;padding:0.2em;vertical-align:middle;text-align:center"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_(2009).svg/28px-Free_and_open-source_software_logo_(2009).svg.png" width="28" height="28" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/42px-Free_and_open-source_software_logo_%282009%29.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/56px-Free_and_open-source_software_logo_%282009%29.svg.png 2x" data-file-width="512" data-file-height="512" /></span><span style="display:table-cell;padding:0.2em 0.2em 0.2em 0.3em;vertical-align:middle"><a href="https://en.wikipedia.org/wiki/Portal:Free_software" class="mw-redirect" title="Portal:Free software">Free software portal</a></span></li>
+</ul>
+</div>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Application_server" title="Application server">Application server</a></li>
+<li><a href="Comparison_of_application_servers.html#Java" title="Comparison of application servers">List of Java application servers</a></li>
+<li><a href="Java_Platform%2c_Enterprise_Edition.html" title="Java Platform, Enterprise Edition">Java Platform, Enterprise Edition</a></li>
+<li><a href="Java_Servlet.html" class="mw-redirect" title="Java Servlet">Java Servlet</a></li>
+<li><a href="JavaServer_Pages.html" title="JavaServer Pages">JavaServer Pages</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Jetty_(web_server)&amp;action=edit&amp;section=4" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist columns references-column-width" style="-moz-column-width: 40em; -webkit-column-width: 40em; column-width: 40em; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite class="citation mailinglist">Walker, Chris (12 December 2016). <a rel="nofollow" class="external text" href="http://dev.eclipse.org/mhonarc/lists/jetty-announce/msg00097.html">"[jetty-announce] Jetty 9.4.0 Released!"</a>. <i>jetty-announce</i> (Mailing list)<span class="reference-accessdate">. Retrieved <span class="nowrap">13 December</span> 2016</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJetty+%28web+server%29&amp;rft.aufirst=Chris&amp;rft.aulast=Walker&amp;rft.btitle=%5Bjetty-announce%5D+Jetty+9.4.0+Released%21&amp;rft.date=2016-12-12&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fdev.eclipse.org%2Fmhonarc%2Flists%2Fjetty-announce%2Fmsg00097.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://docs.codehaus.org/display/JETTY/Integrating+with+ActiveMQ">"ActiveMQ with Ajax and Jetty"</a>. Jetty Wike (Codehaus)<span class="reference-accessdate">. Retrieved <span class="nowrap">2011-04-12</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJetty+%28web+server%29&amp;rft.btitle=ActiveMQ+with+Ajax+and+Jetty&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fdocs.codehaus.org%2Fdisplay%2FJETTY%2FIntegrating%2Bwith%2BActiveMQ&amp;rft.pub=Jetty+Wike+%28Codehaus%29&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><cite class="citation web">JM.Pascal (April 2010). <a rel="nofollow" class="external text" href="http://www.open-source-ecm.com/2010/04/maven-alfresco-jetty-boostrap-and.html">"Maven + Alfresco&#160;: Jetty, Boostrap and Profil"</a>. Going to an OpenSource ECM World...<span class="reference-accessdate">. Retrieved <span class="nowrap">2011-04-12</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJetty+%28web+server%29&amp;rft.au=JM.Pascal&amp;rft.btitle=Maven+%2B+Alfresco+%3A+Jetty%2C+Boostrap+and+Profil&amp;rft.date=2010-04&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.open-source-ecm.com%2F2010%2F04%2Fmaven-alfresco-jetty-boostrap-and.html&amp;rft.pub=Going+to+an+OpenSource+ECM+World....&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://geronimo.apache.org/GMOxDOC20/configuring-virtual-hosts-in-geronimo-jetty.html">"Configuring Virtual Hosts in Geronimo-Jetty"</a>. Apache Geronimo Documentation<span class="reference-accessdate">. Retrieved <span class="nowrap">2011-04-12</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJetty+%28web+server%29&amp;rft.btitle=Configuring+Virtual+Hosts+in+Geronimo-Jetty&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fgeronimo.apache.org%2FGMOxDOC20%2Fconfiguring-virtual-hosts-in-geronimo-jetty.html&amp;rft.pub=Apache+Geronimo+Documentation&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-support-5"><span class="mw-cite-backlink">^ <a href="#cite_ref-support_5-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-support_5-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation web">Wickesser, Craig (5 August 2009). <a rel="nofollow" class="external text" href="http://www.infoq.com/news/2009/08/google-chose-jetty">"Google Chose Jetty for App Engine"</a>. <i>InfoQ</i>. C4Media Inc<span class="reference-accessdate">. Retrieved <span class="nowrap">12 Apr</span> 2011</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJetty+%28web+server%29&amp;rft.atitle=Google+Chose+Jetty+for+App+Engine&amp;rft.aufirst=Craig&amp;rft.aulast=Wickesser&amp;rft.date=2009-08-05&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.infoq.com%2Fnews%2F2009%2F08%2Fgoogle-chose-jetty&amp;rft.jtitle=InfoQ&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.eclipse.org/jetty/">"jetty://"</a>. Eclipse<span class="reference-accessdate">. Retrieved <span class="nowrap">12 Apr</span> 2011</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJetty+%28web+server%29&amp;rft.btitle=jetty%3A%2F%2F&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.eclipse.org%2Fjetty%2F&amp;rft.pub=Eclipse&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://web.archive.org/web/20110315051854/http://fusesource.com/docs/router/1.6/apidoc/overview-summary.html">"class JettyHttpComponent"</a>. <i>FuseSource</i>. <a href="https://en.wikipedia.org/wiki/Red_Hat" title="Red Hat">Red Hat</a>. Archived from <a rel="nofollow" class="external text" href="http://fusesource.com/docs/router/1.6/apidoc/overview-summary.html">the original</a> on March 15, 2011<span class="reference-accessdate">. Retrieved <span class="nowrap">12 Apr</span> 2011</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJetty+%28web+server%29&amp;rft.atitle=class+JettyHttpComponent&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Ffusesource.com%2Fdocs%2Frouter%2F1.6%2Fapidoc%2Foverview-summary.html&amp;rft.jtitle=FuseSource&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://idempiere.atlassian.net/browse/IDEMPIERE-2245l">"Platform Upgrade for r3"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">8 Apr</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJetty+%28web+server%29&amp;rft.btitle=Platform+Upgrade+for+r3&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fidempiere.atlassian.net%2Fbrowse%2FIDEMPIERE-2245l&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://matthiaswessendorf.wordpress.com/2010/02/16/twitter-streaming-api-and-apache-wink/">"Twitter Streaming API and Apache Wink"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">19 May</span> 2011</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJetty+%28web+server%29&amp;rft.btitle=Twitter+Streaming+API+and+Apache+Wink&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fmatthiaswessendorf.wordpress.com%2F2010%2F02%2F16%2Ftwitter-streaming-api-and-apache-wink%2F&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><cite class="citation web">Zhuang, JJ (18 December 2007). <a rel="nofollow" class="external text" href="http://blog.zimbra.com/blog/archives/2007/12/why-we-switched-to-jetty.html">"Zimbra Blog: Why we switched to Jetty"</a>. <i><a href="https://en.wikipedia.org/wiki/Zimbra" title="Zimbra">Zimbra</a></i>. <a href="https://en.wikipedia.org/wiki/VMware" title="VMware">VMware</a><span class="reference-accessdate">. Retrieved <span class="nowrap">12 Apr</span> 2011</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJetty+%28web+server%29&amp;rft.atitle=Zimbra+Blog%3A+Why+we+switched+to+Jetty&amp;rft.aufirst=JJ&amp;rft.aulast=Zhuang&amp;rft.date=2007-12-18&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fblog.zimbra.com%2Fblog%2Farchives%2F2007%2F12%2Fwhy-we-switched-to-jetty.html&amp;rft.jtitle=Zimbra&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.eclipse.org/jetty/powered/">"Powered by Jetty"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">24 Sep</span> 2012</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJetty+%28web+server%29&amp;rft.btitle=Powered+by+Jetty&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.eclipse.org%2Fjetty%2Fpowered%2F&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text"><cite class="citation web">Lieber, Adam (December 2008). <a rel="nofollow" class="external text" href="http://linuxgazette.net/157/lieber.html">"Jetty: The Twelve Year Journey to Market Maturity"</a>. Linux Gazette<span class="reference-accessdate">. Retrieved <span class="nowrap">28 June</span> 2013</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJetty+%28web+server%29&amp;rft.aufirst=Adam&amp;rft.aulast=Lieber&amp;rft.btitle=Jetty%3A+The+Twelve+Year+Journey+to+Market+Maturity&amp;rft.date=2008-12&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Flinuxgazette.net%2F157%2Flieber.html&amp;rft.pub=Linux+Gazette&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-13">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://docs.codehaus.org/display/JETTY/About Jetty#AboutJetty-Eclipse">"About Jetty"</a>. Codehaus<span class="reference-accessdate">. Retrieved <span class="nowrap">30 November</span> 2011</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJetty+%28web+server%29&amp;rft.btitle=About+Jetty&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fdocs.codehaus.org%2Fdisplay%2FJETTY%2FAbout%2520Jetty%23AboutJetty-Eclipse&amp;rft.pub=Codehaus&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-Eclipse_wiki-14"><span class="mw-cite-backlink">^ <a href="#cite_ref-Eclipse_wiki_14-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Eclipse_wiki_14-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://wiki.eclipse.org/Jetty/FAQ#Why_is_it_called_Jetty.3F">"Jetty/FAQ - Eclipsepedia"</a>. Wiki.eclipse.org. 2011-09-06<span class="reference-accessdate">. Retrieved <span class="nowrap">2014-07-17</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJetty+%28web+server%29&amp;rft.btitle=Jetty%2FFAQ+-+Eclipsepedia&amp;rft.date=2011-09-06&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwiki.eclipse.org%2FJetty%2FFAQ%23Why_is_it_called_Jetty.3F&amp;rft.pub=Wiki.eclipse.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-15">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://sourceforge.net/mailarchive/forum.php?thread_name=4386295B.9020103%40mortbay.com&amp;forum_name=jetty-discuss">"Jetty - Java HTTP Servlet Server / Mailing Lists"</a>. Sourceforge.net<span class="reference-accessdate">. Retrieved <span class="nowrap">2014-07-17</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJetty+%28web+server%29&amp;rft.btitle=Jetty+-+Java+HTTP+Servlet+Server+%2F+Mailing+Lists&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fsourceforge.net%2Fmailarchive%2Fforum.php%3Fthread_name%3D4386295B.9020103%2540mortbay.com%26forum_name%3Djetty-discuss&amp;rft.pub=Sourceforge.net&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-Codehaus-16"><span class="mw-cite-backlink">^ <a href="#cite_ref-Codehaus_16-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Codehaus_16-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-Codehaus_16-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-Codehaus_16-3"><sup><i><b>d</b></i></sup></a></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://docs.codehaus.org/display/JETTY/About+Jetty">About Jetty</a>, Located on Codehaus.</span></li>
+<li id="cite_note-Eclipse-17"><span class="mw-cite-backlink">^ <a href="#cite_ref-Eclipse_17-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Eclipse_17-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-Eclipse_17-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-Eclipse_17-3"><sup><i><b>d</b></i></sup></a> <a href="#cite_ref-Eclipse_17-4"><sup><i><b>e</b></i></sup></a> <a href="#cite_ref-Eclipse_17-5"><sup><i><b>f</b></i></sup></a> <a href="#cite_ref-Eclipse_17-6"><sup><i><b>g</b></i></sup></a> <a href="#cite_ref-Eclipse_17-7"><sup><i><b>h</b></i></sup></a></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.eclipse.org/jetty/about.php">About Jetty</a>, Located on Eclipse.</span></li>
+<li id="cite_note-GitHubMove-18"><span class="mw-cite-backlink"><b><a href="#cite_ref-GitHubMove_18-0">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://dev.eclipse.org/mhonarc/lists/jetty-dev/msg02634.html">"The Eclipse Jetty Project repository has moved to Github!"</a>. 2016-02-12.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJetty+%28web+server%29&amp;rft.btitle=The+Eclipse+Jetty+Project+repository+has+moved+to+Github%21&amp;rft.date=2016-02-12&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fdev.eclipse.org%2Fmhonarc%2Flists%2Fjetty-dev%2Fmsg02634.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-19"><span class="mw-cite-backlink"><b><a href="#cite_ref-19">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://www.eclipse.org/jetty/documentation/current/what-jetty-version.html">"What Version"</a>. eclipse.org. 2015-05-13<span class="reference-accessdate">. Retrieved <span class="nowrap">2015-05-13</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJetty+%28web+server%29&amp;rft.btitle=What+Version&amp;rft.date=2015-05-13&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fwww.eclipse.org%2Fjetty%2Fdocumentation%2Fcurrent%2Fwhat-jetty-version.html&amp;rft.pub=eclipse.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-20"><span class="mw-cite-backlink"><b><a href="#cite_ref-20">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://projects.eclipse.org/projects/rt.jetty/reviews/9.3.0-release-review">"jetty 9.3.0 release review"</a>. Dev.eclipse.org. 2015-02-25<span class="reference-accessdate">. Retrieved <span class="nowrap">2015-04-22</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJetty+%28web+server%29&amp;rft.btitle=jetty+9.3.0+release+review&amp;rft.date=2015-02-25&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fprojects.eclipse.org%2Fprojects%2Frt.jetty%2Freviews%2F9.3.0-release-review&amp;rft.pub=Dev.eclipse.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-21"><span class="mw-cite-backlink"><b><a href="#cite_ref-21">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://projects.eclipse.org/projects/rt.jetty/reviews/9.2.0-release-review">"jetty 9.2.0 release review"</a>. Dev.eclipse.org. 2014-04-16<span class="reference-accessdate">. Retrieved <span class="nowrap">2015-04-22</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJetty+%28web+server%29&amp;rft.btitle=jetty+9.2.0+release+review&amp;rft.date=2014-04-16&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fprojects.eclipse.org%2Fprojects%2Frt.jetty%2Freviews%2F9.2.0-release-review&amp;rft.pub=Dev.eclipse.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-22"><span class="mw-cite-backlink"><b><a href="#cite_ref-22">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://dev.eclipse.org/mhonarc/lists/jetty-announce/msg00060.html">"[jetty-announce] Jetty 9.1.0.v20131115 Stable Release!"</a>. Dev.eclipse.org. 2013-11-18<span class="reference-accessdate">. Retrieved <span class="nowrap">2014-07-17</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJetty+%28web+server%29&amp;rft.btitle=%5Bjetty-announce%26%2393%3B+Jetty+9.1.0.v20131115+Stable+Release%21&amp;rft.date=2013-11-18&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fdev.eclipse.org%2Fmhonarc%2Flists%2Fjetty-announce%2Fmsg00060.html&amp;rft.pub=Dev.eclipse.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-23"><span class="mw-cite-backlink"><b><a href="#cite_ref-23">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://dev.eclipse.org/mhonarc/lists/jetty-announce/msg00043.html">"[jetty-announce] Announcing Jetty 9.0.0"</a>. Dev.eclipse.org. 2013-03-08<span class="reference-accessdate">. Retrieved <span class="nowrap">2014-07-17</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJetty+%28web+server%29&amp;rft.btitle=%5Bjetty-announce%26%2393%3B+Announcing+Jetty+9.0.0&amp;rft.date=2013-03-08&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fdev.eclipse.org%2Fmhonarc%2Flists%2Fjetty-announce%2Fmsg00043.html&amp;rft.pub=Dev.eclipse.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-jettyDownloads-24"><span class="mw-cite-backlink">^ <a href="#cite_ref-jettyDownloads_24-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-jettyDownloads_24-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://www.eclipse.org/jetty/download.html">"Eclipse Jetty Downloads"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJetty+%28web+server%29&amp;rft.btitle=Eclipse+Jetty+Downloads&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fwww.eclipse.org%2Fjetty%2Fdownload.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-25"><span class="mw-cite-backlink"><b><a href="#cite_ref-25">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://dev.eclipse.org/mhonarc/lists/jetty-announce/msg00026.html">"[jetty-announce] Jetty releases 7.6.0 and 8.1.0"</a>. Dev.eclipse.org<span class="reference-accessdate">. Retrieved <span class="nowrap">2014-07-17</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJetty+%28web+server%29&amp;rft.btitle=%5Bjetty-announce%26%2393%3B+Jetty+releases+7.6.0+and+8.1.0&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fdev.eclipse.org%2Fmhonarc%2Flists%2Fjetty-announce%2Fmsg00026.html&amp;rft.pub=Dev.eclipse.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Jetty_(web_server)&amp;action=edit&amp;section=5" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://www.eclipse.org/jetty/">Jetty home page</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.eclipse.org/jetty/documentation/current/">Jetty Documentation</a></li>
+<li><a rel="nofollow" class="external text" href="http://webtide.com/blogs">Jetty Developer Blog</a></li>
+<li><a rel="nofollow" class="external text" href="https://github.com/eclipse/jetty.project">Fork Jetty on GitHub</a></li>
+</ul>
+<div role="navigation" class="navbox" aria-labelledby="Eclipse_Foundation" style="padding:3px">
+<table class="nowraplinks hlist collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="https://en.wikipedia.org/wiki/Template:Eclipse_Foundation" title="Template:Eclipse Foundation"><abbr title="View this template" style=";;background:none transparent;border:none;">v</abbr></a></li>
+<li class="nv-talk"><a href="https://en.wikipedia.org/w/index.php?title=Template_talk:Eclipse_Foundation&amp;action=edit&amp;redlink=1" class="new" title="Template talk:Eclipse Foundation (page does not exist)"><abbr title="Discuss this template" style=";;background:none transparent;border:none;">t</abbr></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Eclipse_Foundation&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;">e</abbr></a></li>
+</ul>
+</div>
+<div id="Eclipse_Foundation" style="font-size:114%"><a href="https://en.wikipedia.org/wiki/Eclipse_Foundation" title="Eclipse Foundation">Eclipse Foundation</a></div>
+</th>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td colspan="2" class="navbox-list navbox-odd" style="width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Acceleo" title="Acceleo">Acceleo</a></li>
+<li><a href="AspectJ.html" title="AspectJ">AspectJ</a></li>
+<li><a href="BIRT_Project.html" title="BIRT Project">BIRT</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Eclipse_Che" title="Eclipse Che">Che</a></li>
+<li><a href="Eclipse_Buckminster.html" title="Eclipse Buckminster">Buckminster</a></li>
+<li><a href="Eclipse_(software).html" title="Eclipse (software)">Eclipse</a></li>
+<li><a href="Equinox_(OSGi).html" title="Equinox (OSGi)">Equinox</a></li>
+<li><a href="EclipseLink.html" title="EclipseLink">EclipseLink</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Golo_(programming_language)" title="Golo (programming language)">Golo</a></li>
+<li><strong class="selflink">Jetty</strong></li>
+<li><a href="JFace.html" title="JFace">JFace</a></li>
+<li><a href="Mylyn.html" title="Mylyn">Mylyn</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Remote_Application_Platform" title="Remote Application Platform">Remote Application Platform</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Eclipse_Sirius" title="Eclipse Sirius">Sirius</a></li>
+<li><a href="Standard_Widget_Toolkit.html" title="Standard Widget Toolkit">Standard Widget Toolkit</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Vert.x" title="Vert.x">Vert.x</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Virgo_(software)" title="Virgo (software)">Virgo</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Xtext" title="Xtext">Xtext</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td class="navbox-abovebelow" colspan="2">
+<div>
+<dl>
+<dt>License</dt>
+<dd><a href="https://en.wikipedia.org/wiki/Eclipse_Public_License" title="Eclipse Public License">Eclipse Public License</a></dd>
+<dt>Website</dt>
+<dd><a rel="nofollow" class="external text" href="http://www.eclipse.org/">www.eclipse.org</a></dd>
+</dl>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div role="navigation" class="navbox" aria-labelledby="Web_server_software" style="padding:3px">
+<table class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="https://en.wikipedia.org/wiki/Template:Web_server_software" title="Template:Web server software"><abbr title="View this template" style=";;background:none transparent;border:none;">v</abbr></a></li>
+<li class="nv-talk"><a href="https://en.wikipedia.org/wiki/Template_talk:Web_server_software" title="Template talk:Web server software"><abbr title="Discuss this template" style=";;background:none transparent;border:none;">t</abbr></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Web_server_software&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;">e</abbr></a></li>
+</ul>
+</div>
+<div id="Web_server_software" style="font-size:114%"><a href="https://en.wikipedia.org/wiki/Web_server" title="Web server">Web server software</a></div>
+</th>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td class="navbox-abovebelow" colspan="2">
+<div><a href="https://en.wikipedia.org/wiki/Comparison_of_web_server_software" title="Comparison of web server software">Comparisons</a></div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/C_(programming_language)" title="C (programming language)">C</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Apache_HTTP_Server" title="Apache HTTP Server">Apache</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Cherokee_(web_server)" title="Cherokee (web server)">Cherokee</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Hiawatha_(web_server)" title="Hiawatha (web server)">Hiawatha</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Lighttpd" title="Lighttpd">Lighttpd</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Mongoose_(web_server)" title="Mongoose (web server)">Mongoose</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Mongrel2" title="Mongrel2">Mongrel2</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Monkey_HTTP_Server" title="Monkey HTTP Server">Monkey</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Nginx" title="Nginx">Nginx</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Saetta_Web_Server" title="Saetta Web Server">Saetta Web Server</a>
+<ul>
+<li>Retired: <a href="https://en.wikipedia.org/wiki/Boa_(web_server)" title="Boa (web server)">Boa</a></li>
+<li><a href="https://en.wikipedia.org/wiki/CERN_httpd" title="CERN httpd">CERN httpd</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Xitami" title="Xitami">Xitami</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Zeus_Web_Server" title="Zeus Web Server">Zeus</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/C++" title="C++">C++</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Internet_Information_Services" title="Internet Information Services">IIS</a> (<a href="https://en.wikipedia.org/wiki/IIS_Express" class="mw-redirect" title="IIS Express">IIS Express</a>)</li>
+<li><a href="https://en.wikipedia.org/wiki/POCO_C++_Libraries" title="POCO C++ Libraries">POCO</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Traffic_Server" title="Traffic Server">Traffic Server</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Erlang_(programming_language)" title="Erlang (programming language)">Erlang</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Yaws_(web_server)" title="Yaws (web server)">Yaws</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Go_(programming_language)" title="Go (programming language)">Go</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Caddy_(web_server)" title="Caddy (web server)">Caddy</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Java_(programming_language).html" title="Java (programming language)">Java</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="GlassFish.html" title="GlassFish">GlassFish</a></li>
+<li><strong class="selflink">Jetty</strong></li>
+<li><a href="JOnAS.html" title="JOnAS">JOnAS</a></li>
+<li><a href="https://en.wikipedia.org/wiki/SAP_NetWeaver_Application_Server" title="SAP NetWeaver Application Server">NetWeaver</a></li>
+<li><a href="Resin_Server.html" class="mw-redirect" title="Resin Server">Resin</a></li>
+<li><a href="Apache_Tomcat.html" title="Apache Tomcat">Tomcat</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Oracle_WebLogic_Server" title="Oracle WebLogic Server">WebLogic</a></li>
+<li><a href="IBM_WebSphere_Application_Server.html" title="IBM WebSphere Application Server">WebSphere</a></li>
+<li><a href="https://en.wikipedia.org/wiki/WildFly" title="WildFly">WildFly</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Pike_(programming_language)" title="Pike (programming language)">Pike</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Caudium_(web_server)" title="Caudium (web server)">Caudium</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Roxen_(web_server)" title="Roxen (web server)">Roxen</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Python_(programming_language)" title="Python (programming language)">Python</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Gunicorn_(HTTP_server)" title="Gunicorn (HTTP server)">Gunicorn</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Python_Paste" title="Python Paste">Paste</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Tornado_(web_server)" title="Tornado (web server)">Tornado</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Twisted_(software)" title="Twisted (software)">Twisted</a></li>
+<li><a href="https://en.wikipedia.org/wiki/PyGopherd" title="PyGopherd">PyGopherd</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Zope" title="Zope">Zope</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Ruby_(programming_language)" title="Ruby (programming language)">Ruby</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/WEBrick" title="WEBrick">WEBrick</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Phusion_Passenger" title="Phusion Passenger">Passenger</a>
+<ul>
+<li>Retired: <a href="https://en.wikipedia.org/wiki/Mongrel_(web_server)" title="Mongrel (web server)">Mongrel</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1242
+Cached time: 20170117104546
+Cache expiry: 2592000
+Dynamic content: false
+CPU time usage: 0.268 seconds
+Real time usage: 0.321 seconds
+Preprocessor visited node count: 1584/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 60053/2097152 bytes
+Template argument size: 1250/2097152 bytes
+Highest expansion depth: 25/40
+Expensive parser function count: 2/500
+Lua time usage: 0.121/10.000 seconds
+Lua memory usage: 4.2 MB/50 MB
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  273.763      1 - -total
+ 50.32%  137.760      2 - Template:Infobox
+ 46.47%  127.210      1 - Template:Reflist
+ 38.56%  105.559      1 - Template:Infobox_software
+ 25.79%   70.605     22 - Template:Cite_web
+ 14.83%   40.606      1 - Template:Infobox_software/simple
+ 10.43%   28.548      1 - Template:Cite_mailing_list
+  7.96%   21.786      1 - Template:Release_date_and_age
+  3.86%   10.567      1 - Template:Time_ago
+  3.59%    9.834      2 - Template:Navbox
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:4630356-0!*!0!!en!4!* and timestamp 20170117104546 and revision id 755010172
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Jetty_(web_server)&amp;oldid=755010172">https://en.wikipedia.org/w/index.php?title=Jetty_(web_server)&amp;oldid=755010172</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Help_Category.html" title="Help:Category">Categories</a>: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Free_software_programmed_in_Java_(programming_language)" title="Category:Free software programmed in Java (programming language)">Free software programmed in Java (programming language)</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Free_web_server_software" title="Category:Free web server software">Free web server software</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Web_server_software_programmed_in_Java" title="Category:Web server software programmed in Java">Web server software programmed in Java</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Software_using_the_Apache_license" title="Category:Software using the Apache license">Software using the Apache license</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Software_using_the_Eclipse_license" title="Category:Software using the Eclipse license">Software using the Eclipse license</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Pages_using_deprecated_image_syntax" title="Category:Pages using deprecated image syntax">Pages using deprecated image syntax</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="Special_MyTalk.html" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="Special_MyContributions.html" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&amp;returnto=Jetty+%28web+server%29" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Jetty+%28web+server%29" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="Jetty_(web_server).html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+															<li  id="ca-talk"><span><a href="https://en.wikipedia.org/wiki/Talk:Jetty_(web_server)"  title="Discussion about the content page [t]" accesskey="t" rel="discussion">Talk</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="Jetty_(web_server).html" >Read</a></span></li>
+															<li id="ca-edit"><span><a href="https://en.wikipedia.org/w/index.php?title=Jetty_(web_server)&amp;action=edit"  title="Edit this page [e]" accesskey="e">Edit</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="https://en.wikipedia.org/w/index.php?title=Jetty_(web_server)&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="https://en.wikipedia.org/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="Main_Page.html"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="Portal_Contents.html" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="Portal_Featured_content.html" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="Portal_Current_events.html" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="https://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="../../shop.wikimedia.org/index.html" title="Visit the Wikipedia store">Wikipedia store</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Interaction</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-help"><a href="Help_Contents.html" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="Wikipedia_About.html" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="Wikipedia_Community_portal.html" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="Wikipedia_Contact_us.html" title="How to contact Wikipedia">Contact page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="https://en.wikipedia.org/wiki/Special:WhatLinksHere/Jetty_(web_server)" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://en.wikipedia.org/wiki/Special:RecentChangesLinked/Jetty_(web_server)" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="Wikipedia_File_Upload_Wizard.html" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="https://en.wikipedia.org/w/index.php?title=Jetty_(web_server)&amp;oldid=755010172" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://en.wikipedia.org/w/index.php?title=Jetty_(web_server)&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q1085688" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="https://en.wikipedia.org/w/index.php?title=Special:CiteThisPage&amp;page=Jetty_%28web_server%29&amp;id=755010172" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Print/export</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Jetty+%28web+server%29">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Jetty+%28web+server%29&amp;returnto=Jetty+%28web+server%29&amp;oldid=755010172&amp;writer=rdf2latex">Download as PDF</a></li><li id="t-print"><a href="https://en.wikipedia.org/w/index.php?title=Jetty_(web_server)&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Languages</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Jetty_(Webserver)" title="Jetty (Webserver) – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Jetty" title="Jetty – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Jetty" title="Jetty – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/제티_(웹_서버)" title="제티 (웹 서버) – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Jetty" title="Jetty – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/Jetty" title="Jetty – Hungarian" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/Jetty" title="Jetty – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Jetty" title="Jetty – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Jetty" title="Jetty – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/Jetty" title="Jetty – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/Jetty" title="Jetty – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/Jetty" title="Jetty – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q1085688#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 15 December 2016, at 19:29.</li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="Wikipedia_Text_of_Creative_Commons_Attribution-ShareAlike_3.html">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="../../creativecommons.org/licenses/by-sa/3.0/index.html" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="../../wikimediafoundation.org/wiki/Terms_of_Use.html">Terms of Use</a> and <a href="../../wikimediafoundation.org/wiki/Privacy_policy.html">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="../../www.wikimediafoundation.org/index.html">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../../wikimediafoundation.org/wiki/Privacy_policy.html" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="Wikipedia_About.html" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="Wikipedia_General_disclaimer.html" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="Wikipedia_Contact_us.html">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a href="../../www.mediawiki.org/wiki/Special_MyLanguage/How_to_contribute.html">Developers</a></li>
+											<li id="footer-places-cookiestatement"><a href="../../wikimediafoundation.org/wiki/Cookie_statement.html">Cookie statement</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/w/index.php?title=Jetty_(web_server)&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="../../www.wikimediafoundation.org/index.html"><img src="https://en.wikipedia.org/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="../../www.mediawiki.org/index.html"><img src="https://en.wikipedia.org/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":408,"wgHostname":"mw1242"});});</script>
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Jetty_(web_server) by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:39 GMT -->
+</html>

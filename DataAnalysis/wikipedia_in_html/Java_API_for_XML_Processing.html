@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Java_API_for_XML_Processing by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:25 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Java API for XML Processing - Wikipedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Java_API_for_XML_Processing","wgTitle":"Java API for XML Processing","wgCurRevisionId":716483549,"wgRevisionId":716483549,"wgArticleId":43926,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles lacking in-text citations from June 2013","All articles lacking in-text citations","Articles lacking reliable references from June 2013","All articles lacking reliable references","Java API for XML","Java specification requests","XML parsers"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Java_API_for_XML_Processing","wgRelevantArticleId":43926,"wgRequestId":"WHuapQpAADgAAQ7NYGoAAABH","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgFlaggedRevsParams":{"tags":{}},"wgStableRevisionId":null,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"en","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgWikibaseItemId":"Q691350","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.cite.styles":"ready","ext.pygments":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@1dqfd7l",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["ext.cite.a11y","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.legacy.wikibits","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.watchlist-notice","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.gadget.featured-articles-links","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.interface","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="https://en.wikipedia.org/w/load.php?debug=false&amp;lang=en&amp;modules=ext.cite.styles%7Cext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="../w/load2c8d.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../w/load18b6.css?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.29.0-wmf.7"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="https://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Java_API_for_XML_Processing"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Java_API_for_XML_Processing&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Java_API_for_XML_Processing&amp;action=edit"/>
+<link rel="apple-touch-icon" href="https://en.wikipedia.org/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="../static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../w/api251f.php?action=rsd"/>
+<link rel="copyright" href="../../creativecommons.org/licenses/by-sa/3.0/index.html"/>
+<link rel="canonical" href="Java_API_for_XML_Processing.html"/>
+<link rel="dns-prefetch" href="../../login.wikimedia.org/index.html"/>
+<link rel="dns-prefetch" href="../../meta.wikimedia.org/index.html" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Java_API_for_XML_Processing rootpage-Java_API_for_XML_Processing skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">Java API for XML Processing</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><script>function mfTempOpenSection(id){var block=document.getElementById("mf-section-"+id);block.className+=" open-block";block.previousSibling.className+=" open-block";}</script><table class="plainlinks metadata ambox ambox-content ambox-multiple_issues compact-ambox" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Ambox_important.svg/40px-Ambox_important.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Ambox_important.svg/60px-Ambox_important.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Ambox_important.svg/80px-Ambox_important.svg.png 2x" data-file-width="40" data-file-height="40" /></div>
+</td>
+<td class="mbox-text">
+<div class="mw-collapsible" style="width:95%; margin: 0.2em 0;"><span class="mbox-text-span"><b>This article has multiple issues.</b> Please help <b><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Java_API_for_XML_Processing&amp;action=edit">improve it</a></b> or discuss these issues on the <b><a href="https://en.wikipedia.org/wiki/Talk:Java_API_for_XML_Processing" title="Talk:Java API for XML Processing">talk page</a></b>. <small><i>(<a href="https://en.wikipedia.org/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove these template messages</a>)</i></small></span>
+<div class="mw-collapsible-content" style="margin-top: 0.3em;">
+<table class="plainlinks metadata ambox ambox-style ambox-More_footnotes" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/40px-Text_document_with_red_question_mark.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/60px-Text_document_with_red_question_mark.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/80px-Text_document_with_red_question_mark.svg.png 2x" data-file-width="48" data-file-height="48" /></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article includes a <a href="https://en.wikipedia.org/wiki/Wikipedia:Citing_sources" title="Wikipedia:Citing sources">list of references</a>, but <b>its sources remain unclear</b> because it has <b>insufficient <a href="https://en.wikipedia.org/wiki/Wikipedia:Citing_sources#Inline_citations" title="Wikipedia:Citing sources">inline citations</a></b>. <span class="hide-when-compact">Please help to <a href="https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Fact_and_Reference_Check" title="Wikipedia:WikiProject Fact and Reference Check">improve</a> this article by <a href="https://en.wikipedia.org/wiki/Wikipedia:When_to_cite" title="Wikipedia:When to cite">introducing</a> more precise citations.</span> <small><i>(June 2013)</i></small> <small class="hide-when-compact"><i>(<a href="https://en.wikipedia.org/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></span></td>
+</tr>
+</table>
+<table class="plainlinks metadata ambox ambox-content ambox-Primary_sources" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px"><a href="https://en.wikipedia.org/wiki/File:Question_book-new.svg" class="image"><img alt="Question book-new.svg" src="http://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/50px-Question_book-new.svg.png" width="50" height="39" srcset="//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/75px-Question_book-new.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/100px-Question_book-new.svg.png 2x" data-file-width="512" data-file-height="399" /></a></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article <b>relies too much on <a href="https://en.wikipedia.org/wiki/Wikipedia:Verifiability" title="Wikipedia:Verifiability">references</a> to <a href="https://en.wikipedia.org/wiki/Wikipedia:No_original_research#Primary.2C_secondary_and_tertiary_sources" title="Wikipedia:No original research">primary sources</a></b>. <span class="hide-when-compact">Please improve this by adding <a href="https://en.wikipedia.org/wiki/Wikipedia:No_original_research#Primary.2C_secondary_and_tertiary_sources" title="Wikipedia:No original research">secondary or tertiary sources</a>.</span> <small><i>(June 2013)</i></small> <small class="hide-when-compact"><i>(<a href="https://en.wikipedia.org/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></span></td>
+</tr>
+</table>
+</div>
+</div>
+<small class="hide-when-compact"><i>(<a href="https://en.wikipedia.org/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></td>
+</tr>
+</table>
+<p>In <a href="https://en.wikipedia.org/wiki/Computing" title="Computing">computing</a>, the <b>Java API for <a href="https://en.wikipedia.org/wiki/XML" title="XML">XML</a> Processing</b>, or <b>JAXP</b> (<span class="nowrap"><span class="IPA nopopups"><a href="https://en.wikipedia.org/wiki/Help:IPA_for_English" title="Help:IPA for English">/<span style="border-bottom:1px dotted"><span title="/ˈ/ primary stress follows">ˈ</span><span title="/dʒ/ 'j' in 'jam'">dʒ</span><span title="/æ/ short 'a' in 'bad'">æ</span><span title="'k' in 'kind'">k</span><span title="'s' in 'sigh'">s</span><span title="'p' in 'pie'">p</span><span title="/iː/ long 'e' in 'seed'">iː</span></span>/</a></span></span> <span title="English pronunciation respelling"><a href="https://en.wikipedia.org/wiki/Help:Pronunciation_respelling_key" title="Help:Pronunciation respelling key"><i><b><span class="smallcaps"><span style="font-variant: small-caps; text-transform: lowercase;">JAKS</span></span></b>-pee</i></a></span>), one of the <a href="Java_XML.html" title="Java XML">Java XML</a> <a href="https://en.wikipedia.org/wiki/Application_programming_interface" title="Application programming interface">Application programming interfaces</a> (API)s, provides the capability of validating and parsing <a href="https://en.wikipedia.org/wiki/XML" title="XML">XML</a> documents. It has three basic parsing interfaces:</p>
+<ul>
+<li>the <a href="https://en.wikipedia.org/wiki/Document_Object_Model" title="Document Object Model">Document Object Model</a> parsing interface or <b>DOM</b> interface</li>
+<li>the <a href="https://en.wikipedia.org/wiki/Simple_API_for_XML" title="Simple API for XML">Simple API for XML</a> parsing interface or <b>SAX</b> interface</li>
+<li>the <a href="StAX.html" title="StAX">Streaming API for XML</a> or <b>StAX</b> interface (part of JDK 6; separate jar available for JDK 5)</li>
+</ul>
+<p>In addition to the parsing interfaces, the API provides an <a href="https://en.wikipedia.org/wiki/XSLT" title="XSLT">XSLT</a> interface to provide data and structural transformations on an XML document.</p>
+<p>JAXP was developed under the <a href="Java_Community_Process.html" title="Java Community Process">Java Community Process</a> as JSR 5 (JAXP 1.0), JSR 63 (JAXP 1.1 and 1.2), and JSR 206 (JAXP 1.3).</p>
+<table>
+<tr>
+<th><a href="Java_Platform%2c_Standard_Edition.html" title="Java Platform, Standard Edition">Java SE</a> version</th>
+<th>JAXP version bundled</th>
+</tr>
+<tr>
+<td>1.4</td>
+<td>1.1</td>
+</tr>
+<tr>
+<td>1.5</td>
+<td>1.3</td>
+</tr>
+<tr>
+<td>1.6</td>
+<td>1.4</td>
+</tr>
+<tr>
+<td>1.7.0</td>
+<td>1.4.5</td>
+</tr>
+<tr>
+<td>1.7.40</td>
+<td>1.5</td>
+</tr>
+<tr>
+<td>1.8</td>
+<td>1.6<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[1]</a></sup></td>
+</tr>
+</table>
+<p>JAXP version 1.4.4 was released on September 3, 2010. JAXP 1.3 was <a rel="nofollow" class="external text" href="http://jaxp.java.net/1.3/EndofLife.html">end-of-lifed</a> on February 12, 2008.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#DOM_interface"><span class="tocnumber">1</span> <span class="toctext">DOM interface</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#SAX_interface"><span class="tocnumber">2</span> <span class="toctext">SAX interface</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#StAX_interface"><span class="tocnumber">3</span> <span class="toctext">StAX interface</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#XSLT_interface"><span class="tocnumber">4</span> <span class="toctext">XSLT interface</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#Example"><span class="tocnumber">4.1</span> <span class="toctext">Example</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#References"><span class="tocnumber">5</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#External_links"><span class="tocnumber">6</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="DOM_interface">DOM interface</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_API_for_XML_Processing&amp;action=edit&amp;section=1" title="Edit section: DOM interface">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Perhaps the easiest part of JAXP to understand, the DOM interface parses an entire XML document and constructs a complete in-memory representation of the document using the classes modeling the concepts found in the <a rel="nofollow" class="external text" href="http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113">Document Object Model(DOM) Level 2 Core Specification</a>.</p>
+<p>The DOM parser is called a <code>DocumentBuilder</code>, as it builds an in-memory <code>Document</code> representation. The <code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/8/docs/api/javax/xml/parsers/DocumentBuilder.html">javax.xml.parsers.DocumentBuilder</a></code> is created by the <code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/8/docs/api/javax/xml/parsers/DocumentBuilderFactory.html">javax.xml.parsers.DocumentBuilderFactory</a></code>. The <code>DocumentBuilder</code> creates an <code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Document.html">org.w3c.dom.Document</a></code> instance - a tree structure containing nodes in the XML Document. Each tree node in the structure implements the <code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Node.html">org.w3c.dom.Node</a></code> interface. Among the many different types of tree nodes, each representing the type of data found in an XML document, the most important include:</p>
+<ul>
+<li>element nodes that may have attributes</li>
+<li>text nodes representing the text found between the start and end tags of a document element.</li>
+</ul>
+<p>Refer to the <a href="Javadoc.html" title="Javadoc">Javadoc</a> documentation of the <a href="Java_package.html" title="Java package">Java package</a> <code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/8/docs/api/org/w3c/dom/package-summary.html">org.w3c.dom</a></code> for a complete list of node types.</p>
+<h2><span class="mw-headline" id="SAX_interface">SAX interface</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_API_for_XML_Processing&amp;action=edit&amp;section=2" title="Edit section: SAX interface">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The <code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/8/docs/api/javax/xml/parsers/SAXParserFactory.html">javax.xml.parsers.SAXParserFactory</a></code> creates the SAX parser, called the <code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/8/docs/api/javax/xml/parsers/SAXParser.html">SAXParser</a></code>. Unlike the DOM parser, the SAX parser does not create an in-memory representation of the XML document and so runs faster and uses less memory. Instead, the SAX parser informs clients of the XML document structure by invoking callbacks, that is, by invoking methods on a <code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/8/docs/api/org/xml/sax/helpers/DefaultHandler.html">org.xml.sax.helpers.DefaultHandler</a></code> instance provided to the parser. This way of accessing document is called <a href="https://en.wikipedia.org/wiki/Streaming_XML" title="Streaming XML">Streaming XML</a>.</p>
+<p>The <code>DefaultHandler</code> class implements the <code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/8/docs/api/org/xml/sax/ContentHandler.html">ContentHandler</a></code>, the <code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/8/docs/api/org/xml/sax/ErrorHandler.html">ErrorHandler</a></code>, the <code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/8/docs/api/org/xml/sax/DTDHandler.html">DTDHandler</a></code>, and the <code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/8/docs/api/org/xml/sax/EntityResolver.html">EntityResolver</a></code> interfaces. Most clients will be interested in methods defined in the <code>ContentHandler</code> interface that are called when the SAX parser encounters the corresponding elements in the XML document. The most important methods in this interface are:</p>
+<ul>
+<li><code>startDocument()</code> and <code>endDocument()</code> methods that are called at the start and end of a XML document.</li>
+<li><code>startElement()</code> and <code>endElement()</code> methods that are called at the start and end of a document element.</li>
+<li><code>characters()</code> method that is called with the text data contents contained between the start and end tags of an XML document element.</li>
+</ul>
+<p>Clients provide a subclass of the <code>DefaultHandler</code> that overrides these methods and processes the data. This may involve storing the data into a database or writing it out to a stream.</p>
+<p>During parsing, the parser may need to access external documents. It is possible to store a local cache for frequently used documents using an <a href="https://en.wikipedia.org/wiki/XML_Catalog" title="XML Catalog">XML Catalog</a>.</p>
+<p>This was introduced with Java 1.3 in May 2000.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">[2]</a></sup></p>
+<h2><span class="mw-headline" id="StAX_interface">StAX interface</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_API_for_XML_Processing&amp;action=edit&amp;section=3" title="Edit section: StAX interface">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="StAX.html" title="StAX">StAX</a> was designed as a median between the DOM and SAX interface. In its metaphor, the programmatic entry point is a cursor that represents a point within the document. The application moves the cursor forward - 'pulling' the information from the parser as it needs. This is different from an event based API - such as SAX - which 'pushes' data to the application - requiring the application to maintain state between events as necessary to keep track of location within the document.</p>
+<h2><span class="mw-headline" id="XSLT_interface">XSLT interface</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_API_for_XML_Processing&amp;action=edit&amp;section=4" title="Edit section: XSLT interface">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The <b>X</b>ML <b>S</b>tylesheet <b>L</b>anguage for <b>T</b>ransformations, or <b><a href="https://en.wikipedia.org/wiki/XSL_Transformations" class="mw-redirect" title="XSL Transformations">XSLT</a></b>, allows for conversion of an XML document into other forms of data. JAXP provides interfaces in package <code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/7/docs/api/javax/xml/transform/package-summary.html">javax.xml.transform</a></code> allowing applications to invoke an XSLT transformation. This interface was originally called TrAX (Transformation API for XML), and was developed by an informal collaboration between the developers of a number of Java XSLT processors.</p>
+<p>Main features of the interface are</p>
+<ul>
+<li>a factory class allowing the application to select dynamically which XSLT processor it wishes to use (<code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/7/docs/api/javax/xml/transform/TransformerFactory.html">TransformerFactory</a></code>, <code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/7/docs/api/javax/xml/transform/TransformerFactory.html#newInstance()">TransformerFactory.newInstance()</a></code>, <code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/7/docs/api/javax/xml/transform/TransformerFactory.html#newInstance(java.lang.String,%20java.lang.ClassLoader)">TransformerFactory.newInstance(java.lang.String, java.lang.ClassLoader)</a></code>)</li>
+<li>methods on the factory class to create a <a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/7/docs/api/javax/xml/transform/Templates.html">Templates</a> object, representing the compiled form of a stylesheet. This is a thread-safe object that can be used repeatedly, in series or in parallel, to apply the same stylesheet to multiple source documents (or to the same source document with different parameters) (<a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/7/docs/api/javax/xml/transform/TransformerFactory.html#newTemplates(javax.xml.transform.Source)">TransformerFactory.newTemplates(javax.xml.transform.Source)</a>, also <code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/7/docs/api/javax/xml/transform/TransformerFactory.html#newTransformer(javax.xml.transform.Source)">TransformerFactory.newTransformer(javax.xml.transform.Source)</a></code>, <code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/7/docs/api/javax/xml/transform/TransformerFactory.html#newTransformer()">TransformerFactory.newTransformer()</a></code>)</li>
+<li>a method on the Templates object to create a <a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/7/docs/api/javax/xml/transform/Transformer.html">Transformer</a>, representing the executable form of a stylesheet (<code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/7/docs/api/javax/xml/transform/Templates.html#newTransformer()">Templates.newTransformer()</a></code>). This cannot be shared across threads, though it is serially reusable. The Transformer provides methods to set stylesheet parameters and serialization options (for example, whether output should be indented), and a method to actually run the transformation. (<code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/7/docs/api/javax/xml/transform/Transformer.html#transform(javax.xml.transform.Source,%20javax.xml.transform.Result)">Transformer.transform(javax.xml.transform.Source, javax.xml.transform.Result)</a></code>)</li>
+</ul>
+<p>Two abstract interfaces Source and Result are defined to represent the input and output of the transformation. This is a somewhat unconventional use of Java interfaces, since there is no expectation that a processor will accept any class that implements the interface - each processor can choose which kinds of Source or Result it is prepared to handle. In practice all JAXP processors support the three standard kinds of <code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/7/docs/api/javax/xml/transform/Source.html">Source</a></code> (<code>DOMSource</code>, <code>SAXSource</code>, <code>StreamSource</code>) and the three standard kinds of <code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/7/docs/api/javax/xml/transform/Result.html">Result</a></code> (<code>DOMResult</code>, <code>SAXResult</code>, <code>StreamResult</code>) and possibly other implementations of their own.</p>
+<h3><span class="mw-headline" id="Example">Example</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_API_for_XML_Processing&amp;action=edit&amp;section=5" title="Edit section: Example">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The most primitive but complete example of XSLT transformation launching may look like this:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="cm">/* file src/examples/xslt/XsltDemo.java */</span>
+<span class="kn">package</span> <span class="nn">examples.xslt</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">java.io.StringReader</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.io.StringWriter</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">javax.xml.transform.Transformer</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.xml.transform.TransformerException</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.xml.transform.TransformerFactory</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.xml.transform.TransformerFactoryConfigurationError</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.xml.transform.stream.StreamResult</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.xml.transform.stream.StreamSource</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">XsltDemo</span> <span class="o">{</span>
+   <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">TransformerFactoryConfigurationError</span><span class="o">,</span> <span class="n">TransformerException</span> <span class="o">{</span>
+      <span class="n">String</span> <span class="n">xsltResource</span> <span class="o">=</span> 
+         <span class="s">"&lt;?xml version='1.0' encoding='UTF-8'?&gt;\n"</span><span class="o">+</span>
+         <span class="s">"&lt;xsl:stylesheet version='2.0' xmlns:xsl='http://www.w3.org/1999/XSL/Transform'&gt;\n"</span><span class="o">+</span>
+         <span class="s">"   &lt;xsl:output method='xml' indent='no'/&gt;\n"</span><span class="o">+</span>
+         <span class="s">"   &lt;xsl:template match='/'&gt;\n"</span><span class="o">+</span>
+         <span class="s">"      &lt;reRoot&gt;&lt;reNode&gt;&lt;xsl:value-of select='/root/node/@val' /&gt; world&lt;/reNode&gt;&lt;/reRoot&gt;\n"</span><span class="o">+</span>
+         <span class="s">"   &lt;/xsl:template&gt;\n"</span><span class="o">+</span>
+         <span class="s">"&lt;/xsl:stylesheet&gt;"</span><span class="o">;</span>
+      <span class="n">String</span> <span class="n">xmlSourceResource</span> <span class="o">=</span>
+         <span class="s">"&lt;?xml version='1.0' encoding='UTF-8'?&gt;\n"</span><span class="o">+</span>
+         <span class="s">"&lt;root&gt;&lt;node val='hello'/&gt;&lt;/root&gt;"</span><span class="o">;</span>
+      
+      <span class="n">StringWriter</span> <span class="n">xmlResultResource</span> <span class="o">=</span> <span class="k">new</span> <span class="n">StringWriter</span><span class="o">();</span>
+      
+      <span class="n">Transformer</span> <span class="n">xmlTransformer</span> <span class="o">=</span> <span class="n">TransformerFactory</span><span class="o">.</span><span class="na">newInstance</span><span class="o">().</span><span class="na">newTransformer</span><span class="o">(</span>
+         <span class="k">new</span> <span class="n">StreamSource</span><span class="o">(</span><span class="k">new</span> <span class="n">StringReader</span><span class="o">(</span><span class="n">xsltResource</span><span class="o">))</span>
+      <span class="o">);</span>
+      
+      <span class="n">xmlTransformer</span><span class="o">.</span><span class="na">transform</span><span class="o">(</span>
+         <span class="k">new</span> <span class="n">StreamSource</span><span class="o">(</span><span class="k">new</span> <span class="n">StringReader</span><span class="o">(</span><span class="n">xmlSourceResource</span><span class="o">)),</span> <span class="k">new</span> <span class="n">StreamResult</span><span class="o">(</span><span class="n">xmlResultResource</span><span class="o">)</span>
+      <span class="o">);</span>
+      
+      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">xmlResultResource</span><span class="o">.</span><span class="na">getBuffer</span><span class="o">().</span><span class="na">toString</span><span class="o">());</span>
+   <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+<p>It applies the following hardcoded XSLT transformation:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="cp">&lt;?xml version='1.0' encoding='UTF-8'?&gt;</span>
+<span class="nt">&lt;xsl:stylesheet</span> <span class="na">version=</span><span class="s">'2.0'</span> <span class="na">xmlns:xsl=</span><span class="s">'http://www.w3.org/1999/XSL/Transform'</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;xsl:output</span> <span class="na">method=</span><span class="s">'xml'</span> <span class="na">indent=</span><span class="s">'no'</span><span class="nt">/&gt;</span>
+	<span class="nt">&lt;xsl:template</span> <span class="na">match=</span><span class="s">'/'</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;reRoot&gt;&lt;reNode&gt;&lt;xsl:value-of</span> <span class="na">select=</span><span class="s">'/root/node/@val'</span> <span class="nt">/&gt;</span> world<span class="nt">&lt;/reNode&gt;&lt;/reRoot&gt;</span>
+	<span class="nt">&lt;/xsl:template&gt;</span>
+<span class="nt">&lt;/xsl:stylesheet&gt;</span>
+</pre></div>
+<p>To the following hardcoded XML document:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="cp">&lt;?xml version='1.0' encoding='UTF-8'?&gt;</span>
+<span class="nt">&lt;root&gt;&lt;node</span> <span class="na">val=</span><span class="s">'hello'</span><span class="nt">/&gt;&lt;/root&gt;</span>
+</pre></div>
+<p>The result of execution will be</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span><span class="nt">&lt;reRoot&gt;&lt;reNode&gt;</span>hello world<span class="nt">&lt;/reNode&gt;&lt;/reRoot&gt;</span>
+</pre></div>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_API_for_XML_Processing&amp;action=edit&amp;section=6" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="https://www.jcp.org/en/jsr/detail?id=206">https://www.jcp.org/en/jsr/detail?id=206</a></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text">Compare the <a rel="nofollow" class="external text" href="http://java.sun.com/j2ee/sdk_1.2.1/techdocs/api/index-all.html#_S_">Java 1.2.1 API index</a> with the <a rel="nofollow" class="external text" href="http://java.sun.com/j2ee/sdk_1.3/techdocs/api/index-all.html#_S_">1.3 index</a>. The Java Specification Request (JSR) 5, <i>XML Parsing Specification</i>, was finalised on <a rel="nofollow" class="external text" href="http://jcp.org/en/jsr/detail?id=5">21 March, 2000</a>.</span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_API_for_XML_Processing&amp;action=edit&amp;section=7" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/7/docs/technotes/guides/xml/enhancements.html">JAXP support in Java 7</a></li>
+<li><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/tutorial/jaxp/index.html">Oracle's JAXP product description</a></li>
+<li><a rel="nofollow" class="external text" href="http://jaxp.java.net/">JAXP Reference Implementation Project Home Page</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.jcp.org/en/jsr/detail?id=63">JSR 63</a> (JAXP 1.1 and 1.2)</li>
+<li><a rel="nofollow" class="external text" href="http://www.jcp.org/en/jsr/detail?id=5">JSR 5</a> (JAXP 1.0)</li>
+<li><a rel="nofollow" class="external text" href="http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113">Document Object Model(DOM) Level 2 Core Specification</a></li>
+<li>Sample programs using the DOM and SAX parser <a rel="nofollow" class="external text" href="http://totheriver.com/learn/xml/xmltutorial.html">Tutorial: XML with Xerces for Java</a></li>
+<li><a rel="nofollow" class="external text" href="http://xml.apache.org/xalan-j/trax.html">JAXP/TrAX introduction on the Apache XML web site</a></li>
+</ul>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1197
+Cached time: 20170115145154
+Cache expiry: 2592000
+Dynamic content: false
+CPU time usage: 0.156 seconds
+Real time usage: 0.198 seconds
+Preprocessor visited node count: 879/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 26343/2097152 bytes
+Template argument size: 6958/2097152 bytes
+Highest expansion depth: 11/40
+Expensive parser function count: 2/500
+Lua time usage: 0.051/10.000 seconds
+Lua memory usage: 1.56 MB/50 MB
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  156.426      1 - -total
+ 84.16%  131.653      3 - Template:Ambox
+ 67.27%  105.232      1 - Template:Multiple_issues
+ 25.53%   39.935      1 - Template:More_footnotes
+  9.00%   14.072      1 - Template:IPAc-en
+  8.93%   13.967     12 - Template:Javadoc:SE
+  7.29%   11.404      1 - Template:Primary_sources
+  5.39%    8.425      1 - Template:Respell
+  4.41%    6.897      1 - Template:Reflist
+  2.28%    3.568      2 - Template:Main_other
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:43926-0!*!0!!en!4!* and timestamp 20170115145154 and revision id 716483549
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Java_API_for_XML_Processing&amp;oldid=716483549">https://en.wikipedia.org/w/index.php?title=Java_API_for_XML_Processing&amp;oldid=716483549</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Help_Category.html" title="Help:Category">Categories</a>: <ul><li><a href="Category_Java_API_for_XML.html" title="Category:Java API for XML">Java API for XML</a></li><li><a href="Category_Java_specification_requests.html" title="Category:Java specification requests">Java specification requests</a></li><li><a href="https://en.wikipedia.org/wiki/Category:XML_parsers" title="Category:XML parsers">XML parsers</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Articles_lacking_in-text_citations_from_June_2013" title="Category:Articles lacking in-text citations from June 2013">Articles lacking in-text citations from June 2013</a></li><li><a href="https://en.wikipedia.org/wiki/Category:All_articles_lacking_in-text_citations" title="Category:All articles lacking in-text citations">All articles lacking in-text citations</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Articles_lacking_reliable_references_from_June_2013" title="Category:Articles lacking reliable references from June 2013">Articles lacking reliable references from June 2013</a></li><li><a href="https://en.wikipedia.org/wiki/Category:All_articles_lacking_reliable_references" title="Category:All articles lacking reliable references">All articles lacking reliable references</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="Special_MyTalk.html" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="Special_MyContributions.html" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&amp;returnto=Java+API+for+XML+Processing" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Java+API+for+XML+Processing" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="Java_API_for_XML_Processing.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+															<li  id="ca-talk"><span><a href="https://en.wikipedia.org/wiki/Talk:Java_API_for_XML_Processing"  title="Discussion about the content page [t]" accesskey="t" rel="discussion">Talk</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="Java_API_for_XML_Processing.html" >Read</a></span></li>
+															<li id="ca-edit"><span><a href="https://en.wikipedia.org/w/index.php?title=Java_API_for_XML_Processing&amp;action=edit"  title="Edit this page [e]" accesskey="e">Edit</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="https://en.wikipedia.org/w/index.php?title=Java_API_for_XML_Processing&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="https://en.wikipedia.org/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="Main_Page.html"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="Portal_Contents.html" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="Portal_Featured_content.html" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="Portal_Current_events.html" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="https://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="../../shop.wikimedia.org/index.html" title="Visit the Wikipedia store">Wikipedia store</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Interaction</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-help"><a href="Help_Contents.html" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="Wikipedia_About.html" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="Wikipedia_Community_portal.html" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="Wikipedia_Contact_us.html" title="How to contact Wikipedia">Contact page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="https://en.wikipedia.org/wiki/Special:WhatLinksHere/Java_API_for_XML_Processing" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://en.wikipedia.org/wiki/Special:RecentChangesLinked/Java_API_for_XML_Processing" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="Wikipedia_File_Upload_Wizard.html" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="https://en.wikipedia.org/w/index.php?title=Java_API_for_XML_Processing&amp;oldid=716483549" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://en.wikipedia.org/w/index.php?title=Java_API_for_XML_Processing&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q691350" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="https://en.wikipedia.org/w/index.php?title=Special:CiteThisPage&amp;page=Java_API_for_XML_Processing&amp;id=716483549" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Print/export</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Java+API+for+XML+Processing">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Java+API+for+XML+Processing&amp;returnto=Java+API+for+XML+Processing&amp;oldid=716483549&amp;writer=rdf2latex">Download as PDF</a></li><li id="t-print"><a href="https://en.wikipedia.org/w/index.php?title=Java_API_for_XML_Processing&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Languages</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Java_API_for_XML_Processing" title="Java API for XML Processing – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Java_API_for_XML_Processing" title="Java API for XML Processing – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/JAXP" title="JAXP – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/JAX-P" title="JAX-P – Hungarian" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/Java_API_for_XML_Processing" title="Java API for XML Processing – Dutch" lang="nl" hreflang="nl" class="interlanguage-link-target">Nederlands</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/Java_API_for_XML_Processing" title="Java API for XML Processing – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/API_Java_para_processamento_de_XML" title="API Java para processamento de XML – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/JAXP" title="JAXP – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-vi"><a href="https://vi.wikipedia.org/wiki/JAXP" title="JAXP – Vietnamese" lang="vi" hreflang="vi" class="interlanguage-link-target">Tiếng Việt</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/JAXP" title="JAXP – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q691350#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 22 April 2016, at 00:37.</li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="Wikipedia_Text_of_Creative_Commons_Attribution-ShareAlike_3.html">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="../../creativecommons.org/licenses/by-sa/3.0/index.html" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="../../wikimediafoundation.org/wiki/Terms_of_Use.html">Terms of Use</a> and <a href="../../wikimediafoundation.org/wiki/Privacy_policy.html">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="../../www.wikimediafoundation.org/index.html">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../../wikimediafoundation.org/wiki/Privacy_policy.html" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="Wikipedia_About.html" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="Wikipedia_General_disclaimer.html" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="Wikipedia_Contact_us.html">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a href="../../www.mediawiki.org/wiki/Special_MyLanguage/How_to_contribute.html">Developers</a></li>
+											<li id="footer-places-cookiestatement"><a href="../../wikimediafoundation.org/wiki/Cookie_statement.html">Cookie statement</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/w/index.php?title=Java_API_for_XML_Processing&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="../../www.wikimediafoundation.org/index.html"><img src="https://en.wikipedia.org/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="../../www.mediawiki.org/index.html"><img src="https://en.wikipedia.org/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":65,"wgHostname":"mw1261"});});</script>
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Java_API_for_XML_Processing by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:25 GMT -->
+</html>

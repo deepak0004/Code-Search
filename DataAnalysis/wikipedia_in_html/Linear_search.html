@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Linear_search by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:41 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Linear search - Wikipedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Linear_search","wgTitle":"Linear search","wgCurRevisionId":754453495,"wgRevisionId":754453495,"wgArticleId":18171,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles needing additional references from November 2010","All articles needing additional references","Articles with example pseudocode","Articles with example Java code","Search algorithms"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Linear_search","wgRelevantArticleId":18171,"wgRequestId":"WHHCuApAADgAAJxqQv0AAAAL","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgFlaggedRevsParams":{"tags":{}},"wgStableRevisionId":null,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"en","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgWikibaseItemId":"Q787903","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.cite.styles":"ready","ext.math.styles":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@1dqfd7l",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["ext.cite.a11y","ext.math.scripts","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.legacy.wikibits","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.watchlist-notice","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.gadget.featured-articles-links","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.interface","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="https://en.wikipedia.org/w/load.php?debug=false&amp;lang=en&amp;modules=ext.cite.styles%7Cext.math.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="../w/load2c8d.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../w/load18b6.css?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.29.0-wmf.7"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="https://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Linear_search"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Linear_search&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Linear_search&amp;action=edit"/>
+<link rel="apple-touch-icon" href="https://en.wikipedia.org/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="../static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../w/api251f.php?action=rsd"/>
+<link rel="copyright" href="../../creativecommons.org/licenses/by-sa/3.0/index.html"/>
+<link rel="canonical" href="Linear_search.html"/>
+<link rel="dns-prefetch" href="../../login.wikimedia.org/index.html"/>
+<link rel="dns-prefetch" href="../../meta.wikimedia.org/index.html" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Linear_search rootpage-Linear_search skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">Linear search</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><script>function mfTempOpenSection(id){var block=document.getElementById("mf-section-"+id);block.className+=" open-block";block.previousSibling.className+=" open-block";}</script><table class="plainlinks metadata ambox ambox-content ambox-multiple_issues compact-ambox" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Ambox_important.svg/40px-Ambox_important.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Ambox_important.svg/60px-Ambox_important.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Ambox_important.svg/80px-Ambox_important.svg.png 2x" data-file-width="40" data-file-height="40" /></div>
+</td>
+<td class="mbox-text">
+<div class="mw-collapsible" style="width:95%; margin: 0.2em 0;"><span class="mbox-text-span"><b>This article has multiple issues.</b> Please help <b><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Linear_search&amp;action=edit">improve it</a></b> or discuss these issues on the <b><a href="https://en.wikipedia.org/wiki/Talk:Linear_search" title="Talk:Linear search">talk page</a></b>. <small><i>(<a href="https://en.wikipedia.org/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove these template messages</a>)</i></small></span>
+<div class="mw-collapsible-content" style="margin-top: 0.3em;">
+<table class="plainlinks metadata ambox ambox-content ambox-Refimprove" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px"><a href="https://en.wikipedia.org/wiki/File:Question_book-new.svg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/50px-Question_book-new.svg.png" width="50" height="39" srcset="//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/75px-Question_book-new.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/100px-Question_book-new.svg.png 2x" data-file-width="512" data-file-height="399" /></a></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article <b>needs additional citations for <a href="https://en.wikipedia.org/wiki/Wikipedia:Verifiability" title="Wikipedia:Verifiability">verification</a></b>. <span class="hide-when-compact">Please help <a class="external text" href="http://en.wikipedia.org/w/index.php?title=Linear_search&amp;action=edit">improve this article</a> by <a href="https://en.wikipedia.org/wiki/Help:Introduction_to_referencing_with_Wiki_Markup/1" title="Help:Introduction to referencing with Wiki Markup/1">adding citations to reliable sources</a>. Unsourced material may be challenged and removed.</span> <small><i>(November 2010)</i></small> <small class="hide-when-compact"><i>(<a href="https://en.wikipedia.org/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></span></td>
+</tr>
+</table>
+<table class="plainlinks metadata ambox ambox-content ambox-one_source" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px"><a href="https://en.wikipedia.org/wiki/File:Question_book-new.svg" class="image"><img alt="Question book-new.svg" src="http://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/50px-Question_book-new.svg.png" width="50" height="39" srcset="//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/75px-Question_book-new.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/100px-Question_book-new.svg.png 2x" data-file-width="512" data-file-height="399" /></a></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article <b>relies largely or entirely upon a single <a href="https://en.wikipedia.org/wiki/Wikipedia:Identifying_reliable_sources" title="Wikipedia:Identifying reliable sources">source</a></b>. <span class="hide-when-compact">Relevant discussion may be found on the <a href="https://en.wikipedia.org/wiki/Talk:Linear_search#.23" title="Talk:Linear search">talk page</a>. Please help <a class="external text" href="http://en.wikipedia.org/w/index.php?title=Linear_search&amp;action=edit">improve this article</a> by introducing <a href="https://en.wikipedia.org/wiki/Wikipedia:Citing_sources" title="Wikipedia:Citing sources">citations</a> to additional sources.</span> <small><i>(November 2010)</i></small></span></td>
+</tr>
+</table>
+</div>
+</div>
+<small class="hide-when-compact"><i>(<a href="https://en.wikipedia.org/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></td>
+</tr>
+</table>
+<table class="infobox" style="width:22em">
+<caption>Linear search</caption>
+<tr>
+<th scope="row">Class</th>
+<td><a href="https://en.wikipedia.org/wiki/Search_algorithm" title="Search algorithm">Search algorithm</a></td>
+</tr>
+<tr>
+<th scope="row">Data structure</th>
+<td>{{{data}}}</td>
+</tr>
+<tr>
+<th scope="row"><a href="https://en.wikipedia.org/wiki/Best,_worst_and_average_case" title="Best, worst and average case">Worst-case performance</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Big_O_notation#Orders_of_common_functions" title="Big O notation"><i>O</i>(<i>n</i>)</a></td>
+</tr>
+<tr>
+<th scope="row"><a href="https://en.wikipedia.org/wiki/Best,_worst_and_average_case" title="Best, worst and average case">Best-case performance</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Big_O_notation#Orders_of_common_functions" title="Big O notation"><i>O</i>(1)</a></td>
+</tr>
+<tr>
+<th scope="row"><a href="https://en.wikipedia.org/wiki/Best,_worst_and_average_case" title="Best, worst and average case">Average performance</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Big_O_notation#Orders_of_common_functions" title="Big O notation"><i>O</i>(<i>n</i>)</a></td>
+</tr>
+<tr>
+<th scope="row"><a href="https://en.wikipedia.org/wiki/Best,_worst_and_average_case" title="Best, worst and average case">Worst-case space complexity</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Big_O_notation#Orders_of_common_functions" title="Big O notation"><i>O</i>(1)</a> iterative</td>
+</tr>
+</table>
+<p>In <a href="https://en.wikipedia.org/wiki/Computer_science" title="Computer science">computer science</a>, <b>linear search</b> or <b>sequential search</b> is a method for finding a target value within a <a href="https://en.wikipedia.org/wiki/List_(computing)" class="mw-redirect" title="List (computing)">list</a>. It sequentially checks each element of the list for the target value until a match is found or until all the elements have been searched.<sup id="cite_ref-FOOTNOTEKnuth1998.C2.A76.1_.28.22Sequential_search.22.29_1-0" class="reference"><a href="#cite_note-FOOTNOTEKnuth1998.C2.A76.1_.28.22Sequential_search.22.29-1">[1]</a></sup></p>
+<p>Linear search runs in at worst <a href="https://en.wikipedia.org/wiki/Time_complexity#linear_time" title="Time complexity">linear time</a> and makes at most <span class="texhtml"><i>n</i></span> comparisons, where <span class="texhtml"><i>n</i></span> is the length of the list. If each element is equally likely to be searched, then linear search has an average case of <span class="texhtml"><span class="sfrac nowrap" style="display:inline-block; vertical-align:-0.5em; font-size:85%; text-align:center;"><span style="display:block; line-height:1em; margin:0 0.1em;"><i>n</i></span><span class="visualhide">/</span><span style="display:block; line-height:1em; margin:0 0.1em; border-top:1px solid;">2</span></span></span> comparisons, but the average case can be affected if the search probabilities for each element vary. Linear search is rarely practical because other search algorithms and schemes, such as the <a href="https://en.wikipedia.org/wiki/Binary_search_algorithm" title="Binary search algorithm">binary search algorithm</a> and <a href="https://en.wikipedia.org/wiki/Hash_table" title="Hash table">hash tables</a>, allow significantly faster searching for all but short lists.<sup id="cite_ref-FOOTNOTEKnuth1998.C2.A76.2_.28.22Searching_by_Comparison_Of_Keys.22.29_2-0" class="reference"><a href="#cite_note-FOOTNOTEKnuth1998.C2.A76.2_.28.22Searching_by_Comparison_Of_Keys.22.29-2">[2]</a></sup></p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Algorithm"><span class="tocnumber">1</span> <span class="toctext">Algorithm</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Basic_algorithm"><span class="tocnumber">1.1</span> <span class="toctext">Basic algorithm</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#With_a_sentinel"><span class="tocnumber">1.2</span> <span class="toctext">With a sentinel</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#In_an_ordered_table"><span class="tocnumber">1.3</span> <span class="toctext">In an ordered table</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Analysis"><span class="tocnumber">2</span> <span class="toctext">Analysis</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#Non-uniform_probabilities"><span class="tocnumber">2.1</span> <span class="toctext">Non-uniform probabilities</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#Application"><span class="tocnumber">3</span> <span class="toctext">Application</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#See_also"><span class="tocnumber">4</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#References"><span class="tocnumber">5</span> <span class="toctext">References</span></a>
+<ul>
+<li class="toclevel-2 tocsection-10"><a href="#Citations"><span class="tocnumber">5.1</span> <span class="toctext">Citations</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Works"><span class="tocnumber">5.2</span> <span class="toctext">Works</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Algorithm">Algorithm</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Linear_search&amp;action=edit&amp;section=1" title="Edit section: Algorithm">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Linear search sequentially checks each element of the list until it finds an element that matches the target value. If the algorithm reaches the end of the list, the search terminates unsuccessfully.<sup id="cite_ref-FOOTNOTEKnuth1998.C2.A76.1_.28.22Sequential_search.22.29_1-1" class="reference"><a href="#cite_note-FOOTNOTEKnuth1998.C2.A76.1_.28.22Sequential_search.22.29-1">[1]</a></sup></p>
+<h3><span class="mw-headline" id="Basic_algorithm">Basic algorithm</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Linear_search&amp;action=edit&amp;section=2" title="Edit section: Basic algorithm">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Given a list <span class="texhtml"><i>L</i></span> of <span class="texhtml"><i>n</i></span> elements with values or <a href="https://en.wikipedia.org/wiki/Record_(computer_science)" title="Record (computer science)">records</a> <span class="texhtml"><i>L</i><sub>0</sub> ... <i>L</i><sub><i>n</i>−1</sub></span>, and target value <span class="texhtml"><i>T</i></span>, the following <a href="https://en.wikipedia.org/wiki/Subroutine" title="Subroutine">subroutine</a> uses binary search to find the index of the target <span class="texhtml"><i>T</i></span> in <span class="texhtml"><i>L</i></span>.<sup id="cite_ref-FOOTNOTEKnuth1998.C2.A76.1_.28.22Sequential_search.22.29.2C_subsection_.22Algorithm_B.22_3-0" class="reference"><a href="#cite_note-FOOTNOTEKnuth1998.C2.A76.1_.28.22Sequential_search.22.29.2C_subsection_.22Algorithm_B.22-3">[3]</a></sup></p>
+<ol>
+<li>Set <span class="texhtml"><i>i</i></span> to 0.</li>
+<li>If <span class="texhtml"><i>L</i><sub><i>i</i></sub> = <i>T</i></span>, the search terminates successfully; return <span class="texhtml"><i>i</i></span>.</li>
+<li>Increase <span class="texhtml"><i>i</i></span> by 1.</li>
+<li>If <span class="texhtml"><i>i</i> &lt; <i>n</i></span>, go to step 2. Otherwise, the search terminates unsuccessfully.</li>
+</ol>
+<h3><span class="mw-headline" id="With_a_sentinel">With a sentinel</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Linear_search&amp;action=edit&amp;section=3" title="Edit section: With a sentinel">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The basic algorithm above makes two comparisons per iteration: one to check if <span class="texhtml"><i>L</i><sub><i>i</i></sub></span> equals <span class="texhtml"><i>t</i></span>, and the other to check if <span class="texhtml"><i>i</i></span> still points to a valid index of the list. By adding an extra record <span class="texhtml"><i>L</i><sub><i>n</i></sub></span> to the list (a <a href="https://en.wikipedia.org/wiki/Sentinel_value" title="Sentinel value">sentinel value</a>) that equals the target, the second comparison can be eliminated until the end of the search, making the algorithm faster. The search will reach the sentinel if the target is not contained within the list.<sup id="cite_ref-FOOTNOTEKnuth1998.C2.A76.1_.28.22Sequential_search.22.29.2C_subsection_.22Algorithm_Q.22_4-0" class="reference"><a href="#cite_note-FOOTNOTEKnuth1998.C2.A76.1_.28.22Sequential_search.22.29.2C_subsection_.22Algorithm_Q.22-4">[4]</a></sup></p>
+<ol>
+<li>Set <span class="texhtml"><i>i</i></span> to 0.</li>
+<li>If <span class="texhtml"><i>L</i><sub><i>i</i></sub> = <i>T</i></span>, go to step 4.</li>
+<li>Increase <span class="texhtml"><i>i</i></span> by 1 and go to step 2.</li>
+<li>If <span class="texhtml"><i>i</i> &lt; <i>n</i></span>, the search terminates successfully; return <span class="texhtml"><i>i</i></span>. Else, the search terminates unsuccessfully.</li>
+</ol>
+<h3><span class="mw-headline" id="In_an_ordered_table">In an ordered table</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Linear_search&amp;action=edit&amp;section=4" title="Edit section: In an ordered table">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>If the list is ordered such that <span class="texhtml"><i>L</i><sub>0</sub> ≤ <i>L</i><sub>1</sub> ... ≤ <i>L</i><sub><i>n</i>−1</sub></span>, the search can establish the absence of the target more quickly by concluding the search once <span class="texhtml"><i>L</i><sub><i>i</i></sub></span> exceeds the target. This variation requires a sentinel that is greater than the target.<sup id="cite_ref-FOOTNOTEKnuth1998.C2.A76.1_.28.22Sequential_search.22.29.2C_subsection_.22Algorithm_T.22_5-0" class="reference"><a href="#cite_note-FOOTNOTEKnuth1998.C2.A76.1_.28.22Sequential_search.22.29.2C_subsection_.22Algorithm_T.22-5">[5]</a></sup></p>
+<ol>
+<li>Set <span class="texhtml"><i>i</i></span> to 0.</li>
+<li>If <span class="texhtml"><i>L</i><sub><i>i</i></sub> ≥ <i>T</i></span>, go to step 4.</li>
+<li>Increase <span class="texhtml"><i>i</i></span> by 1 and go to step 2.</li>
+<li>If <span class="texhtml"><i>L</i><sub><i>i</i></sub> = <i>T</i></span>, the search terminates successfully; return <span class="texhtml"><i>i</i></span>. Else, the search terminates unsuccessfully.</li>
+</ol>
+<h2><span class="mw-headline" id="Analysis">Analysis</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Linear_search&amp;action=edit&amp;section=5" title="Edit section: Analysis">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>For a list with <i>n</i> items, the best case is when the value is equal to the first element of the list, in which case only one comparison is needed. The worst case is when the value is not in the list (or occurs only once at the end of the list), in which case <i>n</i> comparisons are needed.</p>
+<p>If the value being sought occurs <i>k</i> times in the list, and all orderings of the list are equally likely, the expected number of comparisons is</p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y mw-math-element" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow>
+            <mo>{</mo>
+            <mtable columnalign="left left" rowspacing="0.7em 0.2em" columnspacing="1em" displaystyle="false">
+              <mtr>
+                <mtd>
+                  <mi>n</mi>
+                </mtd>
+                <mtd>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mtext>if&#xA0;</mtext>
+                  </mrow>
+                  <mi>k</mi>
+                  <mo>=</mo>
+                  <mn>0</mn>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <mstyle displaystyle="true" scriptlevel="0">
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mfrac>
+                        <mrow>
+                          <mi>n</mi>
+                          <mo>+</mo>
+                          <mn>1</mn>
+                        </mrow>
+                        <mrow>
+                          <mi>k</mi>
+                          <mo>+</mo>
+                          <mn>1</mn>
+                        </mrow>
+                      </mfrac>
+                    </mrow>
+                  </mstyle>
+                </mtd>
+                <mtd>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mtext>if&#xA0;</mtext>
+                  </mrow>
+                  <mn>1</mn>
+                  <mo>&#x2264;<!-- ≤ --></mo>
+                  <mi>k</mi>
+                  <mo>&#x2264;<!-- ≤ --></mo>
+                  <mi>n</mi>
+                  <mo>.</mo>
+                </mtd>
+              </mtr>
+            </mtable>
+            <mo fence="true" stretchy="true"></mo>
+          </mrow>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\begin{cases}n&amp;{\mbox{if }}k=0\\[5pt]\displaystyle {\frac {n+1}{k+1}}&amp;{\mbox{if }}1\leq k\leq n.\end{cases}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/6c31d35edb255baee3eeb7111ce8a1f7d44a3878" class="mwe-math-fallback-image-inline mw-math-element" aria-hidden="true" style="vertical-align: -4.171ex; width:24.051ex; height:9.509ex;" alt="{\begin{cases}n&amp;{\mbox{if }}k=0\\[5pt]\displaystyle {\frac  {n+1}{k+1}}&amp;{\mbox{if }}1\leq k\leq n.\end{cases}}" /></span></dd>
+</dl>
+<p>For example, if the value being sought occurs once in the list, and all orderings of the list are equally likely, the expected number of comparisons is <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y mw-math-element" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <mrow>
+              <mi>n</mi>
+              <mo>+</mo>
+              <mn>1</mn>
+            </mrow>
+            <mn>2</mn>
+          </mfrac>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\frac {n+1}{2}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4453d9f4a784834dcbdd7d1dfbe8724094d940dc" class="mwe-math-fallback-image-inline mw-math-element" aria-hidden="true" style="vertical-align: -1.838ex; width:6.265ex; height:5.176ex;" alt="{\frac  {n+1}2}" /></span>. However, if it is <i>known</i> that it occurs once, then at most <i>n</i> - 1 comparisons are needed, and the expected number of comparisons is</p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y mw-math-element" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mstyle displaystyle="true" scriptlevel="0">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mfrac>
+              <mrow>
+                <mo stretchy="false">(</mo>
+                <mi>n</mi>
+                <mo>+</mo>
+                <mn>2</mn>
+                <mo stretchy="false">)</mo>
+                <mo stretchy="false">(</mo>
+                <mi>n</mi>
+                <mo>&#x2212;<!-- − --></mo>
+                <mn>1</mn>
+                <mo stretchy="false">)</mo>
+              </mrow>
+              <mrow>
+                <mn>2</mn>
+                <mi>n</mi>
+              </mrow>
+            </mfrac>
+          </mrow>
+        </mstyle>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \displaystyle {\frac {(n+2)(n-1)}{2n}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4248051700ad53a6fd05eef0ffa35498b42dfb9c" class="mwe-math-fallback-image-inline mw-math-element" aria-hidden="true" style="vertical-align: -1.838ex; width:15.354ex; height:5.676ex;" alt="\displaystyle {\frac  {(n+2)(n-1)}{2n}}" /></span></dd>
+</dl>
+<p>(for example, for <i>n</i> = 2 this is 1, corresponding to a single if-then-else construct).</p>
+<p>Either way, <a href="https://en.wikipedia.org/wiki/Asymptotic_complexity" class="mw-redirect" title="Asymptotic complexity">asymptotically</a> the worst-case cost and the expected cost of linear search are both <a href="https://en.wikipedia.org/wiki/Big_O_notation" title="Big O notation">O</a>(<i>n</i>).</p>
+<h3><span class="mw-headline" id="Non-uniform_probabilities">Non-uniform probabilities</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Linear_search&amp;action=edit&amp;section=6" title="Edit section: Non-uniform probabilities">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The performance of linear search improves if the desired value is more likely to be near the beginning of the list than to its end. Therefore, if some values are much more likely to be searched than others, it is desirable to place them at the beginning of the list.</p>
+<p>In particular, when the list items are arranged in order of decreasing probability, and these probabilities are <a href="https://en.wikipedia.org/wiki/Geometric_distribution" title="Geometric distribution">geometrically distributed</a>, the cost of linear search is only O(1). If the table size <i>n</i> is large enough, linear search will be faster than <a href="https://en.wikipedia.org/wiki/Binary_search" class="mw-redirect" title="Binary search">binary search</a>, whose cost is O(log <i>n</i>).<sup id="cite_ref-knuth_6-0" class="reference"><a href="#cite_note-knuth-6">[6]</a></sup></p>
+<h2><span class="mw-headline" id="Application">Application</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Linear_search&amp;action=edit&amp;section=7" title="Edit section: Application">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Linear search is usually very simple to implement, and is practical when the list has only a few elements, or when performing a single search in an unordered list.</p>
+<p>When many values have to be searched in the same list, it often pays to pre-process the list in order to use a faster method. For example, one may <a href="https://en.wikipedia.org/wiki/Sort_(computing)" class="mw-redirect" title="Sort (computing)">sort</a> the list and use binary search, or build any efficient <a href="https://en.wikipedia.org/wiki/Search_data_structure" title="Search data structure">search data structure</a> from it. Should the content of the list change frequently, repeated re-organization may be more trouble than it is worth.</p>
+<p>As a result, even though in theory other search algorithms may be faster than linear search (for instance <a href="https://en.wikipedia.org/wiki/Binary_search" class="mw-redirect" title="Binary search">binary search</a>), in practice even on medium-sized arrays (around 100 items or less) it might be infeasible to use anything else. On larger arrays, it only makes sense to use other, faster search methods if the data is large enough, because the initial time to prepare (sort) the data is comparable to many linear searches <sup id="cite_ref-7" class="reference"><a href="#cite_note-7">[7]</a></sup></p>
+<p><br /></p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Linear_search&amp;action=edit&amp;section=8" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Ternary_search" title="Ternary search">Ternary search</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Hash_table" title="Hash table">Hash table</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Linear_search_problem" title="Linear search problem">Linear search problem</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Linear_search&amp;action=edit&amp;section=9" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Citations">Citations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Linear_search&amp;action=edit&amp;section=10" title="Edit section: Citations">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="reflist columns references-column-count references-column-count-2" style="-moz-column-count: 2; -webkit-column-count: 2; column-count: 2; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-FOOTNOTEKnuth1998.C2.A76.1_.28.22Sequential_search.22.29-1"><span class="mw-cite-backlink">^ <a href="#cite_ref-FOOTNOTEKnuth1998.C2.A76.1_.28.22Sequential_search.22.29_1-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-FOOTNOTEKnuth1998.C2.A76.1_.28.22Sequential_search.22.29_1-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><a href="#CITEREFKnuth1998">Knuth 1998</a>, §6.1 ("Sequential search").</span></li>
+<li id="cite_note-FOOTNOTEKnuth1998.C2.A76.2_.28.22Searching_by_Comparison_Of_Keys.22.29-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-FOOTNOTEKnuth1998.C2.A76.2_.28.22Searching_by_Comparison_Of_Keys.22.29_2-0">^</a></b></span> <span class="reference-text"><a href="#CITEREFKnuth1998">Knuth 1998</a>, §6.2 ("Searching by Comparison Of Keys").</span></li>
+<li id="cite_note-FOOTNOTEKnuth1998.C2.A76.1_.28.22Sequential_search.22.29.2C_subsection_.22Algorithm_B.22-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-FOOTNOTEKnuth1998.C2.A76.1_.28.22Sequential_search.22.29.2C_subsection_.22Algorithm_B.22_3-0">^</a></b></span> <span class="reference-text"><a href="#CITEREFKnuth1998">Knuth 1998</a>, §6.1 ("Sequential search"), subsection "Algorithm B".</span></li>
+<li id="cite_note-FOOTNOTEKnuth1998.C2.A76.1_.28.22Sequential_search.22.29.2C_subsection_.22Algorithm_Q.22-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-FOOTNOTEKnuth1998.C2.A76.1_.28.22Sequential_search.22.29.2C_subsection_.22Algorithm_Q.22_4-0">^</a></b></span> <span class="reference-text"><a href="#CITEREFKnuth1998">Knuth 1998</a>, §6.1 ("Sequential search"), subsection "Algorithm Q".</span></li>
+<li id="cite_note-FOOTNOTEKnuth1998.C2.A76.1_.28.22Sequential_search.22.29.2C_subsection_.22Algorithm_T.22-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-FOOTNOTEKnuth1998.C2.A76.1_.28.22Sequential_search.22.29.2C_subsection_.22Algorithm_T.22_5-0">^</a></b></span> <span class="reference-text"><a href="#CITEREFKnuth1998">Knuth 1998</a>, §6.1 ("Sequential search"), subsection "Algorithm T".</span></li>
+<li id="cite_note-knuth-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-knuth_6-0">^</a></b></span> <span class="reference-text"><cite class="citation book"><a href="https://en.wikipedia.org/wiki/Donald_Knuth" title="Donald Knuth">Knuth, Donald</a> (1997). "Section 6.1: Sequential Searching,". <i>Sorting and Searching</i>. The Art of Computer Programming. <b>3</b> (3rd ed.). Addison-Wesley. pp.&#160;396–408. <a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="https://en.wikipedia.org/wiki/Special:BookSources/0-201-89685-0" title="Special:BookSources/0-201-89685-0">0-201-89685-0</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALinear+search&amp;rft.atitle=Section+6.1%3A+Sequential+Searching%2C&amp;rft.aufirst=Donald&amp;rft.aulast=Knuth&amp;rft.btitle=Sorting+and+Searching&amp;rft.date=1997&amp;rft.edition=3rd&amp;rft.genre=bookitem&amp;rft.isbn=0-201-89685-0&amp;rft.pages=396-408&amp;rft.pub=Addison-Wesley&amp;rft.series=The+Art+of+Computer+Programming&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><cite class="citation web">Horvath, Adam. <a rel="nofollow" class="external text" href="http://blog.teamleadnet.com/2012/02/quicksort-binary-search-and-linear.html">"Binary search and linear search performance on the .NET and Mono platform"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">19 April</span> 2013</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALinear+search&amp;rft.aufirst=Adam&amp;rft.aulast=Horvath&amp;rft.btitle=Binary+search+and+linear+search+performance+on+the+.NET+and+Mono+platform&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fblog.teamleadnet.com%2F2012%2F02%2Fquicksort-binary-search-and-linear.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+</div>
+<h3><span class="mw-headline" id="Works">Works</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Linear_search&amp;action=edit&amp;section=11" title="Edit section: Works">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul>
+<li><cite id="CITEREFKnuth1998" class="citation book"><a href="https://en.wikipedia.org/wiki/Donald_Knuth" title="Donald Knuth">Knuth, Donald</a> (1998). <i>Sorting and Searching</i>. <a href="https://en.wikipedia.org/wiki/The_Art_of_Computer_Programming" title="The Art of Computer Programming">The Art of Computer Programming</a>. <b>3</b> (2nd ed.). Reading, MA: Addison-Wesley Professional.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALinear+search&amp;rft.aufirst=Donald&amp;rft.aulast=Knuth&amp;rft.btitle=Sorting+and+Searching&amp;rft.date=1998&amp;rft.edition=2nd&amp;rft.genre=book&amp;rft.place=Reading%2C+MA&amp;rft.pub=Addison-Wesley+Professional&amp;rft.series=The+Art+of+Computer+Programming&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span> <a href="https://en.wikipedia.org/wiki/Special:BookSources/0-201-89685-0" title="Special:BookSources/0-201-89685-0">ISBN 0-201-89685-0</a></li>
+</ul>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1210
+Cached time: 20170106195131
+Cache expiry: 2592000
+Dynamic content: false
+CPU time usage: 0.144 seconds
+Real time usage: 0.242 seconds
+Preprocessor visited node count: 1134/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 30195/2097152 bytes
+Template argument size: 6544/2097152 bytes
+Highest expansion depth: 10/40
+Expensive parser function count: 2/500
+Lua time usage: 0.067/10.000 seconds
+Lua memory usage: 2.31 MB/50 MB
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  169.375      1 - -total
+ 47.24%   80.018      3 - Template:Ambox
+ 38.94%   65.956      1 - Template:Multiple_issues
+ 26.16%   44.304      1 - Template:Reflist
+ 19.71%   33.387      2 - Template:Cite_book
+ 13.36%   22.621      1 - Template:Infobox_algorithm
+ 12.23%   20.715      1 - Template:Refimprove
+ 12.15%   20.574      1 - Template:Infobox
+  8.93%   15.128      6 - Template:Sfn
+  4.84%    8.190     30 - Template:Math
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:18171-0!*!0!!en!4!*!math=5 and timestamp 20170106195131 and revision id 754453495
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Linear_search&amp;oldid=754453495">https://en.wikipedia.org/w/index.php?title=Linear_search&amp;oldid=754453495</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Help_Category.html" title="Help:Category">Categories</a>: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Search_algorithms" title="Category:Search algorithms">Search algorithms</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Articles_needing_additional_references_from_November_2010" title="Category:Articles needing additional references from November 2010">Articles needing additional references from November 2010</a></li><li><a href="https://en.wikipedia.org/wiki/Category:All_articles_needing_additional_references" title="Category:All articles needing additional references">All articles needing additional references</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Articles_with_example_pseudocode" title="Category:Articles with example pseudocode">Articles with example pseudocode</a></li><li><a href="Category_Articles_with_example_Java_code.html" title="Category:Articles with example Java code">Articles with example Java code</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="Special_MyTalk.html" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="Special_MyContributions.html" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&amp;returnto=Linear+search" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Linear+search" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="Linear_search.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+															<li  id="ca-talk"><span><a href="https://en.wikipedia.org/wiki/Talk:Linear_search"  title="Discussion about the content page [t]" accesskey="t" rel="discussion">Talk</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="Linear_search.html" >Read</a></span></li>
+															<li id="ca-edit"><span><a href="https://en.wikipedia.org/w/index.php?title=Linear_search&amp;action=edit"  title="Edit this page [e]" accesskey="e">Edit</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="https://en.wikipedia.org/w/index.php?title=Linear_search&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="https://en.wikipedia.org/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="Main_Page.html"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="Portal_Contents.html" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="Portal_Featured_content.html" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="Portal_Current_events.html" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="https://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="../../shop.wikimedia.org/index.html" title="Visit the Wikipedia store">Wikipedia store</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Interaction</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-help"><a href="Help_Contents.html" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="Wikipedia_About.html" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="Wikipedia_Community_portal.html" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="Wikipedia_Contact_us.html" title="How to contact Wikipedia">Contact page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="https://en.wikipedia.org/wiki/Special:WhatLinksHere/Linear_search" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://en.wikipedia.org/wiki/Special:RecentChangesLinked/Linear_search" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="Wikipedia_File_Upload_Wizard.html" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="https://en.wikipedia.org/w/index.php?title=Linear_search&amp;oldid=754453495" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://en.wikipedia.org/w/index.php?title=Linear_search&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q787903" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="https://en.wikipedia.org/w/index.php?title=Special:CiteThisPage&amp;page=Linear_search&amp;id=754453495" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Print/export</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Linear+search">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Linear+search&amp;returnto=Linear+search&amp;oldid=754453495&amp;writer=rdf2latex">Download as PDF</a></li><li id="t-print"><a href="https://en.wikipedia.org/w/index.php?title=Linear_search&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Languages</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-ar"><a href="https://ar.wikipedia.org/wiki/بحث_خطي" title="بحث خطي – Arabic" lang="ar" hreflang="ar" class="interlanguage-link-target">العربية</a></li><li class="interlanguage-link interwiki-az"><a href="https://az.wikipedia.org/wiki/Xətti_axtarış" title="Xətti axtarış – Azerbaijani" lang="az" hreflang="az" class="interlanguage-link-target">Azərbaycanca</a></li><li class="interlanguage-link interwiki-bn"><a href="https://bn.wikipedia.org/wiki/রৈখিক_অনুসন্ধান" title="রৈখিক অনুসন্ধান – Bangla" lang="bn" hreflang="bn" class="interlanguage-link-target">বাংলা</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Lineární_vyhledávání" title="Lineární vyhledávání – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-da"><a href="https://da.wikipedia.org/wiki/Lineær_søgning" title="Lineær søgning – Danish" lang="da" hreflang="da" class="interlanguage-link-target">Dansk</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Lineare_Suche" title="Lineare Suche – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/جستجوی_خطی" title="جستجوی خطی – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Recherche_séquentielle" title="Recherche séquentielle – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/순차_검색_알고리즘" title="순차 검색 알고리즘 – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-id"><a href="https://id.wikipedia.org/wiki/Pencarian_linear" title="Pencarian linear – Indonesian" lang="id" hreflang="id" class="interlanguage-link-target">Bahasa Indonesia</a></li><li class="interlanguage-link interwiki-is"><a href="https://is.wikipedia.org/wiki/Línuleg_leit" title="Línuleg leit – Icelandic" lang="is" hreflang="is" class="interlanguage-link-target">Íslenska</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Ricerca_sequenziale" title="Ricerca sequenziale – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/Lineáris_keresés" title="Lineáris keresés – Hungarian" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/Lineair_zoeken" title="Lineair zoeken – Dutch" lang="nl" hreflang="nl" class="interlanguage-link-target">Nederlands</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/線型探索" title="線型探索 – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Przeszukiwanie_liniowe" title="Przeszukiwanie liniowe – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Busca_linear" title="Busca linear – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/Линейный_поиск" title="Линейный поиск – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-simple"><a href="https://simple.wikipedia.org/wiki/Linear_search" title="Linear search – Simple English" lang="simple" hreflang="simple" class="interlanguage-link-target">Simple English</a></li><li class="interlanguage-link interwiki-sk"><a href="https://sk.wikipedia.org/wiki/Lineárne_vyhľadávanie" title="Lineárne vyhľadávanie – Slovak" lang="sk" hreflang="sk" class="interlanguage-link-target">Slovenčina</a></li><li class="interlanguage-link interwiki-sr"><a href="https://sr.wikipedia.org/wiki/Линеарна_претрага" title="Линеарна претрага – Serbian" lang="sr" hreflang="sr" class="interlanguage-link-target">Српски / srpski</a></li><li class="interlanguage-link interwiki-fi"><a href="https://fi.wikipedia.org/wiki/Peräkkäishaku" title="Peräkkäishaku – Finnish" lang="fi" hreflang="fi" class="interlanguage-link-target">Suomi</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/Лінійний_пошук" title="Лінійний пошук – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-vi"><a href="https://vi.wikipedia.org/wiki/Tìm_kiếm_tuần_tự" title="Tìm kiếm tuần tự – Vietnamese" lang="vi" hreflang="vi" class="interlanguage-link-target">Tiếng Việt</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/线性搜索" title="线性搜索 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q787903#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 12 December 2016, at 19:13.</li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="Wikipedia_Text_of_Creative_Commons_Attribution-ShareAlike_3.html">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="../../creativecommons.org/licenses/by-sa/3.0/index.html" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="../../wikimediafoundation.org/wiki/Terms_of_Use.html">Terms of Use</a> and <a href="../../wikimediafoundation.org/wiki/Privacy_policy.html">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="../../www.wikimediafoundation.org/index.html">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../../wikimediafoundation.org/wiki/Privacy_policy.html" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="Wikipedia_About.html" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="Wikipedia_General_disclaimer.html" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="Wikipedia_Contact_us.html">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a href="../../www.mediawiki.org/wiki/Special_MyLanguage/How_to_contribute.html">Developers</a></li>
+											<li id="footer-places-cookiestatement"><a href="../../wikimediafoundation.org/wiki/Cookie_statement.html">Cookie statement</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/w/index.php?title=Linear_search&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="../../www.wikimediafoundation.org/index.html"><img src="https://en.wikipedia.org/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="../../www.mediawiki.org/index.html"><img src="https://en.wikipedia.org/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":65,"wgHostname":"mw1261"});});</script>
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Linear_search by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:41 GMT -->
+</html>

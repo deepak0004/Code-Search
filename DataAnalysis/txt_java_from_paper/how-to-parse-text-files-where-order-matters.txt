@@ -1,0 +1,25 @@
+    
+        I'm having trouble determining a way to parse a given text file.
+
+Here is an entry in the file:
+
+type = "book"
+callnumber = "1"
+authors = "a"
+title = "t"
+publisher = "p"
+year = "2023"
+
+
+each entry is separated by a line of whitespace (newline character).
+
+so i have these variables (type, callnumber, authors, title....), and need to read this text and determine what values to set them to. For example, when i read the line "callnumber = 1", then I need set that variable to 1. 
+
+This is what I have so far. I read in a line at a time, so type = "book" for example, and then I split that line into an array of strings, with the delimiter being ", so the array would contain type = and book .
+Now my problem comes in going further from there. I figured I could cycle through each string in the array, character by character, until I hit whitespace. So i would have type, but I don't have any data yet to store in type, and the grab will give me book (ignoring the = and whitespace), but how can I attribute book to type?
+
+In summary, I'm looking for a way to  parse a text file line by line, and assign variables values, based on the words I find.
+
+Thanks.
+
+                

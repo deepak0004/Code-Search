@@ -1,0 +1,37 @@
+    
+        I'm trying to figure out the best way to search a customer in an ArrayList by its Id number. The code below is not working; the compiler tells me that I am missing a return statement.
+
+Customer findCustomerByid(int id){
+    boolean exist=false;
+
+    if(this.customers.isEmpty()) {
+        return null;
+    }
+
+    for(int i=0;i&lt;this.customers.size();i++) {
+        if(this.customers.get(i).getId() == id) {
+            exist=true;
+            break;
+        }
+
+        if(exist) {
+            return this.customers.get(id);
+        } else {
+            return this.customers.get(id);
+        }
+    }
+
+}
+
+//the customer class is something like that
+public class Customer {
+    //attributes
+    int id;
+    int tel;
+    String fname;
+    String lname;
+    String resgistrationDate;
+}
+
+
+                

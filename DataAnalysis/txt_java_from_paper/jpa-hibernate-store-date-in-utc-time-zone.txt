@@ -1,0 +1,15 @@
+    
+        How can I configure JPA/Hibernate to store a date/time in the database as UTC (GMT) time zone? Consider this annotated JPA entity:
+
+public class Event {
+    @Id
+    public int id;
+
+    @Temporal(TemporalType.TIMESTAMP)
+    public java.util.Date date;
+}
+
+
+If the date is 2008-Feb-03 9:30am Pacific Standard Time (PST), then I want the UTC time of 2008-Feb-03 5:30pm stored in the database. Likewise, when the date is retrieved from the database, I want it interpreted as UTC. So in this case 530pm is 530pm UTC. When it's displayed it will be formatted as 9:30am PST.
+
+                

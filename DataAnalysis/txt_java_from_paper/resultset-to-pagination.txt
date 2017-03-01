@@ -1,0 +1,10 @@
+    
+        How do I convert Resultset object to a paginated view on a JSP?
+
+For example, this is my query and result set:
+
+pst = con.prepareStatement("select userName, job, place from contact");
+rs = pst.executeQuery();
+
+
+                

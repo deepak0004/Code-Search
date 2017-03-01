@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from en.wikipedia.org/wiki/JAR_(file_format) by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:11 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>JAR (file format) - Wikipedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"JAR_(file_format)","wgTitle":"JAR (file format)","wgCurRevisionId":760142399,"wgRevisionId":760142399,"wgArticleId":265609,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles needing additional references from June 2008","All articles needing additional references","Pages using deprecated image syntax","Archive formats","Java platform"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"JAR_(file_format)","wgRelevantArticleId":265609,"wgRequestId":"WHsSAwpAMEgAABa24QcAAAAI","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgFlaggedRevsParams":{"tags":{}},"wgStableRevisionId":null,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"en","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgWikibaseItemId":"Q921122","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.cite.styles":"ready","ext.pygments":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@1dqfd7l",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["ext.cite.a11y","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.legacy.wikibits","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.watchlist-notice","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.gadget.featured-articles-links","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.interface","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="https://en.wikipedia.org/w/load.php?debug=false&amp;lang=en&amp;modules=ext.cite.styles%7Cext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="../w/load2c8d.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../w/load18b6.css?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.29.0-wmf.7"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="https://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/JAR_(file_format)"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=JAR_(file_format)&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=JAR_(file_format)&amp;action=edit"/>
+<link rel="apple-touch-icon" href="https://en.wikipedia.org/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="../static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../w/api251f.php?action=rsd"/>
+<link rel="copyright" href="../../creativecommons.org/licenses/by-sa/3.0/index.html"/>
+<link rel="canonical" href="JAR_(file_format).html"/>
+<link rel="dns-prefetch" href="../../login.wikimedia.org/index.html"/>
+<link rel="dns-prefetch" href="../../meta.wikimedia.org/index.html" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-JAR_file_format rootpage-JAR_file_format skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">JAR (file format)</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><script>function mfTempOpenSection(id){var block=document.getElementById("mf-section-"+id);block.className+=" open-block";block.previousSibling.className+=" open-block";}</script><table class="plainlinks metadata ambox ambox-content ambox-Refimprove" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px"><a href="https://en.wikipedia.org/wiki/File:Question_book-new.svg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/50px-Question_book-new.svg.png" width="50" height="39" srcset="//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/75px-Question_book-new.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/100px-Question_book-new.svg.png 2x" data-file-width="512" data-file-height="399" /></a></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article <b>needs additional citations for <a href="https://en.wikipedia.org/wiki/Wikipedia:Verifiability" title="Wikipedia:Verifiability">verification</a></b>. <span class="hide-when-compact">Please help <a class="external text" href="http://en.wikipedia.org/w/index.php?title=JAR_(file_format)&amp;action=edit">improve this article</a> by <a href="https://en.wikipedia.org/wiki/Help:Introduction_to_referencing_with_Wiki_Markup/1" title="Help:Introduction to referencing with Wiki Markup/1">adding citations to reliable sources</a>. Unsourced material may be challenged and removed.</span> <small><i>(June 2008)</i></small> <small class="hide-when-compact"><i>(<a href="https://en.wikipedia.org/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></span></td>
+</tr>
+</table>
+<table class="infobox" style="width:22em">
+<caption style="font-size:130%; padding-bottom:0.15em;">Java Archive</caption>
+<tr>
+<td colspan="2" style="text-align:center"><a href="https://en.wikipedia.org/wiki/File:Nuvola_mimetypes_java_jar.png" class="image" title="KDE JAR file icon"><img alt="KDE JAR file icon" src="http://upload.wikimedia.org/wikipedia/commons/8/8f/Nuvola_mimetypes_java_jar.png" width="128" height="128" data-file-width="128" data-file-height="128" /></a></td>
+</tr>
+<tr>
+<th scope="row" style="padding:0.2em 0;line-height:1.2em; padding-right:0.65em;"><a href="https://en.wikipedia.org/wiki/Filename_extension" title="Filename extension">Filename extension</a></th>
+<td style="line-height:1.35em;"><code><tt>.jar</tt></code></td>
+</tr>
+<tr>
+<th scope="row" style="padding:0.2em 0;line-height:1.2em; padding-right:0.65em;"><a href="https://en.wikipedia.org/wiki/Media_type" title="Media type">Internet media&#160;type</a></th>
+<td style="line-height:1.35em;"><code>application/java-archive<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[1]</a></sup><sup id="cite_ref-2" class="reference"><a href="#cite_note-2">[2]</a></sup></code></td>
+</tr>
+<tr>
+<th scope="row" style="padding:0.2em 0;line-height:1.2em; padding-right:0.65em;"><a href="https://en.wikipedia.org/wiki/Uniform_Type_Identifier" title="Uniform Type Identifier">Uniform Type Identifier&#160;(UTI)</a></th>
+<td style="line-height:1.35em;">com.sun.java-archive</td>
+</tr>
+<tr>
+<th scope="row" style="padding:0.2em 0;line-height:1.2em; padding-right:0.65em;">Developed&#160;by</th>
+<td style="line-height:1.35em;"><a href="https://en.wikipedia.org/wiki/Netscape" title="Netscape">Netscape</a>, <a href="https://en.wikipedia.org/wiki/Sun_Microsystems" title="Sun Microsystems">Sun Microsystems</a>, <a href="https://en.wikipedia.org/wiki/Oracle_Corporation" title="Oracle Corporation">Oracle Corporation</a></td>
+</tr>
+<tr>
+<th scope="row" style="padding:0.2em 0;line-height:1.2em; padding-right:0.65em;">Type of format</th>
+<td style="line-height:1.35em;"><a href="https://en.wikipedia.org/wiki/File_archive" class="mw-redirect" title="File archive">File archive</a>, <a href="https://en.wikipedia.org/wiki/Data_compression" title="Data compression">data compression</a></td>
+</tr>
+<tr>
+<th scope="row" style="padding:0.2em 0;line-height:1.2em; padding-right:0.65em;">Extended&#160;from</th>
+<td style="line-height:1.35em;"><a href="https://en.wikipedia.org/wiki/ZIP_(file_format)" class="mw-redirect" title="ZIP (file format)">ZIP</a></td>
+</tr>
+</table>
+<p>A <b>JAR</b> (<b>J</b>ava <b>AR</b>chive) is a <a href="https://en.wikipedia.org/wiki/Package_format" title="Package format">package</a> <a href="https://en.wikipedia.org/wiki/File_format" title="File format">file format</a> typically used to aggregate many <a href="https://en.wikipedia.org/wiki/Java_class_file" title="Java class file">Java class files</a> and associated <a href="https://en.wikipedia.org/wiki/Metadata" title="Metadata">metadata</a> and resources (text, images, etc.) into one file for distribution.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">[3]</a></sup></p>
+<p>JAR files are <a href="https://en.wikipedia.org/wiki/Archive_file" title="Archive file">archive files</a> with which include a Java-specific <a href="Manifest_file.html" title="Manifest file">manifest file</a>. They are built on the <a href="https://en.wikipedia.org/wiki/ZIP_(file_format)" class="mw-redirect" title="ZIP (file format)">ZIP format</a> and typically have a <code>.jar</code> <a href="https://en.wikipedia.org/wiki/File_extension" class="mw-redirect" title="File extension">file extension</a>.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">[4]</a></sup></p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Design"><span class="tocnumber">1</span> <span class="toctext">Design</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Extraction"><span class="tocnumber">2</span> <span class="toctext">Extraction</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Security"><span class="tocnumber">3</span> <span class="toctext">Security</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Executable_JAR_files"><span class="tocnumber">4</span> <span class="toctext">Executable JAR files</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Manifest"><span class="tocnumber">5</span> <span class="toctext">Manifest</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#Specifications"><span class="tocnumber">5.1</span> <span class="toctext">Specifications</span></a>
+<ul>
+<li class="toclevel-3 tocsection-7"><a href="#Special-Purpose_Manifest_Headers"><span class="tocnumber">5.1.1</span> <span class="toctext">Special-Purpose Manifest Headers</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="#Applications"><span class="tocnumber">5.1.2</span> <span class="toctext">Applications</span></a></li>
+<li class="toclevel-3 tocsection-9"><a href="#Package_Sealing"><span class="tocnumber">5.1.3</span> <span class="toctext">Package Sealing</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-10"><a href="#Package_Versioning"><span class="tocnumber">5.2</span> <span class="toctext">Package Versioning</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Dependencies"><span class="tocnumber">5.3</span> <span class="toctext">Dependencies</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-12"><a href="#Apache_Ant_Zip.2FJAR_support"><span class="tocnumber">6</span> <span class="toctext">Apache Ant Zip/JAR support</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#Related_formats"><span class="tocnumber">7</span> <span class="toctext">Related formats</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#See_also"><span class="tocnumber">8</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#References"><span class="tocnumber">9</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#External_links"><span class="tocnumber">10</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Design">Design</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=JAR_(file_format)&amp;action=edit&amp;section=1" title="Edit section: Design">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>A JAR file allows Java runtimes to efficiently <a href="https://en.wikipedia.org/wiki/Software_deployment" title="Software deployment">deploy</a> an entire application, including its classes and their associated resources, in a single request. JAR file elements may be compressed, shortening download times.</p>
+<p>A JAR file may contain a manifest file, located at <code>META-INF/MANIFEST.MF</code>. The entries in the manifest file describe how to use the JAR file. For instance, a <a href="Classpath_(Java).html" title="Classpath (Java)">Classpath</a> entry can be used to specify other JAR files to load with the JAR.</p>
+<h2><span class="mw-headline" id="Extraction">Extraction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=JAR_(file_format)&amp;action=edit&amp;section=2" title="Edit section: Extraction">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The contents of a JAR file may be extracted using any standard decompression software, or the <code>jar</code> command line utility: "<code>jar -xf foo.jar</code>".</p>
+<h2><span class="mw-headline" id="Security">Security</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=JAR_(file_format)&amp;action=edit&amp;section=3" title="Edit section: Security">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Developers can <a href="https://en.wikipedia.org/wiki/Digital_signature" title="Digital signature">digitally sign</a> JAR files. In that case, the signature information becomes part of the embedded manifest file. The JAR itself is not signed, but instead every file inside the archive is listed along with its checksum; it is these checksums that are signed. Multiple entities may sign the JAR file, changing the JAR file itself with each signing, although the signed files themselves remain valid. When the Java runtime loads signed JAR files, it can validate the signatures and refuse to load classes that do not match the signature. It can also support 'sealed' packages, in which the <a href="https://en.wikipedia.org/wiki/Classloader" class="mw-redirect" title="Classloader">Classloader</a> will only permit Java classes to be loaded into the same package if they are all signed by the same entities. This prevents malicious code from being inserted into an existing package, and so gaining access to package-scoped classes and data.</p>
+<p>The content of JAR files may be <a href="https://en.wikipedia.org/wiki/Obfuscated_code" class="mw-redirect" title="Obfuscated code">obfuscated</a> to make <a href="https://en.wikipedia.org/wiki/Reverse_engineering" title="Reverse engineering">reverse engineering</a> more difficult.</p>
+<h2><span class="mw-headline" id="Executable_JAR_files">Executable JAR files</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=JAR_(file_format)&amp;action=edit&amp;section=4" title="Edit section: Executable JAR files">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>An executable Java program can be packaged in a JAR file, along with any libraries the program uses. Executable JAR files have the manifest specifying the <a href="https://en.wikipedia.org/wiki/Entry_point" title="Entry point">entry point</a> class with <code>Main-Class: myPrograms.MyClass</code> and an explicit Class-Path (and the -cp argument is ignored). Some operating systems can run these directly when clicked. The typical invocation is <code>java -jar foo.jar</code> from a command line.</p>
+<p>Native launchers can be created on most platforms. For instance, <a href="https://en.wikipedia.org/wiki/Microsoft_Windows" title="Microsoft Windows">Microsoft Windows</a> users who prefer having Windows <a href="https://en.wikipedia.org/wiki/EXE" class="mw-redirect" title="EXE">EXE</a> files can use tools such as <a href="JSmooth.html" title="JSmooth">JSmooth</a>, Launch4J, WinRun4J or <a href="https://en.wikipedia.org/wiki/Nullsoft_Scriptable_Install_System" title="Nullsoft Scriptable Install System">Nullsoft Scriptable Install System</a> to wrap single JAR files into executables.</p>
+<h2><span class="mw-headline" id="Manifest">Manifest</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=JAR_(file_format)&amp;action=edit&amp;section=5" title="Edit section: Manifest">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>A manifest file is a metadata file contained within a JAR.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">[5]</a></sup><sup id="cite_ref-6" class="reference"><a href="#cite_note-6">[6]</a></sup> It defines extension and package-related data. It contains <a href="https://en.wikipedia.org/wiki/Name-value_pair" class="mw-redirect" title="Name-value pair">name-value pairs</a> organized in sections. If a JAR file is intended to be used as an executable file, the manifest file specifies the main class of the application. The manifest file is named <code>MANIFEST.MF</code>.</p>
+<h3><span class="mw-headline" id="Specifications">Specifications</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=JAR_(file_format)&amp;action=edit&amp;section=6" title="Edit section: Specifications">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The manifest appears at the canonical location <code>META-INF/MANIFEST.MF</code>.<sup id="cite_ref-jarspec_7-0" class="reference"><a href="#cite_note-jarspec-7">[7]</a></sup> There can be only one manifest file in an archive and it must be at that location.</p>
+<p>The content of the manifest file in a JAR file created with version 1.0 of the <a href="Java_Development_Kit.html" title="Java Development Kit">Java Development Kit</a> is the following.</p>
+<pre>
+Manifest-Version: 1.0
+</pre>
+<p>The name is separated from its value by a colon. The default manifest shows that it conforms to version 1.0 of the manifest specification.</p>
+<p>The manifest can contain information about the other files that are packaged in the archive. Manifest contents depend on the intended use for the JAR file. The default manifest file makes no assumptions about what information it should record about other files, so its single line contains data only about itself.</p>
+<h4><span class="mw-headline" id="Special-Purpose_Manifest_Headers">Special-Purpose Manifest Headers</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=JAR_(file_format)&amp;action=edit&amp;section=7" title="Edit section: Special-Purpose Manifest Headers">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>JAR files created only for the purpose of archiving do not use the <code>MANIFEST.MF</code> file.</p>
+<p>Most uses of JAR files go beyond simple archiving and compression and require special information in the manifest file.</p>
+<h4><span class="mw-headline" id="Applications">Applications</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=JAR_(file_format)&amp;action=edit&amp;section=8" title="Edit section: Applications">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>If an application is contained in a JAR file, the <a href="Java_Virtual_Machine.html" class="mw-redirect" title="Java Virtual Machine">Java Virtual Machine</a> needs to know the application's entry point. An entry point is any class with a <code>public static void main(String[] args)</code> method. This information is provided in the Main-Class header, which has the general form:</p>
+<pre>
+Main-Class: com.example.MyClassName
+</pre>
+<p>In this example <code>com.example.MyClassName.main()</code> executes at application launch.</p>
+<h4><span class="mw-headline" id="Package_Sealing">Package Sealing</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=JAR_(file_format)&amp;action=edit&amp;section=9" title="Edit section: Package Sealing">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Optionally, a package within a JAR file can be sealed, which means that all classes defined in that package are archived in the same JAR file. A package might be sealed to ensure version consistency among the classes in the software or as a security measure.</p>
+<p>To seal a package, a Name entry needs to appear, followed by a Sealed header, such as:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="na">Name</span><span class="o">:</span> <span class="s">myCompany/myPackage/</span>
+<span class="na">Sealed</span><span class="o">:</span> <span class="s">true</span>
+</pre></div>
+<p>The Name header's value is the package's relative pathname. Note that it ends with a '/' to distinguish it from a filename. Any headers following a Name header, without any intervening blank lines, apply to the file or package specified in the Name header. In the above example, because the <code>Sealed</code> header occurs after the <code>Name: myCompany/myPackage</code> header with no intervening blank lines, the <code>Sealed</code> header applies (only) to the package <code>myCompany/myPackage</code>.</p>
+<h3><span class="mw-headline" id="Package_Versioning">Package Versioning</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=JAR_(file_format)&amp;action=edit&amp;section=10" title="Edit section: Package Versioning">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Several manifest headers hold versioning information. One set of headers can be assigned to each package. The versioning headers appear directly beneath the Name header for the package. This example shows all the versioning headers:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="na">Name</span><span class="o">:</span> <span class="s">java/util/</span>
+<span class="na">Specification-Title</span><span class="o">:</span> <span class="s">"Java Utility Classes"</span>
+<span class="na">Specification-Version</span><span class="o">:</span> <span class="s">"1.2"</span>
+<span class="na">Specification-Vendor</span><span class="o">:</span> <span class="s">"Sun Microsystems, Inc.".</span>
+<span class="na">Implementation-Title</span><span class="o">:</span> <span class="s">"java.util"</span>
+<span class="na">Implementation-Version</span><span class="o">:</span> <span class="s">"build57"</span>
+<span class="na">Implementation-Vendor</span><span class="o">:</span> <span class="s">"Sun Microsystems, Inc."</span>
+</pre></div>
+<h3><span class="mw-headline" id="Dependencies">Dependencies</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=JAR_(file_format)&amp;action=edit&amp;section=11" title="Edit section: Dependencies">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The <code>MANIFEST.MF</code> file can be used to specify all the classes that must be loaded for an application to be able to run.<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">[8]</a></sup></p>
+<p>Note that Class-Path entries are delimited with spaces, not with the system path delimiter:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="na">Class-Path</span><span class="o">:</span> <span class="s">. pkg1.jar path/to/pkg2.jar</span>
+</pre></div>
+<h2><span class="mw-headline" id="Apache_Ant_Zip.2FJAR_support">Apache Ant Zip/JAR support</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=JAR_(file_format)&amp;action=edit&amp;section=12" title="Edit section: Apache Ant Zip/JAR support">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The <a href="Apache_Ant.html" title="Apache Ant">Apache Ant</a> build tool has its own package to read and write Zip and JAR archives, including support for <a href="https://en.wikipedia.org/wiki/Unix" title="Unix">Unix</a> <a href="https://en.wikipedia.org/wiki/Filesystem" class="mw-redirect" title="Filesystem">filesystem</a> extensions. The org.apache.tools.zip package is released under the <a href="https://en.wikipedia.org/wiki/Apache_Software_Foundation" title="Apache Software Foundation">Apache Software Foundation</a> license and is designed to be usable outside Ant.</p>
+<h2><span class="mw-headline" id="Related_formats">Related formats</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=JAR_(file_format)&amp;action=edit&amp;section=13" title="Edit section: Related formats">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Several related file formats build on the JAR format:</p>
+<ul>
+<li><a href="WAR_(Sun_file_format).html" class="mw-redirect" title="WAR (Sun file format)">WAR</a> (Web application archive) files, also Java archives, store <a href="https://en.wikipedia.org/wiki/XML" title="XML">XML</a> files, Java classes, <a href="JavaServer_Pages.html" title="JavaServer Pages">JavaServer Pages</a> and other objects for Web Applications.</li>
+<li><a href="Resource_Adapter.html" class="mw-redirect" title="Resource Adapter">RAR</a> (resource adapter archive) files (not to be confused with the <a href="https://en.wikipedia.org/wiki/RAR_file_format" class="mw-redirect" title="RAR file format">RAR file format</a>), also Java archives, store XML files, Java classes and other objects for <a href="https://en.wikipedia.org/wiki/J2EE_Connector_Architecture" class="mw-redirect" title="J2EE Connector Architecture">J2EE Connector Architecture</a> (JCA) applications.</li>
+<li><a href="EAR_(file_format).html" title="EAR (file format)">EAR</a> (enterprise archive) files provide composite Java archives that combine XML files, Java classes and other objects including JAR, WAR and RAR Java archive files for Enterprise Applications.</li>
+<li><a href="https://en.wikipedia.org/w/index.php?title=Service_Archive&amp;action=edit&amp;redlink=1" class="new" title="Service Archive (page does not exist)">SAR</a> (service archive) is similar to EAR. It provides a <tt>service.xml</tt> file and accompanying JAR files.</li>
+<li><a href="https://en.wikipedia.org/wiki/APK_(file_format)" class="mw-redirect" title="APK (file format)">APK</a> (Android Application Package), a variant of the Java archive format, is used for <a href="https://en.wikipedia.org/wiki/Android_(operating_system)" title="Android (operating system)">Android</a> applications.<sup id="cite_ref-9" class="reference"><a href="#cite_note-9">[9]</a></sup></li>
+<li>PAR (Plan ARchive) - supported by <a href="https://en.wikipedia.org/wiki/Virgo_(software)" title="Virgo (software)">Eclipse Virgo</a> <a href="https://en.wikipedia.org/wiki/OSGi" title="OSGi">OSGi</a> application server, allows the deployment of multi-bundle OSGi applications as a single archive and provides isolation from other PAR-based applications deployed in the same server.</li>
+<li>KAR (Karaf ARchive) - supported by <a href="https://en.wikipedia.org/wiki/Apache_Karaf" class="mw-redirect" title="Apache Karaf">Apache Karaf</a> OSGi application server, allows the deployment of multi-bundle, multi-feature OSGi applications.</li>
+</ul>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=JAR_(file_format)&amp;action=edit&amp;section=14" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div role="navigation" aria-label="Portals" class="noprint portal plainlist tright" style="margin:0.5em 0 0.5em 1em;border:solid #aaa 1px">
+<ul style="display:table;box-sizing:border-box;padding:0.1em;max-width:175px;background:#f9f9f9;font-size:85%;line-height:110%;font-style:italic;font-weight:bold">
+<li style="display:table-row"><span style="display:table-cell;padding:0.2em;vertical-align:middle;text-align:center"><a href="https://en.wikipedia.org/wiki/File:Wave.svg" class="image"><img alt="icon" src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/15px-Wave.svg.png" width="15" height="28" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/23px-Wave.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/31px-Wave.svg.png 2x" data-file-width="226" data-file-height="407" /></a></span><span style="display:table-cell;padding:0.2em 0.2em 0.2em 0.3em;vertical-align:middle"><a href="https://en.wikipedia.org/wiki/Portal:Java" title="Portal:Java">Java portal</a></span></li>
+</ul>
+</div>
+<ul>
+<li><a href="Java_Classloader.html#JAR_hell" title="Java Classloader">JAR hell</a></li>
+<li><a href="Java_Module_System.html" title="Java Module System">Java Module System</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Open_Packaging_Conventions" title="Open Packaging Conventions">Open Packaging Conventions</a></li>
+<li><a href="https://en.wikipedia.org/wiki/JAD_(file_format)" title="JAD (file format)">JAD (file format)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Gifar" title="Gifar">Gifar</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=JAR_(file_format)&amp;action=edit&amp;section=15" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://filext.com/file-extension/JAR">"File Extension .JAR Details"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">29 November</span> 2012</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJAR+%28file+format%29&amp;rft.btitle=File+Extension+.JAR+Details&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Ffilext.com%2Ffile-extension%2FJAR&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://mindprod.com/jgloss/mime.html">"MIME&#160;: Java Glossary"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">29 November</span> 2012</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJAR+%28file+format%29&amp;rft.btitle=MIME+%3A+Java+Glossary&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fmindprod.com%2Fjgloss%2Fmime.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://java.sun.com/javase/6/docs/technotes/guides/jar/index.html">"JDK 6 Java Archive (JAR)-related APIs &amp; DeveloperGuides"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJAR+%28file+format%29&amp;rft.btitle=JDK+6+Java+Archive+%28JAR%29-related+APIs+%26+DeveloperGuides&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fjava.sun.com%2Fjavase%2F6%2Fdocs%2Ftechnotes%2Fguides%2Fjar%2Findex.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://download.java.net/jdk8/docs/technotes/guides/jar/jar.html#JAR_Index">http://download.java.net/jdk8/docs/technotes/guides/jar/jar.html#JAR_Index</a></span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://java.sun.com/developer/Books/javaprogramming/JAR/basics/manifest.html">"Understanding the Manifest"</a>. Java.sun.com. 2003-03-21<span class="reference-accessdate">. Retrieved <span class="nowrap">2012-07-31</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJAR+%28file+format%29&amp;rft.btitle=Understanding+the+Manifest&amp;rft.date=2003-03-21&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fjava.sun.com%2Fdeveloper%2FBooks%2Fjavaprogramming%2FJAR%2Fbasics%2Fmanifest.html&amp;rft.pub=Java.sun.com&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://download.oracle.com/javase/6/docs/technotes/guides/jar/jar.html#JAR%20Manifest">"JAR File Specification"</a>. Download.oracle.com<span class="reference-accessdate">. Retrieved <span class="nowrap">2012-07-31</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJAR+%28file+format%29&amp;rft.btitle=JAR+File+Specification&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fdownload.oracle.com%2Fjavase%2F6%2Fdocs%2Ftechnotes%2Fguides%2Fjar%2Fjar.html%23JAR%2520Manifest&amp;rft.pub=Download.oracle.com&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-jarspec-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-jarspec_7-0">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://download.oracle.com/javase/6/docs/technotes/guides/jar/jar.html">"JAR File Specification"</a>. Download.oracle.com<span class="reference-accessdate">. Retrieved <span class="nowrap">2012-07-31</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJAR+%28file+format%29&amp;rft.btitle=JAR+File+Specification&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fdownload.oracle.com%2Fjavase%2F6%2Fdocs%2Ftechnotes%2Fguides%2Fjar%2Fjar.html&amp;rft.pub=Download.oracle.com&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text">the sun servlet specification, page 72 (servlet-2_4-fr-spec.pdf). See also the <a rel="nofollow" class="external text" href="https://docs.oracle.com/javase/8/docs/technotes/tools/findingclasses.html">Java Tech Notes</a>.</span></li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://developer.android.com/guide/appendix/glossary.html">"Glossary"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJAR+%28file+format%29&amp;rft.btitle=Glossary&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fdeveloper.android.com%2Fguide%2Fappendix%2Fglossary.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=JAR_(file_format)&amp;action=edit&amp;section=16" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://download.oracle.com/javase/6/docs/technotes/guides/jar/jarGuide.html">JAR File Overview</a></li>
+<li><a rel="nofollow" class="external text" href="http://download.oracle.com/javase/6/docs/technotes/guides/jar/jar.html">JAR File Specification</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.cse.yorku.ca/tech/other/jdk1.2.1/docs/guide/jar/manifest.html">Original JAR File Specification</a></li>
+</ul>
+<div role="navigation" class="navbox" aria-labelledby="Archive_formats" style="padding:3px">
+<table class="nowraplinks hlist collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="https://en.wikipedia.org/wiki/Template:Archive_formats" title="Template:Archive formats"><abbr title="View this template" style=";;background:none transparent;border:none;">v</abbr></a></li>
+<li class="nv-talk"><a href="https://en.wikipedia.org/wiki/Template_talk:Archive_formats" title="Template talk:Archive formats"><abbr title="Discuss this template" style=";;background:none transparent;border:none;">t</abbr></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Archive_formats&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;">e</abbr></a></li>
+</ul>
+</div>
+<div id="Archive_formats" style="font-size:114%"><a href="https://en.wikipedia.org/wiki/Archive_format" class="mw-redirect" title="Archive format">Archive formats</a></div>
+</th>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Archiving only</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Ar_(Unix)" title="Ar (Unix)">ar</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Cpio" title="Cpio">cpio</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Shar" title="Shar">shar</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Tar_(computing)" title="Tar (computing)">tar</a></li>
+<li><a href="https://en.wikipedia.org/wiki/LBR_(file_format)" title="LBR (file format)">LBR</a></li>
+<li><a href="https://en.wikipedia.org/wiki/BagIt" title="BagIt">BagIt</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Doom_WAD" title="Doom WAD">WAD</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Compression only</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Bzip2" title="Bzip2">bzip2</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Gzip" title="Gzip">gzip</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Lzip" title="Lzip">lzip</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Lempel–Ziv–Markov_chain_algorithm" title="Lempel–Ziv–Markov chain algorithm">LZMA</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Lzop" title="Lzop">lzop</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Xz" title="Xz">xz</a></li>
+<li><a href="https://en.wikipedia.org/wiki/SQ_(program)" title="SQ (program)">SQ</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Compress" title="Compress">compress</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Archiving and compression</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/7z_(file_format)" class="mw-redirect" title="7z (file format)">7z</a></li>
+<li><a href="https://en.wikipedia.org/wiki/ACE_(compression_file_format)" title="ACE (compression file format)">ACE</a></li>
+<li><a href="https://en.wikipedia.org/wiki/ARC_(file_format)" title="ARC (file format)">ARC</a></li>
+<li><a href="https://en.wikipedia.org/wiki/ARJ" title="ARJ">ARJ</a></li>
+<li><a href="https://en.wikipedia.org/wiki/B1_(archive_format)" title="B1 (archive format)">B1</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Cabinet_(file_format)" title="Cabinet (file format)">Cabinet</a></li>
+<li><a href="https://en.wikipedia.org/wiki/CFS_(file_format)" title="CFS (file format)">cfs</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Compact_Pro" title="Compact Pro">cpt</a></li>
+<li><a href="https://en.wikipedia.org/wiki/DGCA_(computing)" title="DGCA (computing)">DGCA</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apple_Disk_Image" title="Apple Disk Image">.dmg</a></li>
+<li><a href="https://en.wikipedia.org/wiki/EGG_(file_format)" title="EGG (file format)">.egg</a></li>
+<li><a href="https://en.wikipedia.org/wiki/KGB_Archiver" title="KGB Archiver">kgb</a></li>
+<li><a href="https://en.wikipedia.org/wiki/LHA_(file_format)" title="LHA (file format)">LHA</a></li>
+<li><a href="https://en.wikipedia.org/wiki/LZX_(algorithm)" title="LZX (algorithm)">LZX</a></li>
+<li><a href="https://en.wikipedia.org/wiki/MPQ" title="MPQ">MPQ</a></li>
+<li><a href="https://en.wikipedia.org/wiki/PeaZip#Native_archive_format" title="PeaZip">PEA</a></li>
+<li><a href="https://en.wikipedia.org/wiki/RAR_(file_format)" title="RAR (file format)">RAR</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Rzip" title="Rzip">rzip</a></li>
+<li><a href="https://en.wikipedia.org/wiki/StuffIt" title="StuffIt">sit</a></li>
+<li><a href="https://en.wikipedia.org/wiki/SQX" title="SQX">SQX</a></li>
+<li><a href="https://en.wikipedia.org/wiki/PAQ" title="PAQ">UDA</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Xar_(archiver)" title="Xar (archiver)">Xar</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Zoo_(file_format)" title="Zoo (file format)">zoo</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Zip_(file_format)" title="Zip (file format)">ZIP</a></li>
+<li><a href="https://en.wikipedia.org/wiki/ZPAQ" title="ZPAQ">ZPAQ</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Package_format" title="Package format">Software packaging and distribution</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Android_application_package" title="Android application package">APK</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Deb_(file_format)" title="Deb (file format)">deb</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Package_(macOS)" title="Package (macOS)">Package (macOS)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/RPM_Package_Manager" title="RPM Package Manager">RPM</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Windows_Installer" title="Windows Installer">MSI</a></li>
+<li><strong class="selflink">JAR</strong>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/WAR_(file_format)" title="WAR (file format)">WAR</a></li>
+<li><a href="Java_EE_Connector_Architecture.html" title="Java EE Connector Architecture">Java RAR</a></li>
+<li><a href="EAR_(file_format).html" title="EAR (file format)">EAR</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Document packaging and distribution</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Open_eBook" title="Open eBook">OEB Package Format</a></li>
+<li><a href="https://en.wikipedia.org/wiki/EPUB" title="EPUB">OEBPS Container Format</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Open_Packaging_Conventions" title="Open Packaging Conventions">Open Packaging Conventions</a></li>
+<li><a href="https://en.wikipedia.org/wiki/PAQ" title="PAQ">PAQ</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td class="navbox-abovebelow" colspan="2">
+<div>
+<ul>
+<li><img alt="Non-article page" src="http://upload.wikimedia.org/wikipedia/en/thumb/8/89/Symbol_neutral_vote.svg/16px-Symbol_neutral_vote.svg.png" title="Non-article page" width="16" height="16" srcset="//upload.wikimedia.org/wikipedia/en/thumb/8/89/Symbol_neutral_vote.svg/23px-Symbol_neutral_vote.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/8/89/Symbol_neutral_vote.svg/31px-Symbol_neutral_vote.svg.png 2x" data-file-width="180" data-file-height="185" /><b><a href="https://en.wikipedia.org/wiki/Comparison_of_archive_formats" title="Comparison of archive formats">Comparison</a></b></li>
+<li><img alt="List-Class article" src="http://upload.wikimedia.org/wikipedia/en/thumb/d/db/Symbol_list_class.svg/16px-Symbol_list_class.svg.png" title="List-Class article" width="16" height="16" srcset="//upload.wikimedia.org/wikipedia/en/thumb/d/db/Symbol_list_class.svg/23px-Symbol_list_class.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/d/db/Symbol_list_class.svg/31px-Symbol_list_class.svg.png 2x" data-file-width="180" data-file-height="185" /><b><a href="https://en.wikipedia.org/wiki/List_of_archive_formats" title="List of archive formats">List</a></b></li>
+<li><img alt="Category" src="http://upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/16px-Folder_Hexagonal_Icon.svg.png" title="Category" width="16" height="14" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/24px-Folder_Hexagonal_Icon.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/32px-Folder_Hexagonal_Icon.svg.png 2x" data-file-width="36" data-file-height="31" /> <b><a href="https://en.wikipedia.org/wiki/Category:Archive_formats" title="Category:Archive formats">Category</a></b></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div role="navigation" class="navbox" aria-labelledby="Data_compression_software" style="padding:3px">
+<table class="nowraplinks hlist collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="https://en.wikipedia.org/wiki/Template:Compression_software" title="Template:Compression software"><abbr title="View this template" style=";;background:none transparent;border:none;">v</abbr></a></li>
+<li class="nv-talk"><a href="https://en.wikipedia.org/wiki/Template_talk:Compression_software" title="Template talk:Compression software"><abbr title="Discuss this template" style=";;background:none transparent;border:none;">t</abbr></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Compression_software&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;">e</abbr></a></li>
+</ul>
+</div>
+<div id="Data_compression_software" style="font-size:114%"><a href="https://en.wikipedia.org/wiki/Data_compression" title="Data compression">Data compression</a> software</div>
+</th>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Comparison_of_file_archivers" title="Comparison of file archivers">Archivers</a> with<br />
+compression<br />
+<small>(<a href="https://en.wikipedia.org/wiki/Comparison_of_file_archivers" title="Comparison of file archivers">comparison</a>)</small></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em"></div>
+<table class="nowraplinks navbox-subgroup" style="border-spacing:0">
+<tr>
+<th scope="row" class="navbox-group" style="width:7em"><a href="https://en.wikipedia.org/wiki/Free_software" title="Free software">Free software</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/7-Zip" title="7-Zip">7-Zip</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Archive_Manager" title="Archive Manager">Archive Manager</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Ark_(software)" title="Ark (software)">Ark</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Haiku_Applications#Expander" title="Haiku Applications">Expander</a></li>
+<li><a href="https://en.wikipedia.org/wiki/FreeArc" title="FreeArc">FreeArc</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Info-ZIP" title="Info-ZIP">Info-ZIP</a></li>
+<li><a href="https://en.wikipedia.org/wiki/KGB_Archiver" title="KGB Archiver">KGB Archiver</a></li>
+<li><a href="https://en.wikipedia.org/wiki/PAQ" title="PAQ">PAQ</a></li>
+<li><a href="https://en.wikipedia.org/wiki/PeaZip" title="PeaZip">PeaZip</a></li>
+<li><a href="https://en.wikipedia.org/wiki/The_Unarchiver" title="The Unarchiver">The Unarchiver</a> (decompression only)</li>
+<li><a href="https://en.wikipedia.org/wiki/Tar_(computing)" title="Tar (computing)">tar</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Xarchiver" title="Xarchiver">Xarchiver</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Zipeg" title="Zipeg">Zipeg</a></li>
+<li><a href="https://en.wikipedia.org/wiki/ZPAQ" title="ZPAQ">ZPAQ</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:7em"><a href="https://en.wikipedia.org/wiki/Freeware" title="Freeware">Freeware</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Filzip" title="Filzip">Filzip</a></li>
+<li><a href="https://en.wikipedia.org/wiki/LHA_(file_format)" title="LHA (file format)">LHA</a></li>
+<li><a href="https://en.wikipedia.org/wiki/StuffIt_Expander" title="StuffIt Expander">StuffIt Expander</a> (decompression only)</li>
+<li><a href="https://en.wikipedia.org/wiki/TUGZip" title="TUGZip">TUGZip</a></li>
+<li><a href="https://en.wikipedia.org/wiki/ZipGenius" title="ZipGenius">ZipGenius</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:7em"><a href="https://en.wikipedia.org/wiki/Commercial_software" title="Commercial software">Commercial</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/ARC_(file_format)" title="ARC (file format)">ARC</a></li>
+<li><a href="https://en.wikipedia.org/wiki/ALZip" title="ALZip">ALZip</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Archive_Utility" class="mw-redirect" title="Archive Utility">Archive Utility</a></li>
+<li><a href="https://en.wikipedia.org/wiki/ARJ" title="ARJ">ARJ</a></li>
+<li><a href="https://en.wikipedia.org/wiki/BetterZip" title="BetterZip">BetterZip</a></li>
+<li><a href="https://en.wikipedia.org/wiki/BulkZip" title="BulkZip">BulkZip</a></li>
+<li><a href="https://en.wikipedia.org/wiki/JAR_(software)" title="JAR (software)">JAR</a></li>
+<li><a href="https://en.wikipedia.org/wiki/MacBinary" title="MacBinary">MacBinary</a></li>
+<li><a href="https://en.wikipedia.org/wiki/PKZIP" title="PKZIP">PKZIP/SecureZIP</a></li>
+<li><a href="https://en.wikipedia.org/wiki/PowerArchiver" title="PowerArchiver">PowerArchiver</a></li>
+<li><a href="https://en.wikipedia.org/wiki/StuffIt" title="StuffIt">StuffIt</a></li>
+<li><a href="https://en.wikipedia.org/wiki/WinAce" title="WinAce">WinAce</a></li>
+<li><a href="https://en.wikipedia.org/wiki/WinRAR" title="WinRAR">WinRAR</a></li>
+<li><a href="https://en.wikipedia.org/wiki/WinZip" title="WinZip">WinZip</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Non-archiving<br />
+compressors</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em"></div>
+<table class="nowraplinks navbox-subgroup" style="border-spacing:0">
+<tr>
+<th scope="row" class="navbox-group" style="width:7em">Generic</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Bzip2" title="Bzip2">bzip2</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Compress" title="Compress">compress</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Gzip" title="Gzip">gzip</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Lzip" title="Lzip">lzip</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Lzop" title="Lzop">lzop</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Pack_(compression)" title="Pack (compression)">pack</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Rzip" title="Rzip">rzip</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Snappy_(compression)" title="Snappy (compression)">Snappy</a></li>
+<li><a href="https://en.wikipedia.org/wiki/XZ_Utils" title="XZ Utils">XZ Utils</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:7em"><a href="https://en.wikipedia.org/wiki/Executable_compression" title="Executable compression">For code</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px">
+<div style="padding:0em 0.25em"><a href="https://en.wikipedia.org/wiki/UPX" title="UPX">UPX</a></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Audio_compression_(data)" class="mw-redirect" title="Audio compression (data)">Audio<br />
+compression</a><br />
+<small>(<a href="https://en.wikipedia.org/wiki/Comparison_of_audio_coding_formats" title="Comparison of audio coding formats">comparison</a>)</small></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em"></div>
+<table class="nowraplinks navbox-subgroup" style="border-spacing:0">
+<tr>
+<th scope="row" class="navbox-group" style="width:7em;padding-top:5px; padding-bottom:5px"><a href="https://en.wikipedia.org/wiki/Lossy_compression" title="Lossy compression">Lossy</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Fraunhofer_FDK_AAC" title="Fraunhofer FDK AAC">Fraunhofer FDK AAC</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Nero_AAC_Codec" title="Nero AAC Codec">Nero AAC Codec</a></li>
+<li><a href="https://en.wikipedia.org/wiki/FAAC" title="FAAC">Freeware Advanced Audio Coder (FAAC)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Helix_(multimedia_project)" title="Helix (multimedia project)">Helix DNA Producer</a></li>
+<li><a href="https://en.wikipedia.org/wiki/L3enc" title="L3enc">l3enc</a></li>
+<li><a href="https://en.wikipedia.org/wiki/LAME" title="LAME">LAME</a></li>
+<li><a href="https://en.wikipedia.org/wiki/TooLAME" title="TooLAME">TooLAME</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Libavcodec" title="Libavcodec">libavcodec</a></li>
+<li><a href="https://en.wikipedia.org/wiki/CELT" title="CELT">libcelt</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Opus_(audio_format)" title="Opus (audio format)">libopus</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Speex" title="Speex">libspeex</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Musepack" title="Musepack">Musepack</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Vorbis" title="Vorbis">libvorbis</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Windows_Media_Encoder" title="Windows Media Encoder">Windows Media Encoder</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:7em;padding-top:5px; padding-bottom:5px"><a href="https://en.wikipedia.org/wiki/Lossless_compression" title="Lossless compression">Lossless</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Apple_Lossless" title="Apple Lossless">ALAC</a></li>
+<li><a href="https://en.wikipedia.org/wiki/FLAC" title="FLAC">FLAC</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Libavcodec" title="Libavcodec">libavcodec</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Monkey%27s_Audio" title="Monkey's Audio">Monkey's Audio</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Audio_Lossless_Coding" title="Audio Lossless Coding">mp4als</a></li>
+<li><a href="https://en.wikipedia.org/wiki/OptimFROG" title="OptimFROG">OptimFROG</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Shorten_(file_format)" title="Shorten (file format)">Shorten</a></li>
+<li><a href="https://en.wikipedia.org/wiki/TTA_(codec)" title="TTA (codec)">TTA</a> (True Audio)</li>
+<li><a href="https://en.wikipedia.org/wiki/WavPack" title="WavPack">WavPack</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Video_compression" class="mw-redirect" title="Video compression">Video<br />
+compression</a><br />
+<small>(<a href="https://en.wikipedia.org/wiki/Comparison_of_video_codecs" title="Comparison of video codecs">comparison</a>)</small></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em"></div>
+<table class="nowraplinks navbox-subgroup" style="border-spacing:0">
+<tr>
+<th scope="row" class="navbox-group" style="width:7em"><a href="https://en.wikipedia.org/wiki/Lossy_compression" title="Lossy compression">Lossy</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px">
+<div style="padding:0em 0.25em"></div>
+<table class="nowraplinks navbox-subgroup" style="border-spacing:0">
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/MPEG-4_Part_2" title="MPEG-4 Part 2">MPEG-4 ASP</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/3ivx" title="3ivx">3ivx</a></li>
+<li><a href="https://en.wikipedia.org/wiki/DivX" title="DivX">DivX</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Nero_Digital" title="Nero Digital">Nero Digital</a></li>
+<li><a href="https://en.wikipedia.org/wiki/FFmpeg" title="FFmpeg">FFmpeg</a></li>
+<li><a href="https://en.wikipedia.org/wiki/HDX4" title="HDX4">HDX4</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Xvid" title="Xvid">Xvid</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/H.264/MPEG-4_AVC" title="H.264/MPEG-4 AVC">H.264 /<br />
+MPEG-4 AVC</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/CoreAVC" title="CoreAVC">CoreAVC</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Blu-code" title="Blu-code">Blu-code</a></li>
+<li><a href="https://en.wikipedia.org/wiki/DivX" title="DivX">DivX</a></li>
+<li><a href="https://en.wikipedia.org/wiki/FFmpeg" title="FFmpeg">FFmpeg</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Nero_Digital" title="Nero Digital">Nero Digital</a></li>
+<li><a href="https://en.wikipedia.org/wiki/OpenH264" title="OpenH264">OpenH264</a></li>
+<li><a href="https://en.wikipedia.org/wiki/QuickTime" title="QuickTime">QuickTime</a></li>
+<li><a href="https://en.wikipedia.org/wiki/X264" title="X264">x264</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/High_Efficiency_Video_Coding" title="High Efficiency Video Coding">HEVC</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/DivX" title="DivX">DivX</a></li>
+<li><a href="https://en.wikipedia.org/wiki/X265" title="X265">x265</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Others</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/CineForm" title="CineForm">CineForm</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Cinepak" title="Cinepak">Cinepak</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Daala" title="Daala">Daala</a></li>
+<li><a href="https://en.wikipedia.org/wiki/DNxHD_codec" class="mw-redirect" title="DNxHD codec">DNxHD</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Helix_(multimedia_project)" title="Helix (multimedia project)">Helix DNA Producer</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Indeo" title="Indeo">Indeo</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Libavcodec" title="Libavcodec">libavcodec</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Dirac_(video_compression_format)" title="Dirac (video compression format)">Schrödinger (Dirac)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Smart_Bitrate_Control" title="Smart Bitrate Control">SBC</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sorenson_codec" class="mw-redirect" title="Sorenson codec">Sorenson</a></li>
+<li><a href="https://en.wikipedia.org/wiki/VP7" class="mw-redirect" title="VP7">VP7</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Theora" title="Theora">libtheora</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Libvpx" title="Libvpx">libvpx</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Windows_Media_Encoder" title="Windows Media Encoder">Windows Media Encoder</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:7em"><a href="https://en.wikipedia.org/wiki/Lossless_compression" title="Lossless compression">Lossless</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/FFV1" title="FFV1">FFV1</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Huffyuv" title="Huffyuv">Huffyuv</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Lagarith" title="Lagarith">Lagarith</a></li>
+<li><a href="https://en.wikipedia.org/wiki/MSU_Lossless_Video_Codec" title="MSU Lossless Video Codec">MSU Lossless</a></li>
+<li><a href="https://en.wikipedia.org/wiki/YULS" title="YULS">YULS</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td class="navbox-abovebelow" colspan="2">
+<div>
+<ul>
+<li>See also: <a href="https://en.wikipedia.org/wiki/Template:Compression_methods" title="Template:Compression methods">compression methods</a> and <a href="https://en.wikipedia.org/wiki/Template:Compression_formats" title="Template:Compression formats">compression formats</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1221
+Cached time: 20170115060809
+Cache expiry: 2592000
+Dynamic content: false
+CPU time usage: 0.196 seconds
+Real time usage: 0.570 seconds
+Preprocessor visited node count: 1022/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 73218/2097152 bytes
+Template argument size: 792/2097152 bytes
+Highest expansion depth: 7/40
+Expensive parser function count: 1/500
+Lua time usage: 0.081/10.000 seconds
+Lua memory usage: 3.84 MB/50 MB
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  502.370      1 - -total
+ 12.00%   60.296      1 - Template:Reflist
+  9.87%   49.609      7 - Template:Cite_web
+  8.23%   41.357      7 - Template:Navbox
+  7.84%   39.374      1 - Template:Refimprove
+  5.88%   29.526      1 - Template:Infobox_file_format
+  5.01%   25.170      1 - Template:Ambox
+  4.23%   21.257      1 - Template:Infobox
+  3.79%   19.061      1 - Template:Compression_Software_Implementations
+  2.97%   14.922      1 - Template:Archive_formats
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:265609-0!*!0!!en!4!* and timestamp 20170115060823 and revision id 760142399
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=JAR_(file_format)&amp;oldid=760142399">https://en.wikipedia.org/w/index.php?title=JAR_(file_format)&amp;oldid=760142399</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Help_Category.html" title="Help:Category">Categories</a>: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Archive_formats" title="Category:Archive formats">Archive formats</a></li><li><a href="Category_Java_platform.html" title="Category:Java platform">Java platform</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Articles_needing_additional_references_from_June_2008" title="Category:Articles needing additional references from June 2008">Articles needing additional references from June 2008</a></li><li><a href="https://en.wikipedia.org/wiki/Category:All_articles_needing_additional_references" title="Category:All articles needing additional references">All articles needing additional references</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Pages_using_deprecated_image_syntax" title="Category:Pages using deprecated image syntax">Pages using deprecated image syntax</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="Special_MyTalk.html" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="Special_MyContributions.html" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&amp;returnto=JAR+%28file+format%29" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=JAR+%28file+format%29" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="JAR_(file_format).html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+															<li  id="ca-talk"><span><a href="https://en.wikipedia.org/wiki/Talk:JAR_(file_format)"  title="Discussion about the content page [t]" accesskey="t" rel="discussion">Talk</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="JAR_(file_format).html" >Read</a></span></li>
+															<li id="ca-edit"><span><a href="https://en.wikipedia.org/w/index.php?title=JAR_(file_format)&amp;action=edit"  title="Edit this page [e]" accesskey="e">Edit</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="https://en.wikipedia.org/w/index.php?title=JAR_(file_format)&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="https://en.wikipedia.org/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="Main_Page.html"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="Portal_Contents.html" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="Portal_Featured_content.html" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="Portal_Current_events.html" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="https://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="../../shop.wikimedia.org/index.html" title="Visit the Wikipedia store">Wikipedia store</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Interaction</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-help"><a href="Help_Contents.html" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="Wikipedia_About.html" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="Wikipedia_Community_portal.html" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="Wikipedia_Contact_us.html" title="How to contact Wikipedia">Contact page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="https://en.wikipedia.org/wiki/Special:WhatLinksHere/JAR_(file_format)" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://en.wikipedia.org/wiki/Special:RecentChangesLinked/JAR_(file_format)" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="Wikipedia_File_Upload_Wizard.html" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="https://en.wikipedia.org/w/index.php?title=JAR_(file_format)&amp;oldid=760142399" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://en.wikipedia.org/w/index.php?title=JAR_(file_format)&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q921122" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="https://en.wikipedia.org/w/index.php?title=Special:CiteThisPage&amp;page=JAR_%28file_format%29&amp;id=760142399" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Print/export</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=JAR+%28file+format%29">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=JAR+%28file+format%29&amp;returnto=JAR+%28file+format%29&amp;oldid=760142399&amp;writer=rdf2latex">Download as PDF</a></li><li id="t-print"><a href="https://en.wikipedia.org/w/index.php?title=JAR_(file_format)&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Languages</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/JAR_(souborový_formát)" title="JAR (souborový formát) – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Java_Archive" title="Java Archive – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-el"><a href="https://el.wikipedia.org/wiki/JAR" title="JAR – Greek" lang="el" hreflang="el" class="interlanguage-link-target">Ελληνικά</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Java_Archive" title="Java Archive – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/JAR_(format_de_fichier)" title="JAR (format de fichier) – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/JAR_(파일_포맷)" title="JAR (파일 포맷) – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/JAR_(formato_di_file)" title="JAR (formato di file) – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-he"><a href="https://he.wikipedia.org/wiki/JAR" title="JAR – Hebrew" lang="he" hreflang="he" class="interlanguage-link-target">עברית</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/JAR_(fájlformátum)" title="JAR (fájlformátum) – Hungarian" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-ml"><a href="https://ml.wikipedia.org/wiki/ജാർ_ഫയൽ_ഫോർമാറ്റ്" title="ജാർ ഫയൽ ഫോർമാറ്റ് – Malayalam" lang="ml" hreflang="ml" class="interlanguage-link-target">മലയാളം</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/JAR" title="JAR – Dutch" lang="nl" hreflang="nl" class="interlanguage-link-target">Nederlands</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/JAR_(ファイルフォーマット)" title="JAR (ファイルフォーマット) – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/JAR_(format_pliku)" title="JAR (format pliku) – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/JAR_(formato_de_arquivo)" title="JAR (formato de arquivo) – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/JAR" title="JAR – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-te"><a href="https://te.wikipedia.org/wiki/JAR_(ఫైల్_ఫార్మాట్)" title="JAR (ఫైల్ ఫార్మాట్) – Telugu" lang="te" hreflang="te" class="interlanguage-link-target">తెలుగు</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/JAR" title="JAR – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/JAR_(文件格式)" title="JAR (文件格式) – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q921122#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 15 January 2017, at 06:08.</li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="Wikipedia_Text_of_Creative_Commons_Attribution-ShareAlike_3.html">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="../../creativecommons.org/licenses/by-sa/3.0/index.html" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="../../wikimediafoundation.org/wiki/Terms_of_Use.html">Terms of Use</a> and <a href="../../wikimediafoundation.org/wiki/Privacy_policy.html">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="../../www.wikimediafoundation.org/index.html">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../../wikimediafoundation.org/wiki/Privacy_policy.html" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="Wikipedia_About.html" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="Wikipedia_General_disclaimer.html" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="Wikipedia_Contact_us.html">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a href="../../www.mediawiki.org/wiki/Special_MyLanguage/How_to_contribute.html">Developers</a></li>
+											<li id="footer-places-cookiestatement"><a href="../../wikimediafoundation.org/wiki/Cookie_statement.html">Cookie statement</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/w/index.php?title=JAR_(file_format)&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="../../www.wikimediafoundation.org/index.html"><img src="https://en.wikipedia.org/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="../../www.mediawiki.org/index.html"><img src="https://en.wikipedia.org/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":50,"wgHostname":"mw1237"});});</script>
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/JAR_(file_format) by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:11 GMT -->
+</html>

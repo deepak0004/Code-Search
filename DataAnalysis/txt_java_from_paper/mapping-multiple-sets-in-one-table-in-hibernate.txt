@@ -1,0 +1,123 @@
+    
+        I've got a User an a Log class (which I cannot change):
+
+class User {
+    private long id;
+    private String name;
+    private Set&lt;Log&gt; accessLogs;
+    private Set&lt;Log&gt; actionLogs;
+}
+
+class Log {
+    private String what;
+    private Date when;
+}
+
+
+A possible mapping will look like:
+
+&lt;class name="com.example.User" table="users"&gt;
+    &lt;id name="id" access="field"&gt;
+        &lt;generator class="native" /&gt;
+    &lt;/id&gt;
+
+    &lt;property name="name" length="256" /&gt;
+
+    &lt;set name="accessLogs" table="user_access_logs" cascade="all-delete-orphan" order-by="`when`"&gt;
+        &lt;key column="user_id" /&gt;
+        &lt;composite-element class="com.example.Log"&gt;
+            &lt;property name="what" length="512" /&gt;
+            &lt;property name="when" column="`when`" /&gt;
+        &lt;/composite-element&gt;
+    &lt;/set&gt;
+
+    &lt;set name="actionLogs" table="user_action_logs" cascade="all-delete-orphan" order-by="`when`"&gt;
+        &lt;key column="user_id" /&gt;
+        &lt;composite-element class="com.example.Log"&gt;
+            &lt;property name="what" length="512" /&gt;
+            &lt;property name="when" column="`when`" /&gt;
+        &lt;/composite-element&gt;
+    &lt;/set&gt;
+
+&lt;/class&gt;
+
+
+This works fine and maps on the following database tables:
+
+users
++----+------+
+| id | name |
++----+------+
+|  1 | john |
+|  2 | bill |
+|  3 | nick |
++----+------+
+
+user_access_logs
++---------+------------+---------------------+
+| user_id | what       | when                |
++---------+------------+---------------------+
+|       1 | logged in  | 2010-09-21 11:25:03 |
+|       1 | logged out | 2010-09-21 11:38:24 |
+|       1 | logged in  | 2010-09-22 10:19:39 |
+|       2 | logged in  | 2010-09-22 11:03:18 |
+|       1 | logged out | 2010-09-22 11:48:16 |
+|       2 | logged in  | 2010-09-26 12:45:18 |
++---------+------------+---------------------+
+
+user_action_logs
++---------+---------------+---------------------+
+| user_id | what          | when                |
++---------+---------------+---------------------+
+|       1 | edit profile  | 2010-09-21 11:28:13 |
+|       1 | post comment  | 2010-09-21 11:30:40 |
+|       1 | edit profile  | 2010-09-21 11:31:17 |
+|       1 | submit link   | 2010-09-22 10:21:02 |
+|       2 | submit review | 2010-09-22 11:10:22 |
+|       2 | submit link   | 2010-09-22 11:11:39 |
++---------+---------------+---------------------+
+
+
+My question is how is it possible in hibernate to map those 2 sets (accessLogs and actionLogs) into the same table producing the following schema for the logs:
+
+user_logs
++---------+---------------+---------------------+--------+
+| user_id | what          | when                | type   |
++---------+---------------+---------------------+--------+
+|       1 | logged in     | 2010-09-21 11:25:03 | access |
+|       1 | edit profile  | 2010-09-21 11:28:13 | action |
+|       1 | post comment  | 2010-09-21 11:30:40 | action |
+|       1 | edit profile  | 2010-09-21 11:31:17 | action |
+|       1 | logged out    | 2010-09-21 11:38:24 | access |
+|       1 | logged in     | 2010-09-22 10:19:39 | access |
+|       1 | submit link   | 2010-09-22 10:21:02 | action |
+|       2 | logged in     | 2010-09-22 11:03:18 | access |
+|       2 | submit review | 2010-09-22 11:10:22 | action |
+|       2 | submit link   | 2010-09-22 11:11:39 | action |
+|       1 | logged out    | 2010-09-22 11:48:16 | access |
+|       2 | logged in     | 2010-09-26 12:45:18 | access |
++---------+---------------+---------------------+--------+
+
+
+Edit: I want to retain the Java code and Set semantics as is. I'm looking for something like a discriminator, a formula or a hibernate API extension which will solve this without touching the Java code. Maybe something along the lines (imaginary hibernate configuration follows):
+
+&lt;set name="accessLogs" table="user_logs" ... formula="type='access'"&gt;
+    &lt;key column="user_id" /&gt;
+    &lt;composite-element class="Log"&gt;
+        ...
+    &lt;/composite-element&gt;
+&lt;/set&gt;
+
+&lt;set name="actionLogs" table="user_logs" ... formula="type='action'"&gt;
+    &lt;key column="user_id" /&gt;
+    &lt;composite-element class="Log"&gt;
+        ...
+    &lt;/composite-element&gt;
+&lt;/set&gt;
+
+
+Edit2: I haven't got a full solution to this yet. I'm sure it can be done, possibly by extending some hibernate API.
+
+thanks
+
+                

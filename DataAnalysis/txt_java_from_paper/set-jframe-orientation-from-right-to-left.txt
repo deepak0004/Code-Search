@@ -1,0 +1,43 @@
+    
+        To align my JFrame from righ-to-left, I use:
+
+setComponentOrientation(ComponentOrientation.RIGHT_TO_LEFT);
+
+
+but this works only if I use the following style (decoration) of the JFrame:
+
+public class RightToLeft {
+  public static void main(String []args){
+    javax.swing.SwingUtilities.invokeLater(new Runnable(){
+      public void run() {
+        try { UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName()); }
+        catch (Exception e) { e.printStackTrace(); }
+        JFrame.setDefaultLookAndFeelDecorated(true);
+        JFrame frame = new JFrame("??????? ???????");
+        frame.setComponentOrientation(ComponentOrientation.RIGHT_TO_LEFT);
+        frame.setSize(300,300);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        frame.setVisible(true);
+      }
+    });
+  }
+}
+
+
+<img src="http://i.stack.imgur.com/UMjAU.png" alt="enter image description here">
+
+but I want it to work without this decoration. How to solve this issue?
+
+EDIT:
+
+@mre I want a JFrame like this one:
+
+<img src="http://i.stack.imgur.com/Wm4DK.png" alt="enter image description here">
+
+EDIT2:
+
+I really really need this issue to be fixed, so I offer 500+ to who will give a JFrame like this (with WindowsLookAndFeel):
+
+<img src="http://i.stack.imgur.com/Jmj8V.png" alt="enter image description here">
+
+                

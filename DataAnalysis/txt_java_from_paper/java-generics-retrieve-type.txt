@@ -1,0 +1,14 @@
+    
+        public Interface Foo&lt;T extends Colors&gt;{...}
+
+
+Is there a way to retrieve which T was given for an implementation of Foo?
+
+For example,
+
+public Class FooImpl implements Foo&lt;Green&gt;{..}
+
+
+Would return Green.
+
+                

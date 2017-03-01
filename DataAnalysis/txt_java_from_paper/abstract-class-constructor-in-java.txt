@@ -1,0 +1,4 @@
+    
+        Can an abstract class have a constructor? If so, how it can be used and for what purposes?
+
+                

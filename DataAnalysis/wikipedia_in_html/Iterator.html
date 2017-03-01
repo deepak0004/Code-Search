@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Iterator by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:11 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Iterator - Wikipedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Iterator","wgTitle":"Iterator","wgCurRevisionId":741497176,"wgRevisionId":741497176,"wgArticleId":172640,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["CS1 German-language sources (de)","Articles needing expert attention from December 2013","All articles needing expert attention","Computer science articles needing expert attention","Articles needing additional references from June 2010","All articles needing additional references","Articles with example C Sharp code","Articles with example C++ code","Articles with example Java code","Articles with example PHP code","Articles with example Python code","Articles with example Ruby code","Iteration in programming","Object (computer science)","Abstract data types"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Iterator","wgRelevantArticleId":172640,"wgRequestId":"WHa6yApAIDMAADqj8egAAABW","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgFlaggedRevsParams":{"tags":{}},"wgStableRevisionId":null,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"en","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgWikibaseItemId":"Q1326388","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.cite.styles":"ready","ext.pygments":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@1dqfd7l",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["ext.cite.a11y","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.legacy.wikibits","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.watchlist-notice","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.gadget.featured-articles-links","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.interface","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="https://en.wikipedia.org/w/load.php?debug=false&amp;lang=en&amp;modules=ext.cite.styles%7Cext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="../w/load2c8d.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../w/load18b6.css?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.29.0-wmf.7"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="https://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Iterator"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Iterator&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Iterator&amp;action=edit"/>
+<link rel="apple-touch-icon" href="https://en.wikipedia.org/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="../static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../w/api251f.php?action=rsd"/>
+<link rel="copyright" href="../../creativecommons.org/licenses/by-sa/3.0/index.html"/>
+<link rel="canonical" href="Iterator.html"/>
+<link rel="dns-prefetch" href="../../login.wikimedia.org/index.html"/>
+<link rel="dns-prefetch" href="../../meta.wikimedia.org/index.html" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Iterator rootpage-Iterator skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">Iterator</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><script>function mfTempOpenSection(id){var block=document.getElementById("mf-section-"+id);block.className+=" open-block";block.previousSibling.className+=" open-block";}</script><p>In <a href="https://en.wikipedia.org/wiki/Computer_programming" title="Computer programming">computer programming</a>, an <b>iterator</b> is an <a href="https://en.wikipedia.org/wiki/Object_(computing)" class="mw-redirect" title="Object (computing)">object</a> that enables a programmer to traverse a <a href="https://en.wikipedia.org/wiki/Container_(data_structure)" class="mw-redirect" title="Container (data structure)">container</a>, particularly <a href="https://en.wikipedia.org/wiki/List_(abstract_data_type)" title="List (abstract data type)">lists</a>.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[1]</a></sup><sup id="cite_ref-definition_2-0" class="reference"><a href="#cite_note-definition-2">[2]</a></sup><sup id="cite_ref-3" class="reference"><a href="#cite_note-3">[3]</a></sup> Various types of iterators are often provided via a container's <a href="https://en.wikipedia.org/wiki/Interface_(object-oriented_programming)" class="mw-redirect" title="Interface (object-oriented programming)">interface</a>. Though the interface and semantics of a given iterator are fixed, iterators are often implemented in terms of the structures underlying a container implementation and are often tightly coupled to the container to enable the operational semantics of the iterator. Note that an iterator performs traversal and also gives access to data elements in a container, but does not perform iteration (i.e., not without some significant liberty taken with that concept or with trivial use of the terminology). An iterator is behaviorally similar to a <a href="https://en.wikipedia.org/wiki/Database" title="Database">database</a> <a href="https://en.wikipedia.org/wiki/Cursor_(databases)" title="Cursor (databases)">cursor</a>. Iterators date to the <a href="https://en.wikipedia.org/wiki/CLU_(programming_language)" title="CLU (programming language)">CLU</a> programming language in 1974.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Description"><span class="tocnumber">1</span> <span class="toctext">Description</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Internal_Iterators"><span class="tocnumber">1.1</span> <span class="toctext">Internal Iterators</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#External_iterators_and_the_iterator_pattern"><span class="tocnumber">1.2</span> <span class="toctext">External iterators and the iterator pattern</span></a>
+<ul>
+<li class="toclevel-3 tocsection-4"><a href="#Generators"><span class="tocnumber">1.2.1</span> <span class="toctext">Generators</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-5"><a href="#Implicit_iterators"><span class="tocnumber">1.3</span> <span class="toctext">Implicit iterators</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Streams"><span class="tocnumber">1.4</span> <span class="toctext">Streams</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Contrasting_with_indexing"><span class="tocnumber">1.5</span> <span class="toctext">Contrasting with indexing</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Classifying_iterators"><span class="tocnumber">1.6</span> <span class="toctext">Classifying iterators</span></a>
+<ul>
+<li class="toclevel-3 tocsection-9"><a href="#Iterator_categories"><span class="tocnumber">1.6.1</span> <span class="toctext">Iterator categories</span></a></li>
+<li class="toclevel-3 tocsection-10"><a href="#Iterator_types"><span class="tocnumber">1.6.2</span> <span class="toctext">Iterator types</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-11"><a href="#In_different_programming_languages"><span class="tocnumber">2</span> <span class="toctext">In different programming languages</span></a>
+<ul>
+<li class="toclevel-2 tocsection-12"><a href="#C.23_and_other_.NET_languages"><span class="tocnumber">2.1</span> <span class="toctext">C# and other .NET languages</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#C.2B.2B"><span class="tocnumber">2.2</span> <span class="toctext">C++</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#Java"><span class="tocnumber">2.3</span> <span class="toctext">Java</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#Scala"><span class="tocnumber">2.4</span> <span class="toctext">Scala</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#MATLAB"><span class="tocnumber">2.5</span> <span class="toctext">MATLAB</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#PHP"><span class="tocnumber">2.6</span> <span class="toctext">PHP</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#Python"><span class="tocnumber">2.7</span> <span class="toctext">Python</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#Ruby"><span class="tocnumber">2.8</span> <span class="toctext">Ruby</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-20"><a href="#See_also"><span class="tocnumber">3</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-21"><a href="#References"><span class="tocnumber">4</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-22"><a href="#External_links"><span class="tocnumber">5</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Description">Description</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Iterator&amp;action=edit&amp;section=1" title="Edit section: Description">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="plainlinks metadata ambox ambox-content" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Ambox_important.svg/40px-Ambox_important.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Ambox_important.svg/60px-Ambox_important.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Ambox_important.svg/80px-Ambox_important.svg.png 2x" data-file-width="40" data-file-height="40" /></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This section <b>needs attention from an expert in Computer science</b>. <span class="hide-when-compact">See the <a href="https://en.wikipedia.org/wiki/Talk:Iterator#Explicit_vs._Implicit.2C_External_vs._Internal" title="Talk:Iterator">talk page</a> for details. <a href="https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Computer_science" title="Wikipedia:WikiProject Computer science">WikiProject Computer science</a> (or its <a href="https://en.wikipedia.org/wiki/Portal:Computer_science" title="Portal:Computer science">Portal</a>) may be able to help recruit an expert.</span> <small><i>(December 2013)</i></small></span></td>
+</tr>
+</table>
+<h3><span class="mw-headline" id="Internal_Iterators">Internal Iterators</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Iterator&amp;action=edit&amp;section=2" title="Edit section: Internal Iterators">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Internal iterators are <a href="https://en.wikipedia.org/wiki/Higher_order_functions" class="mw-redirect" title="Higher order functions">higher order functions</a> (often taking <a href="https://en.wikipedia.org/wiki/Anonymous_functions" class="mw-redirect" title="Anonymous functions">anonymous functions</a>) such as <i>map</i>, <i>reduce</i> etc., implementing the traversal across a container, applying the given function to every element in turn.</p>
+<h3><span class="mw-headline" id="External_iterators_and_the_iterator_pattern">External iterators and the iterator pattern</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Iterator&amp;action=edit&amp;section=3" title="Edit section: External iterators and the iterator pattern">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div role="note" class="hatnote">Main article: <a href="https://en.wikipedia.org/wiki/Iterator_pattern" title="Iterator pattern">Iterator pattern</a></div>
+<p>An external iterator may be thought of as a type of <a href="https://en.wikipedia.org/wiki/Pointer_(computer_programming)" title="Pointer (computer programming)">pointer</a> that has two primary operations: referencing one particular element in the object collection (called <i>element access</i>), and modifying itself so it points to the next element (called <i>element traversal</i>).<sup id="cite_ref-ExternalInternal_4-0" class="reference"><a href="#cite_note-ExternalInternal-4">[4]</a></sup> There must also be a way to create an iterator so it points to some first element as well as some way to determine when the iterator has exhausted all of the elements in the container. Depending on the language and intended use, iterators may also provide additional operations or exhibit different behaviors.</p>
+<p>The primary purpose of an iterator is to allow a user to process every element of a container while isolating the user from the internal structure of the container.<sup id="cite_ref-definition_2-1" class="reference"><a href="#cite_note-definition-2">[2]</a></sup> This allows the container to store elements in any manner it wishes while allowing the user to treat it as if it were a simple sequence or list. An iterator class is usually designed in tight coordination with the corresponding container class. Usually, the container provides the methods for creating iterators.</p>
+<p>Note that a <a href="https://en.wikipedia.org/wiki/Loop_counter" class="mw-redirect" title="Loop counter">loop counter</a> is sometimes also referred to as a loop iterator. A <a href="https://en.wikipedia.org/wiki/Loop_counter" class="mw-redirect" title="Loop counter">loop counter</a>, however, only provides the traversal functionality and not the element access functionality.</p>
+<h4><span class="mw-headline" id="Generators">Generators</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Iterator&amp;action=edit&amp;section=4" title="Edit section: Generators">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div role="note" class="hatnote">Main article: <a href="https://en.wikipedia.org/wiki/Generator_(computer_science)" class="mw-redirect" title="Generator (computer science)">Generator (computer science)</a></div>
+<p>One way of implementing iterators is to use a restricted form of <a href="https://en.wikipedia.org/wiki/Coroutine" title="Coroutine">coroutine</a>, known as a <a href="https://en.wikipedia.org/wiki/Generator_(computer_science)" class="mw-redirect" title="Generator (computer science)">generator</a>. By contrast with a <a href="https://en.wikipedia.org/wiki/Subroutine" title="Subroutine">subroutine</a>, a generator coroutine can <i>yield</i> values to its caller multiple times, instead of returning just once. Most iterators are naturally expressible as generators, but because generators preserve their local state between invocations, they're particularly well-suited for complicated, stateful iterators, such as <a href="Tree_traversal.html" title="Tree traversal">tree traversers</a>. There are subtle differences and distinctions in the use of the terms "generator" and "iterator", which vary between authors and languages.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">[5]</a></sup> In <a href="https://en.wikipedia.org/wiki/Python_(programming_language)" title="Python (programming language)">Python</a>, a generator is an iterator <a href="https://en.wikipedia.org/wiki/Constructor_(object-oriented_programming)" title="Constructor (object-oriented programming)">constructor</a>: a function that returns an iterator. An example of a Python generator returning an iterator for the <a href="https://en.wikipedia.org/wiki/Fibonacci_number" title="Fibonacci number">Fibonacci numbers</a> using Python's <code>yield</code> statement follows:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="k">def</span> <span class="nf">fibonacci</span><span class="p">(</span><span class="n">limit</span><span class="p">):</span>
+    <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">limit</span><span class="p">):</span>
+        <span class="k">yield</span> <span class="n">a</span>
+        <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span>
+
+<span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">fibonacci</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>  <span class="c1"># The generator constructs an iterator</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
+</pre></div>
+<h3><span class="mw-headline" id="Implicit_iterators">Implicit iterators</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Iterator&amp;action=edit&amp;section=5" title="Edit section: Implicit iterators">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Some object-oriented languages such as <a href="https://en.wikipedia.org/wiki/C_Sharp_(programming_language)" title="C Sharp (programming language)">C#</a>, <a href="https://en.wikipedia.org/wiki/C++" title="C++">C++</a> (later versions), <a href="https://en.wikipedia.org/wiki/Object_Pascal" title="Object Pascal">Delphi</a> (later versions), <a href="https://en.wikipedia.org/wiki/Go_(programming_language)" title="Go (programming language)">Go</a>, <a href="Java_(programming_language).html" title="Java (programming language)">Java</a> (later versions), <a href="https://en.wikipedia.org/wiki/Lua_(programming_language)" title="Lua (programming language)">Lua</a>, <a href="https://en.wikipedia.org/wiki/Perl" title="Perl">Perl</a>, <a href="https://en.wikipedia.org/wiki/Python_(programming_language)" title="Python (programming language)">Python</a>, <a href="https://en.wikipedia.org/wiki/Ruby_(programming_language)" title="Ruby (programming language)">Ruby</a> provide an <a href="https://en.wikipedia.org/wiki/Intrinsic_function" title="Intrinsic function">intrinsic</a> way of iterating through the elements of a container object without the introduction of an explicit iterator object. An actual iterator object may exist in reality, but if it does it is not exposed within the source code of the language.<sup id="cite_ref-ExternalInternal_4-1" class="reference"><a href="#cite_note-ExternalInternal-4">[4]</a></sup><sup id="cite_ref-HFDPIterators_6-0" class="reference"><a href="#cite_note-HFDPIterators-6">[6]</a></sup></p>
+<p>Implicit iterators are often manifested by a "<a href="https://en.wikipedia.org/wiki/Foreach" class="mw-redirect" title="Foreach">foreach</a>" statement (or equivalent), such as in the following Python example:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">iterable</span><span class="p">:</span>
+    <span class="k">print</span> <span class="n">value</span>
+</pre></div>
+<p>In Python, an iterable is an object which can be converted to an iterator, which is then iterated through during the for loop; this is done implicitly.</p>
+<p>Or other times they may be created by the collection object itself, as in this Ruby example:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="n">iterable</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">value</span><span class="o">|</span>
+  <span class="nb">puts</span> <span class="n">value</span>
+<span class="k">end</span>
+</pre></div>
+<p>This iteration style is sometimes called "internal iteration" because its code fully executes within the context of the iterable object (that controls all aspects of iteration), and the programmer only provides the operation to execute at each step (using an <a href="https://en.wikipedia.org/wiki/Anonymous_function" title="Anonymous function">anonymous function</a>).</p>
+<p>Languages that support <a href="https://en.wikipedia.org/wiki/List_comprehension" title="List comprehension">list comprehensions</a> or similar constructs may also make use of implicit iterators during the construction of the result list, as in Python:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="n">person</span><span class="o">.</span><span class="n">name</span> <span class="k">for</span> <span class="n">person</span> <span class="ow">in</span> <span class="n">roster</span> <span class="k">if</span> <span class="n">person</span><span class="o">.</span><span class="n">male</span><span class="p">]</span>
+</pre></div>
+<p>Sometimes the implicit hidden nature is only partial. The <a href="https://en.wikipedia.org/wiki/C++" title="C++">C++</a> language has a few function templates for implicit iteration, such as <code>for_each()</code>. These functions still require explicit iterator objects as their initial input, but the subsequent iteration does not expose an iterator object to the user.</p>
+<h3><span class="mw-headline" id="Streams">Streams</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Iterator&amp;action=edit&amp;section=6" title="Edit section: Streams">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div role="note" class="hatnote">Further information: <a href="https://en.wikipedia.org/wiki/Stream_(computing)" title="Stream (computing)">Stream (computing)</a></div>
+<p>Iterators are a useful abstraction of <a href="https://en.wikipedia.org/wiki/Input_stream" class="mw-redirect" title="Input stream">input streams</a> – they provide a potentially infinite iterable (but not necessarily indexable) object. Several languages, such as Perl and Python, implement streams as iterators. Alternative implementations of stream include <a href="https://en.wikipedia.org/wiki/Data-driven_programming" title="Data-driven programming">data-driven</a> languages, such as <a href="https://en.wikipedia.org/wiki/AWK" title="AWK">AWK</a> and <a href="https://en.wikipedia.org/wiki/Sed" title="Sed">sed</a>.</p>
+<h3><span class="mw-headline" id="Contrasting_with_indexing">Contrasting with indexing</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Iterator&amp;action=edit&amp;section=7" title="Edit section: Contrasting with indexing">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>In procedural languages it is common to use the subscript operator and a <a href="https://en.wikipedia.org/wiki/Loop_counter" class="mw-redirect" title="Loop counter">loop counter</a> to loop through all the elements in a sequence such as an array. Although indexing may also be used with some object-oriented containers, the use of iterators may have some advantages:<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">[7]</a></sup></p>
+<ul>
+<li>Counting loops are not suitable to all data structures, in particular to data structures with no or slow <a href="https://en.wikipedia.org/wiki/Random_access" title="Random access">random access</a>, like <a href="https://en.wikipedia.org/wiki/List_(computing)" class="mw-redirect" title="List (computing)">lists</a> or <a href="https://en.wikipedia.org/wiki/Tree_data_structure" class="mw-redirect" title="Tree data structure">trees</a>.</li>
+<li>Iterators can provide a consistent way to iterate on data structures of all kinds, and therefore make the code more readable, reusable, and less sensitive to a change in the data structure.</li>
+<li>An iterator can enforce additional restrictions on access, such as ensuring that elements cannot be skipped or that a previously visited element cannot be accessed a second time.</li>
+<li>An iterator may allow the container object to be modified without invalidating the iterator. For instance, once an iterator has advanced beyond the first element it may be possible to insert additional elements into the beginning of the container with predictable results. With indexing this is problematic since the index numbers must change.</li>
+</ul>
+<p>The ability of a container to be modified while iterating through its elements has become necessary in modern <a href="https://en.wikipedia.org/wiki/Object-oriented" class="mw-redirect" title="Object-oriented">object-oriented</a> programming, where the interrelationships between objects and the effects of operations may not be obvious. By using an iterator one is isolated from these sorts of consequences. This assertion must however be taken with a grain of salt, because more often than not, for efficiency reasons, the iterator implementation is so tightly bound to the container that it does preclude modification of the underlying container without invalidating itself.</p>
+<p>For containers that may move around their data in memory, the only way to not invalidate the iterator is, for the container, to somehow keep track of all the currently alive iterators and update them on the fly. Since the number of iterators at a given time may be arbitrarily large in comparison to the size of the tied container, updating them all will drastically impair the complexity guarantee on the container's operations.</p>
+<p>An alternative way to keep the number of updates bound relatively to the container size would be to use a kind of handle mechanism, that is a collection of indirect pointers to the container's elements that must be updated with the container, and let the iterators point to these handles instead of directly to the data elements. But this approach will negatively impact the iterator performance, since it must effectuate a double pointer following to access the actual data element. This is usually not desirable, because many algorithms using the iterators invoke the iterators data access operation more often than the advance method. It is therefore especially important to have iterators with very efficient data access.</p>
+<p>All in all, this is always a trade-off between security (iterators remain always valid) and efficiency. Most of the time, the added security is not worth the efficiency price to pay for it. Using an alternative container (for example a singly linked list instead of a vector) would be a better choice (globally more efficient) if the stability of the iterators is needed.</p>
+<h3><span class="mw-headline" id="Classifying_iterators">Classifying iterators</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Iterator&amp;action=edit&amp;section=8" title="Edit section: Classifying iterators">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h4><span class="mw-headline" id="Iterator_categories">Iterator categories</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Iterator&amp;action=edit&amp;section=9" title="Edit section: Iterator categories">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Iterators can be categorised according to their functionality. Here is a (non-exhaustive) list of iterator categories:<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">[8]</a></sup><sup id="cite_ref-9" class="reference"><a href="#cite_note-9">[9]</a></sup></p>
+<table class="wikitable sortable">
+<tr>
+<th>Category</th>
+<th>Languages</th>
+</tr>
+<tr>
+<td>Bidirectional iterator</td>
+<td><a href="https://en.wikipedia.org/wiki/C++" title="C++">C++</a></td>
+</tr>
+<tr>
+<td>Forward iterator</td>
+<td>C++</td>
+</tr>
+<tr>
+<td>Input iterator</td>
+<td>C++</td>
+</tr>
+<tr>
+<td>Output iterator</td>
+<td>C++</td>
+</tr>
+<tr>
+<td>Random access iterator</td>
+<td>C++</td>
+</tr>
+<tr>
+<td>Trivial iterator</td>
+<td>C++ (old <a href="https://en.wikipedia.org/wiki/Standard_Template_Library" title="Standard Template Library">STL</a>)<sup id="cite_ref-10" class="reference"><a href="#cite_note-10">[10]</a></sup></td>
+</tr>
+</table>
+<h4><span class="mw-headline" id="Iterator_types">Iterator types</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Iterator&amp;action=edit&amp;section=10" title="Edit section: Iterator types">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Different languages or libraries used with these languages define iterator types. Some of them are<sup id="cite_ref-11" class="reference"><a href="#cite_note-11">[11]</a></sup></p>
+<table class="wikitable sortable">
+<tr>
+<th>Type</th>
+<th>Languages</th>
+</tr>
+<tr>
+<td>Array iterator</td>
+<td><a href="https://en.wikipedia.org/wiki/PHP" title="PHP">PHP</a>, R<sup id="cite_ref-12" class="reference"><a href="#cite_note-12">[12]</a></sup></td>
+</tr>
+<tr>
+<td>Caching iterator</td>
+<td>PHP</td>
+</tr>
+<tr>
+<td>Constant iterator</td>
+<td><a href="https://en.wikipedia.org/wiki/C++" title="C++">C++</a>,<sup id="cite_ref-13" class="reference"><a href="#cite_note-13">[13]</a></sup> PHP</td>
+</tr>
+<tr>
+<td>Directory iterator</td>
+<td>PHP, <a href="https://en.wikipedia.org/wiki/Python_(programming_language)" title="Python (programming language)">Python</a></td>
+</tr>
+<tr>
+<td>Filter iterator</td>
+<td>PHP, R</td>
+</tr>
+<tr>
+<td>Limit iterator</td>
+<td>PHP</td>
+</tr>
+<tr>
+<td>List iterator</td>
+<td><a href="Java_(programming_language).html" title="Java (programming language)">Java</a>,<sup id="cite_ref-HFDPIterators_6-1" class="reference"><a href="#cite_note-HFDPIterators-6">[6]</a></sup> R</td>
+</tr>
+<tr>
+<td>Recursive array iterator</td>
+<td>PHP</td>
+</tr>
+<tr>
+<td>XML iterator</td>
+<td>PHP</td>
+</tr>
+</table>
+<h2><span class="mw-headline" id="In_different_programming_languages">In different programming languages</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Iterator&amp;action=edit&amp;section=11" title="Edit section: In different programming languages">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="C.23_and_other_.NET_languages">C# and other .NET languages</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Iterator&amp;action=edit&amp;section=12" title="Edit section: C# and other .NET languages">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Iterators in the <a href="https://en.wikipedia.org/wiki/.NET_Framework" title=".NET Framework">.NET Framework</a> are called "enumerators" and represented by the <code>IEnumerator</code> interface. <code>IEnumerator</code> provides a <code>MoveNext()</code> method, which advances to the next element and indicates whether the end of the collection has been reached; a <code>Current</code> property, to obtain the value of the element currently being pointed at; and an optional <code>Reset()</code> method, to rewind the enumerator back to its initial position. The enumerator initially points to a special value before the first element, so a call to <code>MoveNext()</code> is required to begin iterating.</p>
+<p>Enumerators are typically obtained by calling the <code>GetEnumerator()</code> method of an object implementing the <code>IEnumerable</code> interface. Container classes typically implement this interface. However, the <a href="https://en.wikipedia.org/wiki/Foreach" class="mw-redirect" title="Foreach">foreach</a> statement in <a href="https://en.wikipedia.org/wiki/C_Sharp_(programming_language)" title="C Sharp (programming language)">C#</a> can operate on any object providing such a method, even if it doesn't implement <code>IEnumerable</code>. Both interfaces were expanded into <a href="https://en.wikipedia.org/wiki/Generic_programming" title="Generic programming">generic</a> versions in <a href="https://en.wikipedia.org/wiki/.NET_Framework#.NET_Framework_2.0" title=".NET Framework">.NET 2.0</a>.</p>
+<p>The following shows a simple use of iterators in C# 2.0:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="c1">// explicit version</span>
+<span class="n">IEnumerator</span><span class="p">&lt;</span><span class="n">MyType</span><span class="p">&gt;</span> <span class="n">iter</span> <span class="p">=</span> <span class="n">list</span><span class="p">.</span><span class="n">GetEnumerator</span><span class="p">();</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">iter</span><span class="p">.</span><span class="n">MoveNext</span><span class="p">())</span>
+    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">iter</span><span class="p">.</span><span class="n">Current</span><span class="p">);</span>
+
+<span class="c1">// implicit version</span>
+<span class="k">foreach</span> <span class="p">(</span><span class="n">MyType</span> <span class="k">value</span> <span class="k">in</span> <span class="n">list</span><span class="p">)</span>
+    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="k">value</span><span class="p">);</span>
+</pre></div>
+<p>C# 2.0 also supports <a href="Iterator.html#Generators" title="Iterator">generators</a>: a method that is declared as returning <code>IEnumerator</code> (or <code>IEnumerable</code>), but uses the "<code>yield return</code>" statement to produce a sequence of elements instead of returning an object instance, will be transformed by the compiler into a new class implementing the appropriate interface.</p>
+<h3><span class="mw-headline" id="C.2B.2B">C++</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Iterator&amp;action=edit&amp;section=13" title="Edit section: C++">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The <a href="https://en.wikipedia.org/wiki/C++" title="C++">C++</a> language makes wide use of iterators in its <a href="https://en.wikipedia.org/wiki/Standard_Template_Library" title="Standard Template Library">Standard Template Library</a>, which provides several different kinds of iterators, including <i>forward iterators</i>, <i>bidirectional iterators</i>, and <i>random access iterators</i>. All of the standard container template types provide a rich and consistent set of iterator types. The syntax of standard iterators is designed to resemble that of ordinary <a href="https://en.wikipedia.org/wiki/C_(programming_language)" title="C (programming language)">C</a> <a href="https://en.wikipedia.org/wiki/Pointer_arithmetic" class="mw-redirect" title="Pointer arithmetic">pointer arithmetic</a>, where the <code>*</code> and <code>-&gt;</code> operators are used to reference the element to which the iterator points, and pointer arithmetic operators like <code>++</code> are used to advance the iterator to the next element.</p>
+<p>Iterators are usually used in pairs, where one is used for the actual iteration and the second serves to mark the end of the collection. The iterators are created by the corresponding container class using standard methods such as <code>begin()</code> and <code>end()</code>. The iterator returned by <code>begin()</code> points to the first element, while the iterator returned by <code>end()</code> is a special value that does not reference any element. When an iterator is advanced beyond the last element it is by definition equal to the special end iterator value.</p>
+<p>The following example shows a typical use of an iterator.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">items</span><span class="p">;</span>
+<span class="n">items</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span> <span class="c1">// Append integer value '1' to vector 'items'</span>
+<span class="n">items</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span> <span class="c1">// Append integer value '2' to vector 'items'</span>
+<span class="n">items</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span> <span class="c1">// Append integer value '3' to vector 'items'</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">iterator</span> <span class="n">i</span> <span class="o">=</span> <span class="n">items</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span> <span class="n">i</span> <span class="o">!=</span> <span class="n">items</span><span class="p">.</span><span class="n">end</span><span class="p">();</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// Iterate through 'items'</span>
+   <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="o">*</span><span class="n">i</span><span class="p">;</span> <span class="c1">// And print value of 'items' for current index</span>
+<span class="p">}</span>
+<span class="c1">//in C++11</span>
+<span class="k">for</span><span class="p">(</span><span class="k">auto</span> <span class="nl">i</span><span class="p">:</span><span class="n">items</span><span class="p">){</span>
+   <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">i</span><span class="p">;</span> <span class="c1">// And print value of 'items'</span>
+<span class="p">}</span>
+<span class="c1">//</span>
+
+<span class="c1">//Prints 123</span>
+</pre></div>
+<p>There are many varieties of iterators each with slightly different behavior, including: forward, reverse, and bidirectional iterators; random-access iterators; input and output iterators; and const iterators (that protect the container or its elements from modification). However, not every type of container supports every type of iterator. It is possible for users to create their own iterator types by deriving subclasses from the standard <code>std::iterator</code> class template.</p>
+<p>Iterator safety is defined separately for the different types of standard containers, in some cases the iterator is very permissive in allowing the container to change while iterating.</p>
+<p>Implicit iteration is also partially supported by C++ through the use of standard function templates, such as <code><a rel="nofollow" class="external text" href="http://www.sgi.com/tech/stl/for_each.html">std::for_each()</a></code>, <code><a rel="nofollow" class="external text" href="http://www.sgi.com/tech/stl/copy.html">std::copy()</a></code> and <code><a rel="nofollow" class="external text" href="http://www.sgi.com/tech/stl/accumulate.html">std::accumulate()</a></code>.</p>
+<p>When used they must be initialized with existing iterators, usually <code>begin</code> and <code>end</code>, that define the range over which iteration occurs. But no explicit iterator object is subsequently exposed as the iteration proceeds. This example shows the use of <code>for_each</code>.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="n">ContainerType</span><span class="o">&lt;</span><span class="n">ItemType</span><span class="o">&gt;</span> <span class="n">C</span><span class="p">;</span> <span class="c1">// Any standard container type of ItemType elements</span>
+
+<span class="kt">void</span> <span class="nf">ProcessItem</span><span class="p">(</span><span class="k">const</span> <span class="n">ItemType</span><span class="o">&amp;</span> <span class="n">I</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// Function that will process each item of the collection</span>
+   <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">I</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">for_each</span><span class="p">(</span><span class="n">C</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">C</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span> <span class="n">ProcessItem</span><span class="p">);</span>  <span class="c1">// A for-each iteration loop</span>
+</pre></div>
+<p>The same can be achieved using <code>std::copy</code> and <code><a rel="nofollow" class="external text" href="http://www.sgi.com/tech/stl/ostream_iterator.html">std::ostream_iterator</a></code></p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="n">std</span><span class="o">::</span><span class="n">copy</span><span class="p">(</span><span class="n">C</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">C</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span> <span class="n">std</span><span class="o">::</span><span class="n">ostream_iterator</span><span class="o">&lt;</span><span class="n">ItemType</span><span class="o">&gt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="p">,</span> <span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">));</span>
+</pre></div>
+<p>A limitation is that this technique does not allow the body of the for-each loop to be declared inline, requiring a <a href="https://en.wikipedia.org/wiki/Function_pointer" title="Function pointer">function pointer</a> or <a href="Function_object.html" title="Function object">function object</a> to be declared elsewhere and passed as an argument. This can be partially compensated for by using a library such as <a href="https://en.wikipedia.org/wiki/Boost_library" class="mw-redirect" title="Boost library">Boost</a> and using lambda to implicitly generate function objects with familiar infix operator syntax. However, because Boost is implemented at the library level, rather than intrinsically in the language, certain operations have to be done via workarounds.</p>
+<p>The current standard of C++, <a href="https://en.wikipedia.org/wiki/C++11" title="C++11">C++11</a>, natively supports <a href="https://en.wikipedia.org/wiki/C++11#Lambda_functions_and_expressions" title="C++11">lambda function</a> syntax, allowing the function template body to be declared inline.</p>
+<p>Here is an example of for-each iteration using a lambda function:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="n">ContainerType</span><span class="o">&lt;</span><span class="n">ItemType</span><span class="o">&gt;</span> <span class="n">C</span><span class="p">;</span> <span class="c1">// Any standard container type of ItemType elements</span>
+
+<span class="c1">// A for-each iteration loop with a lambda function</span>
+<span class="n">std</span><span class="o">::</span><span class="n">for_each</span><span class="p">(</span><span class="n">C</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">C</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span> <span class="p">[](</span><span class="k">const</span> <span class="n">ItemType</span><span class="o">&amp;</span> <span class="n">I</span><span class="p">){</span> <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">I</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span> <span class="p">});</span>
+</pre></div>
+<h3><span class="mw-headline" id="Java">Java</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Iterator&amp;action=edit&amp;section=14" title="Edit section: Java">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Introduced in the <a href="Java_(programming_language).html" title="Java (programming language)">Java</a> JDK 1.2 release, the <code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/8/docs/api/java/util/Iterator.html">java.util.Iterator</a></code> interface allows the iteration of container classes. Each <code>Iterator</code> provides a <code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/8/docs/api/java/util/Iterator.html#next()">next()</a></code> and <code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/8/docs/api/java/util/Iterator.html#hasNext()">hasNext()</a></code> method, and may optionally support a <code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/8/docs/api/java/util/Iterator.html#remove()">remove()</a></code> method. Iterators are created by the corresponding container class, typically by a method named <code>iterator()</code>.<sup id="cite_ref-14" class="reference"><a href="#cite_note-14">[14]</a></sup></p>
+<p>The <code>next()</code> method advances the iterator and returns the value pointed to by the iterator. The first element is obtained upon the first call to <code>next()</code>. To determine when all the elements in the container have been visited the <code>hasNext()</code> test method is used. The following example shows a simple use of iterators:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="n">Iterator</span> <span class="n">iter</span> <span class="o">=</span> <span class="n">list</span><span class="o">.</span><span class="na">iterator</span><span class="o">();</span>
+<span class="c1">//Iterator&lt;MyType&gt; iter = list.iterator();    in J2SE 5.0</span>
+<span class="k">while</span> <span class="o">(</span><span class="n">iter</span><span class="o">.</span><span class="na">hasNext</span><span class="o">())</span> <span class="o">{</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="n">iter</span><span class="o">.</span><span class="na">next</span><span class="o">());</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">iter</span><span class="o">.</span><span class="na">hasNext</span><span class="o">())</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">", "</span><span class="o">);</span>
+<span class="o">}</span>
+</pre></div>
+<p>To show that <code>hasNext()</code> can be called repeatedly, we use it to insert commas between the elements but not after the last element.</p>
+<p>Note that this approach does not properly separate the advance operation from the actual data access. If the data element must be used more than once for each advance, it needs to be stored in a temporary variable. When an advance is needed without data access (i.e. to skip a given data element), the access is nonetheless performed, though the returned value is ignored in this case.</p>
+<p>For collection types that support it, the <code>remove()</code> method of the iterator removes the most recently visited element from the container while keeping the iterator usable. Adding or removing elements by calling the methods of container (also from the same <a href="https://en.wikipedia.org/wiki/Thread_(computer_science)" class="mw-redirect" title="Thread (computer science)">thread</a>) makes the iterator unusable. An attempt to get the next element throws the exception. An exception is also thrown if there are no more elements remaining (<code>hasNext()</code> has previously returned false).</p>
+<p>Additionally, for <code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html">java.util.List</a></code> there is a <code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/8/docs/api/java/util/ListIterator.html">java.util.ListIterator</a></code> with a similar API but that allows forward and backward iteration, provides its current index in the list and allows setting of the list element at its position.</p>
+<p>The <a href="Java_Platform%2c_Standard_Edition.html" title="Java Platform, Standard Edition">J2SE</a> 5.0 release of Java introduced the <code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html">Iterable</a></code> interface to support an enhanced <code>for</code> (<a href="https://en.wikipedia.org/wiki/Foreach" class="mw-redirect" title="Foreach">foreach</a>) loop for iterating over collections and arrays. <code>Iterable</code> defines the <code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html#iterator()">iterator()</a></code> method that returns an <code>Iterator</code>. Using the enhanced <code>for</code> loop, the preceding example can be rewritten as</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="k">for</span> <span class="o">(</span><span class="n">MyType</span> <span class="n">obj</span> <span class="o">:</span> <span class="n">list</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="n">obj</span><span class="o">);</span>
+<span class="o">}</span>
+</pre></div>
+<p>Some containers also use the older (since 1.0) <code>Enumeration</code> class. It provides <code>hasMoreElements()</code> and <code>nextElement()</code> methods but has no methods to modify the container.</p>
+<h3><span class="mw-headline" id="Scala">Scala</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Iterator&amp;action=edit&amp;section=15" title="Edit section: Scala">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>In <a href="Scala_(programming_language).html" title="Scala (programming language)">Scala</a>, iterators have a rich set of methods similar to collections, and can be used directly in for loops. Indeed, both iterators and collections inherit from a common base trait - scala.collection.TraversableOnce. However, because of the rich set of methods available in the Scala collections library, such as map, collect, filter etc., it is often not necessary to deal with iterators directly when programming in Scala.</p>
+<p>Java iterators and collections can be automatically converted into Scala iterators and collections, respectively, simply by adding the single line</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="k">import</span> <span class="nn">scala.collection.JavaConversions._</span>
+</pre></div>
+<p>to the file. The JavaConversions object provides implicit conversions to do this. Implicit conversions are a feature of Scala: methods that, when visible in the current scope, automatically insert calls to themselves into relevant expressions at the appropriate place to make them typecheck when they otherwise wouldn't.</p>
+<h3><span class="mw-headline" id="MATLAB">MATLAB</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Iterator&amp;action=edit&amp;section=16" title="Edit section: MATLAB">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="https://en.wikipedia.org/wiki/MATLAB" title="MATLAB">MATLAB</a> supports both external and internal implicit iteration using either "native" arrays or <code>cell</code> arrays. In the case of external iteration where the onus is on the user to advance the traversal and request next elements, one can define a set of elements within an array storage structure and traverse the elements using the <code>for</code>-loop construct. For example,</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="c">% Define an array of integers</span>
+<span class="n">myArray</span> <span class="p">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">13</span><span class="p">];</span>
+
+<span class="k">for</span> <span class="n">n</span> <span class="p">=</span> <span class="n">myArray</span>
+   <span class="c">% ... do something with n</span>
+   <span class="nb">disp</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>  <span class="c">% Echo integer to Command Window</span>
+<span class="k">end</span>
+</pre></div>
+<p>traverses an array of integers using the <code>for</code> keyword.</p>
+<p>In the case of internal iteration where the user can supply an operation to the iterator to perform over every element of a collection, many built-in operators and MATLAB functions are overloaded to execute over every element of an array and return a corresponding output array implicitly. Furthermore, the <code>arrayfun</code> and <code>cellfun</code> functions can be leveraged for performing custom or user defined operations over "native" arrays and <code>cell</code> arrays respectively. For example,</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="k">function</span> <span class="nf">simpleFun</span>
+<span class="c">% Define an array of integers</span>
+<span class="n">myArray</span> <span class="p">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">13</span><span class="p">];</span>
+
+<span class="c">% Perform a custom operation over each element </span>
+<span class="n">myNewArray</span> <span class="p">=</span> <span class="n">arrayfun</span><span class="p">(@(</span><span class="n">a</span><span class="p">)</span><span class="n">myCustomFun</span><span class="p">(</span><span class="n">a</span><span class="p">),</span><span class="n">myArray</span><span class="p">);</span>
+
+<span class="c">% Echo resulting array to Command Window          </span>
+<span class="n">myNewArray</span>
+
+<span class="k">function</span><span class="w"> </span>outScalar <span class="p">=</span><span class="w"> </span><span class="nf">myCustomFun</span><span class="p">(</span>inScalar<span class="p">)</span>
+<span class="c">% Simply multiply by 2</span>
+<span class="n">outScalar</span> <span class="p">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">inScalar</span><span class="p">;</span>
+</pre></div>
+<p>defines a primary function <code>simpleFun</code> that implicitly applies custom subfunction <code>myCustomFun</code> to each element of an array using built-in function <code>arrayfun</code>.</p>
+<p>Alternatively, it may be desirable to abstract the mechanisms of the array storage container from the user by defining a custom object-oriented MATLAB implementation of the Iterator Pattern. Such an implementation supporting external iteration is demonstrated in MATLAB Central File Exchange item <a rel="nofollow" class="external text" href="http://www.mathworks.com.au/matlabcentral/fileexchange/25225">Design Pattern: Iterator (Behavioral)</a>. This is written in the new class-definition syntax introduced with MATLAB software version 7.6 (R2008a) and features a one-dimensional <code>cell</code> array realization of the <a href="https://en.wikipedia.org/wiki/List_(computing)" class="mw-redirect" title="List (computing)">List Abstract Data Type</a> (ADT) as the mechanism for storing a heterogeneous (in data type) set of elements. It provides the functionality for explicit forward <a href="https://en.wikipedia.org/wiki/List_(computing)" class="mw-redirect" title="List (computing)">List</a> traversal with the <code>hasNext()</code>, <code>next()</code> and <code>reset()</code> methods for use in a <code>while</code>-loop.</p>
+<h3><span class="mw-headline" id="PHP">PHP</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Iterator&amp;action=edit&amp;section=17" title="Edit section: PHP">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="https://en.wikipedia.org/wiki/PHP" title="PHP">PHP</a>’s <a href="https://en.wikipedia.org/wiki/Foreach_loop" title="Foreach loop">foreach loop</a> was introduced in version 4.0 and made compatible with objects as values in 4.0 Beta 4.<sup id="cite_ref-15" class="reference"><a href="#cite_note-15">[15]</a></sup> However, support for iterators was added in PHP&#160;5 through the introduction of the internal<sup id="cite_ref-16" class="reference"><a href="#cite_note-16">[16]</a></sup> <i>Traversable</i> interface.<sup id="cite_ref-17" class="reference"><a href="#cite_note-17">[17]</a></sup> The two main interfaces for implementation in PHP scripts that enable objects to be iterated via the foreach loop are <i>Iterator</i> and <i>IteratorAggregate</i>. The latter does not require the implementing class to declare all required methods, instead it implements an <a href="https://en.wikipedia.org/wiki/Mutator_method" title="Mutator method">accessor</a> method (<code>getIterator</code>) that returns an instance of <i>Traversable</i>. The <a href="https://en.wikipedia.org/wiki/Standard_PHP_Library" class="mw-redirect" title="Standard PHP Library">Standard PHP Library</a> provides several classes to work with special iterators.<sup id="cite_ref-18" class="reference"><a href="#cite_note-18">[18]</a></sup> PHP also supports <a href="https://en.wikipedia.org/wiki/Generator_(computer_programming)" title="Generator (computer programming)">Generators</a> since 5.5.<sup id="cite_ref-19" class="reference"><a href="#cite_note-19">[19]</a></sup></p>
+<p>The simplest implementation is by wrapping an array, this can be useful for <a href="https://en.wikipedia.org/wiki/PHP#TYPE-HINTING" title="PHP">type hinting</a> and <a href="https://en.wikipedia.org/wiki/Information_hiding" title="Information hiding">information hiding</a>.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="k">namespace</span> <span class="nx">Wikipedia\Iterator</span><span class="p">;</span>
+
+<span class="k">final</span> <span class="k">class</span> <span class="nc">ArrayIterator</span> <span class="k">extends</span> <span class="nx">\Iterator</span> <span class="p">{</span>
+
+    <span class="k">private</span> <span class="nv">$array</span><span class="p">;</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">__construct</span><span class="p">(</span><span class="k">array</span> <span class="nv">$array</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">array</span> <span class="o">=</span> <span class="nv">$array</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">rewind</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">echo</span> <span class="s1">'rewinding'</span> <span class="p">,</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
+        <span class="nb">reset</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">array</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">current</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nv">$value</span> <span class="o">=</span> <span class="nb">current</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">array</span><span class="p">);</span>
+        <span class="k">echo</span> <span class="s2">"current: </span><span class="si">{</span><span class="nv">$value</span><span class="si">}</span><span class="s2">"</span> <span class="p">,</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
+        <span class="k">return</span> <span class="nv">$value</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">key</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nv">$key</span> <span class="o">=</span> <span class="nb">key</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">array</span><span class="p">);</span>
+        <span class="k">echo</span> <span class="s2">"key: </span><span class="si">{</span><span class="nv">$key</span><span class="si">}</span><span class="s2">"</span> <span class="p">,</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
+        <span class="k">return</span> <span class="nv">$key</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">next</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nv">$value</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">array</span><span class="p">);</span>
+        <span class="k">echo</span> <span class="s2">"next: </span><span class="si">{</span><span class="nv">$value</span><span class="si">}</span><span class="s2">"</span> <span class="p">,</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
+        <span class="k">return</span> <span class="nv">$value</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">valid</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nv">$valid</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">current</span><span class="p">()</span> <span class="o">!==</span> <span class="k">false</span><span class="p">;</span>
+        <span class="k">echo</span> <span class="s1">'valid: '</span> <span class="p">,</span> <span class="p">(</span><span class="nv">$valid</span> <span class="o">?</span> <span class="s1">'true'</span> <span class="o">:</span> <span class="s1">'false'</span><span class="p">)</span> <span class="p">,</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
+        <span class="k">return</span> <span class="nv">$valid</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+<p>All methods of the example class are used during the execution of a complete foreach loop (<code>foreach ($iterator as $key =&gt; $current) {}</code>). The iterator’s methods are executed in the following order:</p>
+<ol>
+<li><code>$iterator-&gt;rewind()</code> ensures that the internal structure starts from the beginning.</li>
+<li><code>$iterator-&gt;valid()</code> returns <i>true</i> in this example.</li>
+<li><code>$iterator-&gt;current()</code> returned value is stored in <code>$value</code>.</li>
+<li><code>$iterator-&gt;key()</code> returned value is stored in <code>$key</code>.</li>
+<li><code>$iterator-&gt;next()</code> advances to the next element in the internal structure.</li>
+<li><code>$iterator-&gt;valid()</code> returns <i>false</i> and the loop is aborted.</li>
+</ol>
+<p>The next example illustrates a PHP class that implements the <i>Traversable</i> interface, which could be wrapped in an <i>IteratorIterator</i> class to act upon the data before it is returned to the foreach loop. The usage together with the <code>MYSQLI_USE_RESULT</code> constant allows PHP scripts to iterate result sets with billions of rows with very little memory usage. These features are not exclusive to PHP nor to its MySQL class implementations (e.g. the <i>PDOStatement</i> class implement the <i>Traversable</i> interface as well).</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="nb">mysqli_report</span><span class="p">(</span><span class="nx">MYSQLI_REPORT_ERROR</span> <span class="o">|</span> <span class="nx">MYSQLI_REPORT_STRICT</span><span class="p">);</span>
+<span class="nv">$mysqli</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">\mysqli</span><span class="p">(</span><span class="s1">'host.example.com'</span><span class="p">,</span> <span class="s1">'username'</span><span class="p">,</span> <span class="s1">'password'</span><span class="p">,</span> <span class="s1">'database_name'</span><span class="p">);</span>
+
+<span class="c1">// The \mysqli_result class that is returned by the method call implements the internal Traversable interface.</span>
+<span class="k">foreach</span> <span class="p">(</span><span class="nv">$mysqli</span><span class="o">-&gt;</span><span class="na">query</span><span class="p">(</span><span class="s1">'SELECT `a`, `b`, `c` FROM `table`'</span><span class="p">,</span> <span class="nx">MYSQLI_USE_RESULT</span><span class="p">)</span> <span class="k">as</span> <span class="nv">$row</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Act on the returned row, which is an associative array.</span>
+<span class="p">}</span>
+</pre></div>
+<h3><span class="mw-headline" id="Python">Python</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Iterator&amp;action=edit&amp;section=18" title="Edit section: Python">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Iterators in <a href="https://en.wikipedia.org/wiki/Python_(programming_language)" title="Python (programming language)">Python</a> are a fundamental part of the language and in many cases go unseen as they are implicitly used in the <code>for</code> (<a href="https://en.wikipedia.org/wiki/Foreach" class="mw-redirect" title="Foreach">foreach</a>) statement, in <a href="https://en.wikipedia.org/wiki/List_comprehension" title="List comprehension">list comprehensions</a>, and in <a href="https://en.wikipedia.org/wiki/Python_syntax_and_semantics#Generator_expressions" title="Python syntax and semantics">generator expressions</a>. All of Python's standard built-in <a href="https://en.wikipedia.org/wiki/Collection_(abstract_data_type)" title="Collection (abstract data type)">collection</a> types support iteration, as well as many classes that are part of the standard library. The following example shows typical implicit iteration over a sequence:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+ <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">sequence</span><span class="p">:</span>
+     <span class="k">print</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+</pre></div>
+<p>Python dictionaries (a form of <a href="https://en.wikipedia.org/wiki/Associative_array" title="Associative array">associative array</a>) can also be directly iterated over, when the dictionary keys are returned; or the <i>items</i> method of a dictionary can be iterated over where it yields corresponding key,value pairs as a tuple:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
+    <span class="n">value</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+</pre></div>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+</pre></div>
+<p>Iterators however can be used and defined explicitly. For any iterable sequence type or class, the built-in function <code>iter()</code> is used to create an iterator object. The iterator object can then be iterated with the <code>next()</code> function, which uses the <code>__next__()</code> method internally, which returns the next element in the container. (The previous statement applies to Python 3.x. In Python 2.x, the <code>next()</code> method is equivalent.) A <code>StopIteration</code> exception will be raised when no more elements are left. The following example shows an equivalent iteration over a sequence using explicit iterators:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="n">it</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">sequence</span><span class="p">)</span>
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="n">it</span><span class="o">.</span><span class="n">next</span><span class="p">()</span> <span class="c1"># in Python 2.x</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">it</span><span class="p">)</span> <span class="c1"># in Python 3.x</span>
+    <span class="k">except</span> <span class="ne">StopIteration</span><span class="p">:</span>
+        <span class="k">break</span>
+    <span class="n">it</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">it</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+</pre></div>
+<p>Any user-defined class can support standard iteration (either implicit or explicit) by defining an <code>__iter__()</code> method that returns an iterator object. The iterator object then needs to define a <code>__next__()</code> method that returns the next element and an <code>__iter__()</code> method that returns the next iterator object to use.</p>
+<p>Python's <a href="Iterator.html#Generators" title="Iterator">generators</a> implement this iteration <a href="https://en.wikipedia.org/wiki/Protocol_(object-oriented_programming)" title="Protocol (object-oriented programming)">protocol</a>.</p>
+<h3><span class="mw-headline" id="Ruby">Ruby</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Iterator&amp;action=edit&amp;section=19" title="Edit section: Ruby">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Ruby implements iterators quite differently; all iterations are done by means of passing callback closures to container methods - this way Ruby not only implements basic iteration but also several patterns of iteration like function mapping, filters and reducing. Ruby also supports an alternative syntax for the basic iterating method <code>each</code>, the following three examples are equivalent:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="p">(</span><span class="mi">0</span><span class="o">...</span><span class="mi">42</span><span class="p">)</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">n</span><span class="o">|</span>
+  <span class="nb">puts</span> <span class="n">n</span>
+<span class="k">end</span>
+</pre></div>
+<p>…and…</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="k">for</span> <span class="n">n</span> <span class="k">in</span> <span class="mi">0</span><span class="o">...</span><span class="mi">42</span>
+  <span class="nb">puts</span> <span class="n">n</span>
+<span class="k">end</span>
+</pre></div>
+<p>or even shorter</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="mi">42</span><span class="o">.</span><span class="n">times</span> <span class="k">do</span> <span class="o">|</span><span class="n">n</span><span class="o">|</span>
+  <span class="nb">puts</span> <span class="n">n</span>
+<span class="k">end</span>
+</pre></div>
+<p>Ruby can also iterate over fixed lists by using Enumerators and either calling their #next method or doing a for each on them, as above.</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Iterator&amp;action=edit&amp;section=20" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Iteratee" title="Iteratee">Iteratee</a>, in which, instead of the developer calling the iterator repeatedly to get new values, the iteratee is called repeatedly to process new chunks of data - an example of <a href="https://en.wikipedia.org/wiki/Inversion_of_control" title="Inversion of control">inversion of control</a>.</li>
+<li><a href="https://en.wikipedia.org/wiki/Design_pattern_(computer_science)" class="mw-redirect" title="Design pattern (computer science)">Design pattern</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Iteration" title="Iteration">Iteration</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Iterator_pattern" title="Iterator pattern">Iterator pattern</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Range_(computer_science)" class="mw-redirect" title="Range (computer science)">Range</a></li>
+<li><a href="Visitor_pattern.html" title="Visitor pattern">Visitor pattern</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Iterator&amp;action=edit&amp;section=21" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="plainlinks metadata ambox ambox-content ambox-Refimprove" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px"><a href="https://en.wikipedia.org/wiki/File:Question_book-new.svg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/50px-Question_book-new.svg.png" width="50" height="39" srcset="//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/75px-Question_book-new.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/100px-Question_book-new.svg.png 2x" data-file-width="512" data-file-height="399" /></a></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article <b>needs additional citations for <a href="https://en.wikipedia.org/wiki/Wikipedia:Verifiability" title="Wikipedia:Verifiability">verification</a></b>. <span class="hide-when-compact">Please help <a class="external text" href="http://en.wikipedia.org/w/index.php?title=Iterator&amp;action=edit">improve this article</a> by <a href="https://en.wikipedia.org/wiki/Help:Introduction_to_referencing_with_Wiki_Markup/1" title="Help:Introduction to referencing with Wiki Markup/1">adding citations to reliable sources</a>. Unsourced material may be challenged and removed.</span> <small><i>(June 2010)</i></small> <small class="hide-when-compact"><i>(<a href="https://en.wikipedia.org/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></span></td>
+</tr>
+</table>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite class="citation web">Gatcomb, Joshua. <a rel="nofollow" class="external text" href="http://www.perl.com/pub/2005/06/16/iterators.html">"Understanding and Using Iterators"</a>. Perl.com. Archived from <a rel="nofollow" class="external text" href="http://www.perl.com/">the original</a> on 2005-06-16<span class="reference-accessdate">. Retrieved <span class="nowrap">2012-08-08</span></span>. <q>A user-defined iterator usually takes the form of a code reference that, when executed, calculates the next item in a list and returns it. When the iterator reaches the end of the list, it returns an agreed-upon value.</q></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AIterator&amp;rft.aufirst=Joshua&amp;rft.aulast=Gatcomb&amp;rft.btitle=Understanding+and+Using+Iterators&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.perl.com%2F&amp;rft.pub=Perl.com&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-definition-2"><span class="mw-cite-backlink">^ <a href="#cite_ref-definition_2-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-definition_2-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation web">Watt, Stephen M. <a rel="nofollow" class="external text" href="http://www.csd.uwo.ca/~watt/pub/reprints/2006-wgp-jflow.pdf">"A Technique for Generic Iteration and Its Optimization"</a> <span style="font-size:85%;">(PDF)</span>. The University of Western Ontario, Department of Computer Science. Archived from <a rel="nofollow" class="external text" href="http://www.csd.uwo.ca/">the original</a> <span style="font-size:85%;">(PDF)</span> on 2006-09-16<span class="reference-accessdate">. Retrieved <span class="nowrap">2012-08-08</span></span>. <q>Iterators were introduced as constructs to allow looping over abstract data structures without revealing their internal representation.</q></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AIterator&amp;rft.aufirst=Stephen+M.&amp;rft.aulast=Watt&amp;rft.btitle=A+Technique+for+Generic+Iteration+and+Its+Optimization&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.csd.uwo.ca%2F&amp;rft.pub=The+University+of+Western+Ontario%2C+Department+of+Computer+Science&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><cite class="citation web">Alex Allain. <a rel="nofollow" class="external text" href="http://www.cprogramming.com/tutorial/stl/iterators.html">"STL Iterators"</a>. Cprogramming.com - Your resource for C and C++<span class="reference-accessdate">. Retrieved <span class="nowrap">2012-08-08</span></span>. <q>You can think of an iterator as pointing to an item that is part of a larger container of items.</q></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AIterator&amp;rft.au=Alex+Allain&amp;rft.btitle=STL+Iterators&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.cprogramming.com%2Ftutorial%2Fstl%2Fiterators.html&amp;rft.pub=Cprogramming.com+-+Your+resource+for+C+and+C%2B%2B&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-ExternalInternal-4"><span class="mw-cite-backlink">^ <a href="#cite_ref-ExternalInternal_4-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-ExternalInternal_4-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.careerride.com/C++-external-iterator-vs-internal-iterator.aspx">"Difference between an external iterator and an internal iterator"</a>. CareerRide.COM. 2009-04-03. Archived from <a rel="nofollow" class="external text" href="http://www.careerride.com/">the original</a> on 2009-04-03<span class="reference-accessdate">. Retrieved <span class="nowrap">2012-08-08</span></span>. <q>An internal iterator is implemented by the member functions of the class which has the iteration logic. An external iterator is implemented by a separate class which can be attached to the object which has iteration logic. The advantage of external iterator is that, many iterators can be made active simultaneously on the existing or same object.</q></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AIterator&amp;rft.btitle=Difference+between+an+external+iterator+and+an+internal+iterator&amp;rft.date=2009-04-03&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.careerride.com%2F&amp;rft.pub=CareerRide.COM&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><cite class="citation web">Watt, Stephen M. <a rel="nofollow" class="external text" href="http://www.csd.uwo.ca/~watt/pub/reprints/2006-wgp-jflow.pdf">"A Technique for Generic Iteration and Its Optimization"</a> <span style="font-size:85%;">(PDF)</span>. The University of Western Ontario, Department of Computer Science. Archived from <a rel="nofollow" class="external text" href="http://www.csd.uwo.ca/">the original</a> <span style="font-size:85%;">(PDF)</span> on 2006-09-16<span class="reference-accessdate">. Retrieved <span class="nowrap">2012-08-08</span></span>. <q>Some authors use the term iterator, and others the term generator. Some make subtle distinctions between the two.</q></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AIterator&amp;rft.aufirst=Stephen+M.&amp;rft.aulast=Watt&amp;rft.btitle=A+Technique+for+Generic+Iteration+and+Its+Optimization&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.csd.uwo.ca%2F&amp;rft.pub=The+University+of+Western+Ontario%2C+Department+of+Computer+Science&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-HFDPIterators-6"><span class="mw-cite-backlink">^ <a href="#cite_ref-HFDPIterators_6-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-HFDPIterators_6-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation journal">Freeman, Eric; Freeman, Elisabeth; Kathy, Sierra; Bert, Bates (2004). Hendrickson, Mike; Loukides, Mike, eds. <a rel="nofollow" class="external text" href="http://shop.oreilly.com/product/9780596007126.do">"Head First Design Patterns"</a> <span style="font-size:85%;">(paperback)</span>. <b>1</b>. O'REILLY: 338. <a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="https://en.wikipedia.org/wiki/Special:BookSources/978-0-596-00712-6" title="Special:BookSources/978-0-596-00712-6">978-0-596-00712-6</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2012-08-09</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AIterator&amp;rft.atitle=Head+First+Design+Patterns&amp;rft.au=Bert%2C+Bates&amp;rft.aufirst=Eric&amp;rft.au=Freeman%2C+Elisabeth&amp;rft.au=Kathy%2C+Sierra&amp;rft.aulast=Freeman&amp;rft.date=2004&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fshop.oreilly.com%2Fproduct%2F9780596007126.do&amp;rft.isbn=978-0-596-00712-6&amp;rft.pages=338&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=1" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><cite class="citation web">Vecerina, Ivan (2006-02-01). <a rel="nofollow" class="external text" href="http://bytes.com/topic/c/answers/451869-index-vs-iterator">"index vs iterator"</a>. BYTES. Archived from <a rel="nofollow" class="external text" href="http://bytes.com/">the original</a> on 2006-02-01<span class="reference-accessdate">. Retrieved <span class="nowrap">2012-08-08</span></span>. <q>An index only can be used for containers that (efficiently) support random access (i.e. direct access to an element at a given position). An iterator is a more general concept. Iterators offer efficient traversal of linked lists, files, and a number of other data structures. It often leads to the generation of more efficient code.</q></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AIterator&amp;rft.aufirst=Ivan&amp;rft.aulast=Vecerina&amp;rft.btitle=index+vs+iterator&amp;rft.date=2006-02-01&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fbytes.com%2F&amp;rft.pub=BYTES&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><cite class="citation web">Kevin Waterson. <a rel="nofollow" class="external text" href="http://www.phpro.org/tutorials/Introduction-to-SPL.html#2">"C++ Iteratoren: Iterator-Kategorien"</a> (in German). cppreference.com<span class="reference-accessdate">. Retrieved <span class="nowrap">2012-08-09</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AIterator&amp;rft.au=Kevin+Waterson&amp;rft.btitle=C%2B%2B+Iteratoren%3A+Iterator-Kategorien&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.phpro.org%2Ftutorials%2FIntroduction-to-SPL.html%232&amp;rft.pub=cppreference.com&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><cite class="citation web">Kevin Waterson. <a rel="nofollow" class="external text" href="http://www.sgi.com/tech/stl/Iterators.html">"Iterators: Concepts"</a>. sgi<span class="reference-accessdate">. Retrieved <span class="nowrap">2012-08-09</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AIterator&amp;rft.au=Kevin+Waterson&amp;rft.btitle=Iterators%3A+Concepts&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.sgi.com%2Ftech%2Fstl%2FIterators.html&amp;rft.pub=sgi&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><cite class="citation web">larsmans (2011-03-06). <a rel="nofollow" class="external text" href="https://stackoverflow.com/questions/5211914/types-of-iterator-output-vs-input-vs-forward-vs-random-access-iterator">"Types of iterator: Output vs. input vs. forward vs. random access iterator"</a>. stack<b>overflow</b>. Archived from <a rel="nofollow" class="external text" href="https://stackoverflow.com/">the original</a> on 2011-03-06<span class="reference-accessdate">. Retrieved <span class="nowrap">2012-08-09</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AIterator&amp;rft.au=larsmans&amp;rft.btitle=Types+of+iterator%3A+Output+vs.+input+vs.+forward+vs.+random+access+iterator&amp;rft.date=2011-03-06&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fstackoverflow.com%2F&amp;rft.pub=stack%27%27%27overflow%27%27%27&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text"><cite class="citation web">Kevin Waterson. <a rel="nofollow" class="external text" href="http://www.phpro.org/tutorials/Introduction-to-SPL.html#2">"Introduction to SPL: Introduction to Standard PHP Library (SPL)"</a>. PHPRO.ORG<span class="reference-accessdate">. Retrieved <span class="nowrap">2012-08-09</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AIterator&amp;rft.au=Kevin+Waterson&amp;rft.btitle=Introduction+to+SPL%3A+Introduction+to+Standard+PHP+Library+%28SPL%29&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.phpro.org%2Ftutorials%2FIntroduction-to-SPL.html%232&amp;rft.pub=PHPRO.ORG&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text"><cite class="citation web">Collier, Andrew. <a rel="nofollow" class="external text" href="http://www.exegetic.biz/blog/2013/11/iterators-in-r/">"Iterators in R"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">16 November</span> 2013</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AIterator&amp;rft.aufirst=Andrew&amp;rft.aulast=Collier&amp;rft.btitle=Iterators+in+R&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.exegetic.biz%2Fblog%2F2013%2F11%2Fiterators-in-r%2F&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-13">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://threadingbuildingblocks.org/docs/help/reference/containers_overview/concurrent_unordered_set_cls.htm">"concurrent_unordered_set Template Class"</a>. Intel Threading Building Blocks for Open Source<span class="reference-accessdate">. Retrieved <span class="nowrap">2012-08-09</span></span>. <q>•The iterator types iterator and const_iterator are of the forward iterator category</q></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AIterator&amp;rft.btitle=concurrent_unordered_set+Template+Class&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fthreadingbuildingblocks.org%2Fdocs%2Fhelp%2Freference%2Fcontainers_overview%2Fconcurrent_unordered_set_cls.htm&amp;rft.pub=Intel+Threading+Building+Blocks+for+Open+Source&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-14"><span class="mw-cite-backlink"><b><a href="#cite_ref-14">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/1.5.0/docs/api/java/util/Iterator.html">"java.util: Interface Iterator&lt;E&gt;: Method Summary"</a>. Oracle<span class="reference-accessdate">. Retrieved <span class="nowrap">2012-08-08</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AIterator&amp;rft.btitle=java.util%3A+Interface+Iterator%3CE%3E%3A+Method+Summary&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fdocs.oracle.com%2Fjavase%2F1.5.0%2Fdocs%2Fapi%2Fjava%2Futil%2FIterator.html&amp;rft.pub=Oracle&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-15">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://secure.php.net/ChangeLog-4.php#4.0b4">"PHP 4 ChangeLog"</a>. The PHP Group. 2000-02-20<span class="reference-accessdate">. Retrieved <span class="nowrap">2015-10-13</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AIterator&amp;rft.btitle=PHP+4+ChangeLog&amp;rft.date=2000-02-20&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fsecure.php.net%2FChangeLog-4.php%234.0b4&amp;rft.pub=The+PHP+Group&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-16"><span class="mw-cite-backlink"><b><a href="#cite_ref-16">^</a></b></span> <span class="reference-text">Internal refers to the fact that the interface cannot be implemented in PHP scripts, only in the <a href="https://en.wikipedia.org/wiki/C_(programming_language)" title="C (programming language)">C (programming language)</a> source.</span></li>
+<li id="cite_note-17"><span class="mw-cite-backlink"><b><a href="#cite_ref-17">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://secure.php.net/class.traversable">"The Traversable interface"</a>. The PHP Group<span class="reference-accessdate">. Retrieved <span class="nowrap">2015-10-13</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AIterator&amp;rft.btitle=The+Traversable+interface&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fsecure.php.net%2Fclass.traversable&amp;rft.pub=The+PHP+Group&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-18"><span class="mw-cite-backlink"><b><a href="#cite_ref-18">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://secure.php.net/spl.iterators">"Iterators"</a>. The PHP Group<span class="reference-accessdate">. Retrieved <span class="nowrap">2015-10-13</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AIterator&amp;rft.btitle=Iterators&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fsecure.php.net%2Fspl.iterators&amp;rft.pub=The+PHP+Group&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-19"><span class="mw-cite-backlink"><b><a href="#cite_ref-19">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://secure.php.net/ChangeLog-5.php#5.5.0">"PHP 5 ChangeLog"</a>. The PHP Group. 2013-06-20<span class="reference-accessdate">. Retrieved <span class="nowrap">2015-10-13</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AIterator&amp;rft.btitle=PHP+5+ChangeLog&amp;rft.date=2013-06-20&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fsecure.php.net%2FChangeLog-5.php%235.5.0&amp;rft.pub=The+PHP+Group&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Iterator&amp;action=edit&amp;section=22" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table role="presentation" class="mbox-small plainlinks sistersitebox" style="border:1px solid #aaa;background-color:#f9f9f9">
+<tr>
+<td class="mbox-image"><a href="https://en.wikipedia.org/wiki/File:Wiktionary-logo-v2.svg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Wiktionary-logo-v2.svg/40px-Wiktionary-logo-v2.svg.png" width="40" height="40" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/06/Wiktionary-logo-v2.svg/60px-Wiktionary-logo-v2.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/06/Wiktionary-logo-v2.svg/80px-Wiktionary-logo-v2.svg.png 2x" data-file-width="391" data-file-height="391" /></a></td>
+<td class="mbox-text plainlist">Look up <i><b><a href="https://en.wiktionary.org/wiki/Special:Search/iterator" class="extiw" title="wiktionary:Special:Search/iterator">iterator</a></b></i> in Wiktionary, the free dictionary.</td>
+</tr>
+</table>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://10kloc.wordpress.com/2012/12/15/iterators-in-java-listiterator-iterable-as-well/">Java's Iterator, Iterable and ListIterator Explained</a></li>
+<li><a rel="nofollow" class="external text" href="http://msdn.microsoft.com/en-us/library/78dfe2yb.aspx">.NET interface</a></li>
+<li>Article "<a rel="nofollow" class="external text" href="http://www.perl.com/pub/a/2005/06/16/iterators.html">Understanding and Using Iterators</a>" by <a href="https://en.wikipedia.org/w/index.php?title=Joshua_Gatcomb&amp;action=edit&amp;redlink=1" class="new" title="Joshua Gatcomb (page does not exist)">Joshua Gatcomb</a></li>
+<li>Article "<a rel="nofollow" class="external text" href="http://www.csd.uwo.ca/~watt/pub/reprints/2006-wgp-jflow.pdf">A Technique for Generic Iteration and Its Optimization</a>" (217 KB) by <a href="https://en.wikipedia.org/wiki/Stephen_M._Watt" title="Stephen M. Watt">Stephen M. Watt</a></li>
+<li><a rel="nofollow" class="external text" href="https://gcc.gnu.org/onlinedocs/libstdc++/manual/iterators.html">Iterators</a></li>
+<li><a rel="nofollow" class="external text" href="http://boost.org/libs/iterator/doc/index.html">Boost C++ Iterator Library</a></li>
+<li><a rel="nofollow" class="external text" href="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Iterator.html">Java interface</a></li>
+<li><a rel="nofollow" class="external text" href="http://us3.php.net/manual/en/language.oop5.iterations.php">PHP: Object Iteration</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.cprogramming.com/tutorial/stl/iterators.html">STL Iterators</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.phpro.org/tutorials/Introduction-to-SPL.html#2">What are iterators?</a> - <a rel="nofollow" class="external text" href="http://www.php.net/~helly/php/ext/spl/interfaceIterator.html#_details">Reference description</a></li>
+</ul>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1173
+Cached time: 20161230155649
+Cache expiry: 2592000
+Dynamic content: false
+CPU time usage: 0.204 seconds
+Real time usage: 0.254 seconds
+Preprocessor visited node count: 1572/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 39690/2097152 bytes
+Template argument size: 886/2097152 bytes
+Highest expansion depth: 9/40
+Expensive parser function count: 4/500
+Lua time usage: 0.089/10.000 seconds
+Lua memory usage: 3.81 MB/50 MB
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  201.528      1 - -total
+ 53.04%  106.887      1 - Template:Reflist
+ 39.13%   78.848     17 - Template:Cite_web
+ 22.27%   44.878      1 - Template:Expert_needed
+ 15.33%   30.890      2 - Template:Ambox
+  3.53%    7.119      1 - Template:Wiktionary
+  3.52%    7.095      1 - Template:Refimprove
+  3.35%    6.750      2 - Template:Main_article
+  2.79%    5.622      1 - Template:Sister_project
+  2.53%    5.098      1 - Template:Further
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:172640-0!*!0!!en!4!* and timestamp 20161230155649 and revision id 741497176
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Iterator&amp;oldid=741497176">https://en.wikipedia.org/w/index.php?title=Iterator&amp;oldid=741497176</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Help_Category.html" title="Help:Category">Categories</a>: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Articles_with_example_Ruby_code" title="Category:Articles with example Ruby code">Articles with example Ruby code</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Iteration_in_programming" title="Category:Iteration in programming">Iteration in programming</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Object_(computer_science)" title="Category:Object (computer science)">Object (computer science)</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Abstract_data_types" title="Category:Abstract data types">Abstract data types</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="https://en.wikipedia.org/wiki/Category:CS1_German-language_sources_(de)" title="Category:CS1 German-language sources (de)">CS1 German-language sources (de)</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Articles_needing_expert_attention_from_December_2013" title="Category:Articles needing expert attention from December 2013">Articles needing expert attention from December 2013</a></li><li><a href="https://en.wikipedia.org/wiki/Category:All_articles_needing_expert_attention" title="Category:All articles needing expert attention">All articles needing expert attention</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Computer_science_articles_needing_expert_attention" title="Category:Computer science articles needing expert attention">Computer science articles needing expert attention</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Articles_needing_additional_references_from_June_2010" title="Category:Articles needing additional references from June 2010">Articles needing additional references from June 2010</a></li><li><a href="https://en.wikipedia.org/wiki/Category:All_articles_needing_additional_references" title="Category:All articles needing additional references">All articles needing additional references</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Articles_with_example_C_Sharp_code" title="Category:Articles with example C Sharp code">Articles with example C Sharp code</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Articles_with_example_C++_code" title="Category:Articles with example C++ code">Articles with example C++ code</a></li><li><a href="Category_Articles_with_example_Java_code.html" title="Category:Articles with example Java code">Articles with example Java code</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Articles_with_example_PHP_code" title="Category:Articles with example PHP code">Articles with example PHP code</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Articles_with_example_Python_code" title="Category:Articles with example Python code">Articles with example Python code</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="Special_MyTalk.html" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="Special_MyContributions.html" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&amp;returnto=Iterator" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Iterator" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="Iterator.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+															<li  id="ca-talk"><span><a href="https://en.wikipedia.org/wiki/Talk:Iterator"  title="Discussion about the content page [t]" accesskey="t" rel="discussion">Talk</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="Iterator.html" >Read</a></span></li>
+															<li id="ca-edit"><span><a href="https://en.wikipedia.org/w/index.php?title=Iterator&amp;action=edit"  title="Edit this page [e]" accesskey="e">Edit</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="https://en.wikipedia.org/w/index.php?title=Iterator&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="https://en.wikipedia.org/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="Main_Page.html"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="Portal_Contents.html" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="Portal_Featured_content.html" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="Portal_Current_events.html" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="https://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="../../shop.wikimedia.org/index.html" title="Visit the Wikipedia store">Wikipedia store</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Interaction</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-help"><a href="Help_Contents.html" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="Wikipedia_About.html" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="Wikipedia_Community_portal.html" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="Wikipedia_Contact_us.html" title="How to contact Wikipedia">Contact page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="https://en.wikipedia.org/wiki/Special:WhatLinksHere/Iterator" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://en.wikipedia.org/wiki/Special:RecentChangesLinked/Iterator" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="Wikipedia_File_Upload_Wizard.html" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="https://en.wikipedia.org/w/index.php?title=Iterator&amp;oldid=741497176" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://en.wikipedia.org/w/index.php?title=Iterator&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q1326388" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="https://en.wikipedia.org/w/index.php?title=Special:CiteThisPage&amp;page=Iterator&amp;id=741497176" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Print/export</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Iterator">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Iterator&amp;returnto=Iterator&amp;oldid=741497176&amp;writer=rdf2latex">Download as PDF</a></li><li id="t-print"><a href="https://en.wikipedia.org/w/index.php?title=Iterator&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-wikibase-otherprojects' aria-labelledby='p-wikibase-otherprojects-label'>
+			<h3 id='p-wikibase-otherprojects-label'>In other projects</h3>
+
+			<div class="body">
+									<ul>
+						<li class="wb-otherproject-link wb-otherproject-commons"><a href="https://commons.wikimedia.org/wiki/Category:Iterator_pattern" hreflang="en">Wikimedia Commons</a></li><li class="wb-otherproject-link wb-otherproject-wikibooks"><a href="https://en.wikibooks.org/wiki/Computer_Science_Design_Patterns/Iterator" hreflang="en">Wikibooks</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Languages</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Iterador" title="Iterador – Catalan" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Iterator" title="Iterator – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-da"><a href="https://da.wikipedia.org/wiki/Enumerator" title="Enumerator – Danish" lang="da" hreflang="da" class="interlanguage-link-target">Dansk</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Iterator" title="Iterator – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Itérateur" title="Itérateur – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/반복자" title="반복자 – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Iteratore" title="Iteratore – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-he"><a href="https://he.wikipedia.org/wiki/איטרטור" title="איטרטור – Hebrew" lang="he" hreflang="he" class="interlanguage-link-target">עברית</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/Iterator" title="Iterator – Dutch" lang="nl" hreflang="nl" class="interlanguage-link-target">Nederlands</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/イテレータ" title="イテレータ – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Iterator" title="Iterator – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Iterador" title="Iterador – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/Итератор" title="Итератор – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-sr"><a href="https://sr.wikipedia.org/wiki/Итератор" title="Итератор – Serbian" lang="sr" hreflang="sr" class="interlanguage-link-target">Српски / srpski</a></li><li class="interlanguage-link interwiki-sv"><a href="https://sv.wikipedia.org/wiki/Iterator" title="Iterator – Swedish" lang="sv" hreflang="sv" class="interlanguage-link-target">Svenska</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/迭代器" title="迭代器 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q1326388#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 27 September 2016, at 21:38.</li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="Wikipedia_Text_of_Creative_Commons_Attribution-ShareAlike_3.html">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="../../creativecommons.org/licenses/by-sa/3.0/index.html" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="../../wikimediafoundation.org/wiki/Terms_of_Use.html">Terms of Use</a> and <a href="../../wikimediafoundation.org/wiki/Privacy_policy.html">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="../../www.wikimediafoundation.org/index.html">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../../wikimediafoundation.org/wiki/Privacy_policy.html" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="Wikipedia_About.html" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="Wikipedia_General_disclaimer.html" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="Wikipedia_Contact_us.html">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a href="../../www.mediawiki.org/wiki/Special_MyLanguage/How_to_contribute.html">Developers</a></li>
+											<li id="footer-places-cookiestatement"><a href="../../wikimediafoundation.org/wiki/Cookie_statement.html">Cookie statement</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/w/index.php?title=Iterator&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="../../www.wikimediafoundation.org/index.html"><img src="https://en.wikipedia.org/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="../../www.mediawiki.org/index.html"><img src="https://en.wikipedia.org/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":73,"wgHostname":"mw1181"});});</script>
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Iterator by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:11 GMT -->
+</html>

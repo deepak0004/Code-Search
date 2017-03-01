@@ -1,0 +1,10 @@
+    
+        How could I "intercept" Ctrl+C (which normally would kill the process)
+in a CLI (command line interface) Java application?
+
+Does a multi-platform solution exist (Linux, Solaris, Windows)?
+
+I'm using Console's readLine(), but if necessary, I could use some other method
+to read characters from standard input.
+
+                

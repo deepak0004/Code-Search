@@ -1,0 +1,27 @@
+    
+        When creating a new project in netbeans, if i select JAVA Desktop application, it creates some code which I DO NOT RECOGNISE AT ALL as what i had learnt in swing.
+
+It imports packages such as :
+
+org.jdesktop.application.SingleFrameApplication;
+
+
+also, the declaration for main() looks like this :
+
+public static void main(String[] args) {
+            launch(DesktopApplication2.class, args);
+        }
+
+
+This really does not make any sense to my knowledge of JFrame, JPanel etc..
+
+If i try to code a  netbeans application from scratch, i can write my own swing app BUT I CANNOT FIND THE GUI EDITOR.
+
+
+How do i bring the GUI editor when creating java application from scratch ?
+Can anyone explain to me this org.jdesktop.application.SingleFrameApplication and other classes ? 
+
+
+Please help. This is really frustrating.
+
+                

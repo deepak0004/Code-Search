@@ -1,0 +1,4 @@
+    
+        I'm wondering if I'm missing something about Java Beans. I like my objects to do as much initialization in the constructor as possible and have a minimum number of mutators. Beans seem to go directly against this and generally feel clunky. What capabilities am I missing out on by not building my objects as Beans?
+
+                

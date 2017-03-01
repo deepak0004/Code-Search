@@ -1,0 +1,9 @@
+    
+        I have the following code: 
+
+DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(xmlFile);
+
+
+How can I get it to parse XML contained within a String instead of a file?
+
+                

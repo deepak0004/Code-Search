@@ -1,0 +1,8 @@
+    
+        I have a java process that opens a file using a FileReader. How can I prevent another (java) process to open this file, or at least make that second process know that the file is already opened? Does this automaticaly makes the second process get an exception if the file is open(which solves my problem) or do i have to explicitly open it in the first process with some sort of flag or argument?
+
+To clarify:
+
+I have a java app that lists a folder and opens each file in the listing for processing it. It processes each file after the other. The processing of each file consists of reading it and doing some calculations based on the contents and it takes about 2 minutes. I also have another java app that does the same thing but instead writes on the file. What i want is to be able to run these apps at the same time so the scenario goes like this. ReadApp lists the folder and finds files A, B, C. It opens file A and starts the reading. WriteApp lists the folder and finds files A,B, C It opens file A sees that is is open (by an exception or whatever way) and goes to file B. ReadApp finishes file A and continues to B. It sees that it is open and continues to C. It is crucial that WriteApp doesnt write while ReadApp is reading the same file or vice versa. They are different processes.
+
+                

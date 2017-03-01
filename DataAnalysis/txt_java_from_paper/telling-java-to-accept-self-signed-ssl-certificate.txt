@@ -1,0 +1,16 @@
+    
+        It looks like a standard question, but I couldn't find clear directions anywhere.
+
+I have java code trying to connect server with probably self-signed (or expired) certificate. It gives something like this
+
+[HttpMethodDirector] I/O exception (javax.net.ssl.SSLHandshakeException) caught when processing request: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+
+
+As I understand, I have to play around with keytool and tell java that it's ok to allow this connection. But all comments I've found assume I'm fully proficient with keytool, like "generate private key for server and import it into keystore". And I'm not. Is there anybody who could post detailed instructions?
+I'm running unix, so bash script would be best.
+
+Not sure if it's important, but code executed in jboss.
+
+Thanks a lot!
+
+                

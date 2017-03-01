@@ -1,0 +1,16 @@
+    
+        I'm looking to generate a simple standalone Java client which will make calls to a SOAP web service, given a wsdl.  When I say simple and standalone I mean that once I'm done I want to be able to do something like
+
+import my.generated.nonsense;
+
+public static void main(String[] args) {
+    Client client = new Client();
+    client.getSomething();
+}
+
+
+I've had great time recently with Maven on some other projects and I want to keep that going, so would aim to use it here.  I don't want the tool to generate anything expect the classes that allow me to do the above.
+
+Anyone done this recently and can recommend a ws library and Maven plugin?  Thanks.
+
+                

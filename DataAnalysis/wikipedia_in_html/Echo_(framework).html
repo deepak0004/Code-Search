@@ -1,0 +1,1603 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Echo_(framework) by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:52:57 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Echo (framework) - Wikipedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Echo_(framework)","wgTitle":"Echo (framework)","wgCurRevisionId":755676089,"wgRevisionId":755676089,"wgArticleId":3430313,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Java (programming language) libraries","Java platform","Web frameworks","Java enterprise platform","Ajax (programming)","Rich Internet application frameworks","Software using the Mozilla license"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Echo_(framework)","wgRelevantArticleId":3430313,"wgRequestId":"WH34rApAIDAAAGLpdMAAAABX","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgFlaggedRevsParams":{"tags":{}},"wgStableRevisionId":null,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"en","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgWikibaseItemId":"Q527540","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.cite.styles":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@1dqfd7l",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["ext.cite.a11y","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.legacy.wikibits","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.watchlist-notice","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.gadget.featured-articles-links","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.interface","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="https://en.wikipedia.org/w/load.php?debug=false&amp;lang=en&amp;modules=ext.cite.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="../w/load2c8d.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../w/load18b6.css?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.29.0-wmf.7"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="https://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Echo_(framework)"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Echo_(framework)&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Echo_(framework)&amp;action=edit"/>
+<link rel="apple-touch-icon" href="https://en.wikipedia.org/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="../static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../w/api251f.php?action=rsd"/>
+<link rel="copyright" href="../../creativecommons.org/licenses/by-sa/3.0/index.html"/>
+<link rel="canonical" href="Echo_(framework).html"/>
+<link rel="dns-prefetch" href="../../login.wikimedia.org/index.html"/>
+<link rel="dns-prefetch" href="../../meta.wikimedia.org/index.html" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Echo_framework rootpage-Echo_framework skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">Echo (framework)</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><script>function mfTempOpenSection(id){var block=document.getElementById("mf-section-"+id);block.className+=" open-block";block.previousSibling.className+=" open-block";}</script><table class="infobox vevent" style="width:22em">
+<caption class="summary">Echo</caption>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_developer" title="Software developer">Developer(s)</a></th>
+<td>NextApp</td>
+</tr>
+<tr>
+<td colspan="2" style="text-align:center"></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_release_life_cycle" title="Software release life cycle">Stable release</a></th>
+<td>
+<div style="margin:0px;">3.0.2 / July&#160;11, 2013<span class="noprint">; 3 years ago</span><span style="display:none">&#160;(<span class="bday dtstart published updated">2013-07-11</span>)</span><sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[1]</a></sup></div>
+</td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_categories#Broad_categories" title="Software categories">Type</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Web_application_framework" class="mw-redirect" title="Web application framework">Web application framework</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_license" title="Software license">License</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Mozilla_Public_License" title="Mozilla Public License">Mozilla Public License</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;">Website</th>
+<td><span class="url"><a rel="nofollow" class="external text" href="http://echo.nextapp.com/site/echo3">echo<wbr />.nextapp<wbr />.com<wbr />/site<wbr />/echo3</a></span></td>
+</tr>
+</table>
+<p><b>Echo</b> is a <a href="https://en.wikipedia.org/wiki/Web_application_framework" class="mw-redirect" title="Web application framework">web application framework</a> created by the company NextApp. The latest iteration, Echo3, allows writing applications in either server-side <a href="Java_(programming_language).html" title="Java (programming language)">Java</a> or client-side <a href="https://en.wikipedia.org/wiki/JavaScript" title="JavaScript">JavaScript</a>. Server-side applications do not require developer knowledge of HTML, HTTP, or JavaScript. Client-side JavaScript-based applications do not require a server, but can communicate with one via <a href="https://en.wikipedia.org/wiki/Ajax_(programming)" title="Ajax (programming)">AJAX</a>.</p>
+<p>It is <a href="https://en.wikipedia.org/wiki/Free_software" title="Free software">free software</a> licensed under the terms of the <a href="https://en.wikipedia.org/wiki/Mozilla_Public_License" title="Mozilla Public License">Mozilla Public License</a> (MPL).</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Echo2"><span class="tocnumber">1</span> <span class="toctext">Echo2</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Echo3"><span class="tocnumber">2</span> <span class="toctext">Echo3</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Competitors"><span class="tocnumber">3</span> <span class="toctext">Competitors</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Associated_projects"><span class="tocnumber">4</span> <span class="toctext">Associated projects</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#See_also"><span class="tocnumber">5</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#References"><span class="tocnumber">6</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#External_links"><span class="tocnumber">7</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Echo2">Echo2</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Echo_(framework)&amp;action=edit&amp;section=1" title="Edit section: Echo2">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Echo originally started as a <a href="https://en.wikipedia.org/wiki/Request-response" class="mw-redirect" title="Request-response">request-response</a> web application framework that leveraged the <a href="Swing_(Java).html" title="Swing (Java)">Swing</a> object model to improve the speed of application development. Through the use of the Swing model, Echo was able to employ concepts such as components and <a href="https://en.wikipedia.org/wiki/Event-driven_programming" title="Event-driven programming">event-driven programming</a> that removed much of the pain of <a href="https://en.wikipedia.org/wiki/Web_application_development" title="Web application development">web application development</a>.</p>
+<p>In late 2005, NextApp formally announced the release of their new <a href="https://en.wikipedia.org/wiki/Ajax_(programming)" title="Ajax (programming)">Ajax</a> based web application platform, "Echo2". This framework built on the concepts of Echo (well known <a href="https://en.wikipedia.org/wiki/Application_programming_interface" title="Application programming interface">API</a>, total web <a href="Abstraction_(computer_science).html" class="mw-redirect" title="Abstraction (computer science)">abstraction</a>) but delivered the additional benefit of being an Ajax environment. NextApp believed that this approach brought the framework extremely close to the capabilities of <a href="https://en.wikipedia.org/wiki/Fat_client" title="Fat client">rich clients</a>. NextApp also claimed that this reincarnation of the Echo framework provided dramatic <a href="https://en.wikipedia.org/wiki/Computer_performance" title="Computer performance">performance</a>, capability, and <a href="https://en.wikipedia.org/wiki/User_experience_design" title="User experience design">user-experience</a> enhancements made possible by its new Ajax-based <a href="https://en.wikipedia.org/wiki/Layout_engine" title="Layout engine">rendering engine</a>.</p>
+<h2><span class="mw-headline" id="Echo3">Echo3</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Echo_(framework)&amp;action=edit&amp;section=2" title="Edit section: Echo3">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>During 2007, development on a third generation of the framework, <a rel="nofollow" class="external text" href="http://echo.nextapp.com/site/echo3">Echo3</a>, began. The focus of this evolution was to move away from generating markup on the server side, and instead to implement rendering peers as native <a href="https://en.wikipedia.org/wiki/JavaScript" title="JavaScript">JavaScript</a> objects, with an <a href="https://en.wikipedia.org/wiki/XML" title="XML">XML</a>-based state synchronization protocol between client (web browser) and server. This was developed in tandem with a <a rel="nofollow" class="external text" href="http://echo.nextapp.com/site/corejs">core JavaScript framework</a>, providing the ability to define inheritance hierarchies in <a href="https://en.wikipedia.org/wiki/JavaScript" title="JavaScript">JavaScript</a> in a way familiar to developers of <a href="https://en.wikipedia.org/wiki/Object_oriented" class="mw-redirect" title="Object oriented">object-oriented</a> languages.</p>
+<h2><span class="mw-headline" id="Competitors">Competitors</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Echo_(framework)&amp;action=edit&amp;section=3" title="Edit section: Competitors">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Echo is often compared to frameworks such as <a href="https://en.wikipedia.org/wiki/Google_Web_Toolkit" title="Google Web Toolkit">Google Web Toolkit</a> (GWT) as both Echo and GWT (among others) offer a programming model that completely abstracts users from the <a href="https://en.wikipedia.org/wiki/Multitier_architecture" title="Multitier architecture">web tier</a>. However Echo differs substantially from GWT in the way it interacts with <a href="https://en.wikipedia.org/wiki/JavaScript" title="JavaScript">JavaScript</a>. GWT essentially implements a subset of the <a href="https://en.wikipedia.org/wiki/Java_Platform" class="mw-redirect" title="Java Platform">Java API</a> in JavaScript, and as such, Java code is compiled to JavaScript and fully executed on the client side. On the other hand, Echo has offered a dual-stack approach since version 3. Applications can be written in JavaScript (client-side) or Java (server-side) or in mixed forms.</p>
+<p>Comparable frameworks include <a href="Vaadin.html" title="Vaadin">Vaadin</a>, <a href="https://en.wikipedia.org/wiki/Remote_Application_Platform" title="Remote Application Platform">RAP</a>, <a href="ZK_(framework).html" title="ZK (framework)">ZK</a>, <a href="https://en.wikipedia.org/wiki/OpenLaszlo" title="OpenLaszlo">OpenLaszlo</a>, <a href="ICEfaces.html" title="ICEfaces">ICEfaces</a>, ThinWire, <a href="Apache_Wicket.html" title="Apache Wicket">Apache Wicket</a>, and <a href="https://en.wikipedia.org/w/index.php?title=JSeamless&amp;action=edit&amp;redlink=1" class="new" title="JSeamless (page does not exist)">jSeamless</a>.</p>
+<h2><span class="mw-headline" id="Associated_projects">Associated projects</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Echo_(framework)&amp;action=edit&amp;section=4" title="Edit section: Associated projects">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Echo2 has inspired various add-on projects including:</p>
+<ul>
+<li>EchoPoint: "Next Generation" (<a rel="nofollow" class="external free" href="http://echopoint.sourceforge.net/">http://echopoint.sourceforge.net</a> not active, last updated 2009-07-17), The most well known 3rd party component library for Echo2</li>
+<li><a href="Cooee_framework.html" title="Cooee framework">Cooee framework</a>: (<a rel="nofollow" class="external free" href="https://web.archive.org/web/20071223001212/http://www.karora.org:80/">https://web.archive.org/web/20071223001212/http://www.karora.org:80/</a>) A project based around Echo 2 dedicated to the furthering the development of the framework</li>
+<li>Echo2Struts: <a rel="nofollow" class="external free" href="http://echostruts.free.fr/">http://echostruts.free.fr/</a> A <a href="Apache_Struts.html" class="mw-redirect" title="Apache Struts">Struts</a> compatible implementation of Echo2</li>
+<li>Hibernate-Spring-Echo: (<a rel="nofollow" class="external free" href="http://sourceforge.net/projects/hse/">http://sourceforge.net/projects/hse/</a>) An effort to provide an out of the box application framework that includes Echo2</li>
+<li>Google maps for Echo2: <a rel="nofollow" class="external free" href="http://sourceforge.net/projects/googlemaps-echo/">http://sourceforge.net/projects/googlemaps-echo/</a></li>
+<li>Google maps v3 for Echo2: <a rel="nofollow" class="external free" href="https://code.google.com/p/echo2gmap/wiki/Start">https://code.google.com/p/echo2gmap/wiki/Start</a></li>
+<li>Gantt Charting for Echo2: (<a rel="nofollow" class="external free" href="http://sourceforge.net/projects/echo2gantt/">http://sourceforge.net/projects/echo2gantt/</a>)</li>
+<li>Echo2Faces: (<a rel="nofollow" class="external free" href="http://sourceforge.net/projects/echo2faces/">http://sourceforge.net/projects/echo2faces/</a>) An effort to provide XML markup for Echo2 UI layouts</li>
+<li>Moomba: (<a rel="nofollow" class="external free" href="https://web.archive.org/web/20071223001212/http://www.karora.org:80/">https://web.archive.org/web/20071223001212/http://www.karora.org:80/</a>) A project that implements the Eclipse API for Cooee</li>
+<li>jZeno: (<a rel="nofollow" class="external free" href="http://www.jzeno.org/">http://www.jzeno.org</a>) A full-stack application framework that uses a highly optimized version of the original Echo framework as rendering engine.</li>
+<li>Aejaks: (<a rel="nofollow" class="external free" href="http://aejaks.sourceforge.net/">http://aejaks.sourceforge.net</a>) A <a href="https://en.wikipedia.org/wiki/Java_Tcl" class="mw-redirect" title="Java Tcl">Jacl</a> layer on top of Echo2 to easily create rich web applications.</li>
+</ul>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Echo_(framework)&amp;action=edit&amp;section=5" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div role="navigation" aria-label="Portals" class="noprint portal plainlist tright" style="margin:0.5em 0 0.5em 1em;border:solid #aaa 1px">
+<ul style="display:table;box-sizing:border-box;padding:0.1em;max-width:175px;background:#f9f9f9;font-size:85%;line-height:110%;font-style:italic;font-weight:bold">
+<li style="display:table-row"><span style="display:table-cell;padding:0.2em;vertical-align:middle;text-align:center"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_(2009).svg/28px-Free_and_open-source_software_logo_(2009).svg.png" width="28" height="28" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/42px-Free_and_open-source_software_logo_%282009%29.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/56px-Free_and_open-source_software_logo_%282009%29.svg.png 2x" data-file-width="512" data-file-height="512" /></span><span style="display:table-cell;padding:0.2em 0.2em 0.2em 0.3em;vertical-align:middle"><a href="https://en.wikipedia.org/wiki/Portal:Free_software" class="mw-redirect" title="Portal:Free software">Free software portal</a></span></li>
+</ul>
+</div>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/List_of_rich_internet_application_frameworks" class="mw-redirect" title="List of rich internet application frameworks">List of rich internet application frameworks</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Comparison_of_JavaScript_frameworks" title="Comparison of JavaScript frameworks">Comparison of JavaScript frameworks</a></li>
+<li><a href="https://en.wikipedia.org/wiki/List_of_Ajax_frameworks" title="List of Ajax frameworks">List of Ajax frameworks</a></li>
+<li><a href="https://en.wikipedia.org/wiki/List_of_widget_toolkits#Based_on_JavaScript" title="List of widget toolkits">List of widget toolkits based on JavaScript</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Echo_(framework)&amp;action=edit&amp;section=6" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://echo.nextapp.com/site/echo3/download">"Echo3 Downloads"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">5 January</span> 2015</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AEcho+%28framework%29&amp;rft.btitle=Echo3+Downloads&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fecho.nextapp.com%2Fsite%2Fecho3%2Fdownload&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Echo_(framework)&amp;action=edit&amp;section=7" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://echo.nextapp.com/">Echo Framework Home Page</a></li>
+</ul>
+<div role="navigation" class="navbox" aria-labelledby="ECMAScript" style="padding:3px">
+<table class="nowraplinks hlist collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="https://en.wikipedia.org/wiki/Template:ECMAScript" title="Template:ECMAScript"><abbr title="View this template" style=";;background:none transparent;border:none;">v</abbr></a></li>
+<li class="nv-talk"><a href="https://en.wikipedia.org/wiki/Template_talk:ECMAScript" title="Template talk:ECMAScript"><abbr title="Discuss this template" style=";;background:none transparent;border:none;">t</abbr></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:ECMAScript&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;">e</abbr></a></li>
+</ul>
+</div>
+<div id="ECMAScript" style="font-size:114%"><a href="https://en.wikipedia.org/wiki/ECMAScript" title="ECMAScript">ECMAScript</a></div>
+</th>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Dialects</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/ActionScript" title="ActionScript">ActionScript</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Caja_project" title="Caja project">Caja</a></li>
+<li><a href="https://en.wikipedia.org/wiki/JavaScript" title="JavaScript">JavaScript</a>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/JavaScript_engine" title="JavaScript engine">engines</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Asm.js" title="Asm.js">asm.js</a></li>
+</ul>
+</li>
+<li><a href="https://en.wikipedia.org/wiki/JScript" title="JScript">JScript</a></li>
+<li><a href="https://en.wikipedia.org/wiki/JScript_.NET" title="JScript .NET">JScript .NET</a></li>
+<li><a href="https://en.wikipedia.org/wiki/QtScript" title="QtScript">QtScript</a></li>
+<li><a href="https://en.wikipedia.org/wiki/TypeScript" title="TypeScript">TypeScript</a></li>
+<li><a href="https://en.wikipedia.org/wiki/WMLScript" title="WMLScript">WMLScript</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/List_of_ECMAScript_engines" title="List of ECMAScript engines">Engines</a><br />
+(<a href="https://en.wikipedia.org/wiki/Comparison_of_layout_engines_(ECMAScript)" title="Comparison of layout engines (ECMAScript)">comparison</a>)</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Presto_(layout_engine)#JavaScript_engines" title="Presto (layout engine)">Carakan</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Presto_(layout_engine)#JavaScript_engines" title="Presto (layout engine)">Futhark</a></li>
+<li><a href="https://en.wikipedia.org/wiki/InScript_(JavaScript_engine)" title="InScript (JavaScript engine)">InScript</a></li>
+<li><a href="https://en.wikipedia.org/wiki/JavaScriptCore" class="mw-redirect" title="JavaScriptCore">JavaScriptCore</a>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/WebKit#JavaScriptCore" title="WebKit">SquirrelFish</a></li>
+</ul>
+</li>
+<li><a href="https://en.wikipedia.org/wiki/JScript" title="JScript">JScript</a></li>
+<li><a href="https://en.wikipedia.org/wiki/KJS_(software)" title="KJS (software)">KJS</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Presto_(layout_engine)#JavaScript_engines" title="Presto (layout engine)">Linear B</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Narcissus_(JavaScript_engine)" title="Narcissus (JavaScript engine)">Narcissus</a></li>
+<li><a href="https://en.wikipedia.org/wiki/QtScript" title="QtScript">QtScript</a></li>
+<li><a href="Rhino_(JavaScript_engine).html" title="Rhino (JavaScript engine)">Rhino</a></li>
+<li><a href="https://en.wikipedia.org/wiki/SpiderMonkey_(software)" class="mw-redirect" title="SpiderMonkey (software)">SpiderMonkey</a>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/SpiderMonkey_(software)#TraceMonkey" class="mw-redirect" title="SpiderMonkey (software)">TraceMonkey</a></li>
+<li><a href="https://en.wikipedia.org/wiki/JägerMonkey" class="mw-redirect" title="JägerMonkey">JägerMonkey</a></li>
+</ul>
+</li>
+<li><a href="https://en.wikipedia.org/wiki/Tamarin_(software)" title="Tamarin (software)">Tamarin</a></li>
+<li><a href="https://en.wikipedia.org/wiki/V8_(JavaScript_engine)" title="V8 (JavaScript engine)">V8</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Chakra_(JScript_engine)" title="Chakra (JScript engine)">Chakra</a> (<a href="https://en.wikipedia.org/wiki/Chakra_(JavaScript_engine)" title="Chakra (JavaScript engine)">JavaScript engine</a>)</li>
+<li><a href="https://en.wikipedia.org/wiki/JScript_.NET" title="JScript .NET">JScript .NET</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Nashorn_(JavaScript_engine)" title="Nashorn (JavaScript engine)">Nashorn</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Software_framework" title="Software framework">Frameworks</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em"></div>
+<table class="nowraplinks navbox-subgroup" style="border-spacing:0">
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Client-side_JavaScript" class="mw-redirect" title="Client-side JavaScript">Client-side</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Ample_SDK" title="Ample SDK">Ample SDK</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Chaplin.js" title="Chaplin.js">Chaplin.js</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Dojo_Toolkit" title="Dojo Toolkit">Dojo</a></li>
+<li><strong class="selflink">Echo</strong></li>
+<li><a href="https://en.wikipedia.org/wiki/Ext_JS" title="Ext JS">Ext JS</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Google_Web_Toolkit" title="Google Web Toolkit">Google Web Toolkit</a></li>
+<li><a href="https://en.wikipedia.org/wiki/JQuery" title="JQuery">jQuery</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Lively_Kernel" title="Lively Kernel">Lively Kernel</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Midori_JavaScript_Framework" title="Midori JavaScript Framework">midori</a></li>
+<li><a href="https://en.wikipedia.org/wiki/MochiKit" title="MochiKit">MochiKit</a></li>
+<li><a href="https://en.wikipedia.org/wiki/MooTools" title="MooTools">MooTools</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Prototype_JavaScript_Framework" title="Prototype JavaScript Framework">Prototype</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Pyjamas_(software)" class="mw-redirect" title="Pyjamas (software)">Pyjamas</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Qooxdoo" title="Qooxdoo">qooxdoo</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Rialto_Toolkit" title="Rialto Toolkit">Rialto</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Rico_(Ajax)" title="Rico (Ajax)">Rico</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Script.aculo.us" title="Script.aculo.us">script.aculo.us</a></li>
+<li><a href="https://en.wikipedia.org/wiki/SmartClient" title="SmartClient">SmartClient</a></li>
+<li><a href="https://en.wikipedia.org/wiki/SproutCore" title="SproutCore">SproutCore</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Spry_framework" title="Spry framework">Spry</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Wakanda_(software)" title="Wakanda (software)">Wakanda Framework</a></li>
+<li><a href="https://en.wikipedia.org/wiki/YUI_Library" title="YUI Library">YUI Library</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Server-side_JavaScript" class="mw-redirect" title="Server-side JavaScript">Server-side</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/AppJet" title="AppJet">AppJet</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Jaxer#Aptana_Jaxer" class="mw-redirect" title="Jaxer">Jaxer</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Node.js" title="Node.js">Node.js</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Wakanda_(software)" title="Wakanda (software)">WakandaDB</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Multiple</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Cappuccino_(application_development_framework)" title="Cappuccino (application development framework)">Cappuccino</a>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Objective-J" title="Objective-J">Objective-J</a></li>
+</ul>
+</li>
+<li><a href="https://en.wikipedia.org/wiki/PureMVC" title="PureMVC">PureMVC</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/JavaScript_library" title="JavaScript library">Libraries</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Backbone.js" title="Backbone.js">Backbone.js</a></li>
+<li><a href="https://en.wikipedia.org/wiki/SWFObject" title="SWFObject">SWFObject</a></li>
+<li><a href="https://en.wikipedia.org/wiki/SWFAddress" title="SWFAddress">SWFAddress</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Underscore.js" title="Underscore.js">Underscore.js</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">People</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Brendan_Eich" title="Brendan Eich">Brendan Eich</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Douglas_Crockford" title="Douglas Crockford">Douglas Crockford</a></li>
+<li><a href="https://en.wikipedia.org/wiki/John_Resig" title="John Resig">John Resig</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Scott_Isaacs" title="Scott Isaacs">Scott Isaacs</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Other</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Dynamic_HTML" title="Dynamic HTML">DHTML</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Ecma_International" title="Ecma International">Ecma International</a></li>
+<li><a href="https://en.wikipedia.org/wiki/JSDoc" title="JSDoc">JSDoc</a></li>
+<li><a href="https://en.wikipedia.org/wiki/JSGI" title="JSGI">JSGI</a></li>
+<li><a href="https://en.wikipedia.org/wiki/JSHint" title="JSHint">JSHint</a></li>
+<li><a href="https://en.wikipedia.org/wiki/JSLint" title="JSLint">JSLint</a></li>
+<li><a href="https://en.wikipedia.org/wiki/JSON" title="JSON">JSON</a></li>
+<li><a href="https://en.wikipedia.org/wiki/JavaScript_Style_Sheets" title="JavaScript Style Sheets">JSSS</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sputnik_(JavaScript_conformance_test)" title="Sputnik (JavaScript conformance test)">Sputnik</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Browser_speed_test#SunSpider" title="Browser speed test">SunSpider</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Asynchronous_module_definition" title="Asynchronous module definition">Asynchronous module definition</a></li>
+<li><a href="https://en.wikipedia.org/wiki/CommonJS" title="CommonJS">CommonJS</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td class="navbox-abovebelow" colspan="2">
+<div>
+<dl>
+<dt><img alt="List-Class article" src="http://upload.wikimedia.org/wikipedia/en/thumb/d/db/Symbol_list_class.svg/16px-Symbol_list_class.svg.png" title="List-Class article" width="16" height="16" srcset="//upload.wikimedia.org/wikipedia/en/thumb/d/db/Symbol_list_class.svg/23px-Symbol_list_class.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/d/db/Symbol_list_class.svg/31px-Symbol_list_class.svg.png 2x" data-file-width="180" data-file-height="185" /> Lists</dt>
+<dd><a href="https://en.wikipedia.org/wiki/List_of_JavaScript_libraries" title="List of JavaScript libraries">JavaScript libraries</a></dd>
+<dd><a href="https://en.wikipedia.org/wiki/List_of_Ajax_frameworks#JavaScript" title="List of Ajax frameworks">Ajax frameworks</a></dd>
+<dt><img alt="List-Class article" src="http://upload.wikimedia.org/wikipedia/en/thumb/d/db/Symbol_list_class.svg/16px-Symbol_list_class.svg.png" title="List-Class article" width="16" height="16" srcset="//upload.wikimedia.org/wikipedia/en/thumb/d/db/Symbol_list_class.svg/23px-Symbol_list_class.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/d/db/Symbol_list_class.svg/31px-Symbol_list_class.svg.png 2x" data-file-width="180" data-file-height="185" /> Comparisons</dt>
+<dd><a href="https://en.wikipedia.org/wiki/Comparison_of_JavaScript_frameworks" title="Comparison of JavaScript frameworks">JavaScript frameworks</a></dd>
+<dd><a href="https://en.wikipedia.org/wiki/Comparison_of_server-side_JavaScript_solutions" title="Comparison of server-side JavaScript solutions">server-side JavaScript</a></dd>
+</dl>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div role="navigation" class="navbox" aria-labelledby="Web_frameworks" style="padding:3px">
+<table class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="https://en.wikipedia.org/wiki/Template:Web_frameworks" title="Template:Web frameworks"><abbr title="View this template" style=";;background:none transparent;border:none;">v</abbr></a></li>
+<li class="nv-talk"><a href="https://en.wikipedia.org/wiki/Template_talk:Web_frameworks" title="Template talk:Web frameworks"><abbr title="Discuss this template" style=";;background:none transparent;border:none;">t</abbr></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Web_frameworks&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;">e</abbr></a></li>
+</ul>
+</div>
+<div id="Web_frameworks" style="font-size:114%"><a href="https://en.wikipedia.org/wiki/Web_framework" title="Web framework">Web frameworks</a></div>
+</th>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td class="navbox-abovebelow hlist" colspan="2">
+<div>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Comparison_of_web_frameworks" title="Comparison of web frameworks">Comparison</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Common_Language_Infrastructure" title="Common Language Infrastructure">CLI</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/ASP.NET" title="ASP.NET">ASP.NET</a>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/ASP.NET_Core" title="ASP.NET Core">Core</a></li>
+<li><a href="https://en.wikipedia.org/wiki/ASP.NET_AJAX" title="ASP.NET AJAX">AJAX</a></li>
+<li><a href="https://en.wikipedia.org/wiki/ASP.NET_Dynamic_Data" title="ASP.NET Dynamic Data">Dynamic Data</a></li>
+<li><a href="https://en.wikipedia.org/wiki/ASP.NET_MVC" title="ASP.NET MVC">MVC</a></li>
+<li><a href="https://en.wikipedia.org/wiki/ASP.NET_Razor" title="ASP.NET Razor">Razor</a></li>
+<li><a href="https://en.wikipedia.org/wiki/ASP.NET" title="ASP.NET">Web Forms</a></li>
+</ul>
+</li>
+<li><a href="https://en.wikipedia.org/wiki/Base_One_Foundation_Component_Library" title="Base One Foundation Component Library">BFC</a></li>
+<li><a href="https://en.wikipedia.org/wiki/MonoRail_(software)" title="MonoRail (software)">MonoRail</a></li>
+<li><a href="https://en.wikipedia.org/wiki/OpenRasta" title="OpenRasta">OpenRasta</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Umbraco" title="Umbraco">Umbraco</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="ColdFusion.html" class="mw-redirect" title="ColdFusion">ColdFusion</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/ColdFusion_on_Wheels" title="ColdFusion on Wheels">CFWheels</a></li>
+<li><a href="https://en.wikipedia.org/wiki/ColdBox_Platform" title="ColdBox Platform">ColdBox Platform</a></li>
+<li><a href="https://en.wikipedia.org/wiki/ColdSpring_Framework" title="ColdSpring Framework">ColdSpring</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Fusebox_(programming)" title="Fusebox (programming)">Fusebox</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Mach-II" title="Mach-II">Mach-II</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Model-Glue" title="Model-Glue">Model-Glue</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Common_Lisp" title="Common Lisp">Common Lisp</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Caveman2" title="Caveman2">Caveman2</a></li>
+<li><a href="https://en.wikipedia.org/wiki/CL-HTTP" title="CL-HTTP">CL-HTTP</a></li>
+<li><a href="https://en.wikipedia.org/wiki/UnCommon_Web" title="UnCommon Web">UnCommon Web</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Weblocks" title="Weblocks">Weblocks</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/C++" title="C++">C++</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/CppCMS" title="CppCMS">CppCMS</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Wt_(web_toolkit)" title="Wt (web toolkit)">Wt</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/D_(programming_language)" title="D (programming language)">D</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Vibe.d" title="Vibe.d">Vibe.d</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Haskell_(programming_language)" title="Haskell (programming language)">Haskell</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Happstack" title="Happstack">Happstack</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Yesod_(web_framework)" class="mw-redirect" title="Yesod (web framework)">Yesod</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Snap_(web_framework)" title="Snap (web framework)">Snap</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Java_(software_platform).html" title="Java (software platform)">Java</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="AppFuse.html" title="AppFuse">AppFuse</a></li>
+<li><a href="Flexive.html" title="Flexive">Flexive</a></li>
+<li><a href="Grails_(framework).html" title="Grails (framework)">Grails</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Google_Web_Toolkit" title="Google Web Toolkit">GWT</a></li>
+<li><a href="ICEfaces.html" title="ICEfaces">ICEfaces</a></li>
+<li><a href="ItsNat.html" title="ItsNat">ItsNat</a></li>
+<li><a href="JavaServer_Faces.html" title="JavaServer Faces">JavaServer Faces</a></li>
+<li><a href="https://en.wikipedia.org/wiki/JHipster" title="JHipster">JHipster</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Jspx-bay" title="Jspx-bay">Jspx</a></li>
+<li><a href="https://en.wikipedia.org/wiki/JWt_(Java_web_toolkit)" title="JWt (Java web toolkit)">JWt</a></li>
+<li><a href="OpenXava.html" title="OpenXava">OpenXava</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Play_framework" class="mw-redirect" title="Play framework">Play</a></li>
+<li><a href="Reasonable_Server_Faces.html" title="Reasonable Server Faces">Reasonable Server Faces</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Remote_Application_Platform" title="Remote Application Platform">Remote Application Platform</a></li>
+<li><a href="RIFE.html" title="RIFE">RIFE</a></li>
+<li><a href="JBoss_Seam.html" title="JBoss Seam">Seam</a></li>
+<li><a href="Spring_Framework.html#Model-view-controller_framework" title="Spring Framework">Spring</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Stripes_(framework)" title="Stripes (framework)">Stripes</a></li>
+<li><a href="Apache_Struts.html" class="mw-redirect" title="Apache Struts">Struts</a></li>
+<li><a href="Apache_Tapestry.html" title="Apache Tapestry">Tapestry</a></li>
+<li><a href="Vaadin.html" title="Vaadin">Vaadin</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Vert.x" title="Vert.x">Vert.x</a></li>
+<li><a href="WebWork.html" title="WebWork">WebWork</a></li>
+<li><a href="Apache_Wicket.html" title="Apache Wicket">Wicket</a></li>
+<li><a href="https://en.wikipedia.org/wiki/WaveMaker" title="WaveMaker">WaveMaker</a></li>
+<li><a href="ZK_(framework).html" title="ZK (framework)">ZK</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/JavaScript" title="JavaScript">JavaScript</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Ample_SDK" title="Ample SDK">Ample SDK</a></li>
+<li><a href="https://en.wikipedia.org/wiki/AngularJS" title="AngularJS">AngularJS</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Backbone.js" title="Backbone.js">Backbone.js</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Chaplin.js" title="Chaplin.js">Chaplin.js</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Google_Closure_Tools" title="Google Closure Tools">Closure</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Dojo_Toolkit" title="Dojo Toolkit">Dojo Toolkit</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Ember.js" title="Ember.js">Ember.js</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Ext_JS" title="Ext JS">Ext JS</a></li>
+<li><a href="https://en.wikipedia.org/wiki/JQuery" title="JQuery">jQuery</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Meteor_(web_framework)" title="Meteor (web framework)">Meteor</a></li>
+<li><a href="https://en.wikipedia.org/wiki/MooTools" title="MooTools">MooTools</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Node.js" title="Node.js">Node.js</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Prototype_JavaScript_Framework" title="Prototype JavaScript Framework">Prototype</a></li>
+<li><a href="https://en.wikipedia.org/wiki/React_(JavaScript_library)" title="React (JavaScript library)">React</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Rico_(Ajax)" title="Rico (Ajax)">Rico</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Script.aculo.us" title="Script.aculo.us">script.aculo.us</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sencha_Touch" title="Sencha Touch">Sencha Touch</a></li>
+<li><a href="https://en.wikipedia.org/wiki/SproutCore" title="SproutCore">SproutCore</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Wakanda_(software)" title="Wakanda (software)">Wakanda</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Perl" title="Perl">Perl</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Catalyst_(software)" title="Catalyst (software)">Catalyst</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Dancer_(software)" title="Dancer (software)">Dancer</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Mason_(Perl)" title="Mason (Perl)">Mason</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Maypole_framework" class="mw-redirect" title="Maypole framework">Maypole</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Mojolicious" title="Mojolicious">Mojolicious</a></li>
+<li><a href="https://en.wikipedia.org/wiki/WebGUI" title="WebGUI">WebGUI</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/PHP" title="PHP">PHP</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/CakePHP" title="CakePHP">CakePHP</a></li>
+<li><a href="https://en.wikipedia.org/wiki/CodeIgniter" title="CodeIgniter">CodeIgniter</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Fat-Free_Framework" title="Fat-Free Framework">Fat-Free</a></li>
+<li><a href="https://en.wikipedia.org/wiki/FuelPHP" title="FuelPHP">FuelPHP</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Gyroscope_(software)" title="Gyroscope (software)">Gyroscope</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Horde_(software)" title="Horde (software)">Horde</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Kohana_(framework)" title="Kohana (framework)">Kohana</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Laravel" title="Laravel">Laravel</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Lithium_(software)" title="Lithium (software)">Lithium</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Midgard_(software)" title="Midgard (software)">Midgard</a></li>
+<li><a href="https://en.wikipedia.org/wiki/MODX" title="MODX">MODX</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Nette_Framework" title="Nette Framework">Nette Framework</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Phalcon_(framework)" title="Phalcon (framework)">Phalcon</a></li>
+<li><a href="https://en.wikipedia.org/wiki/PRADO_(framework)" title="PRADO (framework)">PRADO</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Qcodo" title="Qcodo">Qcodo</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Silex_(web_framework)" title="Silex (web framework)">Silex</a></li>
+<li><a href="https://en.wikipedia.org/wiki/SilverStripe" title="SilverStripe">SilverStripe</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Symfony" title="Symfony">Symfony</a></li>
+<li><a href="https://en.wikipedia.org/wiki/TYPO3" title="TYPO3">TYPO3</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Xaraya" title="Xaraya">Xaraya</a></li>
+<li><a href="https://en.wikipedia.org/wiki/XOOPS" title="XOOPS">XOOPS</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Yii" title="Yii">Yii</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Zend_Framework" title="Zend Framework">Zend Framework</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Python_(programming_language)" title="Python (programming language)">Python</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Zope#BlueBream" title="Zope">BlueBream</a></li>
+<li><a href="https://en.wikipedia.org/wiki/CherryPy" title="CherryPy">CherryPy</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Django_(web_framework)" title="Django (web framework)">Django</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Flask_(web_framework)" title="Flask (web framework)">Flask</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Grok_(web_framework)" title="Grok (web framework)">Grok</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Nevow" title="Nevow">Nevow</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Pyjs" title="Pyjs">Pyjs</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Pylons_project#Pylons_Framework" title="Pylons project">Pylons</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Pylons_project#Pyramid" title="Pylons project">Pyramid</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Quixote_(web_framework)" title="Quixote (web framework)">Quixote</a></li>
+<li><a href="https://en.wikipedia.org/wiki/TACTIC_(web_framework)" title="TACTIC (web framework)">TACTIC</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Tornado_(web_server)" title="Tornado (web server)">Tornado</a></li>
+<li><a href="https://en.wikipedia.org/wiki/TurboGears" title="TurboGears">TurboGears</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Web2py" title="Web2py">web2py</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Webware_for_Python" title="Webware for Python">Webware</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Zope#Zope_2" title="Zope">Zope 2</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Ruby_(programming_language)" title="Ruby (programming language)">Ruby</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Camping_(microframework)" title="Camping (microframework)">Camping</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Merb" title="Merb">Merb</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Padrino_(web_framework)" title="Padrino (web framework)">Padrino</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Ruby_on_Rails" title="Ruby on Rails">Ruby on Rails</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sinatra_(software)" title="Sinatra (software)">Sinatra</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Scala_(programming_language).html" title="Scala (programming language)">Scala</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Lift_(web_framework).html" title="Lift (web framework)">Lift</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Play_framework" class="mw-redirect" title="Play framework">Play</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Scalatra" title="Scalatra">Scalatra</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Smalltalk" title="Smalltalk">Smalltalk</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/AIDA/Web" title="AIDA/Web">AIDA/Web</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Seaside_(software)" title="Seaside (software)">Seaside</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Other languages</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Oracle_Application_Express" title="Oracle Application Express">Application Express</a> (<a href="https://en.wikipedia.org/wiki/PL/SQL" title="PL/SQL">PL/SQL</a>)</li>
+<li><a href="Grails_(framework).html" title="Grails (framework)">Grails</a> (<a href="Groovy_(programming_language).html" title="Groovy (programming language)">Groovy</a>)</li>
+<li><a href="https://en.wikipedia.org/wiki/Kepler_(software)" title="Kepler (software)">Kepler</a> (<a href="https://en.wikipedia.org/wiki/Lua_(programming_language)" title="Lua (programming language)">Lua</a>)</li>
+<li><a href="https://en.wikipedia.org/wiki/OpenACS" class="mw-redirect" title="OpenACS">OpenACS</a> (<a href="https://en.wikipedia.org/wiki/Tcl" title="Tcl">Tcl</a>)</li>
+<li><a href="https://en.wikipedia.org/wiki/SproutCore" title="SproutCore">SproutCore</a> (<a href="https://en.wikipedia.org/wiki/JavaScript" title="JavaScript">JavaScript</a>/<a href="https://en.wikipedia.org/wiki/Ruby_(programming_language)" title="Ruby (programming language)">Ruby</a>)</li>
+<li><a href="https://en.wikipedia.org/wiki/Yaws_(web_server)" title="Yaws (web server)">Yaws</a> (<a href="https://en.wikipedia.org/wiki/Erlang_(programming_language)" title="Erlang (programming language)">Erlang</a>)</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div role="navigation" class="navbox" aria-labelledby="List_of_widget_toolkits" style="padding:3px">
+<table class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="https://en.wikipedia.org/wiki/Template:Widget_toolkits" title="Template:Widget toolkits"><abbr title="View this template" style=";;background:none transparent;border:none;">v</abbr></a></li>
+<li class="nv-talk"><a href="https://en.wikipedia.org/wiki/Template_talk:Widget_toolkits" title="Template talk:Widget toolkits"><abbr title="Discuss this template" style=";;background:none transparent;border:none;">t</abbr></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Widget_toolkits&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;">e</abbr></a></li>
+</ul>
+</div>
+<div id="List_of_widget_toolkits" style="font-size:114%"><a href="https://en.wikipedia.org/wiki/List_of_widget_toolkits" title="List of widget toolkits">List</a> of <a href="https://en.wikipedia.org/wiki/Widget_toolkit" title="Widget toolkit">widget toolkits</a></div>
+</th>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Low-level</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em"></div>
+<table class="nowraplinks navbox-subgroup" style="border-spacing:0">
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;">On <a href="https://en.wikipedia.org/wiki/AmigaOS" title="AmigaOS">AmigaOS</a></div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Intuition_(Amiga)" title="Intuition (Amiga)">Intuition</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;">On <a href="https://en.wikipedia.org/wiki/Classic_Mac_OS" title="Classic Mac OS">Classic Mac OS</a><br />
+and <a href="https://en.wikipedia.org/wiki/MacOS" title="MacOS">macOS</a></div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Macintosh_Toolbox" title="Macintosh Toolbox">Macintosh Toolbox</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Carbon_(API)" title="Carbon (API)">Carbon</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;">On <a href="https://en.wikipedia.org/wiki/Microsoft_Windows" title="Microsoft Windows">Windows</a></div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Windows_API" title="Windows API">Windows API</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;">On <a href="https://en.wikipedia.org/wiki/Unix" title="Unix">Unix</a>,<br />
+under <a href="https://en.wikipedia.org/wiki/X_Window_System" title="X Window System">X11</a></div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Xlib" title="Xlib">Xlib</a></li>
+<li><a href="https://en.wikipedia.org/wiki/XCB" title="XCB">XCB</a></li>
+<li><a href="https://en.wikipedia.org/wiki/X_Toolkit_Intrinsics" title="X Toolkit Intrinsics">X Toolkit Intrinsics, Xt, X-Toolkit</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;">On <a href="https://en.wikipedia.org/wiki/BeOS" title="BeOS">BeOS</a>/<a href="https://en.wikipedia.org/wiki/Haiku_(operating_system)" title="Haiku (operating system)">Haiku</a></div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/BeOS_API" title="BeOS API">BeOS, ZETA, Haiku</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;">On <a href="https://en.wikipedia.org/wiki/Cross-platform" title="Cross-platform">Cross-platform</a></div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/OpenTK" title="OpenTK">OpenTK</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">High-level</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em"></div>
+<table class="nowraplinks navbox-subgroup" style="border-spacing:0">
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;">On <a href="https://en.wikipedia.org/wiki/AmigaOS" title="AmigaOS">AmigaOS</a></div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/BOOPSI" title="BOOPSI">BOOPSI</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Magic_User_Interface" title="Magic User Interface">MUI</a></li>
+<li><a href="https://en.wikipedia.org/wiki/ReAction_GUI" title="ReAction GUI">ReAction GUI</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Zune_(widget_toolkit)" title="Zune (widget toolkit)">Zune</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;">On <a href="https://en.wikipedia.org/wiki/Classic_Mac_OS" title="Classic Mac OS">Classic Mac OS</a><br />
+and <a href="https://en.wikipedia.org/wiki/MacOS" title="MacOS">macOS</a></div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em"></div>
+<table class="nowraplinks navbox-subgroup" style="border-spacing:0">
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;"><a href="https://en.wikipedia.org/wiki/Object_Pascal" title="Object Pascal">Object Pascal</a></div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Carbon_(API)" title="Carbon (API)">Carbon</a></li>
+<li><a href="https://en.wikipedia.org/wiki/MacApp" title="MacApp">MacApp</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;"><a href="https://en.wikipedia.org/wiki/Objective-C" title="Objective-C">Objective-C</a></div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Cocoa_(API)" title="Cocoa (API)">Cocoa</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;"><a href="https://en.wikipedia.org/wiki/C++" title="C++">C++</a></div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/MacZoop" title="MacZoop">MacZoop</a></li>
+<li><a href="https://en.wikipedia.org/wiki/PowerPlant" title="PowerPlant">PowerPlant</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;">On <a href="https://en.wikipedia.org/wiki/Microsoft_Windows" title="Microsoft Windows">Windows</a></div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em"></div>
+<table class="nowraplinks navbox-subgroup" style="border-spacing:0">
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;"><a href="https://en.wikipedia.org/wiki/Common_Language_Infrastructure" title="Common Language Infrastructure">CLI</a></div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em"></div>
+<table class="nowraplinks navbox-subgroup" style="border-spacing:0">
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;">desktop</div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Windows_Forms" title="Windows Forms">Windows Forms</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Extensible_Application_Markup_Language" title="Extensible Application Markup Language">XAML</a> (<a href="https://en.wikipedia.org/wiki/Microsoft_Silverlight" title="Microsoft Silverlight">Silverlight</a>, <a href="https://en.wikipedia.org/wiki/Windows_Runtime_XAML_Framework" title="Windows Runtime XAML Framework">WinRT XAML</a>, <a href="https://en.wikipedia.org/wiki/Windows_Presentation_Foundation" title="Windows Presentation Foundation">WPF</a>)</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;">web</div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Extensible_Application_Markup_Language" title="Extensible Application Markup Language">XAML</a> (<a href="https://en.wikipedia.org/wiki/Microsoft_Silverlight" title="Microsoft Silverlight">Silverlight</a>)</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;"><a href="https://en.wikipedia.org/wiki/C++" title="C++">C++</a></div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Microsoft_Foundation_Class_Library" title="Microsoft Foundation Class Library">MFC</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Active_Template_Library" title="Active Template Library">ATL</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Windows_Template_Library" title="Windows Template Library">WTL</a></li>
+<li><a href="https://en.wikipedia.org/w/index.php?title=SmartWin%2B%2B&amp;action=edit&amp;redlink=1" class="new" title="SmartWin++ (page does not exist)">SmartWin++</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Object_Windows_Library" title="Object Windows Library">OWL</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;"><a href="https://en.wikipedia.org/wiki/Object_Pascal" title="Object Pascal">Object Pascal</a></div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Visual_Component_Library" title="Visual Component Library">VCL</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;">On <a href="https://en.wikipedia.org/wiki/Unix" title="Unix">Unix</a>,<br />
+under <a href="https://en.wikipedia.org/wiki/X_Window_System" title="X Window System">X11</a></div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/X_Athena_Widgets" title="X Athena Widgets">Athena (Xaw)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/InterViews" title="InterViews">InterViews</a></li>
+<li><a href="https://en.wikipedia.org/wiki/LessTif" title="LessTif">LessTif</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Motif_(software)" title="Motif (software)">Motif</a></li>
+<li><a href="https://en.wikipedia.org/wiki/OLIT" title="OLIT">OLIT</a></li>
+<li><a href="https://en.wikipedia.org/wiki/XForms_(toolkit)" title="XForms (toolkit)">XForms</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;"><a href="https://en.wikipedia.org/wiki/Cross-platform" title="Cross-platform">Cross-platform</a>,<br />
+by language</div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em"></div>
+<table class="nowraplinks navbox-subgroup" style="border-spacing:0">
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;"><a href="https://en.wikipedia.org/wiki/C_(programming_language)" title="C (programming language)">C</a></div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/GTK+" title="GTK+">GTK+</a></li>
+<li><a href="https://en.wikipedia.org/wiki/IUP_(software)" title="IUP (software)">IUP</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Tk_(software)" title="Tk (software)">Tk</a></li>
+<li>wxC</li>
+<li><a href="https://en.wikipedia.org/wiki/XForms_(toolkit)" title="XForms (toolkit)">XForms</a></li>
+<li><a href="https://en.wikipedia.org/wiki/XVT" title="XVT">XVT</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;"><a href="https://en.wikipedia.org/wiki/C++" title="C++">C++</a></div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/CEGUI" title="CEGUI">CEGUI</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Component_Library_for_Cross_Platform" title="Component Library for Cross Platform">CLX</a></li>
+<li><a href="https://en.wikipedia.org/wiki/FLTK" title="FLTK">FLTK</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Fox_toolkit" title="Fox toolkit">FOX toolkit</a></li>
+<li><a href="https://en.wikipedia.org/wiki/OpenGL_User_Interface_Library" title="OpenGL User Interface Library">GLUI</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Gtkmm" title="Gtkmm">Gtkmm</a></li>
+<li><a href="https://en.wikipedia.org/wiki/JUCE" title="JUCE">JUCE</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Nana_C++" title="Nana C++">Nana C++</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Qt_(software)" title="Qt (software)">Qt</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Rogue_Wave_Software" title="Rogue Wave Software">Rogue Wave Views</a></li>
+<li><a href="https://en.wikipedia.org/wiki/TnFOX" title="TnFOX">TnFOX</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Ultimate++" title="Ultimate++">Ultimate++</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Visual_Component_Framework" title="Visual Component Framework">VCF</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Wt_(web_toolkit)" title="Wt (web toolkit)">Wt</a></li>
+<li><a href="https://en.wikipedia.org/wiki/WxWidgets" title="WxWidgets">wxWidgets</a></li>
+<li><a href="https://en.wikipedia.org/wiki/YAAF" title="YAAF">YAAF</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;"><a href="https://en.wikipedia.org/wiki/Objective-C" title="Objective-C">Objective-C</a></div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/GNUstep" title="GNUstep">GNUstep</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;"><a href="https://en.wikipedia.org/wiki/Common_Language_Infrastructure" title="Common Language Infrastructure">CLI</a></div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em"></div>
+<table class="nowraplinks navbox-subgroup" style="border-spacing:0">
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;">desktop</div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Gtk_Sharp" class="mw-redirect" title="Gtk Sharp">Gtk#</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Tao_Framework" title="Tao Framework">Tao</a> (<a href="https://en.wikipedia.org/wiki/OpenTK" title="OpenTK">OpenTK</a>, <a href="https://en.wikipedia.org/wiki/TaoClassic" title="TaoClassic">TaoClassic</a>)</li>
+<li>wx.NET</li>
+<li><a href="https://en.wikipedia.org/wiki/UIML" title="UIML">UIML.NET</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;">web</div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Moonlight_(runtime)" title="Moonlight (runtime)">Moonlight</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;"><a href="https://en.wikipedia.org/wiki/D_(programming_language)" title="D (programming language)">D</a></div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li>DFL</li>
+<li>DlangUI</li>
+<li>DWT</li>
+<li><a href="https://en.wikipedia.org/wiki/GtkD" class="mw-redirect" title="GtkD">GtkD</a></li>
+<li>QtD</li>
+<li>wxD</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;"><a href="https://en.wikipedia.org/wiki/Adobe_Flash" title="Adobe Flash">Flash</a></div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Apache_Flex" title="Apache Flex">Apache Flex</a> (<a href="https://en.wikipedia.org/wiki/MXML" title="MXML">MXML</a>)</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;"><a href="https://en.wikipedia.org/wiki/Haskell_(programming_language)" title="Haskell (programming language)">Haskell</a></div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li>Gtk2Hs</li>
+<li><a href="https://en.wikipedia.org/wiki/WxHaskell" title="WxHaskell">wxHaskell</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;"><a href="Java_(programming_language).html" title="Java (programming language)">Java</a></div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em"></div>
+<table class="nowraplinks navbox-subgroup" style="border-spacing:0">
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;">desktop</div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Abstract_Window_Toolkit.html" title="Abstract Window Toolkit">AWT</a></li>
+<li><a href="https://en.wikipedia.org/wiki/FXML" title="FXML">FXML</a> (<a href="JavaFX.html" title="JavaFX">JavaFX</a>)</li>
+<li><a href="https://en.wikipedia.org/wiki/Qt_Jambi" title="Qt Jambi">Qt Jambi</a></li>
+<li><a href="Swing_(Java).html" title="Swing (Java)">Swing</a></li>
+<li><a href="Standard_Widget_Toolkit.html" title="Standard Widget Toolkit">SWT</a></li>
+<li>wx4j</li>
+<li><a href="https://en.wikipedia.org/wiki/UIML" title="UIML">jUIML</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;">web</div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Google_Web_Toolkit" title="Google Web Toolkit">GWT</a></li>
+<li><a href="https://en.wikipedia.org/wiki/FXML" title="FXML">FXML</a> (<a href="JavaFX.html" title="JavaFX">JavaFX</a>)</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;"><a href="https://en.wikipedia.org/wiki/JavaScript" title="JavaScript">JavaScript</a></div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Dojo_Toolkit" title="Dojo Toolkit">Dojo Toolkit</a></li>
+<li><strong class="selflink">Echo</strong></li>
+<li><a href="https://en.wikipedia.org/wiki/Ext_JS" title="Ext JS">Ext JS</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Google_Closure_Tools" title="Google Closure Tools">Google Closure</a></li>
+<li><a href="https://en.wikipedia.org/wiki/JQuery_UI" title="JQuery UI">jQuery UI</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Qooxdoo" title="Qooxdoo">Qooxdoo</a></li>
+<li><a href="https://en.wikipedia.org/wiki/YUI_Library" title="YUI Library">YUI</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;"><a href="https://en.wikipedia.org/wiki/Common_Lisp" title="Common Lisp">Common Lisp</a></div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/LispWorks" title="LispWorks">CAPI</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Common_Lisp_Interface_Manager" title="Common Lisp Interface Manager">CLIM</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Allegro_Common_Lisp" title="Allegro Common Lisp">Common Graphics</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Tk_(framework)" class="mw-redirect" title="Tk (framework)">Ltk</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Common_Lisp_Interface_Manager" title="Common Lisp Interface Manager">McCLIM</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;"><a href="https://en.wikipedia.org/wiki/Lua_(programming_language)" title="Lua (programming language)">Lua</a></div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/IUP_(software)" title="IUP (software)">IUP</a></li>
+<li>wxLua</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;"><a href="https://en.wikipedia.org/wiki/Pascal_(programming_language)" title="Pascal (programming language)">Pascal</a></div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Lazarus_Component_Library" title="Lazarus Component Library">LCL</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;"><a href="https://en.wikipedia.org/wiki/Object_Pascal" title="Object Pascal">Object Pascal</a></div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Component_Library_for_Cross_Platform" title="Component Library for Cross Platform">CLX</a></li>
+<li><a href="https://en.wikipedia.org/wiki/FpGUI" title="FpGUI">fpGUI</a></li>
+<li><a href="https://en.wikipedia.org/wiki/IP_Pascal" title="IP Pascal">IP Pascal</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Lazarus_Component_Library" title="Lazarus Component Library">LCL</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;"><a href="https://en.wikipedia.org/wiki/Perl" title="Perl">Perl</a></div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Tk_(framework)" class="mw-redirect" title="Tk (framework)">Perl/Tk</a></li>
+<li><a href="https://en.wikipedia.org/wiki/WxPerl" title="WxPerl">wxPerl</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;"><a href="https://en.wikipedia.org/wiki/PHP" title="PHP">PHP</a></div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/PHP-GTK" title="PHP-GTK">PHP-GTK</a></li>
+<li><a href="https://en.wikipedia.org/wiki/PHP-Qt" title="PHP-Qt">PHP-Qt</a></li>
+<li><a href="https://en.wikipedia.org/wiki/WxPHP" title="WxPHP">wxPHP</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;"><a href="https://en.wikipedia.org/wiki/Python_(programming_language)" title="Python (programming language)">Python</a></div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/PyGObject" class="mw-redirect" title="PyGObject">PyGObject</a></li>
+<li><a href="https://en.wikipedia.org/wiki/PyGTK" title="PyGTK">PyGTK</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Pyjamas_(software)" class="mw-redirect" title="Pyjamas (software)">Pyjamas</a></li>
+<li><a href="https://en.wikipedia.org/wiki/PyQt" title="PyQt">PyQt</a></li>
+<li><a href="https://en.wikipedia.org/wiki/PySide" title="PySide">PySide</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Tkinter" title="Tkinter">Tkinter</a></li>
+<li><a href="https://en.wikipedia.org/wiki/WxPython" title="WxPython">wxPython</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;"><a href="https://en.wikipedia.org/wiki/Ruby_(programming_language)" title="Ruby (programming language)">Ruby</a></div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Shoes_(GUI_toolkit)" title="Shoes (GUI toolkit)">Shoes</a></li>
+<li><a href="https://en.wikipedia.org/wiki/QtRuby" title="QtRuby">QtRuby</a></li>
+<li>wxRuby</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;"><a href="https://en.wikipedia.org/wiki/Tcl" title="Tcl">Tcl</a></div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Tk_(software)" title="Tk (software)">Tcl/Tk</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;"><a href="https://en.wikipedia.org/wiki/XML" title="XML">XML</a></div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Ample_SDK" title="Ample SDK">Ample SDK</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Glade_Interface_Designer" title="Glade Interface Designer">GladeXML</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Lively_Kernel" title="Lively Kernel">Lively Kernel</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Pyjamas_(software)" class="mw-redirect" title="Pyjamas (software)">Pyjamas</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Rialto_Toolkit" title="Rialto Toolkit">Rialto Toolkit</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Extensible_Application_Markup_Language" title="Extensible Application Markup Language">XAML</a></li>
+<li><a href="XML_User_Interface.html" title="XML User Interface">XUI</a></li>
+<li><a href="https://en.wikipedia.org/wiki/XUL" title="XUL">XUL</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Wt_(web_toolkit)" title="Wt (web toolkit)">Wt</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1270
+Cached time: 20170117103933
+Cache expiry: 2592000
+Dynamic content: false
+CPU time usage: 0.188 seconds
+Real time usage: 0.244 seconds
+Preprocessor visited node count: 4330/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 230716/2097152 bytes
+Template argument size: 22963/2097152 bytes
+Highest expansion depth: 25/40
+Expensive parser function count: 2/500
+Lua time usage: 0.060/10.000 seconds
+Lua memory usage: 3.13 MB/50 MB
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  167.744      1 - -total
+ 71.27%  119.546     12 - Template:Navbox
+ 53.55%   89.826      2 - Template:Infobox
+ 43.56%   73.066      1 - Template:Infobox_software
+ 39.92%   66.966      8 - Template:Navbox_subgroup
+ 24.18%   40.561      1 - Template:Widget_toolkits
+ 16.48%   27.642      1 - Template:Reflist
+ 15.19%   25.475      1 - Template:Infobox_software/simple
+ 14.85%   24.916      1 - Template:Cite_web
+  8.95%   15.014      1 - Template:Start_date_and_age
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:3430313-0!*!0!!en!4!* and timestamp 20170117103932 and revision id 755676089
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Echo_(framework)&amp;oldid=755676089">https://en.wikipedia.org/w/index.php?title=Echo_(framework)&amp;oldid=755676089</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Help_Category.html" title="Help:Category">Categories</a>: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Java_(programming_language)_libraries" title="Category:Java (programming language) libraries">Java (programming language) libraries</a></li><li><a href="Category_Java_platform.html" title="Category:Java platform">Java platform</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Web_frameworks" title="Category:Web frameworks">Web frameworks</a></li><li><a href="Category_Java_enterprise_platform.html" title="Category:Java enterprise platform">Java enterprise platform</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Ajax_(programming)" title="Category:Ajax (programming)">Ajax (programming)</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Rich_Internet_application_frameworks" title="Category:Rich Internet application frameworks">Rich Internet application frameworks</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Software_using_the_Mozilla_license" title="Category:Software using the Mozilla license">Software using the Mozilla license</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="Special_MyTalk.html" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="Special_MyContributions.html" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&amp;returnto=Echo+%28framework%29" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Echo+%28framework%29" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="Echo_(framework).html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+															<li  id="ca-talk"><span><a href="https://en.wikipedia.org/wiki/Talk:Echo_(framework)"  title="Discussion about the content page [t]" accesskey="t" rel="discussion">Talk</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="Echo_(framework).html" >Read</a></span></li>
+															<li id="ca-edit"><span><a href="https://en.wikipedia.org/w/index.php?title=Echo_(framework)&amp;action=edit"  title="Edit this page [e]" accesskey="e">Edit</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="https://en.wikipedia.org/w/index.php?title=Echo_(framework)&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="https://en.wikipedia.org/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="Main_Page.html"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="Portal_Contents.html" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="Portal_Featured_content.html" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="Portal_Current_events.html" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="https://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="../../shop.wikimedia.org/index.html" title="Visit the Wikipedia store">Wikipedia store</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Interaction</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-help"><a href="Help_Contents.html" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="Wikipedia_About.html" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="Wikipedia_Community_portal.html" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="Wikipedia_Contact_us.html" title="How to contact Wikipedia">Contact page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="https://en.wikipedia.org/wiki/Special:WhatLinksHere/Echo_(framework)" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://en.wikipedia.org/wiki/Special:RecentChangesLinked/Echo_(framework)" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="Wikipedia_File_Upload_Wizard.html" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="https://en.wikipedia.org/w/index.php?title=Echo_(framework)&amp;oldid=755676089" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://en.wikipedia.org/w/index.php?title=Echo_(framework)&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q527540" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="https://en.wikipedia.org/w/index.php?title=Special:CiteThisPage&amp;page=Echo_%28framework%29&amp;id=755676089" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Print/export</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Echo+%28framework%29">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Echo+%28framework%29&amp;returnto=Echo+%28framework%29&amp;oldid=755676089&amp;writer=rdf2latex">Download as PDF</a></li><li id="t-print"><a href="https://en.wikipedia.org/w/index.php?title=Echo_(framework)&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Languages</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Echo_(Framework)" title="Echo (Framework) – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/Echo_(架構)" title="Echo (架構) – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q527540#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 19 December 2016, at 14:50.</li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="Wikipedia_Text_of_Creative_Commons_Attribution-ShareAlike_3.html">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="../../creativecommons.org/licenses/by-sa/3.0/index.html" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="../../wikimediafoundation.org/wiki/Terms_of_Use.html">Terms of Use</a> and <a href="../../wikimediafoundation.org/wiki/Privacy_policy.html">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="../../www.wikimediafoundation.org/index.html">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../../wikimediafoundation.org/wiki/Privacy_policy.html" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="Wikipedia_About.html" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="Wikipedia_General_disclaimer.html" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="Wikipedia_Contact_us.html">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a href="../../www.mediawiki.org/wiki/Special_MyLanguage/How_to_contribute.html">Developers</a></li>
+											<li id="footer-places-cookiestatement"><a href="../../wikimediafoundation.org/wiki/Cookie_statement.html">Cookie statement</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/w/index.php?title=Echo_(framework)&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="../../www.wikimediafoundation.org/index.html"><img src="https://en.wikipedia.org/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="../../www.mediawiki.org/index.html"><img src="https://en.wikipedia.org/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":55,"wgHostname":"mw1178"});});</script>
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Echo_(framework) by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:52:57 GMT -->
+</html>

@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Chain-of-responsibility_pattern by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:52:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Chain-of-responsibility pattern - Wikipedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Chain-of-responsibility_pattern","wgTitle":"Chain-of-responsibility pattern","wgCurRevisionId":755512617,"wgRevisionId":755512617,"wgArticleId":23830136,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles to be expanded from December 2012","Articles using small message boxes","Articles with example Java code","Software design patterns"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Chain-of-responsibility_pattern","wgRelevantArticleId":23830136,"wgRequestId":"WHJ4JApAMEgAAFmjMSsAAABS","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgFlaggedRevsParams":{"tags":{}},"wgStableRevisionId":null,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"en","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgWikibaseItemId":"Q231062","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.cite.styles":"ready","ext.pygments":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@1dqfd7l",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["ext.cite.a11y","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.legacy.wikibits","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.watchlist-notice","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.gadget.featured-articles-links","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.interface","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="https://en.wikipedia.org/w/load.php?debug=false&amp;lang=en&amp;modules=ext.cite.styles%7Cext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="../w/load2c8d.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../w/load18b6.css?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.29.0-wmf.7"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="https://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Chain-of-responsibility_pattern"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Chain-of-responsibility_pattern&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Chain-of-responsibility_pattern&amp;action=edit"/>
+<link rel="apple-touch-icon" href="https://en.wikipedia.org/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="../static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../w/api251f.php?action=rsd"/>
+<link rel="copyright" href="../../creativecommons.org/licenses/by-sa/3.0/index.html"/>
+<link rel="canonical" href="Chain-of-responsibility_pattern.html"/>
+<link rel="dns-prefetch" href="../../login.wikimedia.org/index.html"/>
+<link rel="dns-prefetch" href="../../meta.wikimedia.org/index.html" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Chain-of-responsibility_pattern rootpage-Chain-of-responsibility_pattern skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">Chain-of-responsibility pattern</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><script>function mfTempOpenSection(id){var block=document.getElementById("mf-section-"+id);block.className+=" open-block";block.previousSibling.className+=" open-block";}</script><p>In <a href="https://en.wikipedia.org/wiki/Object-oriented_design" title="Object-oriented design">object-oriented design</a>, the <b>chain-of-responsibility pattern</b> is a <a href="https://en.wikipedia.org/wiki/Design_pattern_(computer_science)" class="mw-redirect" title="Design pattern (computer science)">design pattern</a> consisting of a source of <a href="https://en.wikipedia.org/wiki/Command_pattern" title="Command pattern">command objects</a> and a series of <b>processing objects</b>.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[1]</a></sup> Each processing object contains logic that defines the types of command objects that it can handle; the rest are passed to the next processing object in the chain. A mechanism also exists for adding new processing objects to the end of this chain.</p>
+<p>In a variation of the standard chain-of-responsibility model, some handlers may act as <a href="https://en.wikipedia.org/wiki/Dynamic_dispatch" title="Dynamic dispatch">dispatchers</a>, capable of sending commands out in a variety of directions, forming a <i>tree of responsibility</i>. In some cases, this can occur recursively, with processing objects calling higher-up processing objects with commands that attempt to solve some smaller part of the problem; in this case recursion continues until the command is processed, or the entire tree has been explored. An <a href="https://en.wikipedia.org/wiki/XML" title="XML">XML</a> <a href="https://en.wikipedia.org/wiki/Interpreter_(computing)" title="Interpreter (computing)">interpreter</a> might work in this manner.</p>
+<p>This pattern promotes the idea of <a href="https://en.wikipedia.org/wiki/Loose_coupling" title="Loose coupling">loose coupling</a>.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Example"><span class="tocnumber">1</span> <span class="toctext">Example</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Java_example"><span class="tocnumber">1.1</span> <span class="toctext">Java example</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#C.23_example"><span class="tocnumber">1.2</span> <span class="toctext">C# example</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Crystal_example"><span class="tocnumber">1.3</span> <span class="toctext">Crystal example</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Implementations"><span class="tocnumber">2</span> <span class="toctext">Implementations</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#Cocoa_and_Cocoa_Touch"><span class="tocnumber">2.1</span> <span class="toctext">Cocoa and Cocoa Touch</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#See_also"><span class="tocnumber">3</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#References"><span class="tocnumber">4</span> <span class="toctext">References</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Example">Example</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Chain-of-responsibility_pattern&amp;action=edit&amp;section=1" title="Edit section: Example">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table role="presentation" class="mbox-small plainlinks sistersitebox" style="border:1px solid #aaa;background-color:#f9f9f9">
+<tr>
+<td class="mbox-image"><a href="https://en.wikipedia.org/wiki/File:Wikibooks-logo-en-noslogan.svg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/40px-Wikibooks-logo-en-noslogan.svg.png" width="40" height="40" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/60px-Wikibooks-logo-en-noslogan.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/80px-Wikibooks-logo-en-noslogan.svg.png 2x" data-file-width="400" data-file-height="400" /></a></td>
+<td class="mbox-text plainlist">The Wikibook <i><a href="http://en.wikibooks.org/wiki/Computer_Science_Design_Patterns" class="extiw" title="wikibooks:Computer Science Design Patterns">Computer Science Design Patterns</a></i> has a page on the topic of: <i><b><a href="http://en.wikibooks.org/wiki/Computer_Science_Design_Patterns/Chain_of_responsibility" class="extiw" title="wikibooks:Computer Science Design Patterns/Chain of responsibility">Chain-of-responsibility implementations in various languages</a></b></i></td>
+</tr>
+</table>
+<h3><span class="mw-headline" id="Java_example">Java example</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Chain-of-responsibility_pattern&amp;action=edit&amp;section=2" title="Edit section: Java example">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Below is an example of this pattern in Java. In this example we have different roles, each having a fixed purchasing limit and a successor. Every time a user in a role receives a purchase request that exceeds his or her limit, the request is passed to his or her successor.</p>
+<p>The PurchasePower abstract class with the abstract method processRequest.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kd">abstract</span> <span class="kd">class</span> <span class="nc">PurchasePower</span> <span class="o">{</span>
+    <span class="kd">protected</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">double</span> <span class="n">BASE</span> <span class="o">=</span> <span class="mi">500</span><span class="o">;</span>
+    <span class="kd">protected</span> <span class="n">PurchasePower</span> <span class="n">successor</span><span class="o">;</span>
+
+    <span class="kd">abstract</span> <span class="kd">protected</span> <span class="kt">double</span> <span class="nf">getAllowable</span><span class="o">();</span>
+    <span class="kd">abstract</span> <span class="kd">protected</span> <span class="n">String</span> <span class="nf">getRole</span><span class="o">();</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setSuccessor</span><span class="o">(</span><span class="n">PurchasePower</span> <span class="n">successor</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">successor</span> <span class="o">=</span> <span class="n">successor</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">processRequest</span><span class="o">(</span><span class="n">PurchaseRequest</span> <span class="n">request</span><span class="o">){</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">request</span><span class="o">.</span><span class="na">getAmount</span><span class="o">()</span> <span class="o">&lt;</span> <span class="k">this</span><span class="o">.</span><span class="na">getAllowable</span><span class="o">())</span> <span class="o">{</span>
+            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">getRole</span><span class="o">()</span> <span class="o">+</span> <span class="s">" will approve $"</span> <span class="o">+</span> <span class="n">request</span><span class="o">.</span><span class="na">getAmount</span><span class="o">());</span>
+        <span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">successor</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">successor</span><span class="o">.</span><span class="na">processRequest</span><span class="o">(</span><span class="n">request</span><span class="o">);</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+<p>Four implementations of the abstract class above: Manager, Director, Vice President, President</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kd">class</span> <span class="nc">ManagerPPower</span> <span class="kd">extends</span> <span class="n">PurchasePower</span> <span class="o">{</span>
+    
+    <span class="kd">protected</span> <span class="kt">double</span> <span class="nf">getAllowable</span><span class="o">(){</span>
+        <span class="k">return</span> <span class="n">BASE</span><span class="o">*</span><span class="mi">10</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">protected</span> <span class="n">String</span> <span class="nf">getRole</span><span class="o">(){</span>
+        <span class="k">return</span> <span class="s">"Manager"</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="kd">class</span> <span class="nc">DirectorPPower</span> <span class="kd">extends</span> <span class="n">PurchasePower</span> <span class="o">{</span>
+    
+    <span class="kd">protected</span> <span class="kt">double</span> <span class="nf">getAllowable</span><span class="o">(){</span>
+        <span class="k">return</span> <span class="n">BASE</span><span class="o">*</span><span class="mi">20</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">protected</span> <span class="n">String</span> <span class="nf">getRole</span><span class="o">(){</span>
+        <span class="k">return</span> <span class="s">"Director"</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="kd">class</span> <span class="nc">VicePresidentPPower</span> <span class="kd">extends</span> <span class="n">PurchasePower</span> <span class="o">{</span>
+    
+    <span class="kd">protected</span> <span class="kt">double</span> <span class="nf">getAllowable</span><span class="o">(){</span>
+        <span class="k">return</span> <span class="n">BASE</span><span class="o">*</span><span class="mi">40</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">protected</span> <span class="n">String</span> <span class="nf">getRole</span><span class="o">(){</span>
+        <span class="k">return</span> <span class="s">"Vice President"</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="kd">class</span> <span class="nc">PresidentPPower</span> <span class="kd">extends</span> <span class="n">PurchasePower</span> <span class="o">{</span>
+
+    <span class="kd">protected</span> <span class="kt">double</span> <span class="nf">getAllowable</span><span class="o">(){</span>
+        <span class="k">return</span> <span class="n">BASE</span><span class="o">*</span><span class="mi">60</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">protected</span> <span class="n">String</span> <span class="nf">getRole</span><span class="o">(){</span>
+        <span class="k">return</span> <span class="s">"President"</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+<p>The following code defines the PurchaseRequest class that keeps the request data in this example.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kd">class</span> <span class="nc">PurchaseRequest</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="kt">double</span> <span class="n">amount</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">purpose</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="nf">PurchaseRequest</span><span class="o">(</span><span class="kt">double</span> <span class="n">amount</span><span class="o">,</span> <span class="n">String</span> <span class="n">purpose</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">amount</span> <span class="o">=</span> <span class="n">amount</span><span class="o">;</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">purpose</span> <span class="o">=</span> <span class="n">purpose</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">double</span> <span class="nf">getAmount</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">amount</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setAmount</span><span class="o">(</span><span class="kt">double</span> <span class="n">amt</span><span class="o">)</span>  <span class="o">{</span>
+        <span class="n">amount</span> <span class="o">=</span> <span class="n">amt</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getPurpose</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">purpose</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setPurpose</span><span class="o">(</span><span class="n">String</span> <span class="n">reason</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">purpose</span> <span class="o">=</span> <span class="n">reason</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+<p>In the following usage example, the successors are set as follows: Manager -&gt; Director -&gt; Vice President -&gt; President</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kd">class</span> <span class="nc">CheckAuthority</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">ManagerPPower</span> <span class="n">manager</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ManagerPPower</span><span class="o">();</span>
+        <span class="n">DirectorPPower</span> <span class="n">director</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DirectorPPower</span><span class="o">();</span>
+        <span class="n">VicePresidentPPower</span> <span class="n">vp</span> <span class="o">=</span> <span class="k">new</span> <span class="n">VicePresidentPPower</span><span class="o">();</span>
+        <span class="n">PresidentPPower</span> <span class="n">president</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PresidentPPower</span><span class="o">();</span>
+        <span class="n">manager</span><span class="o">.</span><span class="na">setSuccessor</span><span class="o">(</span><span class="n">director</span><span class="o">);</span>
+        <span class="n">director</span><span class="o">.</span><span class="na">setSuccessor</span><span class="o">(</span><span class="n">vp</span><span class="o">);</span>
+        <span class="n">vp</span><span class="o">.</span><span class="na">setSuccessor</span><span class="o">(</span><span class="n">president</span><span class="o">);</span>
+
+        <span class="c1">// Press Ctrl+C to end.</span>
+        <span class="k">try</span> <span class="o">{</span>
+            <span class="k">while</span> <span class="o">(</span><span class="kc">true</span><span class="o">)</span> <span class="o">{</span>
+                <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Enter the amount to check who should approve your expenditure."</span><span class="o">);</span>
+                <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"&gt;"</span><span class="o">);</span>
+                <span class="kt">double</span> <span class="n">d</span> <span class="o">=</span> <span class="n">Double</span><span class="o">.</span><span class="na">parseDouble</span><span class="o">(</span><span class="k">new</span> <span class="n">BufferedReader</span><span class="o">(</span><span class="k">new</span> <span class="n">InputStreamReader</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">in</span><span class="o">)).</span><span class="na">readLine</span><span class="o">());</span>
+                <span class="n">manager</span><span class="o">.</span><span class="na">processRequest</span><span class="o">(</span><span class="k">new</span> <span class="n">PurchaseRequest</span><span class="o">(</span><span class="n">d</span><span class="o">,</span> <span class="s">"General"</span><span class="o">));</span>
+           <span class="o">}</span>
+        <span class="o">}</span> <span class="k">catch</span><span class="o">(</span><span class="n">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">System</span><span class="o">.</span><span class="na">exit</span><span class="o">(</span><span class="mi">1</span><span class="o">);</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+<h3><span class="mw-headline" id="C.23_example">C# example</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Chain-of-responsibility_pattern&amp;action=edit&amp;section=3" title="Edit section: C# example">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>This C# examples uses the logger application to select different sources based on the log level;</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="k">namespace</span> <span class="nn">ChainOfResponsibility</span>
+<span class="p">{</span>
+<span class="na">    [Flags]</span>
+    <span class="k">public</span> <span class="k">enum</span> <span class="n">LogLevel</span>
+    <span class="p">{</span>
+        <span class="n">None</span> <span class="p">=</span> <span class="m">0</span><span class="p">,</span>                 <span class="c1">//        0</span>
+        <span class="n">Info</span> <span class="p">=</span> <span class="m">1</span><span class="p">,</span>                 <span class="c1">//        1</span>
+        <span class="n">Debug</span> <span class="p">=</span> <span class="m">2</span><span class="p">,</span>                <span class="c1">//       10</span>
+        <span class="n">Warning</span> <span class="p">=</span> <span class="m">4</span><span class="p">,</span>              <span class="c1">//      100</span>
+        <span class="n">Error</span> <span class="p">=</span> <span class="m">8</span><span class="p">,</span>                <span class="c1">//     1000</span>
+        <span class="n">FunctionalMessage</span> <span class="p">=</span> <span class="m">16</span><span class="p">,</span>   <span class="c1">//    10000</span>
+        <span class="n">FunctionalError</span> <span class="p">=</span> <span class="m">32</span><span class="p">,</span>     <span class="c1">//   100000</span>
+        <span class="n">All</span> <span class="p">=</span> <span class="m">63</span>                  <span class="c1">//   111111</span>
+    <span class="p">}</span>
+ 
+    <span class="c1">/// &lt;summary&gt;</span>
+    <span class="c1">/// Abstract Handler in chain of responsibility pattern.</span>
+    <span class="c1">/// &lt;/summary&gt;</span>
+    <span class="k">public</span> <span class="k">abstract</span> <span class="k">class</span> <span class="nc">Logger</span>
+    <span class="p">{</span>
+        <span class="k">protected</span> <span class="n">LogLevel</span> <span class="n">logMask</span><span class="p">;</span>
+ 
+        <span class="c1">// The next Handler in the chain</span>
+        <span class="k">protected</span> <span class="n">Logger</span> <span class="n">next</span><span class="p">;</span>
+ 
+        <span class="k">public</span> <span class="nf">Logger</span><span class="p">(</span><span class="n">LogLevel</span> <span class="n">mask</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="n">logMask</span> <span class="p">=</span> <span class="n">mask</span><span class="p">;</span>
+        <span class="p">}</span>
+ 
+        <span class="c1">/// &lt;summary&gt;</span>
+        <span class="c1">/// Sets the Next logger to make a list/chain of Handlers.</span>
+        <span class="c1">/// &lt;/summary&gt;</span>
+        <span class="k">public</span> <span class="n">Logger</span> <span class="nf">SetNext</span><span class="p">(</span><span class="n">Logger</span> <span class="n">nextlogger</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">next</span> <span class="p">=</span> <span class="n">nextlogger</span><span class="p">;</span>
+            <span class="k">return</span> <span class="n">nextlogger</span><span class="p">;</span>
+        <span class="p">}</span>
+ 
+        <span class="k">public</span> <span class="k">void</span> <span class="nf">Message</span><span class="p">(</span><span class="kt">string</span> <span class="n">msg</span><span class="p">,</span> <span class="n">LogLevel</span> <span class="n">severity</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">((</span><span class="n">severity</span> <span class="p">&amp;</span> <span class="n">logMask</span><span class="p">)</span> <span class="p">!=</span> <span class="m">0</span><span class="p">)</span> <span class="c1">//True only if all logMask bits are set in severity</span>
+            <span class="p">{</span>
+                <span class="n">WriteMessage</span><span class="p">(</span><span class="n">msg</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">next</span> <span class="p">!=</span> <span class="k">null</span><span class="p">)</span> 
+            <span class="p">{</span>
+                <span class="n">next</span><span class="p">.</span><span class="n">Message</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">severity</span><span class="p">);</span> 
+            <span class="p">}</span>
+        <span class="p">}</span>
+ 
+        <span class="k">abstract</span> <span class="k">protected</span> <span class="k">void</span> <span class="nf">WriteMessage</span><span class="p">(</span><span class="kt">string</span> <span class="n">msg</span><span class="p">);</span>
+    <span class="p">}</span>
+ 
+    <span class="k">public</span> <span class="k">class</span> <span class="nc">ConsoleLogger</span> <span class="p">:</span> <span class="n">Logger</span>
+    <span class="p">{</span>
+        <span class="k">public</span> <span class="nf">ConsoleLogger</span><span class="p">(</span><span class="n">LogLevel</span> <span class="n">mask</span><span class="p">)</span>
+            <span class="p">:</span> <span class="k">base</span><span class="p">(</span><span class="n">mask</span><span class="p">)</span>
+        <span class="p">{</span> <span class="p">}</span>
+ 
+        <span class="k">protected</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">WriteMessage</span><span class="p">(</span><span class="kt">string</span> <span class="n">msg</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Writing to console: "</span> <span class="p">+</span> <span class="n">msg</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+ 
+    <span class="k">public</span> <span class="k">class</span> <span class="nc">EmailLogger</span> <span class="p">:</span> <span class="n">Logger</span>
+    <span class="p">{</span>
+        <span class="k">public</span> <span class="nf">EmailLogger</span><span class="p">(</span><span class="n">LogLevel</span> <span class="n">mask</span><span class="p">)</span>
+            <span class="p">:</span> <span class="k">base</span><span class="p">(</span><span class="n">mask</span><span class="p">)</span>
+        <span class="p">{</span> <span class="p">}</span>
+ 
+        <span class="k">protected</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">WriteMessage</span><span class="p">(</span><span class="kt">string</span> <span class="n">msg</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="c1">// Placeholder for mail send logic, usually the email configurations are saved in config file.</span>
+            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Sending via email: "</span> <span class="p">+</span> <span class="n">msg</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+ 
+    <span class="k">class</span> <span class="nc">FileLogger</span> <span class="p">:</span> <span class="n">Logger</span>
+    <span class="p">{</span>
+        <span class="k">public</span> <span class="nf">FileLogger</span><span class="p">(</span><span class="n">LogLevel</span> <span class="n">mask</span><span class="p">)</span>
+            <span class="p">:</span> <span class="k">base</span><span class="p">(</span><span class="n">mask</span><span class="p">)</span>
+        <span class="p">{</span> <span class="p">}</span>
+ 
+        <span class="k">protected</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">WriteMessage</span><span class="p">(</span><span class="kt">string</span> <span class="n">msg</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="c1">// Placeholder for File writing logic</span>
+            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Writing to Log File: "</span> <span class="p">+</span> <span class="n">msg</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+ 
+    <span class="k">public</span> <span class="k">class</span> <span class="nc">Program</span>
+    <span class="p">{</span>
+        <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="c1">// Build the chain of responsibility</span>
+            <span class="n">Logger</span> <span class="n">logger</span><span class="p">,</span> <span class="n">logger1</span><span class="p">,</span> <span class="n">logger2</span><span class="p">;</span>
+            <span class="n">logger</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ConsoleLogger</span><span class="p">(</span><span class="n">LogLevel</span><span class="p">.</span><span class="n">All</span><span class="p">);</span>
+            <span class="n">logger1</span> <span class="p">=</span> <span class="n">logger</span><span class="p">.</span><span class="n">SetNext</span><span class="p">(</span><span class="k">new</span> <span class="n">EmailLogger</span><span class="p">(</span><span class="n">LogLevel</span><span class="p">.</span><span class="n">FunctionalMessage</span> <span class="p">|</span> <span class="n">LogLevel</span><span class="p">.</span><span class="n">FunctionalError</span><span class="p">));</span>
+            <span class="n">logger2</span> <span class="p">=</span> <span class="n">logger1</span><span class="p">.</span><span class="n">SetNext</span><span class="p">(</span><span class="k">new</span> <span class="n">FileLogger</span><span class="p">(</span><span class="n">LogLevel</span><span class="p">.</span><span class="n">Warning</span> <span class="p">|</span> <span class="n">LogLevel</span><span class="p">.</span><span class="n">Error</span><span class="p">));</span>
+ 
+            <span class="c1">// Handled by ConsoleLogger since the console has a loglevel of all</span>
+            <span class="n">logger</span><span class="p">.</span><span class="n">Message</span><span class="p">(</span><span class="s">"Entering function ProcessOrder()."</span><span class="p">,</span> <span class="n">LogLevel</span><span class="p">.</span><span class="n">Debug</span><span class="p">);</span>
+            <span class="n">logger</span><span class="p">.</span><span class="n">Message</span><span class="p">(</span><span class="s">"Order record retrieved."</span><span class="p">,</span> <span class="n">LogLevel</span><span class="p">.</span><span class="n">Info</span><span class="p">);</span>
+ 
+            <span class="c1">// Handled by ConsoleLogger and FileLogger since filelogger implements Warning &amp; Error</span>
+            <span class="n">logger</span><span class="p">.</span><span class="n">Message</span><span class="p">(</span><span class="s">"Customer Address details missing in Branch DataBase."</span><span class="p">,</span> <span class="n">LogLevel</span><span class="p">.</span><span class="n">Warning</span><span class="p">);</span>
+            <span class="n">logger</span><span class="p">.</span><span class="n">Message</span><span class="p">(</span><span class="s">"Customer Address details missing in Organization DataBase."</span><span class="p">,</span> <span class="n">LogLevel</span><span class="p">.</span><span class="n">Error</span><span class="p">);</span>
+ 
+            <span class="c1">// Handled by ConsoleLogger and EmailLogger as it implements functional error</span>
+            <span class="n">logger</span><span class="p">.</span><span class="n">Message</span><span class="p">(</span><span class="s">"Unable to Process Order ORD1 Dated D1 For Customer C1."</span><span class="p">,</span> <span class="n">LogLevel</span><span class="p">.</span><span class="n">FunctionalError</span><span class="p">);</span>
+ 
+            <span class="c1">// Handled by ConsoleLogger and EmailLogger</span>
+            <span class="n">logger</span><span class="p">.</span><span class="n">Message</span><span class="p">(</span><span class="s">"Order Dispatched."</span><span class="p">,</span> <span class="n">LogLevel</span><span class="p">.</span><span class="n">FunctionalMessage</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+ 
+<span class="cm">/* Output</span>
+<span class="cm">Writing to console: Entering function ProcessOrder().</span>
+<span class="cm">Writing to console: Order record retrieved.</span>
+<span class="cm">Writing to console: Customer Address details missing in Branch DataBase.</span>
+<span class="cm">Writing to Log File: Customer Address details missing in Branch DataBase.</span>
+<span class="cm">Writing to console: Customer Address details missing in Organization DataBase.</span>
+<span class="cm">Writing to Log File: Customer Address details missing in Organization DataBase.</span>
+<span class="cm">Writing to console: Unable to Process Order ORD1 Dated D1 For Customer C1.</span>
+<span class="cm">Sending via email: Unable to Process Order ORD1 Dated D1 For Customer C1.</span>
+<span class="cm">Writing to console: Order Dispatched.</span>
+<span class="cm">Sending via email: Order Dispatched.</span>
+<span class="cm">*/</span>
+</pre></div>
+<h3><span class="mw-headline" id="Crystal_example">Crystal example</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Chain-of-responsibility_pattern&amp;action=edit&amp;section=4" title="Edit section: Crystal example">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="n">enum</span> <span class="no">LogLevel</span>
+  <span class="no">None</span><span class="p">,</span>
+  <span class="no">Info</span><span class="p">,</span>
+  <span class="no">Debug</span><span class="p">,</span>
+  <span class="no">Warning</span><span class="p">,</span>
+  <span class="no">Error</span><span class="p">,</span>
+  <span class="no">FunctionalMessage</span><span class="p">,</span>
+  <span class="no">FunctionalError</span><span class="p">,</span>
+  <span class="no">All</span>
+<span class="k">end</span>
+
+<span class="n">abstract</span> <span class="k">class</span> <span class="nc">Logger</span>
+  <span class="kp">protected</span> <span class="n">getter</span> <span class="n">log_levels</span>
+  <span class="kp">protected</span> <span class="n">getter</span> <span class="k">next</span> <span class="p">:</span> <span class="no">Logger</span> <span class="o">|</span> <span class="no">Nil</span>
+
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="o">*</span><span class="n">levels</span><span class="p">)</span>
+    <span class="vi">@log_levels</span> <span class="o">=</span> <span class="o">[]</span> <span class="n">of</span> <span class="no">LogLevel</span>
+
+    <span class="n">levels</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">level</span><span class="o">|</span>
+      <span class="vi">@log_levels</span> <span class="o">&lt;&lt;</span> <span class="n">level</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">set_next</span><span class="p">(</span><span class="n">next_logger</span> <span class="p">:</span> <span class="no">Logger</span><span class="p">)</span>
+    <span class="vi">@next</span> <span class="o">=</span> <span class="n">next_logger</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">message</span><span class="p">(</span><span class="n">msg</span> <span class="p">:</span> <span class="nb">String</span><span class="p">,</span> <span class="n">severity</span> <span class="p">:</span> <span class="no">LogLevel</span><span class="p">)</span>
+    <span class="n">write_message</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span> <span class="k">if</span> <span class="vi">@log_levels</span><span class="o">.</span><span class="n">includes?</span><span class="p">(</span><span class="no">LogLevel</span><span class="o">::</span><span class="no">All</span><span class="p">)</span> <span class="o">||</span> <span class="vi">@log_levels</span><span class="o">.</span><span class="n">includes?</span><span class="p">(</span><span class="n">severity</span><span class="p">)</span>
+    <span class="vi">@next</span><span class="o">.</span><span class="n">try</span><span class="p">(</span><span class="o">&amp;.</span><span class="n">message</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">severity</span><span class="p">))</span> <span class="k">if</span> <span class="vi">@next</span>
+  <span class="k">end</span>
+
+  <span class="n">abstract</span> <span class="k">def</span> <span class="nf">write_message</span><span class="p">(</span><span class="n">msg</span> <span class="p">:</span> <span class="nb">String</span><span class="p">)</span>
+<span class="k">end</span>
+
+<span class="k">class</span> <span class="nc">ConsoleLogger</span> <span class="o">&lt;</span> <span class="no">Logger</span>
+  <span class="k">def</span> <span class="nf">write_message</span><span class="p">(</span><span class="n">msg</span> <span class="p">:</span> <span class="nb">String</span><span class="p">)</span>
+    <span class="nb">puts</span> <span class="s2">"Writing to console: </span><span class="si">#{</span><span class="n">msg</span><span class="si">}</span><span class="s2">"</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="k">class</span> <span class="nc">EmailLogger</span> <span class="o">&lt;</span> <span class="no">Logger</span>
+  <span class="k">def</span> <span class="nf">write_message</span><span class="p">(</span><span class="n">msg</span> <span class="p">:</span> <span class="nb">String</span><span class="p">)</span>
+    <span class="nb">puts</span> <span class="s2">"Sending via email: </span><span class="si">#{</span><span class="n">msg</span><span class="si">}</span><span class="s2">"</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="k">class</span> <span class="nc">FileLogger</span> <span class="o">&lt;</span> <span class="no">Logger</span>
+  <span class="k">def</span> <span class="nf">write_message</span><span class="p">(</span><span class="n">msg</span> <span class="p">:</span> <span class="nb">String</span><span class="p">)</span>
+    <span class="nb">puts</span> <span class="s2">"Writing to Log File: </span><span class="si">#{</span><span class="n">msg</span><span class="si">}</span><span class="s2">"</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="c1"># Program</span>
+<span class="c1"># Build the chain of responsibility</span>
+<span class="n">logger</span> <span class="o">=</span> <span class="no">ConsoleLogger</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">LogLevel</span><span class="o">::</span><span class="no">All</span><span class="p">)</span>
+<span class="n">logger1</span> <span class="o">=</span> <span class="n">logger</span><span class="o">.</span><span class="n">set_next</span><span class="p">(</span><span class="no">EmailLogger</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">LogLevel</span><span class="o">::</span><span class="no">FunctionalMessage</span><span class="p">,</span> <span class="no">LogLevel</span><span class="o">::</span><span class="no">FunctionalError</span><span class="p">))</span>
+<span class="n">logger2</span> <span class="o">=</span> <span class="n">logger1</span><span class="o">.</span><span class="n">set_next</span><span class="p">(</span><span class="no">FileLogger</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">LogLevel</span><span class="o">::</span><span class="no">Warning</span><span class="p">,</span> <span class="no">LogLevel</span><span class="o">::</span><span class="no">Error</span><span class="p">))</span>
+
+<span class="c1"># Handled by ConsoleLogger since the console has a loglevel of all</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">message</span><span class="p">(</span><span class="s2">"Entering function ProcessOrder()."</span><span class="p">,</span> <span class="no">LogLevel</span><span class="o">::</span><span class="no">Debug</span><span class="p">)</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">message</span><span class="p">(</span><span class="s2">"Order record retrieved."</span><span class="p">,</span> <span class="no">LogLevel</span><span class="o">::</span><span class="no">Info</span><span class="p">)</span>
+
+<span class="c1"># Handled by ConsoleLogger and FileLogger since filelogger implements Warning &amp; Error</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">message</span><span class="p">(</span><span class="s2">"Customer Address details missing in Branch DataBase."</span><span class="p">,</span> <span class="no">LogLevel</span><span class="o">::</span><span class="no">Warning</span><span class="p">)</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">message</span><span class="p">(</span><span class="s2">"Customer Address details missing in Organization DataBase."</span><span class="p">,</span> <span class="no">LogLevel</span><span class="o">::</span><span class="no">Error</span><span class="p">)</span>
+
+<span class="c1"># Handled by ConsoleLogger and EmailLogger as it implements functional error</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">message</span><span class="p">(</span><span class="s2">"Unable to Process Order ORD1 Dated D1 For Customer C1."</span><span class="p">,</span> <span class="no">LogLevel</span><span class="o">::</span><span class="no">FunctionalError</span><span class="p">)</span>
+
+<span class="c1"># Handled by ConsoleLogger and EmailLogger</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">message</span><span class="p">(</span><span class="s2">"Order Dispatched."</span><span class="p">,</span> <span class="no">LogLevel</span><span class="o">::</span><span class="no">FunctionalMessage</span><span class="p">)</span>
+</pre></div>
+<p>Output</p>
+<pre>
+Writing to console: Entering function ProcessOrder().
+Writing to console: Order record retrieved.
+Writing to console: Customer Address details missing in Branch DataBase.
+Writing to Log File: Customer Address details missing in Branch DataBase.
+Writing to console: Customer Address details missing in Organization DataBase.
+Writing to Log File: Customer Address details missing in Organization DataBase.
+Writing to console: Unable to Process Order ORD1 Dated D1 For Customer C1.
+Sending via email: Unable to Process Order ORD1 Dated D1 For Customer C1.
+Writing to console: Order Dispatched.
+Sending via email: Order Dispatched.
+</pre>
+<h2><span class="mw-headline" id="Implementations">Implementations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Chain-of-responsibility_pattern&amp;action=edit&amp;section=5" title="Edit section: Implementations">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="plainlinks metadata ambox mbox-small-left ambox-content" role="presentation">
+<tr>
+<td class="mbox-image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Ambox_important.svg/20px-Ambox_important.svg.png" width="20" height="20" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Ambox_important.svg/30px-Ambox_important.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Ambox_important.svg/40px-Ambox_important.svg.png 2x" data-file-width="40" data-file-height="40" /></td>
+<td class="mbox-text"><span class="mbox-text-span">This section <b>is incomplete</b>. <small><i>(December 2012)</i></small></span></td>
+</tr>
+</table>
+<h3><span class="mw-headline" id="Cocoa_and_Cocoa_Touch">Cocoa and Cocoa Touch</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Chain-of-responsibility_pattern&amp;action=edit&amp;section=6" title="Edit section: Cocoa and Cocoa Touch">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The <a href="https://en.wikipedia.org/wiki/Cocoa_(API)" title="Cocoa (API)">Cocoa</a> and <a href="https://en.wikipedia.org/wiki/Cocoa_Touch" title="Cocoa Touch">Cocoa Touch</a> frameworks, used for <a href="https://en.wikipedia.org/wiki/OS_X" class="mw-redirect" title="OS X">OS X</a> and <a href="https://en.wikipedia.org/wiki/IOS" title="IOS">iOS</a> applications respectively, actively use the chain-of-responsibility pattern for handling events. Objects that participate in the chain are called <i>responder</i> objects, inheriting from the <code>NSResponder</code> (OS X)/<code>UIResponder</code> (iOS) class. All view objects (<code>NSView</code>/<code>UIView</code>), view controller objects (<code>NSViewController</code>/<code>UIViewController</code>), window objects (<code>NSWindow</code>/<code>UIWindow</code>), and the application object (<code>NSApplication</code>/<code>UIApplication</code>) are responder objects.</p>
+<p>Typically, when a view receives an event which it can't handle, it dispatches it to its superview until it reaches the view controller or window object. If the window can't handle the event, the event is dispatched to the application object, which is the last object in the chain. For example:</p>
+<ul>
+<li>On OS X, moving a textured window with the mouse can be done from any location (not just the title bar), unless on that location there's a view which handles dragging events, like slider controls. If no such view (or superview) is there, dragging events are sent up the chain to the window which does handle the dragging event.</li>
+<li>On iOS, it's typical to handle view events in the view controller which manages the view hierarchy, instead of subclassing the view itself. Since a view controller lies in the responder chain after all of its managed subviews, it can intercept any view events and handle them.</li>
+</ul>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Chain-of-responsibility_pattern&amp;action=edit&amp;section=7" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Software_design_pattern" title="Software design pattern">Software design pattern</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Single_responsibility_principle" title="Single responsibility principle">Single responsibility principle</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Chain-of-responsibility_pattern&amp;action=edit&amp;section=8" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://www.blackwasp.co.uk/ChainOfResponsibility.aspx">http://www.blackwasp.co.uk/ChainOfResponsibility.aspx</a></span></li>
+</ol>
+</div>
+<div role="navigation" class="navbox" aria-labelledby="Software_design_patterns" style="padding:3px">
+<table class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="https://en.wikipedia.org/wiki/Template:Design_Patterns_patterns" title="Template:Design Patterns patterns"><abbr title="View this template" style=";;background:none transparent;border:none;">v</abbr></a></li>
+<li class="nv-talk"><a href="https://en.wikipedia.org/wiki/Template_talk:Design_Patterns_patterns" title="Template talk:Design Patterns patterns"><abbr title="Discuss this template" style=";;background:none transparent;border:none;">t</abbr></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Design_Patterns_patterns&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;">e</abbr></a></li>
+</ul>
+</div>
+<div id="Software_design_patterns" style="font-size:114%"><a href="https://en.wikipedia.org/wiki/Software_design_pattern" title="Software design pattern">Software design patterns</a></div>
+</th>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Design_Patterns" title="Design Patterns">Gang of Four<br />
+patterns</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em"></div>
+<table class="nowraplinks navbox-subgroup" style="border-spacing:0">
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;"><a href="https://en.wikipedia.org/wiki/Creational_pattern" title="Creational pattern">Creational</a></div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Abstract_factory_pattern.html" title="Abstract factory pattern">Abstract factory</a></li>
+<li><a href="Builder_pattern.html" title="Builder pattern">Builder</a></li>
+<li><a href="Factory_method_pattern.html" title="Factory method pattern">Factory method</a></li>
+<li><a href="Prototype_pattern.html" title="Prototype pattern">Prototype</a></li>
+<li><a href="Singleton_pattern.html" title="Singleton pattern">Singleton</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;"><a href="https://en.wikipedia.org/wiki/Structural_pattern" title="Structural pattern">Structural</a></div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Adapter_pattern.html" title="Adapter pattern">Adapter</a></li>
+<li><a href="Bridge_pattern.html" title="Bridge pattern">Bridge</a></li>
+<li><a href="Composite_pattern.html" title="Composite pattern">Composite</a></li>
+<li><a href="Decorator_pattern.html" title="Decorator pattern">Decorator</a></li>
+<li><a href="Facade_pattern.html" title="Facade pattern">Facade</a></li>
+<li><a href="Flyweight_pattern.html" title="Flyweight pattern">Flyweight</a></li>
+<li><a href="Proxy_pattern.html" title="Proxy pattern">Proxy</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;"><a href="https://en.wikipedia.org/wiki/Behavioral_pattern" title="Behavioral pattern">Behavioral</a></div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><strong class="selflink">Chain of responsibility</strong></li>
+<li><a href="https://en.wikipedia.org/wiki/Command_pattern" title="Command pattern">Command</a></li>
+<li><a href="Interpreter_pattern.html" title="Interpreter pattern">Interpreter</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Iterator_pattern" title="Iterator pattern">Iterator</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Mediator_pattern" title="Mediator pattern">Mediator</a></li>
+<li><a href="Memento_pattern.html" title="Memento pattern">Memento</a></li>
+<li><a href="Observer_pattern.html" title="Observer pattern">Observer</a></li>
+<li><a href="https://en.wikipedia.org/wiki/State_pattern" title="State pattern">State</a></li>
+<li><a href="Strategy_pattern.html" title="Strategy pattern">Strategy</a></li>
+<li><a href="Template_method_pattern.html" title="Template method pattern">Template method</a></li>
+<li><a href="Visitor_pattern.html" title="Visitor pattern">Visitor</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Concurrency_pattern" title="Concurrency pattern">Concurrency<br />
+patterns</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Active_object" title="Active object">Active object</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Balking_pattern" title="Balking pattern">Balking</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Binding_properties_pattern" title="Binding properties pattern">Binding properties</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Double-checked_locking" title="Double-checked locking">Double-checked locking</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Asynchronous_method_invocation" title="Asynchronous method invocation">Event-based asynchronous</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Guarded_suspension" title="Guarded suspension">Guarded suspension</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Join-pattern" title="Join-pattern">Join</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Lock_pattern" class="mw-redirect" title="Lock pattern">Lock</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Monitor_(synchronization)" title="Monitor (synchronization)">Monitor</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Proactor_pattern" title="Proactor pattern">Proactor</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Reactor_pattern" title="Reactor pattern">Reactor</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Readers–writer_lock" title="Readers–writer lock">Read write lock</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Scheduler_pattern" class="mw-redirect" title="Scheduler pattern">Scheduler</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Thread_pool_pattern" class="mw-redirect" title="Thread pool pattern">Thread pool</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Thread-local_storage" title="Thread-local storage">Thread-local storage</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Architectural_pattern" title="Architectural pattern">Architectural<br />
+patterns</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Front_controller" title="Front controller">Front controller</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Interceptor_pattern" title="Interceptor pattern">Interceptor</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Model–view–controller" title="Model–view–controller">MVC</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Multitier_architecture" title="Multitier architecture"><i>n</i>-tier</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Specification_pattern" title="Specification pattern">Specification</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Publish–subscribe_pattern" title="Publish–subscribe pattern">Publish–subscribe</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Naked_objects" title="Naked objects">Naked objects</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Service_locator_pattern" title="Service locator pattern">Service locator</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Active_record_pattern" title="Active record pattern">Active record</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Identity_map_pattern" title="Identity map pattern">Identity map</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Data_access_object" title="Data access object">Data access object</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Data_transfer_object" title="Data transfer object">Data transfer object</a></li>
+<li><a href="https://en.wikipedia.org/w/index.php?title=Action%E2%80%93Domain%E2%80%93Responder&amp;action=edit&amp;redlink=1" class="new" title="Action–Domain–Responder (page does not exist)">ADR</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Inversion_of_control" title="Inversion of control">Inversion of control</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Other<br />
+patterns</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Blackboard_design_pattern" class="mw-redirect" title="Blackboard design pattern">Blackboard</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Business_delegate_pattern" title="Business delegate pattern">Business delegate</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Composite_entity_pattern" title="Composite entity pattern">Composite entity</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Dependency_injection" title="Dependency injection">Dependency injection</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Intercepting_filter_pattern" title="Intercepting filter pattern">Intercepting filter</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Lazy_loading" title="Lazy loading">Lazy loading</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Mock_object" title="Mock object">Mock object</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Null_object_pattern" class="mw-redirect" title="Null object pattern">Null object</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Object_pool_pattern" title="Object pool pattern">Object pool</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Servant_(design_pattern)" title="Servant (design pattern)">Servant</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Twin_pattern" title="Twin pattern">Twin</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Type_Tunnel_pattern" title="Type Tunnel pattern">Type tunnel</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Books</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><i><a href="https://en.wikipedia.org/wiki/Design_Patterns" title="Design Patterns">Design Patterns</a></i></li>
+<li><i><a href="https://en.wikipedia.org/wiki/Enterprise_Integration_Patterns" title="Enterprise Integration Patterns">Enterprise Integration Patterns</a></i></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">People</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Christopher_Alexander" title="Christopher Alexander">Christopher Alexander</a></li>
+<li><a href="Erich_Gamma.html" title="Erich Gamma">Erich Gamma</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Ralph_Johnson_(computer_scientist)" title="Ralph Johnson (computer scientist)">Ralph Johnson</a></li>
+<li><a href="https://en.wikipedia.org/wiki/John_Vlissides" title="John Vlissides">John Vlissides</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Grady_Booch" title="Grady Booch">Grady Booch</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Kent_Beck" title="Kent Beck">Kent Beck</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Ward_Cunningham" title="Ward Cunningham">Ward Cunningham</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Martin_Fowler" title="Martin Fowler">Martin Fowler</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Robert_Cecil_Martin" title="Robert Cecil Martin">Robert Martin</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Jim_Coplien" title="Jim Coplien">Jim Coplien</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Douglas_C._Schmidt" title="Douglas C. Schmidt">Douglas Schmidt</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Linda_Rising" title="Linda Rising">Linda Rising</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Communities</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/The_Hillside_Group" title="The Hillside Group">The Hillside Group</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Portland_Pattern_Repository" title="Portland Pattern Repository">The Portland Pattern Repository</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1242
+Cached time: 20161231081952
+Cache expiry: 2592000
+Dynamic content: false
+CPU time usage: 0.092 seconds
+Real time usage: 0.823 seconds
+Preprocessor visited node count: 814/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 33045/2097152 bytes
+Template argument size: 2239/2097152 bytes
+Highest expansion depth: 11/40
+Expensive parser function count: 1/500
+Lua time usage: 0.022/10.000 seconds
+Lua memory usage: 1.19 MB/50 MB
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  782.304      1 - -total
+  3.99%   31.199      1 - Template:Incomplete
+  3.32%   25.968      2 - Template:Main_other
+  3.11%   24.310      1 - Template:Ambox
+  2.84%   22.233      2 - Template:Navbox
+  2.74%   21.401      1 - Template:Wikibooks
+  2.58%   20.212      1 - Template:Design_Patterns_Patterns
+  2.55%   19.934      1 - Template:Sister_project
+  2.32%   18.142      1 - Template:Side_box
+  1.20%    9.362      1 - Template:Navbox_subgroup
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:23830136-0!*!0!!en!4!* and timestamp 20161231081951 and revision id 755512617
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Chain-of-responsibility_pattern&amp;oldid=755512617">https://en.wikipedia.org/w/index.php?title=Chain-of-responsibility_pattern&amp;oldid=755512617</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Help_Category.html" title="Help:Category">Categories</a>: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Software_design_patterns" title="Category:Software design patterns">Software design patterns</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Articles_to_be_expanded_from_December_2012" title="Category:Articles to be expanded from December 2012">Articles to be expanded from December 2012</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Articles_using_small_message_boxes" title="Category:Articles using small message boxes">Articles using small message boxes</a></li><li><a href="Category_Articles_with_example_Java_code.html" title="Category:Articles with example Java code">Articles with example Java code</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="Special_MyTalk.html" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="Special_MyContributions.html" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&amp;returnto=Chain-of-responsibility+pattern" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Chain-of-responsibility+pattern" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="Chain-of-responsibility_pattern.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+															<li  id="ca-talk"><span><a href="https://en.wikipedia.org/wiki/Talk:Chain-of-responsibility_pattern"  title="Discussion about the content page [t]" accesskey="t" rel="discussion">Talk</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="Chain-of-responsibility_pattern.html" >Read</a></span></li>
+															<li id="ca-edit"><span><a href="https://en.wikipedia.org/w/index.php?title=Chain-of-responsibility_pattern&amp;action=edit"  title="Edit this page [e]" accesskey="e">Edit</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="https://en.wikipedia.org/w/index.php?title=Chain-of-responsibility_pattern&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="https://en.wikipedia.org/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="Main_Page.html"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="Portal_Contents.html" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="Portal_Featured_content.html" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="Portal_Current_events.html" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="https://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="../../shop.wikimedia.org/index.html" title="Visit the Wikipedia store">Wikipedia store</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Interaction</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-help"><a href="Help_Contents.html" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="Wikipedia_About.html" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="Wikipedia_Community_portal.html" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="Wikipedia_Contact_us.html" title="How to contact Wikipedia">Contact page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="https://en.wikipedia.org/wiki/Special:WhatLinksHere/Chain-of-responsibility_pattern" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://en.wikipedia.org/wiki/Special:RecentChangesLinked/Chain-of-responsibility_pattern" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="Wikipedia_File_Upload_Wizard.html" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="https://en.wikipedia.org/w/index.php?title=Chain-of-responsibility_pattern&amp;oldid=755512617" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://en.wikipedia.org/w/index.php?title=Chain-of-responsibility_pattern&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q231062" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="https://en.wikipedia.org/w/index.php?title=Special:CiteThisPage&amp;page=Chain-of-responsibility_pattern&amp;id=755512617" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Print/export</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Chain-of-responsibility+pattern">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Chain-of-responsibility+pattern&amp;returnto=Chain-of-responsibility+pattern&amp;oldid=755512617&amp;writer=rdf2latex">Download as PDF</a></li><li id="t-print"><a href="https://en.wikipedia.org/w/index.php?title=Chain-of-responsibility_pattern&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-wikibase-otherprojects' aria-labelledby='p-wikibase-otherprojects-label'>
+			<h3 id='p-wikibase-otherprojects-label'>In other projects</h3>
+
+			<div class="body">
+									<ul>
+						<li class="wb-otherproject-link wb-otherproject-commons"><a href="https://commons.wikimedia.org/wiki/Category:Chain-of-responsibility_pattern" hreflang="en">Wikimedia Commons</a></li><li class="wb-otherproject-link wb-otherproject-wikibooks"><a href="https://en.wikibooks.org/wiki/Computer_Science_Design_Patterns/Chain_of_responsibility" hreflang="en">Wikibooks</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Languages</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-bg"><a href="https://bg.wikipedia.org/wiki/Верига_отговорности_(шаблон)" title="Верига отговорности (шаблон) – Bulgarian" lang="bg" hreflang="bg" class="interlanguage-link-target">Български</a></li><li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Cadena_de_responsabilitat" title="Cadena de responsabilitat – Catalan" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Zuständigkeitskette" title="Zuständigkeitskette – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Chain_of_Responsibility_(patrón_de_diseño)" title="Chain of Responsibility (patrón de diseño) – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Chaîne_de_responsabilité" title="Chaîne de responsabilité – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-gl"><a href="https://gl.wikipedia.org/wiki/Chain_of_Responsibility_(padrón_de_deseño)" title="Chain of Responsibility (padrón de deseño) – Galician" lang="gl" hreflang="gl" class="interlanguage-link-target">Galego</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/책임_연쇄_패턴" title="책임 연쇄 패턴 – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-hy"><a href="https://hy.wikipedia.org/wiki/Պարտականությունների_շղթա_(նախագծման_ձևանմուշ)" title="Պարտականությունների շղթա (նախագծման ձևանմուշ) – Armenian" lang="hy" hreflang="hy" class="interlanguage-link-target">Հայերեն</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Chain-of-responsibility_pattern" title="Chain-of-responsibility pattern – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/Felelősséglánc_programtervezési_minta" title="Felelősséglánc programtervezési minta – Hungarian" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/Chain_of_Responsibility_パターン" title="Chain of Responsibility パターン – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Łańcuch_zobowiązań_(wzorzec_projektowy)" title="Łańcuch zobowiązań (wzorzec projektowy) – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Chain_of_Responsibility" title="Chain of Responsibility – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/Цепочка_обязанностей" title="Цепочка обязанностей – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/Ланцюжок_відповідальностей" title="Ланцюжок відповідальностей – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/责任链模式" title="责任链模式 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q231062#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 18 December 2016, at 14:13.</li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="Wikipedia_Text_of_Creative_Commons_Attribution-ShareAlike_3.html">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="../../creativecommons.org/licenses/by-sa/3.0/index.html" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="../../wikimediafoundation.org/wiki/Terms_of_Use.html">Terms of Use</a> and <a href="../../wikimediafoundation.org/wiki/Privacy_policy.html">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="../../www.wikimediafoundation.org/index.html">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../../wikimediafoundation.org/wiki/Privacy_policy.html" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="Wikipedia_About.html" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="Wikipedia_General_disclaimer.html" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="Wikipedia_Contact_us.html">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a href="../../www.mediawiki.org/wiki/Special_MyLanguage/How_to_contribute.html">Developers</a></li>
+											<li id="footer-places-cookiestatement"><a href="../../wikimediafoundation.org/wiki/Cookie_statement.html">Cookie statement</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/w/index.php?title=Chain-of-responsibility_pattern&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="../../www.wikimediafoundation.org/index.html"><img src="https://en.wikipedia.org/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="../../www.mediawiki.org/index.html"><img src="https://en.wikipedia.org/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":54,"wgHostname":"mw1237"});});</script>
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Chain-of-responsibility_pattern by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:52:46 GMT -->
+</html>

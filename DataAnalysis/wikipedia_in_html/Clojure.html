@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Clojure by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:52:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Clojure - Wikipedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Clojure","wgTitle":"Clojure","wgCurRevisionId":759311677,"wgRevisionId":759311677,"wgArticleId":16561990,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles lacking in-text citations from July 2012","All articles lacking in-text citations","Wikipedia articles with GND identifiers","Lisp (programming language)","Articles with example Clojure code","Dynamic programming languages","Dynamically typed programming languages","Functional languages","JVM programming languages","Lisp programming language family","Programming languages created in 2007","Scripting languages","Software using the Eclipse license"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Clojure","wgRelevantArticleId":16561990,"wgRequestId":"WHzLMgpAICwAAHwQQ8IAAAHS","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgFlaggedRevsParams":{"tags":{}},"wgStableRevisionId":null,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"en","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgWikibaseItemId":"Q51798","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.cite.styles":"ready","ext.pygments":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@1dqfd7l",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["ext.cite.a11y","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.legacy.wikibits","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.watchlist-notice","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.gadget.featured-articles-links","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.interface","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="https://en.wikipedia.org/w/load.php?debug=false&amp;lang=en&amp;modules=ext.cite.styles%7Cext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="../w/load2c8d.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../w/load18b6.css?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.29.0-wmf.7"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="https://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Clojure"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Clojure&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Clojure&amp;action=edit"/>
+<link rel="apple-touch-icon" href="https://en.wikipedia.org/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="../static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../w/api251f.php?action=rsd"/>
+<link rel="copyright" href="../../creativecommons.org/licenses/by-sa/3.0/index.html"/>
+<link rel="canonical" href="Clojure.html"/>
+<link rel="dns-prefetch" href="../../login.wikimedia.org/index.html"/>
+<link rel="dns-prefetch" href="../../meta.wikimedia.org/index.html" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Clojure rootpage-Clojure skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">Clojure</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><script>function mfTempOpenSection(id){var block=document.getElementById("mf-section-"+id);block.className+=" open-block";block.previousSibling.className+=" open-block";}</script><div role="note" class="hatnote">Not to be confused with <a href="https://en.wikipedia.org/wiki/Clozure_CL" title="Clozure CL">Clozure CL</a>, <a href="https://en.wikipedia.org/wiki/Google_Closure_Tools" title="Google Closure Tools">Google Closure Tools</a>, or <a href="https://en.wikipedia.org/wiki/Closure_(computer_programming)" title="Closure (computer programming)">Closure (computer programming)</a>.</div>
+<table class="plainlinks metadata ambox ambox-style ambox-More_footnotes" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/40px-Text_document_with_red_question_mark.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/60px-Text_document_with_red_question_mark.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/80px-Text_document_with_red_question_mark.svg.png 2x" data-file-width="48" data-file-height="48" /></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article includes a <a href="https://en.wikipedia.org/wiki/Wikipedia:Citing_sources" title="Wikipedia:Citing sources">list of references</a>, but <b>its sources remain unclear</b> because it has <b>insufficient <a href="https://en.wikipedia.org/wiki/Wikipedia:Citing_sources#Inline_citations" title="Wikipedia:Citing sources">inline citations</a></b>. <span class="hide-when-compact">Please help to <a href="https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Fact_and_Reference_Check" title="Wikipedia:WikiProject Fact and Reference Check">improve</a> this article by <a href="https://en.wikipedia.org/wiki/Wikipedia:When_to_cite" title="Wikipedia:When to cite">introducing</a> more precise citations.</span> <small><i>(July 2012)</i></small> <small class="hide-when-compact"><i>(<a href="https://en.wikipedia.org/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></span></td>
+</tr>
+</table>
+<table class="infobox vevent" style="width:22em">
+<caption class="summary">Clojure</caption>
+<tr>
+<td colspan="2" style="text-align:center"><a href="https://en.wikipedia.org/wiki/File:Clojure_logo.svg" class="image"><img alt="Clojure logo.svg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Clojure_logo.svg/220px-Clojure_logo.svg.png" width="220" height="220" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Clojure_logo.svg/330px-Clojure_logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Clojure_logo.svg/440px-Clojure_logo.svg.png 2x" data-file-width="256" data-file-height="256" /></a></td>
+</tr>
+<tr>
+<th scope="row"><a href="https://en.wikipedia.org/wiki/Programming_paradigm" title="Programming paradigm">Paradigm</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Functional_programming" title="Functional programming">functional</a></td>
+</tr>
+<tr>
+<th scope="row"><a href="https://en.wikipedia.org/wiki/Software_design" title="Software design">Designed&#160;by</a></th>
+<td>Rich Hickey</td>
+</tr>
+<tr>
+<th scope="row">First&#160;appeared</th>
+<td>2007<span class="noprint">; 10&#160;years ago</span><span style="display:none">&#160;(<span class="bday dtstart published updated">2007</span>)</span></td>
+</tr>
+<tr>
+<td colspan="2" style="text-align:center"></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_release_life_cycle" title="Software release life cycle">Stable release</a></th>
+<td>
+<div style="margin:0px;">1.8<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[1]</a></sup> / January&#160;19, 2016<span class="noprint">; 11 months ago</span><span style="display:none">&#160;(<span class="bday dtstart published updated">2016-01-19</span>)</span></div>
+</td>
+</tr>
+<tr>
+<th scope="row"><a href="https://en.wikipedia.org/wiki/Type_system" title="Type system">Typing discipline</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Dynamic_typing" class="mw-redirect" title="Dynamic typing">dynamic</a>, <a href="https://en.wikipedia.org/wiki/Strong_typing" class="mw-redirect" title="Strong typing">strong</a></td>
+</tr>
+<tr>
+<th scope="row"><a href="https://en.wikipedia.org/wiki/Computing_platform" title="Computing platform">Platform</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Java_virtual_machine" title="Java virtual machine">JVM</a>, <a href="https://en.wikipedia.org/wiki/Common_Language_Runtime" title="Common Language Runtime">CLR</a>, <a href="https://en.wikipedia.org/wiki/JavaScript_engine" title="JavaScript engine">JavaScript</a></td>
+</tr>
+<tr>
+<th scope="row"><a href="https://en.wikipedia.org/wiki/Software_license" title="Software license">License</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Eclipse_Public_License" title="Eclipse Public License">Eclipse Public License</a></td>
+</tr>
+<tr>
+<th scope="row"><a href="https://en.wikipedia.org/wiki/Filename_extension" title="Filename extension">Filename extensions</a></th>
+<td>.clj, .cljs, .cljc, .edn</td>
+</tr>
+<tr>
+<th scope="row">Website</th>
+<td><span class="url"><a rel="nofollow" class="external text" href="http://clojure.org/">clojure<wbr />.org</a></span></td>
+</tr>
+<tr>
+<th colspan="2" style="text-align:center;background-color: #eee;">Influenced by</th>
+</tr>
+<tr>
+<td colspan="2" style="text-align:center"><a href="https://en.wikipedia.org/wiki/C++" title="C++">C++</a>,<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">[2]</a></sup> <a href="https://en.wikipedia.org/wiki/C_Sharp_(programming_language)" title="C Sharp (programming language)">C#</a>, <a href="https://en.wikipedia.org/wiki/Common_Lisp" title="Common Lisp">Common Lisp</a>, <a href="https://en.wikipedia.org/wiki/Erlang_(programming_language)" title="Erlang (programming language)">Erlang</a>, <a href="https://en.wikipedia.org/wiki/Haskell_(programming_language)" title="Haskell (programming language)">Haskell</a>, <a href="https://en.wikipedia.org/wiki/Mathematica" class="mw-redirect" title="Mathematica">Mathematica</a>,<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">[3]</a></sup> <a href="https://en.wikipedia.org/wiki/ML_(programming_language)" title="ML (programming language)">ML</a>, <a href="https://en.wikipedia.org/wiki/Prolog" title="Prolog">Prolog</a>, <a href="https://en.wikipedia.org/wiki/Scheme_(programming_language)" title="Scheme (programming language)">Scheme</a>, <a href="Java_(programming_language).html" title="Java (programming language)">Java</a>, <a href="https://en.wikipedia.org/wiki/Racket_(programming_language)" title="Racket (programming language)">Racket</a>,<sup id="cite_ref-typed-clojure-thesis_4-0" class="reference"><a href="#cite_note-typed-clojure-thesis-4">[4]</a></sup> <a href="https://en.wikipedia.org/wiki/Ruby_(programming_language)" title="Ruby (programming language)">Ruby</a><sup id="cite_ref-5" class="reference"><a href="#cite_note-5">[5]</a></sup></td>
+</tr>
+<tr>
+<th colspan="2" style="text-align:center;background-color: #eee;">Influenced</th>
+</tr>
+<tr>
+<td colspan="2" style="text-align:center"><a href="https://en.wikipedia.org/wiki/Elixir_(programming_language)" title="Elixir (programming language)">Elixir</a>, <a href="https://en.wikipedia.org/wiki/Hy" title="Hy">Hy</a>, <a href="https://en.wikipedia.org/wiki/Pixie_(programming_language)" title="Pixie (programming language)">Pixie</a>, <span class="url"><a rel="nofollow" class="external text" href="https://github.com/artagnon/rhine-ml">Rhine</a></span></td>
+</tr>
+<tr>
+<td colspan="2" class="hlist" style="text-align:center;border-top: 1px solid #aaa; padding-top: 3px;">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/File:Wikibooks-logo-en-noslogan.svg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/16px-Wikibooks-logo-en-noslogan.svg.png" width="16" height="16" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/24px-Wikibooks-logo-en-noslogan.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/32px-Wikibooks-logo-en-noslogan.svg.png 2x" data-file-width="400" data-file-height="400" /></a> <a href="https://en.wikibooks.org/wiki/Clojure_Programming" class="extiw" title="wikibooks:Clojure Programming">Clojure Programming</a> at Wikibooks</li>
+</ul>
+</td>
+</tr>
+</table>
+<p><b>Clojure</b> (<span class="nowrap"><small>pronunciation:</small> <span class="IPA nopopups"><a href="https://en.wikipedia.org/wiki/Help:IPA_for_English" title="Help:IPA for English">/<span style="border-bottom:1px dotted"><span title="/ˈ/ primary stress follows">ˈ</span><span title="'k' in 'kind'">k</span><span title="'l' in 'lie'">l</span><span title="/oʊ/ long 'o' in 'code'">oʊ</span><span title="/ʒ/ 's' in 'pleasure'">ʒ</span><span title="/ɜːr/ 'ur' in 'fur'">ɜːr</span></span>/</a></span></span>, like "<a href="https://en.wikipedia.org/wiki/Closure_(computer_science)" class="mw-redirect" title="Closure (computer science)">closure</a>"<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">[6]</a></sup>) is a <a href="https://en.wikipedia.org/wiki/Dialect_(computing)" title="Dialect (computing)">dialect</a> of the <a href="https://en.wikipedia.org/wiki/Lisp_(programming_language)" title="Lisp (programming language)">Lisp</a> <a href="https://en.wikipedia.org/wiki/Programming_language" title="Programming language">programming language</a> created by Rich Hickey.<sup id="cite_ref-:0_7-0" class="reference"><a href="#cite_note-:0-7">[7]</a></sup> Clojure is a <a href="https://en.wikipedia.org/wiki/General_purpose_programming_language" class="mw-redirect" title="General purpose programming language">general-purpose</a> programming language with an emphasis on <a href="https://en.wikipedia.org/wiki/Functional_programming" title="Functional programming">functional programming</a>.<sup id="cite_ref-:10_8-0" class="reference"><a href="#cite_note-:10-8">[8]</a></sup> It runs on the <a href="https://en.wikipedia.org/wiki/Java_virtual_machine" title="Java virtual machine">Java virtual machine</a>, <a href="https://en.wikipedia.org/wiki/Common_Language_Runtime" title="Common Language Runtime">Common Language Runtime</a>,<sup id="cite_ref-9" class="reference"><a href="#cite_note-9">[9]</a></sup> and <a href="https://en.wikipedia.org/wiki/JavaScript" title="JavaScript">JavaScript</a><sup id="cite_ref-:11_10-0" class="reference"><a href="#cite_note-:11-10">[10]</a></sup> engines. Like other Lisps, Clojure treats <a href="https://en.wikipedia.org/wiki/Homoiconicity" title="Homoiconicity">code as data</a> and has a <a href="https://en.wikipedia.org/wiki/Lisp_macro" class="mw-redirect" title="Lisp macro">macro</a> system.<sup id="cite_ref-11" class="reference"><a href="#cite_note-11">[11]</a></sup> The current development process is community-driven,<sup id="cite_ref-:8_12-0" class="reference"><a href="#cite_note-:8-12">[12]</a></sup> overseen by Rich Hickey as its <a href="https://en.wikipedia.org/wiki/Benevolent_dictator_for_life" title="Benevolent dictator for life">benevolent dictator for life</a> (BDFL).<sup id="cite_ref-13" class="reference"><a href="#cite_note-13">[13]</a></sup></p>
+<p>Clojure encourages <a href="Immutable_object.html" title="Immutable object">immutability</a> and <a href="https://en.wikipedia.org/wiki/Persistent_data_structure" title="Persistent data structure">immutable data structures</a>. While its type system is entirely <a href="https://en.wikipedia.org/wiki/Type_system" title="Type system">dynamic</a>, recent efforts have also sought the implementation of <a href="https://en.wikipedia.org/wiki/Gradual_typing" title="Gradual typing">gradual typing</a>.<sup id="cite_ref-14" class="reference"><a href="#cite_note-14">[14]</a></sup> Clojure encourages programmers to be explicit about managing state and identity.<sup id="cite_ref-:1_15-0" class="reference"><a href="#cite_note-:1-15">[15]</a></sup> This focus on programming with immutable values and explicit progression-of-time constructs is intended to facilitate developing more robust programs, especially <a href="https://en.wikipedia.org/wiki/Thread_(computer_science)" class="mw-redirect" title="Thread (computer science)">multithreaded</a> ones.<sup id="cite_ref-:2_16-0" class="reference"><a href="#cite_note-:2-16">[16]</a></sup><sup id="cite_ref-:3_17-0" class="reference"><a href="#cite_note-:3-17">[17]</a></sup></p>
+<p>Clojure is used in industry by firms such as <a href="https://en.wikipedia.org/wiki/Walmart" title="Walmart">Walmart</a>,<sup id="cite_ref-18" class="reference"><a href="#cite_note-18">[18]</a></sup> <a href="https://en.wikipedia.org/wiki/Puppet_Labs" class="mw-redirect" title="Puppet Labs">Puppet Labs</a>,<sup id="cite_ref-19" class="reference"><a href="#cite_note-19">[19]</a></sup> and other large software firms.<sup id="cite_ref-cognitect.com_20-0" class="reference"><a href="#cite_note-cognitect.com-20">[20]</a></sup> Commercial support for Clojure is provided by Cognitect.<sup id="cite_ref-cognitect.com_20-1" class="reference"><a href="#cite_note-cognitect.com-20">[20]</a></sup> Annual Clojure conferences are organised every year across the globe, the most famous of them being Clojure/conj (US east coast),<sup id="cite_ref-21" class="reference"><a href="#cite_note-21">[21]</a></sup> Clojure/West (US west coast),<sup id="cite_ref-22" class="reference"><a href="#cite_note-22">[22]</a></sup> and EuroClojure (Europe).<sup id="cite_ref-23" class="reference"><a href="#cite_note-23">[23]</a></sup></p>
+<p>The latest stable version of Clojure is 1.8,<sup id="cite_ref-:4_24-0" class="reference"><a href="#cite_note-:4-24">[24]</a></sup> released on January 19, 2016. The first stable release was version 1.0, released on May 4, 2009.<sup id="cite_ref-25" class="reference"><a href="#cite_note-25">[25]</a></sup> Clojure is <a href="https://en.wikipedia.org/wiki/Free_software" title="Free software">free software</a> released under the <a href="https://en.wikipedia.org/wiki/Eclipse_Public_License" title="Eclipse Public License">Eclipse Public License</a>.<sup id="cite_ref-26" class="reference"><a href="#cite_note-26">[26]</a></sup></p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#History_and_development_process"><span class="tocnumber">1</span> <span class="toctext">History and development process</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Design_philosophy"><span class="tocnumber">2</span> <span class="toctext">Design philosophy</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Features"><span class="tocnumber">3</span> <span class="toctext">Features</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Platforms_and_popularity"><span class="tocnumber">4</span> <span class="toctext">Platforms and popularity</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Examples"><span class="tocnumber">5</span> <span class="toctext">Examples</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#See_also"><span class="tocnumber">6</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#References"><span class="tocnumber">7</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Further_reading"><span class="tocnumber">8</span> <span class="toctext">Further reading</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#External_links"><span class="tocnumber">9</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="History_and_development_process">History and development process</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Clojure&amp;action=edit&amp;section=1" title="Edit section: History and development process">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright">
+<div class="thumbinner" style="width:222px;"><a href="https://en.wikipedia.org/wiki/File:Rich_Hickey.jpg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Rich_Hickey.jpg/220px-Rich_Hickey.jpg" width="220" height="158" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Rich_Hickey.jpg/330px-Rich_Hickey.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Rich_Hickey.jpg/440px-Rich_Hickey.jpg 2x" data-file-width="3600" data-file-height="2588" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="https://en.wikipedia.org/wiki/File:Rich_Hickey.jpg" class="internal" title="Enlarge"></a></div>
+Rich Hickey in <a href="https://en.wikipedia.org/wiki/San_Francisco" title="San Francisco">San Francisco</a></div>
+</div>
+</div>
+<p>Rich Hickey is the creator of the Clojure language.<sup id="cite_ref-:0_7-1" class="reference"><a href="#cite_note-:0-7">[7]</a></sup> Before Clojure, he developed dotLisp, a similar project based on the <a href="https://en.wikipedia.org/wiki/.NET_Framework" title=".NET Framework">.NET Framework</a>,<sup id="cite_ref-27" class="reference"><a href="#cite_note-27">[27]</a></sup> and three earlier attempts to provide interoperability between Lisp and <a href="Java_(programming_language).html" title="Java (programming language)">Java</a>: a <i>Java foreign language interface for <a href="https://en.wikipedia.org/wiki/Common_Lisp" title="Common Lisp">Common Lisp</a></i> (jfli),<sup id="cite_ref-28" class="reference"><a href="#cite_note-28">[28]</a></sup> A <i>Foreign Object Interface for Lisp</i> (FOIL),<sup id="cite_ref-29" class="reference"><a href="#cite_note-29">[29]</a></sup> and a <i>Lisp-friendly interface to Java Servlets</i> (Lisplets).<sup id="cite_ref-30" class="reference"><a href="#cite_note-30">[30]</a></sup></p>
+<p>Hickey spent about 2½ years working on Clojure before releasing it publicly, much of that time working exclusively on Clojure with no outside funding. At the end of this time, Hickey sent an email announcing the language to some friends in the Common Lisp community.</p>
+<p>The development process is community-driven<sup id="cite_ref-:8_12-1" class="reference"><a href="#cite_note-:8-12">[12]</a></sup> and is managed at the Clojure Community website.<sup id="cite_ref-31" class="reference"><a href="#cite_note-31">[31]</a></sup> The website contains planning documents and an issue tracker where bugs may be filed. General development discussion occurs at the Clojure Dev Google Group.<sup id="cite_ref-32" class="reference"><a href="#cite_note-32">[32]</a></sup> While anyone can submit bug reports and ideas, to contribute patches one must sign the Clojure Contributor agreement.<sup id="cite_ref-33" class="reference"><a href="#cite_note-33">[33]</a></sup> JIRA tickets are processed by a team of screeners and finally Rich Hickey approves the changes.<sup id="cite_ref-34" class="reference"><a href="#cite_note-34">[34]</a></sup></p>
+<h2><span class="mw-headline" id="Design_philosophy">Design philosophy</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Clojure&amp;action=edit&amp;section=2" title="Edit section: Design philosophy">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Rich Hickey developed Clojure because he wanted a modern <a href="https://en.wikipedia.org/wiki/Lisp_(programming_language)" title="Lisp (programming language)">Lisp</a> for <a href="https://en.wikipedia.org/wiki/Functional_programming" title="Functional programming">functional programming</a>, symbiotic with the established <a href="Java_(software_platform).html" title="Java (software platform)">Java</a> platform, and designed for <a href="https://en.wikipedia.org/wiki/Concurrency_(computer_science)" title="Concurrency (computer science)">concurrency</a>.<sup id="cite_ref-:2_16-1" class="reference"><a href="#cite_note-:2-16">[16]</a></sup><sup id="cite_ref-:3_17-1" class="reference"><a href="#cite_note-:3-17">[17]</a></sup><sup id="cite_ref-35" class="reference"><a href="#cite_note-35">[35]</a></sup></p>
+<p>Clojure's approach to <a href="https://en.wikipedia.org/wiki/State_(computer_science)" title="State (computer science)">state</a> is characterized by the concept of identities,<sup id="cite_ref-:5_36-0" class="reference"><a href="#cite_note-:5-36">[36]</a></sup> which are represented as a series of immutable states over time. Since states are immutable values, any number of workers can operate on them in parallel, and concurrency becomes a question of managing changes from one state to another. For this purpose, Clojure provides several mutable <a href="https://en.wikipedia.org/wiki/Reference_type" title="Reference type">reference types</a>, each having well-defined semantics for the transition between states.<sup id="cite_ref-:1_15-1" class="reference"><a href="#cite_note-:1-15">[15]</a></sup><sup id="cite_ref-:5_36-1" class="reference"><a href="#cite_note-:5-36">[36]</a></sup></p>
+<h2><span class="mw-headline" id="Features">Features</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Clojure&amp;action=edit&amp;section=3" title="Edit section: Features">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="wikitable" style="float:right; margin-left: 1em;">
+<tr>
+<th>Version</th>
+<th>Release date</th>
+<th>Major features added</th>
+</tr>
+<tr>
+<td></td>
+<td>2007-10-16<sup id="cite_ref-37" class="reference"><a href="#cite_note-37">[37]</a></sup></td>
+<td>Initial public release</td>
+</tr>
+<tr>
+<td>1.0</td>
+<td>2009-05-04<sup id="cite_ref-:9_38-0" class="reference"><a href="#cite_note-:9-38">[38]</a></sup></td>
+<td>First stable release<sup id="cite_ref-39" class="reference"><a href="#cite_note-39">[39]</a></sup></td>
+</tr>
+<tr>
+<td>1.1</td>
+<td>2009-12-31<sup id="cite_ref-:9_38-1" class="reference"><a href="#cite_note-:9-38">[38]</a></sup></td>
+<td>Futures<sup id="cite_ref-40" class="reference"><a href="#cite_note-40">[40]</a></sup></td>
+</tr>
+<tr>
+<td>1.2</td>
+<td>2010-08-19<sup id="cite_ref-:9_38-2" class="reference"><a href="#cite_note-:9-38">[38]</a></sup></td>
+<td>Protocols<sup id="cite_ref-41" class="reference"><a href="#cite_note-41">[41]</a></sup></td>
+</tr>
+<tr>
+<td>1.3</td>
+<td>2011-09-23<sup id="cite_ref-:9_38-3" class="reference"><a href="#cite_note-:9-38">[38]</a></sup></td>
+<td>Enhanced primitive support<sup id="cite_ref-42" class="reference"><a href="#cite_note-42">[42]</a></sup></td>
+</tr>
+<tr>
+<td>1.4</td>
+<td>2012-04-15<sup id="cite_ref-:9_38-4" class="reference"><a href="#cite_note-:9-38">[38]</a></sup></td>
+<td>Reader literals</td>
+</tr>
+<tr>
+<td>1.5</td>
+<td>2013-03-01<sup id="cite_ref-:9_38-5" class="reference"><a href="#cite_note-:9-38">[38]</a></sup></td>
+<td>Reducers</td>
+</tr>
+<tr>
+<td>1.6</td>
+<td>2014-03-25<sup id="cite_ref-43" class="reference"><a href="#cite_note-43">[43]</a></sup></td>
+<td>Java API, improved hashing algorithms</td>
+</tr>
+<tr>
+<td>1.7</td>
+<td>2015-06-30<sup id="cite_ref-:4_24-1" class="reference"><a href="#cite_note-:4-24">[24]</a></sup></td>
+<td>Transducers, reader conditionals</td>
+</tr>
+<tr>
+<td class="templateVersion c" style="background-color: #D4F4B4;" title="Current stable version" data-sort-value="1.8"><span style="display: none;">Current stable version:</span> <b>1.8</b></td>
+<td>2016-01-19<sup id="cite_ref-44" class="reference"><a href="#cite_note-44">[44]</a></sup></td>
+<td>Additional string functions, direct linking, socket server</td>
+</tr>
+<tr>
+<td class="templateVersion p" style="background-color: #C1E6F5;" title="Future release" data-sort-value="1.9"><span style="display: none;">Future release:</span> 1.9</td>
+<td><i>future</i></td>
+</tr>
+<tr>
+<td colspan="3">
+<div class="templateVersion l" style="margin-left: -1em;">
+<div style="float: left; margin-left: 1em; display: none;"><span style="white-space: nowrap;"><b>Legend:</b></span></div>
+<div style="float: left; margin-left: 1em; display: none;"><span style="border-left: 1.2em solid #FDB3AB; padding-left: 0.3em; white-space: nowrap;" title="Old version, no longer supported">Old version</span></div>
+<div style="float: left; margin-left: 1em; display: none;"><span style="border-left: 1.2em solid #FEF8C6; padding-left: 0.3em; white-space: nowrap;" title="An older version, yet still supported">Older version, still supported</span></div>
+<div style="float: left; margin-left: 1em;"><span style="border-left: 1.2em solid #D4F4B4; padding-left: 0.3em; white-space: nowrap;" title="Latest stable version"><b>Latest version</b></span></div>
+<div style="float: left; margin-left: 1em; display: none;"><span style="border-left: 1.2em solid #FED1A0; padding-left: 0.3em; white-space: nowrap;" title="Latest preview of a future release">Latest preview version</span></div>
+<div style="float: left; margin-left: 1em;"><span style="border-left: 1.2em solid #C1E6F5; padding-left: 0.3em; white-space: nowrap;" title="A future release">Future release</span></div>
+<div style="clear: left;"></div>
+</div>
+</td>
+</tr>
+</table>
+<p>Clojure runs on the <a href="https://en.wikipedia.org/wiki/Java_virtual_machine" title="Java virtual machine">Java virtual machine</a> and as a result integrates with <a href="Java_(programming_language).html" title="Java (programming language)">Java</a> and fully supports calling Java code from Clojure,<sup id="cite_ref-:12_45-0" class="reference"><a href="#cite_note-:12-45">[45]</a></sup> and Clojure code can be called from Java also.<sup id="cite_ref-46" class="reference"><a href="#cite_note-46">[46]</a></sup> The community uses <a href="https://en.wikipedia.org/wiki/Leiningen_(software)" title="Leiningen (software)">Leiningen</a><sup id="cite_ref-:6_47-0" class="reference"><a href="#cite_note-:6-47">[47]</a></sup> for project automation, providing support for <a href="Apache_Maven.html" title="Apache Maven">Maven</a> integration. Leiningen handles project package management and dependencies and is configured using Clojure syntax.<sup id="cite_ref-:6_47-1" class="reference"><a href="#cite_note-:6-47">[47]</a></sup></p>
+<p>Like most other Lisps, Clojure's syntax is built on <a href="https://en.wikipedia.org/wiki/S-expression" title="S-expression">S-expressions</a> that are first parsed into data structures by a reader before being compiled.<sup id="cite_ref-:7_48-0" class="reference"><a href="#cite_note-:7-48">[48]</a></sup> Clojure's <a href="https://en.wikipedia.org/wiki/Lisp_reader" title="Lisp reader">reader</a> supports literal syntax for <a href="https://en.wikipedia.org/wiki/Hash_table" title="Hash table">maps</a>, sets and <a href="https://en.wikipedia.org/wiki/Array_data_structure" title="Array data structure">vectors</a> in addition to lists, and these are compiled to the mentioned structures directly.<sup id="cite_ref-:7_48-1" class="reference"><a href="#cite_note-:7-48">[48]</a></sup> Clojure is a <a href="https://en.wikipedia.org/wiki/Lisp-1" class="mw-redirect" title="Lisp-1">Lisp-1</a> and is not intended to be code-compatible with other dialects of Lisp, since it uses its own set of data structures incompatible with other Lisps.<sup id="cite_ref-:7_48-2" class="reference"><a href="#cite_note-:7-48">[48]</a></sup><sup id="cite_ref-49" class="reference"><a href="#cite_note-49">[49]</a></sup></p>
+<p>As a Lisp dialect, Clojure supports <a href="https://en.wikipedia.org/wiki/Function_(programming)" class="mw-redirect" title="Function (programming)">functions</a> as <a href="https://en.wikipedia.org/wiki/First-class_function" title="First-class function">first-class objects</a>, a <a href="https://en.wikipedia.org/wiki/Read–eval–print_loop" title="Read–eval–print loop">read–eval–print loop</a> (REPL), and a macro system.<sup id="cite_ref-50" class="reference"><a href="#cite_note-50">[50]</a></sup> Clojure's <a href="https://en.wikipedia.org/wiki/Lisp_macro" class="mw-redirect" title="Lisp macro">macro system</a> is very similar to that in <a href="https://en.wikipedia.org/wiki/Common_Lisp" title="Common Lisp">Common Lisp</a> with the exception that Clojure's version of the <a href="https://en.wikipedia.org/wiki/Grave_accent#Use_in_programming" title="Grave accent">backquote</a> (called "syntax quote") qualifies symbols with their <a href="https://en.wikipedia.org/wiki/Namespace" title="Namespace">namespace</a>. This helps prevent unintended name capture, as binding to namespace-qualified names is forbidden. It is possible to force a capturing macro expansion, but it must be done explicitly. Clojure does not allow user-defined reader macros, but the reader supports a more constrained form of syntactic extension.<sup id="cite_ref-51" class="reference"><a href="#cite_note-51">[51]</a></sup> Clojure supports <a href="Multiple_dispatch.html" title="Multiple dispatch">multimethods</a><sup id="cite_ref-52" class="reference"><a href="#cite_note-52">[52]</a></sup> and for <a href="https://en.wikipedia.org/wiki/Software_Interface" class="mw-redirect" title="Software Interface">interface</a>-like abstractions has a <a href="https://en.wikipedia.org/wiki/Protocol_(object-oriented_programming)" title="Protocol (object-oriented programming)">protocol</a><sup id="cite_ref-53" class="reference"><a href="#cite_note-53">[53]</a></sup> based polymorphism and data type system using <a href="https://en.wikipedia.org/wiki/Record_(computer_science)" title="Record (computer science)">records</a>,<sup id="cite_ref-54" class="reference"><a href="#cite_note-54">[54]</a></sup> providing high-performance and dynamic polymorphism designed to avoid the <a href="https://en.wikipedia.org/wiki/Expression_problem" title="Expression problem">expression problem</a>.</p>
+<p>Clojure has support for <a href="https://en.wikipedia.org/wiki/Lazy_evaluation" title="Lazy evaluation">lazy sequences</a> and encourages the principle of <a href="Immutable_object.html" title="Immutable object">immutability</a> and <a href="https://en.wikipedia.org/wiki/Persistent_data_structure" title="Persistent data structure">persistent data structures</a>. As a <a href="https://en.wikipedia.org/wiki/Functional_programming" title="Functional programming">functional language</a>, emphasis is placed on <a href="https://en.wikipedia.org/wiki/Recursion" title="Recursion">recursion</a> and <a href="https://en.wikipedia.org/wiki/Higher-order_functions" class="mw-redirect" title="Higher-order functions">higher-order functions</a> instead of side-effect-based looping. Automatic <a href="https://en.wikipedia.org/wiki/Tail_call" title="Tail call">tail call</a> optimization is not supported as the JVM does not support it natively;<sup id="cite_ref-55" class="reference"><a href="#cite_note-55">[55]</a></sup> it is possible to do so explicitly by using the <code>recur</code> keyword.<sup id="cite_ref-56" class="reference"><a href="#cite_note-56">[56]</a></sup> For <a href="https://en.wikipedia.org/wiki/Parallel_computing" title="Parallel computing">parallel</a> and <a href="https://en.wikipedia.org/wiki/Concurrent_computing" title="Concurrent computing">concurrent</a> programming Clojure provides <a href="https://en.wikipedia.org/wiki/Software_transactional_memory" title="Software transactional memory">software transactional memory</a><sup id="cite_ref-57" class="reference"><a href="#cite_note-57">[57]</a></sup> a reactive <a href="https://en.wikipedia.org/wiki/Agent-based_model" title="Agent-based model">agent system</a>,<sup id="cite_ref-58" class="reference"><a href="#cite_note-58">[58]</a></sup> and <a href="https://en.wikipedia.org/wiki/Communicating_sequential_processes" title="Communicating sequential processes">channel</a>-based concurrent programming.<sup id="cite_ref-59" class="reference"><a href="#cite_note-59">[59]</a></sup></p>
+<p>Recently Clojure introduced reader conditionals by allowing the embedding of Clojure and ClojureScript code in the same namespace.<sup id="cite_ref-:4_24-2" class="reference"><a href="#cite_note-:4-24">[24]</a></sup><sup id="cite_ref-60" class="reference"><a href="#cite_note-60">[60]</a></sup> Transducers have been added as a way for composing transformations. Transducers enable higher-order functions such as <a href="https://en.wikipedia.org/wiki/Map_(higher-order_function)" title="Map (higher-order function)">map</a> and <a href="https://en.wikipedia.org/wiki/Fold_(higher-order_function)" title="Fold (higher-order function)">fold</a> to generalize over any source of input data, as traditionally these functions operate on <a href="https://en.wikipedia.org/wiki/List_(abstract_data_type)" title="List (abstract data type)">sequences</a>, transducers allow them to work on channels and let the user define their own models for transduction.<sup id="cite_ref-61" class="reference"><a href="#cite_note-61">[61]</a></sup><sup id="cite_ref-62" class="reference"><a href="#cite_note-62">[62]</a></sup><sup id="cite_ref-63" class="reference"><a href="#cite_note-63">[63]</a></sup></p>
+<h2><span class="mw-headline" id="Platforms_and_popularity">Platforms and popularity</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Clojure&amp;action=edit&amp;section=4" title="Edit section: Platforms and popularity">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The primary platform of Clojure is the JVM,<sup id="cite_ref-:10_8-1" class="reference"><a href="#cite_note-:10-8">[8]</a></sup><sup id="cite_ref-:12_45-1" class="reference"><a href="#cite_note-:12-45">[45]</a></sup> but other target implementations exist. The most notable of these are ClojureScript,<sup id="cite_ref-:11_10-1" class="reference"><a href="#cite_note-:11-10">[10]</a></sup> which compiles to JavaScript, and ClojureCLR,<sup id="cite_ref-64" class="reference"><a href="#cite_note-64">[64]</a></sup> a full port to the Common Language Runtime, interoperable with the <a href="https://en.wikipedia.org/wiki/.NET_Framework" title=".NET Framework">.NET ecosystem</a>. A survey of the Clojure community with 1,060 respondents conducted in 2013<sup id="cite_ref-65" class="reference"><a href="#cite_note-65">[65]</a></sup> found that 47% of respondents used both Clojure and ClojureScript when working with Clojure. In 2014 this number had increased to 55%,<sup id="cite_ref-66" class="reference"><a href="#cite_note-66">[66]</a></sup> in 2015, based on 2,445 respondents, to 66%.<sup id="cite_ref-67" class="reference"><a href="#cite_note-67">[67]</a></sup> Popular ClojureScript projects include implementations of the <a href="https://en.wikipedia.org/wiki/React_(JavaScript_library)" title="React (JavaScript library)">React</a> library such as <a rel="nofollow" class="external text" href="https://reagent-project.github.io/">Reagent</a> and <a rel="nofollow" class="external text" href="https://github.com/omcljs/om">Om</a>.<sup id="cite_ref-68" class="reference"><a href="#cite_note-68">[68]</a></sup></p>
+<p>Clojure has also been used for creative computing, including visual art, music, games, and poetry.<sup id="cite_ref-69" class="reference"><a href="#cite_note-69">[69]</a></sup></p>
+<p>Variant implementations of the Clojure language have been developed for platforms other than the above:</p>
+<ul>
+<li>las3r,<sup id="cite_ref-70" class="reference"><a href="#cite_note-70">[70]</a></sup> a subset of Clojure that runs on the <a href="https://en.wikipedia.org/wiki/ActionScript" title="ActionScript">ActionScript</a> Virtual Machine (the Adobe Flash Player platform)</li>
+<li>clojure-py,<sup id="cite_ref-71" class="reference"><a href="#cite_note-71">[71]</a></sup> Clojure in pure <a href="https://en.wikipedia.org/wiki/Python_(programming_language)" title="Python (programming language)">Python</a></li>
+<li>rouge,<sup id="cite_ref-72" class="reference"><a href="#cite_note-72">[72]</a></sup> Clojure atop YARV in <a href="https://en.wikipedia.org/wiki/Ruby_(programming_language)" title="Ruby (programming language)">Ruby</a></li>
+<li>CljPerl,<sup id="cite_ref-73" class="reference"><a href="#cite_note-73">[73]</a></sup> Clojure atop <a href="https://en.wikipedia.org/wiki/Perl_(programming_language)" class="mw-redirect" title="Perl (programming language)">Perl</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Pixie_(programming_language)" title="Pixie (programming language)">Pixie</a>, Clojure-inspired Lisp dialect written in <a href="https://en.wikipedia.org/wiki/PyPy#RPython" title="PyPy">RPython</a></li>
+</ul>
+<h2><span class="mw-headline" id="Examples">Examples</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Clojure&amp;action=edit&amp;section=5" title="Edit section: Examples">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="https://en.wikipedia.org/wiki/Hello_world" class="mw-redirect" title="Hello world">Hello world</a>:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="p">(</span><span class="nb">println </span><span class="s">"Hello world!"</span><span class="p">)</span>
+</pre></div>
+<p>Defining a function:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="p">(</span><span class="kd">defn </span><span class="nv">square</span> <span class="p">[</span><span class="nv">x</span><span class="p">]</span>
+  <span class="p">(</span><span class="nb">* </span><span class="nv">x</span> <span class="nv">x</span><span class="p">))</span>
+</pre></div>
+<p>GUI "Hello world" by calling the Java Swing library:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="p">(</span><span class="nf">javax.swing.JOptionPane/showMessageDialog</span> <span class="nv">nil</span> <span class="s">"Hello World"</span><span class="p">)</span>
+</pre></div>
+<p>Using <a href="https://en.wikipedia.org/wiki/Unicode" title="Unicode">Unicode</a> (Hello 世 ("World") using the <a href="https://en.wikipedia.org/wiki/CJK_Unified_Ideographs" title="CJK Unified Ideographs">CJK code point</a> for that word):</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="p">(</span><span class="nb">println </span><span class="p">(</span><span class="nb">str </span><span class="s">"Hello, "</span> <span class="sc">\u</span><span class="mi">4</span><span class="nv">e16</span><span class="p">))</span> <span class="c1">; to the console</span>
+<span class="p">(</span><span class="nf">javax.swing.JOptionPane/showMessageDialog</span> <span class="nv">nil</span> <span class="p">(</span><span class="nb">str </span><span class="s">"Hello, "</span> <span class="sc">\u</span><span class="mi">4</span><span class="nv">e16</span> <span class="s">"!"</span><span class="p">))</span> <span class="c1">; using Java GUI</span>
+</pre></div>
+<p>A <a href="https://en.wikipedia.org/wiki/Thread-safe" class="mw-redirect" title="Thread-safe">thread-safe</a> generator of unique serial numbers (though, like many other Lisp dialects, Clojure has a built-in <code>gensym</code> function that it uses internally):</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="p">(</span><span class="k">let </span><span class="p">[</span><span class="nv">i</span> <span class="p">(</span><span class="nf">atom</span> <span class="mi">0</span><span class="p">)]</span>
+  <span class="p">(</span><span class="kd">defn </span><span class="nv">generate-unique-id</span>
+    <span class="s">"Returns a distinct numeric ID for each call."</span>
+    <span class="p">[]</span>
+    <span class="p">(</span><span class="nf">swap!</span> <span class="nv">i</span> <span class="nv">inc</span><span class="p">)))</span>
+</pre></div>
+<p>An anonymous subclass of <code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/7/docs/api/java/io/Writer.html">java.io.Writer</a></code> that doesn't write to anything, and a macro using it to silence all prints within it:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="p">(</span><span class="k">def </span><span class="nv">bit-bucket-writer</span>
+  <span class="p">(</span><span class="nb">proxy </span><span class="p">[</span><span class="nv">java.io.Writer</span><span class="p">]</span> <span class="p">[]</span>
+    <span class="p">(</span><span class="nf">write</span> <span class="p">[</span><span class="nv">buf</span><span class="p">]</span> <span class="nv">nil</span><span class="p">)</span>
+    <span class="p">(</span><span class="nf">close</span> <span class="p">[]</span>    <span class="nv">nil</span><span class="p">)</span>
+    <span class="p">(</span><span class="nb">flush </span><span class="p">[]</span>    <span class="nv">nil</span><span class="p">)))</span>
+
+<span class="p">(</span><span class="kd">defmacro </span><span class="nv">noprint</span>
+  <span class="s">"Evaluates the given expressions with all printing to *out* silenced."</span>
+  <span class="p">[</span><span class="o">&amp;</span> <span class="nv">forms</span><span class="p">]</span>
+  <span class="o">`</span><span class="p">(</span><span class="nb">binding </span><span class="p">[</span><span class="nv">*out*</span> <span class="nv">bit-bucket-writer</span><span class="p">]</span>
+     <span class="o">~@</span><span class="nv">forms</span><span class="p">))</span>
+
+<span class="p">(</span><span class="nf">noprint</span>
+  <span class="p">(</span><span class="nb">println </span><span class="s">"Hello, nobody!"</span><span class="p">))</span>
+</pre></div>
+<p>10 threads manipulating one shared data structure, which consists of 100 vectors each one containing 10 (initially sequential) unique numbers. Each thread then repeatedly selects two random positions in two random vectors and swaps them. All changes to the vectors occur in transactions by making use of Clojure's <a href="https://en.wikipedia.org/wiki/Software_transactional_memory" title="Software transactional memory">software transactional memory</a> system.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="p">(</span><span class="kd">defn </span><span class="nv">run</span> <span class="p">[</span><span class="nv">nvecs</span> <span class="nv">nitems</span> <span class="nv">nthreads</span> <span class="nv">niters</span><span class="p">]</span>
+  <span class="p">(</span><span class="k">let </span><span class="p">[</span><span class="nv">vec-refs</span> <span class="p">(</span><span class="nf">-&gt;&gt;</span> <span class="p">(</span><span class="nb">range </span><span class="p">(</span><span class="nb">* </span><span class="nv">nvecs</span> <span class="nv">nitems</span><span class="p">))</span> <span class="p">(</span><span class="nf">partition</span> <span class="nv">nitems</span><span class="p">)</span> <span class="p">(</span><span class="nb">map </span><span class="p">(</span><span class="nb">comp ref </span><span class="nv">vec</span><span class="p">))</span> <span class="nv">vec</span><span class="p">)</span>
+        <span class="nv">swap</span> <span class="o">#</span><span class="p">(</span><span class="k">let </span><span class="p">[</span><span class="nv">v1</span> <span class="p">(</span><span class="nb">rand-int </span><span class="nv">nvecs</span><span class="p">)</span>
+                    <span class="nv">v2</span> <span class="p">(</span><span class="nb">rand-int </span><span class="nv">nvecs</span><span class="p">)</span>
+                    <span class="nv">i1</span> <span class="p">(</span><span class="nb">rand-int </span><span class="nv">nitems</span><span class="p">)</span>
+                    <span class="nv">i2</span> <span class="p">(</span><span class="nb">rand-int </span><span class="nv">nitems</span><span class="p">)]</span>
+                <span class="p">(</span><span class="nf">dosync</span>
+                 <span class="p">(</span><span class="k">let </span><span class="p">[</span><span class="nv">tmp</span> <span class="p">(</span><span class="nb">nth </span><span class="o">@</span><span class="p">(</span><span class="nf">vec-refs</span> <span class="nv">v1</span><span class="p">)</span> <span class="nv">i1</span><span class="p">)]</span>
+                   <span class="p">(</span><span class="nb">alter </span><span class="p">(</span><span class="nf">vec-refs</span> <span class="nv">v1</span><span class="p">)</span> <span class="nb">assoc </span><span class="nv">i1</span> <span class="p">(</span><span class="nb">nth </span><span class="o">@</span><span class="p">(</span><span class="nf">vec-refs</span> <span class="nv">v2</span><span class="p">)</span> <span class="nv">i2</span><span class="p">))</span>
+                   <span class="p">(</span><span class="nb">alter </span><span class="p">(</span><span class="nf">vec-refs</span> <span class="nv">v2</span><span class="p">)</span> <span class="nb">assoc </span><span class="nv">i2</span> <span class="nv">tmp</span><span class="p">))))</span>
+        <span class="nv">report</span> <span class="o">#</span><span class="p">(</span><span class="k">let </span><span class="p">[</span><span class="nv">derefed</span> <span class="p">(</span><span class="nb">map deref </span><span class="nv">vec-refs</span><span class="p">)]</span>
+                  <span class="p">(</span><span class="nb">prn </span><span class="nv">derefed</span><span class="p">)</span>
+                  <span class="p">(</span><span class="nb">println </span><span class="s">"Distinct:"</span> <span class="p">(</span><span class="nf">-&gt;&gt;</span> <span class="nv">derefed</span> <span class="p">(</span><span class="nb">apply </span><span class="nv">concat</span><span class="p">)</span> <span class="nb">distinct </span><span class="nv">count</span><span class="p">)))]</span>
+    <span class="p">(</span><span class="nf">report</span><span class="p">)</span>
+    <span class="p">(</span><span class="nb">dorun </span><span class="p">(</span><span class="nb">apply </span><span class="nv">pcalls</span> <span class="p">(</span><span class="nb">repeat </span><span class="nv">nthreads</span> <span class="o">#</span><span class="p">(</span><span class="nb">dotimes </span><span class="p">[</span><span class="nv">_</span> <span class="nv">niters</span><span class="p">]</span> <span class="p">(</span><span class="nf">swap</span><span class="p">)))))</span>
+    <span class="p">(</span><span class="nf">report</span><span class="p">)))</span>
+
+<span class="p">(</span><span class="nf">run</span> <span class="mi">100</span> <span class="mi">10</span> <span class="mi">10</span> <span class="mi">100000</span><span class="p">)</span>
+</pre></div>
+<p>Output of prior example:</p>
+<pre>
+([0 1 2 3 4 5 6 7 8 9] [10 11 12 13 14 15 16 17 18 19] ...
+[990 991 992 993 994 995 996 997 998 999])
+Distinct: 1000
+</pre>
+<pre>
+([382 318 466 963 619 22 21 273 45 596] [808 639 804 471 394 904 952 75 289 778] ...
+[484 216 622 139 651 592 379 228 242 355])
+Distinct: 1000
+</pre>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Clojure&amp;action=edit&amp;section=6" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="List_of_JVM_languages.html" title="List of JVM languages">List of JVM languages</a></li>
+<li><a href="https://en.wikipedia.org/wiki/List_of_CLI_languages" title="List of CLI languages">List of CLI languages</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Hy" title="Hy">Hy</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Pixie_(programming_language)" title="Pixie (programming language)">Pixie (programming language)</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Clojure&amp;action=edit&amp;section=7" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist columns references-column-count references-column-count-2" style="-moz-column-count: 2; -webkit-column-count: 2; column-count: 2; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://central.maven.org/maven2/org/clojure/clojure/1.8.0/">"Index of /maven2/org/clojure/clojure/1.8.0/"</a>. central.maven.org. 2015-06-30<span class="reference-accessdate">. Retrieved <span class="nowrap">2015-06-30</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.btitle=Index+of+%2Fmaven2%2Forg%2Fclojure%2Fclojure%2F1.8.0%2F&amp;rft.date=2015-06-30&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fcentral.maven.org%2Fmaven2%2Forg%2Fclojure%2Fclojure%2F1.8.0%2F&amp;rft.pub=central.maven.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://codequarterly.com/2011/rich-hickey/">"Rich Hickey Q&amp;A on Code Quarterly"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2016-05-08</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.btitle=Rich+Hickey+Q%26A+on+Code+Quarterly&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fcodequarterly.com%2F2011%2Frich-hickey%2F&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://www.amazon.com/gp/richpub/listmania/fullview/R3LG3ZBZS4GCTH">"Rich Hickey's Amazon Bookshelf of books that influenced Clojure"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2016-05-08</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.btitle=Rich+Hickey%27s+Amazon+Bookshelf+of+books+that+influenced+Clojure&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fwww.amazon.com%2Fgp%2Frichpub%2Flistmania%2Ffullview%2FR3LG3ZBZS4GCTH&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-typed-clojure-thesis-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-typed-clojure-thesis_4-0">^</a></b></span> <span class="reference-text"><cite class="citation thesis">Bonnaire-Sergeant, Ambrose (2012). <i>A Practical Optional Type System for Clojure</i> (Thesis). The University of Western Australia.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.aufirst=Ambrose&amp;rft.aulast=Bonnaire-Sergeant&amp;rft.date=2012&amp;rft.inst=The+University+of+Western+Australia&amp;rft.title=A+Practical+Optional+Type+System+for+Clojure&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adissertation" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://cdn.oreilly.com/oreilly/booksamplers/9781449394707_sampler.pdf">"Clojure Programming"</a> <span style="font-size:85%;">(PDF)</span><span class="reference-accessdate">. Retrieved <span class="nowrap">2013-04-30</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.btitle=Clojure+Programming&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fcdn.oreilly.com%2Foreilly%2Fbooksamplers%2F9781449394707_sampler.pdf&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://groups.google.com/d/msg/clojure/4uDxeOS8pwY/UHiYp7p1a3YJ">"meaning and pronunciation of Clojure"</a>. <i>Rich Hickey</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2012-04-20</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.atitle=meaning+and+pronunciation+of+Clojure&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fgroups.google.com%2Fd%2Fmsg%2Fclojure%2F4uDxeOS8pwY%2FUHiYp7p1a3YJ&amp;rft.jtitle=Rich+Hickey&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-:0-7"><span class="mw-cite-backlink">^ <a href="#cite_ref-:0_7-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-:0_7-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.infoworld.com/article/2619641/java/clojure-inventor-hickey-now-aims-for-android.html">"Clojure inventor Hickey now aims for Android"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.btitle=Clojure+inventor+Hickey+now+aims+for+Android&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.infoworld.com%2Farticle%2F2619641%2Fjava%2Fclojure-inventor-hickey-now-aims-for-android.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-:10-8"><span class="mw-cite-backlink">^ <a href="#cite_ref-:10_8-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-:10_8-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://clojure.org/">"Clojure - home"</a>. <i>clojure.org</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2015-09-15</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.atitle=Clojure+-+home&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fclojure.org%2F&amp;rft.jtitle=clojure.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://github.com/clojure/clojure-clr">"clojure/clojure-clr"</a>. <i>GitHub</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2015-09-15</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.atitle=clojure%2Fclojure-clr&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fgithub.com%2Fclojure%2Fclojure-clr&amp;rft.jtitle=GitHub&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-:11-10"><span class="mw-cite-backlink">^ <a href="#cite_ref-:11_10-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-:11_10-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://github.com/clojure/clojurescript">"clojure/clojurescript"</a>. <i>GitHub</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2015-09-15</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.atitle=clojure%2Fclojurescript&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fgithub.com%2Fclojure%2Fclojurescript&amp;rft.jtitle=GitHub&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://clojure.org/lisp">"Clojure - lisp"</a>. <i>clojure.org</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2015-09-15</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.atitle=Clojure+-+lisp&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fclojure.org%2Flisp&amp;rft.jtitle=clojure.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-:8-12"><span class="mw-cite-backlink">^ <a href="#cite_ref-:8_12-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-:8_12-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://dev.clojure.org/display/community/Contributing+FAQ">"Contributing FAQ - Clojure Community - Clojure Development"</a>. <i>dev.clojure.org</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2015-09-15</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.atitle=Contributing+FAQ+-+Clojure+Community+-+Clojure+Development&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fdev.clojure.org%2Fdisplay%2Fcommunity%2FContributing%2BFAQ&amp;rft.jtitle=dev.clojure.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-13">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://clojure.org/funding">"Clojure - funding"</a>. <i>clojure.org</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2015-09-15</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.atitle=Clojure+-+funding&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fclojure.org%2Ffunding&amp;rft.jtitle=clojure.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-14"><span class="mw-cite-backlink"><b><a href="#cite_ref-14">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://github.com/clojure/core.typed/wiki/User-Guide">"clojure/core.typed"</a>. <i>GitHub</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2015-09-15</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.atitle=clojure%2Fcore.typed&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fgithub.com%2Fclojure%2Fcore.typed%2Fwiki%2FUser-Guide&amp;rft.jtitle=GitHub&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-:1-15"><span class="mw-cite-backlink">^ <a href="#cite_ref-:1_15-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-:1_15-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://clojure.org/state">"Clojure - state"</a>. <i>clojure.org</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2015-09-15</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.atitle=Clojure+-+state&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fclojure.org%2Fstate&amp;rft.jtitle=clojure.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-:2-16"><span class="mw-cite-backlink">^ <a href="#cite_ref-:2_16-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-:2_16-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://clojure.org/rationale">"Rationale"</a>. <i>Rich Hickey</i>. clojure.org<span class="reference-accessdate">. Retrieved <span class="nowrap">2008-10-17</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.atitle=Rationale&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fclojure.org%2Frationale&amp;rft.jtitle=Rich+Hickey&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-:3-17"><span class="mw-cite-backlink">^ <a href="#cite_ref-:3_17-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-:3_17-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation web">Charles (2009-10-06). <a rel="nofollow" class="external text" href="http://channel9.msdn.com/shows/Going+Deep/Expert-to-Expert-Rich-Hickey-and-Brian-Beckman-Inside-Clojure/">"Expert to Expert: Rich Hickey and Brian Beckman – Inside Clojure | Going Deep | Channel 9"</a>. Channel9.msdn.com<span class="reference-accessdate">. Retrieved <span class="nowrap">2012-06-28</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.au=Charles&amp;rft.btitle=Expert+to+Expert%3A+Rich+Hickey+and+Brian+Beckman+%93+Inside+Clojure+%26%23124%3B+Going+Deep+%26%23124%3B+Channel+9&amp;rft.date=2009-10-06&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fchannel9.msdn.com%2Fshows%2FGoing%2BDeep%2FExpert-to-Expert-Rich-Hickey-and-Brian-Beckman-Inside-Clojure%2F&amp;rft.pub=Channel9.msdn.com&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-18"><span class="mw-cite-backlink"><b><a href="#cite_ref-18">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://blog.cognitect.com/blog/2015/6/30/walmart-runs-clojure-at-scale">"Walmart Runs Clojure at Scale"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2015-09-15</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.btitle=Walmart+Runs+Clojure+at+Scale&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fblog.cognitect.com%2Fblog%2F2015%2F6%2F30%2Fwalmart-runs-clojure-at-scale&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-19"><span class="mw-cite-backlink"><b><a href="#cite_ref-19">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://puppetlabs.com/blog/new-era-application-services-puppet-labs">"A New Era of Application Services at Puppet Labs"</a>. <i>Puppet Labs</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2015-09-15</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.atitle=A+New+Era+of+Application+Services+at+Puppet+Labs&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fpuppetlabs.com%2Fblog%2Fnew-era-application-services-puppet-labs&amp;rft.jtitle=Puppet+Labs&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-cognitect.com-20"><span class="mw-cite-backlink">^ <a href="#cite_ref-cognitect.com_20-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-cognitect.com_20-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://cognitect.com/clojure">"Clojure Programming Language&#160;:: Cognitect, Clojure Consulting, Clojure Support, Functional Programming, JVM"</a>. <i>cognitect.com</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2015-09-15</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.atitle=Clojure+Programming+Language+%3A%3A+Cognitect%2C+Clojure+Consulting%2C+Clojure+Support%2C+Functional+Programming%2C+JVM&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fcognitect.com%2Fclojure&amp;rft.jtitle=cognitect.com&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-21"><span class="mw-cite-backlink"><b><a href="#cite_ref-21">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://clojure-conj.org/">Clojure/conj</a></span></li>
+<li id="cite_note-22"><span class="mw-cite-backlink"><b><a href="#cite_ref-22">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://clojurewest.org/">Clojure/West</a></span></li>
+<li id="cite_note-23"><span class="mw-cite-backlink"><b><a href="#cite_ref-23">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://euroclojure.org/">EuroClojure</a></span></li>
+<li id="cite_note-:4-24"><span class="mw-cite-backlink">^ <a href="#cite_ref-:4_24-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-:4_24-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-:4_24-2"><sup><i><b>c</b></i></sup></a></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://blog.cognitect.com/blog/2015/6/30/clojure-18">"Clojure 1.8 is now available"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2015-09-15</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.btitle=Clojure+1.8+is+now+available&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fblog.cognitect.com%2Fblog%2F2015%2F6%2F30%2Fclojure-18&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-25"><span class="mw-cite-backlink"><b><a href="#cite_ref-25">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://clojure.blogspot.fi/2009/05/clojure-10.html">"Clojure: Clojure 1.0"</a>. <i>clojure.blogspot.fi</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2015-09-16</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.atitle=Clojure%3A+Clojure+1.0&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fclojure.blogspot.fi%2F2009%2F05%2Fclojure-10.html&amp;rft.jtitle=clojure.blogspot.fi&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-26"><span class="mw-cite-backlink"><b><a href="#cite_ref-26">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://clojure.org/license">"Clojure - license"</a>. <i>clojure.org</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2015-09-15</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.atitle=Clojure+-+license&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fclojure.org%2Flicense&amp;rft.jtitle=clojure.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-27"><span class="mw-cite-backlink"><b><a href="#cite_ref-27">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://groups.google.com/forum/#!topic/comp.lang.scheme/ibf6CC6V66o">"[ANN] dotLisp - a Lisp dialect for .Net"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.btitle=%5BANN%5D+dotLisp+-+a+Lisp+dialect+for+.Net&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fgroups.google.com%2Fforum%2F%23%21topic%2Fcomp.lang.scheme%2Fibf6CC6V66o&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-28"><span class="mw-cite-backlink"><b><a href="#cite_ref-28">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://jfli.sourceforge.net/">"jfli, a Java foreign language interface for Common Lisp"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.btitle=jfli%2C+a+Java+foreign+language+interface+for+Common+Lisp&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fjfli.sourceforge.net&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-29"><span class="mw-cite-backlink"><b><a href="#cite_ref-29">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://foil.sourceforge.net/">"Foil - a <i>Foreign Object Interface for Lisp"</i></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.btitle=Foil+-+a+Foreign+Object+Interface+for+Lisp&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Ffoil.sourceforge.net&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-30"><span class="mw-cite-backlink"><b><a href="#cite_ref-30">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://lisplets.sourceforge.net/">"Lisplets - a Lisp-friendly interface to Java Servlets"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.btitle=Lisplets+-+a+Lisp-friendly+interface+to+Java+Servlets&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Flisplets.sourceforge.net&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-31"><span class="mw-cite-backlink"><b><a href="#cite_ref-31">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://dev.clojure.org/display/community/Home">Clojure Community website</a></span></li>
+<li id="cite_note-32"><span class="mw-cite-backlink"><b><a href="#cite_ref-32">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://groups.google.com/forum/#!forum/clojure-dev">Clojure Dev Google Group</a></span></li>
+<li id="cite_note-33"><span class="mw-cite-backlink"><b><a href="#cite_ref-33">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://dev.clojure.org/display/community/Contributing+FAQ">"Contributing FAQ - Clojure Community - Clojure Development"</a>. <i>dev.clojure.org</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2015-09-16</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.atitle=Contributing+FAQ+-+Clojure+Community+-+Clojure+Development&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fdev.clojure.org%2Fdisplay%2Fcommunity%2FContributing%2BFAQ&amp;rft.jtitle=dev.clojure.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-34"><span class="mw-cite-backlink"><b><a href="#cite_ref-34">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://dev.clojure.org/display/community/JIRA+workflow">"JIRA workflow - Clojure Community - Clojure Development"</a>. <i>dev.clojure.org</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2015-09-16</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.atitle=JIRA+workflow+-+Clojure+Community+-+Clojure+Development&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fdev.clojure.org%2Fdisplay%2Fcommunity%2FJIRA%2Bworkflow&amp;rft.jtitle=dev.clojure.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-35"><span class="mw-cite-backlink"><b><a href="#cite_ref-35">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.linuxjournal.com/article/10708">"Economy Size Geek - Interview with Rich Hickey, Creator of Clojure | Linux Journal"</a>. <i>www.linuxjournal.com</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2015-09-15</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.atitle=Economy+Size+Geek+-+Interview+with+Rich+Hickey%2C+Creator+of+Clojure+%7C+Linux+Journal&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.linuxjournal.com%2Farticle%2F10708&amp;rft.jtitle=www.linuxjournal.com&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-:5-36"><span class="mw-cite-backlink">^ <a href="#cite_ref-:5_36-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-:5_36-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://clojure.org/state">"On State and Identity"</a>. <i>Rich Hickey</i>. clojure.org<span class="reference-accessdate">. Retrieved <span class="nowrap">2010-03-01</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.atitle=On+State+and+Identity&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fclojure.org%2Fstate&amp;rft.jtitle=Rich+Hickey&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-37"><span class="mw-cite-backlink"><b><a href="#cite_ref-37">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://clojure.blogspot.com/2009/10/clojure-is-two.html">"Clojure: Clojure is Two!"</a>. <i>Clojure Blog</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2015-09-16</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.atitle=Clojure%3A+Clojure+is+Two%21&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fclojure.blogspot.com%2F2009%2F10%2Fclojure-is-two.html&amp;rft.jtitle=Clojure+Blog&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-:9-38"><span class="mw-cite-backlink">^ <a href="#cite_ref-:9_38-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-:9_38-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-:9_38-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-:9_38-3"><sup><i><b>d</b></i></sup></a> <a href="#cite_ref-:9_38-4"><sup><i><b>e</b></i></sup></a> <a href="#cite_ref-:9_38-5"><sup><i><b>f</b></i></sup></a></span> <span class="reference-text"><cite class="citation web">Fingerhut, Andy. <a rel="nofollow" class="external text" href="https://jafingerhut.github.io/clojure-benchmarks-results/Clojure-version-history.html">"Clojure version history"</a>. <i>jafingerhut.github.io</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2015-09-16</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.atitle=Clojure+version+history&amp;rft.aufirst=Andy&amp;rft.aulast=Fingerhut&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fjafingerhut.github.io%2Fclojure-benchmarks-results%2FClojure-version-history.html&amp;rft.jtitle=jafingerhut.github.io&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-39"><span class="mw-cite-backlink"><b><a href="#cite_ref-39">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://clojure.blogspot.com/2009/05/clojure-10.html">"Clojure: Clojure 1.0"</a>. <i>Clojure Blog</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2015-09-16</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.atitle=Clojure%3A+Clojure+1.0&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fclojure.blogspot.com%2F2009%2F05%2Fclojure-10.html&amp;rft.jtitle=Clojure+Blog&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-40"><span class="mw-cite-backlink"><b><a href="#cite_ref-40">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://clojure.blogspot.com/2009/12/clojure-11-release.html">"Clojure: Clojure 1.1 Release"</a>. <i>clojure.blogspot.com</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2015-09-16</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.atitle=Clojure%3A+Clojure+1.1+Release&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fclojure.blogspot.com%2F2009%2F12%2Fclojure-11-release.html&amp;rft.jtitle=clojure.blogspot.com&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-41"><span class="mw-cite-backlink"><b><a href="#cite_ref-41">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://clojure.org/protocols">"Clojure - protocols"</a>. <i>clojure.org</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2015-09-16</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.atitle=Clojure+-+protocols&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fclojure.org%2Fprotocols&amp;rft.jtitle=clojure.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-42"><span class="mw-cite-backlink"><b><a href="#cite_ref-42">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://github.com/clojure/clojure/blob/master/changes.md#changes-to-clojure-in-version-13">"clojure/clojure"</a>. <i>GitHub</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2015-09-16</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.atitle=clojure%2Fclojure&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fgithub.com%2Fclojure%2Fclojure%2Fblob%2Fmaster%2Fchanges.md%23changes-to-clojure-in-version-13&amp;rft.jtitle=GitHub&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-43"><span class="mw-cite-backlink"><b><a href="#cite_ref-43">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://groups.google.com/forum/#!topic/clojure/pArFVr0fJ0w">"Google Groups"</a>. <i>groups.google.com</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2015-09-16</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.atitle=Google+Groups&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fgroups.google.com%2Fforum%2F%23%21topic%2Fclojure%2FpArFVr0fJ0w&amp;rft.jtitle=groups.google.com&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-44"><span class="mw-cite-backlink"><b><a href="#cite_ref-44">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://groups.google.com/forum/#!topic/clojure/O307eyvpwn0">"Google Groups"</a>. <i>groups.google.com</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2016-01-25</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.atitle=Google+Groups&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fgroups.google.com%2Fforum%2F%23%21topic%2Fclojure%2FO307eyvpwn0&amp;rft.jtitle=groups.google.com&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-:12-45"><span class="mw-cite-backlink">^ <a href="#cite_ref-:12_45-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-:12_45-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://clojure.org/jvm_hosted">"Clojure - jvm_hosted"</a>. <i>clojure.org</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2015-09-15</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.atitle=Clojure+-+jvm_hosted&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fclojure.org%2Fjvm_hosted&amp;rft.jtitle=clojure.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-46"><span class="mw-cite-backlink"><b><a href="#cite_ref-46">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://clojure.org/java_interop#Java%2520Interop-Calling%2520Clojure%2520From%2520Java">"Clojure - java_interop"</a>. <i>clojure.org</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2015-09-15</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.atitle=Clojure+-+java_interop&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fclojure.org%2Fjava_interop%23Java%252520Interop-Calling%252520Clojure%252520From%252520Java&amp;rft.jtitle=clojure.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-:6-47"><span class="mw-cite-backlink">^ <a href="#cite_ref-:6_47-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-:6_47-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation web">contributors, Phil Hagelberg and. <a rel="nofollow" class="external text" href="http://leiningen.org/">"Leiningen"</a>. <i>leiningen.org</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2015-09-15</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.atitle=Leiningen&amp;rft.aufirst=Phil+Hagelberg+and&amp;rft.aulast=contributors&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fleiningen.org%2F&amp;rft.jtitle=leiningen.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-:7-48"><span class="mw-cite-backlink">^ <a href="#cite_ref-:7_48-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-:7_48-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-:7_48-2"><sup><i><b>c</b></i></sup></a></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://clojure.org/reader">"Clojure - reader"</a>. <i>clojure.org</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2015-09-15</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.atitle=Clojure+-+reader&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fclojure.org%2Freader&amp;rft.jtitle=clojure.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-49"><span class="mw-cite-backlink"><b><a href="#cite_ref-49">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://clojure.org/lisps">"Clojure - lisps"</a>. <i>clojure.org</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2015-09-15</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.atitle=Clojure+-+lisps&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fclojure.org%2Flisps&amp;rft.jtitle=clojure.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-50"><span class="mw-cite-backlink"><b><a href="#cite_ref-50">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://clojure.org/macros">"Clojure - macros"</a>. <i>clojure.org</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2015-09-15</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.atitle=Clojure+-+macros&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fclojure.org%2Fmacros&amp;rft.jtitle=clojure.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-51"><span class="mw-cite-backlink"><b><a href="#cite_ref-51">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://github.com/edn-format/edn">"edn"</a>. <i>Rich Hickey</i>. Github.com<span class="reference-accessdate">. Retrieved <span class="nowrap">2014-05-24</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.atitle=edn&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fgithub.com%2Fedn-format%2Fedn&amp;rft.jtitle=Rich+Hickey&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-52"><span class="mw-cite-backlink"><b><a href="#cite_ref-52">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://clojure.org/multimethods">"Clojure - multimethods"</a>. <i>clojure.org</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2015-09-15</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.atitle=Clojure+-+multimethods&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fclojure.org%2Fmultimethods&amp;rft.jtitle=clojure.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-53"><span class="mw-cite-backlink"><b><a href="#cite_ref-53">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://clojure.org/protocols">"Clojure - protocols"</a>. <i>clojure.org</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2015-09-15</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.atitle=Clojure+-+protocols&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fclojure.org%2Fprotocols&amp;rft.jtitle=clojure.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-54"><span class="mw-cite-backlink"><b><a href="#cite_ref-54">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://clojure.org/datatypes">"Clojure - datatypes"</a>. <i>clojure.org</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2015-09-15</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.atitle=Clojure+-+datatypes&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fclojure.org%2Fdatatypes&amp;rft.jtitle=clojure.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-55"><span class="mw-cite-backlink"><b><a href="#cite_ref-55">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://www.youtube.com/watch?v=2y5Pv4yN0b0&amp;t=1h02m18s">"Brian Goetz - Stewardship: the Sobering Parts"</a>. <i>YouTube</i>. ClojureTV<span class="reference-accessdate">. Retrieved <span class="nowrap">2015-09-15</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.atitle=Brian+Goetz+-+Stewardship%3A+the+Sobering+Parts&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D2y5Pv4yN0b0%26t%3D1h02m18s&amp;rft.jtitle=YouTube&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-56"><span class="mw-cite-backlink"><b><a href="#cite_ref-56">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://clojure.org/special_forms#Special%2520Forms--(recur%2520exprs*)">"Clojure - special_forms"</a>. <i>clojure.org</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2015-09-15</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.atitle=Clojure+-+special_forms&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fclojure.org%2Fspecial_forms%23Special%252520Forms--%28recur%252520exprs%2A%29&amp;rft.jtitle=clojure.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-57"><span class="mw-cite-backlink"><b><a href="#cite_ref-57">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://clojure.org/Refs">"Clojure - Refs"</a>. <i>clojure.org</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2015-09-15</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.atitle=Clojure+-+Refs&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fclojure.org%2FRefs&amp;rft.jtitle=clojure.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-58"><span class="mw-cite-backlink"><b><a href="#cite_ref-58">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://clojure.org/reference/agents">"Clojure - Agents"</a>. <i>clojure.org</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2016-07-04</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.atitle=Clojure+-+Agents&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fclojure.org%2Freference%2Fagents&amp;rft.jtitle=clojure.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-59"><span class="mw-cite-backlink"><b><a href="#cite_ref-59">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://clojure.com/blog/2013/06/28/clojure-core-async-channels.html">"Clojure&#160;:: Clojure core.async Channels"</a>. <i>clojure.com</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2015-09-15</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.atitle=Clojure+%3A%3A+Clojure+core.async+Channels&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fclojure.com%2Fblog%2F2013%2F06%2F28%2Fclojure-core-async-channels.html&amp;rft.jtitle=clojure.com&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-60"><span class="mw-cite-backlink"><b><a href="#cite_ref-60">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://clojure.org/reader#toc5">"Clojure - reader"</a>. <i>clojure.org</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2015-09-15</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.atitle=Clojure+-+reader&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fclojure.org%2Freader%23toc5&amp;rft.jtitle=clojure.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-61"><span class="mw-cite-backlink"><b><a href="#cite_ref-61">^</a></b></span> <span class="reference-text">"Transducers" by Rich Hickey. <a rel="nofollow" class="external free" href="https://www.youtube.com/watch?v=6mTbuzafcII">https://www.youtube.com/watch?v=6mTbuzafcII</a>. Retrieved on 2015-09-15.</span></li>
+<li id="cite_note-62"><span class="mw-cite-backlink"><b><a href="#cite_ref-62">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://blog.cognitect.com/blog/2014/8/6/transducers-are-coming">"Transducers are Coming"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2015-09-15</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.btitle=Transducers+are+Coming&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fblog.cognitect.com%2Fblog%2F2014%2F8%2F6%2Ftransducers-are-coming&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-63"><span class="mw-cite-backlink"><b><a href="#cite_ref-63">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://www.youtube.com/watch?v=4KqUvG8HPYo">"Rich Hickey - Inside Transducers"</a>. <i>YouTube</i>. Cognitect Inc. Nov 20, 2014<span class="reference-accessdate">. Retrieved <span class="nowrap">2015-09-15</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.atitle=Rich+Hickey+-+Inside+Transducers&amp;rft.date=2014-11-20&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D4KqUvG8HPYo&amp;rft.jtitle=YouTube&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-64"><span class="mw-cite-backlink"><b><a href="#cite_ref-64">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://github.com/clojure/clojure-clr">"clojure/clojure-clr · GitHub"</a>. Github.com<span class="reference-accessdate">. Retrieved <span class="nowrap">2012-06-28</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.btitle=clojure%2Fclojure-clr+%B7+GitHub&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fgithub.com%2Fclojure%2Fclojure-clr&amp;rft.pub=Github.com&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-65"><span class="mw-cite-backlink"><b><a href="#cite_ref-65">^</a></b></span> <span class="reference-text"><cite class="citation web">Emerick, Chas. <a rel="nofollow" class="external text" href="http://cemerick.com/2013/11/18/results-of-the-2013-state-of-clojure-clojurescript-survey/">"Results of the 2013 State of Clojure &amp; ClojureScript survey"</a>. <i>cemerick</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2015-09-17</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.atitle=Results+of+the+2013+State+of+Clojure+%26+ClojureScript+survey&amp;rft.aufirst=Chas&amp;rft.aulast=Emerick&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fcemerick.com%2F2013%2F11%2F18%2Fresults-of-the-2013-state-of-clojure-clojurescript-survey%2F&amp;rft.jtitle=cemerick&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-66"><span class="mw-cite-backlink"><b><a href="#cite_ref-66">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://cognitect.wufoo.com/reports/state-of-clojure-2014-results/">"State of Clojure 2014 Survey Results"</a>. <i>Cognitect Blog</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2015-09-17</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.atitle=State+of+Clojure+2014+Survey+Results&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fcognitect.wufoo.com%2Freports%2Fstate-of-clojure-2014-results%2F&amp;rft.jtitle=Cognitect+Blog&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-67"><span class="mw-cite-backlink"><b><a href="#cite_ref-67">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://blog.cognitect.com/blog/2016/1/28/state-of-clojure-2015-survey-results">"State of Clojure 2015 Survey Results"</a>. <i>Cognitect Blog</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2016-09-08</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.atitle=State+of+Clojure+2015+Survey+Results&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fblog.cognitect.com%2Fblog%2F2016%2F1%2F28%2Fstate-of-clojure-2015-survey-results&amp;rft.jtitle=Cognitect+Blog&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-68"><span class="mw-cite-backlink"><b><a href="#cite_ref-68">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.infoq.com/news/2014/01/om-react">"Om: Enhancing Facebook's React with Immutability"</a>. <i>InfoQ</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2015-09-17</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.atitle=Om%3A+Enhancing+Facebook%27s+React+with+Immutability&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.infoq.com%2Fnews%2F2014%2F01%2Fom-react&amp;rft.jtitle=InfoQ&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-69"><span class="mw-cite-backlink"><b><a href="#cite_ref-69">^</a></b></span> <span class="reference-text"><cite class="citation web">Meier, Carin. <a rel="nofollow" class="external text" href="http://radar.oreilly.com/2015/05/creative-computing-with-clojure.html">"Creative computing with Clojure - O'Reilly Radar"</a>. <i>radar.oreilly.com</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2015-09-17</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.atitle=Creative+computing+with+Clojure+-+O%27Reilly+Radar&amp;rft.aufirst=Carin&amp;rft.aulast=Meier&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fradar.oreilly.com%2F2015%2F05%2Fcreative-computing-with-clojure.html&amp;rft.jtitle=radar.oreilly.com&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-70"><span class="mw-cite-backlink"><b><a href="#cite_ref-70">^</a></b></span> <span class="reference-text"><cite class="citation web">aemoncannon (2010-12-30). <a rel="nofollow" class="external text" href="https://github.com/aemoncannon/las3r/wiki">"Home · aemoncannon/las3r Wiki · GitHub"</a>. Github.com<span class="reference-accessdate">. Retrieved <span class="nowrap">2012-06-28</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.au=aemoncannon&amp;rft.btitle=Home+%B7+aemoncannon%2Flas3r+Wiki+%B7+GitHub&amp;rft.date=2010-12-30&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fgithub.com%2Faemoncannon%2Flas3r%2Fwiki&amp;rft.pub=Github.com&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-71"><span class="mw-cite-backlink"><b><a href="#cite_ref-71">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://github.com/drewr/clojure-py">"drewr/clojure-py · GitHub"</a>. Github.com<span class="reference-accessdate">. Retrieved <span class="nowrap">2017-01-10</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.btitle=drewr%2Fclojure-py+%B7+GitHub&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fgithub.com%2Fdrewr%2Fclojure-py&amp;rft.pub=Github.com&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-72"><span class="mw-cite-backlink"><b><a href="#cite_ref-72">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://github.com/ecmendenhall/rouge">"rouge-lang/rouge · GitHub"</a>. Github.com<span class="reference-accessdate">. Retrieved <span class="nowrap">2015-12-19</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.btitle=rouge-lang%2Frouge+%B7+GitHub&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fgithub.com%2Fecmendenhall%2Frouge&amp;rft.pub=Github.com&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-73"><span class="mw-cite-backlink"><b><a href="#cite_ref-73">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://metacpan.org/pod/CljPerl">"A lisp on Perl . MetaCPAN"</a>. metacpan.org<span class="reference-accessdate">. Retrieved <span class="nowrap">2014-05-25</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.btitle=A+lisp+on+Perl+.+MetaCPAN&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fmetacpan.org%2Fpod%2FCljPerl&amp;rft.pub=metacpan.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="Further_reading">Further reading</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Clojure&amp;action=edit&amp;section=8" title="Edit section: Further reading">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="refbegin" style="">
+<ul>
+<li><cite id="CITEREFRochester2015" class="citation">Rochester, Eric (2015), <a rel="nofollow" class="external text" href="https://www.packtpub.com/application-development/clojure-data-analysis-cookbook-second-edition"><i>Clojure Data Analysis Cookbook</i></a> (2nd ed.), Packt Publishing, <a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="https://en.wikipedia.org/wiki/Special:BookSources/9781784390297" title="Special:BookSources/9781784390297">9781784390297</a></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.aufirst=Eric&amp;rft.aulast=Rochester&amp;rft.btitle=Clojure+Data+Analysis+Cookbook&amp;rft.date=2015&amp;rft.edition=2nd&amp;rft.genre=book&amp;rft_id=https%3A%2F%2Fwww.packtpub.com%2Fapplication-development%2Fclojure-data-analysis-cookbook-second-edition&amp;rft.isbn=9781784390297&amp;rft.pub=Packt+Publishing&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite id="CITEREFGamble2015" class="citation">Gamble, Julian (2015), <a rel="nofollow" class="external text" href="http://www.informit.com/store/clojure-recipes-9780321927736"><i>Clojure Recipes</i></a> (1st ed.), Pearson Publishing, <a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="https://en.wikipedia.org/wiki/Special:BookSources/9780321927736" title="Special:BookSources/9780321927736">9780321927736</a></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.aufirst=Julian&amp;rft.aulast=Gamble&amp;rft.btitle=Clojure+Recipes&amp;rft.date=2015&amp;rft.edition=1st&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.informit.com%2Fstore%2Fclojure-recipes-9780321927736&amp;rft.isbn=9780321927736&amp;rft.pub=Pearson+Publishing&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite id="CITEREFRochester2014" class="citation">Rochester, Eric (2014), <a rel="nofollow" class="external text" href="https://www.packtpub.com/big-data-and-business-intelligence/mastering-clojure-data-analysis"><i>Mastering Clojure Data Analysis</i></a> (1st ed.), Packt Publishing, <a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="https://en.wikipedia.org/wiki/Special:BookSources/9781783284139" title="Special:BookSources/9781783284139">9781783284139</a></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.aufirst=Eric&amp;rft.aulast=Rochester&amp;rft.btitle=Mastering+Clojure+Data+Analysis&amp;rft.date=2014&amp;rft.edition=1st&amp;rft.genre=book&amp;rft_id=https%3A%2F%2Fwww.packtpub.com%2Fbig-data-and-business-intelligence%2Fmastering-clojure-data-analysis&amp;rft.isbn=9781783284139&amp;rft.pub=Packt+Publishing&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite id="CITEREFFogusHouser2014" class="citation">Fogus, Michael; Houser, Chris (2014), <i>The Joy of Clojure</i> (2nd ed.), Manning, <a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="https://en.wikipedia.org/wiki/Special:BookSources/1-617291-41-2" title="Special:BookSources/1-617291-41-2">1-617291-41-2</a></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.aufirst=Michael&amp;rft.au=Houser%2C+Chris&amp;rft.aulast=Fogus&amp;rft.btitle=The+Joy+of+Clojure&amp;rft.date=2014&amp;rft.edition=2nd&amp;rft.genre=book&amp;rft.isbn=1-617291-41-2&amp;rft.pub=Manning&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite id="CITEREFFogusHouser2010" class="citation">Fogus, Michael; Houser, Chris (2010), <i>The Joy of Clojure</i> (1st ed.), Manning, <a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="https://en.wikipedia.org/wiki/Special:BookSources/1-935182-64-1" title="Special:BookSources/1-935182-64-1">1-935182-64-1</a></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.aufirst=Michael&amp;rft.au=Houser%2C+Chris&amp;rft.aulast=Fogus&amp;rft.btitle=The+Joy+of+Clojure&amp;rft.date=2010&amp;rft.edition=1st&amp;rft.genre=book&amp;rft.isbn=1-935182-64-1&amp;rft.pub=Manning&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite id="CITEREFHalloway2012" class="citation">Halloway, Stuart (2012), <i>Programming Clojure</i> (2nd ed.), <a href="https://en.wikipedia.org/wiki/Pragmatic_Bookshelf" class="mw-redirect" title="Pragmatic Bookshelf">Pragmatic Bookshelf</a>, <a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="https://en.wikipedia.org/wiki/Special:BookSources/978-1-93435-686-9" title="Special:BookSources/978-1-93435-686-9">978-1-93435-686-9</a></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.aufirst=Stuart&amp;rft.aulast=Halloway&amp;rft.btitle=Programming+Clojure&amp;rft.date=2012&amp;rft.edition=2nd&amp;rft.genre=book&amp;rft.isbn=978-1-93435-686-9&amp;rft.pub=Pragmatic+Bookshelf&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite id="CITEREFRathore2011" class="citation">Rathore, Amit (2011), <i>Clojure in Action</i> (1st ed.), Manning, <a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="https://en.wikipedia.org/wiki/Special:BookSources/1-935182-59-5" title="Special:BookSources/1-935182-59-5">1-935182-59-5</a></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.aufirst=Amit&amp;rft.aulast=Rathore&amp;rft.btitle=Clojure+in+Action&amp;rft.date=2011&amp;rft.edition=1st&amp;rft.genre=book&amp;rft.isbn=1-935182-59-5&amp;rft.pub=Manning&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite id="CITEREFVanderHartSierra2010" class="citation">VanderHart, Luke; Sierra, Stuart (June 7, 2010), <i>Practical Clojure</i> (1st ed.), <a href="https://en.wikipedia.org/wiki/Apress" title="Apress">Apress</a>, <a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="https://en.wikipedia.org/wiki/Special:BookSources/1-4302-7231-7" title="Special:BookSources/1-4302-7231-7">1-4302-7231-7</a></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.aufirst=Luke&amp;rft.aulast=VanderHart&amp;rft.au=Sierra%2C+Stuart&amp;rft.btitle=Practical+Clojure&amp;rft.date=2010-06-07&amp;rft.edition=1st&amp;rft.genre=book&amp;rft.isbn=1-4302-7231-7&amp;rft.pub=Apress&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite id="CITEREFEmerickCarperGrand2012" class="citation">Emerick, Chas; Carper, Brian; Grand, Christophe (April 19, 2012), <i>Clojure Programming</i> (1st ed.), <a href="https://en.wikipedia.org/wiki/O%27Reilly_Media" title="O'Reilly Media">O'Reilly Media</a>, <a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="https://en.wikipedia.org/wiki/Special:BookSources/1-4493-9470-1" title="Special:BookSources/1-4493-9470-1">1-4493-9470-1</a></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AClojure&amp;rft.au=Carper%2C+Brian&amp;rft.aufirst=Chas&amp;rft.au=Grand%2C+Christophe&amp;rft.aulast=Emerick&amp;rft.btitle=Clojure+Programming&amp;rft.date=2012-04-19&amp;rft.edition=1st&amp;rft.genre=book&amp;rft.isbn=1-4493-9470-1&amp;rft.pub=O%27Reilly+Media&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+</ul>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Clojure&amp;action=edit&amp;section=9" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><span class="official-website"><span class="url"><a rel="nofollow" class="external text" href="http://clojure.org/">Official website</a></span></span></li>
+<li><a rel="nofollow" class="external text" href="https://github.com/clojure/clojure/">GitHub code repository for Clojure</a></li>
+<li><a rel="nofollow" class="external text" href="http://java.ociweb.com/mark/clojure/article.html">A comprehensive overview of Clojure</a></li>
+<li><a rel="nofollow" class="external text" href="http://faustus.webatu.com/clj-quick-ref.html">An overview of Clojure 1.2 in reference format</a></li>
+<li><a rel="nofollow" class="external text" href="http://vimeo.com/channels/fulldisclojure">Full Disclojure – Screencast</a></li>
+<li><a rel="nofollow" class="external text" href="https://www.youtube.com/user/clojuretv">Clojure talks on Youtube</a></li>
+<li><a rel="nofollow" class="external text" href="https://web.archive.org/web/20100316101626/http://clojure.blip.tv/posts?view=archive&amp;nsfw=dc">Clojure talks on Blip.tv</a></li>
+<li><a rel="nofollow" class="external text" href="http://clojuredocs.org/">clojuredocs.org – Community-powered documentation and examples</a></li>
+<li><a rel="nofollow" class="external text" href="http://clojure-doc.org/">clojure-doc.org – Community-driven documentation site for the Clojure programming language</a></li>
+<li><a rel="nofollow" class="external text" href="http://4clojure.com/">4clojure.com – Interactive Clojure Problems</a></li>
+<li><a rel="nofollow" class="external text" href="http://tryclj.com/">TryClojure – An online REPL for Clojure</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.infoq.com/clojure/">Clojure on infoq.com</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.facebook.com/clojurian">Clojure community and resources on Facebook</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.infoq.com/presentations/Are-We-There-Yet-Rich-Hickey">R.Hickey presentation "Are We There Yet?" where he advocates for the reexamination of basic principles like state, identity, value, time, types, genericity, complexity, as they are used by OOP. 2009</a></li>
+</ul>
+<table class="navbox">
+<caption>Timeline of Lisp dialects<sup>(<a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Lisp&amp;action=edit">edit</a>)</sup></caption>
+<tr>
+<th></th>
+<th>1955</th>
+<th>1960</th>
+<th>1965</th>
+<th>1970</th>
+<th>1975</th>
+<th>1980</th>
+<th>1985</th>
+<th>1990</th>
+<th>1995</th>
+<th>2000</th>
+<th>2005</th>
+<th>2010</th>
+<th>2015</th>
+</tr>
+<tr>
+<th>Lisp 1.5</th>
+<td align="center" colspan="3" style="background:lightgray"><a href="https://en.wikipedia.org/wiki/Lisp_(programming_language)" title="Lisp (programming language)">Lisp 1.5</a></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<th>Maclisp</th>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td align="center" colspan="5" style="background:lightgray"><a href="https://en.wikipedia.org/wiki/Maclisp" title="Maclisp">Maclisp</a></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<th>Interlisp</th>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td align="center" colspan="5" style="background:lightgray"><a href="https://en.wikipedia.org/wiki/Interlisp" title="Interlisp">Interlisp</a></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<th>ZetaLisp</th>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td align="center" colspan="5" style="background:lightgray"><a href="https://en.wikipedia.org/wiki/Lisp_Machine_Lisp" title="Lisp Machine Lisp">Lisp Machine Lisp</a></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<th>Scheme</th>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td align="center" colspan="9" style="background:lightgray"><a href="https://en.wikipedia.org/wiki/Scheme_(programming_language)" title="Scheme (programming language)">Scheme</a></td>
+</tr>
+<tr>
+<th>NIL</th>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td align="center" colspan="2" style="background:lightgray"><a href="https://en.wikipedia.org/wiki/NIL_(programming_language)" title="NIL (programming language)">NIL</a></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<th>Common Lisp</th>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td align="center" colspan="8" style="background:lightgray"><a href="https://en.wikipedia.org/wiki/Common_Lisp" title="Common Lisp">Common Lisp</a></td>
+</tr>
+<tr>
+<th>T</th>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td align="center" colspan="3" style="background:lightgray"><a href="https://en.wikipedia.org/wiki/T_(programming_language)" title="T (programming language)">T</a></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<th>Emacs Lisp</th>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td align="center" colspan="8" style="background:lightgray"><a href="https://en.wikipedia.org/wiki/Emacs_Lisp" title="Emacs Lisp">Emacs Lisp</a></td>
+</tr>
+<tr>
+<th>AutoLISP</th>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td align="center" colspan="7" style="background:lightgray"><a href="https://en.wikipedia.org/wiki/AutoLISP" title="AutoLISP">AutoLISP</a></td>
+</tr>
+<tr>
+<th>ISLISP</th>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td align="center" colspan="7" style="background:lightgray"><a href="https://en.wikipedia.org/wiki/ISLISP" title="ISLISP">ISLISP</a></td>
+</tr>
+<tr>
+<th>EuLisp</th>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td align="center" colspan="4" style="background:lightgray"><a href="https://en.wikipedia.org/wiki/EuLisp" title="EuLisp">EuLisp</a></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<th>PicoLisp</th>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td align="center" colspan="6" style="background:lightgray"><a href="https://en.wikipedia.org/wiki/PicoLisp" title="PicoLisp">PicoLisp</a></td>
+</tr>
+<tr>
+<th>Racket</th>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td align="center" colspan="5" style="background:lightgray"><a href="https://en.wikipedia.org/wiki/Racket_(programming_language)" title="Racket (programming language)">Racket</a></td>
+</tr>
+<tr>
+<th>Arc</th>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td align="center" colspan="4" style="background:lightgray"><a href="https://en.wikipedia.org/wiki/Arc_(programming_language)" title="Arc (programming language)">Arc</a></td>
+</tr>
+<tr>
+<th>Clojure</th>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td align="center" colspan="3" style="background:lightgray"><strong class="selflink">Clojure</strong></td>
+</tr>
+<tr>
+<th>LFE</th>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td align="center" colspan="3" style="background:lightgray"><a href="https://en.wikipedia.org/wiki/LFE_(programming_language)" title="LFE (programming language)">LFE</a></td>
+</tr>
+<tr>
+<th>Hy</th>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td colspan="1"></td>
+<td align="center" colspan="2" style="background:lightgray"><a href="https://en.wikipedia.org/wiki/Hy" title="Hy">Hy</a></td>
+</tr>
+</table>
+<div role="navigation" class="navbox" aria-label="Navbox" style="padding:3px">
+<table class="nowraplinks hlist navbox-inner" style="border-spacing:0;background:transparent;color:inherit">
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Help:Authority_control" title="Help:Authority control">Authority control</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><span style="white-space:nowrap;"><a href="https://en.wikipedia.org/wiki/Integrated_Authority_File" title="Integrated Authority File">GND</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://d-nb.info/gnd/7722643-4">7722643-4</a></span></span></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1174
+Cached time: 20170116133131
+Cache expiry: 86400
+Dynamic content: true
+CPU time usage: 0.692 seconds
+Real time usage: 0.955 seconds
+Preprocessor visited node count: 3871/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 122299/2097152 bytes
+Template argument size: 3307/2097152 bytes
+Highest expansion depth: 25/40
+Expensive parser function count: 3/500
+Lua time usage: 0.371/10.000 seconds
+Lua memory usage: 5.58 MB/50 MB
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  857.265      1 - -total
+ 46.05%  394.796      1 - Template:Reflist
+ 34.66%  297.093     66 - Template:Cite_web
+ 10.31%   88.387      2 - Template:Infobox
+  8.34%   71.510      1 - Template:Infobox_programming_language
+  5.28%   45.292      9 - Template:Citation
+  3.94%   33.777      1 - Template:More_footnotes
+  3.28%   28.148      1 - Template:Official_website
+  2.95%   25.269      1 - Template:Infobox_software/simple
+  2.77%   23.760      1 - Template:Ambox
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:16561990-0!*!0!!en!4!* and timestamp 20170116133130 and revision id 759311677
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Clojure&amp;oldid=759311677">https://en.wikipedia.org/w/index.php?title=Clojure&amp;oldid=759311677</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Help_Category.html" title="Help:Category">Categories</a>: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Lisp_(programming_language)" title="Category:Lisp (programming language)">Lisp (programming language)</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Articles_with_example_Clojure_code" title="Category:Articles with example Clojure code">Articles with example Clojure code</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Dynamic_programming_languages" title="Category:Dynamic programming languages">Dynamic programming languages</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Dynamically_typed_programming_languages" title="Category:Dynamically typed programming languages">Dynamically typed programming languages</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Functional_languages" title="Category:Functional languages">Functional languages</a></li><li><a href="Category_JVM_programming_languages.html" title="Category:JVM programming languages">JVM programming languages</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Lisp_programming_language_family" title="Category:Lisp programming language family">Lisp programming language family</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Programming_languages_created_in_2007" title="Category:Programming languages created in 2007">Programming languages created in 2007</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Scripting_languages" title="Category:Scripting languages">Scripting languages</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Software_using_the_Eclipse_license" title="Category:Software using the Eclipse license">Software using the Eclipse license</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Articles_lacking_in-text_citations_from_July_2012" title="Category:Articles lacking in-text citations from July 2012">Articles lacking in-text citations from July 2012</a></li><li><a href="https://en.wikipedia.org/wiki/Category:All_articles_lacking_in-text_citations" title="Category:All articles lacking in-text citations">All articles lacking in-text citations</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Wikipedia_articles_with_GND_identifiers" title="Category:Wikipedia articles with GND identifiers">Wikipedia articles with GND identifiers</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="Special_MyTalk.html" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="Special_MyContributions.html" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&amp;returnto=Clojure" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Clojure" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="Clojure.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+															<li  id="ca-talk"><span><a href="https://en.wikipedia.org/wiki/Talk:Clojure"  title="Discussion about the content page [t]" accesskey="t" rel="discussion">Talk</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="Clojure.html" >Read</a></span></li>
+															<li id="ca-edit"><span><a href="https://en.wikipedia.org/w/index.php?title=Clojure&amp;action=edit"  title="Edit this page [e]" accesskey="e">Edit</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="https://en.wikipedia.org/w/index.php?title=Clojure&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="https://en.wikipedia.org/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="Main_Page.html"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="Portal_Contents.html" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="Portal_Featured_content.html" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="Portal_Current_events.html" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="https://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="../../shop.wikimedia.org/index.html" title="Visit the Wikipedia store">Wikipedia store</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Interaction</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-help"><a href="Help_Contents.html" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="Wikipedia_About.html" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="Wikipedia_Community_portal.html" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="Wikipedia_Contact_us.html" title="How to contact Wikipedia">Contact page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="https://en.wikipedia.org/wiki/Special:WhatLinksHere/Clojure" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://en.wikipedia.org/wiki/Special:RecentChangesLinked/Clojure" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="Wikipedia_File_Upload_Wizard.html" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="https://en.wikipedia.org/w/index.php?title=Clojure&amp;oldid=759311677" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://en.wikipedia.org/w/index.php?title=Clojure&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q51798" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="https://en.wikipedia.org/w/index.php?title=Special:CiteThisPage&amp;page=Clojure&amp;id=759311677" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Print/export</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Clojure">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Clojure&amp;returnto=Clojure&amp;oldid=759311677&amp;writer=rdf2latex">Download as PDF</a></li><li id="t-print"><a href="https://en.wikipedia.org/w/index.php?title=Clojure&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-wikibase-otherprojects' aria-labelledby='p-wikibase-otherprojects-label'>
+			<h3 id='p-wikibase-otherprojects-label'>In other projects</h3>
+
+			<div class="body">
+									<ul>
+						<li class="wb-otherproject-link wb-otherproject-wikibooks"><a href="https://en.wikibooks.org/wiki/Clojure_Programming" hreflang="en">Wikibooks</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Languages</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-ar"><a href="https://ar.wikipedia.org/wiki/كلوجر_(لغة_برمجة)" title="كلوجر (لغة برمجة) – Arabic" lang="ar" hreflang="ar" class="interlanguage-link-target">العربية</a></li><li class="interlanguage-link interwiki-az"><a href="https://az.wikipedia.org/wiki/Clojure" title="Clojure – Azerbaijani" lang="az" hreflang="az" class="interlanguage-link-target">Azərbaycanca</a></li><li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Clojure" title="Clojure – Catalan" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Clojure" title="Clojure – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Clojure" title="Clojure – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-el"><a href="https://el.wikipedia.org/wiki/Clojure" title="Clojure – Greek" lang="el" hreflang="el" class="interlanguage-link-target">Ελληνικά</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Clojure" title="Clojure – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/کلوژر" title="کلوژر – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Clojure" title="Clojure – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/클로저_(프로그래밍_언어)" title="클로저 (프로그래밍 언어) – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-is"><a href="https://is.wikipedia.org/wiki/Clojure" title="Clojure – Icelandic" lang="is" hreflang="is" class="interlanguage-link-target">Íslenska</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Clojure" title="Clojure – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-he"><a href="https://he.wikipedia.org/wiki/Clojure" title="Clojure – Hebrew" lang="he" hreflang="he" class="interlanguage-link-target">עברית</a></li><li class="interlanguage-link interwiki-ka"><a href="https://ka.wikipedia.org/wiki/Clojure" title="Clojure – Georgian" lang="ka" hreflang="ka" class="interlanguage-link-target">ქართული</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/Clojure" title="Clojure – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-no"><a href="https://no.wikipedia.org/wiki/Clojure" title="Clojure – Norwegian" lang="no" hreflang="no" class="interlanguage-link-target">Norsk bokmål</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Clojure" title="Clojure – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Clojure" title="Clojure – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ro"><a href="https://ro.wikipedia.org/wiki/Clojure" title="Clojure – Romanian" lang="ro" hreflang="ro" class="interlanguage-link-target">Română</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/Clojure" title="Clojure – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-sr"><a href="https://sr.wikipedia.org/wiki/Clojure" title="Clojure – Serbian" lang="sr" hreflang="sr" class="interlanguage-link-target">Српски / srpski</a></li><li class="interlanguage-link interwiki-fi"><a href="https://fi.wikipedia.org/wiki/Clojure" title="Clojure – Finnish" lang="fi" hreflang="fi" class="interlanguage-link-target">Suomi</a></li><li class="interlanguage-link interwiki-sv"><a href="https://sv.wikipedia.org/wiki/Clojure" title="Clojure – Swedish" lang="sv" hreflang="sv" class="interlanguage-link-target">Svenska</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/Clojure" title="Clojure – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/Clojure" title="Clojure – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q51798#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 10 January 2017, at 12:40.</li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="Wikipedia_Text_of_Creative_Commons_Attribution-ShareAlike_3.html">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="../../creativecommons.org/licenses/by-sa/3.0/index.html" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="../../wikimediafoundation.org/wiki/Terms_of_Use.html">Terms of Use</a> and <a href="../../wikimediafoundation.org/wiki/Privacy_policy.html">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="../../www.wikimediafoundation.org/index.html">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../../wikimediafoundation.org/wiki/Privacy_policy.html" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="Wikipedia_About.html" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="Wikipedia_General_disclaimer.html" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="Wikipedia_Contact_us.html">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a href="../../www.mediawiki.org/wiki/Special_MyLanguage/How_to_contribute.html">Developers</a></li>
+											<li id="footer-places-cookiestatement"><a href="../../wikimediafoundation.org/wiki/Cookie_statement.html">Cookie statement</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/w/index.php?title=Clojure&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="../../www.wikimediafoundation.org/index.html"><img src="https://en.wikipedia.org/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="../../www.mediawiki.org/index.html"><img src="https://en.wikipedia.org/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":1038,"wgHostname":"mw1174"});});</script>
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Clojure by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:52:46 GMT -->
+</html>

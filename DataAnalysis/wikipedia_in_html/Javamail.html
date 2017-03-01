@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Javamail by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:38 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>JavaMail - Wikipedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"JavaMail","wgTitle":"JavaMail","wgCurRevisionId":757727003,"wgRevisionId":757727003,"wgArticleId":6905370,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Email","Java platform"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"JavaMail","wgRelevantArticleId":6905370,"wgRequestId":"WHyg4gpAICsAAFMR6g8AAAHA","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"Javamail","wgFlaggedRevsParams":{"tags":{}},"wgStableRevisionId":null,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"en","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgInternalRedirectTargetUrl":"/wiki/JavaMail","wgWikibaseItemId":"Q772456","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.cite.styles":"ready","ext.pygments":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@1dqfd7l",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["mediawiki.action.view.redirect","ext.cite.a11y","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.legacy.wikibits","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.watchlist-notice","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.gadget.featured-articles-links","ext.centralauth.centralautologin","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.interface","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="https://en.wikipedia.org/w/load.php?debug=false&amp;lang=en&amp;modules=ext.cite.styles%7Cext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="../w/load2c8d.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../w/load18b6.css?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.29.0-wmf.7"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="https://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/JavaMail"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=JavaMail&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=JavaMail&amp;action=edit"/>
+<link rel="apple-touch-icon" href="https://en.wikipedia.org/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="../static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../w/api251f.php?action=rsd"/>
+<link rel="copyright" href="../../creativecommons.org/licenses/by-sa/3.0/index.html"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/JavaMail"/>
+<link rel="dns-prefetch" href="../../login.wikimedia.org/index.html"/>
+<link rel="dns-prefetch" href="../../meta.wikimedia.org/index.html" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-JavaMail rootpage-JavaMail skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">JavaMail</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"><span class="mw-redirectedfrom">  (Redirected from <a href="https://en.wikipedia.org/w/index.php?title=Javamail&amp;redirect=no" class="mw-redirect" title="Javamail">Javamail</a>)</span></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><script>function mfTempOpenSection(id){var block=document.getElementById("mf-section-"+id);block.className+=" open-block";block.previousSibling.className+=" open-block";}</script><p><b>JavaMail</b> is a <a href="Java_(programming_language).html" title="Java (programming language)">Java</a> <a href="https://en.wikipedia.org/wiki/API" class="mw-redirect" title="API">API</a> used to send and receive <a href="https://en.wikipedia.org/wiki/Email" title="Email">email</a> via <a href="https://en.wikipedia.org/wiki/SMTP" class="mw-redirect" title="SMTP">SMTP</a>, <a href="https://en.wikipedia.org/wiki/POP3" class="mw-redirect" title="POP3">POP3</a> and <a href="https://en.wikipedia.org/wiki/IMAP" class="mw-redirect" title="IMAP">IMAP</a>. JavaMail is built into the <a href="https://en.wikipedia.org/wiki/Java_EE" class="mw-redirect" title="Java EE">Java EE</a> platform, but also provides an optional package for use in <a href="https://en.wikipedia.org/wiki/Java_SE" class="mw-redirect" title="Java SE">Java SE</a>.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[1]</a></sup></p>
+<p>The current version is 1.5.6, released in August 2016. Another <a href="https://en.wikipedia.org/wiki/Open_source" class="mw-redirect" title="Open source">open source</a> JavaMail implementation exists - GNU JavaMail - while supporting only version 1.3 of JavaMail specification, it provides the only free <a href="https://en.wikipedia.org/wiki/NNTP" class="mw-redirect" title="NNTP">NNTP</a> backend, which makes it possible to use this technology to read and send <a href="https://en.wikipedia.org/wiki/News_group" class="mw-redirect" title="News group">news group</a> articles.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Licensing"><span class="tocnumber">1</span> <span class="toctext">Licensing</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Examples"><span class="tocnumber">2</span> <span class="toctext">Examples</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#References"><span class="tocnumber">3</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#External_links"><span class="tocnumber">4</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Licensing">Licensing</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=JavaMail&amp;action=edit&amp;section=1" title="Edit section: Licensing">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>As of April 3, 2013,<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">[2]</a></sup> JavaMail is now hosted as an <a href="https://en.wikipedia.org/wiki/Open_source" class="mw-redirect" title="Open source">open source</a> project on <a href="https://en.wikipedia.org/wiki/Java.net" title="Java.net">Java.net</a>.</p>
+<p>Most of the JavaMail source code is licensed under the following licences:<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">[3]</a></sup></p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/CDDL" class="mw-redirect" title="CDDL">CDDL-1.1</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Gplv2" class="mw-redirect" title="Gplv2">GPL-2.0</a> with Classpath Exception license</li>
+<li>The source code for the demo programs is licensed under the BSD license</li>
+</ul>
+<h2><span class="mw-headline" id="Examples">Examples</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=JavaMail&amp;action=edit&amp;section=2" title="Edit section: Examples">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kn">import</span> <span class="nn">java.util.*</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.mail.*</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.mail.internet.*</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.activation.*</span><span class="o">;</span>
+
+<span class="c1">// Send a simple, single part, text/plain e-mail</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">TestEmail</span> <span class="o">{</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+        <span class="c1">// SUBSTITUTE YOUR EMAIL ADDRESSES HERE!</span>
+        <span class="n">String</span> <span class="n">to</span> <span class="o">=</span> <span class="s">"sendToMailAddress"</span><span class="o">;</span>
+        <span class="n">String</span> <span class="n">from</span> <span class="o">=</span> <span class="s">"sendFromMailAddress"</span><span class="o">;</span>
+        <span class="c1">// SUBSTITUTE YOUR ISP'S MAIL SERVER HERE!</span>
+        <span class="n">String</span> <span class="n">host</span> <span class="o">=</span> <span class="s">"smtp.yourisp.invalid"</span><span class="o">;</span>
+
+        <span class="c1">// Create properties, get Session</span>
+        <span class="n">Properties</span> <span class="n">props</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Properties</span><span class="o">();</span>
+
+        <span class="c1">// If using static Transport.send(),</span>
+        <span class="c1">// need to specify which host to send it to</span>
+        <span class="n">props</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"mail.smtp.host"</span><span class="o">,</span> <span class="n">host</span><span class="o">);</span>
+        <span class="c1">// To see what is going on behind the scene</span>
+        <span class="n">props</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"mail.debug"</span><span class="o">,</span> <span class="s">"true"</span><span class="o">);</span>
+        <span class="n">Session</span> <span class="n">session</span> <span class="o">=</span> <span class="n">Session</span><span class="o">.</span><span class="na">getInstance</span><span class="o">(</span><span class="n">props</span><span class="o">);</span>
+
+        <span class="k">try</span> <span class="o">{</span>
+            <span class="c1">// Instantiate a message</span>
+            <span class="n">Message</span> <span class="n">msg</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MimeMessage</span><span class="o">(</span><span class="n">session</span><span class="o">);</span>
+
+            <span class="c1">//Set message attributes</span>
+            <span class="n">msg</span><span class="o">.</span><span class="na">setFrom</span><span class="o">(</span><span class="k">new</span> <span class="n">InternetAddress</span><span class="o">(</span><span class="n">from</span><span class="o">));</span>
+            <span class="n">InternetAddress</span><span class="o">[]</span> <span class="n">address</span> <span class="o">=</span> <span class="o">{</span><span class="k">new</span> <span class="n">InternetAddress</span><span class="o">(</span><span class="n">to</span><span class="o">)};</span>
+            <span class="n">msg</span><span class="o">.</span><span class="na">setRecipients</span><span class="o">(</span><span class="n">Message</span><span class="o">.</span><span class="na">RecipientType</span><span class="o">.</span><span class="na">TO</span><span class="o">,</span> <span class="n">address</span><span class="o">);</span>
+            <span class="n">msg</span><span class="o">.</span><span class="na">setSubject</span><span class="o">(</span><span class="s">"Test E-Mail through Java"</span><span class="o">);</span>
+            <span class="n">msg</span><span class="o">.</span><span class="na">setSentDate</span><span class="o">(</span><span class="k">new</span> <span class="n">Date</span><span class="o">());</span>
+
+            <span class="c1">// Set message content</span>
+            <span class="n">msg</span><span class="o">.</span><span class="na">setText</span><span class="o">(</span><span class="s">"This is a test of sending a "</span> <span class="o">+</span>
+                        <span class="s">"plain text e-mail through Java.\n"</span> <span class="o">+</span>
+                        <span class="s">"Here is line 2."</span><span class="o">);</span>
+
+            <span class="c1">//Send the message</span>
+            <span class="n">Transport</span><span class="o">.</span><span class="na">send</span><span class="o">(</span><span class="n">msg</span><span class="o">);</span>
+        <span class="o">}</span>
+        <span class="k">catch</span> <span class="o">(</span><span class="n">MessagingException</span> <span class="n">mex</span><span class="o">)</span> <span class="o">{</span>
+            <span class="c1">// Prints all nested (chained) exceptions as well</span>
+            <span class="n">mex</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span><span class="c1">//End of class</span>
+</pre></div>
+<p>Sample Code to Send Multipart E-Mail, HTML E-Mail and File Attachments</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kn">import</span> <span class="nn">java.util.*</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.io.*</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.mail.*</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.mail.internet.*</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.activation.*</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">SendMailUsage</span> <span class="o">{</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+        <span class="c1">// SUBSTITUTE YOUR EMAIL ADDRESSES HERE!!!</span>
+        <span class="n">String</span> <span class="n">to</span> <span class="o">=</span> <span class="s">"sendToMailAddress"</span><span class="o">;</span>
+        <span class="n">String</span> <span class="n">from</span> <span class="o">=</span> <span class="s">"sendFromMailAddress"</span><span class="o">;</span>
+        <span class="c1">// SUBSTITUTE YOUR ISP'S MAIL SERVER HERE!!!</span>
+        <span class="n">String</span> <span class="n">host</span> <span class="o">=</span> <span class="s">"smtpserver.yourisp.invalid"</span><span class="o">;</span>
+
+        <span class="c1">// Create properties for the Session</span>
+        <span class="n">Properties</span> <span class="n">props</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Properties</span><span class="o">();</span>
+
+        <span class="c1">// If using static Transport.send(),</span>
+        <span class="c1">// need to specify the mail server here</span>
+        <span class="n">props</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"mail.smtp.host"</span><span class="o">,</span> <span class="n">host</span><span class="o">);</span>
+        <span class="c1">// To see what is going on behind the scene</span>
+        <span class="n">props</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"mail.debug"</span><span class="o">,</span> <span class="s">"true"</span><span class="o">);</span>
+
+        <span class="c1">// Get a session</span>
+        <span class="n">Session</span> <span class="n">session</span> <span class="o">=</span> <span class="n">Session</span><span class="o">.</span><span class="na">getInstance</span><span class="o">(</span><span class="n">props</span><span class="o">);</span>
+
+        <span class="k">try</span> <span class="o">{</span>
+            <span class="c1">// Get a Transport object to send e-mail</span>
+            <span class="n">Transport</span> <span class="n">bus</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="na">getTransport</span><span class="o">(</span><span class="s">"smtp"</span><span class="o">);</span>
+
+            <span class="c1">// Connect only once here</span>
+            <span class="c1">// Transport.send() disconnects after each send</span>
+            <span class="c1">// Usually, no username and password is required for SMTP</span>
+            <span class="n">bus</span><span class="o">.</span><span class="na">connect</span><span class="o">();</span>
+            <span class="c1">//bus.connect("smtpserver.yourisp.net", "username", "password");</span>
+
+            <span class="c1">// Instantiate a message</span>
+            <span class="n">Message</span> <span class="n">msg</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MimeMessage</span><span class="o">(</span><span class="n">session</span><span class="o">);</span>
+
+            <span class="c1">// Set message attributes</span>
+            <span class="n">msg</span><span class="o">.</span><span class="na">setFrom</span><span class="o">(</span><span class="k">new</span> <span class="n">InternetAddress</span><span class="o">(</span><span class="n">from</span><span class="o">));</span>
+            <span class="n">InternetAddress</span><span class="o">[]</span> <span class="n">address</span> <span class="o">=</span> <span class="o">{</span><span class="k">new</span> <span class="n">InternetAddress</span><span class="o">(</span><span class="n">to</span><span class="o">)};</span>
+            <span class="n">msg</span><span class="o">.</span><span class="na">setRecipients</span><span class="o">(</span><span class="n">Message</span><span class="o">.</span><span class="na">RecipientType</span><span class="o">.</span><span class="na">TO</span><span class="o">,</span> <span class="n">address</span><span class="o">);</span>
+            <span class="c1">// Parse a comma-separated list of email addresses. Be strict.</span>
+            <span class="n">msg</span><span class="o">.</span><span class="na">setRecipients</span><span class="o">(</span><span class="n">Message</span><span class="o">.</span><span class="na">RecipientType</span><span class="o">.</span><span class="na">CC</span><span class="o">,</span>
+                                <span class="n">InternetAddress</span><span class="o">.</span><span class="na">parse</span><span class="o">(</span><span class="n">to</span><span class="o">,</span> <span class="kc">true</span><span class="o">));</span>
+            <span class="c1">// Parse comma/space-separated list. Cut some slack.</span>
+            <span class="n">msg</span><span class="o">.</span><span class="na">setRecipients</span><span class="o">(</span><span class="n">Message</span><span class="o">.</span><span class="na">RecipientType</span><span class="o">.</span><span class="na">BCC</span><span class="o">,</span>
+                                <span class="n">InternetAddress</span><span class="o">.</span><span class="na">parse</span><span class="o">(</span><span class="n">to</span><span class="o">,</span> <span class="kc">false</span><span class="o">));</span>
+
+            <span class="n">msg</span><span class="o">.</span><span class="na">setSubject</span><span class="o">(</span><span class="s">"Test E-Mail through Java"</span><span class="o">);</span>
+            <span class="n">msg</span><span class="o">.</span><span class="na">setSentDate</span><span class="o">(</span><span class="k">new</span> <span class="n">Date</span><span class="o">());</span>
+
+            <span class="c1">// Set message content and send</span>
+            <span class="n">setTextContent</span><span class="o">(</span><span class="n">msg</span><span class="o">);</span>
+            <span class="n">msg</span><span class="o">.</span><span class="na">saveChanges</span><span class="o">();</span>
+            <span class="n">bus</span><span class="o">.</span><span class="na">sendMessage</span><span class="o">(</span><span class="n">msg</span><span class="o">,</span> <span class="n">address</span><span class="o">);</span>
+
+            <span class="n">setMultipartContent</span><span class="o">(</span><span class="n">msg</span><span class="o">);</span>
+            <span class="n">msg</span><span class="o">.</span><span class="na">saveChanges</span><span class="o">();</span>
+            <span class="n">bus</span><span class="o">.</span><span class="na">sendMessage</span><span class="o">(</span><span class="n">msg</span><span class="o">,</span> <span class="n">address</span><span class="o">);</span>
+
+            <span class="n">setFileAsAttachment</span><span class="o">(</span><span class="n">msg</span><span class="o">,</span> <span class="s">"C:/WINDOWS/CLOUD.GIF"</span><span class="o">);</span>
+            <span class="n">msg</span><span class="o">.</span><span class="na">saveChanges</span><span class="o">();</span>
+            <span class="n">bus</span><span class="o">.</span><span class="na">sendMessage</span><span class="o">(</span><span class="n">msg</span><span class="o">,</span> <span class="n">address</span><span class="o">);</span>
+
+            <span class="n">setHTMLContent</span><span class="o">(</span><span class="n">msg</span><span class="o">);</span>
+            <span class="n">msg</span><span class="o">.</span><span class="na">saveChanges</span><span class="o">();</span>
+            <span class="n">bus</span><span class="o">.</span><span class="na">sendMessage</span><span class="o">(</span><span class="n">msg</span><span class="o">,</span> <span class="n">address</span><span class="o">);</span>
+
+            <span class="n">bus</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+
+        <span class="o">}</span>
+        <span class="k">catch</span> <span class="o">(</span><span class="n">MessagingException</span> <span class="n">mex</span><span class="o">)</span> <span class="o">{</span>
+            <span class="c1">// Prints all nested (chained) exceptions as well</span>
+            <span class="n">mex</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+            <span class="c1">// How to access nested exceptions</span>
+            <span class="k">while</span> <span class="o">(</span><span class="n">mex</span><span class="o">.</span><span class="na">getNextException</span><span class="o">()</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+                <span class="c1">// Get next exception in chain</span>
+                <span class="n">Exception</span> <span class="n">ex</span> <span class="o">=</span> <span class="n">mex</span><span class="o">.</span><span class="na">getNextException</span><span class="o">();</span>
+                <span class="n">ex</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+                <span class="k">if</span> <span class="o">(!(</span><span class="n">ex</span> <span class="k">instanceof</span> <span class="n">MessagingException</span><span class="o">))</span> <span class="k">break</span><span class="o">;</span>
+                <span class="k">else</span> <span class="n">mex</span> <span class="o">=</span> <span class="o">(</span><span class="n">MessagingException</span><span class="o">)</span><span class="n">ex</span><span class="o">;</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="c1">// A simple, single-part text/plain e-mail.</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">setTextContent</span><span class="o">(</span><span class="n">Message</span> <span class="n">msg</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">MessagingException</span> <span class="o">{</span>
+            <span class="c1">// Set message content</span>
+            <span class="n">String</span> <span class="n">mytxt</span> <span class="o">=</span> <span class="s">"This is a test of sending a "</span> <span class="o">+</span>
+                            <span class="s">"plain text e-mail through Java.\n"</span> <span class="o">+</span>
+                            <span class="s">"Here is line 2."</span><span class="o">;</span>
+            <span class="n">msg</span><span class="o">.</span><span class="na">setText</span><span class="o">(</span><span class="n">mytxt</span><span class="o">);</span>
+
+            <span class="c1">// Alternate form</span>
+            <span class="n">msg</span><span class="o">.</span><span class="na">setContent</span><span class="o">(</span><span class="n">mytxt</span><span class="o">,</span> <span class="s">"text/plain"</span><span class="o">);</span>
+
+    <span class="o">}</span>
+
+    <span class="c1">// A simple multipart/mixed e-mail. Both body parts are text/plain.</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">setMultipartContent</span><span class="o">(</span><span class="n">Message</span> <span class="n">msg</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">MessagingException</span> <span class="o">{</span>
+        <span class="c1">// Create and fill first part</span>
+        <span class="n">MimeBodyPart</span> <span class="n">p1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MimeBodyPart</span><span class="o">();</span>
+        <span class="n">p1</span><span class="o">.</span><span class="na">setText</span><span class="o">(</span><span class="s">"This is part one of a test multipart e-mail."</span><span class="o">);</span>
+
+        <span class="c1">// Create and fill second part</span>
+        <span class="n">MimeBodyPart</span> <span class="n">p2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MimeBodyPart</span><span class="o">();</span>
+        <span class="c1">// Here is how to set a charset on textual content</span>
+        <span class="n">p2</span><span class="o">.</span><span class="na">setText</span><span class="o">(</span><span class="s">"This is the second part"</span><span class="o">,</span> <span class="s">"us-ascii"</span><span class="o">);</span>
+
+        <span class="c1">// Create the Multipart.  Add BodyParts to it.</span>
+        <span class="n">Multipart</span> <span class="n">mp</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MimeMultipart</span><span class="o">();</span>
+        <span class="n">mp</span><span class="o">.</span><span class="na">addBodyPart</span><span class="o">(</span><span class="n">p1</span><span class="o">);</span>
+        <span class="n">mp</span><span class="o">.</span><span class="na">addBodyPart</span><span class="o">(</span><span class="n">p2</span><span class="o">);</span>
+
+        <span class="c1">// Set Multipart as the message's content</span>
+        <span class="n">msg</span><span class="o">.</span><span class="na">setContent</span><span class="o">(</span><span class="n">mp</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="c1">// Set a file as an attachment.  Uses JAF FileDataSource.</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">setFileAsAttachment</span><span class="o">(</span><span class="n">Message</span> <span class="n">msg</span><span class="o">,</span> <span class="n">String</span> <span class="n">filename</span><span class="o">)</span>
+             <span class="kd">throws</span> <span class="n">MessagingException</span> <span class="o">{</span>
+
+        <span class="c1">// Create and fill first part</span>
+        <span class="n">MimeBodyPart</span> <span class="n">p1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MimeBodyPart</span><span class="o">();</span>
+        <span class="n">p1</span><span class="o">.</span><span class="na">setText</span><span class="o">(</span><span class="s">"This is part one of a test multipart e-mail."</span> <span class="o">+</span>
+                    <span class="s">"The second part is file as an attachment"</span><span class="o">);</span>
+
+        <span class="c1">// Create second part</span>
+        <span class="n">MimeBodyPart</span> <span class="n">p2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MimeBodyPart</span><span class="o">();</span>
+
+        <span class="c1">// Put a file in the second part</span>
+        <span class="n">FileDataSource</span> <span class="n">fds</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FileDataSource</span><span class="o">(</span><span class="n">filename</span><span class="o">);</span>
+        <span class="n">p2</span><span class="o">.</span><span class="na">setDataHandler</span><span class="o">(</span><span class="k">new</span> <span class="n">DataHandler</span><span class="o">(</span><span class="n">fds</span><span class="o">));</span>
+        <span class="n">p2</span><span class="o">.</span><span class="na">setFileName</span><span class="o">(</span><span class="n">fds</span><span class="o">.</span><span class="na">getName</span><span class="o">());</span>
+
+        <span class="c1">// Create the Multipart.  Add BodyParts to it.</span>
+        <span class="n">Multipart</span> <span class="n">mp</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MimeMultipart</span><span class="o">();</span>
+        <span class="n">mp</span><span class="o">.</span><span class="na">addBodyPart</span><span class="o">(</span><span class="n">p1</span><span class="o">);</span>
+        <span class="n">mp</span><span class="o">.</span><span class="na">addBodyPart</span><span class="o">(</span><span class="n">p2</span><span class="o">);</span>
+
+        <span class="c1">// Set Multipart as the message's content</span>
+        <span class="n">msg</span><span class="o">.</span><span class="na">setContent</span><span class="o">(</span><span class="n">mp</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="c1">// Set a single part html content.</span>
+    <span class="c1">// Sending data of any type is similar.</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">setHTMLContent</span><span class="o">(</span><span class="n">Message</span> <span class="n">msg</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">MessagingException</span> <span class="o">{</span>
+
+        <span class="n">String</span> <span class="n">html</span> <span class="o">=</span> <span class="s">"&lt;html&gt;&lt;head&gt;&lt;title&gt;"</span> <span class="o">+</span>
+                        <span class="n">msg</span><span class="o">.</span><span class="na">getSubject</span><span class="o">()</span> <span class="o">+</span>
+                        <span class="s">"&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;"</span> <span class="o">+</span>
+                        <span class="n">msg</span><span class="o">.</span><span class="na">getSubject</span><span class="o">()</span> <span class="o">+</span>
+                        <span class="s">"&lt;/h1&gt;&lt;p&gt;This is a test of sending an HTML e-mail"</span> <span class="o">+</span>
+                        <span class="s">" through Java.&lt;/body&gt;&lt;/html&gt;"</span><span class="o">;</span>
+
+        <span class="c1">// HTMLDataSource is a static nested class</span>
+        <span class="n">msg</span><span class="o">.</span><span class="na">setDataHandler</span><span class="o">(</span><span class="k">new</span> <span class="n">DataHandler</span><span class="o">(</span><span class="k">new</span> <span class="n">HTMLDataSource</span><span class="o">(</span><span class="n">html</span><span class="o">)));</span>
+    <span class="o">}</span>
+
+    <span class="cm">/*</span>
+<span class="cm">     * Static nested class to act as a JAF datasource to send HTML e-mail content</span>
+<span class="cm">     */</span>
+    <span class="kd">static</span> <span class="kd">class</span> <span class="nc">HTMLDataSource</span> <span class="kd">implements</span> <span class="n">DataSource</span> <span class="o">{</span>
+        <span class="kd">private</span> <span class="n">String</span> <span class="n">html</span><span class="o">;</span>
+
+        <span class="kd">public</span> <span class="nf">HTMLDataSource</span><span class="o">(</span><span class="n">String</span> <span class="n">htmlString</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">html</span> <span class="o">=</span> <span class="n">htmlString</span><span class="o">;</span>
+        <span class="o">}</span>
+
+        <span class="c1">// Return html string in an InputStream.</span>
+        <span class="c1">// A new stream must be returned each time.</span>
+        <span class="kd">public</span> <span class="n">InputStream</span> <span class="nf">getInputStream</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="o">{</span>
+            <span class="k">if</span> <span class="o">(</span><span class="n">html</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="k">throw</span> <span class="k">new</span> <span class="n">IOException</span><span class="o">(</span><span class="s">"Null HTML"</span><span class="o">);</span>
+            <span class="k">return</span> <span class="k">new</span> <span class="n">ByteArrayInputStream</span><span class="o">(</span><span class="n">html</span><span class="o">.</span><span class="na">getBytes</span><span class="o">());</span>
+        <span class="o">}</span>
+
+        <span class="kd">public</span> <span class="n">OutputStream</span> <span class="nf">getOutputStream</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="o">{</span>
+            <span class="k">throw</span> <span class="k">new</span> <span class="n">IOException</span><span class="o">(</span><span class="s">"This DataHandler cannot write HTML"</span><span class="o">);</span>
+        <span class="o">}</span>
+
+        <span class="kd">public</span> <span class="n">String</span> <span class="nf">getContentType</span><span class="o">()</span> <span class="o">{</span>
+            <span class="k">return</span> <span class="s">"text/html"</span><span class="o">;</span>
+        <span class="o">}</span>
+
+        <span class="kd">public</span> <span class="n">String</span> <span class="nf">getName</span><span class="o">()</span> <span class="o">{</span>
+            <span class="k">return</span> <span class="s">"JAF text/html dataSource to send e-mail only"</span><span class="o">;</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+<span class="o">}</span> <span class="c1">//End of class</span>
+</pre></div>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=JavaMail&amp;action=edit&amp;section=3" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.oracle.com/technetwork/java/faq-135477.html#JDK">"JavaEE inclusion"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">12 Nov</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJavaMail&amp;rft.btitle=JavaEE+inclusion&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.oracle.com%2Ftechnetwork%2Fjava%2Ffaq-135477.html%23JDK&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.oracle.com/technetwork/java/javamail/index.html">"JavaMail"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">9 Nov</span> 2013</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJavaMail&amp;rft.btitle=JavaMail&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.oracle.com%2Ftechnetwork%2Fjava%2Fjavamail%2Findex.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://java.net/projects/javamail/pages/License">"JavaMail License"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">22 Jan</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJavaMail&amp;rft.btitle=JavaMail+License&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fjava.net%2Fprojects%2Fjavamail%2Fpages%2FLicense&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=JavaMail&amp;action=edit&amp;section=4" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://www.oracle.com/technetwork/java/javamail/index.html">JavaMail homepage at Oracle</a></li>
+<li><a rel="nofollow" class="external text" href="https://java.net/projects/javamail/pages/Home">JavaMail project site at Java.net</a></li>
+<li><a rel="nofollow" class="external text" href="https://www.gnu.org/software/classpathx/javamail/javamail.html">GNU JavaMail</a></li>
+</ul>
+<div role="navigation" class="navbox" aria-labelledby="Java_EE_7_specifications" style="padding:3px">
+<table class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="https://en.wikipedia.org/wiki/Template:Java_EE_7" title="Template:Java EE 7"><abbr title="View this template" style=";;background:none transparent;border:none;">v</abbr></a></li>
+<li class="nv-talk"><a href="https://en.wikipedia.org/wiki/Template_talk:Java_EE_7" title="Template talk:Java EE 7"><abbr title="Discuss this template" style=";;background:none transparent;border:none;">t</abbr></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Java_EE_7&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;">e</abbr></a></li>
+</ul>
+</div>
+<div id="Java_EE_7_specifications" style="font-size:114%"><a href="Java_EE_version_history.html#Java_EE_7_.28June_12.2C_2013.29" title="Java EE version history">Java EE 7</a> specifications</div>
+</th>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Web_Application" class="mw-redirect" title="Web Application">Web Application</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Java_Servlet.html" class="mw-redirect" title="Java Servlet">Servlet</a></li>
+<li><a href="JavaServer_Pages.html" title="JavaServer Pages">JavaServer Pages</a></li>
+<li><a href="Unified_Expression_Language.html" title="Unified Expression Language">Expression Language</a></li>
+<li><a href="JavaServer_Pages_Standard_Tag_Library.html" title="JavaServer Pages Standard Tag Library">JSTL</a></li>
+<li><a href="JavaServer_Faces.html" title="JavaServer Faces">JavaServer Faces</a></li>
+<li><a href="https://en.wikipedia.org/wiki/WebSocket" title="WebSocket">WebSocket</a></li>
+<li><a href="https://en.wikipedia.org/w/index.php?title=JSON_Processing&amp;action=edit&amp;redlink=1" class="new" title="JSON Processing (page does not exist)">JSON Processing</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Enterprise_Application" class="mw-redirect" title="Enterprise Application">Enterprise Application</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li>CDI</li>
+<li><a href="https://en.wikipedia.org/wiki/Dependency_injection" title="Dependency injection">Dependency Injection</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Bean_Validation" title="Bean Validation">Bean Validation</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Enterprise_JavaBeans" title="Enterprise JavaBeans">Enterprise JavaBeans</a></li>
+<li><a href="Java_Persistence_API.html" title="Java Persistence API">JPA</a></li>
+<li><a href="Java_Message_Service.html" title="Java Message Service">JMS</a></li>
+<li><a href="Java_Transaction_API.html" title="Java Transaction API">JTA</a></li>
+<li><strong class="selflink">JavaMail</strong></li>
+<li>Interceptors</li>
+<li><a href="Java_EE_Connector_Architecture.html" title="Java EE Connector Architecture">JCA</a></li>
+<li><a href="JSR_250.html" title="JSR 250">Common Annotations</a></li>
+<li><a href="https://en.wikipedia.org/w/index.php?title=Batch_Applications&amp;action=edit&amp;redlink=1" class="new" title="Batch Applications (page does not exist)">Batch Applications</a></li>
+<li><a href="https://en.wikipedia.org/w/index.php?title=Concurrency_Utilities&amp;action=edit&amp;redlink=1" class="new" title="Concurrency Utilities (page does not exist)">Concurrency Utilities</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Web_Services" class="mw-redirect" title="Web Services">Web Services</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Java_API_for_RESTful_Web_Services" title="Java API for RESTful Web Services">JAX-RS</a></li>
+<li><a href="https://en.wikipedia.org/w/index.php?title=Enterprise_Web_Services&amp;action=edit&amp;redlink=1" class="new" title="Enterprise Web Services (page does not exist)">Enterprise Web Services</a></li>
+<li><a href="Java_API_for_XML_Web_Services.html" title="Java API for XML Web Services">JAX-WS</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Web_Services_Metadata_for_Java" title="Web Services Metadata for Java">Web Services Metadata</a></li>
+<li><a href="Java_API_for_XML_Messaging.html" title="Java API for XML Messaging">Java API for XML Messaging</a></li>
+<li><a href="Java_API_for_XML_Registries.html" title="Java API for XML Registries">JAXR</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Application_performance_management" title="Application performance management">Management</a> and <a href="https://en.wikipedia.org/wiki/Application_security" title="Application security">Security</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/w/index.php?title=Java_Authentication_SPI&amp;action=edit&amp;redlink=1" class="new" title="Java Authentication SPI (page does not exist)">Java Authentication SPI</a></li>
+<li><a href="https://en.wikipedia.org/w/index.php?title=Java_Authorization_SPI&amp;action=edit&amp;redlink=1" class="new" title="Java Authorization SPI (page does not exist)">Java Authorization SPI</a></li>
+<li><a href="https://en.wikipedia.org/wiki/J2EE_Management" title="J2EE Management">J2EE Management</a></li>
+<li>Debugging for Other Languages</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Related Specs in Java SE</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Java_Architecture_for_XML_Binding.html" title="Java Architecture for XML Binding">JAXB</a></li>
+<li><a href="Java_API_for_XML_Processing.html" title="Java API for XML Processing">JAXP</a></li>
+<li><a href="Java_Database_Connectivity.html" title="Java Database Connectivity">JDBC</a></li>
+<li><a href="Java_Management_Extensions.html" title="Java Management Extensions">JMX</a></li>
+<li><a href="JavaBeans_Activation_Framework.html" title="JavaBeans Activation Framework">JavaBeans Activation Framework</a></li>
+<li><a href="StAX.html" title="StAX">Streaming API for XML</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1190
+Cached time: 20170101110923
+Cache expiry: 2592000
+Dynamic content: false
+CPU time usage: 0.072 seconds
+Real time usage: 0.090 seconds
+Preprocessor visited node count: 219/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 14350/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 4/40
+Expensive parser function count: 0/500
+Lua time usage: 0.029/10.000 seconds
+Lua memory usage: 1.71 MB/50 MB
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   62.976      1 - -total
+ 80.92%   50.962      1 - Template:Reflist
+ 72.61%   45.727      3 - Template:Cite_web
+ 18.94%   11.928      1 - Template:Java_EE_7
+ 16.44%   10.354      1 - Template:Navbox
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:6905370-0!*!0!!en!*!* and timestamp 20170101110943 and revision id 757727003
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=JavaMail&amp;oldid=757727003">https://en.wikipedia.org/w/index.php?title=JavaMail&amp;oldid=757727003</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Help_Category.html" title="Help:Category">Categories</a>: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Email" title="Category:Email">Email</a></li><li><a href="Category_Java_platform.html" title="Category:Java platform">Java platform</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="Special_MyTalk.html" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="Special_MyContributions.html" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&amp;returnto=JavaMail" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=JavaMail" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="https://en.wikipedia.org/wiki/JavaMail"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+															<li  id="ca-talk"><span><a href="https://en.wikipedia.org/wiki/Talk:JavaMail"  title="Discussion about the content page [t]" accesskey="t" rel="discussion">Talk</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="https://en.wikipedia.org/wiki/JavaMail" >Read</a></span></li>
+															<li id="ca-edit"><span><a href="https://en.wikipedia.org/w/index.php?title=JavaMail&amp;action=edit"  title="Edit this page [e]" accesskey="e">Edit</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="https://en.wikipedia.org/w/index.php?title=JavaMail&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="https://en.wikipedia.org/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="Main_Page.html"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="Portal_Contents.html" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="Portal_Featured_content.html" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="Portal_Current_events.html" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="https://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="../../shop.wikimedia.org/index.html" title="Visit the Wikipedia store">Wikipedia store</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Interaction</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-help"><a href="Help_Contents.html" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="Wikipedia_About.html" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="Wikipedia_Community_portal.html" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="Wikipedia_Contact_us.html" title="How to contact Wikipedia">Contact page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="https://en.wikipedia.org/wiki/Special:WhatLinksHere/JavaMail" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://en.wikipedia.org/wiki/Special:RecentChangesLinked/JavaMail" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="Wikipedia_File_Upload_Wizard.html" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="https://en.wikipedia.org/w/index.php?title=JavaMail&amp;oldid=757727003" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://en.wikipedia.org/w/index.php?title=JavaMail&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q772456" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="https://en.wikipedia.org/w/index.php?title=Special:CiteThisPage&amp;page=JavaMail&amp;id=757727003" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Print/export</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=JavaMail">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=JavaMail&amp;returnto=JavaMail&amp;oldid=757727003&amp;writer=rdf2latex">Download as PDF</a></li><li id="t-print"><a href="https://en.wikipedia.org/w/index.php?title=JavaMail&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Languages</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/JavaMail" title="JavaMail – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/JavaMail" title="JavaMail – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/JavaMail" title="JavaMail – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/자바_메일" title="자바 메일 – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/JavaMail" title="JavaMail – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/JavaMail" title="JavaMail – Hungarian" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/JavaMail" title="JavaMail – Dutch" lang="nl" hreflang="nl" class="interlanguage-link-target">Nederlands</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/JavaMail" title="JavaMail – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q772456#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 1 January 2017, at 11:09.</li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="Wikipedia_Text_of_Creative_Commons_Attribution-ShareAlike_3.html">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="../../creativecommons.org/licenses/by-sa/3.0/index.html" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="../../wikimediafoundation.org/wiki/Terms_of_Use.html">Terms of Use</a> and <a href="../../wikimediafoundation.org/wiki/Privacy_policy.html">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="../../www.wikimediafoundation.org/index.html">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../../wikimediafoundation.org/wiki/Privacy_policy.html" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="Wikipedia_About.html" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="Wikipedia_General_disclaimer.html" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="Wikipedia_Contact_us.html">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a href="../../www.mediawiki.org/wiki/Special_MyLanguage/How_to_contribute.html">Developers</a></li>
+											<li id="footer-places-cookiestatement"><a href="../../wikimediafoundation.org/wiki/Cookie_statement.html">Cookie statement</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/w/index.php?title=JavaMail&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="../../www.wikimediafoundation.org/index.html"><img src="https://en.wikipedia.org/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="../../www.mediawiki.org/index.html"><img src="https://en.wikipedia.org/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":74,"wgHostname":"mw1173"});});</script>
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Javamail by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:38 GMT -->
+</html>

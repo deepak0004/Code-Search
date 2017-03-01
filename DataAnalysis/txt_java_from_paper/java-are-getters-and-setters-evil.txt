@@ -1,0 +1,10 @@
+    
+        I'm currently working on a simple game in Java with several different modes. I've extended a main Game class to put the main logic within the other classes. Despite this, the main game class is still pretty hefty.
+
+After taking a quick look at my code the majority of it was Getters and Setters (60%) compared to the rest that is truly needed for the logic of the game.
+
+A couple of Google searches have claimed that Getters and Setters are evil, whilst others have claimed that they are necessary for good OO practice and great programs.
+
+What are your opinions on this? Should I be changing my Getters and Setters for my private variables or should I stick with them?
+
+                

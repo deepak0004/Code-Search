@@ -1,0 +1,30 @@
+    
+        Consider the following code:
+
+public class ReadingTest {
+
+    public void readAndPrint(String usingEncoding) throws Exception {
+        ByteArrayInputStream bais = new ByteArrayInputStream(new byte[]{(byte) 0xC2, (byte) 0xB5}); // 'micro' sign UTF-8 representation
+        InputStreamReader isr = new InputStreamReader(bais, usingEncoding);
+        char[] cbuf = new char[2];
+        isr.read(cbuf);
+        System.out.println(cbuf[0]+" "+(int) cbuf[0]);
+    }
+
+    public static void main(String[] argv) throws Exception {
+        ReadingTest w = new ReadingTest();
+        w.readAndPrint("UTF-8");
+        w.readAndPrint("US-ASCII");
+    }
+}
+
+
+Observed output:
+
+µ 181
+? 65533
+
+
+Why does the second call of readAndPrint() (the one using US-ASCII) succeed? I would expect it to throw an error, since the input is not a proper character in this encoding. What is the place in the Java API or JLS which mandates this behavior?
+
+                

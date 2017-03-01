@@ -1,0 +1,2045 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Java_syntax by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:37 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Java syntax - Wikipedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Java_syntax","wgTitle":"Java syntax","wgCurRevisionId":754094404,"wgRevisionId":754094404,"wgArticleId":1079500,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles lacking in-text citations from January 2014","All articles lacking in-text citations","Pages using ISBN magic links","Java (programming language)"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Java_syntax","wgRelevantArticleId":1079500,"wgRequestId":"WHk-LgpAMEwAAC6hBsEAAADI","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgFlaggedRevsParams":{"tags":{}},"wgStableRevisionId":null,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"en","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgWikibaseItemId":"Q451207","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.cite.styles":"ready","ext.pygments":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@1dqfd7l",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["ext.cite.a11y","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.legacy.wikibits","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.watchlist-notice","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.gadget.featured-articles-links","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.interface","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="https://en.wikipedia.org/w/load.php?debug=false&amp;lang=en&amp;modules=ext.cite.styles%7Cext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="../w/load2c8d.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../w/load18b6.css?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.29.0-wmf.7"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="https://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Java_syntax"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit"/>
+<link rel="apple-touch-icon" href="https://en.wikipedia.org/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="../static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../w/api251f.php?action=rsd"/>
+<link rel="copyright" href="../../creativecommons.org/licenses/by-sa/3.0/index.html"/>
+<link rel="canonical" href="Java_syntax.html"/>
+<link rel="dns-prefetch" href="../../login.wikimedia.org/index.html"/>
+<link rel="dns-prefetch" href="../../meta.wikimedia.org/index.html" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Java_syntax rootpage-Java_syntax skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">Java syntax</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><script>function mfTempOpenSection(id){var block=document.getElementById("mf-section-"+id);block.className+=" open-block";block.previousSibling.className+=" open-block";}</script><table class="plainlinks metadata ambox ambox-style ambox-More_footnotes" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/40px-Text_document_with_red_question_mark.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/60px-Text_document_with_red_question_mark.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/80px-Text_document_with_red_question_mark.svg.png 2x" data-file-width="48" data-file-height="48" /></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article includes a <a href="https://en.wikipedia.org/wiki/Wikipedia:Citing_sources" title="Wikipedia:Citing sources">list of references</a>, but <b>its sources remain unclear</b> because it has <b>insufficient <a href="https://en.wikipedia.org/wiki/Wikipedia:Citing_sources#Inline_citations" title="Wikipedia:Citing sources">inline citations</a></b>. <span class="hide-when-compact">Please help to <a href="https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Fact_and_Reference_Check" title="Wikipedia:WikiProject Fact and Reference Check">improve</a> this article by <a href="https://en.wikipedia.org/wiki/Wikipedia:When_to_cite" title="Wikipedia:When to cite">introducing</a> more precise citations.</span> <small><i>(January 2014)</i></small> <small class="hide-when-compact"><i>(<a href="https://en.wikipedia.org/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></span></td>
+</tr>
+</table>
+<div class="thumb tright">
+<div class="thumbinner" style="width:272px;"><a href="https://en.wikipedia.org/wiki/File:Java_keywords_highlighted.png" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/f/fe/Java_keywords_highlighted.png" width="270" height="215" class="thumbimage" data-file-width="270" data-file-height="215" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="https://en.wikipedia.org/wiki/File:Java_keywords_highlighted.png" class="internal" title="Enlarge"></a></div>
+A snippet of Java code with keywords highlighted in bold blue font</div>
+</div>
+</div>
+<p>The <a href="https://en.wikipedia.org/wiki/Syntax" title="Syntax">syntax</a> of the <a href="Java_(programming_language).html" title="Java (programming language)">Java programming language</a> is the set of rules defining how a Java program is written and interpreted.</p>
+<p>The syntax is mostly derived from <a href="https://en.wikipedia.org/wiki/C_(programming_language)" title="C (programming language)">C</a> and <a href="https://en.wikipedia.org/wiki/C++" title="C++">C++</a>. Unlike C++, in Java there are no global functions or variables, but there are data members which are also regarded as global variables. All code belongs to <a href="https://en.wikipedia.org/wiki/Class_(computer_science)" class="mw-redirect" title="Class (computer science)">classes</a> and all values are <a href="https://en.wikipedia.org/wiki/Object_(computer_science)" title="Object (computer science)">objects</a>. The only exception is the <a href="https://en.wikipedia.org/wiki/Primitive_type" class="mw-redirect" title="Primitive type">primitive types</a>, which are not represented by a class instance for performance reasons (though can be automatically converted to objects and vice versa via <a href="#Boxing_and_unboxing">autoboxing</a>). Some features like <a href="https://en.wikipedia.org/wiki/Operator_overloading" title="Operator overloading">operator overloading</a> or <a href="https://en.wikipedia.org/wiki/Unsigned_integer" class="mw-redirect" title="Unsigned integer">unsigned integer</a> types are omitted to simplify the language and to avoid possible programming mistakes.</p>
+<p>The Java syntax has been gradually extended in the course of the eight major <a href="https://en.wikipedia.org/wiki/JDK" class="mw-redirect" title="JDK">JDK</a> <a href="Java_version_history.html" title="Java version history">releases</a> support capabilities such as <a href="https://en.wikipedia.org/wiki/Generic_programming" title="Generic programming">generic programming</a> and <a href="https://en.wikipedia.org/wiki/Function_literals" class="mw-redirect" title="Function literals">function literals</a> (called lambda expressions in Java).</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Basics"><span class="tocnumber">1</span> <span class="toctext">Basics</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Identifier"><span class="tocnumber">1.1</span> <span class="toctext">Identifier</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Keywords"><span class="tocnumber">1.2</span> <span class="toctext">Keywords</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Literals"><span class="tocnumber">1.3</span> <span class="toctext">Literals</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Variables"><span class="tocnumber">1.4</span> <span class="toctext">Variables</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Code_blocks"><span class="tocnumber">1.5</span> <span class="toctext">Code blocks</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Comments"><span class="tocnumber">1.6</span> <span class="toctext">Comments</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#Program_structure"><span class="tocnumber">2</span> <span class="toctext">Program structure</span></a>
+<ul>
+<li class="toclevel-2 tocsection-9"><a href="#Main_method"><span class="tocnumber">2.1</span> <span class="toctext">Main method</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Packages"><span class="tocnumber">2.2</span> <span class="toctext">Packages</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Import_declaration"><span class="tocnumber">2.3</span> <span class="toctext">Import declaration</span></a>
+<ul>
+<li class="toclevel-3 tocsection-12"><a href="#Type_import_declaration"><span class="tocnumber">2.3.1</span> <span class="toctext">Type import declaration</span></a></li>
+<li class="toclevel-3 tocsection-13"><a href="#Static_import_declaration"><span class="tocnumber">2.3.2</span> <span class="toctext">Static import declaration</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-14"><a href="#Operators"><span class="tocnumber">3</span> <span class="toctext">Operators</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#Control_structures"><span class="tocnumber">4</span> <span class="toctext">Control structures</span></a>
+<ul>
+<li class="toclevel-2 tocsection-16"><a href="#Conditional_statements"><span class="tocnumber">4.1</span> <span class="toctext">Conditional statements</span></a>
+<ul>
+<li class="toclevel-3 tocsection-17"><a href="#if_statement"><span class="tocnumber">4.1.1</span> <span class="toctext">if statement</span></a></li>
+<li class="toclevel-3 tocsection-18"><a href="#switch_statement"><span class="tocnumber">4.1.2</span> <span class="toctext">switch statement</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-19"><a href="#Iteration_statements"><span class="tocnumber">4.2</span> <span class="toctext">Iteration statements</span></a>
+<ul>
+<li class="toclevel-3 tocsection-20"><a href="#while_loop"><span class="tocnumber">4.2.1</span> <span class="toctext">while loop</span></a></li>
+<li class="toclevel-3 tocsection-21"><a href="#do_..._while_loop"><span class="tocnumber">4.2.2</span> <span class="toctext">do ... while loop</span></a></li>
+<li class="toclevel-3 tocsection-22"><a href="#for_loop"><span class="tocnumber">4.2.3</span> <span class="toctext">for loop</span></a></li>
+<li class="toclevel-3 tocsection-23"><a href="#Enhanced_for_loop"><span class="tocnumber">4.2.4</span> <span class="toctext">Enhanced for loop</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-24"><a href="#Jump_statements"><span class="tocnumber">4.3</span> <span class="toctext">Jump statements</span></a>
+<ul>
+<li class="toclevel-3 tocsection-25"><a href="#Labels"><span class="tocnumber">4.3.1</span> <span class="toctext">Labels</span></a></li>
+<li class="toclevel-3 tocsection-26"><a href="#break_statement"><span class="tocnumber">4.3.2</span> <span class="toctext">break statement</span></a></li>
+<li class="toclevel-3 tocsection-27"><a href="#continue_statement"><span class="tocnumber">4.3.3</span> <span class="toctext">continue statement</span></a></li>
+<li class="toclevel-3 tocsection-28"><a href="#return_statement"><span class="tocnumber">4.3.4</span> <span class="toctext">return statement</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-29"><a href="#Exception_handling_statements"><span class="tocnumber">4.4</span> <span class="toctext">Exception handling statements</span></a>
+<ul>
+<li class="toclevel-3 tocsection-30"><a href="#try-catch-finally_statements"><span class="tocnumber">4.4.1</span> <span class="toctext">try-catch-finally statements</span></a></li>
+<li class="toclevel-3 tocsection-31"><a href="#try-with-resources_statements"><span class="tocnumber">4.4.2</span> <span class="toctext">try-with-resources statements</span></a></li>
+<li class="toclevel-3 tocsection-32"><a href="#throw_statement"><span class="tocnumber">4.4.3</span> <span class="toctext">throw statement</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-33"><a href="#Thread_concurrency_control"><span class="tocnumber">4.5</span> <span class="toctext">Thread concurrency control</span></a></li>
+<li class="toclevel-2 tocsection-34"><a href="#assert_statement"><span class="tocnumber">4.6</span> <span class="toctext">assert statement</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-35"><a href="#Primitive_types"><span class="tocnumber">5</span> <span class="toctext">Primitive types</span></a>
+<ul>
+<li class="toclevel-2 tocsection-36"><a href="#Boxing_and_unboxing"><span class="tocnumber">5.1</span> <span class="toctext">Boxing and unboxing</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-37"><a href="#Reference_types"><span class="tocnumber">6</span> <span class="toctext">Reference types</span></a>
+<ul>
+<li class="toclevel-2 tocsection-38"><a href="#Arrays"><span class="tocnumber">6.1</span> <span class="toctext">Arrays</span></a>
+<ul>
+<li class="toclevel-3 tocsection-39"><a href="#Initializers"><span class="tocnumber">6.1.1</span> <span class="toctext">Initializers</span></a></li>
+<li class="toclevel-3 tocsection-40"><a href="#Multi-dimensional_arrays"><span class="tocnumber">6.1.2</span> <span class="toctext">Multi-dimensional arrays</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-41"><a href="#Classes"><span class="tocnumber">6.2</span> <span class="toctext">Classes</span></a>
+<ul>
+<li class="toclevel-3 tocsection-42"><a href="#Declaration"><span class="tocnumber">6.2.1</span> <span class="toctext">Declaration</span></a></li>
+<li class="toclevel-3 tocsection-43"><a href="#Instantiation"><span class="tocnumber">6.2.2</span> <span class="toctext">Instantiation</span></a></li>
+<li class="toclevel-3 tocsection-44"><a href="#Accessing_members"><span class="tocnumber">6.2.3</span> <span class="toctext">Accessing members</span></a></li>
+<li class="toclevel-3 tocsection-45"><a href="#Modifiers"><span class="tocnumber">6.2.4</span> <span class="toctext">Modifiers</span></a>
+<ul>
+<li class="toclevel-4 tocsection-46"><a href="#Access_modifiers"><span class="tocnumber">6.2.4.1</span> <span class="toctext">Access modifiers</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-47"><a href="#Constructors_and_initializers"><span class="tocnumber">6.2.5</span> <span class="toctext">Constructors and initializers</span></a></li>
+<li class="toclevel-3 tocsection-48"><a href="#Methods"><span class="tocnumber">6.2.6</span> <span class="toctext">Methods</span></a>
+<ul>
+<li class="toclevel-4 tocsection-49"><a href="#Modifiers_2"><span class="tocnumber">6.2.6.1</span> <span class="toctext">Modifiers</span></a></li>
+<li class="toclevel-4 tocsection-50"><a href="#Varargs"><span class="tocnumber">6.2.6.2</span> <span class="toctext">Varargs</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-51"><a href="#Fields"><span class="tocnumber">6.2.7</span> <span class="toctext">Fields</span></a>
+<ul>
+<li class="toclevel-4 tocsection-52"><a href="#Modifiers_3"><span class="tocnumber">6.2.7.1</span> <span class="toctext">Modifiers</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-53"><a href="#Inheritance"><span class="tocnumber">6.2.8</span> <span class="toctext">Inheritance</span></a>
+<ul>
+<li class="toclevel-4 tocsection-54"><a href="#Overriding_methods"><span class="tocnumber">6.2.8.1</span> <span class="toctext">Overriding methods</span></a></li>
+<li class="toclevel-4 tocsection-55"><a href="#Abstract_classes"><span class="tocnumber">6.2.8.2</span> <span class="toctext">Abstract classes</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-56"><a href="#Enumerations"><span class="tocnumber">6.2.9</span> <span class="toctext">Enumerations</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-57"><a href="#Interfaces"><span class="tocnumber">6.3</span> <span class="toctext">Interfaces</span></a>
+<ul>
+<li class="toclevel-3 tocsection-58"><a href="#Implementing_an_interface"><span class="tocnumber">6.3.1</span> <span class="toctext">Implementing an interface</span></a></li>
+<li class="toclevel-3 tocsection-59"><a href="#Inheritance_2"><span class="tocnumber">6.3.2</span> <span class="toctext">Inheritance</span></a></li>
+<li class="toclevel-3 tocsection-60"><a href="#Annotations"><span class="tocnumber">6.3.3</span> <span class="toctext">Annotations</span></a>
+<ul>
+<li class="toclevel-4 tocsection-61"><a href="#Annotation_types"><span class="tocnumber">6.3.3.1</span> <span class="toctext">Annotation types</span></a></li>
+<li class="toclevel-4 tocsection-62"><a href="#Usage_of_annotations"><span class="tocnumber">6.3.3.2</span> <span class="toctext">Usage of annotations</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-63"><a href="#Generics"><span class="tocnumber">7</span> <span class="toctext">Generics</span></a>
+<ul>
+<li class="toclevel-2 tocsection-64"><a href="#Generic_classes"><span class="tocnumber">7.1</span> <span class="toctext">Generic classes</span></a></li>
+<li class="toclevel-2 tocsection-65"><a href="#Generic_methods_and_constructors"><span class="tocnumber">7.2</span> <span class="toctext">Generic methods and constructors</span></a></li>
+<li class="toclevel-2 tocsection-66"><a href="#Generic_interfaces"><span class="tocnumber">7.3</span> <span class="toctext">Generic interfaces</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-67"><a href="#See_also"><span class="tocnumber">8</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-68"><a href="#References"><span class="tocnumber">9</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-69"><a href="#External_links"><span class="tocnumber">10</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Basics">Basics</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=1" title="Edit section: Basics">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Identifier">Identifier</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=2" title="Edit section: Identifier">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>An <a href="https://en.wikipedia.org/wiki/Identifier#In_computer_languages" title="Identifier">identifier</a> is the name of an element in the <a href="https://en.wikipedia.org/wiki/Source_code" title="Source code">code</a>. There are certain standard <a href="https://en.wikipedia.org/wiki/Naming_conventions_(programming)" class="mw-redirect" title="Naming conventions (programming)">naming conventions</a> to follow when selecting names for elements. Identifiers in Java are <a href="https://en.wikipedia.org/wiki/Case_sensitivity" title="Case sensitivity">case-sensitive</a>.</p>
+<p>An identifier can contain:</p>
+<ul>
+<li>Any Unicode character that is a letter (including numeric letters like <a href="https://en.wikipedia.org/wiki/Roman_numerals" title="Roman numerals">Roman numerals</a>) or digit.</li>
+<li><a href="https://en.wikipedia.org/wiki/Currency_sign" class="mw-redirect" title="Currency sign">Currency sign</a> (such as <a href="https://en.wikipedia.org/wiki/Dollar_sign" title="Dollar sign">$</a>).</li>
+<li>Connecting punctuation character (such as <a href="https://en.wikipedia.org/wiki/Underscore" title="Underscore">_</a>).</li>
+</ul>
+<p>An identifier cannot:</p>
+<ul>
+<li>Start with a digit.</li>
+<li>Be equal to a reserved keyword, null literal or boolean literal.</li>
+</ul>
+<h3><span class="mw-headline" id="Keywords">Keywords</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=3" title="Edit section: Keywords">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div role="note" class="hatnote">Main article: <a href="https://en.wikipedia.org/wiki/Java_keywords" class="mw-redirect" title="Java keywords">Java keywords</a></div>
+<table style="width:75%" align="center" class="wikitable">
+<tr>
+<td>abstract</td>
+<td>continue</td>
+<td>for</td>
+<td>new</td>
+<td>switch</td>
+</tr>
+<tr>
+<td>assert<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[Note 1]</a></sup></td>
+<td>default</td>
+<td>goto<sup id="cite_ref-Unused_2-0" class="reference"><a href="#cite_note-Unused-2">[Note 2]</a></sup></td>
+<td>package</td>
+<td>synchronized</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>do</td>
+<td>if</td>
+<td>private</td>
+<td>this</td>
+</tr>
+<tr>
+<td>break</td>
+<td>double</td>
+<td>implements</td>
+<td>protected</td>
+<td>throw</td>
+</tr>
+<tr>
+<td>byte</td>
+<td>else</td>
+<td>import</td>
+<td>public</td>
+<td>throws</td>
+</tr>
+<tr>
+<td>case</td>
+<td>enum<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">[Note 3]</a></sup></td>
+<td>instanceof</td>
+<td>return</td>
+<td>transient</td>
+</tr>
+<tr>
+<td>catch</td>
+<td>extends</td>
+<td>int</td>
+<td>short</td>
+<td>try</td>
+</tr>
+<tr>
+<td>char</td>
+<td><a href="Final_(Java).html" title="Final (Java)">final</a></td>
+<td>interface</td>
+<td>static</td>
+<td>void</td>
+</tr>
+<tr>
+<td>class</td>
+<td>finally</td>
+<td>long</td>
+<td>strictfp<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">[Note 4]</a></sup></td>
+<td>volatile</td>
+</tr>
+<tr>
+<td>const<sup id="cite_ref-Unused_2-1" class="reference"><a href="#cite_note-Unused-2">[Note 2]</a></sup></td>
+<td>float</td>
+<td>native</td>
+<td>super</td>
+<td>while</td>
+</tr>
+</table>
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text">Keyword was introduced in <a href="https://en.wikipedia.org/wiki/J2SE_1.4" class="mw-redirect" title="J2SE 1.4">J2SE 1.4</a></span></li>
+<li id="cite_note-Unused-2"><span class="mw-cite-backlink">^ <a href="#cite_ref-Unused_2-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Unused_2-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text">Keyword is not used</span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text">Keyword was introduced in <a href="https://en.wikipedia.org/wiki/J2SE_5.0" class="mw-redirect" title="J2SE 5.0">J2SE 5.0</a></span></li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text">Keyword was introduced in <a href="https://en.wikipedia.org/wiki/J2SE_1.2" class="mw-redirect" title="J2SE 1.2">J2SE 1.2</a></span></li>
+</ol>
+<h3><span class="mw-headline" id="Literals">Literals</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=4" title="Edit section: Literals">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<table class="wikitable">
+<tr>
+<th colspan="2">Integers</th>
+</tr>
+<tr>
+<th><a href="https://en.wikipedia.org/wiki/Binary_numeral_system" class="mw-redirect" title="Binary numeral system">binary</a> (introduced in Java SE 7)</th>
+<td><tt>0b11110101</tt> (<tt>0b</tt> followed by a binary number)</td>
+</tr>
+<tr>
+<th><a href="https://en.wikipedia.org/wiki/Octal" title="Octal">octal</a></th>
+<td><tt>0365</tt> (<tt>0</tt> followed by an octal number)</td>
+</tr>
+<tr>
+<th><a href="https://en.wikipedia.org/wiki/Hexadecimal" title="Hexadecimal">hexadecimal</a></th>
+<td><tt>0xF5</tt> (<tt>0x</tt> followed by a hexadecimal number)</td>
+</tr>
+<tr>
+<th><a href="https://en.wikipedia.org/wiki/Decimal" title="Decimal">decimal</a></th>
+<td><tt>245</tt> (decimal number)</td>
+</tr>
+<tr>
+<th colspan="2"><a href="https://en.wikipedia.org/wiki/Floating-point" class="mw-redirect" title="Floating-point">Floating-point</a> values</th>
+</tr>
+<tr>
+<th rowspan="2">float</th>
+<td><tt>23.5F</tt>, <tt>.5f</tt>, <tt>1.72E3F</tt> (decimal fraction with an optional exponent indicator, followed by <tt>F</tt>)</td>
+</tr>
+<tr>
+<td><tt>0x.5FP0F</tt>, <tt>0x.5P-6f</tt> (<tt>0x</tt> followed by a hexadecimal fraction with a mandatory exponent indicator and a suffix <tt>F</tt>)</td>
+</tr>
+<tr>
+<th rowspan="2">double</th>
+<td><tt>23.5D</tt>, <tt>.5</tt>, <tt>1.72E3D</tt> (decimal fraction with an optional exponent indicator, followed by optional <tt>D</tt>)</td>
+</tr>
+<tr>
+<td><tt>0x.5FP0</tt>, <tt>0x.5P-6D</tt> (<tt>0x</tt> followed by a hexadecimal fraction with a mandatory exponent indicator and an optional suffix <tt>D</tt>)</td>
+</tr>
+<tr>
+<th colspan="2">Character literals</th>
+</tr>
+<tr>
+<th>char</th>
+<td><tt>'a'</tt>, <tt>'Z'</tt>, <tt>'\u0231'</tt> (character or a character escape, enclosed in single quotes)</td>
+</tr>
+<tr>
+<th colspan="2">Boolean literals</th>
+</tr>
+<tr>
+<th>boolean</th>
+<td><tt>true</tt>, <tt>false</tt></td>
+</tr>
+<tr>
+<th colspan="2">null literal</th>
+</tr>
+<tr>
+<th>null reference</th>
+<td><tt>null</tt></td>
+</tr>
+<tr>
+<th colspan="2">String literals</th>
+</tr>
+<tr>
+<th>String</th>
+<td><tt>"Hello, World"</tt> (sequence of characters and character escapes enclosed in double quotes)</td>
+</tr>
+<tr>
+<th colspan="2">Characters escapes in strings</th>
+</tr>
+<tr>
+<th><a href="https://en.wikipedia.org/wiki/Unicode" title="Unicode">Unicode</a> character</th>
+<td><tt>\u3876</tt> (<tt>\u</tt> followed by the hexadecimal unicode code point up to U+FFFF)</td>
+</tr>
+<tr>
+<th><a href="https://en.wikipedia.org/wiki/Octal" title="Octal">Octal</a> escape</th>
+<td><tt>\352</tt> (octal number not exceeding 377, preceded by backslash)</td>
+</tr>
+<tr>
+<th><a href="https://en.wikipedia.org/wiki/Line_feed" class="mw-redirect" title="Line feed">Line feed</a></th>
+<td><tt>\n</tt></td>
+</tr>
+<tr>
+<th><a href="https://en.wikipedia.org/wiki/Carriage_return" title="Carriage return">Carriage return</a></th>
+<td><tt>\r</tt></td>
+</tr>
+<tr>
+<th><a href="https://en.wikipedia.org/wiki/Form_feed" class="mw-redirect" title="Form feed">Form feed</a></th>
+<td><tt>\f</tt></td>
+</tr>
+<tr>
+<th><a href="https://en.wikipedia.org/wiki/Backslash" title="Backslash">Backslash</a></th>
+<td><tt>\\</tt></td>
+</tr>
+<tr>
+<th><a href="https://en.wikipedia.org/wiki/Single_quote" class="mw-redirect" title="Single quote">Single quote</a></th>
+<td><tt>\'</tt></td>
+</tr>
+<tr>
+<th><a href="https://en.wikipedia.org/wiki/Double_quote" class="mw-redirect" title="Double quote">Double quote</a></th>
+<td><tt>\"</tt></td>
+</tr>
+<tr>
+<th><a href="https://en.wikipedia.org/wiki/Tab_character" class="mw-redirect" title="Tab character">Tab</a></th>
+<td><tt>\t</tt></td>
+</tr>
+<tr>
+<th><a href="https://en.wikipedia.org/wiki/Backspace" title="Backspace">Backspace</a></th>
+<td><tt>\b</tt></td>
+</tr>
+</table>
+<p>Integer literals are of <code>int</code> type by default unless <code>long</code> type is specified by appending <code>L</code> or <code>l</code> suffix to the literal, e.g. <code>367L</code>. Since Java SE 7, it is possible to include underscores between the digits of a number to increase readability; for example, a number <tt>145608987</tt> can be written as <tt>145_608_987</tt>.</p>
+<h3><span class="mw-headline" id="Variables">Variables</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=5" title="Edit section: Variables">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="https://en.wikipedia.org/wiki/Variable_(programming)" class="mw-redirect" title="Variable (programming)">Variables</a> are identifiers associated with values. They are declared by writing the variable's type and name, and are optionally initialized in the same statement by assigning a value.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kt">int</span> <span class="n">count</span><span class="o">;</span>      <span class="c1">//Declaring an uninitialized variable called 'count', of type 'int'</span>
+<span class="n">count</span> <span class="o">=</span> <span class="mi">35</span><span class="o">;</span>     <span class="c1">//Initializing the variable</span>
+<span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">35</span><span class="o">;</span> <span class="c1">//Declaring and initializing the variable at the same time</span>
+</pre></div>
+<p>Multiple variables of the same type can be declared and initialized in one statement using comma as a delimiter.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="n">b</span><span class="o">;</span>         <span class="c1">//Declaring multiple variables of the same type</span>
+<span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">2</span><span class="o">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">3</span><span class="o">;</span> <span class="c1">//Declaring and initializing multiple variables of the same type</span>
+</pre></div>
+<h3><span class="mw-headline" id="Code_blocks">Code blocks</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=6" title="Edit section: Code blocks">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The separators <tt>{</tt> and <tt>}</tt> signify a code block and a new scope. Class members and the body of a method are examples of what can live inside these braces in various contexts.</p>
+<p>Inside of method bodies, you can use braces to create new scopes, as follows:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kt">void</span> <span class="nf">doSomething</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kt">int</span> <span class="n">a</span><span class="o">;</span>
+
+    <span class="o">{</span>
+        <span class="kt">int</span> <span class="n">b</span><span class="o">;</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="n">a</span> <span class="o">=</span> <span class="mi">2</span><span class="o">;</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="mi">3</span><span class="o">;</span> <span class="c1">// Illegal because the variable is declared in an inner scope.</span>
+<span class="o">}</span>
+</pre></div>
+<h3><span class="mw-headline" id="Comments">Comments</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=7" title="Edit section: Comments">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Java has three kinds of comments: <i>traditional comments</i>, <i>end-of-line comments</i> and <i>documentation comments</i>.</p>
+<p>Traditional comments, also known as block comments, start with <code>/*</code> and end with <code>*/</code>, they may span across multiple lines. This type of comment was derived from C and C++.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="cm">/* This is a multi-line comment.</span>
+<span class="cm">It may occupy more than one line. */</span>
+</pre></div>
+<p>End-of-line comments start with <code>//</code> and extend to the end of the current line. This comment type is also present in C++ and in modern C.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="c1">// This is an end-of-line comment</span>
+</pre></div>
+<p>Documentation comments in the source files are processed by the <a href="Javadoc.html" title="Javadoc">Javadoc</a> tool to generate documentation. This type of comment is identical to traditional comments, except it starts with <code>/**</code> and follows conventions defined by the Javadoc tool. Technically, these comments are a special kind of traditional comment and they are not specifically defined in the language specification.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="cm">/**</span>
+<span class="cm"> * This is a documentation comment.</span>
+<span class="cm"> * </span>
+<span class="cm"> * @author John Doe</span>
+<span class="cm"> */</span>
+</pre></div>
+<h2><span class="mw-headline" id="Program_structure">Program structure</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=8" title="Edit section: Program structure">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Java applications consist of collections of classes. Classes exist in packages but can also be nested inside other classes.</p>
+<h3><span class="mw-headline" id="Main_method"><code>Main</code> method</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=9" title="Edit section: Main method">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Every Java application must have an entry point. This is true of both graphical interface applications and console applications. The entry point is the <code>main</code> method. There can be more than one class with a <code>main</code> method, but the main class is always defined externally (for example, in a <a href="Manifest_file.html" title="Manifest file">manifest file</a>). The method must be <code>static</code> and is passed command-line arguments as an array of strings. Unlike <a href="https://en.wikipedia.org/wiki/C++" title="C++">C++</a> or <a href="https://en.wikipedia.org/wiki/C_Sharp_(programming_language)" title="C Sharp (programming language)">C#</a>, it never returns a value and must return <code>void</code>.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+<span class="o">}</span>
+</pre></div>
+<h3><span class="mw-headline" id="Packages">Packages</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=10" title="Edit section: Packages">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Packages are a part of a class name and they are used to group and/or distinguish named entities from other ones. Another purpose of packages is to govern code access together with access modifiers. For example, <code>java.io.InputStream</code> is a fully qualified class name for the class <code>InputStream</code> which is located in the package <code>java.io</code>.</p>
+<p>A package is declared at the start of the file with the <code>package</code> declaration:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kn">package</span> <span class="nn">myapplication.mylibrary</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyClass</span> <span class="o">{</span>
+<span class="o">}</span>
+</pre></div>
+<p>Classes with the <code>public</code> modifier must be placed in the files with the same name and <tt>java</tt> extension and put into nested folders corresponding to the package name. The above class myapplication.mylibrary.MyClass will have the following path: "myapplication/mylibrary/MyClass.java".</p>
+<h3><span class="mw-headline" id="Import_declaration">Import declaration</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=11" title="Edit section: Import declaration">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h4><span class="mw-headline" id="Type_import_declaration">Type import declaration</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=12" title="Edit section: Type import declaration">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>A type import declaration allows a named type to be referred to by a simple name rather than the full name that includes the package. Import declarations can be <i>single type import declarations</i> or <i>import-on-demand declarations</i>. Import declarations must be placed at the top of a code file after the package declaration.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kn">package</span> <span class="nn">myPackage</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">java.util.Random</span><span class="o">;</span> <span class="c1">// Single type declaration</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ImportsTest</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="cm">/* The following line is equivalent to</span>
+<span class="cm">         * java.util.Random random = new java.util.Random();</span>
+<span class="cm">         * It would've been incorrect without the import declaration */</span>
+        <span class="n">Random</span> <span class="n">random</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Random</span><span class="o">();</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+<p>Import-on-demand declarations are mentioned in the code. A "type import" imports all the types of the package. A "static import" imports members of the package.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kn">import</span> <span class="nn">java.util.*</span><span class="o">;</span>  <span class="cm">/*This form of importing classes makes all classes</span>
+<span class="cm">    in package java.util available by name, could be used instead of the</span>
+<span class="cm">    import declaration in the previous example. */</span>
+<span class="kn">import</span> <span class="nn">java.*</span><span class="o">;</span> <span class="cm">/*This statement is legal, but does nothing, since there</span>
+<span class="cm">    are no classes directly in package java. All of them are in packages</span>
+<span class="cm">    within package java. This does not import all available classes.*/</span>
+</pre></div>
+<h4><span class="mw-headline" id="Static_import_declaration">Static import declaration</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=13" title="Edit section: Static import declaration">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>This type of declaration has been available since <a href="https://en.wikipedia.org/wiki/J2SE_5.0" class="mw-redirect" title="J2SE 5.0">J2SE 5.0</a>. <a href="https://en.wikipedia.org/wiki/Static_imports" class="mw-redirect" title="Static imports">Static import</a> declarations allow access to static members defined in another class, interface, annotation, or enum; without specifying the class name:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kn">import</span> <span class="nn">static</span> <span class="n">java</span><span class="o">.</span><span class="na">lang</span><span class="o">.</span><span class="na">System</span><span class="o">.</span><span class="na">out</span><span class="o">;</span> <span class="c1">//'out' is a static field in java.lang.System</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">HelloWorld</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="cm">/* The following line is equivalent to:</span>
+
+<span class="cm">           System.out.println("Hello World!");</span>
+
+<span class="cm">           and would have been incorrect without the import declaration. */</span>
+        <span class="n">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Hello World!"</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+<p>Import-on-demand declarations allow to import all the fields of the type:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kn">import</span> <span class="nn">static</span> <span class="n">java</span><span class="o">.</span><span class="na">lang</span><span class="o">.</span><span class="na">System</span><span class="o">.*;</span>
+    <span class="cm">/* This form of declaration makes all</span>
+<span class="cm">       fields in the java.lang.System class available by name, and may be used instead</span>
+<span class="cm">       of the import declaration in the previous example. */</span>
+</pre></div>
+<p>Enum constants may also be used with static import. For example, this enum is in the package called <code>screen</code>:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kd">public</span> <span class="kd">enum</span> <span class="n">ColorName</span> <span class="o">{</span>
+    <span class="n">RED</span><span class="o">,</span> <span class="n">BLUE</span><span class="o">,</span> <span class="n">GREEN</span>
+<span class="o">};</span>
+</pre></div>
+<p>It is possible to use static import declarations in another class to retrieve the enum constants:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kn">import</span> <span class="nn">screen.ColorName</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">static</span> <span class="n">screen</span><span class="o">.</span><span class="na">ColorName</span><span class="o">.*;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Dots</span> <span class="o">{</span>
+    <span class="cm">/* The following line is equivalent to 'ColorName foo = ColorName.RED',</span>
+<span class="cm">       and it would have been incorrect without the static import. */</span>
+    <span class="n">ColorName</span> <span class="n">foo</span> <span class="o">=</span> <span class="n">RED</span><span class="o">;</span>
+
+    <span class="kt">void</span> <span class="nf">shift</span><span class="o">()</span> <span class="o">{</span>
+        <span class="cm">/* The following line is equivalent to:</span>
+
+<span class="cm">           if (foo == ColorName.RED) foo = ColorName.BLUE; */</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">foo</span> <span class="o">==</span> <span class="n">RED</span><span class="o">)</span> <span class="n">foo</span> <span class="o">=</span> <span class="n">BLUE</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+<h2><span class="mw-headline" id="Operators">Operators</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=14" title="Edit section: Operators">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Operators in Java are similar to those in <a href="https://en.wikipedia.org/wiki/C++" title="C++">C++</a>. However, there is no <code>delete</code> operator due to <a href="https://en.wikipedia.org/wiki/Garbage_collection_(computer_science)" title="Garbage collection (computer science)">garbage collection</a> mechanisms in Java, and there are no operations on <a href="https://en.wikipedia.org/wiki/Pointer_(computer_programming)" title="Pointer (computer programming)">pointers</a> since Java does not support them. Another difference is that Java has an unsigned right shift operator (<code>&gt;&gt;&gt;</code>), while C's right shift operator's signedness is type-dependent. Operators in Java cannot be <a href="https://en.wikipedia.org/wiki/Operator_overloading" title="Operator overloading">overloaded</a>.</p>
+<table class="wikitable">
+<tr>
+<th style="text-align: center">Precedence</th>
+<th style="text-align: center">Operator</th>
+<th style="text-align: center">Description</th>
+<th style="text-align: center">Associativity</th>
+</tr>
+<tr>
+<th rowspan="3">1</th>
+<td style="border-bottom-style: none; border-top-style: none"><code>()</code></td>
+<td style="border-bottom-style: none; border-top-style: none">Method invocation</td>
+<td style="vertical-align: center" rowspan="4">Left-to-right</td>
+</tr>
+<tr>
+<td style="border-bottom-style: none; border-top-style: none"><code>[]</code></td>
+<td style="border-bottom-style: none; border-top-style: none">Array access</td>
+</tr>
+<tr>
+<td style="border-bottom-style: none; border-top-style: none"><code>.</code></td>
+<td style="border-bottom-style: none; border-top-style: none">Class member selection</td>
+</tr>
+<tr>
+<th>2</th>
+<td style="border-bottom-style: none"><code>++</code> <code>--</code></td>
+<td style="border-bottom-style: none">Postfix increment and decrement<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">[1]</a></sup></td>
+</tr>
+<tr>
+<th rowspan="5">3</th>
+<td style="border-bottom-style: none"><code>++</code> <code>--</code></td>
+<td style="border-bottom-style: none">Prefix increment and decrement</td>
+<td style="vertical-align: center" rowspan="5">Right-to-left</td>
+</tr>
+<tr>
+<td style="border-bottom-style: none; border-top-style: none"><code>+</code> <code>-</code></td>
+<td style="border-bottom-style: none; border-top-style: none">Unary plus and minus</td>
+</tr>
+<tr>
+<td style="border-bottom-style: none; border-top-style: none"><code>!</code> <code>~</code></td>
+<td style="border-bottom-style: none; border-top-style: none">Logical NOT and bitwise NOT</td>
+</tr>
+<tr>
+<td style="border-bottom-style: none; border-top-style: none"><code>(<i>type</i>) val</code></td>
+<td style="border-bottom-style: none; border-top-style: none">Type cast</td>
+</tr>
+<tr>
+<td style="border-top-style: none"><code>new</code></td>
+<td style="border-top-style: none">Class instance or array creation</td>
+</tr>
+<tr>
+<th>4</th>
+<td><code>*</code> <code>/</code> <code>%</code></td>
+<td>Multiplication, division, and modulus (remainder)</td>
+<td style="vertical-align: center" rowspan="13">Left-to-right</td>
+</tr>
+<tr>
+<th rowspan="2">5</th>
+<td style="border-bottom-style: none;"><code>+</code> <code>-</code></td>
+<td style="border-bottom-style: none;">Addition and subtraction</td>
+</tr>
+<tr>
+<td style="border-top-style: none"><code>+</code></td>
+<td style="border-top-style: none">String concatenation</td>
+</tr>
+<tr>
+<th>6</th>
+<td><code>&lt;&lt;</code> <code>&gt;&gt;</code> <code>&gt;&gt;&gt;</code></td>
+<td><a href="https://en.wikipedia.org/wiki/Bitwise_operation" title="Bitwise operation">Bitwise</a> left shift, signed right shift and unsigned right shift</td>
+</tr>
+<tr>
+<th rowspan="3">7</th>
+<td style="border-bottom-style: none;"><code>&lt;</code> <code>&lt;=</code></td>
+<td style="border-bottom-style: none;"><a href="https://en.wikipedia.org/wiki/Relational_operator" title="Relational operator">Relational</a> “less than” and “less than or equal to”</td>
+</tr>
+<tr>
+<td style="border-bottom-style: none; border-top-style: none"><code>&gt;</code> <code>&gt;=</code></td>
+<td style="border-bottom-style: none; border-top-style: none">Relational “greater than” and “greater than or equal to”</td>
+</tr>
+<tr>
+<td style="border-top-style: none"><code>instanceof</code></td>
+<td style="border-top-style: none">Type comparison</td>
+</tr>
+<tr>
+<th>8</th>
+<td><code>==</code> <code>!=</code></td>
+<td>Relational “equal to” and “not equal to”</td>
+</tr>
+<tr>
+<th>9</th>
+<td><code>&amp;</code></td>
+<td>Bitwise and logical AND</td>
+</tr>
+<tr>
+<th>10</th>
+<td><code>^</code></td>
+<td>Bitwise and logical XOR (exclusive or)</td>
+</tr>
+<tr>
+<th>11</th>
+<td><code>|</code></td>
+<td>Bitwise and logical OR (inclusive or)</td>
+</tr>
+<tr>
+<th>12</th>
+<td><code>&amp;&amp;</code></td>
+<td>Logical conditional-AND</td>
+</tr>
+<tr>
+<th>13</th>
+<td><code>||</code></td>
+<td>Logical conditional-OR</td>
+</tr>
+<tr>
+<th>14</th>
+<td><code><i>c</i>&#160;? <i>t</i>&#160;: <i>f</i></code></td>
+<td><a href="https://en.wikipedia.org/wiki/Ternary_operator" class="mw-redirect" title="Ternary operator">Ternary</a> conditional (see <a href="https://en.wikipedia.org/wiki/%3F:" title="?:">?:</a>)</td>
+<td style="vertical-align: center" rowspan="6">Right-to-left</td>
+</tr>
+<tr>
+<th rowspan="5">15</th>
+<td style="border-bottom-style: none"><code>=</code></td>
+<td style="border-bottom-style: none">Simple assignment</td>
+</tr>
+<tr>
+<td style="border-bottom-style: none; border-top-style: none"><code>+=</code> <code>-=</code></td>
+<td style="border-bottom-style: none; border-top-style: none">Assignment by sum and difference</td>
+</tr>
+<tr>
+<td style="border-bottom-style: none; border-top-style: none"><code>*=</code> <code>/=</code> <code>%=</code></td>
+<td style="border-bottom-style: none; border-top-style: none">Assignment by product, quotient, and remainder</td>
+</tr>
+<tr>
+<td style="border-bottom-style: none; border-top-style: none"><code>&lt;&lt;=</code> <code>&gt;&gt;=</code> <code>&gt;&gt;&gt;=</code></td>
+<td style="border-bottom-style: none; border-top-style: none">Assignment by bitwise left shift, signed right shift and unsigned right shift</td>
+</tr>
+<tr>
+<td style="border-top-style: none"><code>&amp;=</code> <code>^=</code> <code>|=</code></td>
+<td style="border-top-style: none">Assignment by bitwise AND, XOR, and OR</td>
+</tr>
+</table>
+<h2><span class="mw-headline" id="Control_structures">Control structures</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=15" title="Edit section: Control structures">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Conditional_statements">Conditional statements</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=16" title="Edit section: Conditional statements">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h4><span class="mw-headline" id="if_statement"><code>if</code> statement</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=17" title="Edit section: if statement">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p><a href="https://en.wikipedia.org/wiki/Conditional_(programming)" class="mw-redirect" title="Conditional (programming)">if statements</a> in Java are similar to those in C and use the same syntax:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="k">if</span> <span class="o">(</span><span class="n">i</span> <span class="o">==</span> <span class="mi">3</span><span class="o">)</span> <span class="n">doSomething</span><span class="o">();</span>
+</pre></div>
+<p><code>if</code> statement may include optional <code>else</code> block, in which case it becomes an if-then-else statement:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="k">if</span> <span class="o">(</span><span class="n">i</span> <span class="o">==</span> <span class="mi">2</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">doSomething</span><span class="o">();</span>
+<span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+    <span class="n">doSomethingElse</span><span class="o">();</span>
+<span class="o">}</span>
+</pre></div>
+<p>Like C, else-if construction does not involve any special keywords, it is formed as a sequence of separate if-then-else statements:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="k">if</span> <span class="o">(</span><span class="n">i</span> <span class="o">==</span> <span class="mi">3</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">doSomething</span><span class="o">();</span>
+<span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">i</span> <span class="o">==</span> <span class="mi">2</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">doSomethingElse</span><span class="o">();</span>
+<span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+    <span class="n">doSomethingDifferent</span><span class="o">();</span>
+<span class="o">}</span>
+</pre></div>
+<p>Also, note that the <a href="https://en.wikipedia.org/wiki/%3F:" title="?:">?:</a> operator can be used in place of simple if statement, for example</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
+<span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">2</span><span class="o">;</span>
+<span class="kt">int</span> <span class="n">minVal</span> <span class="o">=</span> <span class="o">(</span><span class="n">a</span> <span class="o">&lt;</span> <span class="n">b</span><span class="o">)</span> <span class="o">?</span> <span class="n">a</span> <span class="o">:</span> <span class="n">b</span><span class="o">;</span>
+</pre></div>
+<h4><span class="mw-headline" id="switch_statement"><code>switch</code> statement</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=18" title="Edit section: switch statement">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p><a href="https://en.wikipedia.org/wiki/Switch_statement" title="Switch statement">Switch statements</a> in Java can use <code>byte</code>, <code>short</code>, <code>char</code>, and <code>int</code> (note: not <code>long</code>) primitive data types or their corresponding wrapper types. Starting with J2SE 5.0, it is possible to use <a href="https://en.wikipedia.org/wiki/Enumerated_type" title="Enumerated type">enum types</a>. Starting with Java SE 7, it is possible to use Strings. Other reference types cannot be used in <code>switch</code> statements.</p>
+<p>Possible values are listed using <code>case</code> labels. These labels in Java may contain only constants (including enum constants and string constants). Execution will start after the label corresponding to the expression inside the brackets. An optional <code>default</code> label may be present to declare that the code following it will be executed if none of the case labels correspond to the expression.</p>
+<p>Code for each label ends with the <code>break</code> keyword. It is possible to omit it causing the execution to proceed to the next label, however, a warning will usually be reported during compilation.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="k">switch</span> <span class="o">(</span><span class="n">ch</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">case</span> <span class="sc">'A'</span><span class="o">:</span>
+        <span class="n">doSomething</span><span class="o">();</span> <span class="c1">// Triggered if ch == 'A'</span>
+        <span class="k">break</span><span class="o">;</span>
+    <span class="k">case</span> <span class="sc">'B'</span><span class="o">:</span>
+    <span class="k">case</span> <span class="sc">'C'</span><span class="o">:</span>
+        <span class="n">doSomethingElse</span><span class="o">();</span> <span class="c1">// Triggered if ch == 'B' or ch == 'C'</span>
+        <span class="k">break</span><span class="o">;</span>
+    <span class="k">default</span><span class="o">:</span>
+        <span class="n">doSomethingDifferent</span><span class="o">();</span> <span class="c1">// Triggered in any other case</span>
+        <span class="k">break</span><span class="o">;</span>
+<span class="o">}</span>
+</pre></div>
+<h3><span class="mw-headline" id="Iteration_statements">Iteration statements</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=19" title="Edit section: Iteration statements">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Iteration statements are statements that are repeatedly executed when a given condition is evaluated as true. Since <a href="https://en.wikipedia.org/wiki/J2SE_5.0" class="mw-redirect" title="J2SE 5.0">J2SE 5.0</a>, Java has four forms of such statements.</p>
+<h4><span class="mw-headline" id="while_loop"><code>while</code> loop</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=20" title="Edit section: while loop">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>In the <code>while</code> loop, the test is done before each iteration.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="k">while</span> <span class="o">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">doSomething</span><span class="o">();</span>
+<span class="o">}</span>
+</pre></div>
+<h4><span class="mw-headline" id="do_..._while_loop"><code>do ... while</code> loop</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=21" title="Edit section: do ... while loop">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>In the <code>do ... while</code> loop, the test is done after each iteration. Consequently, the code is always executed at least once.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="c1">// doSomething() is called at least once</span>
+<span class="k">do</span> <span class="o">{</span>
+    <span class="n">doSomething</span><span class="o">();</span>
+<span class="o">}</span> <span class="k">while</span> <span class="o">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="o">);</span>
+</pre></div>
+<h4><span class="mw-headline" id="for_loop"><code>for</code> loop</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=22" title="Edit section: for loop">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p><code>for</code> loops in Java include an initializer, a condition and a counter expression. It is possible to include several expressions of the same kind using comma as delimiter (except in the condition). However, unlike C, the comma is just a delimiter and not an operator.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+    <span class="n">doSomething</span><span class="o">();</span>
+<span class="o">}</span>
+ 
+<span class="c1">// A more complex loop using two variables</span>
+<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">,</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">9</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="o">;</span> <span class="n">i</span><span class="o">++,</span> <span class="n">j</span> <span class="o">-=</span> <span class="mi">3</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">doSomething</span><span class="o">();</span>
+<span class="o">}</span>
+</pre></div>
+<p>Like C, all three expressions are optional. The following loop is infinite:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="k">for</span> <span class="o">(;;)</span> <span class="o">{</span>
+    <span class="n">doSomething</span><span class="o">();</span>
+<span class="o">}</span>
+</pre></div>
+<h4><span class="mw-headline" id="Enhanced_for_loop">Enhanced <code>for</code> loop</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=23" title="Edit section: Enhanced for loop">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p><a href="https://en.wikipedia.org/wiki/Enhanced_for_loop" class="mw-redirect" title="Enhanced for loop">Enhanced <code>for</code> loops</a> have been available since <a href="https://en.wikipedia.org/wiki/J2SE_5.0" class="mw-redirect" title="J2SE 5.0">J2SE 5.0</a>. This type of loop uses built-in iterators over arrays and collections to return each item in the given collection. Every element is returned and reachable in the context of the code block. When the block is executed, the next item is returned until there are no items remaining. Unlike <a href="https://en.wikipedia.org/wiki/C_Sharp_(programming_language)" title="C Sharp (programming language)">C#</a>, this kind of loop does not involve a special keyword, but instead uses a different notation style.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">:</span> <span class="n">intArray</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">doSomething</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
+<span class="o">}</span>
+</pre></div>
+<h3><span class="mw-headline" id="Jump_statements">Jump statements</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=24" title="Edit section: Jump statements">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h4><span class="mw-headline" id="Labels">Labels</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=25" title="Edit section: Labels">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Labels are given points in code used by <code>break</code> and <code>continue</code> statements. Note that the Java <code>goto</code> keyword cannot be used to jump to specific points in the code.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="nl">start:</span>
+<span class="n">someMethod</span><span class="o">();</span>
+</pre></div>
+<h4><span class="mw-headline" id="break_statement"><code>break</code> statement</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=26" title="Edit section: break statement">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>The <code>break</code> statement breaks out of the closest loop or <code>switch</code> statement. Execution continues in the statement after the terminated statement, if any.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+    <span class="k">while</span> <span class="o">(</span><span class="kc">true</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">break</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="c1">// Will break to this point</span>
+<span class="o">}</span>
+</pre></div>
+<p>It is possible to break out of the outer loop using labels:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="nl">outer:</span>
+<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+    <span class="k">while</span> <span class="o">(</span><span class="kc">true</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">break</span> <span class="n">outer</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+<span class="c1">// Will break to this point</span>
+</pre></div>
+<h4><span class="mw-headline" id="continue_statement"><code>continue</code> statement</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=27" title="Edit section: continue statement">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>The <code>continue</code> statement discontinues the current iteration of the current control statement and begins the next iteration. The following <code>while</code> loop in the code below reads characters by calling <code>getChar()</code>, skipping the statements in the body of the loop if the characters are spaces:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kt">int</span> <span class="n">ch</span><span class="o">;</span>
+<span class="k">while</span> <span class="o">(</span><span class="n">ch</span> <span class="o">=</span> <span class="n">getChar</span><span class="o">())</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">ch</span> <span class="o">==</span> <span class="sc">' '</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">continue</span><span class="o">;</span> <span class="c1">// Skips the rest of the while-loop</span>
+    <span class="o">}</span>
+
+    <span class="c1">// Rest of the while-loop, will not be reached if ch == ' '</span>
+    <span class="n">doSomething</span><span class="o">();</span>
+<span class="o">}</span>
+</pre></div>
+<p>Labels can be specified in <code>continue</code> statements and <code>break</code> statements:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="nl">outer:</span>
+<span class="k">for</span> <span class="o">(</span><span class="n">String</span> <span class="n">str</span> <span class="o">:</span> <span class="n">stringsArr</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kt">char</span><span class="o">[]</span> <span class="n">strChars</span> <span class="o">=</span> <span class="n">str</span><span class="o">.</span><span class="na">toCharArray</span><span class="o">();</span>
+    <span class="k">for</span> <span class="o">(</span><span class="kt">char</span> <span class="n">ch</span> <span class="o">:</span> <span class="n">strChars</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">ch</span> <span class="o">==</span> <span class="sc">' '</span><span class="o">)</span> <span class="o">{</span>
+            <span class="cm">/* Continues the outer cycle and the next</span>
+<span class="cm">            string is retrieved from stringsArr */</span>
+            <span class="k">continue</span> <span class="n">outer</span><span class="o">;</span>
+        <span class="o">}</span>
+        <span class="n">doSomething</span><span class="o">(</span><span class="n">ch</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+<h4><span class="mw-headline" id="return_statement"><code>return</code> statement</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=28" title="Edit section: return statement">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>The <code>return</code> statement is used to end method execution and to return a value. A value returned by the method is written after the <code>return</code> keyword. If the method returns anything but <code>void</code>, it must use the <code>return</code> statement to return some value.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kt">void</span> <span class="nf">doSomething</span><span class="o">(</span><span class="kt">boolean</span> <span class="n">streamClosed</span><span class="o">)</span> <span class="o">{</span>
+    <span class="c1">// If streamClosed is true, execution is stopped</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">streamClosed</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="n">readFromStream</span><span class="o">();</span>
+<span class="o">}</span>
+
+<span class="kt">int</span> <span class="nf">calculateSum</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kt">int</span> <span class="n">result</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="o">;</span>
+    <span class="k">return</span> <span class="n">result</span><span class="o">;</span>
+<span class="o">}</span>
+</pre></div>
+<p><code>return</code> statement ends execution immediately, except for one case: if the statement is encountered within a <code>try</code> block and it is complemented by a <code>finally</code>, control is passed to the <code>finally</code> block.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kt">void</span> <span class="nf">doSomething</span><span class="o">(</span><span class="kt">boolean</span> <span class="n">streamClosed</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">try</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">streamClosed</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">return</span><span class="o">;</span>
+        <span class="o">}</span>
+        <span class="n">readFromStream</span><span class="o">();</span>
+    <span class="o">}</span> <span class="k">finally</span> <span class="o">{</span>
+        <span class="cm">/* Will be called last even if </span>
+<span class="cm">        readFromStream() was not called */</span>
+        <span class="n">freeResources</span><span class="o">();</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+<h3><span class="mw-headline" id="Exception_handling_statements">Exception handling statements</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=29" title="Edit section: Exception handling statements">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h4><span class="mw-headline" id="try-catch-finally_statements"><code>try-catch-finally</code> statements</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=30" title="Edit section: try-catch-finally statements">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Exceptions are managed within <code>try</code> ... <code>catch</code> blocks.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="k">try</span> <span class="o">{</span>
+    <span class="c1">// Statements that may throw exceptions</span>
+    <span class="n">methodThrowingExceptions</span><span class="o">();</span>
+<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">Exception</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
+    <span class="c1">// Exception caught and handled here</span>
+    <span class="n">reportException</span><span class="o">(</span><span class="n">ex</span><span class="o">);</span>
+<span class="o">}</span> <span class="k">finally</span> <span class="o">{</span>
+    <span class="c1">// Statements always executed after the try/catch blocks</span>
+    <span class="n">freeResources</span><span class="o">();</span>
+<span class="o">}</span>
+</pre></div>
+<p>The statements within the <code>try</code> block are executed, and if any of them throws an exception, execution of the block is discontinued and the exception is handled by the <code>catch</code> block. There may be multiple <code>catch</code> blocks, in which case the first block with an exception variable whose type matches the type of the thrown exception is executed.</p>
+<p>Java SE 7 also introduced multi-catch clauses besides uni-catch clauses. This type of catch clauses allows Java to handle different types of exceptions in a single block provided they are not subclasses of each other.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="k">try</span> <span class="o">{</span>
+    <span class="n">methodThrowingExceptions</span><span class="o">();</span>
+<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">IOException</span> <span class="o">|</span> <span class="n">IllegalArgumentException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
+    <span class="c1">//Both IOException and IllegalArgumentException will be caught and handled here</span>
+    <span class="n">reportException</span><span class="o">(</span><span class="n">ex</span><span class="o">);</span>
+<span class="o">}</span>
+</pre></div>
+<p>If no <code>catch</code> block matches the type of the thrown exception, the execution of the outer block (or method) containing the <code>try</code> ... <code>catch</code> statement is discontinued, and the exception is passed up and outside the containing block (or method). The exception is propagated upwards through the <a href="https://en.wikipedia.org/wiki/Call_stack" title="Call stack">call stack</a> until a matching <code>catch</code> block is found within one of the currently active methods. If the exception propagates all the way up to the top-most <code>main</code> method without a matching <code>catch</code> block being found, a textual description of the exception is written to the standard output stream.</p>
+<p>The statements within the <code>finally</code> block are always executed after the <code>try</code> and <code>catch</code> blocks, whether or not an exception was thrown and even if a <code>return</code> statement was reached. Such blocks are useful for providing clean-up code that is guaranteed to always be executed.</p>
+<p>The <code>catch</code> and <code>finally</code> blocks are optional, but at least one or the other must be present following the <code>try</code> block.</p>
+<h4><span class="mw-headline" id="try-with-resources_statements"><code>try</code>-with-resources statements</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=31" title="Edit section: try-with-resources statements">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p><code>try</code>-with-resources statements are a special type of <code>try-catch-finally</code> statements introduced as an implementation of the <a href="https://en.wikipedia.org/wiki/Dispose_pattern" title="Dispose pattern">dispose pattern</a> in Java SE 7. In a <code>try</code>-with-resources statement the <code>try</code> keyword is followed by initialization of one or more resources that are released automatically when the <code>try</code> block execution is finished. Resources must implement <code>java.lang.AutoCloseable</code>. <code>try</code>-with-resources statements are not required to have a <code>catch</code> or <code>finally</code> block unlike normal <code>try-catch-finally</code> statements.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="k">try</span> <span class="o">(</span><span class="n">FileOutputStream</span> <span class="n">fos</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FileOutputStream</span><span class="o">(</span><span class="s">"filename"</span><span class="o">);</span>
+    <span class="n">XMLEncoder</span> <span class="n">xEnc</span> <span class="o">=</span> <span class="k">new</span> <span class="n">XMLEncoder</span><span class="o">(</span><span class="n">fos</span><span class="o">))</span>
+<span class="o">{</span>
+    <span class="n">xEnc</span><span class="o">.</span><span class="na">writeObject</span><span class="o">(</span><span class="n">object</span><span class="o">);</span>
+<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">IOException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">Logger</span><span class="o">.</span><span class="na">getLogger</span><span class="o">(</span><span class="n">Serializer</span><span class="o">.</span><span class="na">class</span><span class="o">.</span><span class="na">getName</span><span class="o">()).</span><span class="na">log</span><span class="o">(</span><span class="n">Level</span><span class="o">.</span><span class="na">SEVERE</span><span class="o">,</span> <span class="kc">null</span><span class="o">,</span> <span class="n">ex</span><span class="o">);</span>
+<span class="o">}</span>
+</pre></div>
+<h4><span class="mw-headline" id="throw_statement"><code>throw</code> statement</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=32" title="Edit section: throw statement">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>The <code>throw</code> statement is used to throw an exception and end the execution of the block or method. The thrown exception instance is written after the <code>throw</code> statement.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kt">void</span> <span class="nf">methodThrowingExceptions</span><span class="o">(</span><span class="n">Object</span> <span class="n">obj</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">obj</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+        <span class="c1">// Throws exception of NullPointerException type</span>
+        <span class="k">throw</span> <span class="k">new</span> <span class="n">NullPointerException</span><span class="o">();</span>
+    <span class="o">}</span>
+    <span class="c1">// Will not be called, if object is null</span>
+    <span class="n">doSomethingWithObject</span><span class="o">(</span><span class="n">obj</span><span class="o">);</span>
+<span class="o">}</span>
+</pre></div>
+<h3><span class="mw-headline" id="Thread_concurrency_control">Thread concurrency control</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=33" title="Edit section: Thread concurrency control">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Java has built-in tools for <a href="https://en.wikipedia.org/wiki/Thread_(computer_science)" class="mw-redirect" title="Thread (computer science)">multi-thread programming</a>. For the purposes of thread <a href="https://en.wikipedia.org/wiki/Synchronization_(computer_science)" title="Synchronization (computer science)">synchronization</a> the <code>synchronized</code> statement is included in Java language.</p>
+<p>To make a code block synchronized, it is preceded by the <code>synchronized</code> keyword followed by the lock object inside the brackets. When the executing thread reaches the synchronized block, it acquires a <a href="https://en.wikipedia.org/wiki/Mutual_exclusion" title="Mutual exclusion">mutual exclusion</a> lock, executes the block, then releases the lock. No threads may enter this block until the lock is released. Any non-null reference type may be used as the lock.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="cm">/* Acquires lock on someObject. It must be of</span>
+<span class="cm">a reference type and must be non-null */</span>
+<span class="kd">synchronized</span> <span class="o">(</span><span class="n">someObject</span><span class="o">)</span> <span class="o">{</span>
+    <span class="c1">// Synchronized statements</span>
+<span class="o">}</span>
+</pre></div>
+<h3><span class="mw-headline" id="assert_statement"><code>assert</code> statement</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=34" title="Edit section: assert statement">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><code>assert</code> statements have been available since <a href="https://en.wikipedia.org/wiki/J2SE_1.4" class="mw-redirect" title="J2SE 1.4">J2SE 1.4</a>. These types of statements are used to make <a href="https://en.wikipedia.org/wiki/Assertion_(computing)" class="mw-redirect" title="Assertion (computing)">assertions</a> in the source code, which can be turned on and off during execution for specific classes or packages. To declare an assertion the <code>assert</code> keyword is used followed by a conditional expression. If it evaluates to <code>false</code> when the statement is executed, an exception is thrown. This statement can include a colon followed by another expression, which will act as the exception's detail message.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="c1">// If n equals 0, AssertionError is thrown</span>
+<span class="k">assert</span> <span class="n">n</span> <span class="o">!=</span> <span class="mi">0</span><span class="o">;</span>
+<span class="cm">/* If n equals 0, AssertionError will be thrown</span>
+<span class="cm">with the message after the colon */</span>
+<span class="k">assert</span> <span class="n">n</span> <span class="o">!=</span> <span class="mi">0</span> <span class="o">:</span> <span class="s">"n was equal to zero"</span><span class="o">;</span>
+</pre></div>
+<h2><span class="mw-headline" id="Primitive_types">Primitive types</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=35" title="Edit section: Primitive types">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Primitive types in Java include integer types, floating-point numbers, <a href="https://en.wikipedia.org/wiki/UTF-16" title="UTF-16">UTF-16</a> code units and a boolean type. There are no unsigned types in Java except <code>char</code> type, which is used to represent UTF-16 code units. The lack of unsigned types is offset by introducing unsigned right shift operation (<code>&gt;&gt;&gt;</code>), which is not present in C++. Nevertheless, criticisms have been levelled about the lack of compatibility with C and C++ this causes.<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">[2]</a></sup></p>
+<table class="wikitable">
+<tr>
+<th colspan="6">Primitive Types</th>
+</tr>
+<tr>
+<th>Type Name</th>
+<th>Wrapper class</th>
+<th>Value</th>
+<th>Range</th>
+<th>Size</th>
+<th>Default Value</th>
+</tr>
+<tr>
+<td><code>byte</code></td>
+<td><code>java.lang.Byte</code></td>
+<td>integer</td>
+<td>−128 through +127</td>
+<td>8-bit (1-byte)</td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td><code>short</code></td>
+<td><code>java.lang.Short</code></td>
+<td>integer</td>
+<td>−32,768 through +32,767</td>
+<td>16-bit (2-byte)</td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td><code>int</code></td>
+<td><code>java.lang.Integer</code></td>
+<td>integer</td>
+<td>−2,147,483,648 through +2,147,483,647</td>
+<td>32-bit (4-byte)</td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td><code>long</code></td>
+<td><code>java.lang.Long</code></td>
+<td>integer</td>
+<td>−9,223,372,036,854,775,808 through<br />
++9,223,372,036,854,775,807</td>
+<td>64-bit (8-byte)</td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td><code>float</code></td>
+<td><code>java.lang.Float</code></td>
+<td>floating point number</td>
+<td>±1.401298E−45 through ±3.402823E+38</td>
+<td>32-bit (4-byte)</td>
+<td><code>0.0f</code><sup id="cite_ref-7" class="reference"><a href="#cite_note-7">[3]</a></sup></td>
+</tr>
+<tr>
+<td><code>double</code></td>
+<td><code>java.lang.Double</code></td>
+<td>floating point number</td>
+<td>±4.94065645841246E−324 through<br />
+±1.79769313486232E+308</td>
+<td>64-bit (8-byte)</td>
+<td><code>0.0</code></td>
+</tr>
+<tr>
+<td><code>boolean</code></td>
+<td><code>java.lang.Boolean</code></td>
+<td>Boolean</td>
+<td><code>true</code> or <code>false</code></td>
+<td>1-bit (1-bit)</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>char</code></td>
+<td><code>java.lang.Character</code></td>
+<td><a href="https://en.wikipedia.org/wiki/UTF-16" title="UTF-16">UTF-16</a> code unit (<a href="https://en.wikipedia.org/wiki/Mapping_of_Unicode_character_planes#Basic_Multilingual_Plane" class="mw-redirect" title="Mapping of Unicode character planes">BMP</a> character<br />
+or a part of a surrogate pair)</td>
+<td><code>'\u0000'</code> through <code>'\uFFFF'</code></td>
+<td>16-bit (2-byte)</td>
+<td><code>'\u0000'</code></td>
+</tr>
+</table>
+<p><code>char</code> does not necessarily correspond to a single character. It may represent a part of a <a href="https://en.wikipedia.org/wiki/UTF-16#Encoding_of_characters_outside_the_BMP" title="UTF-16">surrogate pair</a>, in which case Unicode code point is represented by a sequence of two <code>char</code> values.</p>
+<h3><span class="mw-headline" id="Boxing_and_unboxing">Boxing and unboxing</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=36" title="Edit section: Boxing and unboxing">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>This language feature was introduced in <a href="https://en.wikipedia.org/wiki/J2SE_5.0" class="mw-redirect" title="J2SE 5.0">J2SE 5.0</a>. <i>Boxing</i> is the operation of converting a value of a primitive type into a value of a corresponding reference type, which serves as a wrapper for this particular primitive type. <i>Unboxing</i> is the reverse operation of converting a value of a reference type (previously boxed) into a value of a corresponding primitive type. Neither operation requires an explicit conversion.</p>
+<p>Example:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kt">int</span> <span class="n">foo</span> <span class="o">=</span> <span class="mi">42</span><span class="o">;</span> <span class="c1">// Primitive type</span>
+<span class="n">Integer</span> <span class="n">bar</span> <span class="o">=</span> <span class="n">foo</span><span class="o">;</span> <span class="cm">/* foo is boxed to bar, bar is of Integer type,</span>
+<span class="cm">                      which serves as a wrapper for int */</span>
+<span class="kt">int</span> <span class="n">foo2</span> <span class="o">=</span> <span class="n">bar</span><span class="o">;</span> <span class="c1">// Unboxed back to primitive type</span>
+</pre></div>
+<h2><span class="mw-headline" id="Reference_types">Reference types</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=37" title="Edit section: Reference types">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Reference types include class types, interface types, and array types. When the constructor is called, an object is created on the heap and a reference is assigned to the variable. When a variable of an object gets out of scope, the reference is broken and when there are no references left, the object gets marked as garbage. The garbage collector then collects and destroys it some time afterwards.</p>
+<p>A reference variable is <code>null</code> when it does not reference any object.</p>
+<h3><span class="mw-headline" id="Arrays">Arrays</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=38" title="Edit section: Arrays">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Arrays in Java are created at runtime, just like class instances. Array length is defined at creation and cannot be changed.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kt">int</span><span class="o">[]</span> <span class="n">numbers</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">5</span><span class="o">];</span>
+<span class="n">numbers</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="mi">2</span><span class="o">;</span>
+<span class="n">numbers</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="mi">5</span><span class="o">;</span>
+<span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="n">numbers</span><span class="o">[</span><span class="mi">0</span><span class="o">];</span>
+</pre></div>
+<h4><span class="mw-headline" id="Initializers">Initializers</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=39" title="Edit section: Initializers">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="c1">// Long syntax</span>
+<span class="kt">int</span><span class="o">[]</span> <span class="n">numbers</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[]</span> <span class="o">{</span><span class="mi">20</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">42</span><span class="o">,</span> <span class="mi">15</span><span class="o">,</span> <span class="mi">34</span><span class="o">};</span>
+<span class="c1">// Short syntax</span>
+<span class="kt">int</span><span class="o">[]</span> <span class="n">numbers2</span> <span class="o">=</span> <span class="o">{</span><span class="mi">20</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">42</span><span class="o">,</span> <span class="mi">15</span><span class="o">,</span> <span class="mi">34</span><span class="o">};</span>
+</pre></div>
+<h4><span class="mw-headline" id="Multi-dimensional_arrays">Multi-dimensional arrays</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=40" title="Edit section: Multi-dimensional arrays">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>In Java, multi-dimensional arrays are represented as arrays of arrays. Technically, they are represented by arrays of references to other arrays.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kt">int</span><span class="o">[][]</span> <span class="n">numbers</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">3</span><span class="o">][</span><span class="mi">3</span><span class="o">];</span>
+<span class="n">numbers</span><span class="o">[</span><span class="mi">1</span><span class="o">][</span><span class="mi">2</span><span class="o">]</span> <span class="o">=</span> <span class="mi">2</span><span class="o">;</span>
+
+<span class="kt">int</span><span class="o">[][]</span> <span class="n">numbers2</span> <span class="o">=</span> <span class="o">{{</span><span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">2</span><span class="o">},</span> <span class="o">{</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">6</span><span class="o">},</span> <span class="o">{</span><span class="mi">2</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">5</span><span class="o">}};</span>
+</pre></div>
+<p>Due to the nature of the multi-dimensional arrays, sub-arrays can vary in length, so multi-dimensional arrays are not bound to be rectangular unlike C:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kt">int</span><span class="o">[][]</span> <span class="n">numbers</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">2</span><span class="o">][];</span> <span class="c1">//Initialization of the first dimension only</span>
+
+<span class="n">numbers</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">3</span><span class="o">];</span>
+<span class="n">numbers</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">2</span><span class="o">];</span>
+</pre></div>
+<h3><span class="mw-headline" id="Classes">Classes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=41" title="Edit section: Classes">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="https://en.wikipedia.org/wiki/Class_(computer_science)" class="mw-redirect" title="Class (computer science)">Classes</a> are fundamentals of an object-oriented language such as Java. They contain members that store and manipulate data. Classes are divided into <i>top-level</i> and <i>nested</i>. Nested classes are classes placed inside another class that may access the private members of the enclosing class. Nested classes include <i>member classes</i> (which may be defined with the <i>static</i> modifier for simple nesting or without it for inner classes), <i>local classes</i> and <i>anonymous classes</i>.</p>
+<h4><span class="mw-headline" id="Declaration">Declaration</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=42" title="Edit section: Declaration">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<table class="wikitable">
+<tr>
+<th>Top-level class</th>
+<td>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kd">class</span> <span class="nc">Foo</span> <span class="o">{</span>
+    <span class="c1">// Class members</span>
+<span class="o">}</span>
+</pre></div>
+</td>
+</tr>
+<tr>
+<th>Inner class</th>
+<td>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kd">class</span> <span class="nc">Foo</span> <span class="o">{</span> <span class="c1">// Top-level class</span>
+    <span class="kd">class</span> <span class="nc">Bar</span> <span class="o">{</span> <span class="c1">// Inner class</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+</td>
+</tr>
+<tr>
+<th>Nested class</th>
+<td>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kd">class</span> <span class="nc">Foo</span> <span class="o">{</span> <span class="c1">// Top-level class</span>
+    <span class="kd">static</span> <span class="kd">class</span> <span class="nc">Bar</span> <span class="o">{</span> <span class="c1">// Nested class</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+</td>
+</tr>
+<tr>
+<th>Local class</th>
+<td>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kd">class</span> <span class="nc">Foo</span> <span class="o">{</span>
+    <span class="kt">void</span> <span class="nf">bar</span><span class="o">()</span> <span class="o">{</span>
+        <span class="kd">class</span> <span class="nc">Foobar</span> <span class="o">{</span><span class="c1">// Local class within a method</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+</td>
+</tr>
+<tr>
+<th>Anonymous class</th>
+<td>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kd">class</span> <span class="nc">Foo</span> <span class="o">{</span>
+    <span class="kt">void</span> <span class="nf">bar</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">new</span> <span class="n">Object</span><span class="o">()</span> <span class="o">{</span><span class="c1">// Creation of a new anonymous class extending Object</span>
+        <span class="o">};</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+</td>
+</tr>
+</table>
+<h4><span class="mw-headline" id="Instantiation">Instantiation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=43" title="Edit section: Instantiation">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Non-static members of a class define the types of the instance variables and methods, which are related to the objects created from that class. To create these objects, the class must be instantiated by using the <code>new</code> operator and calling the class constructor.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="n">Foo</span> <span class="n">foo</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Foo</span><span class="o">();</span>
+</pre></div>
+<h4><span class="mw-headline" id="Accessing_members">Accessing members</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=44" title="Edit section: Accessing members">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Members of both instances and static classes are accessed with the <code>.</code> operator.</p>
+<p><b>Accessing an instance member</b><br />
+Instance members can be accessed through the name of a variable.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="n">String</span> <span class="n">foo</span> <span class="o">=</span> <span class="s">"Hello"</span><span class="o">;</span>
+<span class="n">String</span> <span class="n">bar</span> <span class="o">=</span> <span class="n">foo</span><span class="o">.</span><span class="na">toUpperCase</span><span class="o">();</span>
+</pre></div>
+<p><b>Accessing a static class member</b><br />
+Static members are accessed by using the name of the class or any other type. This does not require the creation of a class instance. Static members are declared using the <code>static</code> modifier.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Foo</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">doSomething</span><span class="o">()</span> <span class="o">{</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="c1">// Calling the static method</span>
+<span class="n">Foo</span><span class="o">.</span><span class="na">doSomething</span><span class="o">();</span>
+</pre></div>
+<h4><span class="mw-headline" id="Modifiers">Modifiers</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=45" title="Edit section: Modifiers">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Modifiers are keywords used to modify declarations of types and type members. Most notably there is a sub-group containing the access modifiers.</p>
+<ul>
+<li><b><code>abstract</code></b> - Specifies that a class only serves as a base class and cannot be instantiated.</li>
+<li><b><code>static</code></b> - Used only for member classes, specifies that the member class does not belong to a specific instance of the containing class.</li>
+<li><b><code>final</code></b> - Classes marked as <code>final</code> cannot be extended from and cannot have any subclasses.</li>
+<li><b><code>strictfp</code></b> - Specifies that all floating-point operations must be carried out conforming to <a href="https://en.wikipedia.org/wiki/IEEE_754" class="mw-redirect" title="IEEE 754">IEEE 754</a> and forbids using enhanced precision to store intermediate results.</li>
+</ul>
+<h5><span class="mw-headline" id="Access_modifiers">Access modifiers</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=46" title="Edit section: Access modifiers">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p>The <i>access modifiers</i>, or <i>inheritance modifiers</i>, set the accessibility of classes, methods, and other members. Members marked as <code>public</code> can be reached from anywhere. If a class or its member does not have any modifiers, default access is assumed.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Foo</span> <span class="o">{</span>
+    <span class="kt">int</span> <span class="nf">go</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="mi">0</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">private</span> <span class="kd">class</span> <span class="nc">Bar</span> <span class="o">{</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+<p>The following table shows whether code within a class has access to the class or method depending on the accessing class location and the modifier for the accessed class or class member:</p>
+<table class="wikitable" style="text-align: center;">
+<tr>
+<th width="20%">Modifier</th>
+<th width="20%">Same class or nested class</th>
+<th width="20%">Other class inside the same package</th>
+<th width="20%">Extended Class inside another package</th>
+<th width="20%">Non-extended inside another package</th>
+</tr>
+<tr>
+<th><code>private</code></th>
+<td>yes</td>
+<td>no</td>
+<td>no</td>
+<td>no</td>
+</tr>
+<tr>
+<th>default (package private)</th>
+<td>yes</td>
+<td>yes</td>
+<td>no</td>
+<td>no</td>
+</tr>
+<tr>
+<th><code>protected</code></th>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+<td>no</td>
+</tr>
+<tr>
+<th><code>public</code></th>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+</table>
+<div class="thumb tright">
+<div class="thumbinner" style="width:222px;"><a href="https://en.wikipedia.org/wiki/File:JavaAccessSpecifier.jpg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/2/20/JavaAccessSpecifier.jpg/220px-JavaAccessSpecifier.jpg" width="220" height="168" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/2/20/JavaAccessSpecifier.jpg/330px-JavaAccessSpecifier.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/2/20/JavaAccessSpecifier.jpg/440px-JavaAccessSpecifier.jpg 2x" data-file-width="537" data-file-height="409" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="https://en.wikipedia.org/wiki/File:JavaAccessSpecifier.jpg" class="internal" title="Enlarge"></a></div>
+This image describes the class member scope within classes and packages.</div>
+</div>
+</div>
+<h4><span class="mw-headline" id="Constructors_and_initializers">Constructors and initializers</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=47" title="Edit section: Constructors and initializers">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>A <a href="https://en.wikipedia.org/wiki/Constructor_(computer_science)" class="mw-redirect" title="Constructor (computer science)">constructor</a> is a special method called when an object is initialized. Its purpose is to initialize the members of the object. The main differences between constructors and ordinary methods are that constructors are called only when an instance of the class is created and never return anything. Constructors are declared as common methods, but they are named after the class and no return type is specified:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kd">class</span> <span class="nc">Foo</span> <span class="o">{</span>
+    <span class="n">String</span> <span class="n">str</span><span class="o">;</span>
+
+    <span class="n">Foo</span><span class="o">()</span> <span class="o">{</span> <span class="c1">// Constructor with no arguments</span>
+        <span class="c1">// Initialization</span>
+    <span class="o">}</span>
+
+    <span class="n">Foo</span><span class="o">(</span><span class="n">String</span> <span class="n">str</span><span class="o">)</span> <span class="o">{</span> <span class="c1">// Constructor with one argument</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">str</span> <span class="o">=</span> <span class="n">str</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+<p>Initializers are blocks of code that are executed when a class or an instance of a class is created. There are two kinds of initializers, <i>static initializers</i> and <i>instance initializers</i>.</p>
+<p>Static initializers initialize static fields when the class is created. They are declared using the <code>static</code> keyword:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kd">class</span> <span class="nc">Foo</span> <span class="o">{</span>
+    <span class="kd">static</span> <span class="o">{</span>
+        <span class="c1">// Initialization</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+<p>A class is created only once. Therefore, static initializers are not called more than once. On the contrary, instance initializers are automatically called before the call to a constructor every time an instance of the class is created. Unlike constructors instance initializers cannot take any arguments and generally they cannot throw any <a href="https://en.wikipedia.org/wiki/Exception_handling#Checked_exceptions" title="Exception handling">checked exceptions</a> (except in several special cases). Instance initializers are declared in a block without any keywords:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kd">class</span> <span class="nc">Foo</span> <span class="o">{</span>
+    <span class="o">{</span>
+        <span class="c1">// Initialization</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+<p>Since Java has a garbage collection mechanism, there are no <a href="https://en.wikipedia.org/wiki/Destructor_(computer_science)" class="mw-redirect" title="Destructor (computer science)">destructors</a>. However, every object has a <code>finalize()</code> method called prior to garbage collection, which can be overridden to implement finalization.</p>
+<h4><span class="mw-headline" id="Methods">Methods</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=48" title="Edit section: Methods">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>All the statements in Java must reside within methods. Methods are similar to functions except they belong to classes. A method has a return value, a name and usually some parameters initialized when it is called with some arguments. Similar to C++, methods returning nothing have return type declared as <code>void</code>. Unlike in C++, methods in Java are not allowed to have default argument values and methods are usually overloaded instead.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kd">class</span> <span class="nc">Foo</span> <span class="o">{</span>
+    <span class="kt">int</span> <span class="nf">bar</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="o">(</span><span class="n">a</span><span class="o">*</span><span class="mi">2</span><span class="o">)</span> <span class="o">+</span> <span class="n">b</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="cm">/* Overloaded method with the same name but different set of arguments */</span>
+    <span class="kt">int</span> <span class="nf">bar</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">a</span><span class="o">*</span><span class="mi">2</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+<p>A method is called using <code>.</code> notation on an object, or in the case of a static method, also on the name of a class.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="n">Foo</span> <span class="n">foo</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Foo</span><span class="o">();</span>
+<span class="kt">int</span> <span class="n">result</span> <span class="o">=</span> <span class="n">foo</span><span class="o">.</span><span class="na">bar</span><span class="o">(</span><span class="mi">7</span><span class="o">,</span> <span class="mi">2</span><span class="o">);</span> <span class="c1">// Non-static method is called on foo</span>
+
+<span class="kt">int</span> <span class="n">finalResult</span> <span class="o">=</span> <span class="n">Math</span><span class="o">.</span><span class="na">abs</span><span class="o">(</span><span class="n">result</span><span class="o">);</span> <span class="c1">// Static method call</span>
+</pre></div>
+<p>The <code>throws</code> keyword indicates that a method throws an exception. All checked exceptions must be listed in a comma-separated list.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kt">void</span> <span class="nf">openStream</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">IOException</span><span class="o">,</span> <span class="n">myException</span> <span class="o">{</span> <span class="c1">// Indicates that IOException may be thrown</span>
+<span class="o">}</span>
+</pre></div>
+<h5><span class="mw-headline" id="Modifiers_2">Modifiers</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=49" title="Edit section: Modifiers">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
+<ul>
+<li><b><code>abstract</code></b> - Abstract methods can be present only in abstract classes, such methods have no body and must be overridden in a subclass unless it is abstract itself.</li>
+<li><b><code>static</code></b> - Makes the method static and accessible without creation of a class instance. However static methods cannot access non-static members in the same class.</li>
+<li><b><code>final</code></b> - Declares that the method cannot be overridden in a subclass.</li>
+<li><b><code>native</code></b> - Indicates that this method is implemented through <a href="https://en.wikipedia.org/wiki/JNI" class="mw-redirect" title="JNI">JNI</a> in platform-dependent code. Actual implementation happens outside Java code, and such methods have no body.</li>
+<li><b><code>strictfp</code></b> - Declares strict conformance to <a href="https://en.wikipedia.org/wiki/IEEE_754" class="mw-redirect" title="IEEE 754">IEEE 754</a> in carrying out floating-point operations.</li>
+<li><b><code>synchronized</code></b> - Declares that a thread executing this method must acquire monitor. For <code>synchronized</code> methods the monitor is the class instance or java.lang.Class if the method is static.</li>
+<li>Access modifiers - Identical to those used with classes.</li>
+</ul>
+<h5><span class="mw-headline" id="Varargs">Varargs</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=50" title="Edit section: Varargs">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p>This language feature was introduced in <a href="https://en.wikipedia.org/wiki/J2SE_5.0" class="mw-redirect" title="J2SE 5.0">J2SE 5.0</a>. The last argument of the method may be declared as a variable arity parameter, in which case the method becomes a variable arity method (as opposed to fixed arity methods) or simply varargs method. This allows one to pass a variable number of values, of the declared type, to the method as parameters - including no parameters. These values will be available inside the method as an array.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kt">void</span> <span class="nf">printReport</span><span class="o">(</span><span class="n">String</span> <span class="n">header</span><span class="o">,</span> <span class="kt">int</span><span class="o">...</span> <span class="n">numbers</span><span class="o">)</span> <span class="o">{</span> <span class="c1">//numbers represents varargs</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">header</span><span class="o">);</span>
+    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">num</span> <span class="o">:</span> <span class="n">numbers</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">num</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="c1">// Calling varargs method</span>
+<span class="n">printReport</span><span class="o">(</span><span class="s">"Report data"</span><span class="o">,</span> <span class="mi">74</span><span class="o">,</span> <span class="mi">83</span><span class="o">,</span> <span class="mi">25</span><span class="o">,</span> <span class="mi">96</span><span class="o">);</span>
+</pre></div>
+<h4><span class="mw-headline" id="Fields">Fields</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=51" title="Edit section: Fields">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Fields, or class variables, can be declared inside the class body to store data.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kd">class</span> <span class="nc">Foo</span> <span class="o">{</span>
+    <span class="kt">double</span> <span class="n">bar</span><span class="o">;</span>
+<span class="o">}</span>
+</pre></div>
+<p>Fields can be initialized directly when declared.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kd">class</span> <span class="nc">Foo</span> <span class="o">{</span>
+    <span class="kt">double</span> <span class="n">bar</span> <span class="o">=</span> <span class="mf">2.3</span><span class="o">;</span>
+<span class="o">}</span>
+</pre></div>
+<h5><span class="mw-headline" id="Modifiers_3">Modifiers</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=52" title="Edit section: Modifiers">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
+<ul>
+<li><b><code>static</code></b> - Makes the field a static member.</li>
+<li><b><code>final</code></b> - Allows the field to be initialized only once in a constructor or inside initialization block or during its declaration, whichever is earlier.</li>
+<li><b><code>transient</code></b> - Indicates that this field will not be stored during <a href="https://en.wikipedia.org/wiki/Serialization" title="Serialization">serialization</a>.</li>
+<li><b><code>volatile</code></b> - If a field is declared <code>volatile</code>, it is ensured that all threads see a consistent value for the variable.</li>
+</ul>
+<h4><span class="mw-headline" id="Inheritance">Inheritance</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=53" title="Edit section: Inheritance">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Classes in Java can only <a href="https://en.wikipedia.org/wiki/Inheritance_(computer_science)" class="mw-redirect" title="Inheritance (computer science)">inherit</a> from <i>one</i> class. A class can be derived from any class that is not marked as <code>final</code>. Inheritance is declared using the <code>extends</code> keyword. A class can reference itself using the <code>this</code> keyword and its direct superclass using the <code>super</code> keyword.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kd">class</span> <span class="nc">Foo</span> <span class="o">{</span>
+
+<span class="o">}</span>
+
+<span class="kd">class</span> <span class="nc">Foobar</span> <span class="kd">extends</span> <span class="n">Foo</span> <span class="o">{</span>
+
+<span class="o">}</span>
+</pre></div>
+<p>If a class does not specify its superclass, it implicitly inherits from <code>java.lang.Object</code> class. Thus all classes in Java are subclasses of <code>Object</code> class.</p>
+<h5><span class="mw-headline" id="Overriding_methods">Overriding methods</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=54" title="Edit section: Overriding methods">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p>Unlike C++, all non-<code>final</code> methods in Java are <a href="https://en.wikipedia.org/wiki/Virtual_function" title="Virtual function">virtual</a> and can be overridden by the inheriting classes.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kd">class</span> <span class="nc">Operation</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">doSomething</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="mi">0</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="kd">class</span> <span class="nc">NewOperation</span> <span class="kd">extends</span> <span class="n">Operation</span> <span class="o">{</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">doSomething</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="mi">1</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+<h5><span class="mw-headline" id="Abstract_classes">Abstract classes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=55" title="Edit section: Abstract classes">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p>An <a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/specs/jls/se7/html/jls-8.html#jls-8.1.1.1">Abstract Class</a> is a class that is incomplete, or to be considered incomplete. Normal classes may have abstract methods, that is, methods that are declared but not yet implemented, only if they are abstract classes. A class C has abstract methods if any of the following is true:</p>
+<ul>
+<li>C explicitly contains a declaration of an abstract method.</li>
+<li>Any of C's superclasses has an abstract method and C neither declares nor inherits a method that implements it.</li>
+<li>A direct superinterface of C declares or inherits a method (which is therefore necessarily abstract) and C neither declares nor inherits a method that implements it.</li>
+<li>A subclass of an abstract class that is not itself abstract may be instantiated, resulting in the execution of a constructor for the abstract class and, therefore, the execution of the field initializers for instance variables of that class.</li>
+</ul>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kn">package</span> <span class="nn">org.dwwwp.test</span><span class="o">;</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * @author jcrypto</span>
+<span class="cm"> */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">AbstractClass</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">hello</span><span class="o">;</span>
+
+    <span class="kd">static</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">AbstractClass</span><span class="o">.</span><span class="na">class</span><span class="o">.</span><span class="na">getName</span><span class="o">()</span> <span class="o">+</span> <span class="s">": static block runtime"</span><span class="o">);</span>
+        <span class="n">hello</span> <span class="o">=</span> <span class="s">"hello from "</span> <span class="o">+</span> <span class="n">AbstractClass</span><span class="o">.</span><span class="na">class</span><span class="o">.</span><span class="na">getName</span><span class="o">();</span>
+    <span class="o">}</span>
+
+    <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">AbstractClass</span><span class="o">.</span><span class="na">class</span><span class="o">.</span><span class="na">getName</span><span class="o">()</span> <span class="o">+</span> <span class="s">": instance block runtime"</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="nf">AbstractClass</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">AbstractClass</span><span class="o">.</span><span class="na">class</span><span class="o">.</span><span class="na">getName</span><span class="o">()</span> <span class="o">+</span> <span class="s">": constructor runtime"</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">hello</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">hello</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kn">package</span> <span class="nn">org.dwwwp.test</span><span class="o">;</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * @author jcrypto</span>
+<span class="cm"> */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">CustomClass</span> <span class="kd">extends</span> <span class="n">AbstractClass</span> <span class="o">{</span>
+
+    <span class="kd">static</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">CustomClass</span><span class="o">.</span><span class="na">class</span><span class="o">.</span><span class="na">getName</span><span class="o">()</span> <span class="o">+</span> <span class="s">": static block runtime"</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">CustomClass</span><span class="o">.</span><span class="na">class</span><span class="o">.</span><span class="na">getName</span><span class="o">()</span> <span class="o">+</span> <span class="s">": instance block runtime"</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="nf">CustomClass</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">CustomClass</span><span class="o">.</span><span class="na">class</span><span class="o">.</span><span class="na">getName</span><span class="o">()</span> <span class="o">+</span> <span class="s">": constructor runtime"</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">CustomClass</span> <span class="n">nc</span> <span class="o">=</span> <span class="k">new</span> <span class="n">CustomClass</span><span class="o">();</span>
+        <span class="n">hello</span><span class="o">();</span>
+        <span class="c1">//AbstractClass.hello();//also valid</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+<p>Output:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="n">org</span><span class="o">.</span><span class="na">dwwwp</span><span class="o">.</span><span class="na">test</span><span class="o">.</span><span class="na">AbstractClass</span><span class="o">:</span> <span class="kd">static</span> <span class="n">block</span> <span class="n">runtime</span>
+<span class="n">org</span><span class="o">.</span><span class="na">dwwwp</span><span class="o">.</span><span class="na">test</span><span class="o">.</span><span class="na">CustomClass</span><span class="o">:</span> <span class="kd">static</span> <span class="n">block</span> <span class="n">runtime</span>
+<span class="n">org</span><span class="o">.</span><span class="na">dwwwp</span><span class="o">.</span><span class="na">test</span><span class="o">.</span><span class="na">AbstractClass</span><span class="o">:</span> <span class="n">instance</span> <span class="n">block</span> <span class="n">runtime</span>
+<span class="n">org</span><span class="o">.</span><span class="na">dwwwp</span><span class="o">.</span><span class="na">test</span><span class="o">.</span><span class="na">AbstractClass</span><span class="o">:</span> <span class="n">constructor</span> <span class="n">runtime</span>
+<span class="n">org</span><span class="o">.</span><span class="na">dwwwp</span><span class="o">.</span><span class="na">test</span><span class="o">.</span><span class="na">CustomClass</span><span class="o">:</span> <span class="n">instance</span> <span class="n">block</span> <span class="n">runtime</span>
+<span class="n">org</span><span class="o">.</span><span class="na">dwwwp</span><span class="o">.</span><span class="na">test</span><span class="o">.</span><span class="na">CustomClass</span><span class="o">:</span> <span class="n">constructor</span> <span class="n">runtime</span>
+<span class="n">hello</span> <span class="n">from</span> <span class="n">org</span><span class="o">.</span><span class="na">dwwwp</span><span class="o">.</span><span class="na">test</span><span class="o">.</span><span class="na">AbstractClass</span>
+</pre></div>
+<h4><span class="mw-headline" id="Enumerations">Enumerations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=56" title="Edit section: Enumerations">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>This language feature was introduced in <a href="https://en.wikipedia.org/wiki/J2SE_5.0" class="mw-redirect" title="J2SE 5.0">J2SE 5.0</a>. Technically enumerations are a kind of class containing enum constants in its body. Each enum constant defines an instance of the enum type. Enumeration classes cannot be instantiated anywhere except in the enumeration class itself.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kd">enum</span> <span class="n">Season</span> <span class="o">{</span>
+    <span class="n">WINTER</span><span class="o">,</span> <span class="n">SPRING</span><span class="o">,</span> <span class="n">SUMMER</span><span class="o">,</span> <span class="n">AUTUMN</span>
+<span class="o">}</span>
+</pre></div>
+<p>Enum constants are allowed to have constructors, which are called when the class is loaded:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kd">public</span> <span class="kd">enum</span> <span class="n">Season</span> <span class="o">{</span>
+    <span class="n">WINTER</span><span class="o">(</span><span class="s">"Cold"</span><span class="o">),</span> <span class="n">SPRING</span><span class="o">(</span><span class="s">"Warmer"</span><span class="o">),</span> <span class="n">SUMMER</span><span class="o">(</span><span class="s">"Hot"</span><span class="o">),</span> <span class="n">AUTUMN</span><span class="o">(</span><span class="s">"Cooler"</span><span class="o">);</span>
+
+    <span class="n">Season</span><span class="o">(</span><span class="n">String</span> <span class="n">description</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">description</span> <span class="o">=</span> <span class="n">description</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">description</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getDescription</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">description</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+<p>Enumerations can have class bodies, in which case they are treated like anonymous classes extending the enum class:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kd">public</span> <span class="kd">enum</span> <span class="n">Season</span> <span class="o">{</span>
+    <span class="n">WINTER</span> <span class="o">{</span>
+        <span class="n">String</span> <span class="nf">getDescription</span><span class="o">()</span> <span class="o">{</span><span class="k">return</span> <span class="s">"cold"</span><span class="o">;}</span>
+    <span class="o">},</span>
+    <span class="n">SPRING</span> <span class="o">{</span>
+        <span class="n">String</span> <span class="nf">getDescription</span><span class="o">()</span> <span class="o">{</span><span class="k">return</span> <span class="s">"warmer"</span><span class="o">;}</span>
+    <span class="o">},</span>
+    <span class="n">SUMMER</span> <span class="o">{</span>
+        <span class="n">String</span> <span class="nf">getDescription</span><span class="o">()</span> <span class="o">{</span><span class="k">return</span> <span class="s">"hot"</span><span class="o">;}</span>
+    <span class="o">},</span>
+    <span class="n">FALL</span> <span class="o">{</span>
+        <span class="n">String</span> <span class="nf">getDescription</span><span class="o">()</span> <span class="o">{</span><span class="k">return</span> <span class="s">"cooler"</span><span class="o">;}</span>
+    <span class="o">};</span>
+<span class="o">}</span>
+</pre></div>
+<h3><span class="mw-headline" id="Interfaces">Interfaces</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=57" title="Edit section: Interfaces">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Interfaces are data structures that contain member definitions and not actual implementation. They are useful to define a contract between members in different types that have different implementations. Every interface is implicitly abstract. The only modifier allowed to use with interfaces apart from access modifiers is <code>strictfp</code>, which has the same effect as for classes.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kd">interface</span> <span class="nc">ActionListener</span> <span class="o">{</span>
+    <span class="kt">int</span> <span class="n">ACTION_ADD</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+    <span class="kt">int</span> <span class="n">ACTION_REMOVE</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
+ 
+    <span class="kt">void</span> <span class="nf">actionSelected</span><span class="o">(</span><span class="kt">int</span> <span class="n">action</span><span class="o">);</span>
+<span class="o">}</span>
+</pre></div>
+<h4><span class="mw-headline" id="Implementing_an_interface">Implementing an interface</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=58" title="Edit section: Implementing an interface">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>An interface is implemented by a class using the <code>implements</code> keyword. It is allowed to implement more than one interface, in which case they are written after <code>implements</code> keyword in a comma-separated list. Class implementing an interface must override all its methods, otherwise it must be declared as abstract.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kd">interface</span> <span class="nc">RequestListener</span> <span class="o">{</span>
+    <span class="kt">int</span> <span class="nf">requestReceived</span><span class="o">();</span>
+<span class="o">}</span>
+
+<span class="kd">class</span> <span class="nc">ActionHandler</span> <span class="kd">implements</span> <span class="n">ActionListener</span><span class="o">,</span> <span class="n">RequestListener</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">actionSelected</span><span class="o">(</span><span class="kt">int</span> <span class="n">action</span><span class="o">)</span> <span class="o">{</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">requestReceived</span><span class="o">()</span> <span class="o">{</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="c1">//Calling method defined by interface</span>
+<span class="n">RequestListener</span> <span class="n">listener</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ActionHandler</span><span class="o">();</span> <span class="cm">/*ActionHandler can be</span>
+<span class="cm">                                   represented as RequestListener...*/</span>
+<span class="n">listener</span><span class="o">.</span><span class="na">requestReceived</span><span class="o">();</span> <span class="cm">/*...and thus is known to implement</span>
+<span class="cm">                            requestReceived() method*/</span>
+</pre></div>
+<h4><span class="mw-headline" id="Inheritance_2">Inheritance</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=59" title="Edit section: Inheritance">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Interfaces can inherit from other interfaces just like classes. Unlike classes it is allowed to inherit from multiple interfaces. However, it is possible that several interfaces have a field with the same name, in which case it becomes a single ambiguous member, which cannot be accessed.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="cm">/* Class implementing this interface must implement methods of both</span>
+<span class="cm">ActionListener and RequestListener */</span>
+<span class="kd">interface</span> <span class="nc">EventListener</span> <span class="kd">extends</span> <span class="n">ActionListener</span><span class="o">,</span> <span class="n">RequestListener</span> <span class="o">{</span>
+    
+<span class="o">}</span>
+</pre></div>
+<h4><span class="mw-headline" id="Annotations">Annotations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=60" title="Edit section: Annotations">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div role="note" class="hatnote">Main article: <a href="Java_annotation.html" title="Java annotation">Java annotation</a></div>
+<p>Annotations in Java are a way to embed <a href="https://en.wikipedia.org/wiki/Metadata" title="Metadata">metadata</a> into code. This language feature was introduced in <a href="https://en.wikipedia.org/wiki/J2SE_5.0" class="mw-redirect" title="J2SE 5.0">J2SE 5.0</a>.</p>
+<h5><span class="mw-headline" id="Annotation_types">Annotation types</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=61" title="Edit section: Annotation types">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p>Java has a set of predefined annotation types, but it is allowed to define new ones. An annotation type declaration is a special type of an interface declaration. They are declared in the same way as the interfaces, except the <code>interface</code> keyword is preceded by the <code>@</code> sign. All annotations are implicitly extended from <code>java.lang.annotation.Annotation</code> and cannot be extended from anything else.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="nd">@interface</span> <span class="n">BlockingOperations</span> <span class="o">{</span>
+<span class="o">}</span>
+</pre></div>
+<p>Annotations may have the same declarations in the body as the common interfaces, in addition they are allowed to include enums and annotations. The main difference is that abstract method declarations must not have any parameters or throw any exceptions. Also they may have a default value, which is declared using the <code>default</code> keyword after the method name:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="nd">@interface</span> <span class="n">BlockingOperations</span> <span class="o">{</span>
+    <span class="kt">boolean</span> <span class="nf">fileSystemOperations</span><span class="o">();</span>
+    <span class="kt">boolean</span> <span class="nf">networkOperations</span><span class="o">()</span> <span class="k">default</span> <span class="kc">false</span><span class="o">;</span>
+<span class="o">}</span>
+</pre></div>
+<h5><span class="mw-headline" id="Usage_of_annotations">Usage of annotations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=62" title="Edit section: Usage of annotations">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p>Annotations may be used in any kind of declaration, whether it is package, class (including enums), interface (including annotations), field, method, parameter, constructor, or local variable. Also they can be used with enum constants. Annotations are declared using the <code>@</code> sign preceding annotation type name, after which element-value pairs are written inside brackets. All elements with no default value must be assigned a value.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="nd">@BlockingOperations</span><span class="o">(</span><span class="cm">/*mandatory*/</span> <span class="n">fileSystemOperations</span> <span class="o">=</span> <span class="kc">true</span><span class="o">,</span>
+<span class="cm">/*optional*/</span> <span class="n">networkOperations</span> <span class="o">=</span> <span class="kc">true</span><span class="o">)</span>
+<span class="kt">void</span> <span class="nf">openOutputStream</span><span class="o">()</span> <span class="o">{</span> <span class="c1">//Annotated method</span>
+<span class="o">}</span>
+</pre></div>
+<p>Besides the generic form, there are two other forms to declare an annotation, which are shorthands. <i>Marker annotation</i> is a short form, it is used when no values are assigned to elements:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="nd">@Unused</span> <span class="c1">// Shorthand for @Unused()</span>
+<span class="kt">void</span> <span class="nf">travelToJupiter</span><span class="o">()</span> <span class="o">{</span>
+<span class="o">}</span>
+</pre></div>
+<p>The other short form is called <i>single element annotation</i>. It is used with annotations types containing only one element or in the case when multiple elements are present, but only one elements lacks a default value. In single element annotation form the element name is omitted and only value is written instead:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="cm">/* Equivalent for @BlockingOperations(fileSystemOperations = true).</span>
+<span class="cm">networkOperations has a default value and</span>
+<span class="cm">does not have to be assigned a value */</span>
+
+<span class="nd">@BlockingOperations</span><span class="o">(</span><span class="kc">true</span><span class="o">)</span>
+<span class="kt">void</span> <span class="nf">openOutputStream</span><span class="o">()</span> <span class="o">{</span>
+<span class="o">}</span>
+</pre></div>
+<h2><span class="mw-headline" id="Generics">Generics</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=63" title="Edit section: Generics">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div role="note" class="hatnote">Main article: <a href="Generics_in_Java.html" title="Generics in Java">Generics in Java</a></div>
+<p><a href="https://en.wikipedia.org/wiki/Generic_programming" title="Generic programming">Generics</a>, or parameterized types, or <a href="Polymorphism_in_object-oriented_programming.html#Parametric_Polymorphism" class="mw-redirect" title="Polymorphism in object-oriented programming">parametric polymorphism</a> is one of the major features introduced in <a href="https://en.wikipedia.org/wiki/J2SE_5.0" class="mw-redirect" title="J2SE 5.0">J2SE 5.0</a>. Before generics were introduced, it was required to declare all the types explicitly. With generics it became possible to work in a similar manner with different types without declaring the exact types. The main purpose of generics is to ensure type safety and to detect runtime errors during compilation. Unlike C#, information on the used parameters is not available at runtime due to <a href="https://en.wikipedia.org/wiki/Type_erasure" title="Type erasure">type erasure</a>.<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">[4]</a></sup></p>
+<h3><span class="mw-headline" id="Generic_classes">Generic classes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=64" title="Edit section: Generic classes">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Classes can be parameterized by adding a type variable inside angle brackets (<code>&lt;</code> and <code>&gt;</code>) following the class name. It makes possible the use of this type variable in class members instead of actual types. There can be more than one type variable, in which case they are declared in a comma-separated list.</p>
+<p>It is possible to limit a type variable to a subtype of some specific class or declare an interface that must be implemented by the type. In this case the type variable is appended by the <code>extends</code> keyword followed by a name of the class or the interface. If the variable is constrained by both class and interface or if there are several interfaces, the class name is written first, followed by interface names with <code>&amp;</code> sign used as the delimiter.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="cm">/* This class has two type variables, T and V. T must be </span>
+<span class="cm">a subtype of ArrayList and implement Formattable interface */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Mapper</span><span class="o">&lt;</span><span class="n">T</span> <span class="kd">extends</span> <span class="n">ArrayList</span> <span class="o">&amp;</span> <span class="n">Formattable</span><span class="o">,</span> <span class="n">V</span><span class="o">&gt;</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">add</span><span class="o">(</span><span class="n">T</span> <span class="n">array</span><span class="o">,</span> <span class="n">V</span> <span class="n">item</span><span class="o">)</span> <span class="o">{</span>
+        <span class="c1">// array has add method because it is an ArrayList subclass</span>
+        <span class="n">array</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">item</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+<p>When a variable of a parameterized type is declared or an instance is created, its type is written exactly in the same format as in the class header, except the actual type is written in the place of the type variable declaration.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="cm">/* Mapper is created with CustomList as T and Integer as V.</span>
+<span class="cm">CustomList must be a subclass of ArrayList and implement Formattable */</span>
+<span class="n">Mapper</span><span class="o">&lt;</span><span class="n">CustomList</span><span class="o">,</span> <span class="n">Integer</span><span class="o">&gt;</span> <span class="n">mapper</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Mapper</span><span class="o">&lt;</span><span class="n">CustomList</span><span class="o">,</span> <span class="n">Integer</span><span class="o">&gt;();</span>
+</pre></div>
+<p>Since Java SE 7, it is possible to use a diamond (<code>&lt;&gt;</code>) in place of type arguments, in which case the latter will be inferred. The following code in Java SE 7 is equivalent to the code in the previous example:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="n">Mapper</span><span class="o">&lt;</span><span class="n">CustomList</span><span class="o">,</span> <span class="n">Integer</span><span class="o">&gt;</span> <span class="n">mapper</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Mapper</span><span class="o">&lt;&gt;();</span>
+</pre></div>
+<p>When declaring a variable for a parameterized type, it is possible to use wildcards instead of explicit type names. Wildcards are expressed by writing <code>?</code> sign instead of the actual type. It is possible to limit possible types to the subclasses or superclasses of some specific class by writing the <code>extends</code> keyword or the <code>super</code> keyword correspondingly followed by the class name.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="cm">/* Any Mapper instance with CustomList as the first parameter</span>
+<span class="cm">may be used regardless of the second one.*/</span>
+<span class="n">Mapper</span><span class="o">&lt;</span><span class="n">CustomList</span><span class="o">,</span> <span class="o">?&gt;</span> <span class="n">mapper</span><span class="o">;</span>
+<span class="n">mapper</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Mapper</span><span class="o">&lt;</span><span class="n">CustomList</span><span class="o">,</span> <span class="n">Boolean</span><span class="o">&gt;();</span>
+<span class="n">mapper</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Mapper</span><span class="o">&lt;</span><span class="n">CustomList</span><span class="o">,</span> <span class="n">Integer</span><span class="o">&gt;();</span>
+
+<span class="cm">/* Will not accept types that use anything but</span>
+<span class="cm">a subclass of Number as the second parameter */</span>
+<span class="kt">void</span> <span class="nf">addMapper</span><span class="o">(</span><span class="n">Mapper</span><span class="o">&lt;?,</span> <span class="o">?</span> <span class="kd">extends</span> <span class="n">Number</span><span class="o">&gt;</span> <span class="n">mapper</span><span class="o">)</span> <span class="o">{</span>
+<span class="o">}</span>
+</pre></div>
+<h3><span class="mw-headline" id="Generic_methods_and_constructors">Generic methods and constructors</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=65" title="Edit section: Generic methods and constructors">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Usage of generics may be limited to some particular methods, this concept applies to constructors as well. To declare a parameterized method, type variables are written before the return type of the method in the same format as for the generic classes. In the case of constructor, type variables are declared before the constructor name.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kd">class</span> <span class="nc">Mapper</span> <span class="o">{</span>
+    <span class="c1">// The class itself is not generic, the constructor is</span>
+    <span class="o">&lt;</span><span class="n">T</span><span class="o">,</span> <span class="n">V</span><span class="o">&gt;</span> <span class="nf">Mapper</span><span class="o">(</span><span class="n">T</span> <span class="n">array</span><span class="o">,</span> <span class="n">V</span> <span class="n">item</span><span class="o">)</span> <span class="o">{</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="cm">/* This method will accept only arrays of the same type as</span>
+<span class="cm">the searched item type or its subtype*/</span>
+<span class="kd">static</span> <span class="o">&lt;</span><span class="n">T</span><span class="o">,</span> <span class="n">V</span> <span class="kd">extends</span> <span class="n">T</span><span class="o">&gt;</span> <span class="kt">boolean</span> <span class="nf">contains</span><span class="o">(</span><span class="n">T</span> <span class="n">item</span><span class="o">,</span> <span class="n">V</span><span class="o">[]</span> <span class="n">arr</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">for</span> <span class="o">(</span><span class="n">T</span> <span class="n">currentItem</span> <span class="o">:</span> <span class="n">arr</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">item</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">currentItem</span><span class="o">))</span> <span class="o">{</span>
+            <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+<span class="o">}</span>
+</pre></div>
+<h3><span class="mw-headline" id="Generic_interfaces">Generic interfaces</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=66" title="Edit section: Generic interfaces">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Interfaces can be parameterized in the similar manner as the classes.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kd">interface</span> <span class="nc">Expandable</span><span class="o">&lt;</span><span class="n">T</span> <span class="kd">extends</span> <span class="n">Number</span><span class="o">&gt;</span> <span class="o">{</span>
+    <span class="kt">void</span> <span class="nf">addItem</span><span class="o">(</span><span class="n">T</span> <span class="n">item</span><span class="o">);</span>
+<span class="o">}</span>
+
+<span class="c1">// This class is parameterized</span>
+<span class="kd">class</span> <span class="nc">Array</span><span class="o">&lt;</span><span class="n">T</span> <span class="kd">extends</span> <span class="n">Number</span><span class="o">&gt;</span> <span class="kd">implements</span> <span class="n">Expandable</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="o">{</span>
+    <span class="kt">void</span> <span class="nf">addItem</span><span class="o">(</span><span class="n">T</span> <span class="n">item</span><span class="o">)</span> <span class="o">{</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="c1">// And this is not and uses an explicit type instead</span>
+<span class="kd">class</span> <span class="nc">IntegerArray</span> <span class="kd">implements</span> <span class="n">Expandable</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="o">{</span>
+    <span class="kt">void</span> <span class="nf">addItem</span><span class="o">(</span><span class="n">Integer</span> <span class="n">item</span><span class="o">)</span> <span class="o">{</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=67" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div role="navigation" aria-label="Portals" class="noprint portal plainlist tright" style="margin:0.5em 0 0.5em 1em;border:solid #aaa 1px">
+<ul style="display:table;box-sizing:border-box;padding:0.1em;max-width:175px;background:#f9f9f9;font-size:85%;line-height:110%;font-style:italic;font-weight:bold">
+<li style="display:table-row"><span style="display:table-cell;padding:0.2em;vertical-align:middle;text-align:center"><a href="https://en.wikipedia.org/wiki/File:Wave.svg" class="image"><img alt="icon" src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/15px-Wave.svg.png" width="15" height="28" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/23px-Wave.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/31px-Wave.svg.png 2x" data-file-width="226" data-file-height="407" /></a></span><span style="display:table-cell;padding:0.2em 0.2em 0.2em 0.3em;vertical-align:middle"><a href="https://en.wikipedia.org/wiki/Portal:Java" title="Portal:Java">Java portal</a></span></li>
+</ul>
+</div>
+<ul>
+<li><a href="Java_Platform%2c_Standard_Edition.html" title="Java Platform, Standard Edition">Java Platform, Standard Edition</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=68" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/tutorial/java/nutsandbolts/operators.html">"Operators (The Java™ Tutorials &gt; Learning the Java Language &gt; Language Basics)"</a>. <i>docs.oracle.com</i>. Oracle and/or its affiliates<span class="reference-accessdate">. Retrieved <span class="nowrap">2015-06-16</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+syntax&amp;rft.atitle=Operators+%28The+Java%84%A2+Tutorials+%3E+++++++++++++++++++++Learning+the+Java+Language+%3E+Language+Basics%29&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fdocs.oracle.com%2Fjavase%2Ftutorial%2Fjava%2Fnutsandbolts%2Foperators.html&amp;rft.jtitle=docs.oracle.com&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><cite class="citation web">Owens, Sean. <a rel="nofollow" class="external text" href="http://darksleep.com/player/JavaAndUnsignedTypes.html">"Java and unsigned int, unsigned short, unsigned byte, unsigned long, etc. (Or rather, the lack thereof)"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+syntax&amp;rft.aufirst=Sean&amp;rft.aulast=Owens&amp;rft.btitle=Java+and+unsigned+int%2C+unsigned+short%2C+unsigned+byte%2C+unsigned+long%2C+etc.+%28Or+rather%2C+the+lack+thereof%29&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fdarksleep.com%2Fplayer%2FJavaAndUnsignedTypes.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html">"Primitive Data Types"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+syntax&amp;rft.btitle=Primitive+Data+Types&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fdocs.oracle.com%2Fjavase%2Ftutorial%2Fjava%2Fnutsandbolts%2Fdatatypes.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://msdn.microsoft.com/en-us/library/f4a6ta2h.aspx">Generics in the Run Time (C# Programming Guide)</a></span></li>
+</ol>
+</div>
+<div class="refbegin" style="">
+<ul>
+<li><a href="Patrick_Naughton.html" title="Patrick Naughton">Patrick Naughton</a>, <a href="https://en.wikipedia.org/wiki/Herbert_Schildt" title="Herbert Schildt">Herbert Schildt</a>. <i>Java 2: The Complete Reference</i>, third edition. The McGraw-Hill Companies, 1999. <a href="https://en.wikipedia.org/wiki/Special:BookSources/0072119764" class="internal mw-magiclink-isbn">ISBN 0-07-211976-4</a></li>
+<li><cite class="citation book">Vermeulen; Ambler; Bumgardner; Metz; Misfeldt; Shur; Thompson (2000). <i>The Elements of Java Style</i>. Cambridge University Press. <a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="https://en.wikipedia.org/wiki/Special:BookSources/0-521-77768-2" title="Special:BookSources/0-521-77768-2">0-521-77768-2</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+syntax&amp;rft.au=Ambler&amp;rft.au=Bumgardner&amp;rft.au=Metz&amp;rft.au=Misfeldt&amp;rft.au=Shur&amp;rft.au=Thompson&amp;rft.au=Vermeulen&amp;rft.btitle=The+Elements+of+Java+Style&amp;rft.date=2000&amp;rft.genre=book&amp;rft.isbn=0-521-77768-2&amp;rft.pub=Cambridge+University+Press&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite class="citation book"><a href="James_Gosling.html" title="James Gosling">Gosling, James</a>; <a href="https://en.wikipedia.org/wiki/Bill_Joy" title="Bill Joy">Joy, Bill</a>; <a href="https://en.wikipedia.org/wiki/Guy_Steele" class="mw-redirect" title="Guy Steele">Steele, Guy</a>; <a href="https://en.wikipedia.org/wiki/Gilad_Bracha" title="Gilad Bracha">Bracha, Gillad</a> (2005). <a rel="nofollow" class="external text" href="http://java.sun.com/docs/books/jls/index.html"><i>Java Language Specification</i></a> (3rd ed.). Addison-Wesley Professional<span class="reference-accessdate">. Retrieved <span class="nowrap">2008-12-03</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+syntax&amp;rft.au=Bracha%2C+Gillad&amp;rft.aufirst=James&amp;rft.au=Joy%2C+Bill&amp;rft.aulast=Gosling&amp;rft.au=Steele%2C+Guy&amp;rft.btitle=Java+Language+Specification&amp;rft.date=2005&amp;rft.edition=3rd&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fjava.sun.com%2Fdocs%2Fbooks%2Fjls%2Findex.html&amp;rft.pub=Addison-Wesley+Professional&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+</ul>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit&amp;section=69" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table role="presentation" class="mbox-small plainlinks sistersitebox" style="border:1px solid #aaa;background-color:#f9f9f9">
+<tr>
+<td class="mbox-image"><a href="https://en.wikipedia.org/wiki/File:Wikibooks-logo-en-noslogan.svg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/40px-Wikibooks-logo-en-noslogan.svg.png" width="40" height="40" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/60px-Wikibooks-logo-en-noslogan.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/80px-Wikibooks-logo-en-noslogan.svg.png 2x" data-file-width="400" data-file-height="400" /></a></td>
+<td class="mbox-text plainlist">Wikibooks has a book on the topic of: <i><b><a href="http://en.wikibooks.org/wiki/Java_Programming/Syntax" class="extiw" title="wikibooks:Java Programming/Syntax">Java Programming/Syntax</a></b></i></td>
+</tr>
+</table>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/specs/">The Java Language Specification, Third edition</a> Authoritative description of the Java language</li>
+<li><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/8/docs/api/">Java SE 8 API Javadocs</a></li>
+</ul>
+<div role="navigation" class="navbox" aria-labelledby="Java" style="padding:3px">
+<table class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit">
+<tr>
+<th scope="col" class="navbox-title" colspan="3">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="https://en.wikipedia.org/wiki/Template:Java_(software_platform)" title="Template:Java (software platform)"><abbr title="View this template" style=";;background:none transparent;border:none;">v</abbr></a></li>
+<li class="nv-talk"><a href="https://en.wikipedia.org/wiki/Template_talk:Java_(software_platform)" title="Template talk:Java (software platform)"><abbr title="Discuss this template" style=";;background:none transparent;border:none;">t</abbr></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Java_(software_platform)&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;">e</abbr></a></li>
+</ul>
+</div>
+<div id="Java" style="font-size:114%"><a href="Java_(software_platform).html" title="Java (software platform)">Java</a></div>
+</th>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Java platforms</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Java_(programming_language).html" title="Java (programming language)">Java language</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Java_virtual_machine" title="Java virtual machine">JVM</a></li>
+<li><a href="Java_Platform%2c_Micro_Edition.html" title="Java Platform, Micro Edition">Micro Edition</a></li>
+<li><a href="Java_Platform%2c_Standard_Edition.html" title="Java Platform, Standard Edition">Standard Edition</a></li>
+<li><a href="Java_Platform%2c_Enterprise_Edition.html" title="Java Platform, Enterprise Edition">Enterprise Edition</a></li>
+<li><a href="Java_Card.html" title="Java Card">Java Card</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Android_software_development#SDK" title="Android software development">Android SDK</a></li>
+</ul>
+</div>
+</td>
+<td class="navbox-image" rowspan="13" style="width:0%;padding:0px 0px 0px 2px">
+<div><a href="https://en.wikipedia.org/wiki/File:Wave.svg" class="image"><img alt="Wave.svg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/75px-Wave.svg.png" width="75" height="135" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/113px-Wave.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/150px-Wave.svg.png 2x" data-file-width="226" data-file-height="407" /></a></div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Oracle technologies</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Squawk_virtual_machine.html" title="Squawk virtual machine">Squawk</a></li>
+<li><a href="Java_Development_Kit.html" title="Java Development Kit">Java Development Kit</a></li>
+<li><a href="OpenJDK.html" title="OpenJDK">OpenJDK</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Java_virtual_machine" title="Java virtual machine">Java virtual machine</a></li>
+<li><a href="JavaFX.html" title="JavaFX">JavaFX</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Maxine_Virtual_Machine" title="Maxine Virtual Machine">Maxine VM</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Platform technologies</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Java_applet.html" title="Java applet">Applets</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Java_servlet" title="Java servlet">Servlets</a></li>
+<li><a href="MIDlet.html" title="MIDlet">MIDlets</a></li>
+<li><a href="JavaServer_Pages.html" title="JavaServer Pages">JSP</a></li>
+<li><a href="Java_Web_Start.html" title="Java Web Start">Web Start (JNLP)</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Major third-party technologies</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Blackdown_Java.html" title="Blackdown Java">Blackdown</a></li>
+<li><a href="Eclipse_(software).html" title="Eclipse (software)">Eclipse</a></li>
+<li><a href="GNU_Classpath.html" title="GNU Classpath">GNU Classpath</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Google_Web_Toolkit" title="Google Web Toolkit">GWT</a></li>
+<li><a href="Apache_Harmony.html" title="Apache Harmony">Harmony</a></li>
+<li><a href="Hibernate_(Java).html" class="mw-redirect" title="Hibernate (Java)">Hibernate</a></li>
+<li><a href="IcedTea.html" title="IcedTea">IcedTea</a></li>
+<li><a href="Jazelle.html" title="Jazelle">Jazelle</a></li>
+<li><a href="Spring_Framework.html" title="Spring Framework">Spring</a></li>
+<li><a href="Apache_Struts.html" class="mw-redirect" title="Apache Struts">Struts</a></li>
+<li><a href="TopLink.html" title="TopLink">TopLink</a></li>
+<li><a href="https://en.wikipedia.org/wiki/WildFly" title="WildFly">WildFly</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">History</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Java_version_history.html" title="Java version history">Java version history</a></li>
+<li><a href="Java_Community_Process.html" title="Java Community Process">Java Community Process</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sun_Microsystems" title="Sun Microsystems">Sun Microsystems</a></li>
+<li><a href="Free_Java_implementations.html" title="Free Java implementations">Free Java implementations</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="List_of_JVM_languages.html" title="List of JVM languages">Major programming languages</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="BeanShell.html" title="BeanShell">BeanShell</a></li>
+<li><a href="Clojure.html" title="Clojure">Clojure</a></li>
+<li><a href="Groovy_(programming_language).html" title="Groovy (programming language)">Groovy</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Oxygene_(programming_language)" title="Oxygene (programming language)">Oxygene</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Tcl/Java" title="Tcl/Java">Java Tcl</a></li>
+<li><a href="JRuby.html" title="JRuby">JRuby</a></li>
+<li><a href="Jython.html" title="Jython">Jython</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Kotlin_(programming_language)" title="Kotlin (programming language)">Kotlin</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Processing_(programming_language)" title="Processing (programming language)">Processing</a></li>
+<li><a href="Rhino_(JavaScript_engine).html" title="Rhino (JavaScript engine)">Rhino</a></li>
+<li><a href="Scala_(programming_language).html" title="Scala (programming language)">Scala</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Java conferences</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="JavaOne.html" title="JavaOne">JavaOne</a></li>
+<li><a href="Devoxx.html" title="Devoxx">Devoxx</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1162
+Cached time: 20161231045721
+Cache expiry: 2592000
+Dynamic content: false
+CPU time usage: 0.252 seconds
+Real time usage: 1.627 seconds
+Preprocessor visited node count: 1323/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 28583/2097152 bytes
+Template argument size: 355/2097152 bytes
+Highest expansion depth: 12/40
+Expensive parser function count: 1/500
+Lua time usage: 0.060/10.000 seconds
+Lua memory usage: 2.97 MB/50 MB
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00% 1510.880      1 - -total
+  2.97%   44.872      1 - Template:More_footnotes
+  2.52%   38.056      1 - Template:Reflist
+  2.13%   32.244      3 - Template:Cite_web
+  1.58%   23.902      1 - Template:Ambox
+  0.79%   11.997      1 - Template:Java_(Sun)
+  0.75%   11.333      3 - Template:Main
+  0.68%   10.268      2 - Template:Cite_book
+  0.64%    9.679      1 - Template:Wikibooks
+  0.62%    9.427      1 - Template:Navbox
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:1079500-0!*!0!!en!4!* and timestamp 20161231045719 and revision id 754094404
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;oldid=754094404">https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;oldid=754094404</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Help_Category.html" title="Help:Category">Categories</a>: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Java_(programming_language)" title="Category:Java (programming language)">Java (programming language)</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Articles_lacking_in-text_citations_from_January_2014" title="Category:Articles lacking in-text citations from January 2014">Articles lacking in-text citations from January 2014</a></li><li><a href="https://en.wikipedia.org/wiki/Category:All_articles_lacking_in-text_citations" title="Category:All articles lacking in-text citations">All articles lacking in-text citations</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Pages_using_ISBN_magic_links" title="Category:Pages using ISBN magic links">Pages using ISBN magic links</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="Special_MyTalk.html" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="Special_MyContributions.html" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&amp;returnto=Java+syntax" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Java+syntax" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="Java_syntax.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+															<li  id="ca-talk"><span><a href="https://en.wikipedia.org/wiki/Talk:Java_syntax"  title="Discussion about the content page [t]" accesskey="t" rel="discussion">Talk</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="Java_syntax.html" >Read</a></span></li>
+															<li id="ca-edit"><span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=edit"  title="Edit this page [e]" accesskey="e">Edit</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="https://en.wikipedia.org/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="Main_Page.html"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="Portal_Contents.html" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="Portal_Featured_content.html" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="Portal_Current_events.html" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="https://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="../../shop.wikimedia.org/index.html" title="Visit the Wikipedia store">Wikipedia store</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Interaction</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-help"><a href="Help_Contents.html" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="Wikipedia_About.html" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="Wikipedia_Community_portal.html" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="Wikipedia_Contact_us.html" title="How to contact Wikipedia">Contact page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="https://en.wikipedia.org/wiki/Special:WhatLinksHere/Java_syntax" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://en.wikipedia.org/wiki/Special:RecentChangesLinked/Java_syntax" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="Wikipedia_File_Upload_Wizard.html" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;oldid=754094404" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q451207" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="https://en.wikipedia.org/w/index.php?title=Special:CiteThisPage&amp;page=Java_syntax&amp;id=754094404" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Print/export</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Java+syntax">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Java+syntax&amp;returnto=Java+syntax&amp;oldid=754094404&amp;writer=rdf2latex">Download as PDF</a></li><li id="t-print"><a href="https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Languages</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Java-Syntax" title="Java-Syntax – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-ka"><a href="https://ka.wikipedia.org/wiki/ჯავა_პროგრამირების_ენის_სინტაქსი" title="ჯავა პროგრამირების ენის სინტაქსი – Georgian" lang="ka" hreflang="ka" class="interlanguage-link-target">ქართული</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/Javaの文法" title="Javaの文法 – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q451207#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 10 December 2016, at 20:54.</li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="Wikipedia_Text_of_Creative_Commons_Attribution-ShareAlike_3.html">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="../../creativecommons.org/licenses/by-sa/3.0/index.html" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="../../wikimediafoundation.org/wiki/Terms_of_Use.html">Terms of Use</a> and <a href="../../wikimediafoundation.org/wiki/Privacy_policy.html">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="../../www.wikimediafoundation.org/index.html">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../../wikimediafoundation.org/wiki/Privacy_policy.html" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="Wikipedia_About.html" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="Wikipedia_General_disclaimer.html" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="Wikipedia_Contact_us.html">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a href="../../www.mediawiki.org/wiki/Special_MyLanguage/How_to_contribute.html">Developers</a></li>
+											<li id="footer-places-cookiestatement"><a href="../../wikimediafoundation.org/wiki/Cookie_statement.html">Cookie statement</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/w/index.php?title=Java_syntax&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="../../www.wikimediafoundation.org/index.html"><img src="https://en.wikipedia.org/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="../../www.mediawiki.org/index.html"><img src="https://en.wikipedia.org/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":56,"wgHostname":"mw1241"});});</script>
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Java_syntax by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:37 GMT -->
+</html>

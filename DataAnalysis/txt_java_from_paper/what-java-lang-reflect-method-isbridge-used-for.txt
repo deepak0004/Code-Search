@@ -1,0 +1,6 @@
+    
+        During navigation of Method class I came across the function isBridge(), javadoc of which says, that its true only if java spec declares the method as true.
+
+Please help me understand what this is used for ? Can a custom class declare its method as a bridge if required ?
+
+                

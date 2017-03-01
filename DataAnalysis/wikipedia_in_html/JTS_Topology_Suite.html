@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from en.wikipedia.org/wiki/JTS_Topology_Suite by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:18 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>JTS Topology Suite - Wikipedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"JTS_Topology_Suite","wgTitle":"JTS Topology Suite","wgCurRevisionId":726807711,"wgRevisionId":726807711,"wgArticleId":5579825,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Geometric algorithms","Application programming interfaces","Free software programmed in Java (programming language)"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"JTS_Topology_Suite","wgRelevantArticleId":5579825,"wgRequestId":"WH3@PApAIDIAABS7x0UAAADI","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgFlaggedRevsParams":{"tags":{}},"wgStableRevisionId":null,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"en","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgWikibaseItemId":"Q1553515","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.math.styles":"ready","ext.cite.styles":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@1dqfd7l",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["ext.cite.a11y","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.legacy.wikibits","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.watchlist-notice","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.gadget.featured-articles-links","ext.centralauth.centralautologin","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.interface","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="https://en.wikipedia.org/w/load.php?debug=false&amp;lang=en&amp;modules=ext.cite.styles%7Cext.math.scripts%2Cstyles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="../w/load2c8d.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../w/load18b6.css?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.29.0-wmf.7"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="https://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/JTS_Topology_Suite"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=JTS_Topology_Suite&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=JTS_Topology_Suite&amp;action=edit"/>
+<link rel="apple-touch-icon" href="https://en.wikipedia.org/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="../static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../w/api251f.php?action=rsd"/>
+<link rel="copyright" href="../../creativecommons.org/licenses/by-sa/3.0/index.html"/>
+<link rel="canonical" href="JTS_Topology_Suite.html"/>
+<link rel="dns-prefetch" href="../../login.wikimedia.org/index.html"/>
+<link rel="dns-prefetch" href="../../meta.wikimedia.org/index.html" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-JTS_Topology_Suite rootpage-JTS_Topology_Suite skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">JTS Topology Suite</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><script>function mfTempOpenSection(id){var block=document.getElementById("mf-section-"+id);block.className+=" open-block";block.previousSibling.className+=" open-block";}</script><table class="infobox vevent" style="width:22em">
+<caption class="summary">Java Topology Suite (JTS)</caption>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_developer" title="Software developer">Original author(s)</a></th>
+<td>Martin Davis</td>
+</tr>
+<tr>
+<td colspan="2" style="text-align:center"></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_release_life_cycle" title="Software release life cycle">Stable release</a></th>
+<td>
+<div style="margin:0px;">1.13 / December&#160;13,&#160;2012<span style="display:none">&#160;(<span class="bday dtstart published updated">2012-12-13</span>)</span></div>
+</td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;">Written in</th>
+<td><a href="Java_(programming_language).html" title="Java (programming language)">Java</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Computing_platform" title="Computing platform">Platform</a></th>
+<td><a href="Java_(programming_language).html" title="Java (programming language)">Java</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_categories#Broad_categories" title="Software categories">Type</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Library_(computer_science)" class="mw-redirect" title="Library (computer science)">Library</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_license" title="Software license">License</a></th>
+<td><a href="https://en.wikipedia.org/wiki/GNU_Lesser_General_Public_License" title="GNU Lesser General Public License">GNU Lesser General Public License</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;">Website</th>
+<td><span class="url"><a rel="nofollow" class="external text" href="http://tsusiatsoftware.net/jts/main.html">tsusiatsoftware<wbr />.net<wbr />/jts<wbr />/main<wbr />.html</a></span></td>
+</tr>
+</table>
+<p>The <b>Java Topology Suite</b> (<b>JTS</b>) is an open source <a href="Java_(programming_language).html" title="Java (programming language)">Java</a> <a href="https://en.wikipedia.org/wiki/Software_library" class="mw-redirect" title="Software library">software library</a> that provides an object model for <a href="https://en.wikipedia.org/wiki/Euclidean_geometry" title="Euclidean geometry">Euclidean</a> planar linear <a href="https://en.wikipedia.org/wiki/Geometry" title="Geometry">geometry</a> together with a set of fundamental geometric functions. JTS is primarily intended to be used as a core component of <a href="https://en.wikipedia.org/wiki/GIS#Vector" class="mw-redirect" title="GIS">vector-based</a> <a href="https://en.wikipedia.org/wiki/Geomatics" title="Geomatics">geomatics</a> software such as <a href="https://en.wikipedia.org/wiki/Geographical_information_system" class="mw-redirect" title="Geographical information system">geographical information systems</a>.<sup id="cite_ref-sstfoss4g_1-0" class="reference"><a href="#cite_note-sstfoss4g-1">[1]</a></sup> It can also be used as a general-purpose library providing <a href="https://en.wikipedia.org/wiki/Algorithm" title="Algorithm">algorithms</a> in <a href="https://en.wikipedia.org/wiki/Computational_geometry" title="Computational geometry">computational geometry</a>.<sup id="cite_ref-mdfoss4g_2-0" class="reference"><a href="#cite_note-mdfoss4g-2">[2]</a></sup></p>
+<p>JTS implements the geometry model and API defined in the <a href="https://en.wikipedia.org/wiki/OpenGIS" class="mw-redirect" title="OpenGIS">OpenGIS</a> Consortium <a href="https://en.wikipedia.org/wiki/Simple_feature_access" class="mw-redirect" title="Simple feature access">Simple Features Specification for SQL</a>.</p>
+<p>JTS defines a standards-compliant geometry system for building spatial applications; examples include viewers, spatial query processors, and tools for performing data validation, cleaning and integration. In addition to the Java library, the foundations of JTS and selected functions are maintained in a C++ port, for use in C-style linking on all major operating systems, in the form of the GEOS software library.</p>
+<p>JTS, and the GEOS port, are published under the <a href="https://en.wikipedia.org/wiki/GNU_Lesser_General_Public_License" title="GNU Lesser General Public License">GNU Lesser General Public License</a> (LGPL).</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Scope"><span class="tocnumber">1</span> <span class="toctext">Scope</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Geometry_model"><span class="tocnumber">1.1</span> <span class="toctext">Geometry model</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Geometric_functions"><span class="tocnumber">1.2</span> <span class="toctext">Geometric functions</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Spatial_structures_and_algorithms"><span class="tocnumber">1.3</span> <span class="toctext">Spatial structures and algorithms</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#I.2FO_capabilities"><span class="tocnumber">1.4</span> <span class="toctext">I/O capabilities</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#GEOS_Library"><span class="tocnumber">2</span> <span class="toctext">GEOS Library</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#Applications_Using_GEOS"><span class="tocnumber">2.1</span> <span class="toctext">Applications Using GEOS</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#History"><span class="tocnumber">3</span> <span class="toctext">History</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Platforms"><span class="tocnumber">4</span> <span class="toctext">Platforms</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#A_Partial_List_of_Projects_using_JTS"><span class="tocnumber">5</span> <span class="toctext">A Partial List of Projects using JTS</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#See_also"><span class="tocnumber">6</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#References"><span class="tocnumber">7</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#External_links"><span class="tocnumber">8</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Scope">Scope</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=JTS_Topology_Suite&amp;action=edit&amp;section=1" title="Edit section: Scope">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>JTS provides the following functionality:</p>
+<h3><span class="mw-headline" id="Geometry_model">Geometry model</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=JTS_Topology_Suite&amp;action=edit&amp;section=2" title="Edit section: Geometry model">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Geometry classes support modelling points, linestrings, polygons, and collections. Geometries are linear, in the sense that boundaries are implicitly defined by linear interpolation between vertices. Geometries are embedded in the 2-dimensional Euclidean plane. Geometry vertices may also carry a Z value.</p>
+<p>User-defined precision models are supported for geometry coordinates. Computation is performed using algorithms which provide <a href="https://en.wikipedia.org/w/index.php?title=Robust_geometric_computation&amp;action=edit&amp;redlink=1" class="new" title="Robust geometric computation (page does not exist)">robust geometric computation</a> under all precision models.</p>
+<h3><span class="mw-headline" id="Geometric_functions">Geometric functions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=JTS_Topology_Suite&amp;action=edit&amp;section=3" title="Edit section: Geometric functions">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul>
+<li>Topological validity checking</li>
+<li>Area and Distance functions</li>
+<li>Spatial Predicates based on the Egenhofer <a href="https://en.wikipedia.org/wiki/DE-9IM" title="DE-9IM">DE-9IM</a> model<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">[3]</a></sup></li>
+<li><a href="https://en.wikipedia.org/wiki/GIS#Map_overlay" class="mw-redirect" title="GIS">Overlay</a> functions (including <a href="https://en.wikipedia.org/wiki/Intersection_(set_theory)" title="Intersection (set theory)">intersection</a>, <a href="https://en.wikipedia.org/wiki/Complement_(set_theory)" title="Complement (set theory)">difference</a>, <a href="https://en.wikipedia.org/wiki/Union_(set_theory)" title="Union (set theory)">union</a>, <a href="https://en.wikipedia.org/wiki/Symmetric_difference" title="Symmetric difference">symmetric difference</a>)</li>
+<li><a href="https://en.wikipedia.org/wiki/Buffer_(GIS)" title="Buffer (GIS)">Buffer</a> computation (including different cap and join types)</li>
+<li><a href="https://en.wikipedia.org/wiki/Convex_hull" title="Convex hull">Convex hull</a></li>
+<li>Geometric <a href="https://en.wikipedia.org/wiki/Cartographic_generalization" title="Cartographic generalization">simplification</a> including the <a href="https://en.wikipedia.org/wiki/Ramer–Douglas–Peucker_algorithm" title="Ramer–Douglas–Peucker algorithm">Douglas–Peucker</a> algorithm</li>
+<li>Geometric densification</li>
+<li><a href="https://en.wikipedia.org/wiki/Linear_Reference_System" class="mw-redirect" title="Linear Reference System">Linear referencing</a></li>
+<li>Precision reduction</li>
+<li><a href="https://en.wikipedia.org/wiki/Delaunay_triangulation" title="Delaunay triangulation">Delaunay triangulation</a> and constrained Delaunay triangulation</li>
+<li><a href="https://en.wikipedia.org/wiki/Voronoi_diagram" title="Voronoi diagram">Voronoi diagram</a> generation</li>
+<li><a href="https://en.wikipedia.org/wiki/Smallest_enclosing_rectangle" class="mw-redirect" title="Smallest enclosing rectangle">Smallest enclosing rectangle</a></li>
+<li>Discrete <a href="https://en.wikipedia.org/wiki/Hausdorff_distance" title="Hausdorff distance">Hausdorff distance</a></li>
+</ul>
+<h3><span class="mw-headline" id="Spatial_structures_and_algorithms">Spatial structures and algorithms</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=JTS_Topology_Suite&amp;action=edit&amp;section=4" title="Edit section: Spatial structures and algorithms">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul>
+<li>Robust line segment intersection</li>
+<li>Efficient <a href="https://en.wikipedia.org/wiki/Line_segment_intersection" title="Line segment intersection">line arrangement intersection</a> or noding</li>
+<li>Efficient <a href="https://en.wikipedia.org/wiki/Point_in_polygon" title="Point in polygon">point in polygon</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Spatial_index" class="mw-redirect" title="Spatial index">Spatial index</a> structures including <a href="https://en.wikipedia.org/wiki/Quadtree" title="Quadtree">quadtree</a> and <a href="https://en.wikipedia.org/wiki/R-tree" title="R-tree">STR-tree</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Planar_graph" title="Planar graph">Planar graph</a> structures and algorithms</li>
+</ul>
+<h3><span class="mw-headline" id="I.2FO_capabilities">I/O capabilities</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=JTS_Topology_Suite&amp;action=edit&amp;section=5" title="Edit section: I/O capabilities">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul>
+<li>Reading and writing of <a href="https://en.wikipedia.org/wiki/Well-known_text" title="Well-known text">WKT</a>, <a href="https://en.wikipedia.org/wiki/Well-known_text" title="Well-known text">WKB</a> and <a href="https://en.wikipedia.org/wiki/Geography_Markup_Language" title="Geography Markup Language">GML</a> formats</li>
+</ul>
+<h2><span class="mw-headline" id="GEOS_Library">GEOS Library</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=JTS_Topology_Suite&amp;action=edit&amp;section=6" title="Edit section: GEOS Library">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>GEOS is the C/C++ port of a subset of JTS and selected functions. <b>GEOS</b> is noteworthy as a foundation component in a software ecosystem of native, compiled executable binaries on Linux, Mac and Windows platforms. Due to the runtime construction of Java and the Java Virtual Machine (JVM), code libraries that are written in Java are basically not usable as libraries from a standardized cross-linking environment (often built from C). Linux, Microsoft Windows and the BSD family, including Mac OSX, use a linking structure that enables libraries from various languages to be integrated (linked) into a native runtime executable. Java, by design, does not participate in this interoperability without unusual measures (<i>JNI</i>).</p>
+<h3><span class="mw-headline" id="Applications_Using_GEOS">Applications Using GEOS</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=JTS_Topology_Suite&amp;action=edit&amp;section=7" title="Edit section: Applications Using GEOS">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a rel="nofollow" class="external text" href="http://trac.osgeo.org/geos">GEOS</a> links and ships internally in popular applications listed below; and, by delineating and implementing standards-based geometry classes available to <a href="https://en.wikipedia.org/wiki/GDAL" title="GDAL">GDAL</a>, which in turn is a widely supported inner-engine in GIS, GEOS becomes a core geometry implementation in even more applications:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/GDAL" title="GDAL">GDAL</a> - OGR - raster and vector data munging</li>
+<li><a href="https://en.wikipedia.org/wiki/QGIS" title="QGIS">QGIS</a> - Desktop cross-platform, open source GIS</li>
+<li><a href="https://en.wikipedia.org/wiki/PostGIS" title="PostGIS">PostGIS</a> - spatial types and operations for PostgreSQL</li>
+<li>GeoDjango – Django's support for GIS-enabled databases</li>
+<li><a href="https://en.wikipedia.org/wiki/Google_Earth" title="Google Earth">Google Earth</a> – A virtual globe and world imaging program.</li>
+<li><a href="https://en.wikipedia.org/wiki/GRASS" class="mw-redirect" title="GRASS">GRASS</a> GIS Library and Application</li>
+<li><a href="https://en.wikipedia.org/wiki/MapServer" title="MapServer">MapServer</a> - an open source development environment for building spatially enabled internet applications</li>
+<li><a href="https://en.wikipedia.org/wiki/NASA_World_Wind" title="NASA World Wind">World Wind Java</a> – NASA's open source virtual globe and world imaging technology.</li>
+<li><a href="https://en.wikipedia.org/wiki/Orfeo_toolbox" title="Orfeo toolbox">Orfeo toolbox</a> – A satellite image processing library.</li>
+<li><a href="https://en.wikipedia.org/wiki/R_(programming_language)" title="R (programming language)">R</a> – An open source statistical software with extensions for spatial data analysis.</li>
+<li><a rel="nofollow" class="external text" href="http://www.saga-gis.org/">SAGA GIS</a> – A cross-platform open source GIS software.</li>
+</ul>
+<h2><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=JTS_Topology_Suite&amp;action=edit&amp;section=8" title="Edit section: History">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Funding for the initial work on JTS was obtained in the Fall 2000 from <a href="https://en.wikipedia.org/w/index.php?title=GeoConnections&amp;action=edit&amp;redlink=1" class="new" title="GeoConnections (page does not exist)">GeoConnections</a> and the Government of British Columbia, based on a proposal put forward by Mark Sondheim and David Skea. The work was carried out by Martin Davis (software design and lead developer) and Jonathan Aquino (developer), both of Vivid Solutions at the time. Since then JTS has been maintained as an independent software project by Martin Davis.<sup id="cite_ref-mdhistory_4-0" class="reference"><a href="#cite_note-mdhistory-4">[4]</a></sup></p>
+<h2><span class="mw-headline" id="Platforms">Platforms</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=JTS_Topology_Suite&amp;action=edit&amp;section=9" title="Edit section: Platforms">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>JTS is developed under the Java JDK 1.4 platform. It is 100% pure Java. It will run on all more recent JDKs as well.</p>
+<p>A JTS subset has been ported to <a href="https://en.wikipedia.org/wiki/C++" title="C++">C++</a>, with entry points declared as C interfaces, as the <b>GEOS</b> library.</p>
+<p>JTS has been ported to the <a href="https://en.wikipedia.org/wiki/.NET_Framework" title=".NET Framework">.NET Framework</a> as the Net Topology Suite.</p>
+<h2><span class="mw-headline" id="A_Partial_List_of_Projects_using_JTS">A Partial List of Projects using JTS</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=JTS_Topology_Suite&amp;action=edit&amp;section=10" title="Edit section: A Partial List of Projects using JTS">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="GeoServer.html" title="GeoServer">GeoServer</a></li>
+<li><a href="https://en.wikipedia.org/wiki/GeoTools" title="GeoTools">GeoTools</a></li>
+<li><a href="https://en.wikipedia.org/wiki/OpenJUMP" class="mw-redirect" title="OpenJUMP">OpenJUMP</a> and forks</li>
+<li><a href="UDig.html" title="UDig">uDig</a></li>
+<li><a href="GvSIG.html" title="GvSIG">gvSIG</a></li>
+<li><a href="Batik_(software).html" title="Batik (software)">Batik</a></li>
+<li><a rel="nofollow" class="external text" href="http://geoforge.org/">Geoforge</a></li>
+<li>Hibernate Spatial</li>
+<li><a href="https://en.wikipedia.org/wiki/Whitebox_Geospatial_Analysis_Tools" title="Whitebox Geospatial Analysis Tools">Whitebox Geospatial Analysis Tools</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Tygron_Engine" class="mw-redirect" title="Tygron Engine">Tygron Engine</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.opendoorlogistics.com/">ODL Studio</a></li>
+</ul>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=JTS_Topology_Suite&amp;action=edit&amp;section=11" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/DE-9IM" title="DE-9IM">DE-9IM</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Topology" title="Topology">Topology</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=JTS_Topology_Suite&amp;action=edit&amp;section=12" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-sstfoss4g-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-sstfoss4g_1-0">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://sourceforge.net/projects/mentaer.u/files/pubs/fosgismap_sstein_v9_web.pdf/download">"The 2012 Free and Open Source GIS Software Map – A Guide to facilitate Research, Development and Adoption"</a>, S. Steiniger and A.J.S. Hunter</span></li>
+<li id="cite_note-mdfoss4g-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-mdfoss4g_2-0">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://tsusiatsoftware.net/jts/files/jts_secrets_foss4g2007.pdf">"Secrets of the JTS Topology Suite - M. Davis"</a> <span style="font-size:85%;">(PDF)</span><span class="reference-accessdate">. Retrieved <span class="nowrap">2013-05-27</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJTS+Topology+Suite&amp;rft.btitle=Secrets+of+the+JTS+Topology+Suite+-+M.+Davis&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Ftsusiatsoftware.net%2Fjts%2Ffiles%2Fjts_secrets_foss4g2007.pdf&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://portal.opengeospatial.org/files/?artifact_id=29435">A Formal Definition of Binary Topological Relationships</a> by Max Egenhofer</span></li>
+<li id="cite_note-mdhistory-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-mdhistory_4-0">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://lin-ear-th-inking.blogspot.com/2007/06/history-of-jts-and-geos.html">"History of JTS and GEOS - M. Davis"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2013-05-27</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJTS+Topology+Suite&amp;rft.btitle=History+of+JTS+and+GEOS+-+M.+Davis&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Flin-ear-th-inking.blogspot.com%2F2007%2F06%2Fhistory-of-jts-and-geos.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=JTS_Topology_Suite&amp;action=edit&amp;section=13" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><span class="official-website"><span class="url"><a rel="nofollow" class="external text" href="http://tsusiatsoftware.net/jts/main.html">Official website</a></span></span></li>
+<li><a rel="nofollow" class="external text" href="http://trac.osgeo.org/geos/">GEOS Home page</a></li>
+<li><a rel="nofollow" class="external text" href="http://code.google.com/p/nettopologysuite/">Net Topology Suite Home page</a></li>
+</ul>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1180
+Cached time: 20170117112132
+Cache expiry: 2592000
+Dynamic content: false
+CPU time usage: 0.100 seconds
+Real time usage: 0.137 seconds
+Preprocessor visited node count: 609/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 9516/2097152 bytes
+Template argument size: 1314/2097152 bytes
+Highest expansion depth: 25/40
+Expensive parser function count: 2/500
+Lua time usage: 0.045/10.000 seconds
+Lua memory usage: 1.78 MB/50 MB
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  116.658      1 - -total
+ 67.91%   79.217      2 - Template:Infobox
+ 55.34%   64.553      1 - Template:Infobox_software
+ 32.67%   38.115      1 - Template:Reflist
+ 27.64%   32.243      2 - Template:Cite_web
+ 18.74%   21.861      1 - Template:Infobox_software/simple
+  9.38%   10.938      1 - Template:Official_website
+  5.90%    6.884      1 - Template:Release_date
+  3.91%    4.558      1 - Template:URL
+  2.98%    3.473      1 - Template:MONTHNAME
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:5579825-0!*!0!!en!*!* and timestamp 20170117112132 and revision id 726807711
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=JTS_Topology_Suite&amp;oldid=726807711">https://en.wikipedia.org/w/index.php?title=JTS_Topology_Suite&amp;oldid=726807711</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Help_Category.html" title="Help:Category">Categories</a>: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Geometric_algorithms" title="Category:Geometric algorithms">Geometric algorithms</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Application_programming_interfaces" title="Category:Application programming interfaces">Application programming interfaces</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Free_software_programmed_in_Java_(programming_language)" title="Category:Free software programmed in Java (programming language)">Free software programmed in Java (programming language)</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="Special_MyTalk.html" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="Special_MyContributions.html" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&amp;returnto=JTS+Topology+Suite" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=JTS+Topology+Suite" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="JTS_Topology_Suite.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+															<li  id="ca-talk"><span><a href="https://en.wikipedia.org/wiki/Talk:JTS_Topology_Suite"  title="Discussion about the content page [t]" accesskey="t" rel="discussion">Talk</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="JTS_Topology_Suite.html" >Read</a></span></li>
+															<li id="ca-edit"><span><a href="https://en.wikipedia.org/w/index.php?title=JTS_Topology_Suite&amp;action=edit"  title="Edit this page [e]" accesskey="e">Edit</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="https://en.wikipedia.org/w/index.php?title=JTS_Topology_Suite&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="https://en.wikipedia.org/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="Main_Page.html"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="Portal_Contents.html" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="Portal_Featured_content.html" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="Portal_Current_events.html" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="https://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="../../shop.wikimedia.org/index.html" title="Visit the Wikipedia store">Wikipedia store</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Interaction</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-help"><a href="Help_Contents.html" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="Wikipedia_About.html" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="Wikipedia_Community_portal.html" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="Wikipedia_Contact_us.html" title="How to contact Wikipedia">Contact page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="https://en.wikipedia.org/wiki/Special:WhatLinksHere/JTS_Topology_Suite" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://en.wikipedia.org/wiki/Special:RecentChangesLinked/JTS_Topology_Suite" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="Wikipedia_File_Upload_Wizard.html" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="https://en.wikipedia.org/w/index.php?title=JTS_Topology_Suite&amp;oldid=726807711" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://en.wikipedia.org/w/index.php?title=JTS_Topology_Suite&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q1553515" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="https://en.wikipedia.org/w/index.php?title=Special:CiteThisPage&amp;page=JTS_Topology_Suite&amp;id=726807711" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Print/export</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=JTS+Topology+Suite">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=JTS+Topology+Suite&amp;returnto=JTS+Topology+Suite&amp;oldid=726807711&amp;writer=rdf2latex">Download as PDF</a></li><li id="t-print"><a href="https://en.wikipedia.org/w/index.php?title=JTS_Topology_Suite&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Languages</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/JTS_Topology_Suite" title="JTS Topology Suite – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Java_Topology_Suite" title="Java Topology Suite – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q1553515#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 24 June 2016, at 14:48.</li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="Wikipedia_Text_of_Creative_Commons_Attribution-ShareAlike_3.html">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="../../creativecommons.org/licenses/by-sa/3.0/index.html" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="../../wikimediafoundation.org/wiki/Terms_of_Use.html">Terms of Use</a> and <a href="../../wikimediafoundation.org/wiki/Privacy_policy.html">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="../../www.wikimediafoundation.org/index.html">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../../wikimediafoundation.org/wiki/Privacy_policy.html" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="Wikipedia_About.html" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="Wikipedia_General_disclaimer.html" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="Wikipedia_Contact_us.html">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a href="../../www.mediawiki.org/wiki/Special_MyLanguage/How_to_contribute.html">Developers</a></li>
+											<li id="footer-places-cookiestatement"><a href="../../wikimediafoundation.org/wiki/Cookie_statement.html">Cookie statement</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/w/index.php?title=JTS_Topology_Suite&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="../../www.wikimediafoundation.org/index.html"><img src="https://en.wikipedia.org/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="../../www.mediawiki.org/index.html"><img src="https://en.wikipedia.org/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":204,"wgHostname":"mw1180"});});</script>
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/JTS_Topology_Suite by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:18 GMT -->
+</html>

@@ -1,0 +1,67 @@
+    
+        I have the following EJB structure. Don't wonder about Animal and Inventory, these classes are only here to demonstrate the structure in a simplified way (Update: I have revised the class names to construct a better understandable example. Another implementation of IdTag might be a BarcodeId). Note that there is no inverse relationship from IdTag to Animal or Inventory, and let's assume the RfidTag.code is unique. I read <a href="http://stackoverflow.com/questions/3199523">Retrieving Polymorphic Hibernate Objects Using a Criteria Query and <a href="http://stackoverflow.com/questions/984805">Hibernate polymorphic query but these discussions does not seem to answer my question.
+
+public interface ItemWithIdTag
+{
+    IdTag getIdTag();
+    void setIdTag(IdTag idTag);
+}
+
+@Entity public class Animal implements ItemWithIdTag,Serializable
+{
+    @Id @GeneratedValue(strategy=GenerationType.AUTO) private long id;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    private IdTag idTag;
+}
+
+@Entity public class Inventory implements ItemWithIdTag,Serializable
+{
+    @Id @GeneratedValue(strategy=GenerationType.AUTO) private long id;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    private IdTag idTag;
+}
+
+@Entity @Table(name = "IdTag") @Inheritance(strategy= InheritanceType.JOINED)
+public class IdTag implements Serializable
+{
+    @Id @GeneratedValue(strategy=GenerationType.AUTO) private long id;
+    private Date created;
+}
+
+@Entity @Table(name = "RfidTag")
+public class RfidTag extends IdTag implements Serializable
+{
+    private String code;
+}
+
+
+Now I want to query either Animal or Inventory for a given RfidTag.code like Animal ejb = bean.fEntityWithRfidTag(Animal.class,"myRfIdCode");
+
+public &lt;T extends ItemWithIdTag&gt; T fOwner(Class&lt;T&gt; type, String catName)
+{
+    CriteriaBuilder criteriaBuilder = em.getCriteriaBuilder();
+    CriteriaQuery&lt;T&gt; criteriaQuery = criteriaBuilder.createQuery(type);
+    Root&lt;T&gt; from = criteriaQuery.from(type);
+
+    Path&lt;Object&gt; path = from.join("idTag").get("code");
+
+    CriteriaQuery&lt;T&gt; select = criteriaQuery.select(from);
+    select.where(criteriaBuilder.equal(path, catName));
+
+    TypedQuery&lt;T&gt; q = em.createQuery(select); 
+    T result = (T)q.getSingleResult();}
+    return result;
+}
+
+
+Unfortuately I get the following errror:
+
+javax.ejb.EJBException: java.lang.IllegalArgumentException:
+Unable to resolve attribute [code] against path [null]
+
+
+I assume that this is related to the inheritance IdTag -> RfidTag and Animal only knows about IdTag and not the RfidTag.code. Are queries like this possible?
+
+                

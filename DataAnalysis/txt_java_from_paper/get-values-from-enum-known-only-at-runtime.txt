@@ -1,0 +1,24 @@
+    
+        I need to get all the values from an enum, whose type will only be known at runtime. I've come up with the following, but would like to know if anyone knows a better way:
+
+enum TestEnum  {
+  FOO,
+  BAR
+}
+
+Enum[] getValuesForEnum(Class type) {
+  try {
+    Method m = type.getMethod("values");
+    return (Enum[])m.invoke(null);
+  } catch (Exception e) {
+    throw new RuntimeException(e);
+  }
+}
+
+Class testEnum = Class.forName("TestEnum");
+getValuesForEnum(testEnum);
+
+
+Thanks!
+
+                

@@ -1,0 +1,6 @@
+    
+        In Spring Framework , AbstractWizardFormController seems deprecated. How to implement multiple pages form in the Spring MVC Framework. (I am not using webflow)
+
+any example or pointer  would help considering my limited knowledge in Spring.
+
+                

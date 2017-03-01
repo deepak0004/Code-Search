@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Java_Native_Access by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:31 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Java Native Access - Wikipedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Java_Native_Access","wgTitle":"Java Native Access","wgCurRevisionId":723800136,"wgRevisionId":723800136,"wgArticleId":15603764,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Java platform"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Java_Native_Access","wgRelevantArticleId":15603764,"wgRequestId":"WH33RgpAMFMAAFF3728AAAGY","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgFlaggedRevsParams":{"tags":{}},"wgStableRevisionId":null,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"en","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgWikibaseItemId":"Q575703","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.math.styles":"ready","ext.cite.styles":"ready","ext.pygments":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@1dqfd7l",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["ext.cite.a11y","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.legacy.wikibits","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.watchlist-notice","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.gadget.featured-articles-links","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.interface","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="https://en.wikipedia.org/w/load.php?debug=false&amp;lang=en&amp;modules=ext.cite.styles%7Cext.math.scripts%2Cstyles%7Cext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="../w/load2c8d.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../w/load18b6.css?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.29.0-wmf.7"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="https://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Java_Native_Access"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Java_Native_Access&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Java_Native_Access&amp;action=edit"/>
+<link rel="apple-touch-icon" href="https://en.wikipedia.org/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="../static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../w/api251f.php?action=rsd"/>
+<link rel="copyright" href="../../creativecommons.org/licenses/by-sa/3.0/index.html"/>
+<link rel="canonical" href="Java_Native_Access.html"/>
+<link rel="dns-prefetch" href="../../login.wikimedia.org/index.html"/>
+<link rel="dns-prefetch" href="../../meta.wikimedia.org/index.html" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Java_Native_Access rootpage-Java_Native_Access skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">Java Native Access</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><script>function mfTempOpenSection(id){var block=document.getElementById("mf-section-"+id);block.className+=" open-block";block.previousSibling.className+=" open-block";}</script><table class="infobox vevent" style="width:22em">
+<caption class="summary">Java Native Access</caption>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_developer" title="Software developer">Original author(s)</a></th>
+<td>Todd Fast, Timothy Wall, Liang Chen</td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;">Initial release</th>
+<td>May&#160;9,&#160;2007<span style="display:none">&#160;(<span class="bday dtstart published updated">2007-05-09</span>)</span></td>
+</tr>
+<tr>
+<td colspan="2" style="text-align:center"></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_release_life_cycle" title="Software release life cycle">Stable release</a></th>
+<td>
+<div style="margin:0px;">4.2.2 / March&#160;16, 2016<span class="noprint">; 9 months ago</span><span style="display:none">&#160;(<span class="bday dtstart published updated">2016-03-16</span>)</span></div>
+</td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;">Development status</th>
+<td>Active</td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;">Written in</th>
+<td><a href="https://en.wikipedia.org/wiki/C_(programming_language)" title="C (programming language)">C</a> and <a href="Java_(programming_language).html" title="Java (programming language)">Java</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Operating_system" title="Operating system">Operating system</a></th>
+<td>Windows, OS X, Android, AIX, FreeBSD, Linux, OpenBSD, Solaris, Windows Mobile</td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Computing_platform" title="Computing platform">Platform</a></th>
+<td><a href="Java_(software_platform).html" title="Java (software platform)">Java</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/File_size" title="File size">Size</a></th>
+<td>1.83 MB (archived)</td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_categories#Broad_categories" title="Software categories">Type</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Library_(computer_science)" class="mw-redirect" title="Library (computer science)">Software Library</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_license" title="Software license">License</a></th>
+<td><a href="https://en.wikipedia.org/wiki/LGPL" class="mw-redirect" title="LGPL">LGPL</a> version 2.1 or later and (from version 4.0 onward) the Apache Software License, version 2.0</td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;">Website</th>
+<td><span class="url"><a rel="nofollow" class="external text" href="https://github.com/twall/jna">github<wbr />.com<wbr />/twall<wbr />/jna</a></span></td>
+</tr>
+</table>
+<p><b>Java Native Access</b> (<b>JNA</b>) is a community-developed library that provides <a href="Java_(software_platform).html" title="Java (software platform)">Java</a> programs easy access to <a href="https://en.wikipedia.org/wiki/Shared_library" class="mw-redirect" title="Shared library">native shared libraries</a> without using the <a href="Java_Native_Interface.html" title="Java Native Interface">Java Native Interface</a>. JNA's design aims to provide native access in a natural way with a minimum of effort. No <a href="https://en.wikipedia.org/wiki/Boilerplate_code" title="Boilerplate code">boilerplate</a> or generated <a href="https://en.wikipedia.org/wiki/Glue_code" title="Glue code">glue code</a> is required.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Architecture"><span class="tocnumber">1</span> <span class="toctext">Architecture</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Mapping_types"><span class="tocnumber">2</span> <span class="toctext">Mapping types</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Memory_byte_alignment_for_data_structures"><span class="tocnumber">3</span> <span class="toctext">Memory byte alignment for data structures</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Example"><span class="tocnumber">4</span> <span class="toctext">Example</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Adoption"><span class="tocnumber">5</span> <span class="toctext">Adoption</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#See_also"><span class="tocnumber">6</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#References"><span class="tocnumber">7</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#External_links"><span class="tocnumber">8</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Architecture">Architecture</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Native_Access&amp;action=edit&amp;section=1" title="Edit section: Architecture">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The JNA library uses a small native library called <a href="https://en.wikipedia.org/wiki/Foreign_function_interface" title="Foreign function interface">foreign function interface</a> library (<a href="https://en.wikipedia.org/wiki/Libffi" title="Libffi">libffi</a>) to dynamically invoke <a href="https://en.wikipedia.org/wiki/Native_code" class="mw-redirect" title="Native code">native code</a>. The JNA library uses native functions allowing code to load a library by name and retrieve a <a href="https://en.wikipedia.org/wiki/Pointer_(computer_programming)" title="Pointer (computer programming)">pointer</a> to a function within that library, and uses <a href="https://en.wikipedia.org/wiki/Libffi" title="Libffi">libffi</a> library to invoke it, all without <a href="https://en.wikipedia.org/wiki/Static_binding" class="mw-redirect" title="Static binding">static bindings</a>, <a href="https://en.wikipedia.org/wiki/Header_files" class="mw-redirect" title="Header files">header files</a>, or any compile phase. The developer uses a <a href="https://en.wikipedia.org/wiki/Java_interface" class="mw-redirect" title="Java interface">Java interface</a> to describe functions and structures in the target native library. This makes it quite easy to take advantage of native platform features without incurring the high development overhead of configuring and building <a href="https://en.wikipedia.org/wiki/JNI" class="mw-redirect" title="JNI">JNI</a> code.</p>
+<p>JNA is built and tested on <a href="https://en.wikipedia.org/wiki/Mac_OS_X" class="mw-redirect" title="Mac OS X">Mac OS X</a>, <a href="https://en.wikipedia.org/wiki/Microsoft_Windows" title="Microsoft Windows">Microsoft Windows</a>, <a href="https://en.wikipedia.org/wiki/FreeBSD" title="FreeBSD">FreeBSD</a> / <a href="https://en.wikipedia.org/wiki/OpenBSD" title="OpenBSD">OpenBSD</a>, <a href="https://en.wikipedia.org/wiki/Solaris_(operating_system)" title="Solaris (operating system)">Solaris</a>, <a href="https://en.wikipedia.org/wiki/Linux" title="Linux">Linux</a>, <a href="https://en.wikipedia.org/wiki/AIX" class="mw-redirect" title="AIX">AIX</a>, <a href="https://en.wikipedia.org/wiki/Windows_Mobile" title="Windows Mobile">Windows Mobile</a>, and <a href="https://en.wikipedia.org/wiki/Android_(operating_system)" title="Android (operating system)">Android</a>. It is also possible to tweak and recompile the native build configurations to make it work on most other platforms that run Java.</p>
+<h2><span class="mw-headline" id="Mapping_types">Mapping types</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Native_Access&amp;action=edit&amp;section=2" title="Edit section: Mapping types">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The following table shows an overview of types mapping between Java and native code and supported by the JNA library.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[1]</a></sup></p>
+<table class="wikitable">
+<tr>
+<th>Native Type</th>
+<th>Size</th>
+<th>Java Language Type</th>
+<th>Common Windows Types</th>
+</tr>
+<tr>
+<td><a href="https://en.wikipedia.org/wiki/Character_(computing)" title="Character (computing)">char</a></td>
+<td>8-bit integer</td>
+<td><a href="https://en.wikipedia.org/wiki/Byte" title="Byte">byte</a></td>
+<td>BYTE, TCHAR</td>
+</tr>
+<tr>
+<td><a href="https://en.wikipedia.org/wiki/Short_integer" class="mw-redirect" title="Short integer">short</a></td>
+<td>16-bit</td>
+<td><a href="https://en.wikipedia.org/wiki/Short_integer" class="mw-redirect" title="Short integer">short</a></td>
+<td>short WORD</td>
+</tr>
+<tr>
+<td><a href="https://en.wikipedia.org/wiki/Wide_character" title="Wide character">wchar_t</a></td>
+<td>16/32-bit character</td>
+<td><a href="https://en.wikipedia.org/wiki/Character_(computing)" title="Character (computing)">char</a></td>
+<td>WCHAR, TCHAR</td>
+</tr>
+<tr>
+<td><a href="https://en.wikipedia.org/wiki/Integer_(computer_science)" title="Integer (computer science)">int</a></td>
+<td>32-bit integer</td>
+<td><a href="https://en.wikipedia.org/wiki/Integer_(computer_science)" title="Integer (computer science)">int</a></td>
+<td>DWORD</td>
+</tr>
+<tr>
+<td><a href="https://en.wikipedia.org/wiki/Integer_(computer_science)" title="Integer (computer science)">int</a></td>
+<td>boolean value</td>
+<td>boolean</td>
+<td>BOOL</td>
+</tr>
+<tr>
+<td><a href="https://en.wikipedia.org/wiki/Long_integer" class="mw-redirect" title="Long integer">long</a></td>
+<td>32/64-bit integer</td>
+<td>NativeLong</td>
+<td>LONG</td>
+</tr>
+<tr>
+<td><a href="https://en.wikipedia.org/wiki/Long_long" class="mw-redirect" title="Long long">long long</a>, __int64</td>
+<td>64-bit integer</td>
+<td><a href="https://en.wikipedia.org/wiki/Long_integer" class="mw-redirect" title="Long integer">long</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://en.wikipedia.org/wiki/Single_precision" class="mw-redirect" title="Single precision">float</a></td>
+<td>32-bit FP</td>
+<td><a href="https://en.wikipedia.org/wiki/Single_precision" class="mw-redirect" title="Single precision">float</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://en.wikipedia.org/wiki/Double_precision" class="mw-redirect" title="Double precision">double</a></td>
+<td>64-bit FP</td>
+<td><a href="https://en.wikipedia.org/wiki/Double_precision" class="mw-redirect" title="Double precision">double</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://en.wikipedia.org/wiki/Character_(computing)#char" title="Character (computing)">char</a>*</td>
+<td>C string</td>
+<td>String</td>
+<td>LPCTSTR</td>
+</tr>
+<tr>
+<td>void*</td>
+<td>pointer</td>
+<td>Pointer</td>
+<td>LPVOID, HANDLE, LPXXX</td>
+</tr>
+</table>
+<p><b>Note:</b> The meaning of TCHAR changes between char and wchar_t according to some preprocessor definitions. LPCTSTR follows.</p>
+<h2><span class="mw-headline" id="Memory_byte_alignment_for_data_structures">Memory byte alignment for data structures</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Native_Access&amp;action=edit&amp;section=3" title="Edit section: Memory byte alignment for data structures">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Native libraries have no standardized memory byte alignment flavor. JNA defaults to an OS platform specific setting, that can be overridden by a library specific custom alignment. If the alignment details are not given in the documentation of the native library, the correct alignment must be determined by trial and error during implementation of the Java wrapper.</p>
+<h2><span class="mw-headline" id="Example">Example</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Native_Access&amp;action=edit&amp;section=4" title="Edit section: Example">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The following program loads the local <a href="https://en.wikipedia.org/wiki/C_standard_library" title="C standard library">C standard library</a> implementation and uses it to call the <i><a href="https://en.wikipedia.org/wiki/Printf" class="mw-redirect" title="Printf">printf</a></i> function.</p>
+<p><b>Note:</b> The following code is portable and works the same on <a href="https://en.wikipedia.org/wiki/Microsoft_Windows" title="Microsoft Windows">Windows</a> and <a href="https://en.wikipedia.org/wiki/Linux" title="Linux">Linux</a> / <a href="https://en.wikipedia.org/wiki/Unix" title="Unix">Unix</a> / <a href="https://en.wikipedia.org/wiki/Mac_OS_X" class="mw-redirect" title="Mac OS X">Mac OS X</a> platforms.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kn">import</span> <span class="nn">com.sun.jna.Library</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.sun.jna.Native</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.sun.jna.Platform</span><span class="o">;</span>
+
+<span class="cm">/** Simple example of native library declaration and usage. */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">HelloWorld</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">interface</span> <span class="nc">CLibrary</span> <span class="kd">extends</span> <span class="n">Library</span> <span class="o">{</span>
+        <span class="n">CLibrary</span> <span class="n">INSTANCE</span> <span class="o">=</span> <span class="o">(</span><span class="n">CLibrary</span><span class="o">)</span> <span class="n">Native</span><span class="o">.</span><span class="na">loadLibrary</span><span class="o">(</span>
+            <span class="o">(</span><span class="n">Platform</span><span class="o">.</span><span class="na">isWindows</span><span class="o">()</span> <span class="o">?</span> <span class="s">"msvcrt"</span> <span class="o">:</span> <span class="s">"c"</span><span class="o">),</span> <span class="n">CLibrary</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+        <span class="kt">void</span> <span class="nf">printf</span><span class="o">(</span><span class="n">String</span> <span class="n">format</span><span class="o">,</span> <span class="n">Object</span><span class="o">...</span> <span class="n">args</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">CLibrary</span><span class="o">.</span><span class="na">INSTANCE</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">"Hello, World\n"</span><span class="o">);</span>
+        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">args</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+            <span class="n">CLibrary</span><span class="o">.</span><span class="na">INSTANCE</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">"Argument %d: %s\n"</span><span class="o">,</span> <span class="n">i</span><span class="o">,</span> <span class="n">args</span><span class="o">[</span><span class="n">i</span><span class="o">]);</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+<p>The following program loads the <a href="https://en.wikipedia.org/wiki/C_POSIX_library" title="C POSIX library">C POSIX library</a> and uses it to call the standard <i><a href="https://en.wikipedia.org/wiki/Mkdir" title="Mkdir">mkdir</a></i> function.</p>
+<p><b>Note:</b> The following code is portable and works the same on <a href="https://en.wikipedia.org/wiki/POSIX" title="POSIX">POSIX</a> standards platforms.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kn">import</span> <span class="nn">com.sun.jna.Library</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.sun.jna.Native</span><span class="o">;</span>
+
+<span class="cm">/** Simple example of native C POSIX library declaration and usage. */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ExampleOfPOSIX</span> <span class="o">{</span>
+   <span class="kd">public</span> <span class="kd">interface</span> <span class="nc">POSIX</span> <span class="kd">extends</span> <span class="n">Library</span> <span class="o">{</span>
+	<span class="kd">public</span> <span class="kt">int</span> <span class="nf">chmod</span><span class="o">(</span><span class="n">String</span> <span class="n">filename</span><span class="o">,</span> <span class="kt">int</span> <span class="n">mode</span><span class="o">);</span>
+	<span class="kd">public</span> <span class="kt">int</span> <span class="nf">chown</span><span class="o">(</span><span class="n">String</span> <span class="n">filename</span><span class="o">,</span> <span class="kt">int</span> <span class="n">user</span><span class="o">,</span> <span class="kt">int</span> <span class="n">group</span><span class="o">);</span>
+	<span class="kd">public</span> <span class="kt">int</span> <span class="nf">rename</span><span class="o">(</span><span class="n">String</span> <span class="n">oldpath</span><span class="o">,</span> <span class="n">String</span> <span class="n">newpath</span><span class="o">);</span>
+	<span class="kd">public</span> <span class="kt">int</span> <span class="nf">kill</span><span class="o">(</span><span class="kt">int</span> <span class="n">pid</span><span class="o">,</span> <span class="kt">int</span> <span class="n">signal</span><span class="o">);</span>
+	<span class="kd">public</span> <span class="kt">int</span> <span class="nf">link</span><span class="o">(</span><span class="n">String</span> <span class="n">oldpath</span><span class="o">,</span> <span class="n">String</span> <span class="n">newpath</span><span class="o">);</span>
+	<span class="kd">public</span> <span class="kt">int</span> <span class="nf">mkdir</span><span class="o">(</span><span class="n">String</span> <span class="n">path</span><span class="o">,</span> <span class="kt">int</span> <span class="n">mode</span><span class="o">);</span>
+	<span class="kd">public</span> <span class="kt">int</span> <span class="nf">rmdir</span><span class="o">(</span><span class="n">String</span> <span class="n">path</span><span class="o">);</span>
+   <span class="o">}</span>
+
+   <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+	<span class="n">POSIX</span> <span class="n">posix</span> <span class="o">=</span> <span class="o">(</span><span class="n">POSIX</span><span class="o">)</span> <span class="n">Native</span><span class="o">.</span><span class="na">loadLibrary</span><span class="o">(</span><span class="s">"c"</span><span class="o">,</span> <span class="n">POSIX</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+	<span class="n">posix</span><span class="o">.</span><span class="na">mkdir</span><span class="o">(</span><span class="s">"/tmp/newdir"</span><span class="o">,</span> <span class="mo">0777</span><span class="o">);</span>
+	<span class="n">posix</span><span class="o">.</span><span class="na">rename</span><span class="o">(</span><span class="s">"/tmp/newdir"</span><span class="o">,</span><span class="s">"/tmp/renamedir"</span><span class="o">);</span>
+   <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+<p>The program below loads the <b><a href="https://en.wikipedia.org/wiki/Kernel32.dll" class="mw-redirect" title="Kernel32.dll">Kernel32.dll</a></b> and uses it to call the <i><a href="https://en.wikipedia.org/wiki/Beep_(sound)" title="Beep (sound)">Beep</a></i> and <i><a href="https://en.wikipedia.org/wiki/Sleep_(operating_system)" class="mw-redirect" title="Sleep (operating system)">Sleep</a></i> functions.</p>
+<p><b>Note:</b> The following code works only on <a href="https://en.wikipedia.org/wiki/Microsoft_Windows" title="Microsoft Windows">Windows</a> platforms.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kn">import</span> <span class="nn">com.sun.jna.Library</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.sun.jna.Native</span><span class="o">;</span>
+
+<span class="cm">/** Simple example of Windows native library declaration and usage. */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">BeepExample</span> <span class="o">{</span>
+   <span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Kernel32</span> <span class="kd">extends</span> <span class="n">Library</span> <span class="o">{</span>
+       <span class="c1">// FREQUENCY is expressed in hertz and ranges from 37 to 32767</span>
+       <span class="c1">// DURATION is expressed in milliseconds</span>
+       <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">Beep</span><span class="o">(</span><span class="kt">int</span> <span class="n">FREQUENCY</span><span class="o">,</span> <span class="kt">int</span> <span class="n">DURATION</span><span class="o">);</span>
+       <span class="kd">public</span> <span class="kt">void</span> <span class="nf">Sleep</span><span class="o">(</span><span class="kt">int</span> <span class="n">DURATION</span><span class="o">);</span>
+   <span class="o">}</span>
+
+   <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+	<span class="n">Kernel32</span> <span class="n">lib</span> <span class="o">=</span> <span class="o">(</span><span class="n">Kernel32</span><span class="o">)</span> <span class="n">Native</span><span class="o">.</span><span class="na">loadLibrary</span><span class="o">(</span><span class="s">"kernel32"</span><span class="o">,</span> <span class="n">Kernel32</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+	<span class="n">lib</span><span class="o">.</span><span class="na">Beep</span><span class="o">(</span><span class="mi">698</span><span class="o">,</span> <span class="mi">500</span><span class="o">);</span>
+	<span class="n">lib</span><span class="o">.</span><span class="na">Sleep</span><span class="o">(</span><span class="mi">500</span><span class="o">);</span>
+	<span class="n">lib</span><span class="o">.</span><span class="na">Beep</span><span class="o">(</span><span class="mi">698</span><span class="o">,</span> <span class="mi">500</span><span class="o">);</span>
+   <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+<h2><span class="mw-headline" id="Adoption">Adoption</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Native_Access&amp;action=edit&amp;section=5" title="Edit section: Adoption">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Java Native Access is known to be used in:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Armed_Bear_Common_Lisp" class="mw-redirect" title="Armed Bear Common Lisp">Armed Bear Common Lisp</a> uses JNA for its CFFI implementation <sup id="cite_ref-2" class="reference"><a href="#cite_note-2">[2]</a></sup></li>
+<li><a href="JRuby.html" title="JRuby">JRuby</a> use JNA for <a href="https://en.wikipedia.org/wiki/POSIX" title="POSIX">POSIX</a> functionality <sup id="cite_ref-3" class="reference"><a href="#cite_note-3">[3]</a></sup><sup id="cite_ref-4" class="reference"><a href="#cite_note-4">[4]</a></sup></li>
+<li><a href="https://en.wikipedia.org/w/index.php?title=Freedom_for_Media_in_Java&amp;action=edit&amp;redlink=1" class="new" title="Freedom for Media in Java (page does not exist)">Freedom for Media in Java</a> (FMJ) <sup id="cite_ref-5" class="reference"><a href="#cite_note-5">[5]</a></sup></li>
+<li><a href="IntelliJ_IDEA.html" title="IntelliJ IDEA">IntelliJ IDEA</a> <a href="https://en.wikipedia.org/wiki/Integrated_Development_Environment" class="mw-redirect" title="Integrated Development Environment">IDE</a> by the company <a href="https://en.wikipedia.org/wiki/JetBrains" title="JetBrains">JetBrains</a></li>
+<li><a href="https://en.wikipedia.org/wiki/OpenSearchServer" title="OpenSearchServer">OpenSearchServer</a> an open source search engine and web crawler</li>
+<li><a href="SVNKit.html" title="SVNKit">SVNKit</a> pure Java Subversion client library with optional native library integration through the JNA.</li>
+<li><a href="https://en.wikipedia.org/wiki/Videolan" class="mw-redirect" title="Videolan">Videolan</a> vlcj Java Multimedia Library.</li>
+<li><a href="https://en.wikipedia.org/wiki/Cyberduck" title="Cyberduck">Cyberduck</a> FTP, SFTP, WebDAV, Cloud Files &amp; Amazon S3 Browser for Mac OS X.</li>
+<li><a href="Log4j.html" title="Log4j">Log4j</a>, a library of native log appenders (<a rel="nofollow" class="external free" href="http://log4jna.codeplex.com/">http://log4jna.codeplex.com</a>).</li>
+<li><a href="Hudson_(software).html" title="Hudson (software)">Hudson</a> and <a href="https://en.wikipedia.org/wiki/Jenkins_(software)" title="Jenkins (software)">Jenkins</a> continuous integration servers.</li>
+<li><a href="https://en.wikipedia.org/wiki/Selenium_(Software)" class="mw-redirect" title="Selenium (Software)">Webdriver</a></li>
+<li>YAJSW (Yet Another Java Service Wrapper)</li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_Cassandra" title="Apache Cassandra">Cassandra</a>, an open source distributed database from the <a href="https://en.wikipedia.org/wiki/Apache_Software_Foundation" title="Apache Software Foundation">Apache Software Foundation</a> uses JNA<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">[6]</a></sup></li>
+</ul>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Native_Access&amp;action=edit&amp;section=6" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div role="navigation" aria-label="Portals" class="noprint portal plainlist tright" style="margin:0.5em 0 0.5em 1em;border:solid #aaa 1px">
+<ul style="display:table;box-sizing:border-box;padding:0.1em;max-width:175px;background:#f9f9f9;font-size:85%;line-height:110%;font-style:italic;font-weight:bold">
+<li style="display:table-row"><span style="display:table-cell;padding:0.2em;vertical-align:middle;text-align:center"><a href="https://en.wikipedia.org/wiki/File:Wave.svg" class="image"><img alt="icon" src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/15px-Wave.svg.png" width="15" height="28" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/23px-Wave.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/31px-Wave.svg.png 2x" data-file-width="226" data-file-height="407" /></a></span><span style="display:table-cell;padding:0.2em 0.2em 0.2em 0.3em;vertical-align:middle"><a href="https://en.wikipedia.org/wiki/Portal:Java" title="Portal:Java">Java portal</a></span></li>
+<li style="display:table-row"><span style="display:table-cell;padding:0.2em;vertical-align:middle;text-align:center"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_(2009).svg/28px-Free_and_open-source_software_logo_(2009).svg.png" width="28" height="28" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/42px-Free_and_open-source_software_logo_%282009%29.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/56px-Free_and_open-source_software_logo_%282009%29.svg.png 2x" data-file-width="512" data-file-height="512" /></span><span style="display:table-cell;padding:0.2em 0.2em 0.2em 0.3em;vertical-align:middle"><a href="https://en.wikipedia.org/wiki/Portal:Free_Software" class="mw-redirect" title="Portal:Free Software">Free Software portal</a></span></li>
+</ul>
+</div>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Libffi" title="Libffi">Foreign Function Interface Library</a></li>
+<li><a href="https://en.wikipedia.org/w/index.php?title=J/Invoke&amp;action=edit&amp;redlink=1" class="new" title="J/Invoke (page does not exist)">J/Invoke</a></li>
+<li><a href="Java_Native_Interface.html" title="Java Native Interface">Java Native Interface</a></li>
+<li><a href="https://en.wikipedia.org/wiki/JNAerator" title="JNAerator">JNAerator</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Platform_Invocation_Services" title="Platform Invocation Services">P/Invoke</a></li>
+<li><a href="https://en.wikipedia.org/wiki/SWIG" title="SWIG">SWIG</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Native_Access&amp;action=edit&amp;section=7" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist columns references-column-count references-column-count-2" style="-moz-column-count: 2; -webkit-column-count: 2; column-count: 2; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://github.com/twall/jna/blob/master/www/Mappings.md">"Default Type Mappings"</a>. jna.dev.java.net<span class="reference-accessdate">. Retrieved <span class="nowrap">2011-08-02</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+Native+Access&amp;rft.btitle=Default+Type+Mappings&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fgithub.com%2Ftwall%2Fjna%2Fblob%2Fmaster%2Fwww%2FMappings.md&amp;rft.pub=jna.dev.java.net&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://trac.common-lisp.net/armedbear/wiki/asdf/cffi">http://trac.common-lisp.net/armedbear/wiki/asdf/cffi</a></span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://headius.blogspot.com/2007/09/java-native-access-jruby-true-posix.html">Java Native Access + JRuby = True POSIX</a></span></li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.infoq.com/news/2007/09/jna-jruby/">"JNA brings native code to JRuby"</a>. infoq.com. 2007-09-05<span class="reference-accessdate">. Retrieved <span class="nowrap">2010-05-22</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+Native+Access&amp;rft.btitle=JNA+brings+native+code+to+JRuby&amp;rft.date=2007-09-05&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.infoq.com%2Fnews%2F2007%2F09%2Fjna-jruby%2F&amp;rft.pub=infoq.com&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://fmj-sf.net/">Freedom for Media in Java</a></span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="https://github.com/apache/cassandra/search?utf8=%E2%9C%93&amp;q=CLibrary&amp;type=Code">https://github.com/apache/cassandra/search?utf8=%E2%9C%93&amp;q=CLibrary&amp;type=Code</a></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Native_Access&amp;action=edit&amp;section=8" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="https://github.com/twall/jna#readme">Java Native Access Web Page</a></li>
+<li><a rel="nofollow" class="external text" href="https://github.com/twall/jna/#download">Java Native Access - Download page</a></li>
+<li><a rel="nofollow" class="external text" href="http://groups.google.com/group/jna-users/about">Java Native Access - User Mailing List</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.javaworld.com/javaworld/jw-02-2008/jw-02-opensourcejava-jna.html">Java Native Access:An easier way to access native code</a> By Jeff Friesen, JavaWorld.com, 02/05/2008</li>
+<li><a rel="nofollow" class="external text" href="http://today.java.net/pub/a/today/2009/05/19/protect-your-legacy-code-jna.html">Protect Your Legacy Code Investment with JNA</a> by Stephen B. Morris, Java.net, 20/05/2009</li>
+<li><a rel="nofollow" class="external text" href="http://today.java.net/article/2009/11/11/simplify-native-code-access-jna">Simplify Native Code Access with JNA</a> by Sanjay Dasgupta, Java.net, 12/11/2009</li>
+<li><a rel="nofollow" class="external text" href="http://code.dblock.org/ShowPost.aspx?id=219">JNA is now a Githubber</a> by Daniel Doubrovkine, 6/20/2011</li>
+<li><a rel="nofollow" class="external text" href="http://nevermind.dk/nevermind/blog.nsf/subject/calling-the-domino-c-api-from-an-xpage-or-a-java-agent">Calling the Lotus Domino C-API with JNA</a> by Jesper Kiaer 3/6/2010</li>
+</ul>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1248
+Cached time: 20170117105151
+Cache expiry: 2592000
+Dynamic content: false
+CPU time usage: 0.156 seconds
+Real time usage: 0.544 seconds
+Preprocessor visited node count: 880/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 14184/2097152 bytes
+Template argument size: 1709/2097152 bytes
+Highest expansion depth: 25/40
+Expensive parser function count: 2/500
+Lua time usage: 0.057/10.000 seconds
+Lua memory usage: 1.99 MB/50 MB
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  506.620      1 - -total
+ 19.65%   99.543      2 - Template:Infobox
+ 15.43%   78.182      1 - Template:Infobox_software
+ 11.15%   56.463      1 - Template:Reflist
+  8.83%   44.753      2 - Template:Cite_web
+  5.61%   28.426      1 - Template:Infobox_software/simple
+  2.88%   14.581      1 - Template:Start_date_and_age
+  2.59%   13.135      1 - Template:Portal
+  1.64%    8.289      1 - Template:Time_ago
+  1.07%    5.443      1 - Template:Start_date
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:15603764-0!*!0!!en!4!* and timestamp 20170117105150 and revision id 723800136
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Java_Native_Access&amp;oldid=723800136">https://en.wikipedia.org/w/index.php?title=Java_Native_Access&amp;oldid=723800136</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Help_Category.html" title="Help:Category">Categories</a>: <ul><li><a href="Category_Java_platform.html" title="Category:Java platform">Java platform</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="Special_MyTalk.html" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="Special_MyContributions.html" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&amp;returnto=Java+Native+Access" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Java+Native+Access" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="Java_Native_Access.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+															<li  id="ca-talk"><span><a href="https://en.wikipedia.org/wiki/Talk:Java_Native_Access"  title="Discussion about the content page [t]" accesskey="t" rel="discussion">Talk</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="Java_Native_Access.html" >Read</a></span></li>
+															<li id="ca-edit"><span><a href="https://en.wikipedia.org/w/index.php?title=Java_Native_Access&amp;action=edit"  title="Edit this page [e]" accesskey="e">Edit</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="https://en.wikipedia.org/w/index.php?title=Java_Native_Access&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="https://en.wikipedia.org/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="Main_Page.html"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="Portal_Contents.html" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="Portal_Featured_content.html" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="Portal_Current_events.html" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="https://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="../../shop.wikimedia.org/index.html" title="Visit the Wikipedia store">Wikipedia store</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Interaction</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-help"><a href="Help_Contents.html" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="Wikipedia_About.html" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="Wikipedia_Community_portal.html" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="Wikipedia_Contact_us.html" title="How to contact Wikipedia">Contact page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="https://en.wikipedia.org/wiki/Special:WhatLinksHere/Java_Native_Access" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://en.wikipedia.org/wiki/Special:RecentChangesLinked/Java_Native_Access" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="Wikipedia_File_Upload_Wizard.html" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="https://en.wikipedia.org/w/index.php?title=Java_Native_Access&amp;oldid=723800136" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://en.wikipedia.org/w/index.php?title=Java_Native_Access&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q575703" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="https://en.wikipedia.org/w/index.php?title=Special:CiteThisPage&amp;page=Java_Native_Access&amp;id=723800136" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Print/export</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Java+Native+Access">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Java+Native+Access&amp;returnto=Java+Native+Access&amp;oldid=723800136&amp;writer=rdf2latex">Download as PDF</a></li><li id="t-print"><a href="https://en.wikipedia.org/w/index.php?title=Java_Native_Access&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Languages</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Java_Native_Access" title="Java Native Access – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/Java_Native_Access" title="Java Native Access – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q575703#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 5 June 2016, at 09:31.</li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="Wikipedia_Text_of_Creative_Commons_Attribution-ShareAlike_3.html">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="../../creativecommons.org/licenses/by-sa/3.0/index.html" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="../../wikimediafoundation.org/wiki/Terms_of_Use.html">Terms of Use</a> and <a href="../../wikimediafoundation.org/wiki/Privacy_policy.html">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="../../www.wikimediafoundation.org/index.html">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../../wikimediafoundation.org/wiki/Privacy_policy.html" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="Wikipedia_About.html" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="Wikipedia_General_disclaimer.html" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="Wikipedia_Contact_us.html">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a href="../../www.mediawiki.org/wiki/Special_MyLanguage/How_to_contribute.html">Developers</a></li>
+											<li id="footer-places-cookiestatement"><a href="../../wikimediafoundation.org/wiki/Cookie_statement.html">Cookie statement</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/w/index.php?title=Java_Native_Access&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="../../www.wikimediafoundation.org/index.html"><img src="https://en.wikipedia.org/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="../../www.mediawiki.org/index.html"><img src="https://en.wikipedia.org/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":624,"wgHostname":"mw1248"});});</script>
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Java_Native_Access by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:31 GMT -->
+</html>

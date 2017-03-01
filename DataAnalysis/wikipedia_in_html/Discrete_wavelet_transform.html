@@ -1,0 +1,2273 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Discrete_wavelet_transform by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:52:54 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Discrete wavelet transform - Wikipedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Discrete_wavelet_transform","wgTitle":"Discrete wavelet transform","wgCurRevisionId":755716810,"wgRevisionId":755716810,"wgArticleId":857564,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Pages using ISBN magic links","Articles with example Java code","Numerical analysis","Digital signal processing","Wavelets","Discrete transforms"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Discrete_wavelet_transform","wgRelevantArticleId":857564,"wgRequestId":"WHknXApAME0AAENGDQoAAAAA","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgFlaggedRevsParams":{"tags":{}},"wgStableRevisionId":null,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"en","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgWikibaseItemId":"Q2414958","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.math.styles":"ready","ext.cite.styles":"ready","ext.pygments":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@1dqfd7l",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["ext.math.scripts","ext.cite.a11y","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.legacy.wikibits","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.watchlist-notice","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.gadget.featured-articles-links","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.interface","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="https://en.wikipedia.org/w/load.php?debug=false&amp;lang=en&amp;modules=ext.cite.styles%7Cext.math.styles%7Cext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="../w/load2c8d.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../w/load18b6.css?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.29.0-wmf.7"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="https://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Discrete_wavelet_transform"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Discrete_wavelet_transform&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Discrete_wavelet_transform&amp;action=edit"/>
+<link rel="apple-touch-icon" href="https://en.wikipedia.org/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="../static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../w/api251f.php?action=rsd"/>
+<link rel="copyright" href="../../creativecommons.org/licenses/by-sa/3.0/index.html"/>
+<link rel="canonical" href="Discrete_wavelet_transform.html"/>
+<link rel="dns-prefetch" href="../../login.wikimedia.org/index.html"/>
+<link rel="dns-prefetch" href="../../meta.wikimedia.org/index.html" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Discrete_wavelet_transform rootpage-Discrete_wavelet_transform skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">Discrete wavelet transform</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><script>function mfTempOpenSection(id){var block=document.getElementById("mf-section-"+id);block.className+=" open-block";block.previousSibling.className+=" open-block";}</script><div class="thumb tright">
+<div class="thumbinner" style="width:302px;"><a href="https://en.wikipedia.org/wiki/File:Jpeg2000_2-level_wavelet_transform-lichtenstein.png" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Jpeg2000_2-level_wavelet_transform-lichtenstein.png/300px-Jpeg2000_2-level_wavelet_transform-lichtenstein.png" width="300" height="300" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Jpeg2000_2-level_wavelet_transform-lichtenstein.png/450px-Jpeg2000_2-level_wavelet_transform-lichtenstein.png 1.5x, //upload.wikimedia.org/wikipedia/commons/e/e0/Jpeg2000_2-level_wavelet_transform-lichtenstein.png 2x" data-file-width="512" data-file-height="512" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="https://en.wikipedia.org/wiki/File:Jpeg2000_2-level_wavelet_transform-lichtenstein.png" class="internal" title="Enlarge"></a></div>
+An example of the 2D discrete wavelet transform that is used in <a href="https://en.wikipedia.org/wiki/JPEG2000" class="mw-redirect" title="JPEG2000">JPEG2000</a>. The original image is high-pass filtered, yielding the three large images, each describing local changes in brightness (details) in the original image. It is then low-pass filtered and downscaled, yielding an approximation image; this image is high-pass filtered to produce the three smaller detail images, and low-pass filtered to produce the final approximation image in the upper-left.</div>
+</div>
+</div>
+<p>In <a href="https://en.wikipedia.org/wiki/Numerical_analysis" title="Numerical analysis">numerical analysis</a> and <a href="https://en.wikipedia.org/wiki/Functional_analysis" title="Functional analysis">functional analysis</a>, a <b>discrete wavelet transform</b> (<b>DWT</b>) is any <a href="https://en.wikipedia.org/wiki/Wavelet_transform" title="Wavelet transform">wavelet transform</a> for which the <a href="https://en.wikipedia.org/wiki/Wavelet" title="Wavelet">wavelets</a> are discretely sampled. As with other wavelet transforms, a key advantage it has over <a href="https://en.wikipedia.org/wiki/Fourier_transform" title="Fourier transform">Fourier transforms</a> is temporal resolution: it captures both frequency <i>and</i> location information (location in time).</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Examples"><span class="tocnumber">1</span> <span class="toctext">Examples</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Haar_wavelets"><span class="tocnumber">1.1</span> <span class="toctext">Haar wavelets</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Daubechies_wavelets"><span class="tocnumber">1.2</span> <span class="toctext">Daubechies wavelets</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#The_dual-tree_complex_wavelet_transform_.28D.E2.84.82WT.29"><span class="tocnumber">1.3</span> <span class="toctext">The dual-tree complex wavelet transform (DℂWT)</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Others"><span class="tocnumber">1.4</span> <span class="toctext">Others</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#Properties"><span class="tocnumber">2</span> <span class="toctext">Properties</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#Time_issues"><span class="tocnumber">2.1</span> <span class="toctext">Time issues</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#Applications"><span class="tocnumber">3</span> <span class="toctext">Applications</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Comparison_with_Fourier_transform"><span class="tocnumber">4</span> <span class="toctext">Comparison with Fourier transform</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Definition"><span class="tocnumber">5</span> <span class="toctext">Definition</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#One_level_of_the_transform"><span class="tocnumber">5.1</span> <span class="toctext">One level of the transform</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Cascading_and_filter_banks"><span class="tocnumber">5.2</span> <span class="toctext">Cascading and filter banks</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-13"><a href="#Relationship_to_the_Mother_Wavelet"><span class="tocnumber">6</span> <span class="toctext">Relationship to the Mother Wavelet</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#Time_complexity"><span class="tocnumber">7</span> <span class="toctext">Time complexity</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#Other_transforms"><span class="tocnumber">8</span> <span class="toctext">Other transforms</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#Code_example"><span class="tocnumber">9</span> <span class="toctext">Code example</span></a>
+<ul>
+<li class="toclevel-2 tocsection-17"><a href="#Example_of_above_code"><span class="tocnumber">9.1</span> <span class="toctext">Example of above code</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-18"><a href="#See_also"><span class="tocnumber">10</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-19"><a href="#Notes"><span class="tocnumber">11</span> <span class="toctext">Notes</span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="#References"><span class="tocnumber">12</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-21"><a href="#External_links"><span class="tocnumber">13</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Examples">Examples</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Discrete_wavelet_transform&amp;action=edit&amp;section=1" title="Edit section: Examples">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Haar_wavelets">Haar wavelets</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Discrete_wavelet_transform&amp;action=edit&amp;section=2" title="Edit section: Haar wavelets">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div role="note" class="hatnote">Main article: <a href="https://en.wikipedia.org/wiki/Haar_wavelet" title="Haar wavelet">Haar wavelet</a></div>
+<p>The first DWT was invented by Hungarian mathematician <a href="https://en.wikipedia.org/wiki/Alfréd_Haar" title="Alfréd Haar">Alfréd Haar</a>. For an input represented by a list of <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msup>
+          <mn>2</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+          </mrow>
+        </msup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle 2^{n}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/8226f30650ee4fe4e640c6d2798127e80e9c160d" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:2.399ex; height:2.343ex;" alt="2^{n}" /></span> numbers, the <a href="https://en.wikipedia.org/wiki/Haar_wavelet" title="Haar wavelet">Haar wavelet</a> transform may be considered to pair up input values, storing the difference and passing the sum. This process is repeated recursively, pairing up the sums to provide the next scale, which leads to <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msup>
+          <mn>2</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+          </mrow>
+        </msup>
+        <mo>&#x2212;<!-- − --></mo>
+        <mn>1</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle 2^{n}-1}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/51e4bd4ef2f9549d026cbf643a91c0d12a8c6794" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:6.423ex; height:2.343ex;" alt="2^{n}-1" /></span> differences and a final sum.</p>
+<h3><span class="mw-headline" id="Daubechies_wavelets">Daubechies wavelets</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Discrete_wavelet_transform&amp;action=edit&amp;section=3" title="Edit section: Daubechies wavelets">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div role="note" class="hatnote">Main article: <a href="https://en.wikipedia.org/wiki/Daubechies_wavelet" title="Daubechies wavelet">Daubechies wavelet</a></div>
+<p>The most commonly used set of discrete wavelet transforms was formulated by the Belgian mathematician <a href="https://en.wikipedia.org/wiki/Ingrid_Daubechies" title="Ingrid Daubechies">Ingrid Daubechies</a> in 1988. This formulation is based on the use of <a href="https://en.wikipedia.org/wiki/Recurrence_relation" title="Recurrence relation">recurrence relations</a> to generate progressively finer discrete samplings of an implicit mother wavelet function; each resolution is twice that of the previous scale. In her seminal paper, Daubechies derives a family of <a href="https://en.wikipedia.org/wiki/Daubechies_wavelet" title="Daubechies wavelet">wavelets</a>, the first of which is the Haar wavelet. Interest in this field has exploded since then, and many variations of Daubechies' original wavelets were developed.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[1]</a></sup></p>
+<h3><span class="mw-headline" id="The_dual-tree_complex_wavelet_transform_.28D.E2.84.82WT.29">The dual-tree complex wavelet transform (DℂWT)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Discrete_wavelet_transform&amp;action=edit&amp;section=4" title="Edit section: The dual-tree complex wavelet transform (DℂWT)">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The dual-tree complex wavelet transform (ℂWT) is a relatively recent enhancement to the discrete wavelet transform (DWT), with important additional properties: It is nearly shift invariant and directionally selective in two and higher dimensions. It achieves this with a redundancy factor of only <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msup>
+          <mn>2</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>d</mi>
+          </mrow>
+        </msup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle 2^{d}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e78df590f3fc81f0201082eaaa6844c145c8bdf3" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:2.272ex; height:2.676ex;" alt="2^{d}" /></span> substantially lower than the undecimated DWT. The multidimensional (M-D) dual-tree ℂWT is nonseparable but is based on a computationally efficient, separable filter bank (FB).<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">[2]</a></sup></p>
+<h3><span class="mw-headline" id="Others">Others</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Discrete_wavelet_transform&amp;action=edit&amp;section=5" title="Edit section: Others">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Other forms of discrete wavelet transform include the <a href="https://en.wikipedia.org/wiki/Stationary_wavelet_transform" title="Stationary wavelet transform">non- or undecimated wavelet transform</a> (where downsampling is omitted), the <a href="https://en.wikipedia.org/wiki/Newland_transform" class="mw-redirect" title="Newland transform">Newland transform</a> (where an <a href="https://en.wikipedia.org/wiki/Orthonormal" class="mw-redirect" title="Orthonormal">orthonormal</a> basis of wavelets is formed from appropriately constructed <a href="https://en.wikipedia.org/wiki/Top-hat_filter" title="Top-hat filter">top-hat filters</a> in <a href="https://en.wikipedia.org/wiki/Frequency_space" class="mw-redirect" title="Frequency space">frequency space</a>). <a href="https://en.wikipedia.org/wiki/Wavelet_packet_decomposition" title="Wavelet packet decomposition">Wavelet packet transforms</a> are also related to the discrete wavelet transform. <a href="https://en.wikipedia.org/wiki/Complex_wavelet_transform" title="Complex wavelet transform">Complex wavelet transform</a> is another form.</p>
+<h2><span class="mw-headline" id="Properties">Properties</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Discrete_wavelet_transform&amp;action=edit&amp;section=6" title="Edit section: Properties">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The Haar DWT illustrates the desirable properties of wavelets in general. First, it can be performed in <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>O</mi>
+        <mo stretchy="false">(</mo>
+        <mi>n</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle O(n)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/34109fe397fdcff370079185bfdb65826cb5565a" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:5.019ex; height:2.843ex;" alt="O(n)" /></span> operations; second, it captures not only a notion of the frequency content of the input, by examining it at different scales, but also temporal content, i.e. the times at which these frequencies occur. Combined, these two properties make the <a href="https://en.wikipedia.org/wiki/Fast_wavelet_transform" title="Fast wavelet transform">Fast wavelet transform</a> (FWT) an alternative to the conventional <a href="https://en.wikipedia.org/wiki/Fast_Fourier_transform" title="Fast Fourier transform">fast Fourier transform</a> (FFT).</p>
+<h3><span class="mw-headline" id="Time_issues">Time issues</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Discrete_wavelet_transform&amp;action=edit&amp;section=7" title="Edit section: Time issues">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Due to the rate-change operators in the filter bank, the discrete WT is not time-invariant but actually very sensitive to the alignment of the signal in time. To address the time-varying problem of wavelet transforms, Mallat and Zhong proposed a new algorithm for wavelet representation of a signal, which is invariant to time shifts.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">[3]</a></sup> According to this algorithm, which is called a TI-DWT, only the scale parameter is sampled along the dyadic sequence 2^j (j∈Z) and the wavelet transform is calculated for each point in time.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">[4]</a></sup><sup id="cite_ref-5" class="reference"><a href="#cite_note-5">[5]</a></sup></p>
+<h2><span class="mw-headline" id="Applications">Applications</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Discrete_wavelet_transform&amp;action=edit&amp;section=8" title="Edit section: Applications">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The discrete wavelet transform has a huge number of applications in science, engineering, mathematics and computer science. Most notably, it is used for <a href="https://en.wikipedia.org/w/index.php?title=Signal_coding&amp;action=edit&amp;redlink=1" class="new" title="Signal coding (page does not exist)">signal coding</a>, to represent a discrete signal in a more redundant form, often as a preconditioning for <a href="https://en.wikipedia.org/wiki/Data_compression" title="Data compression">data compression</a>. Practical applications can also be found in signal processing of accelerations for gait analysis,<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">[6]</a></sup> in digital communications and many others.<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">[7]</a></sup> <sup id="cite_ref-8" class="reference"><a href="#cite_note-8">[8]</a></sup><sup id="cite_ref-9" class="reference"><a href="#cite_note-9">[9]</a></sup></p>
+<p>It is shown that discrete wavelet transform (discrete in scale and shift, and continuous in time) is successfully implemented as analog filter bank in biomedical signal processing for design of low-power pacemakers and also in ultra-wideband (UWB) wireless communications.<sup id="cite_ref-10" class="reference"><a href="#cite_note-10">[10]</a></sup></p>
+<h2><span class="mw-headline" id="Comparison_with_Fourier_transform">Comparison with Fourier transform</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Discrete_wavelet_transform&amp;action=edit&amp;section=9" title="Edit section: Comparison with Fourier transform">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div role="note" class="hatnote">See also: <a href="https://en.wikipedia.org/wiki/Discrete_Fourier_transform" title="Discrete Fourier transform">Discrete Fourier transform</a></div>
+<p>To illustrate the differences and similarities between the discrete wavelet transform with the <a href="https://en.wikipedia.org/wiki/Discrete_Fourier_transform" title="Discrete Fourier transform">discrete Fourier transform</a>, consider the DWT and DFT of the following sequence: (1,0,0,0), a <a href="https://en.wikipedia.org/wiki/Unit_impulse" class="mw-redirect" title="Unit impulse">unit impulse</a>.</p>
+<p>The DFT has orthogonal basis (<a href="https://en.wikipedia.org/wiki/DFT_matrix" title="DFT matrix">DFT matrix</a>):</p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow>
+            <mo>[</mo>
+            <mtable rowspacing="4pt" columnspacing="1em">
+              <mtr>
+                <mtd>
+                  <mn>1</mn>
+                </mtd>
+                <mtd>
+                  <mn>1</mn>
+                </mtd>
+                <mtd>
+                  <mn>1</mn>
+                </mtd>
+                <mtd>
+                  <mn>1</mn>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <mn>1</mn>
+                </mtd>
+                <mtd>
+                  <mo>&#x2212;<!-- − --></mo>
+                  <mi>i</mi>
+                </mtd>
+                <mtd>
+                  <mo>&#x2212;<!-- − --></mo>
+                  <mn>1</mn>
+                </mtd>
+                <mtd>
+                  <mi>i</mi>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <mn>1</mn>
+                </mtd>
+                <mtd>
+                  <mo>&#x2212;<!-- − --></mo>
+                  <mn>1</mn>
+                </mtd>
+                <mtd>
+                  <mn>1</mn>
+                </mtd>
+                <mtd>
+                  <mo>&#x2212;<!-- − --></mo>
+                  <mn>1</mn>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <mn>1</mn>
+                </mtd>
+                <mtd>
+                  <mi>i</mi>
+                </mtd>
+                <mtd>
+                  <mo>&#x2212;<!-- − --></mo>
+                  <mn>1</mn>
+                </mtd>
+                <mtd>
+                  <mo>&#x2212;<!-- − --></mo>
+                  <mi>i</mi>
+                </mtd>
+              </mtr>
+            </mtable>
+            <mo>]</mo>
+          </mrow>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\begin{bmatrix}1&amp;1&amp;1&amp;1\\1&amp;-i&amp;-1&amp;i\\1&amp;-1&amp;1&amp;-1\\1&amp;i&amp;-1&amp;-i\end{bmatrix}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/a35a2066de88c64cf4ee4dbd0a3cf0e76378006d" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -5.671ex; width:20.988ex; height:12.509ex;" alt="&#10;\begin{bmatrix}&#10;1 &amp;  1 &amp;  1 &amp;  1\\&#10;1 &amp; -i &amp; -1 &amp;  i\\&#10;1 &amp; -1 &amp;  1 &amp; -1\\&#10;1 &amp;  i &amp; -1 &amp; -i&#10;\end{bmatrix}&#10;" /></span></dd>
+</dl>
+<p>while the DWT with Haar wavelets for length 4 data has orthogonal basis in the rows of:</p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow>
+            <mo>[</mo>
+            <mtable rowspacing="4pt" columnspacing="1em">
+              <mtr>
+                <mtd>
+                  <mn>1</mn>
+                </mtd>
+                <mtd>
+                  <mn>1</mn>
+                </mtd>
+                <mtd>
+                  <mn>1</mn>
+                </mtd>
+                <mtd>
+                  <mn>1</mn>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <mn>1</mn>
+                </mtd>
+                <mtd>
+                  <mn>1</mn>
+                </mtd>
+                <mtd>
+                  <mo>&#x2212;<!-- − --></mo>
+                  <mn>1</mn>
+                </mtd>
+                <mtd>
+                  <mo>&#x2212;<!-- − --></mo>
+                  <mn>1</mn>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <mn>1</mn>
+                </mtd>
+                <mtd>
+                  <mo>&#x2212;<!-- − --></mo>
+                  <mn>1</mn>
+                </mtd>
+                <mtd>
+                  <mn>0</mn>
+                </mtd>
+                <mtd>
+                  <mn>0</mn>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <mn>0</mn>
+                </mtd>
+                <mtd>
+                  <mn>0</mn>
+                </mtd>
+                <mtd>
+                  <mn>1</mn>
+                </mtd>
+                <mtd>
+                  <mo>&#x2212;<!-- − --></mo>
+                  <mn>1</mn>
+                </mtd>
+              </mtr>
+            </mtable>
+            <mo>]</mo>
+          </mrow>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\begin{bmatrix}1&amp;1&amp;1&amp;1\\1&amp;1&amp;-1&amp;-1\\1&amp;-1&amp;0&amp;0\\0&amp;0&amp;1&amp;-1\end{bmatrix}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e1bd296319d0063ff75438289a014690813ab19e" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -5.671ex; width:20.988ex; height:12.509ex;" alt="&#10;\begin{bmatrix}&#10;1 &amp;  1 &amp;  1 &amp;  1\\&#10;1 &amp;  1 &amp; -1 &amp; -1\\&#10;1 &amp; -1 &amp;  0 &amp;  0\\&#10;0 &amp;  0 &amp;  1 &amp; -1&#10;\end{bmatrix}&#10;" /></span></dd>
+</dl>
+<p>(To simplify notation, whole numbers are used, so the bases are <a href="https://en.wikipedia.org/wiki/Orthogonal" class="mw-redirect" title="Orthogonal">orthogonal</a> but not <a href="https://en.wikipedia.org/wiki/Orthonormal" class="mw-redirect" title="Orthonormal">orthonormal</a>.)</p>
+<p>Preliminary observations include:</p>
+<ul>
+<li>Sinusoidal waves differ only in their frequency. The first does not complete any cycles, the second completes one full cycle, the third completes two cycles, and the fourth completes three cycles (which is equivalent to completing one cycle in the opposite direction). Differences in phase can be represented by multiplying a given basis vector by a complex constant.</li>
+<li>Wavelets, by contrast, have both frequency and location. As before, the first completes zero cycles, and the second completes one cycle. However, the second and third both have the same frequency, twice that of the first. Rather than differing in frequency, they differ in <i>location</i> — the third is nonzero over the first two elements, and the second is nonzero over the second two elements.</li>
+</ul>
+<p>Decomposing the sequence with respect to these bases yields:</p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true">
+            <mtr>
+              <mtd>
+                <mo stretchy="false">(</mo>
+                <mn>1</mn>
+                <mo>,</mo>
+                <mn>0</mn>
+                <mo>,</mo>
+                <mn>0</mn>
+                <mo>,</mo>
+                <mn>0</mn>
+                <mo stretchy="false">)</mo>
+              </mtd>
+              <mtd>
+                <mi></mi>
+                <mo>=</mo>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mfrac>
+                    <mn>1</mn>
+                    <mn>4</mn>
+                  </mfrac>
+                </mrow>
+                <mo stretchy="false">(</mo>
+                <mn>1</mn>
+                <mo>,</mo>
+                <mn>1</mn>
+                <mo>,</mo>
+                <mn>1</mn>
+                <mo>,</mo>
+                <mn>1</mn>
+                <mo stretchy="false">)</mo>
+                <mo>+</mo>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mfrac>
+                    <mn>1</mn>
+                    <mn>4</mn>
+                  </mfrac>
+                </mrow>
+                <mo stretchy="false">(</mo>
+                <mn>1</mn>
+                <mo>,</mo>
+                <mn>1</mn>
+                <mo>,</mo>
+                <mo>&#x2212;<!-- − --></mo>
+                <mn>1</mn>
+                <mo>,</mo>
+                <mo>&#x2212;<!-- − --></mo>
+                <mn>1</mn>
+                <mo stretchy="false">)</mo>
+                <mo>+</mo>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mfrac>
+                    <mn>1</mn>
+                    <mn>2</mn>
+                  </mfrac>
+                </mrow>
+                <mo stretchy="false">(</mo>
+                <mn>1</mn>
+                <mo>,</mo>
+                <mo>&#x2212;<!-- − --></mo>
+                <mn>1</mn>
+                <mo>,</mo>
+                <mn>0</mn>
+                <mo>,</mo>
+                <mn>0</mn>
+                <mo stretchy="false">)</mo>
+                <mspace width="2em" />
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mtext>Haar DWT</mtext>
+                </mrow>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mo stretchy="false">(</mo>
+                <mn>1</mn>
+                <mo>,</mo>
+                <mn>0</mn>
+                <mo>,</mo>
+                <mn>0</mn>
+                <mo>,</mo>
+                <mn>0</mn>
+                <mo stretchy="false">)</mo>
+              </mtd>
+              <mtd>
+                <mi></mi>
+                <mo>=</mo>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mfrac>
+                    <mn>1</mn>
+                    <mn>4</mn>
+                  </mfrac>
+                </mrow>
+                <mo stretchy="false">(</mo>
+                <mn>1</mn>
+                <mo>,</mo>
+                <mn>1</mn>
+                <mo>,</mo>
+                <mn>1</mn>
+                <mo>,</mo>
+                <mn>1</mn>
+                <mo stretchy="false">)</mo>
+                <mo>+</mo>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mfrac>
+                    <mn>1</mn>
+                    <mn>4</mn>
+                  </mfrac>
+                </mrow>
+                <mo stretchy="false">(</mo>
+                <mn>1</mn>
+                <mo>,</mo>
+                <mi>i</mi>
+                <mo>,</mo>
+                <mo>&#x2212;<!-- − --></mo>
+                <mn>1</mn>
+                <mo>,</mo>
+                <mo>&#x2212;<!-- − --></mo>
+                <mi>i</mi>
+                <mo stretchy="false">)</mo>
+                <mo>+</mo>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mfrac>
+                    <mn>1</mn>
+                    <mn>4</mn>
+                  </mfrac>
+                </mrow>
+                <mo stretchy="false">(</mo>
+                <mn>1</mn>
+                <mo>,</mo>
+                <mo>&#x2212;<!-- − --></mo>
+                <mn>1</mn>
+                <mo>,</mo>
+                <mn>1</mn>
+                <mo>,</mo>
+                <mo>&#x2212;<!-- − --></mo>
+                <mn>1</mn>
+                <mo stretchy="false">)</mo>
+                <mo>+</mo>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mfrac>
+                    <mn>1</mn>
+                    <mn>4</mn>
+                  </mfrac>
+                </mrow>
+                <mo stretchy="false">(</mo>
+                <mn>1</mn>
+                <mo>,</mo>
+                <mo>&#x2212;<!-- − --></mo>
+                <mi>i</mi>
+                <mo>,</mo>
+                <mo>&#x2212;<!-- − --></mo>
+                <mn>1</mn>
+                <mo>,</mo>
+                <mi>i</mi>
+                <mo stretchy="false">)</mo>
+                <mspace width="2em" />
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mtext>DFT</mtext>
+                </mrow>
+              </mtd>
+            </mtr>
+          </mtable>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\begin{aligned}(1,0,0,0)&amp;={\frac {1}{4}}(1,1,1,1)+{\frac {1}{4}}(1,1,-1,-1)+{\frac {1}{2}}(1,-1,0,0)\qquad {\text{Haar DWT}}\\(1,0,0,0)&amp;={\frac {1}{4}}(1,1,1,1)+{\frac {1}{4}}(1,i,-1,-i)+{\frac {1}{4}}(1,-1,1,-1)+{\frac {1}{4}}(1,-i,-1,i)\qquad {\text{DFT}}\end{aligned}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/1c902c9c3851bd9e5bd2196758d1acac9d372a74" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -4.573ex; margin-bottom: -0.265ex; width:87.844ex; height:10.843ex;" alt="\begin{align}&#10;(1,0,0,0) &amp;= \frac{1}{4}(1,1,1,1) + \frac{1}{4}(1,1,-1,-1) + \frac{1}{2}(1,-1,0,0)  \qquad \text{Haar DWT}\\&#10;(1,0,0,0) &amp;= \frac{1}{4}(1,1,1,1) + \frac{1}{4}(1,i,-1,-i) + \frac{1}{4}(1,-1,1,-1) + \frac{1}{4}(1,-i,-1,i)  \qquad \text{DFT}&#10;\end{align}" /></span></dd>
+</dl>
+<p>The DWT demonstrates the localization: the (1,1,1,1) term gives the average signal value, the (1,1,–1,–1) places the signal in the left side of the domain, and the (1,–1,0,0) places it at the left side of the left side, and truncating at any stage yields a downsampled version of the signal:</p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true">
+            <mtr>
+              <mtd />
+              <mtd>
+                <mrow>
+                  <mo>(</mo>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mfrac>
+                      <mn>1</mn>
+                      <mn>4</mn>
+                    </mfrac>
+                  </mrow>
+                  <mo>,</mo>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mfrac>
+                      <mn>1</mn>
+                      <mn>4</mn>
+                    </mfrac>
+                  </mrow>
+                  <mo>,</mo>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mfrac>
+                      <mn>1</mn>
+                      <mn>4</mn>
+                    </mfrac>
+                  </mrow>
+                  <mo>,</mo>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mfrac>
+                      <mn>1</mn>
+                      <mn>4</mn>
+                    </mfrac>
+                  </mrow>
+                  <mo>)</mo>
+                </mrow>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd />
+              <mtd>
+                <mrow>
+                  <mo>(</mo>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mfrac>
+                      <mn>1</mn>
+                      <mn>2</mn>
+                    </mfrac>
+                  </mrow>
+                  <mo>,</mo>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mfrac>
+                      <mn>1</mn>
+                      <mn>2</mn>
+                    </mfrac>
+                  </mrow>
+                  <mo>,</mo>
+                  <mn>0</mn>
+                  <mo>,</mo>
+                  <mn>0</mn>
+                  <mo>)</mo>
+                </mrow>
+                <mspace width="2em" />
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mtext>2-term truncation</mtext>
+                </mrow>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd />
+              <mtd>
+                <mrow>
+                  <mo>(</mo>
+                  <mn>1</mn>
+                  <mo>,</mo>
+                  <mn>0</mn>
+                  <mo>,</mo>
+                  <mn>0</mn>
+                  <mo>,</mo>
+                  <mn>0</mn>
+                  <mo>)</mo>
+                </mrow>
+              </mtd>
+            </mtr>
+          </mtable>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\begin{aligned}&amp;\left({\frac {1}{4}},{\frac {1}{4}},{\frac {1}{4}},{\frac {1}{4}}\right)\\&amp;\left({\frac {1}{2}},{\frac {1}{2}},0,0\right)\qquad {\text{2-term truncation}}\\&amp;\left(1,0,0,0\right)\end{aligned}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/1d42ee137c741d12fce35d1e16e20c7dc3a6d38f" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -7.171ex; width:36.795ex; height:15.509ex;" alt="\begin{align}&#10;&amp;\left(\frac{1}{4},\frac{1}{4},\frac{1}{4},\frac{1}{4}\right)\\&#10;&amp;\left(\frac{1}{2},\frac{1}{2},0,0\right)\qquad\text{2-term truncation}\\&#10;&amp;\left(1,0,0,0\right)&#10;\end{align}" /></span></dd>
+</dl>
+<div class="thumb tright">
+<div class="thumbinner" style="width:222px;"><a href="https://en.wikipedia.org/wiki/File:Sinc_function_(normalized).svg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Sinc_function_(normalized).svg/220px-Sinc_function_(normalized).svg.png" width="220" height="151" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Sinc_function_%28normalized%29.svg/330px-Sinc_function_%28normalized%29.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Sinc_function_%28normalized%29.svg/440px-Sinc_function_%28normalized%29.svg.png 2x" data-file-width="908" data-file-height="623" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="https://en.wikipedia.org/wiki/File:Sinc_function_(normalized).svg" class="internal" title="Enlarge"></a></div>
+The <a href="https://en.wikipedia.org/wiki/Sinc_function" title="Sinc function">sinc function</a>, showing the time domain artifacts (<a href="https://en.wikipedia.org/wiki/Undershoot_(signal)" class="mw-redirect" title="Undershoot (signal)">undershoot</a> and <a href="https://en.wikipedia.org/wiki/Ringing_(signal)" title="Ringing (signal)">ringing</a>) of truncating a Fourier series.</div>
+</div>
+</div>
+<p>The DFT, by contrast, expresses the sequence by the interference of waves of various frequencies – thus truncating the series yields a <a href="https://en.wikipedia.org/wiki/Low-pass_filter" title="Low-pass filter">low-pass filtered</a> version of the series:</p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true">
+            <mtr>
+              <mtd />
+              <mtd>
+                <mrow>
+                  <mo>(</mo>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mfrac>
+                      <mn>1</mn>
+                      <mn>4</mn>
+                    </mfrac>
+                  </mrow>
+                  <mo>,</mo>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mfrac>
+                      <mn>1</mn>
+                      <mn>4</mn>
+                    </mfrac>
+                  </mrow>
+                  <mo>,</mo>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mfrac>
+                      <mn>1</mn>
+                      <mn>4</mn>
+                    </mfrac>
+                  </mrow>
+                  <mo>,</mo>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mfrac>
+                      <mn>1</mn>
+                      <mn>4</mn>
+                    </mfrac>
+                  </mrow>
+                  <mo>)</mo>
+                </mrow>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd />
+              <mtd>
+                <mrow>
+                  <mo>(</mo>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mfrac>
+                      <mn>3</mn>
+                      <mn>4</mn>
+                    </mfrac>
+                  </mrow>
+                  <mo>,</mo>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mfrac>
+                      <mn>1</mn>
+                      <mn>4</mn>
+                    </mfrac>
+                  </mrow>
+                  <mo>,</mo>
+                  <mo>&#x2212;<!-- − --></mo>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mfrac>
+                      <mn>1</mn>
+                      <mn>4</mn>
+                    </mfrac>
+                  </mrow>
+                  <mo>,</mo>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mfrac>
+                      <mn>1</mn>
+                      <mn>4</mn>
+                    </mfrac>
+                  </mrow>
+                  <mo>)</mo>
+                </mrow>
+                <mspace width="2em" />
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mtext>2-term truncation</mtext>
+                </mrow>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd />
+              <mtd>
+                <mrow>
+                  <mo>(</mo>
+                  <mn>1</mn>
+                  <mo>,</mo>
+                  <mn>0</mn>
+                  <mo>,</mo>
+                  <mn>0</mn>
+                  <mo>,</mo>
+                  <mn>0</mn>
+                  <mo>)</mo>
+                </mrow>
+              </mtd>
+            </mtr>
+          </mtable>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\begin{aligned}&amp;\left({\frac {1}{4}},{\frac {1}{4}},{\frac {1}{4}},{\frac {1}{4}}\right)\\&amp;\left({\frac {3}{4}},{\frac {1}{4}},-{\frac {1}{4}},{\frac {1}{4}}\right)\qquad {\text{2-term truncation}}\\&amp;\left(1,0,0,0\right)\end{aligned}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/f445ba7a88a4aba2ed628b85f7694a2a232b88cf" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -7.171ex; width:40.286ex; height:15.509ex;" alt="\begin{align}&#10;&amp;\left(\frac{1}{4},\frac{1}{4},\frac{1}{4},\frac{1}{4}\right)\\&#10;&amp;\left(\frac{3}{4},\frac{1}{4},-\frac{1}{4},\frac{1}{4}\right)\qquad\text{2-term truncation}\\&#10;&amp;\left(1,0,0,0\right)&#10;\end{align}" /></span></dd>
+</dl>
+<p>Notably, the middle approximation (2-term) differs. From the frequency domain perspective, this is a better approximation, but from the time domain perspective it has drawbacks – it exhibits <a href="https://en.wikipedia.org/wiki/Undershoot_(signal)" class="mw-redirect" title="Undershoot (signal)">undershoot</a> – one of the values is negative, though the original series is non-negative everywhere – and <a href="https://en.wikipedia.org/wiki/Ringing_(signal)" title="Ringing (signal)">ringing</a>, where the right side is non-zero, unlike in the wavelet transform. On the other hand, the Fourier approximation correctly shows a peak, and all points are within <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mn>1</mn>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo>/</mo>
+        </mrow>
+        <mn>4</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle 1/4}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4d3cf1ef33695c3d98cb09f01e5700f927ce928c" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:3.519ex; height:2.843ex;" alt="1/4" /></span> of their correct value, though all points have error. The wavelet approximation, by contrast, places a peak on the left half, but has no peak at the first point, and while it is exactly correct for half the values (reflecting location), it has an error of <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mn>1</mn>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo>/</mo>
+        </mrow>
+        <mn>2</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle 1/2}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e308a3a46b7fdce07cc09dcab9e8d8f73e37d935" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:3.519ex; height:2.843ex;" alt="1/2" /></span> for the other values.</p>
+<p>This illustrates the kinds of trade-offs between these transforms, and how in some respects the DWT provides preferable behavior, particularly for the modeling of transients.</p>
+<h2><span class="mw-headline" id="Definition">Definition</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Discrete_wavelet_transform&amp;action=edit&amp;section=10" title="Edit section: Definition">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="One_level_of_the_transform">One level of the transform</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Discrete_wavelet_transform&amp;action=edit&amp;section=11" title="Edit section: One level of the transform">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The DWT of a signal <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>x</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle x}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/87f9e315fd7e2ba406057a97300593c4802b53e4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.34ex; height:1.676ex;" alt="x" /></span> is calculated by passing it through a series of filters. First the samples are passed through a <a href="https://en.wikipedia.org/wiki/Low_pass_filter" class="mw-redirect" title="Low pass filter">low pass filter</a> with <a href="https://en.wikipedia.org/wiki/Impulse_response" title="Impulse response">impulse response</a> <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>g</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle g}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d3556280e66fe2c0d0140df20935a6f057381d77" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:1.126ex; height:2.009ex;" alt="g" /></span> resulting in a <a href="https://en.wikipedia.org/wiki/Convolution" title="Convolution">convolution</a> of the two:</p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>y</mi>
+        <mo stretchy="false">[</mo>
+        <mi>n</mi>
+        <mo stretchy="false">]</mo>
+        <mo>=</mo>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo>&#x2217;<!-- ∗ --></mo>
+        <mi>g</mi>
+        <mo stretchy="false">)</mo>
+        <mo stretchy="false">[</mo>
+        <mi>n</mi>
+        <mo stretchy="false">]</mo>
+        <mo>=</mo>
+        <munderover>
+          <mo movablelimits="false">&#x2211;<!-- ∑ --></mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+            <mo>=</mo>
+            <mo>&#x2212;<!-- − --></mo>
+            <mi mathvariant="normal">&#x221E;<!-- ∞ --></mi>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi mathvariant="normal">&#x221E;<!-- ∞ --></mi>
+          </mrow>
+        </munderover>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mi>x</mi>
+          <mo stretchy="false">[</mo>
+          <mi>k</mi>
+          <mo stretchy="false">]</mo>
+          <mi>g</mi>
+          <mo stretchy="false">[</mo>
+          <mi>n</mi>
+          <mo>&#x2212;<!-- − --></mo>
+          <mi>k</mi>
+          <mo stretchy="false">]</mo>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle y[n]=(x*g)[n]=\sum \limits _{k=-\infty }^{\infty }{x[k]g[n-k]}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/f4eb91f7893c66437b324aa633b004bdab8fe35e" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -3.171ex; width:36.594ex; height:7.176ex;" alt="y[n]=(x*g)[n]=\sum \limits _{{k=-\infty }}^{\infty }{x[k]g[n-k]}" /></span></dd>
+</dl>
+<p>The signal is also decomposed simultaneously using a <a href="https://en.wikipedia.org/wiki/High-pass_filter" title="High-pass filter">high-pass filter</a> <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>h</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle h}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b26be3e694314bc90c3215047e4a2010c6ee184a" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.349ex; height:2.176ex;" alt="h" /></span>. The outputs giving the detail coefficients (from the high-pass filter) and approximation coefficients (from the low-pass). It is important that the two filters are related to each other and they are known as a <a href="https://en.wikipedia.org/wiki/Quadrature_mirror_filter" title="Quadrature mirror filter">quadrature mirror filter</a>.</p>
+<div class="thumb tnone">
+<div class="thumbinner" style="width:392px;"><a href="https://en.wikipedia.org/wiki/File:Wavelets_-_DWT.png" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/4/45/Wavelets_-_DWT.png" width="390" height="90" class="thumbimage" data-file-width="390" data-file-height="90" /></a>
+<div class="thumbcaption">Block diagram of filter analysis</div>
+</div>
+</div>
+<p>However, since half the frequencies of the signal have now been removed, half the samples can be discarded according to Nyquist’s rule. The filter output of the low-pass filter <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>g</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle g}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d3556280e66fe2c0d0140df20935a6f057381d77" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:1.126ex; height:2.009ex;" alt="g" /></span> in the diagram above is then <a href="https://en.wikipedia.org/wiki/Downsampling" class="mw-redirect" title="Downsampling">subsampled</a> by 2 and further processed by passing it again through a new low- pass filter <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>g</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle g}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d3556280e66fe2c0d0140df20935a6f057381d77" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:1.126ex; height:2.009ex;" alt="g" /></span> and a high- pass filter <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>h</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle h}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b26be3e694314bc90c3215047e4a2010c6ee184a" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.349ex; height:2.176ex;" alt="h" /></span> with half the cut-off frequency of the previous one,i.e.:</p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>y</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mrow class="MJX-TeXAtom-ORD">
+              <mi mathvariant="normal">l</mi>
+              <mi mathvariant="normal">o</mi>
+              <mi mathvariant="normal">w</mi>
+            </mrow>
+          </mrow>
+        </msub>
+        <mo stretchy="false">[</mo>
+        <mi>n</mi>
+        <mo stretchy="false">]</mo>
+        <mo>=</mo>
+        <munderover>
+          <mo movablelimits="false">&#x2211;<!-- ∑ --></mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+            <mo>=</mo>
+            <mo>&#x2212;<!-- − --></mo>
+            <mi mathvariant="normal">&#x221E;<!-- ∞ --></mi>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi mathvariant="normal">&#x221E;<!-- ∞ --></mi>
+          </mrow>
+        </munderover>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mi>x</mi>
+          <mo stretchy="false">[</mo>
+          <mi>k</mi>
+          <mo stretchy="false">]</mo>
+          <mi>g</mi>
+          <mo stretchy="false">[</mo>
+          <mn>2</mn>
+          <mi>n</mi>
+          <mo>&#x2212;<!-- − --></mo>
+          <mi>k</mi>
+          <mo stretchy="false">]</mo>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle y_{\mathrm {low} }[n]=\sum \limits _{k=-\infty }^{\infty }{x[k]g[2n-k]}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/2888626ff63016f7500fcd46ca830fc9a4257f23" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -3.171ex; width:28.14ex; height:7.176ex;" alt="{\displaystyle y_{\mathrm {low} }[n]=\sum \limits _{k=-\infty }^{\infty }{x[k]g[2n-k]}}" /></span></dd>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>y</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mrow class="MJX-TeXAtom-ORD">
+              <mi mathvariant="normal">h</mi>
+              <mi mathvariant="normal">i</mi>
+              <mi mathvariant="normal">g</mi>
+              <mi mathvariant="normal">h</mi>
+            </mrow>
+          </mrow>
+        </msub>
+        <mo stretchy="false">[</mo>
+        <mi>n</mi>
+        <mo stretchy="false">]</mo>
+        <mo>=</mo>
+        <munderover>
+          <mo movablelimits="false">&#x2211;<!-- ∑ --></mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+            <mo>=</mo>
+            <mo>&#x2212;<!-- − --></mo>
+            <mi mathvariant="normal">&#x221E;<!-- ∞ --></mi>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi mathvariant="normal">&#x221E;<!-- ∞ --></mi>
+          </mrow>
+        </munderover>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mi>x</mi>
+          <mo stretchy="false">[</mo>
+          <mi>k</mi>
+          <mo stretchy="false">]</mo>
+          <mi>h</mi>
+          <mo stretchy="false">[</mo>
+          <mn>2</mn>
+          <mi>n</mi>
+          <mo>&#x2212;<!-- − --></mo>
+          <mi>k</mi>
+          <mo stretchy="false">]</mo>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle y_{\mathrm {high} }[n]=\sum \limits _{k=-\infty }^{\infty }{x[k]h[2n-k]}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/0771b3bacd7a8fe2f620d96abd981d1867c31269" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -3.171ex; width:29.012ex; height:7.176ex;" alt="{\displaystyle y_{\mathrm {high} }[n]=\sum \limits _{k=-\infty }^{\infty }{x[k]h[2n-k]}}" /></span></dd>
+</dl>
+<p>This decomposition has halved the time resolution since only half of each filter output characterises the signal. However, each output has half the frequency band of the input, so the frequency resolution has been doubled.</p>
+<p>With the <a href="https://en.wikipedia.org/wiki/Subsampling" class="mw-disambig" title="Subsampling">subsampling</a> operator <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo stretchy="false">&#x2193;<!-- ↓ --></mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \downarrow }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4618f22b0f780805eb94bb407578d9bc9487947a" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:1.173ex; height:2.509ex;" alt="\downarrow " /></span></p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo stretchy="false">(</mo>
+        <mi>y</mi>
+        <mo stretchy="false">&#x2193;<!-- ↓ --></mo>
+        <mi>k</mi>
+        <mo stretchy="false">)</mo>
+        <mo stretchy="false">[</mo>
+        <mi>n</mi>
+        <mo stretchy="false">]</mo>
+        <mo>=</mo>
+        <mi>y</mi>
+        <mo stretchy="false">[</mo>
+        <mi>k</mi>
+        <mi>n</mi>
+        <mo stretchy="false">]</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle (y\downarrow k)[n]=y[kn]}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c85edbf80c21cb06f68ccbb1048db49557999c0e" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:17.617ex; height:2.843ex;" alt="(y \downarrow k)[n] = y[k n] " /></span></dd>
+</dl>
+<p>the above summation can be written more concisely.</p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>y</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mrow class="MJX-TeXAtom-ORD">
+              <mi mathvariant="normal">l</mi>
+              <mi mathvariant="normal">o</mi>
+              <mi mathvariant="normal">w</mi>
+            </mrow>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo>&#x2217;<!-- ∗ --></mo>
+        <mi>g</mi>
+        <mo stretchy="false">)</mo>
+        <mo stretchy="false">&#x2193;<!-- ↓ --></mo>
+        <mn>2</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle y_{\mathrm {low} }=(x*g)\downarrow 2}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/2ed98af6eb65258cad9e569df76d7b053741eb4a" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:17.117ex; height:2.843ex;" alt="y_{\mathrm{low}} = (x*g)\downarrow 2 " /></span></dd>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>y</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mrow class="MJX-TeXAtom-ORD">
+              <mi mathvariant="normal">h</mi>
+              <mi mathvariant="normal">i</mi>
+              <mi mathvariant="normal">g</mi>
+              <mi mathvariant="normal">h</mi>
+            </mrow>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo>&#x2217;<!-- ∗ --></mo>
+        <mi>h</mi>
+        <mo stretchy="false">)</mo>
+        <mo stretchy="false">&#x2193;<!-- ↓ --></mo>
+        <mn>2</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle y_{\mathrm {high} }=(x*h)\downarrow 2}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/7650bc9b9b2b6d52512ca79e66867cfa559528a3" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -1.005ex; width:17.989ex; height:3.009ex;" alt="y_{\mathrm{high}} = (x*h)\downarrow 2 " /></span></dd>
+</dl>
+<p>However computing a complete convolution <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>x</mi>
+        <mo>&#x2217;<!-- ∗ --></mo>
+        <mi>g</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle x*g}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/6bdd7d49f4bcb10fc3beff370f7abf22d59e7b29" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:4.672ex; height:2.009ex;" alt="x*g" /></span> with subsequent downsampling would waste computation time.</p>
+<p>The <a href="https://en.wikipedia.org/wiki/Lifting_scheme" title="Lifting scheme">Lifting scheme</a> is an optimization where these two computations are interleaved.</p>
+<h3><span class="mw-headline" id="Cascading_and_filter_banks">Cascading and filter banks</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Discrete_wavelet_transform&amp;action=edit&amp;section=12" title="Edit section: Cascading and filter banks">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>This decomposition is repeated to further increase the frequency resolution and the approximation coefficients decomposed with high and low pass filters and then down-sampled. This is represented as a binary tree with nodes representing a sub-space with a different time-frequency localisation. The tree is known as a <a href="https://en.wikipedia.org/wiki/Filter_bank" title="Filter bank">filter bank</a>.</p>
+<div class="thumb tnone">
+<div class="thumbinner" style="width:568px;"><a href="https://en.wikipedia.org/wiki/File:Wavelets_-_Filter_Bank.png" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/2/22/Wavelets_-_Filter_Bank.png" width="566" height="173" class="thumbimage" data-file-width="566" data-file-height="173" /></a>
+<div class="thumbcaption">A 3 level filter bank</div>
+</div>
+</div>
+<p>At each level in the above diagram the signal is decomposed into low and high frequencies. Due to the decomposition process the input signal must be a multiple of <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msup>
+          <mn>2</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+          </mrow>
+        </msup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle 2^{n}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/8226f30650ee4fe4e640c6d2798127e80e9c160d" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:2.399ex; height:2.343ex;" alt="2^{n}" /></span> where <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>n</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle n}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/a601995d55609f2d9f5e233e36fbe9ea26011b3b" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.405ex; height:1.676ex;" alt="n" /></span> is the number of levels.</p>
+<p>For example a signal with 32 samples, frequency range 0 to <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>f</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle f_{n}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b2702450f0458a5e01a698e248af552a7fab2b50" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:2.376ex; height:2.509ex;" alt="f_{n}" /></span> and 3 levels of decomposition, 4 output scales are produced:</p>
+<table class="wikitable">
+<tr>
+<th>Level</th>
+<th>Frequencies</th>
+<th>Samples</th>
+</tr>
+<tr>
+<td rowspan="2">3</td>
+<td><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mn>0</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle 0}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/2aae8864a3c1fec9585261791a809ddec1489950" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.173ex; height:2.176ex;" alt="{\displaystyle 0}" /></span> to <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <msub>
+            <mi>f</mi>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mi>n</mi>
+            </mrow>
+          </msub>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo>/</mo>
+        </mrow>
+        <mn>8</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {f_{n}}/8}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/39bffa97b70b5fac196a7beea3fc9e754a7857c1" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:4.721ex; height:2.843ex;" alt="{{f_n}}/8" /></span></td>
+<td>4</td>
+</tr>
+<tr>
+<td><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <msub>
+            <mi>f</mi>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mi>n</mi>
+            </mrow>
+          </msub>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo>/</mo>
+        </mrow>
+        <mn>8</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {f_{n}}/8}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/39bffa97b70b5fac196a7beea3fc9e754a7857c1" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:4.721ex; height:2.843ex;" alt="{{f_n}}/8" /></span> to <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <msub>
+            <mi>f</mi>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mi>n</mi>
+            </mrow>
+          </msub>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo>/</mo>
+        </mrow>
+        <mn>4</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {f_{n}}/4}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/f47bdb3bba2869c88175c2f70ef90a7951814299" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:4.721ex; height:2.843ex;" alt="{{f_n}}/4" /></span></td>
+<td>4</td>
+</tr>
+<tr>
+<td>2</td>
+<td><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <msub>
+            <mi>f</mi>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mi>n</mi>
+            </mrow>
+          </msub>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo>/</mo>
+        </mrow>
+        <mn>4</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {f_{n}}/4}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/f47bdb3bba2869c88175c2f70ef90a7951814299" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:4.721ex; height:2.843ex;" alt="{{f_n}}/4" /></span> to <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <msub>
+            <mi>f</mi>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mi>n</mi>
+            </mrow>
+          </msub>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo>/</mo>
+        </mrow>
+        <mn>2</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {f_{n}}/2}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/57cfdc51c0841cb0aff050ccfea2821e0a1a194a" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:4.721ex; height:2.843ex;" alt="{{f_n}}/2" /></span></td>
+<td>8</td>
+</tr>
+<tr>
+<td>1</td>
+<td><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <msub>
+            <mi>f</mi>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mi>n</mi>
+            </mrow>
+          </msub>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo>/</mo>
+        </mrow>
+        <mn>2</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {f_{n}}/2}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/57cfdc51c0841cb0aff050ccfea2821e0a1a194a" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:4.721ex; height:2.843ex;" alt="{{f_n}}/2" /></span> to <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>f</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle f_{n}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b2702450f0458a5e01a698e248af552a7fab2b50" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:2.376ex; height:2.509ex;" alt="f_{n}" /></span></td>
+<td>16</td>
+</tr>
+</table>
+<div class="thumb tnone">
+<div class="thumbinner" style="width:470px;"><a href="https://en.wikipedia.org/wiki/File:Wavelets_-_DWT_Freq.png" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/d/dd/Wavelets_-_DWT_Freq.png" width="468" height="130" class="thumbimage" data-file-width="468" data-file-height="130" /></a>
+<div class="thumbcaption">Frequency domain representation of the DWT</div>
+</div>
+</div>
+<h2><span class="mw-headline" id="Relationship_to_the_Mother_Wavelet">Relationship to the Mother Wavelet</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Discrete_wavelet_transform&amp;action=edit&amp;section=13" title="Edit section: Relationship to the Mother Wavelet">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The filterbank implementation of wavelets can be interpreted as computing the wavelet coefficients of a <a href="https://en.wikipedia.org/wiki/Wavelet#Discrete_wavelet_transforms_.28discrete_shift_and_scale_parameters.29" title="Wavelet">discrete set of child wavelets</a> for a given mother wavelet <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03C8;<!-- ψ --></mi>
+        <mo stretchy="false">(</mo>
+        <mi>t</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \psi (t)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/6cf4a36b5f945be90a527b3dbe3d55d3f0439cdb" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:4.204ex; height:2.843ex;" alt="\psi(t)" /></span>. In the case of the discrete wavelet transform, the mother wavelet is shifted and scaled by powers of two</p>
+<p><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>&#x03C8;<!-- ψ --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>j</mi>
+            <mo>,</mo>
+            <mi>k</mi>
+          </mrow>
+        </msub>
+        <mo stretchy="false">(</mo>
+        <mi>t</mi>
+        <mo stretchy="false">)</mo>
+        <mo>=</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <mn>1</mn>
+            <msqrt>
+              <msup>
+                <mn>2</mn>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mi>j</mi>
+                </mrow>
+              </msup>
+            </msqrt>
+          </mfrac>
+        </mrow>
+        <mi>&#x03C8;<!-- ψ --></mi>
+        <mrow>
+          <mo>(</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mfrac>
+              <mrow>
+                <mi>t</mi>
+                <mo>&#x2212;<!-- − --></mo>
+                <mi>k</mi>
+                <msup>
+                  <mn>2</mn>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi>j</mi>
+                  </mrow>
+                </msup>
+              </mrow>
+              <msup>
+                <mn>2</mn>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mi>j</mi>
+                </mrow>
+              </msup>
+            </mfrac>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \psi _{j,k}(t)={\frac {1}{\sqrt {2^{j}}}}\psi \left({\frac {t-k2^{j}}{2^{j}}}\right)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/3197debcbf7e08502aced40215825171be7e2347" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -3.338ex; width:28.02ex; height:7.176ex;" alt=" \psi_{j,k}(t)= \frac{1}{\sqrt{2^j}} \psi \left( \frac{t - k 2^j}{2^j} \right) " /></span></p>
+<p>where <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>j</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle j}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/2f461e54f5c093e92a55547b9764291390f0b5d0" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; margin-left: -0.016ex; width:0.985ex; height:2.509ex;" alt="j" /></span> is the scale parameter and <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>k</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle k}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c3c9a2c7b599b37105512c5d570edc034056dd40" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.222ex; height:2.176ex;" alt="k" /></span> is the shift parameter, both which are integers.</p>
+<p>Recall that the wavelet coefficient <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03B3;<!-- γ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \gamma }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/a223c880b0ce3da8f64ee33c4f0010beee400b1a" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:1.273ex; height:2.176ex;" alt="\gamma " /></span> of a signal <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>x</mi>
+        <mo stretchy="false">(</mo>
+        <mi>t</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle x(t)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d54c275db3a1e620737b58e143b0818107fa5f5c" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:4.02ex; height:2.843ex;" alt="x(t)" /></span> is the projection of <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>x</mi>
+        <mo stretchy="false">(</mo>
+        <mi>t</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle x(t)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d54c275db3a1e620737b58e143b0818107fa5f5c" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:4.02ex; height:2.843ex;" alt="x(t)" /></span> onto a wavelet, and let <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>x</mi>
+        <mo stretchy="false">(</mo>
+        <mi>t</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle x(t)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d54c275db3a1e620737b58e143b0818107fa5f5c" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:4.02ex; height:2.843ex;" alt="x(t)" /></span> be a signal of length <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msup>
+          <mn>2</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>N</mi>
+          </mrow>
+        </msup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle 2^{N}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/f3cc22b5fa0e34487c8a6153965408e004c6e253" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:2.872ex; height:2.676ex;" alt="2^N" /></span>. In the case of a child wavelet in the discrete family above,</p>
+<p><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>&#x03B3;<!-- γ --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>j</mi>
+            <mi>k</mi>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <msubsup>
+          <mo>&#x222B;<!-- ∫ --></mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo>&#x2212;<!-- − --></mo>
+            <mi mathvariant="normal">&#x221E;<!-- ∞ --></mi>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi mathvariant="normal">&#x221E;<!-- ∞ --></mi>
+          </mrow>
+        </msubsup>
+        <mi>x</mi>
+        <mo stretchy="false">(</mo>
+        <mi>t</mi>
+        <mo stretchy="false">)</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <mn>1</mn>
+            <msqrt>
+              <msup>
+                <mn>2</mn>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mi>j</mi>
+                </mrow>
+              </msup>
+            </msqrt>
+          </mfrac>
+        </mrow>
+        <mi>&#x03C8;<!-- ψ --></mi>
+        <mrow>
+          <mo>(</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mfrac>
+              <mrow>
+                <mi>t</mi>
+                <mo>&#x2212;<!-- − --></mo>
+                <mi>k</mi>
+                <msup>
+                  <mn>2</mn>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi>j</mi>
+                  </mrow>
+                </msup>
+              </mrow>
+              <msup>
+                <mn>2</mn>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mi>j</mi>
+                </mrow>
+              </msup>
+            </mfrac>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+        <mi>d</mi>
+        <mi>t</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \gamma _{jk}=\int _{-\infty }^{\infty }x(t){\frac {1}{\sqrt {2^{j}}}}\psi \left({\frac {t-k2^{j}}{2^{j}}}\right)dt}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/adf5164f271cfb49fcb27a812e7854b33feefac5" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -3.338ex; width:35.909ex; height:7.176ex;" alt=" \gamma_{jk} = \int_{-\infty}^{\infty} x(t)  \frac{1}{\sqrt{2^j}} \psi \left( \frac{t - k 2^j}{2^j} \right) dt " /></span></p>
+<p>Now fix <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>j</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle j}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/2f461e54f5c093e92a55547b9764291390f0b5d0" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; margin-left: -0.016ex; width:0.985ex; height:2.509ex;" alt="j" /></span> at a particular scale, so that <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>&#x03B3;<!-- γ --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>j</mi>
+            <mi>k</mi>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \gamma _{jk}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/cb9e18e535e2ab3662a4c6e9f1f49b2d1ddfcfea" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -1.005ex; width:2.996ex; height:2.343ex;" alt=" \gamma_{jk} " /></span> is a function of <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>k</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle k}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c3c9a2c7b599b37105512c5d570edc034056dd40" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.222ex; height:2.176ex;" alt="k" /></span> only. In light of the above equation, <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>&#x03B3;<!-- γ --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>j</mi>
+            <mi>k</mi>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \gamma _{jk}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/cb9e18e535e2ab3662a4c6e9f1f49b2d1ddfcfea" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -1.005ex; width:2.996ex; height:2.343ex;" alt="\gamma_{jk}" /></span> can be viewed as a <a href="https://en.wikipedia.org/wiki/Convolution" title="Convolution">convolution</a> of <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>x</mi>
+        <mo stretchy="false">(</mo>
+        <mi>t</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle x(t)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d54c275db3a1e620737b58e143b0818107fa5f5c" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:4.02ex; height:2.843ex;" alt="x(t)" /></span> with a dilated, reflected, and normalized version of the mother wavelet, <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>h</mi>
+        <mo stretchy="false">(</mo>
+        <mi>t</mi>
+        <mo stretchy="false">)</mo>
+        <mo>=</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <mn>1</mn>
+            <msqrt>
+              <msup>
+                <mn>2</mn>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mi>j</mi>
+                </mrow>
+              </msup>
+            </msqrt>
+          </mfrac>
+        </mrow>
+        <mi>&#x03C8;<!-- ψ --></mi>
+        <mrow>
+          <mo>(</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mfrac>
+              <mrow>
+                <mo>&#x2212;<!-- − --></mo>
+                <mi>t</mi>
+              </mrow>
+              <msup>
+                <mn>2</mn>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mi>j</mi>
+                </mrow>
+              </msup>
+            </mfrac>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle h(t)={\frac {1}{\sqrt {2^{j}}}}\psi \left({\frac {-t}{2^{j}}}\right)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e5a60a08c64efb598727ba579c3d614631bc1199" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -3.338ex; width:21.257ex; height:7.009ex;" alt="h(t) =   \frac{1}{\sqrt{2^j}} \psi \left( \frac{-t}{2^j} \right) " /></span>, sampled at the points <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mn>1</mn>
+        <mo>,</mo>
+        <msup>
+          <mn>2</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>j</mi>
+          </mrow>
+        </msup>
+        <mo>,</mo>
+        <msup>
+          <mn>2</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+            <mi>j</mi>
+          </mrow>
+        </msup>
+        <mo>,</mo>
+        <mo>.</mo>
+        <mo>.</mo>
+        <mo>.</mo>
+        <mo>,</mo>
+        <msup>
+          <mn>2</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>N</mi>
+          </mrow>
+        </msup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle 1,2^{j},2^{2j},...,2^{N}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/59c6b2f001a0f9889ebe06daa830917e7bc3b4a5" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:16.365ex; height:3.009ex;" alt="1, 2^j, 2^{2j}, ..., 2^{N}" /></span>. But this is precisely what the detail coefficients give at level <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>j</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle j}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/2f461e54f5c093e92a55547b9764291390f0b5d0" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; margin-left: -0.016ex; width:0.985ex; height:2.509ex;" alt="j" /></span> of the discrete wavelet transform. Therefore, for an appropriate choice of <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>h</mi>
+        <mo stretchy="false">[</mo>
+        <mi>n</mi>
+        <mo stretchy="false">]</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle h[n]}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/89981bbbb05ffd469eeadb828c18359965985e46" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:4.069ex; height:2.843ex;" alt="h[n]" /></span> and <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>g</mi>
+        <mo stretchy="false">[</mo>
+        <mi>n</mi>
+        <mo stretchy="false">]</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle g[n]}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/3c5e1d771a2385e9aeb71838a40425bb07c89525" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:3.846ex; height:2.843ex;" alt="g[n]" /></span>, the detail coefficients of the filter bank correspond exactly to a wavelet coefficient of a discrete set of child wavelets for a given mother wavelet <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03C8;<!-- ψ --></mi>
+        <mo stretchy="false">(</mo>
+        <mi>t</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \psi (t)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/6cf4a36b5f945be90a527b3dbe3d55d3f0439cdb" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:4.204ex; height:2.843ex;" alt="\psi(t)" /></span>.</p>
+<p>As an example, consider the discrete <a href="https://en.wikipedia.org/wiki/Haar_wavelet" title="Haar wavelet">Haar wavelet</a>, whose mother wavelet is <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03C8;<!-- ψ --></mi>
+        <mo>=</mo>
+        <mo stretchy="false">[</mo>
+        <mn>1</mn>
+        <mo>,</mo>
+        <mo>&#x2212;<!-- − --></mo>
+        <mn>1</mn>
+        <mo stretchy="false">]</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \psi =[1,-1]}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/184cea2b9e81c07ceb47b147fef04a19a2c79048" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:11.156ex; height:2.843ex;" alt="\psi = [1, -1]" /></span>. Then the dilated, reflected, and normalized version of this wavelet is <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>h</mi>
+        <mo stretchy="false">[</mo>
+        <mi>n</mi>
+        <mo stretchy="false">]</mo>
+        <mo>=</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <mn>1</mn>
+            <msqrt>
+              <mn>2</mn>
+            </msqrt>
+          </mfrac>
+        </mrow>
+        <mo stretchy="false">[</mo>
+        <mo>&#x2212;<!-- − --></mo>
+        <mn>1</mn>
+        <mo>,</mo>
+        <mn>1</mn>
+        <mo stretchy="false">]</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle h[n]={\frac {1}{\sqrt {2}}}[-1,1]}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9bab290b077bb173832a55e0d0e9790f96d054d6" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -2.838ex; width:17.657ex; height:6.176ex;" alt="h[n] = \frac{1}{\sqrt{2}} [-1, 1]" /></span>, which is, indeed, the highpass decomposition filter for the discrete Haar wavelet transform.</p>
+<h2><span class="mw-headline" id="Time_complexity">Time complexity</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Discrete_wavelet_transform&amp;action=edit&amp;section=14" title="Edit section: Time complexity">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The filterbank implementation of the Discrete Wavelet Transform takes only <a href="https://en.wikipedia.org/wiki/Big_O_notation" title="Big O notation">O(<i>N</i>)</a> in certain cases, as compared to O(<i>N</i>&#160;log&#160;<i>N</i>) for the <a href="https://en.wikipedia.org/wiki/Fast_Fourier_transform" title="Fast Fourier transform">fast Fourier transform</a>.</p>
+<p>Note that if <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>g</mi>
+        <mo stretchy="false">[</mo>
+        <mi>n</mi>
+        <mo stretchy="false">]</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle g[n]}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/3c5e1d771a2385e9aeb71838a40425bb07c89525" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:3.846ex; height:2.843ex;" alt="g[n]" /></span> and <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>h</mi>
+        <mo stretchy="false">[</mo>
+        <mi>n</mi>
+        <mo stretchy="false">]</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle h[n]}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/89981bbbb05ffd469eeadb828c18359965985e46" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:4.069ex; height:2.843ex;" alt="h[n]" /></span> are both a constant length (i.e. their length is independent of N), then <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>x</mi>
+        <mo>&#x2217;<!-- ∗ --></mo>
+        <mi>h</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle x*h}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/dc1866595e84e3beb2f32f0cc38c01519b72b8a9" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:4.895ex; height:2.176ex;" alt="x * h" /></span> and <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>x</mi>
+        <mo>&#x2217;<!-- ∗ --></mo>
+        <mi>g</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle x*g}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/6bdd7d49f4bcb10fc3beff370f7abf22d59e7b29" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:4.672ex; height:2.009ex;" alt="x * g" /></span> each take <a href="https://en.wikipedia.org/wiki/Big_O_notation" title="Big O notation">O(<i>N</i>)</a> time. The wavelet filterbank does each of these two <a href="https://en.wikipedia.org/wiki/Big_O_notation" title="Big O notation">O(<i>N</i>)</a> convolutions, then splits the signal into two branches of size N/2. But it only recursively splits the upper branch convolved with <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>g</mi>
+        <mo stretchy="false">[</mo>
+        <mi>n</mi>
+        <mo stretchy="false">]</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle g[n]}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/3c5e1d771a2385e9aeb71838a40425bb07c89525" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:3.846ex; height:2.843ex;" alt="g[n]" /></span> (as contrasted with the FFT, which recursively splits both the upper branch and the lower branch). This leads to the following <a href="https://en.wikipedia.org/wiki/Recurrence_relation" title="Recurrence relation">recurrence relation</a></p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>T</mi>
+        <mo stretchy="false">(</mo>
+        <mi>N</mi>
+        <mo stretchy="false">)</mo>
+        <mo>=</mo>
+        <mn>2</mn>
+        <mi>N</mi>
+        <mo>+</mo>
+        <mi>T</mi>
+        <mrow>
+          <mo>(</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mfrac>
+              <mi>N</mi>
+              <mn>2</mn>
+            </mfrac>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle T(N)=2N+T\left({\frac {N}{2}}\right)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/01e57ffcf74e57654e60baf7fb1a6f5c71e8d483" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -2.505ex; width:23.144ex; height:6.176ex;" alt="{\displaystyle T(N)=2N+T\left({\frac {N}{2}}\right)}" /></span></dd>
+</dl>
+<p>which leads to an <a href="https://en.wikipedia.org/wiki/Big_O_notation" title="Big O notation">O(<i>N</i>)</a> time for the entire operation, as can be shown by a <a href="https://en.wikipedia.org/wiki/Geometric_series" title="Geometric series">geometric series</a> expansion of the above relation.</p>
+<p>As an example, the discrete <a href="https://en.wikipedia.org/wiki/Haar_wavelet" title="Haar wavelet">Haar wavelet</a> transform is linear, since in that case <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>h</mi>
+        <mo stretchy="false">[</mo>
+        <mi>n</mi>
+        <mo stretchy="false">]</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle h[n]}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/89981bbbb05ffd469eeadb828c18359965985e46" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:4.069ex; height:2.843ex;" alt="h[n]" /></span> and <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>g</mi>
+        <mo stretchy="false">[</mo>
+        <mi>n</mi>
+        <mo stretchy="false">]</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle g[n]}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/3c5e1d771a2385e9aeb71838a40425bb07c89525" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:3.846ex; height:2.843ex;" alt="g[n]" /></span> are constant length&#160;2.</p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>h</mi>
+        <mo stretchy="false">[</mo>
+        <mi>n</mi>
+        <mo stretchy="false">]</mo>
+        <mo>=</mo>
+        <mrow>
+          <mo>[</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mfrac>
+              <mrow>
+                <mo>&#x2212;<!-- − --></mo>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <msqrt>
+                    <mn>2</mn>
+                  </msqrt>
+                </mrow>
+              </mrow>
+              <mn>2</mn>
+            </mfrac>
+          </mrow>
+          <mo>,</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mfrac>
+              <msqrt>
+                <mn>2</mn>
+              </msqrt>
+              <mn>2</mn>
+            </mfrac>
+          </mrow>
+          <mo>]</mo>
+        </mrow>
+        <mi>g</mi>
+        <mo stretchy="false">[</mo>
+        <mi>n</mi>
+        <mo stretchy="false">]</mo>
+        <mo>=</mo>
+        <mrow>
+          <mo>[</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mfrac>
+              <msqrt>
+                <mn>2</mn>
+              </msqrt>
+              <mn>2</mn>
+            </mfrac>
+          </mrow>
+          <mo>,</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mfrac>
+              <msqrt>
+                <mn>2</mn>
+              </msqrt>
+              <mn>2</mn>
+            </mfrac>
+          </mrow>
+          <mo>]</mo>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle h[n]=\left[{\frac {-{\sqrt {2}}}{2}},{\frac {\sqrt {2}}{2}}\right]g[n]=\left[{\frac {\sqrt {2}}{2}},{\frac {\sqrt {2}}{2}}\right]}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/040faee166a5945c0fd99b632808e2143c978b0f" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -3.171ex; width:39.712ex; height:7.509ex;" alt="h[n] = \left[\frac{-\sqrt{2}}{2}, \frac{\sqrt{2}}{2}\right]  g[n] =  \left[\frac{\sqrt{2}}{2}, \frac{\sqrt{2}}{2}\right]" /></span></dd>
+</dl>
+<h2><span class="mw-headline" id="Other_transforms">Other transforms</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Discrete_wavelet_transform&amp;action=edit&amp;section=15" title="Edit section: Other transforms">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div role="note" class="hatnote">See also: <a href="https://en.wikipedia.org/wiki/Adam7_algorithm" title="Adam7 algorithm">Adam7 algorithm</a></div>
+<p>The <a href="https://en.wikipedia.org/wiki/Adam7_algorithm" title="Adam7 algorithm">Adam7 algorithm</a>, used for <a href="https://en.wikipedia.org/wiki/Interlacing_(bitmaps)" title="Interlacing (bitmaps)">interlacing</a> in the <a href="https://en.wikipedia.org/wiki/Portable_Network_Graphics" title="Portable Network Graphics">Portable Network Graphics</a> (PNG) format, is a multiscale model of the data which is similar to a DWT with <a href="https://en.wikipedia.org/wiki/Haar_wavelet" title="Haar wavelet">Haar wavelets</a>.</p>
+<p>Unlike the DWT, it has a specific scale – it starts from an 8×8 block, and it <a href="https://en.wikipedia.org/wiki/Downsample" class="mw-redirect" title="Downsample">downsamples</a> the image, rather than <a href="https://en.wikipedia.org/wiki/Decimation_(signal_processing)" title="Decimation (signal processing)">decimating</a> (<a href="https://en.wikipedia.org/wiki/Low-pass_filter" title="Low-pass filter">low-pass filtering</a>, then downsampling). It thus offers worse frequency behavior, showing artifacts (<a href="https://en.wikipedia.org/wiki/Pixelation" title="Pixelation">pixelation</a>) at the early stages, in return for simpler implementation.</p>
+<h2><span class="mw-headline" id="Code_example">Code example</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Discrete_wavelet_transform&amp;action=edit&amp;section=16" title="Edit section: Code example">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>In its simplest form, the DWT is remarkably easy to compute.</p>
+<p>The <a href="https://en.wikipedia.org/wiki/Haar_wavelet" title="Haar wavelet">Haar wavelet</a> in <a href="Java_(programming_language).html" title="Java (programming language)">Java</a>:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span><span class="o">[]</span> <span class="nf">discreteHaarWaveletTransform</span><span class="o">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">input</span><span class="o">)</span> <span class="o">{</span>
+    <span class="c1">// This function assumes that input.length=2^n, n&gt;1</span>
+    <span class="kt">int</span><span class="o">[]</span> <span class="n">output</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">input</span><span class="o">.</span><span class="na">length</span><span class="o">];</span>
+
+    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">length</span> <span class="o">=</span> <span class="n">input</span><span class="o">.</span><span class="na">length</span> <span class="o">&gt;&gt;</span> <span class="mi">1</span><span class="o">;</span> <span class="o">;</span> <span class="n">length</span> <span class="o">&gt;&gt;=</span> <span class="mi">1</span><span class="o">)</span> <span class="o">{</span>
+        <span class="c1">// length = input.length / 2^n, WITH n INCREASING to log_2(input.length)</span>
+        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">length</span><span class="o">;</span> <span class="o">++</span><span class="n">i</span><span class="o">)</span> <span class="o">{</span>
+            <span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="n">input</span><span class="o">[</span><span class="n">i</span> <span class="o">*</span> <span class="mi">2</span><span class="o">]</span> <span class="o">+</span> <span class="n">input</span><span class="o">[</span><span class="n">i</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="o">];</span>
+            <span class="kt">int</span> <span class="n">difference</span> <span class="o">=</span> <span class="n">input</span><span class="o">[</span><span class="n">i</span> <span class="o">*</span> <span class="mi">2</span><span class="o">]</span> <span class="o">-</span> <span class="n">input</span><span class="o">[</span><span class="n">i</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="o">];</span>
+            <span class="n">output</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">sum</span><span class="o">;</span>
+            <span class="n">output</span><span class="o">[</span><span class="n">length</span> <span class="o">+</span> <span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">difference</span><span class="o">;</span>
+        <span class="o">}</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">length</span> <span class="o">==</span> <span class="mi">1</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">return</span> <span class="n">output</span><span class="o">;</span>
+        <span class="o">}</span>
+
+        <span class="c1">//Swap arrays to do next iteration</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">arraycopy</span><span class="o">(</span><span class="n">output</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="n">input</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="n">length</span> <span class="o">&lt;&lt;</span> <span class="mi">1</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+<p>Complete Java code for a 1-D and 2-D DWT using <a href="https://en.wikipedia.org/wiki/Haar_wavelet" title="Haar wavelet">Haar</a>, <a href="https://en.wikipedia.org/wiki/Daubechies_wavelet" title="Daubechies wavelet">Daubechies</a>, <a href="https://en.wikipedia.org/wiki/Coiflet" title="Coiflet">Coiflet</a>, and <a href="https://en.wikipedia.org/wiki/Legendre_wavelet" title="Legendre wavelet">Legendre</a> wavelets is available from the open source project: <a rel="nofollow" class="external text" href="https://github.com/cscheiblich/JWave">JWave</a>. Furthermore, a fast lifting implementation of the discrete biorthogonal <a href="https://en.wikipedia.org/wiki/Cohen-Daubechies-Feauveau_wavelet" title="Cohen-Daubechies-Feauveau wavelet">CDF</a> 9/7 wavelet transform in <a href="https://en.wikipedia.org/wiki/C_(programming_language)" title="C (programming language)">C</a>, used in the <a href="https://en.wikipedia.org/wiki/JPEG_2000" title="JPEG 2000">JPEG 2000</a> image compression standard can be found <a rel="nofollow" class="external text" href="https://web.archive.org/web/20120305164605/http://www.embl.de/~gpau/misc/dwt97.c">here</a> (archived 5 March 2012).</p>
+<h3><span class="mw-headline" id="Example_of_above_code">Example of above code</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Discrete_wavelet_transform&amp;action=edit&amp;section=17" title="Edit section: Example of above code">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="thumb tright">
+<div class="thumbinner" style="width:302px;"><a href="https://en.wikipedia.org/wiki/File:Haar_DWT_of_the_Sound_Waveform_%22I_Love_Wavelets%22.png" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Haar_DWT_of_the_Sound_Waveform_%22I_Love_Wavelets%22.png/300px-Haar_DWT_of_the_Sound_Waveform_%22I_Love_Wavelets%22.png" width="300" height="183" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Haar_DWT_of_the_Sound_Waveform_%22I_Love_Wavelets%22.png/450px-Haar_DWT_of_the_Sound_Waveform_%22I_Love_Wavelets%22.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Haar_DWT_of_the_Sound_Waveform_%22I_Love_Wavelets%22.png/600px-Haar_DWT_of_the_Sound_Waveform_%22I_Love_Wavelets%22.png 2x" data-file-width="1790" data-file-height="1094" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="https://en.wikipedia.org/wiki/File:Haar_DWT_of_the_Sound_Waveform_%22I_Love_Wavelets%22.png" class="internal" title="Enlarge"></a></div>
+An example of computing the discrete Haar wavelet coefficients for a sound signal of someone saying "I Love Wavelets." The original waveform is shown in blue in the upper left, and the wavelet coefficients are shown in black in the upper right. Along the bottom is shown three zoomed-in regions of the wavelet coefficients for different ranges.</div>
+</div>
+</div>
+<p>This figure shows an example of applying the above code to compute the Haar wavelet coefficients on a sound waveform. This example highlights two key properties of the wavelet transform:</p>
+<ul>
+<li>Natural signals often have some degree of smoothness, which makes them sparse in the wavelet domain. There are far fewer significant components in the wavelet domain in this example than there are in the time domain, and most of the significant components are towards the coarser coefficients on the left. Hence, natural signals are compressible in the wavelet domain.</li>
+<li>The wavelet transform is a multiresolution, bandpass representation of a signal. This can be seen directly from the filterbank definition of the discrete wavelet transform given in this article. For a signal of length <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msup>
+          <mn>2</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>N</mi>
+          </mrow>
+        </msup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle 2^{N}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/f3cc22b5fa0e34487c8a6153965408e004c6e253" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:2.872ex; height:2.676ex;" alt="2^N" /></span>, the coefficients in the range <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo stretchy="false">[</mo>
+        <msup>
+          <mn>2</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mfrac>
+              <mi>N</mi>
+              <mrow>
+                <mi>j</mi>
+                <mo>+</mo>
+                <mn>1</mn>
+              </mrow>
+            </mfrac>
+          </mrow>
+        </msup>
+        <mo>,</mo>
+        <msup>
+          <mn>2</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mfrac>
+              <mi>N</mi>
+              <mi>j</mi>
+            </mfrac>
+          </mrow>
+        </msup>
+        <mo>&#x2212;<!-- − --></mo>
+        <mn>1</mn>
+        <mo stretchy="false">]</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle [2^{\frac {N}{j+1}},2^{\frac {N}{j}}-1]}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/0acd02ec635221dac057b5af22b07b394f62e8b8" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:14.329ex; height:4.343ex;" alt="[2^{\frac{N}{j+1}}, 2^{\frac{N}{j}}-1]" /></span> represent a version of the original signal which is in the pass-band <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow>
+          <mo>[</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mfrac>
+              <mi>&#x03C0;<!-- π --></mi>
+              <msup>
+                <mn>2</mn>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mi>j</mi>
+                </mrow>
+              </msup>
+            </mfrac>
+          </mrow>
+          <mo>,</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mfrac>
+              <mi>&#x03C0;<!-- π --></mi>
+              <msup>
+                <mn>2</mn>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mi>j</mi>
+                  <mo>&#x2212;<!-- − --></mo>
+                  <mn>1</mn>
+                </mrow>
+              </msup>
+            </mfrac>
+          </mrow>
+          <mo>]</mo>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \left[{\frac {\pi }{2^{j}}},{\frac {\pi }{2^{j-1}}}\right]}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/1818a598dac087031bfd7681f2aa03ee59a3dca5" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -2.505ex; width:11.488ex; height:6.176ex;" alt=" \left[ \frac{\pi}{2^j}, \frac{\pi}{2^{j-1}} \right]" /></span>. This is why zooming in on these ranges of the wavelet coefficients looks so similar in structure to the original signal. Ranges which are closer to the left (larger <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>j</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle j}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/2f461e54f5c093e92a55547b9764291390f0b5d0" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; margin-left: -0.016ex; width:0.985ex; height:2.509ex;" alt="j" /></span> in the above notation), are coarser representations of the signal, while ranges to the right represent finer details.</li>
+</ul>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Discrete_wavelet_transform&amp;action=edit&amp;section=18" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Wavelet" title="Wavelet">Wavelet</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Wavelet_series" class="mw-redirect" title="Wavelet series">Wavelet series</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Wavelet_compression" class="mw-redirect" title="Wavelet compression">Wavelet compression</a></li>
+<li>Wavelet entropy</li>
+<li><a href="https://en.wikipedia.org/wiki/List_of_wavelet-related_transforms" title="List of wavelet-related transforms">List of wavelet-related transforms</a></li>
+</ul>
+<h2><span class="mw-headline" id="Notes">Notes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Discrete_wavelet_transform&amp;action=edit&amp;section=19" title="Edit section: Notes">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;"></div>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Discrete_wavelet_transform&amp;action=edit&amp;section=20" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text">Akansu, Ali N.; Haddad, Richard A. (1992), Multiresolution signal decomposition: transforms, subbands, and wavelets, Boston, MA: Academic Press, <a href="https://en.wikipedia.org/wiki/Special:BookSources/9780120471416" class="internal mw-magiclink-isbn">ISBN 978-0-12-047141-6</a></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text">Selesnick, I.W.; Baraniuk, R.G.; Kingsbury, N.C., 2005, <i>The dual-tree complex wavelet transform</i></span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text">S. Mallat, A Wavelet Tour of Signal Processing, 2nd ed. San Diego, CA: Academic, 1999.</span></li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text">S. G. Mallat and S. Zhong, “Characterization of signals from multiscale edges,” IEEE Trans. Pattern Anal. Mach. Intell., vol. 14, no. 7, pp. 710– 732, Jul. 1992.</span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text">Ince, Kiranyaz, Gabbouj, 2009, <i>A generic and robust system for automated patient-specific classification of ECG signals</i></span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://www.youtube.com/watch?v=DTpEVQSEBBk">"Novel method for stride length estimation with body area network accelerometers"</a>, <i>IEEE BioWireless 2011</i>, pp. 79–82</span></li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text">A.N. Akansu and M.J.T. Smith, <a rel="nofollow" class="external text" href="http://www.amazon.com/Subband-Wavelet-Transforms-Applications-International/dp/0792396456/ref=sr_1_1?s=books&amp;ie=UTF8&amp;qid=1325018106&amp;sr=1-1">Subband and Wavelet Transforms: Design and Applications</a>, Kluwer Academic Publishers, 1995.</span></li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text">A.N. Akansu and M.J. Medley, <a rel="nofollow" class="external text" href="http://www.amazon.com/Transforms-Communications-Multimedia-International-Engineering/dp/1441950869/ref=sr_1_fkmr0_3?s=books&amp;ie=UTF8&amp;qid=1325018358&amp;sr=1-3-fkmr0">Wavelet, Subband and Block Transforms in Communications and Multimedia</a>, Kluwer Academic Publishers, 1999.</span></li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text">A.N. Akansu, P. Duhamel, X. Lin and M. de Courville <a rel="nofollow" class="external text" href="http://web.njit.edu/~akansu/PAPERS/AKANSU-ORTHOGONAL-MUX-1998.pdf">Orthogonal Transmultiplexers in Communication: A Review</a>, IEEE Trans. On Signal Processing, Special Issue on Theory and Applications of Filter Banks and Wavelets. Vol. 46, No.4, pp. 979–995, April, 1998.</span></li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text">A.N. Akansu, W.A. Serdijn, and I.W. Selesnick, <a rel="nofollow" class="external text" href="http://web.njit.edu/~akansu/PAPERS/ANA-IWS-WAS-ELSEVIER PHYSCOM 2010.pdf">Wavelet Transforms in Signal Processing: A Review of Emerging Applications</a>, Physical Communication, Elsevier, vol. 3, issue 1, pp. 1–18, March 2010.</span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Discrete_wavelet_transform&amp;action=edit&amp;section=21" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li>Stanford's <a rel="nofollow" class="external text" href="http://statweb.stanford.edu/~wavelab/">WaveLab</a> in matlab</li>
+<li><a rel="nofollow" class="external text" href="http://www.fit.vutbr.cz/research/view_product.php?id=211&amp;notitle=1">libdwt</a>, a cross-platform DWT library written in C</li>
+<li><a rel="nofollow" class="external text" href="https://www.scribd.com/document/334619872/Concise-Introduction-to-Wavelets">Concise Introduction to Wavelets</a> by René Puchinger</li>
+</ul>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1276
+Cached time: 20161219193517
+Cache expiry: 2592000
+Dynamic content: false
+CPU time usage: 0.140 seconds
+Real time usage: 0.426 seconds
+Preprocessor visited node count: 700/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 884/2097152 bytes
+Template argument size: 8/2097152 bytes
+Highest expansion depth: 4/40
+Expensive parser function count: 0/500
+Lua time usage: 0.008/10.000 seconds
+Lua memory usage: 796 KB/50 MB
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  198.529      1 - -total
+ 12.10%   24.025      2 - Template:Main
+  6.05%   12.019      2 - Template:Reflist
+  2.28%    4.535      2 - Template:See_also
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:857564-0!*!0!!en!4!*!math=5 and timestamp 20161219193539 and revision id 755716810
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Discrete_wavelet_transform&amp;oldid=755716810">https://en.wikipedia.org/w/index.php?title=Discrete_wavelet_transform&amp;oldid=755716810</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Help_Category.html" title="Help:Category">Categories</a>: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Numerical_analysis" title="Category:Numerical analysis">Numerical analysis</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Digital_signal_processing" title="Category:Digital signal processing">Digital signal processing</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Wavelets" title="Category:Wavelets">Wavelets</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Discrete_transforms" title="Category:Discrete transforms">Discrete transforms</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Pages_using_ISBN_magic_links" title="Category:Pages using ISBN magic links">Pages using ISBN magic links</a></li><li><a href="Category_Articles_with_example_Java_code.html" title="Category:Articles with example Java code">Articles with example Java code</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="Special_MyTalk.html" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="Special_MyContributions.html" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&amp;returnto=Discrete+wavelet+transform" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Discrete+wavelet+transform" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="Discrete_wavelet_transform.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+															<li  id="ca-talk"><span><a href="https://en.wikipedia.org/wiki/Talk:Discrete_wavelet_transform"  title="Discussion about the content page [t]" accesskey="t" rel="discussion">Talk</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="Discrete_wavelet_transform.html" >Read</a></span></li>
+															<li id="ca-edit"><span><a href="https://en.wikipedia.org/w/index.php?title=Discrete_wavelet_transform&amp;action=edit"  title="Edit this page [e]" accesskey="e">Edit</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="https://en.wikipedia.org/w/index.php?title=Discrete_wavelet_transform&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="https://en.wikipedia.org/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="Main_Page.html"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="Portal_Contents.html" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="Portal_Featured_content.html" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="Portal_Current_events.html" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="https://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="../../shop.wikimedia.org/index.html" title="Visit the Wikipedia store">Wikipedia store</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Interaction</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-help"><a href="Help_Contents.html" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="Wikipedia_About.html" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="Wikipedia_Community_portal.html" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="Wikipedia_Contact_us.html" title="How to contact Wikipedia">Contact page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="https://en.wikipedia.org/wiki/Special:WhatLinksHere/Discrete_wavelet_transform" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://en.wikipedia.org/wiki/Special:RecentChangesLinked/Discrete_wavelet_transform" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="Wikipedia_File_Upload_Wizard.html" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="https://en.wikipedia.org/w/index.php?title=Discrete_wavelet_transform&amp;oldid=755716810" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://en.wikipedia.org/w/index.php?title=Discrete_wavelet_transform&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q2414958" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="https://en.wikipedia.org/w/index.php?title=Special:CiteThisPage&amp;page=Discrete_wavelet_transform&amp;id=755716810" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Print/export</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Discrete+wavelet+transform">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Discrete+wavelet+transform&amp;returnto=Discrete+wavelet+transform&amp;oldid=755716810&amp;writer=rdf2latex">Download as PDF</a></li><li id="t-print"><a href="https://en.wikipedia.org/w/index.php?title=Discrete_wavelet_transform&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Languages</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Transformada_discreta_d%27ondeta" title="Transformada discreta d'ondeta – Catalan" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Diskrétní_vlnková_transformace" title="Diskrétní vlnková transformace – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Wavelet-Transformation#Diskrete_Wavelet-Transformation" title="Wavelet-Transformation – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/تبدیل_موجک_گسسته" title="تبدیل موجک گسسته – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Ondelette#Transform.C3.A9e_en_ondelettes_discr.C3.A8te" title="Ondelette – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/離散ウェーブレット変換" title="離散ウェーブレット変換 – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Transformada_discreta_de_wavelet" title="Transformada discreta de wavelet – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/Дискретное_вейвлет-преобразование" title="Дискретное вейвлет-преобразование – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/離散小波變換" title="離散小波變換 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q2414958#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 19 December 2016, at 19:35.</li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="Wikipedia_Text_of_Creative_Commons_Attribution-ShareAlike_3.html">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="../../creativecommons.org/licenses/by-sa/3.0/index.html" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="../../wikimediafoundation.org/wiki/Terms_of_Use.html">Terms of Use</a> and <a href="../../wikimediafoundation.org/wiki/Privacy_policy.html">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="../../www.wikimediafoundation.org/index.html">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../../wikimediafoundation.org/wiki/Privacy_policy.html" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="Wikipedia_About.html" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="Wikipedia_General_disclaimer.html" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="Wikipedia_Contact_us.html">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a href="../../www.mediawiki.org/wiki/Special_MyLanguage/How_to_contribute.html">Developers</a></li>
+											<li id="footer-places-cookiestatement"><a href="../../wikimediafoundation.org/wiki/Cookie_statement.html">Cookie statement</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/w/index.php?title=Discrete_wavelet_transform&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="../../www.wikimediafoundation.org/index.html"><img src="https://en.wikipedia.org/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="../../www.mediawiki.org/index.html"><img src="https://en.wikipedia.org/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":52,"wgHostname":"mw1242"});});</script>
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Discrete_wavelet_transform by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:52:54 GMT -->
+</html>

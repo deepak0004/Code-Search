@@ -1,0 +1,73 @@
+    
+        I am using <a href="http://wicket.apache.org/" rel="nofollow">Wicket with the Wicket Auth Project for my presentation layer and I have therefore integrated it with Spring Security. This is the method which is called by Wicket for authentication for me:
+
+@Override
+public boolean authenticate(String username, String password) {
+    try {
+    	Authentication request = new UsernamePasswordAuthenticationToken(
+    			username, password);
+    	Authentication result = authenticationManager.authenticate(request);
+    	SecurityContextHolder.getContext().setAuthentication(result);
+    } catch (AuthenticationException e) {
+    	return false;
+    }
+    return true;
+}
+
+
+The contents (inside ) of my Spring Security XML configuration are:
+
+&lt;http path-type="regex"&gt;
+    &lt;form-login login-page="/signin"/&gt;
+&lt;logout logout-url="/logout" /&gt;
+&lt;/http&gt;
+&lt;global-method-security secured-annotations="enabled" /&gt;
+&lt;authentication-manager alias="authenticationManager"/&gt;
+&lt;authentication-provider user-service-ref="userService"&gt;
+    &lt;password-encoder ref="bcryptpasswordencoder" /&gt;
+&lt;/authentication-provider&gt;
+
+
+The section <a href="http://static.springframework.org/spring-security/site/docs/2.0.x/reference/ns-config.html#ns-session-fixation" rel="nofollow">2.3.6. Session Fixation Attack Protection of the reference documentation says:
+
+
+  Session fixation attacks are a potential risk where it is possible
+  for a malicious attacker to create a
+  session by accessing a site, then
+  persuade another user to log in with
+  the same session (by sending them a
+  link containing the session identifier
+  as a parameter, for example). Spring
+  Security protects against this
+  automatically by creating a new
+  session when a user logs in. If you
+  don't require this protection, or it
+  conflicts with some other requirement,
+  you can control the behaviour using
+  the session-fixation-protection
+  attribute on , which has three
+  options:
+  
+  
+  migrateSession - creates a new session and copies the existing
+  session attributes to the new session. This is the default.
+  none - Don't do anything. The original session will be retained.
+  newSession - Create a new "clean" session, without copying the
+  existing session data.
+  
+
+
+The authentication works, but I as I'm fairly new to Spring Security I have some questions which I need answers too:
+
+
+Normally for login, I would POST the authentication information to j_spring_security_check and let Spring Security perform the actual authentication code. I would like to have protection against session fixation attacks, will I get it when I perform a programmatic login as I do? And if not, what would I have to do to get it?
+How do I perform programmatic logout?
+As I will use programmatic login and logout, how do I disable Spring from intercepting those URL's?
+
+
+Update:
+For session fixation attack protection it seems that I need to call the method in the SessionUtils class with the signature startNewSessionIfRequired(HttpServletRequest request, boolean migrateAttributes, SessionRegistry sessionRegistry).
+
+How do I get the SessionRegistry instance which I need to pass in? I can't find any way to create an alias ID for it, or how to get it's ID or name.
+
+                

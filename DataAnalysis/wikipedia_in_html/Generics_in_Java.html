@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Generics_in_Java by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:04 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Generics in Java - Wikipedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Generics_in_Java","wgTitle":"Generics in Java","wgCurRevisionId":758487504,"wgRevisionId":758487504,"wgArticleId":7955681,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Java (programming language)","Polymorphism (computer science)"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Generics_in_Java","wgRelevantArticleId":7955681,"wgRequestId":"WHWGxgpAIDkAAC@9b68AAABL","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgFlaggedRevsParams":{"tags":{}},"wgStableRevisionId":null,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"en","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgWikibaseItemId":"Q379273","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.cite.styles":"ready","ext.pygments":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@1dqfd7l",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["ext.cite.a11y","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.legacy.wikibits","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.watchlist-notice","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.gadget.featured-articles-links","ext.centralauth.centralautologin","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.interface","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="https://en.wikipedia.org/w/load.php?debug=false&amp;lang=en&amp;modules=ext.cite.styles%7Cext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="../w/load2c8d.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../w/load18b6.css?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.29.0-wmf.7"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="https://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Generics_in_Java"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Generics_in_Java&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Generics_in_Java&amp;action=edit"/>
+<link rel="apple-touch-icon" href="https://en.wikipedia.org/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="../static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../w/api251f.php?action=rsd"/>
+<link rel="copyright" href="../../creativecommons.org/licenses/by-sa/3.0/index.html"/>
+<link rel="canonical" href="Generics_in_Java.html"/>
+<link rel="dns-prefetch" href="../../login.wikimedia.org/index.html"/>
+<link rel="dns-prefetch" href="../../meta.wikimedia.org/index.html" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Generics_in_Java rootpage-Generics_in_Java skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">Generics in Java</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><script>function mfTempOpenSection(id){var block=document.getElementById("mf-section-"+id);block.className+=" open-block";block.previousSibling.className+=" open-block";}</script><p><b>Generics</b> are a facility of <a href="https://en.wikipedia.org/wiki/Generic_programming" title="Generic programming">generic programming</a> that were added to the <a href="Java_(programming_language).html" title="Java (programming language)">Java programming language</a> in 2004 within the official version <a href="Java_Platform%2c_Standard_Edition.html" title="Java Platform, Standard Edition">J2SE</a> 5.0. They extend Java's <a href="https://en.wikipedia.org/wiki/Type_system" title="Type system">type system</a> to allow “a type or method to operate on objects of various types while providing compile-time type safety.”<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[1]</a></sup> In particular, the <a href="Java_collections_framework.html" title="Java collections framework">Java collections framework</a> supports generics to specify the type of objects stored in a collection instance.</p>
+<p>In 1998, <a href="https://en.wikipedia.org/wiki/Gilad_Bracha" title="Gilad Bracha">Gilad Bracha</a>, <a href="https://en.wikipedia.org/wiki/Martin_Odersky" title="Martin Odersky">Martin Odersky</a>, <a href="https://en.wikipedia.org/w/index.php?title=David_Stoutamire&amp;action=edit&amp;redlink=1" class="new" title="David Stoutamire (page does not exist)">David Stoutamire</a> and <a href="https://en.wikipedia.org/wiki/Philip_Wadler" title="Philip Wadler">Philip Wadler</a> created <a href="https://en.wikipedia.org/wiki/Generic_Java" title="Generic Java">Generic Java</a>, an extension to the Java language to support generic types.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">[2]</a></sup> Generic Java was incorporated in Java with the addition of wildcards.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Hierarchy_and_classification"><span class="tocnumber">1</span> <span class="toctext">Hierarchy and classification</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Motivation"><span class="tocnumber">2</span> <span class="toctext">Motivation</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Type_wildcards"><span class="tocnumber">3</span> <span class="toctext">Type wildcards</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Generic_class_definitions"><span class="tocnumber">4</span> <span class="toctext">Generic class definitions</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Diamond_operator"><span class="tocnumber">5</span> <span class="toctext">Diamond operator</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Generic_method_definitions"><span class="tocnumber">6</span> <span class="toctext">Generic method definitions</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Generics_in_throws_clause"><span class="tocnumber">7</span> <span class="toctext">Generics in throws clause</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Problems_with_type_erasure"><span class="tocnumber">8</span> <span class="toctext">Problems with type erasure</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Project_Valhalla"><span class="tocnumber">9</span> <span class="toctext">Project Valhalla</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#See_also"><span class="tocnumber">10</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#References"><span class="tocnumber">11</span> <span class="toctext">References</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Hierarchy_and_classification">Hierarchy and classification</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Generics_in_Java&amp;action=edit&amp;section=1" title="Edit section: Hierarchy and classification">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>According to <i>Java Language Specification</i>:<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">[3]</a></sup></p>
+<ul>
+<li>A <b>type variable</b> is an unqualified identifier. Type variables are introduced by generic class declarations, generic interface declarations, generic method declarations, and by generic constructor declarations.</li>
+<li>A <b>class</b> is generic if it declares one or more type variables. These type variables are known as the type parameters of the class. It defines one or more type variables that act as parameters. A generic class declaration defines a set of parameterized types, one for each possible invocation of the type parameter section. All of these parameterized types share the same class at runtime.</li>
+<li>An <b>interface</b> is generic if it declares one or more type variables. These type variables are known as the type parameters of the interface. It defines one or more type variables that act as parameters. A generic interface declaration defines a set of types, one for each possible invocation of the type parameter section. All parameterized types share the same interface at runtime.</li>
+<li>A <b>method</b> is generic if it declares one or more type variables. These type variables are known as the formal type parameters of the method. The form of the formal type parameter list is identical to a type parameter list of a class or interface.</li>
+<li>A <b>constructor</b> can be declared as generic, independently of whether the class that the constructor is declared in is itself generic. A constructor is generic if it declares one or more type variables. These type variables are known as the formal type parameters of the constructor. The form of the formal type parameter list is identical to a type parameter list of a generic class or interface.</li>
+</ul>
+<h2><span class="mw-headline" id="Motivation">Motivation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Generics_in_Java&amp;action=edit&amp;section=2" title="Edit section: Motivation">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The following block of Java code illustrates a problem that exists when not using generics. First, it declares an <code>ArrayList</code> of type <code>Object</code>. Then, it adds a <code>String</code> to the <code>ArrayList</code>. Finally, it attempts to retrieve the added <code>String</code> and cast it to an <code>Integer</code>.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="n">List</span> <span class="n">v</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">();</span>
+<span class="n">v</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"test"</span><span class="o">);</span>
+<span class="n">Integer</span> <span class="n">i</span> <span class="o">=</span> <span class="o">(</span><span class="n">Integer</span><span class="o">)</span><span class="n">v</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span> <span class="c1">// Run time error</span>
+</pre></div>
+<p>Although the code is compiled without error, it throws a runtime exception (<code>java.lang.ClassCastException</code>) when executing the third line of code. This type of problem can be avoided by using generics and is the primary motivation for using generics.</p>
+<p>Using generics, the above code fragment can be rewritten as follows:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">v</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;();</span>
+<span class="n">v</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"test"</span><span class="o">);</span>
+<span class="n">Integer</span> <span class="n">i</span> <span class="o">=</span> <span class="n">v</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span> <span class="c1">// (type error)  compilation-time error</span>
+</pre></div>
+<p>The type parameter <code>String</code> within the angle brackets declares the <code>ArrayList</code> to be constituted of <code>String</code> (a descendant of the <code>ArrayList</code>'s generic <code>Object</code> constituents). With generics, it is no longer necessary to cast the third line to any particular type, because the result of <code>v.get(0)</code> is defined as <code>String</code> by the code generated by the compiler.</p>
+<p>Compiling the third line of this fragment with J2SE 5.0 (or later) will yield a <a href="https://en.wikipedia.org/wiki/Compile_time" title="Compile time">compile-time</a> error because the compiler will detect that <code>v.get(0)</code> returns <code>String</code> instead of <code>Integer</code>. For a more elaborate example, see reference.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">[4]</a></sup></p>
+<p>Here is a small excerpt from the definition of the interfaces <code>List</code> and <code>Iterator</code> in package <b><code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/8/docs/api/java/util/package-summary.html">java.util</a></code></b>:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">List</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span> <span class="o">{</span> 
+    <span class="kt">void</span> <span class="nf">add</span><span class="o">(</span><span class="n">E</span> <span class="n">x</span><span class="o">);</span>
+    <span class="n">Iterator</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span> <span class="nf">iterator</span><span class="o">();</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Iterator</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span> <span class="o">{</span> 
+    <span class="n">E</span> <span class="nf">next</span><span class="o">();</span>
+    <span class="kt">boolean</span> <span class="nf">hasNext</span><span class="o">();</span>
+<span class="o">}</span>
+</pre></div>
+<h2><span class="mw-headline" id="Type_wildcards">Type wildcards</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Generics_in_Java&amp;action=edit&amp;section=3" title="Edit section: Type wildcards">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div role="note" class="hatnote">Main article: <a href="https://en.wikipedia.org/wiki/Wildcard_(Java)" title="Wildcard (Java)">Wildcard (Java)</a></div>
+<p>A type argument for a parameterized type is not limited to a concrete class or interface. Java allows the use of <i>type wildcards</i> to serve as type arguments for parameterized types. Wildcards are type arguments in the form "?", possibly with an upper or lower <a href="https://en.wikipedia.org/wiki/Bounded_quantification" title="Bounded quantification">bound</a>. Given that the exact type represented by a wildcard is unknown, restrictions are placed on the type of methods that may be called on an object which uses parameterized types.</p>
+<p>As an example of an unbounded wildcard, <code>List&lt;?&gt;</code> indicates a list which has an unknown object type. <a href="https://en.wikipedia.org/wiki/Method_(computer_science)" class="mw-redirect" title="Method (computer science)">Methods</a> which take such a list as a parameter will accept any type of list as argument. Reading from the list will return objects of type <code>Object</code>, and adding non-<a href="https://en.wikipedia.org/wiki/Null_pointer" title="Null pointer">null</a> elements to the list is not allowed, since the element type is not known.</p>
+<p>To specify the <a href="https://en.wikipedia.org/wiki/Bounded_quantification" title="Bounded quantification">upper bound</a> of a type wildcard, the <code>extends</code> keyword is used, which indicates that the type argument is a subtype of the bounding class. So <code>List&lt;? extends Number&gt;</code> means that the given list contains objects of some unknown type which extend the <code>Number</code> class. For example, the list could be <code>List&lt;Float&gt;</code> or <code>List&lt;Number&gt;</code>. Reading an element from the list will return a <code>Number</code>, while adding non-null elements is once again not allowed.</p>
+<p>The use of wildcards above adds flexibility since there is not any inheritance relationship between any two parameterized types with concrete type as type argument. Neither <code>List&lt;Number&gt;</code> nor <code>List&lt;Integer&gt;</code> is a subtype of the other, even though <code>Integer</code> is a subtype of <code>Number</code>. So, any method that takes <code>List&lt;Number&gt;</code> as a parameter does not accept an argument of <code>List&lt;Integer&gt;</code>. If it did, it would be possible to insert a <code>Number</code> that is not an <code>Integer</code> into it, which violates type safety. Here is sample code that explains the contradiction it brings if <code>List&lt;Integer&gt;</code> were a subtype of <code>List&lt;Number&gt;</code>:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">ints</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;();</span>
+<span class="n">ints</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="mi">2</span><span class="o">);</span>
+<span class="n">List</span><span class="o">&lt;</span><span class="n">Number</span><span class="o">&gt;</span> <span class="n">nums</span> <span class="o">=</span> <span class="n">ints</span><span class="o">;</span>  <span class="c1">// valid if List&lt;Integer&gt; were a subtype of List&lt;Number&gt; according to substitution rule. </span>
+<span class="n">nums</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="mf">3.14</span><span class="o">);</span>  
+<span class="n">Integer</span> <span class="n">x</span><span class="o">=</span><span class="n">ints</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="mi">1</span><span class="o">);</span> <span class="c1">// now 3.14 is assigned to an Integer variable!</span>
+</pre></div>
+<p>The solution with wildcards works because it disallows operations that would violate type safety.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="n">List</span><span class="o">&lt;?</span> <span class="kd">extends</span> <span class="n">Number</span><span class="o">&gt;</span> <span class="n">nums</span> <span class="o">=</span> <span class="n">ints</span><span class="o">;</span>  <span class="c1">// it is OK</span>
+<span class="n">nums</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="mf">3.14</span><span class="o">);</span> <span class="c1">// it is prohibited</span>
+</pre></div>
+<p>To specify the lower bounding class of a type wildcard, the <code>super</code> keyword is used. This keyword indicates that the type argument is a supertype of the bounding class. So, <code>List&lt;? super Number&gt;</code> could represent <code>List&lt;Number&gt;</code> or <code>List&lt;Object&gt;</code>. Reading from a list defined as <code>List&lt;? super Number&gt;</code> returns elements of type <code>Object</code>. Adding to such a list requires elements of type <code>Number</code> or any super type of <code>Number</code>.</p>
+<p>The mnemonic PECS (Producer Extends, Consumer Super) from the book <b>Effective Java</b> by <a href="https://en.wikipedia.org/wiki/Joshua_Bloch" title="Joshua Bloch">Joshua Bloch</a> gives an easy way to remember when to use wildcards (corresponding to covariance and contravariance) in Java.</p>
+<h2><span class="mw-headline" id="Generic_class_definitions">Generic class definitions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Generics_in_Java&amp;action=edit&amp;section=4" title="Edit section: Generic class definitions">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Here is an example of a generic Java class, which can be used to represent individual entries (key to value mappings) in a <a href="https://en.wikipedia.org/wiki/Map_(computer_science)" class="mw-redirect" title="Map (computer science)">map</a>:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Entry</span><span class="o">&lt;</span><span class="n">KeyType</span><span class="o">,</span> <span class="n">ValueType</span><span class="o">&gt;</span> <span class="o">{</span>
+  
+    <span class="kd">private</span> <span class="kd">final</span> <span class="n">KeyType</span> <span class="n">key</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="kd">final</span> <span class="n">ValueType</span> <span class="n">value</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="nf">Entry</span><span class="o">(</span><span class="n">KeyType</span> <span class="n">key</span><span class="o">,</span> <span class="n">ValueType</span> <span class="n">value</span><span class="o">)</span> <span class="o">{</span>  
+        <span class="k">this</span><span class="o">.</span><span class="na">key</span> <span class="o">=</span> <span class="n">key</span><span class="o">;</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">value</span> <span class="o">=</span> <span class="n">value</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="n">KeyType</span> <span class="nf">getKey</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">key</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="n">ValueType</span> <span class="nf">getValue</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">value</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="o">()</span> <span class="o">{</span> 
+        <span class="k">return</span> <span class="s">"("</span> <span class="o">+</span> <span class="n">key</span> <span class="o">+</span> <span class="s">", "</span> <span class="o">+</span> <span class="n">value</span> <span class="o">+</span> <span class="s">")"</span><span class="o">;</span>  
+    <span class="o">}</span>
+
+<span class="o">}</span>
+</pre></div>
+<p>This generic class could be used in the following ways, for example:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="n">Entry</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">grade</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Entry</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;(</span><span class="s">"Mike"</span><span class="o">,</span> <span class="s">"A"</span><span class="o">);</span>
+<span class="n">Entry</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">Integer</span><span class="o">&gt;</span> <span class="n">mark</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Entry</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">Integer</span><span class="o">&gt;(</span><span class="s">"Mike"</span><span class="o">,</span> <span class="mi">100</span><span class="o">);</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"grade: "</span> <span class="o">+</span> <span class="n">grade</span><span class="o">);</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"mark: "</span> <span class="o">+</span> <span class="n">mark</span><span class="o">);</span>
+
+<span class="n">Entry</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">,</span> <span class="n">Boolean</span><span class="o">&gt;</span> <span class="n">prime</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Entry</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">,</span> <span class="n">Boolean</span><span class="o">&gt;(</span><span class="mi">13</span><span class="o">,</span> <span class="kc">true</span><span class="o">);</span>
+<span class="k">if</span> <span class="o">(</span><span class="n">prime</span><span class="o">.</span><span class="na">getValue</span><span class="o">())</span> <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">prime</span><span class="o">.</span><span class="na">getKey</span><span class="o">()</span> <span class="o">+</span> <span class="s">" is prime."</span><span class="o">);</span>
+<span class="k">else</span> <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">prime</span><span class="o">.</span><span class="na">getKey</span><span class="o">()</span> <span class="o">+</span> <span class="s">" is not prime."</span><span class="o">);</span>
+</pre></div>
+<p>It outputs:</p>
+<pre>
+grade: (Mike, A)
+mark: (Mike, 100)
+13 is prime.
+</pre>
+<h2><span class="mw-headline" id="Diamond_operator">Diamond operator</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Generics_in_Java&amp;action=edit&amp;section=5" title="Edit section: Diamond operator">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Java SE 7 and above allow the programmer to substitute an empty pair of angle brackets (<code>&lt;&gt;</code>, called the <i>diamond operator</i>) for a pair of angle brackets containing the one or more type parameters that a sufficiently-close context <a href="https://en.wikipedia.org/wiki/Type_conversion#implicit_type_conversion" title="Type conversion">implies</a>.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">[5]</a></sup> Thus, the above code example using <code>Entry</code> can be rewritten as:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="n">Entry</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">grade</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Entry</span><span class="o">&lt;&gt;(</span><span class="s">"Mike"</span><span class="o">,</span> <span class="s">"A"</span><span class="o">);</span>
+<span class="n">Entry</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">Integer</span><span class="o">&gt;</span> <span class="n">mark</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Entry</span><span class="o">&lt;&gt;(</span><span class="s">"Mike"</span><span class="o">,</span> <span class="mi">100</span><span class="o">);</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"grade: "</span> <span class="o">+</span> <span class="n">grade</span><span class="o">);</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"mark: "</span> <span class="o">+</span> <span class="n">mark</span><span class="o">);</span>
+
+<span class="n">Entry</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">,</span> <span class="n">Boolean</span><span class="o">&gt;</span> <span class="n">prime</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Entry</span><span class="o">&lt;&gt;(</span><span class="mi">13</span><span class="o">,</span> <span class="kc">true</span><span class="o">);</span>
+<span class="k">if</span> <span class="o">(</span><span class="n">prime</span><span class="o">.</span><span class="na">getValue</span><span class="o">())</span> <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">prime</span><span class="o">.</span><span class="na">getKey</span><span class="o">()</span> <span class="o">+</span> <span class="s">" is prime."</span><span class="o">);</span>
+<span class="k">else</span> <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">prime</span><span class="o">.</span><span class="na">getKey</span><span class="o">()</span> <span class="o">+</span> <span class="s">" is not prime."</span><span class="o">);</span>
+</pre></div>
+<h2><span class="mw-headline" id="Generic_method_definitions">Generic method definitions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Generics_in_Java&amp;action=edit&amp;section=6" title="Edit section: Generic method definitions">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Here is an example of a generic method using the generic class above:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kd">public</span> <span class="kd">static</span> <span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;</span> <span class="n">Entry</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">,</span> <span class="n">Type</span><span class="o">&gt;</span> <span class="nf">twice</span><span class="o">(</span><span class="n">Type</span> <span class="n">value</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="n">Entry</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">,</span> <span class="n">Type</span><span class="o">&gt;(</span><span class="n">value</span><span class="o">,</span> <span class="n">value</span><span class="o">);</span>
+<span class="o">}</span>
+</pre></div>
+<p>Note: If we remove the first &lt;Type&gt; in the above method, we will get compilation error (cannot find symbol 'Type') since it represents the declaration of the symbol.</p>
+<p>In many cases the user of the method need not indicate the type parameters, as they can be inferred:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="n">Entry</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">pair</span> <span class="o">=</span> <span class="n">Entry</span><span class="o">.</span><span class="na">twice</span><span class="o">(</span><span class="s">"Hello"</span><span class="o">);</span>
+</pre></div>
+<p>The parameters can be explicitly added if needed:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="n">Entry</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">pair</span> <span class="o">=</span> <span class="n">Entry</span><span class="o">.&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="n">twice</span><span class="o">(</span><span class="s">"Hello"</span><span class="o">);</span>
+</pre></div>
+<p>The use of <a href="https://en.wikipedia.org/wiki/Primitive_type" class="mw-redirect" title="Primitive type">primitive types</a> is not allowed, and <a href="Object_type_(object-oriented_programming).html#Boxing" title="Object type (object-oriented programming)">boxed</a> versions must be used instead:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="n">Entry</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">,</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="n">pair</span><span class="o">;</span> <span class="c1">// Fails compilation. Use Integer instead.</span>
+</pre></div>
+<p>There is also the possibility to create generic methods based on given parameters.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kd">public</span> <span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;</span> <span class="n">Type</span><span class="o">[]</span> <span class="nf">toArray</span><span class="o">(</span><span class="n">Type</span><span class="o">...</span> <span class="n">elements</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">elements</span><span class="o">;</span>
+<span class="o">}</span>
+</pre></div>
+<p>In such cases you can't use primitive types either, e.g.:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="n">Integer</span><span class="o">[]</span> <span class="n">array</span> <span class="o">=</span> <span class="n">toArray</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">6</span><span class="o">);</span>
+</pre></div>
+<h2><span class="mw-headline" id="Generics_in_throws_clause">Generics in throws clause</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Generics_in_Java&amp;action=edit&amp;section=7" title="Edit section: Generics in throws clause">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Although exceptions themselves cannot be generic, generic parameters can appear in a throws clause:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kd">public</span> <span class="o">&lt;</span><span class="n">T</span> <span class="kd">extends</span> <span class="n">Throwable</span><span class="o">&gt;</span> <span class="kt">void</span> <span class="nf">throwMeConditional</span><span class="o">(</span><span class="kt">boolean</span> <span class="n">conditional</span><span class="o">,</span> <span class="n">T</span> <span class="n">exception</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">T</span> <span class="o">{</span>
+    <span class="k">if</span><span class="o">(</span><span class="n">conditional</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">throw</span> <span class="n">exception</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+<h2><span class="mw-headline" id="Problems_with_type_erasure">Problems with type erasure</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Generics_in_Java&amp;action=edit&amp;section=8" title="Edit section: Problems with type erasure">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Generics are checked at compile-time for type-correctness. The generic type information is then removed in a process called <a href="https://en.wikipedia.org/wiki/Type_erasure" title="Type erasure">type erasure</a>. For example, <code>List&lt;Integer&gt;</code> will be converted to the non-generic type <code>List</code>, which ordinarily contains arbitrary objects. The compile-time check guarantees that the resulting code is type-correct.</p>
+<p>Because of type erasure, type parameters cannot be determined at run-time. For example, when an <code>ArrayList</code> is examined at runtime, there is no general way to determine whether, before type erasure, it was an <code>ArrayList&lt;Integer&gt;</code> or an <code>ArrayList&lt;Float&gt;</code>. Many people are dissatisfied with this restriction.<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">[6]</a></sup> There are partial approaches. For example, individual elements may be examined to determine the type they belong to; for example, if an <code>ArrayList</code> contains an <code>Integer</code>, that ArrayList may have been parameterized with <code>Integer</code> (however, it may have been parameterized with any parent of <code>Integer</code>, such as <code>Number</code> or <code>Object</code>).</p>
+<p>Demonstrating this point, the following code outputs "Equal":</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">li</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;();</span>
+<span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Float</span><span class="o">&gt;</span> <span class="n">lf</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Float</span><span class="o">&gt;();</span>
+<span class="k">if</span> <span class="o">(</span><span class="n">li</span><span class="o">.</span><span class="na">getClass</span><span class="o">()</span> <span class="o">==</span> <span class="n">lf</span><span class="o">.</span><span class="na">getClass</span><span class="o">())</span> <span class="o">{</span> <span class="c1">// evaluates to true</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Equal"</span><span class="o">);</span>
+<span class="o">}</span>
+</pre></div>
+<p>Another effect of type erasure is that a generic class cannot extend the Throwable class in any way, directly or indirectly:<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">[7]</a></sup></p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">GenericException</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="kd">extends</span> <span class="n">Exception</span>
+</pre></div>
+<p>The reason why this is not supported is due to type erasure:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="k">try</span> <span class="o">{</span>
+    <span class="k">throw</span> <span class="k">new</span> <span class="n">GenericException</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;();</span>
+<span class="o">}</span>
+<span class="k">catch</span><span class="o">(</span><span class="n">GenericException</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">err</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Integer"</span><span class="o">);</span>
+<span class="o">}</span>
+<span class="k">catch</span><span class="o">(</span><span class="n">GenericException</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">err</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"String"</span><span class="o">);</span>
+<span class="o">}</span>
+</pre></div>
+<p>Due to type erasure, the runtime will not know which catch block to execute, so this is prohibited by the compiler.</p>
+<p>Java generics differ from <a href="https://en.wikipedia.org/wiki/C++_Templates" class="mw-redirect" title="C++ Templates">C++ templates</a>. Java generics generate only one compiled version of a generic class or function regardless of the number of parameterizing types used. Furthermore, the Java run-time environment does not need to know which parameterized type is used because the type information is validated at compile-time and is not included in the compiled code. Consequently, instantiating a Java class of a parameterized type is impossible because instantiation requires a call to a constructor, which is unavailable if the type is unknown.</p>
+<p>For example, the following code cannot be compiled:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">T</span> <span class="nf">instantiateElementType</span><span class="o">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">arg</span><span class="o">)</span> <span class="o">{</span>
+     <span class="k">return</span> <span class="k">new</span> <span class="n">T</span><span class="o">();</span> <span class="c1">//causes a compile error</span>
+<span class="o">}</span>
+</pre></div>
+<p>Because there is only one copy per generic class at runtime, static variables are shared among all the instances of the class, regardless of their type parameter. Consequently, the type parameter cannot be used in the declaration of static variables or in static methods.</p>
+<h2><span class="mw-headline" id="Project_Valhalla">Project Valhalla</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Generics_in_Java&amp;action=edit&amp;section=9" title="Edit section: Project Valhalla">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="https://en.wikipedia.org/wiki/Project_Valhalla_(Java_language)" title="Project Valhalla (Java language)">Project Valhalla</a> is an experimental project to incubate improved Java generics and language features, for future versions potentially from Java 10 onwards. Potential enhancements include:<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">[8]</a></sup></p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Generic_programming#Template_specialization" title="Generic programming">generic specialization</a>, e.g. List&lt;int&gt;</li>
+<li><a href="https://en.wikipedia.org/wiki/Comparison_of_C_Sharp_and_Java#Type_erasure_versus_reified_generics" title="Comparison of C Sharp and Java">reified generics</a>; making actual types available at runtime.</li>
+</ul>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Generics_in_Java&amp;action=edit&amp;section=10" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Generic_programming" title="Generic programming">Generic programming</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Template_metaprogramming" title="Template metaprogramming">Template metaprogramming</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Wildcard_(Java)" title="Wildcard (Java)">Wildcard (Java)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Comparison_of_C_Sharp_and_Java" title="Comparison of C Sharp and Java">Comparison of C# and Java</a></li>
+<li><a href="Comparison_of_Java_and_C%2b%2b.html" title="Comparison of Java and C++">Comparison of Java and C++</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Generics_in_Java&amp;action=edit&amp;section=11" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://java.sun.com/j2se/1.5.0/docs/guide/language/index.html">Java Programming Language</a></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://homepages.inf.ed.ac.uk/wadler/gj/">GJ: Generic Java</a></span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://java.sun.com/docs/books/jls/third_edition/html/j3TOC.html">Java Language Specification, Third Edition</a> by James Gosling, Bill Joy, Guy Steele, Gilad Bracha – Prentice Hall PTR 2005</span></li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://www.oracle.com/technetwork/java/javase/generics-tutorial-159168.pdf">http://www.oracle.com/technetwork/java/javase/generics-tutorial-159168.pdf</a> – Generics in the Java Programming Language</span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://docs.oracle.com/javase/7/docs/technotes/guides/language/type-inference-generic-instance-creation.html">http://docs.oracle.com/javase/7/docs/technotes/guides/language/type-inference-generic-instance-creation.html</a></span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><cite class="citation web">Gafter, Neal (2006-11-05). <a rel="nofollow" class="external text" href="http://gafter.blogspot.ro/2006/11/reified-generics-for-java.html">"Reified Generics for Java"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2010-04-20</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGenerics+in+Java&amp;rft.aufirst=Neal&amp;rft.aulast=Gafter&amp;rft.btitle=Reified+Generics+for+Java&amp;rft.date=2006-11-05&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fgafter.blogspot.ro%2F2006%2F11%2Freified-generics-for-java.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/specs/jls/se8/html/jls-8.html#jls-8.1.2">"Java Language Specification, Section 8.1.2"</a>. Oracle<span class="reference-accessdate">. Retrieved <span class="nowrap">24 October</span> 2015</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGenerics+in+Java&amp;rft.btitle=Java+Language+Specification%2C+Section+8.1.2&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fdocs.oracle.com%2Fjavase%2Fspecs%2Fjls%2Fse8%2Fhtml%2Fjls-8.html%23jls-8.1.2&amp;rft.pub=Oracle&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><cite class="citation web">Goetz, Brian. <a rel="nofollow" class="external text" href="http://mail.openjdk.java.net/pipermail/valhalla-dev/2014-July/000000.html">"Welcome to Valhalla!"</a>. <i>OpenJDK mail archive</i>. OpenJDK<span class="reference-accessdate">. Retrieved <span class="nowrap">12 August</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGenerics+in+Java&amp;rft.atitle=Welcome+to+Valhalla%21&amp;rft.aufirst=Brian&amp;rft.aulast=Goetz&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fmail.openjdk.java.net%2Fpipermail%2Fvalhalla-dev%2F2014-July%2F000000.html&amp;rft.jtitle=OpenJDK+mail+archive&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1280
+Cached time: 20170105185950
+Cache expiry: 2592000
+Dynamic content: false
+CPU time usage: 0.092 seconds
+Real time usage: 1.668 seconds
+Preprocessor visited node count: 353/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 4356/2097152 bytes
+Template argument size: 36/2097152 bytes
+Highest expansion depth: 6/40
+Expensive parser function count: 0/500
+Lua time usage: 0.027/10.000 seconds
+Lua memory usage: 1.61 MB/50 MB
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00% 1391.336      1 - -total
+  2.76%   38.416      3 - Template:Cite_web
+  1.85%   25.755      1 - Template:Main
+  0.25%    3.455      1 - Template:Javadoc:SE
+  0.07%    0.960      1 - Template:Javadoc:SE/Home_URL
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:7955681-0!*!0!!en!*!* and timestamp 20170105185950 and revision id 758487504
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Generics_in_Java&amp;oldid=758487504">https://en.wikipedia.org/w/index.php?title=Generics_in_Java&amp;oldid=758487504</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Help_Category.html" title="Help:Category">Categories</a>: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Java_(programming_language)" title="Category:Java (programming language)">Java (programming language)</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Polymorphism_(computer_science)" title="Category:Polymorphism (computer science)">Polymorphism (computer science)</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="Special_MyTalk.html" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="Special_MyContributions.html" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&amp;returnto=Generics+in+Java" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Generics+in+Java" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="Generics_in_Java.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+															<li  id="ca-talk"><span><a href="https://en.wikipedia.org/wiki/Talk:Generics_in_Java"  title="Discussion about the content page [t]" accesskey="t" rel="discussion">Talk</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="Generics_in_Java.html" >Read</a></span></li>
+															<li id="ca-edit"><span><a href="https://en.wikipedia.org/w/index.php?title=Generics_in_Java&amp;action=edit"  title="Edit this page [e]" accesskey="e">Edit</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="https://en.wikipedia.org/w/index.php?title=Generics_in_Java&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="https://en.wikipedia.org/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="Main_Page.html"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="Portal_Contents.html" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="Portal_Featured_content.html" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="Portal_Current_events.html" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="https://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="../../shop.wikimedia.org/index.html" title="Visit the Wikipedia store">Wikipedia store</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Interaction</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-help"><a href="Help_Contents.html" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="Wikipedia_About.html" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="Wikipedia_Community_portal.html" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="Wikipedia_Contact_us.html" title="How to contact Wikipedia">Contact page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="https://en.wikipedia.org/wiki/Special:WhatLinksHere/Generics_in_Java" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://en.wikipedia.org/wiki/Special:RecentChangesLinked/Generics_in_Java" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="Wikipedia_File_Upload_Wizard.html" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="https://en.wikipedia.org/w/index.php?title=Generics_in_Java&amp;oldid=758487504" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://en.wikipedia.org/w/index.php?title=Generics_in_Java&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q379273" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="https://en.wikipedia.org/w/index.php?title=Special:CiteThisPage&amp;page=Generics_in_Java&amp;id=758487504" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Print/export</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Generics+in+Java">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Generics+in+Java&amp;returnto=Generics+in+Java&amp;oldid=758487504&amp;writer=rdf2latex">Download as PDF</a></li><li id="t-print"><a href="https://en.wikipedia.org/w/index.php?title=Generics_in_Java&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Languages</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Generische_Programmierung_in_Java" title="Generische Programmierung in Java – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Generics_Java" title="Generics Java – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/Узагальнення_в_Java" title="Узагальнення в Java – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q379273#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 5 January 2017, at 18:59.</li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="Wikipedia_Text_of_Creative_Commons_Attribution-ShareAlike_3.html">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="../../creativecommons.org/licenses/by-sa/3.0/index.html" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="../../wikimediafoundation.org/wiki/Terms_of_Use.html">Terms of Use</a> and <a href="../../wikimediafoundation.org/wiki/Privacy_policy.html">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="../../www.wikimediafoundation.org/index.html">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../../wikimediafoundation.org/wiki/Privacy_policy.html" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="Wikipedia_About.html" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="Wikipedia_General_disclaimer.html" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="Wikipedia_Contact_us.html">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a href="../../www.mediawiki.org/wiki/Special_MyLanguage/How_to_contribute.html">Developers</a></li>
+											<li id="footer-places-cookiestatement"><a href="../../wikimediafoundation.org/wiki/Cookie_statement.html">Cookie statement</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/w/index.php?title=Generics_in_Java&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="../../www.wikimediafoundation.org/index.html"><img src="https://en.wikipedia.org/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="../../www.mediawiki.org/index.html"><img src="https://en.wikipedia.org/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":74,"wgHostname":"mw1187"});});</script>
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Generics_in_Java by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:04 GMT -->
+</html>

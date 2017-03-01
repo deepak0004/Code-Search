@@ -1,0 +1,23 @@
+    
+        I have a table in Oracle where column SC_CUR_CODE is CHAR(3)
+
+When I do:
+
+    Query q2 = em.createNativeQuery("select sc_cur_code, sc_amount from sector_costs");
+
+    q2.setMaxResults(10);
+
+    List&lt;Object[]&gt; rs2 = q2.getResultList();
+
+    for (Object[] o : rs2) {
+        System.out.println("&gt;&gt;&gt; cur=" + o[0]);
+    }
+
+
+I see cur=E and cur=U instead of cur=EUR and cur=USD
+
+o[0] is a java.lang.Character
+
+How can I get the full value EUR and USD ?
+
+                

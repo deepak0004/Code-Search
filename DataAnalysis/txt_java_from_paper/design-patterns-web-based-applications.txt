@@ -1,0 +1,10 @@
+    
+        I am designing a simple web based application. I am new to this web based domain.I needed your advice regarding the design patterns like how responsibility should be distributed among Servlets, criteria to make new Servlet, etc.
+
+Actually I have few entities on my home page and corresponding to each one of them we have few options like add, edit and delete. Earlier I was using one Servlet per options like Servlet1 for add entity1, Servlet2 for edit entity1 and so on and in this way we ended up having a large number of servlets.
+
+Now we are changing our design. My question is how you exactly choose how you choose the responsibility of a servlet. Should we have one Servlet per entity which will process all it's options and forward request to service layer.Or should we have one servlet for the whole page which will process the whole page request and then forward it to corresponding service layer.Also should the request object forwarded to service layer or not.
+
+Please you guide us in choosing the best design.Also any pointer to a good design pattern material will be welcome.
+
+                

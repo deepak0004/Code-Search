@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Name_mangling by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:48 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Name mangling - Wikipedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Name_mangling","wgTitle":"Name mangling","wgCurRevisionId":755019807,"wgRevisionId":755019807,"wgArticleId":725961,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Wikipedia articles needing style editing from September 2016","All articles needing style editing","Articles that may contain original research from September 2016","All articles that may contain original research","Wikipedia articles that are too technical from September 2016","All articles that are too technical","Articles needing expert attention from September 2016","All articles needing expert attention","Articles needing additional references from December 2011","All articles needing additional references","Articles to be expanded from June 2014","All articles to be expanded","Articles using small message boxes","Wikipedia articles needing style editing from November 2015","All Wikipedia articles needing clarification","Wikipedia articles needing clarification from February 2016","Pages using ISBN magic links","C++","Computer libraries","Java (programming language)","Compiler construction"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Name_mangling","wgRelevantArticleId":725961,"wgRequestId":"WG-kzwpAEKoAAGMJimUAAABW","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgFlaggedRevsParams":{"tags":{}},"wgStableRevisionId":null,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"en","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgWikibaseItemId":"Q6961530","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.pygments":"ready","ext.cite.styles":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@1dqfd7l",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["ext.cite.a11y","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.legacy.wikibits","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.watchlist-notice","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.gadget.featured-articles-links","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.interface","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="https://en.wikipedia.org/w/load.php?debug=false&amp;lang=en&amp;modules=ext.cite.styles%7Cext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="../w/load2c8d.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../w/load18b6.css?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.29.0-wmf.7"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="https://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Name_mangling"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Name_mangling&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Name_mangling&amp;action=edit"/>
+<link rel="apple-touch-icon" href="https://en.wikipedia.org/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="../static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../w/api251f.php?action=rsd"/>
+<link rel="copyright" href="../../creativecommons.org/licenses/by-sa/3.0/index.html"/>
+<link rel="canonical" href="Name_mangling.html"/>
+<link rel="dns-prefetch" href="../../login.wikimedia.org/index.html"/>
+<link rel="dns-prefetch" href="../../meta.wikimedia.org/index.html" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Name_mangling rootpage-Name_mangling skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">Name mangling</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><script>function mfTempOpenSection(id){var block=document.getElementById("mf-section-"+id);block.className+=" open-block";block.previousSibling.className+=" open-block";}</script><div role="note" class="hatnote">This article is about name mangling in computer languages. For name mangling in file systems, see <a href="https://en.wikipedia.org/wiki/Filename_mangling" title="Filename mangling">filename mangling</a>. For other uses, see <a href="https://en.wikipedia.org/wiki/Name_conflict_(disambiguation)" class="mw-redirect mw-disambig" title="Name conflict (disambiguation)">Name conflict</a>.</div>
+<table class="plainlinks metadata ambox ambox-content ambox-multiple_issues compact-ambox" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Ambox_important.svg/40px-Ambox_important.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Ambox_important.svg/60px-Ambox_important.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Ambox_important.svg/80px-Ambox_important.svg.png 2x" data-file-width="40" data-file-height="40" /></div>
+</td>
+<td class="mbox-text">
+<div class="mw-collapsible" style="width:95%; margin: 0.2em 0;"><span class="mbox-text-span"><b>This article has multiple issues.</b> Please help <b><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Name_mangling&amp;action=edit">improve it</a></b> or discuss these issues on the <b><a href="https://en.wikipedia.org/wiki/Talk:Name_mangling" title="Talk:Name mangling">talk page</a></b>. <small><i>(<a href="https://en.wikipedia.org/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove these template messages</a>)</i></small></span>
+<div class="mw-collapsible-content" style="margin-top: 0.3em;">
+<table class="plainlinks metadata ambox ambox-style ambox-essay-like" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px"><img alt="" src="http://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/40px-Edit-clear.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/60px-Edit-clear.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/80px-Edit-clear.svg.png 2x" data-file-width="48" data-file-height="48" /></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article <b>is written like a <a href="https://en.wikipedia.org/wiki/Wikipedia:What_Wikipedia_is_not#ESSAY" title="Wikipedia:What Wikipedia is not">personal reflection or opinion essay</a> that states a Wikipedia editor's personal feelings about a topic</b>. <span class="hide-when-compact">Please <a class="external text" href="http://en.wikipedia.org/w/index.php?title=Name_mangling&amp;action=edit">help improve it</a> by rewriting it in an <a href="https://en.wikipedia.org/wiki/Wikipedia:Encyclopedic_style" class="mw-redirect" title="Wikipedia:Encyclopedic style">encyclopedic style</a>.</span> <small><i>(September 2016)</i></small> <small class="hide-when-compact"><i>(<a href="https://en.wikipedia.org/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></span></td>
+</tr>
+</table>
+<table class="plainlinks metadata ambox ambox-content ambox-Original_research" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Ambox_important.svg/40px-Ambox_important.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Ambox_important.svg/60px-Ambox_important.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Ambox_important.svg/80px-Ambox_important.svg.png 2x" data-file-width="40" data-file-height="40" /></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article <b>possibly contains <a href="https://en.wikipedia.org/wiki/Wikipedia:No_original_research" title="Wikipedia:No original research">original research</a></b>. <span class="hide-when-compact">Please <a class="external text" href="http://en.wikipedia.org/w/index.php?title=Name_mangling&amp;action=edit">improve it</a> by <a href="https://en.wikipedia.org/wiki/Wikipedia:Verifiability" title="Wikipedia:Verifiability">verifying</a> the claims made and adding <a href="https://en.wikipedia.org/wiki/Wikipedia:Citing_sources#Inline_citations" title="Wikipedia:Citing sources">inline citations</a>. Statements consisting only of original research should be removed.</span> <small><i>(September 2016)</i></small> <small class="hide-when-compact"><i>(<a href="https://en.wikipedia.org/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></span></td>
+</tr>
+</table>
+<table class="plainlinks metadata ambox ambox-style ambox-technical" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px"><img alt="" src="http://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/40px-Edit-clear.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/60px-Edit-clear.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/80px-Edit-clear.svg.png 2x" data-file-width="48" data-file-height="48" /></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article <b>may be too <a href="https://en.wiktionary.org/wiki/technical#Adjective" class="extiw" title="wikt:technical">technical</a> for most readers to understand</b>. <span class="hide-when-compact">Please help <a class="external text" href="http://en.wikipedia.org/w/index.php?title=Name_mangling&amp;action=edit">improve</a> this article to <a href="https://en.wikipedia.org/wiki/Wikipedia:Make_technical_articles_understandable" title="Wikipedia:Make technical articles understandable">make it understandable to non-experts</a>, without removing the technical details. The <a href="https://en.wikipedia.org/wiki/Talk:Name_mangling" title="Talk:Name mangling">talk page</a> may contain suggestions.</span> <small><i>(September 2016)</i></small> <small class="hide-when-compact"><i>(<a href="https://en.wikipedia.org/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></span></td>
+</tr>
+</table>
+<table class="plainlinks metadata ambox ambox-content ambox-Refimprove" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px"><a href="https://en.wikipedia.org/wiki/File:Question_book-new.svg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/50px-Question_book-new.svg.png" width="50" height="39" srcset="//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/75px-Question_book-new.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/100px-Question_book-new.svg.png 2x" data-file-width="512" data-file-height="399" /></a></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article <b>needs additional citations for <a href="https://en.wikipedia.org/wiki/Wikipedia:Verifiability" title="Wikipedia:Verifiability">verification</a></b>. <span class="hide-when-compact">Please help <a class="external text" href="http://en.wikipedia.org/w/index.php?title=Name_mangling&amp;action=edit">improve this article</a> by <a href="https://en.wikipedia.org/wiki/Help:Introduction_to_referencing_with_Wiki_Markup/1" title="Help:Introduction to referencing with Wiki Markup/1">adding citations to reliable sources</a>. Unsourced material may be challenged and removed.</span> <small><i>(December 2011)</i></small> <small class="hide-when-compact"><i>(<a href="https://en.wikipedia.org/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></span></td>
+</tr>
+</table>
+</div>
+</div>
+<small class="hide-when-compact"><i>(<a href="https://en.wikipedia.org/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></td>
+</tr>
+</table>
+<p>In <a href="https://en.wikipedia.org/wiki/Compiler" title="Compiler">compiler</a> construction, <b>name mangling</b> (also called <b>name decoration</b>) is a technique used to solve various problems caused by the need to resolve unique names for programming entities in many modern <a href="https://en.wikipedia.org/wiki/Programming_language" title="Programming language">programming languages</a>.</p>
+<p>It provides a way of encoding additional information in the name of a <a href="https://en.wikipedia.org/wiki/Function_(programming)" class="mw-redirect" title="Function (programming)">function</a>, <a href="https://en.wikipedia.org/wiki/Structure" title="Structure">structure</a>, <a href="https://en.wikipedia.org/wiki/Class_(computer_science)" class="mw-redirect" title="Class (computer science)">class</a> or another <a href="https://en.wikipedia.org/wiki/Datatype" class="mw-redirect" title="Datatype">datatype</a> in order to pass more semantic information from the <a href="https://en.wikipedia.org/wiki/Compiler" title="Compiler">compilers</a> to <a href="https://en.wikipedia.org/wiki/Linker_(computing)" title="Linker (computing)">linkers</a>.</p>
+<p>The need arises where the language allows different entities to be named with the same <a href="https://en.wikipedia.org/wiki/Identifier" title="Identifier">identifier</a> as long as they occupy a different <a href="https://en.wikipedia.org/wiki/Namespace" title="Namespace">namespace</a> (where a namespace is typically defined by a module, class, or explicit <i>namespace</i> directive) or have different signatures (such as <a href="https://en.wikipedia.org/wiki/Function_overloading" title="Function overloading">function overloading</a>).</p>
+<p>Any <a href="https://en.wikipedia.org/wiki/Object_code" title="Object code">object code</a> produced by compilers is usually linked with other pieces of object code (produced by the same or another compiler) by a type of program called a <a href="https://en.wikipedia.org/wiki/Linker_(computing)" title="Linker (computing)">linker</a>. The linker needs a great deal of information on each program entity. For example, to correctly link a function it needs its name, the number of arguments and their types, and so on.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Examples"><span class="tocnumber">1</span> <span class="toctext">Examples</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#C"><span class="tocnumber">1.1</span> <span class="toctext">C</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#C.2B.2B"><span class="tocnumber">1.2</span> <span class="toctext">C++</span></a>
+<ul>
+<li class="toclevel-3 tocsection-4"><a href="#Simple_example"><span class="tocnumber">1.2.1</span> <span class="toctext">Simple example</span></a></li>
+<li class="toclevel-3 tocsection-5"><a href="#Complex_example"><span class="tocnumber">1.2.2</span> <span class="toctext">Complex example</span></a></li>
+<li class="toclevel-3 tocsection-6"><a href="#How_different_compilers_mangle_the_same_functions"><span class="tocnumber">1.2.3</span> <span class="toctext">How different compilers mangle the same functions</span></a></li>
+<li class="toclevel-3 tocsection-7"><a href="#Handling_of_C_symbols_when_linking_from_C.2B.2B"><span class="tocnumber">1.2.4</span> <span class="toctext">Handling of C symbols when linking from C++</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="#Standardised_name_mangling_in_C.2B.2B"><span class="tocnumber">1.2.5</span> <span class="toctext">Standardised name mangling in C++</span></a></li>
+<li class="toclevel-3 tocsection-9"><a href="#Real-world_effects_of_C.2B.2B_name_mangling"><span class="tocnumber">1.2.6</span> <span class="toctext">Real-world effects of C++ name mangling</span></a></li>
+<li class="toclevel-3 tocsection-10"><a href="#Demangle_via_c.2B.2Bfilt"><span class="tocnumber">1.2.7</span> <span class="toctext">Demangle via c++filt</span></a></li>
+<li class="toclevel-3 tocsection-11"><a href="#Demangle_via_builtin_GCC_ABI"><span class="tocnumber">1.2.8</span> <span class="toctext">Demangle via builtin GCC ABI</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-12"><a href="#Java"><span class="tocnumber">1.3</span> <span class="toctext">Java</span></a>
+<ul>
+<li class="toclevel-3 tocsection-13"><a href="#Creating_unique_names_for_inner_and_anonymous_classes"><span class="tocnumber">1.3.1</span> <span class="toctext">Creating unique names for inner and anonymous classes</span></a></li>
+<li class="toclevel-3 tocsection-14"><a href="#Java_Native_Interface"><span class="tocnumber">1.3.2</span> <span class="toctext">Java Native Interface</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-15"><a href="#Python"><span class="tocnumber">1.4</span> <span class="toctext">Python</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#Pascal"><span class="tocnumber">1.5</span> <span class="toctext">Pascal</span></a>
+<ul>
+<li class="toclevel-3 tocsection-17"><a href="#Borland.27s_Turbo_Pascal_.2F_Delphi_range"><span class="tocnumber">1.5.1</span> <span class="toctext">Borland's Turbo Pascal / Delphi range</span></a></li>
+<li class="toclevel-3 tocsection-18"><a href="#Free_Pascal"><span class="tocnumber">1.5.2</span> <span class="toctext">Free Pascal</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-19"><a href="#Fortran"><span class="tocnumber">1.6</span> <span class="toctext">Fortran</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="#Rust"><span class="tocnumber">1.7</span> <span class="toctext">Rust</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="#Objective-C"><span class="tocnumber">1.8</span> <span class="toctext">Objective-C</span></a></li>
+<li class="toclevel-2 tocsection-22"><a href="#Swift"><span class="tocnumber">1.9</span> <span class="toctext">Swift</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-23"><a href="#See_also"><span class="tocnumber">2</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-24"><a href="#References"><span class="tocnumber">3</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-25"><a href="#External_links"><span class="tocnumber">4</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Examples">Examples</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Name_mangling&amp;action=edit&amp;section=1" title="Edit section: Examples">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="plainlinks metadata ambox ambox-style" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px"><img alt="" src="http://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/40px-Edit-clear.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/60px-Edit-clear.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/80px-Edit-clear.svg.png 2x" data-file-width="48" data-file-height="48" /></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This section <b>is written like <a href="https://en.wikipedia.org/wiki/Wikipedia:What_Wikipedia_is_not#GUIDE" title="Wikipedia:What Wikipedia is not">a manual or guidebook</a>.</b> <span class="hide-when-compact">Please help <a class="external text" href="http://en.wikipedia.org/w/index.php?title=Name_mangling&amp;action=edit">rewrite this section</a> from a descriptive, <a href="https://en.wikipedia.org/wiki/Wikipedia:Neutral_point_of_view" title="Wikipedia:Neutral point of view">neutral point of view</a>, and remove advice or instruction.</span> <small><i>(September 2016)</i></small> <small class="hide-when-compact"><i>(<a href="https://en.wikipedia.org/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></span></td>
+</tr>
+</table>
+<h3><span class="mw-headline" id="C">C</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Name_mangling&amp;action=edit&amp;section=2" title="Edit section: C">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Although name mangling is not generally required or used by languages that do not support <a href="https://en.wikipedia.org/wiki/Function_overloading" title="Function overloading">function overloading</a> (such as C and classic Pascal), they use it in some cases to provide additional information about a function. For example, compilers targeted at Microsoft Windows platforms support a variety of <a href="https://en.wikipedia.org/wiki/Calling_convention" title="Calling convention">calling conventions</a>, which determine the manner in which parameters are sent to subroutines and results returned. Because the different calling conventions are not compatible with one another, compilers mangle symbols with codes detailing which convention should be used to call the specific routine.</p>
+<p>The mangling scheme was established by Microsoft, and has been informally followed by other compilers including Digital Mars, Borland, and GNU GCC, when compiling code for the Windows platforms. The scheme even applies to other languages, such as <a href="https://en.wikipedia.org/wiki/Pascal_programming_language" class="mw-redirect" title="Pascal programming language">Pascal</a>, <a href="https://en.wikipedia.org/wiki/D_programming_language" class="mw-redirect" title="D programming language">D</a>, <a href="https://en.wikipedia.org/wiki/Embarcadero_Delphi" class="mw-redirect" title="Embarcadero Delphi">Delphi</a>, <a href="https://en.wikipedia.org/wiki/Fortran" title="Fortran">Fortran</a>, and <a href="https://en.wikipedia.org/wiki/C_Sharp_(programming_language)" title="C Sharp (programming language)">C#</a>. This allows subroutines written in those languages to call, or be called by, existing Windows libraries using a calling convention different from their default.</p>
+<p>When compiling the following C examples:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kt">int</span> <span class="n">_cdecl</span>    <span class="nf">f</span> <span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
+<span class="kt">int</span> <span class="n">_stdcall</span>  <span class="nf">g</span> <span class="p">(</span><span class="kt">int</span> <span class="n">y</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
+<span class="kt">int</span> <span class="n">_fastcall</span> <span class="nf">h</span> <span class="p">(</span><span class="kt">int</span> <span class="n">z</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
+</pre></div>
+<p>32 bit compilers emit, respectively:</p>
+<pre>
+_f
+_g@4
+@h@4
+</pre>
+<p>In the <tt>stdcall</tt> and <tt>fastcall</tt> mangling schemes, the function is encoded as <tt>_<b>name</b>@<b>X</b></tt> and <tt>@<b>name</b>@<b>X</b></tt> respectively, where <b>X</b> is the number of bytes, in decimal, of the argument(s) in the parameter list (including those passed in registers, for fastcall). In the case of <tt>cdecl</tt>, the function name is merely prefixed by an underscore.</p>
+<p>The 64-bit convention on Windows (Microsoft C) has no leading underscore. This difference may in some rare cases lead to unresolved externals when porting such code to 64 bits. For example, Fortran code can use 'alias' to link against a C method by name as follows:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="k">SUBROUTINE </span><span class="n">f</span><span class="p">()</span>
+<span class="c">!DEC$ ATTRIBUTES C, ALIAS:'_f' :: f</span>
+<span class="k">END SUBROUTINE</span>
+</pre></div>
+<p>This will compile and link fine under 32 bits, but generate an unresolved external '_f' under 64 bits. One workaround for this is not to use 'alias' at all (in which the method names typically need to be capitalized in C and Fortran). Another is to use the BIND option:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="k">SUBROUTINE </span><span class="n">f</span><span class="p">()</span> <span class="k">BIND</span><span class="p">(</span><span class="n">C</span><span class="p">,</span><span class="n">NAME</span><span class="o">=</span><span class="s2">"f"</span><span class="p">)</span>
+<span class="k">END SUBROUTINE</span>
+</pre></div>
+<h3><span class="mw-headline" id="C.2B.2B">C++</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Name_mangling&amp;action=edit&amp;section=3" title="Edit section: C++">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="https://en.wikipedia.org/wiki/C++" title="C++">C++</a> compilers are the most widespread users of name mangling. The first C++ compilers were implemented as translators to <a href="https://en.wikipedia.org/wiki/C_(programming_language)" title="C (programming language)">C</a> source code, which would then be compiled by a C compiler to object code; because of this, symbol names had to conform to C identifier rules. Even later, with the emergence of compilers which produced machine code or assembly directly, the system's <a href="https://en.wikipedia.org/wiki/Linker_(computing)" title="Linker (computing)">linker</a> generally did not support C++ symbols, and mangling was still required.</p>
+<p>The <a href="https://en.wikipedia.org/wiki/C++" title="C++">C++</a> language does not define a standard decoration scheme, so each compiler uses its own. C++ also has complex language features, such as <a href="https://en.wikipedia.org/wiki/C++_class" class="mw-redirect" title="C++ class">classes</a>, <a href="https://en.wikipedia.org/wiki/C++_template" class="mw-redirect" title="C++ template">templates</a>, <a href="https://en.wikipedia.org/wiki/Namespace_(C++)" class="mw-redirect" title="Namespace (C++)">namespaces</a>, and <a href="https://en.wikipedia.org/wiki/Operator_overloading" title="Operator overloading">operator overloading</a>, that alter the meaning of specific symbols based on context or usage. Meta-data about these features can be disambiguated by mangling (decorating) the name of a <a href="https://en.wikipedia.org/wiki/Debug_symbol" title="Debug symbol">symbol</a>. Because the name-mangling systems for such features are not standardized across compilers, few linkers can link object code that was produced by different compilers.</p>
+<h4><span class="mw-headline" id="Simple_example">Simple example</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Name_mangling&amp;action=edit&amp;section=4" title="Edit section: Simple example">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>A single C++ translation unit might define two functions named <tt>f()</tt>:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kt">int</span>  <span class="nf">f</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="mi">1</span><span class="p">;</span> <span class="p">}</span>
+<span class="kt">int</span>  <span class="nf">f</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span>  <span class="p">{</span> <span class="k">return</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
+<span class="kt">void</span> <span class="nf">g</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">f</span><span class="p">(),</span> <span class="n">j</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span> <span class="p">}</span>
+</pre></div>
+<p>These are distinct functions, with no relation to each other apart from the name. The C++ compiler therefore will encode the type information in the symbol name, the result being something resembling:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kt">int</span>  <span class="nf">__f_v</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="mi">1</span><span class="p">;</span> <span class="p">}</span>
+<span class="kt">int</span>  <span class="nf">__f_i</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span>  <span class="p">{</span> <span class="k">return</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
+<span class="kt">void</span> <span class="nf">__g_v</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">__f_v</span><span class="p">(),</span> <span class="n">j</span> <span class="o">=</span> <span class="n">__f_i</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span> <span class="p">}</span>
+</pre></div>
+<p>Even though its name is unique, <tt>g()</tt> is still mangled: name mangling applies to <b>all</b> symbols.</p>
+<h4><span class="mw-headline" id="Complex_example">Complex example</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Name_mangling&amp;action=edit&amp;section=5" title="Edit section: Complex example">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>The mangled symbols in this example, in the comments below the respective identifier name, are those produced by the GNU GCC 3.x compilers:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="k">namespace</span> <span class="n">wikipedia</span> 
+<span class="p">{</span>
+   <span class="k">class</span> <span class="nc">article</span> 
+   <span class="p">{</span>
+   <span class="k">public</span><span class="o">:</span>
+      <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">format</span> <span class="p">(</span><span class="kt">void</span><span class="p">);</span> 
+         <span class="cm">/* = _ZN9wikipedia7article6formatEv */</span>
+
+      <span class="kt">bool</span> <span class="nf">print_to</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="o">&amp;</span><span class="p">);</span> 
+         <span class="cm">/* = _ZN9wikipedia7article8print_toERSo */</span>
+
+      <span class="k">class</span> <span class="nc">wikilink</span> 
+      <span class="p">{</span>
+      <span class="k">public</span><span class="o">:</span>
+         <span class="n">wikilink</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">name</span><span class="p">);</span>
+            <span class="cm">/* = _ZN9wikipedia7article8wikilinkC1ERKSs */</span>
+      <span class="p">};</span>
+   <span class="p">};</span>
+<span class="p">}</span>
+</pre></div>
+<p>All mangled symbols begin with <b>_Z</b> (note that an underscore followed by a capital is a <a href="https://en.wikipedia.org/wiki/Reserved_identifier" class="mw-redirect" title="Reserved identifier">reserved identifier</a> in C, so conflict with user identifiers is avoided); for nested names (including both namespaces and classes), this is followed by <tt><b>N</b></tt>, then a series of &lt;length, id&gt; pairs (the length being the length of the next identifier), and finally <tt><b>E</b></tt>. For example, <tt>wikipedia::article::format</tt> becomes</p>
+<pre>
+_ZN<i>9</i><b>wikipedia</b><i>7</i><b>article</b><i>6</i><b>format</b>E
+</pre>
+<p>For functions, this is then followed by the type information; as <tt>format()</tt> is a <tt>void</tt> function, this is simply <tt><b>v</b></tt>; hence:</p>
+<pre>
+_ZN<i>9</i><b>wikipedia</b><i>7</i><b>article</b><i>6</i><b>format</b>E<b>v</b>
+</pre>
+<p>For <tt>print_to</tt>, a standard type <tt>std::ostream</tt> (or more properly <tt>std::basic_ostream&lt;char, char_traits&lt;char&gt; &gt;</tt>) is used, which has the special alias <tt><b>So</b></tt>; a reference to this type is therefore <tt><b>RSo</b></tt>, with the complete name for the function being:</p>
+<pre>
+_ZN<i>9</i><b>wikipedia</b><i>7</i><b>article</b><i>8</i><b>print_to</b>E<b>RSo</b>
+</pre>
+<h4><span class="mw-headline" id="How_different_compilers_mangle_the_same_functions">How different compilers mangle the same functions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Name_mangling&amp;action=edit&amp;section=6" title="Edit section: How different compilers mangle the same functions">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>There isn't a standard scheme by which even trivial C++ identifiers are mangled, and consequently different compiler vendors (or even different versions of the same compiler, or the same compiler on different platforms) mangle public symbols in radically different (and thus totally incompatible) ways. Consider how different C++ compilers mangle the same functions:</p>
+<table class="wikitable">
+<tr>
+<th>Compiler</th>
+<th><tt>void h(int)</tt></th>
+<th><tt>void h(int, char)</tt></th>
+<th><tt>void h(void)</tt></th>
+</tr>
+<tr>
+<td>Intel C++ 8.0 for Linux</td>
+<td rowspan="4"><tt>_Z1hi</tt></td>
+<td rowspan="4"><tt>_Z1hic</tt></td>
+<td rowspan="4"><tt>_Z1hv</tt></td>
+</tr>
+<tr>
+<td>HP aC++ A.05.55 IA-64</td>
+</tr>
+<tr>
+<td>IAR EWARM C++ 5.4 ARM</td>
+</tr>
+<tr>
+<td><a href="GNU_Compiler_Collection.html" title="GNU Compiler Collection">GCC</a> 3.<i>x</i> and higher</td>
+</tr>
+<tr>
+<td>IAR EWARM C++ 7.4 ARM</td>
+<td><tt>_Z&lt;number&gt;hi</tt></td>
+<td><tt>_Z&lt;number&gt;hic</tt></td>
+<td><tt>_Z&lt;number&gt;hv</tt></td>
+</tr>
+<tr>
+<td><a href="GNU_Compiler_Collection.html" title="GNU Compiler Collection">GCC</a> 2.9<i>x</i></td>
+<td rowspan="2"><tt>h__Fi</tt></td>
+<td rowspan="2"><tt>h__Fic</tt></td>
+<td rowspan="2"><tt>h__Fv</tt></td>
+</tr>
+<tr>
+<td>HP aC++ A.03.45 PA-RISC</td>
+</tr>
+<tr>
+<td><a href="https://en.wikipedia.org/wiki/Microsoft_Visual_C++" class="mw-redirect" title="Microsoft Visual C++">Microsoft Visual C++</a> v6-v10 (<a href="https://en.wikiversity.org/wiki/Visual_C++_name_mangling" class="extiw" title="v:Visual C++ name mangling">mangling details</a>)</td>
+<td rowspan="2"><tt>?h@@YAXH@Z</tt></td>
+<td rowspan="2"><tt>?h@@YAXHD@Z</tt></td>
+<td rowspan="2"><tt>?h@@YAXXZ</tt></td>
+</tr>
+<tr>
+<td><a href="https://en.wikipedia.org/wiki/Digital_Mars" title="Digital Mars">Digital Mars</a> C++</td>
+</tr>
+<tr>
+<td>Borland C++ v3.1</td>
+<td><tt>@h$qi</tt></td>
+<td><tt>@h$qizc</tt></td>
+<td><tt>@h$qv</tt></td>
+</tr>
+<tr>
+<td>OpenVMS C++ V6.5 (ARM mode)</td>
+<td><tt>H__XI</tt></td>
+<td><tt>H__XIC</tt></td>
+<td><tt>H__XV</tt></td>
+</tr>
+<tr>
+<td>OpenVMS C++ V6.5 (ANSI mode)</td>
+<td></td>
+<td><tt>CXX$__7H__FIC26CDH77</tt></td>
+<td><tt>CXX$__7H__FV2CB06E8</tt></td>
+</tr>
+<tr>
+<td>OpenVMS C++ X7.1 IA-64</td>
+<td><tt>CXX$_Z1HI2DSQ26A</tt></td>
+<td><tt>CXX$_Z1HIC2NP3LI4</tt></td>
+<td><tt>CXX$_Z1HV0BCA19V</tt></td>
+</tr>
+<tr>
+<td>SunPro CC</td>
+<td><tt>__1cBh6Fi_v_</tt></td>
+<td><tt>__1cBh6Fic_v_</tt></td>
+<td><tt>__1cBh6F_v_</tt></td>
+</tr>
+<tr>
+<td>Tru64 C++ V6.5 (ARM mode)</td>
+<td><tt>h__Xi</tt></td>
+<td><tt>h__Xic</tt></td>
+<td><tt>h__Xv</tt></td>
+</tr>
+<tr>
+<td>Tru64 C++ V6.5 (ANSI mode)</td>
+<td><tt>__7h__Fi</tt></td>
+<td><tt>__7h__Fic</tt></td>
+<td><tt>__7h__Fv</tt></td>
+</tr>
+<tr>
+<td>Watcom C++ 10.6</td>
+<td><tt>W?h$n(i)v</tt></td>
+<td><tt>W?h$n(ia)v</tt></td>
+<td><tt>W?h$n()v</tt></td>
+</tr>
+</table>
+<p>Notes:</p>
+<ul>
+<li>The Compaq C++ compiler on OpenVMS VAX and Alpha (but not IA-64) and Tru64 has two name mangling schemes. The original, pre-standard scheme is known as ARM model, and is based on the name mangling described in the C++ Annotated Reference Manual (ARM). With the advent of new features in standard C++, particularly <a href="https://en.wikipedia.org/wiki/Template_(programming)" class="mw-redirect" title="Template (programming)">templates</a>, the ARM scheme became more and more unsuitable — it could not encode certain function types, or produced identical mangled names for different functions. It was therefore replaced by the newer "ANSI" model, which supported all ANSI template features, but was not backwards compatible.</li>
+<li>On IA-64, a standard <a href="https://en.wikipedia.org/wiki/Application_binary_interface" title="Application binary interface">ABI</a> exists (see <a href="#External_links">external links</a>), which defines (among other things) a standard name-mangling scheme, and which is used by all the IA-64 compilers. GNU GCC 3.<i>x</i>, in addition, has adopted the name mangling scheme defined in this standard for use on other, non-Intel platforms.</li>
+<li>The Visual Studio and Windows SDK include the program <code>undname</code> which prints the C-style function prototype for a given mangled name.</li>
+<li>On Microsoft Windows, the Intel compiler<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[1]</a></sup> and <a href="https://en.wikipedia.org/wiki/Clang" title="Clang">Clang</a><sup id="cite_ref-2" class="reference"><a href="#cite_note-2">[2]</a></sup> uses the Visual C++ name mangling for compatibility.</li>
+<li>For the IAR EWARM C++ 7.4 ARM compiler the best way to determine the name of a function is to compile with the assembler output turned on and to look at the output in the ".s" file thus generated.</li>
+</ul>
+<h4><span class="mw-headline" id="Handling_of_C_symbols_when_linking_from_C.2B.2B">Handling of C symbols when linking from C++</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Name_mangling&amp;action=edit&amp;section=7" title="Edit section: Handling of C symbols when linking from C++">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>The job of the common C++ idiom:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="cp">#ifdef __cplusplus </span>
+<span class="k">extern</span> <span class="s">"C"</span> <span class="p">{</span>
+<span class="cp">#endif</span>
+    <span class="cm">/* ... */</span>
+<span class="cp">#ifdef __cplusplus</span>
+<span class="p">}</span>
+<span class="cp">#endif</span>
+</pre></div>
+<p>is to ensure that the symbols following are "unmangled" – that the compiler emits a binary file with their names undecorated, as a C compiler would do. As C language definitions are unmangled, the C++ compiler needs to avoid mangling references to these identifiers.</p>
+<p>For example, the standard strings library, <tt>&lt;string.h&gt;</tt> usually contains something resembling:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="cp">#ifdef __cplusplus</span>
+<span class="k">extern</span> <span class="s">"C"</span> <span class="p">{</span>
+<span class="cp">#endif</span>
+
+<span class="kt">void</span> <span class="o">*</span><span class="n">memset</span> <span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="p">,</span> <span class="kt">int</span><span class="p">,</span> <span class="kt">size_t</span><span class="p">);</span>
+<span class="kt">char</span> <span class="o">*</span><span class="nf">strcat</span> <span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="p">);</span>
+<span class="kt">int</span>   <span class="nf">strcmp</span> <span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="p">);</span>
+<span class="kt">char</span> <span class="o">*</span><span class="nf">strcpy</span> <span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="p">);</span>
+
+<span class="cp">#ifdef __cplusplus</span>
+<span class="p">}</span>
+<span class="cp">#endif</span>
+</pre></div>
+<p>Thus, code such as:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="k">if</span> <span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s">"-x"</span><span class="p">)</span> <span class="o">===</span> <span class="mi">0</span><span class="p">)</span> 
+    <span class="n">strcpy</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+<span class="k">else</span> 
+    <span class="nf">memset</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">a</span><span class="p">));</span>
+</pre></div>
+<p>uses the correct, unmangled <tt>strcmp</tt> and <tt>memset</tt>. If the <tt>extern</tt> had not been used, the (SunPro) C++ compiler would produce code equivalent to:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="k">if</span> <span class="p">(</span><span class="n">__1cGstrcmp6Fpkc1_i_</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s">"-x"</span><span class="p">)</span> <span class="o">===</span> <span class="mi">0</span><span class="p">)</span> 
+    <span class="n">__1cGstrcpy6Fpcpkc_0_</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+<span class="k">else</span> 
+    <span class="nf">__1cGmemset6FpviI_0_</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">a</span><span class="p">));</span>
+</pre></div>
+<p>Since those symbols do not exist in the C runtime library (<i>e.g.</i> <tt>libc</tt>), link errors would result.</p>
+<h4><span class="mw-headline" id="Standardised_name_mangling_in_C.2B.2B">Standardised name mangling in C++</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Name_mangling&amp;action=edit&amp;section=8" title="Edit section: Standardised name mangling in C++">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Though it would seem that standardised name mangling in the C++ language would lead to greater interoperability between compiler implementations, such a standardization by itself would not suffice to guarantee C++ compiler interoperability and it might even create a false impression that interoperability is possible and safe when it isn't. Name mangling is only one of several <a href="https://en.wikipedia.org/wiki/Application_binary_interface" title="Application binary interface">application binary interface</a> (ABI) details that need to be decided and observed by a C++ implementation. Other ABI aspects like <a href="https://en.wikipedia.org/wiki/Exception_handling" title="Exception handling">exception handling</a>, <a href="https://en.wikipedia.org/wiki/Virtual_table" class="mw-redirect" title="Virtual table">virtual table</a> layout, structure and stack frame <a href="https://en.wikipedia.org/wiki/Data_structure_alignment" title="Data structure alignment">padding</a>, <i>etc.</i> also cause differing C++ implementations to be incompatible. Further, requiring a particular form of mangling would cause issues for systems where implementation limits (e.g., length of symbols) dictate a particular mangling scheme. A standardised <i>requirement</i> for name mangling would also prevent an implementation where mangling was not required at all — for example, a linker which understood the C++ language.</p>
+<p>The <a href="https://en.wikipedia.org/wiki/ISO/IEC_14882" class="mw-redirect" title="ISO/IEC 14882">C++ standard</a> therefore does not attempt to standardise name mangling. On the contrary, the <i>Annotated C++ Reference Manual</i> (also known as <i>ARM</i>, <a href="https://en.wikipedia.org/wiki/Special:BookSources/0201514591" class="internal mw-magiclink-isbn">ISBN 0-201-51459-1</a>, section 7.2.1c) actively encourages the use of different mangling schemes to prevent linking when other aspects of the ABI, such as <a href="https://en.wikipedia.org/wiki/Exception_handling" title="Exception handling">exception handling</a> and <a href="https://en.wikipedia.org/wiki/Virtual_table" class="mw-redirect" title="Virtual table">virtual table</a> layout, are incompatible.</p>
+<p>Nevertheless, as detailed in the section above, on some platforms<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">[3]</a></sup> the full C++ ABI has been standardized, including name mangling.</p>
+<h4><span class="mw-headline" id="Real-world_effects_of_C.2B.2B_name_mangling">Real-world effects of C++ name mangling</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Name_mangling&amp;action=edit&amp;section=9" title="Edit section: Real-world effects of C++ name mangling">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Because C++ symbols are routinely exported from <a href="https://en.wikipedia.org/wiki/Dynamic-link_library" title="Dynamic-link library">DLL</a> and <a href="https://en.wikipedia.org/wiki/Shared_object" class="mw-redirect" title="Shared object">shared object</a> files, the name mangling scheme is not merely a compiler-internal matter. Different compilers (or different versions of the same compiler, in many cases) produce such binaries under different name decoration schemes, meaning that symbols are frequently unresolved if the compilers used to create the library and the program using it employed different schemes. For example, if a system with multiple C++ compilers installed (e.g., GNU GCC and the OS vendor's compiler) wished to install the <a href="https://en.wikipedia.org/wiki/Boost_C++_Libraries" class="mw-redirect" title="Boost C++ Libraries">Boost C++ Libraries</a>, it would have to be compiled twice — once for the vendor compiler and once for GCC.</p>
+<p>It is good for safety purposes that compilers producing incompatible object codes (codes based on different ABIs, regarding e.g., classes and exceptions) use different name mangling schemes. This guarantees that these incompatibilities are detected at the linking phase, not when executing the software (which could lead to obscure bugs and serious stability issues).</p>
+<p>For this reason name decoration is an important aspect of any C++-related <a href="https://en.wikipedia.org/wiki/Application_binary_interface" title="Application binary interface">ABI</a>.</p>
+<h4><span class="mw-headline" id="Demangle_via_c.2B.2Bfilt">Demangle via c++filt</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Name_mangling&amp;action=edit&amp;section=10" title="Edit section: Demangle via c++filt">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="gp">$</span> c++filt _ZNK3MapI10StringName3RefI8GDScriptE10ComparatorIS0_E16DefaultAllocatorE3hasERKS0_
+<span class="go">Map&lt;StringName, Ref&lt;GDScript&gt;, Comparator&lt;StringName&gt;, DefaultAllocator&gt;::has(StringName const&amp;) const</span>
+</pre></div>
+<h4><span class="mw-headline" id="Demangle_via_builtin_GCC_ABI">Demangle via builtin GCC ABI</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Name_mangling&amp;action=edit&amp;section=11" title="Edit section: Demangle via builtin GCC ABI">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span>
+<span class="cp">#include</span> <span class="cpf">&lt;cxxabi.h&gt;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">mangled_name</span> <span class="o">=</span> <span class="s">"_ZNK3MapI10StringName3RefI8GDScriptE10ComparatorIS0_E16DefaultAllocatorE3hasERKS0_"</span><span class="p">;</span>
+	<span class="kt">char</span> <span class="o">*</span><span class="n">demangled_name</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">status</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+	<span class="n">demangled_name</span> <span class="o">=</span> <span class="n">abi</span><span class="o">::</span><span class="n">__cxa_demangle</span><span class="p">(</span><span class="n">mangled_name</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">status</span><span class="p">);</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"Demangled: %s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">demangled_name</span><span class="p">);</span>
+	<span class="n">free</span><span class="p">(</span><span class="n">demangled_name</span><span class="p">);</span>
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+<p>Output:</p>
+<pre>
+<samp>Demangled: Map&lt;StringName, Ref&lt;GDScript&gt;, Comparator&lt;StringName&gt;, DefaultAllocator&gt;::has(StringName const&amp;) const</samp>
+</pre>
+<h3><span class="mw-headline" id="Java">Java</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Name_mangling&amp;action=edit&amp;section=12" title="Edit section: Java">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>In Java, the <b>signature</b> of a method or a class contains its name and the types of its method arguments and return value where applicable. The format of signatures is documented, as the language, compiler, and .class file format were all designed together (and had object-orientation and universal interoperability in mind from the start).</p>
+<h4><span class="mw-headline" id="Creating_unique_names_for_inner_and_anonymous_classes">Creating unique names for inner and anonymous classes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Name_mangling&amp;action=edit&amp;section=13" title="Edit section: Creating unique names for inner and anonymous classes">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>The scope of anonymous classes is confined to their parent class, so the compiler must produce a "qualified" public name for the inner class, to avoid conflict where other classes with the same name (inner or not) exist in the same namespace. Similarly, anonymous classes must have "fake" public names generated for them (as the concept of anonymous classes only exists in the compiler, not the runtime). So, compiling the following java program</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">foo</span> <span class="o">{</span>
+    <span class="kd">class</span> <span class="nc">bar</span> <span class="o">{</span>
+        <span class="kd">public</span> <span class="kt">int</span> <span class="n">x</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">zark</span> <span class="o">()</span> <span class="o">{</span>
+        <span class="n">Object</span> <span class="n">f</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Object</span> <span class="o">()</span> <span class="o">{</span>
+            <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="o">()</span> <span class="o">{</span>
+                <span class="k">return</span> <span class="s">"hello"</span><span class="o">;</span>
+            <span class="o">}</span>
+        <span class="o">};</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+<p>will produce three <b>.class</b> files:</p>
+<ul>
+<li><b>foo.class</b>, containing the main (outer) class <i>foo</i></li>
+<li><b>foo$bar.class</b>, containing the named inner class <i>foo.bar</i></li>
+<li><b>foo$1.class</b>, containing the anonymous inner class (local to method <i>foo.zark</i>)</li>
+</ul>
+<p>All of these class names are valid (as $ symbols are permitted in the JVM specification) and these names are "safe" for the compiler to generate, as the Java language definition prohibits $ symbols in normal java class definitions.</p>
+<p>Name resolution in Java is further complicated at runtime, as <a href="https://en.wikipedia.org/wiki/Fully_qualified_name" title="Fully qualified name">fully qualified class names</a> are unique only inside a specific <a href="https://en.wikipedia.org/wiki/Classloader" class="mw-redirect" title="Classloader">classloader</a> instance. Classloaders are ordered hierarchically and each Thread in the JVM has a so-called context class loader, so in cases where two different classloader instances contain classes with the same name, the system first tries to load the class using the root (or system) classloader and then goes down the hierarchy to the context class loader.</p>
+<h4><span class="mw-headline" id="Java_Native_Interface">Java Native Interface</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Name_mangling&amp;action=edit&amp;section=14" title="Edit section: Java Native Interface">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Java's native method support allows Java language programs to call out to programs written in another language (generally either C or C++). There are two name-resolution concerns here, neither of which is implemented in a particularly standard manner:</p>
+<ul>
+<li>Java to native name translation</li>
+<li>normal C++ name mangling</li>
+</ul>
+<h3><span class="mw-headline" id="Python">Python</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Name_mangling&amp;action=edit&amp;section=15" title="Edit section: Python">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>In <a href="https://en.wikipedia.org/wiki/Python_(programming_language)" title="Python (programming language)">Python</a>, mangling is used for "private" class members which are designated as such by giving them a name with two leading underscores and no more than one trailing underscore. For example, <code>__thing</code> will be mangled, as will <code>___thing</code> and <code>__thing_</code>, but <code>__thing__</code> and <code>__thing___</code> will not. Python's runtime does not restrict access to such members, the mangling only prevents name collisions if a derived class defines a member with the same name.</p>
+<p>On encountering name mangled attributes, Python transforms these names by a single underscore and the name of the enclosing class, for example:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">Test</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">__mangled_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">pass</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">normal_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">pass</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">t</span> <span class="o">=</span> <span class="n">Test</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">attr</span> <span class="k">for</span> <span class="n">attr</span> <span class="ow">in</span> <span class="nb">dir</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="k">if</span> <span class="s1">'name'</span> <span class="ow">in</span> <span class="n">attr</span><span class="p">]</span>
+<span class="go">['_Test__mangled_name', 'normal_name']</span>
+</pre></div>
+<h3><span class="mw-headline" id="Pascal">Pascal</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Name_mangling&amp;action=edit&amp;section=16" title="Edit section: Pascal">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h4><span class="mw-headline" id="Borland.27s_Turbo_Pascal_.2F_Delphi_range">Borland's Turbo Pascal / Delphi range</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Name_mangling&amp;action=edit&amp;section=17" title="Edit section: Borland's Turbo Pascal / Delphi range">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>To avoid name mangling in Pascal, use:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="k">exports</span>
+  <span class="n">myFunc</span> <span class="n">name</span> <span class="s">'myFunc'</span><span class="o">,</span>
+  <span class="n">myProc</span> <span class="n">name</span> <span class="s">'myProc'</span><span class="o">;</span>
+</pre></div>
+<h4><span class="mw-headline" id="Free_Pascal">Free Pascal</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Name_mangling&amp;action=edit&amp;section=18" title="Edit section: Free Pascal">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p><a href="https://en.wikipedia.org/wiki/Free_Pascal" title="Free Pascal">Free Pascal</a> supports <a href="https://en.wikipedia.org/wiki/Function_overloading" title="Function overloading">function</a> and operator overloading, thus it also uses name mangling to support these features. On the other hand, Free Pascal is capable of calling symbols defined in external modules created with another language and exporting its own symbols to be called by another language. For further information, consult <a rel="nofollow" class="external text" href="http://www.freepascal.org/docs-html/prog/progse21.html">Chapter 6.2</a> and <a rel="nofollow" class="external text" href="http://www.freepascal.org/docs-html/prog/progse27.html">Chapter 7.1</a> of <a rel="nofollow" class="external text" href="http://www.freepascal.org/docs-html/prog/prog.html">Free Pascal Programmer's Guide</a>.</p>
+<h3><span class="mw-headline" id="Fortran">Fortran</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Name_mangling&amp;action=edit&amp;section=19" title="Edit section: Fortran">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Name mangling is also necessary in <a href="https://en.wikipedia.org/wiki/Fortran" title="Fortran">Fortran</a> compilers, originally because the language is <a href="https://en.wikipedia.org/wiki/Case_insensitive" class="mw-redirect" title="Case insensitive">case insensitive</a>. Further mangling requirements were imposed later in the evolution of the language because of the addition of <a href="https://en.wikipedia.org/wiki/Module_(programming)" class="mw-redirect" title="Module (programming)">modules</a> and other features in the Fortran 90 standard. The case mangling, especially, is a common issue that must be dealt with in order to call Fortran libraries (such as <a href="https://en.wikipedia.org/wiki/LAPACK" title="LAPACK">LAPACK</a>) from other languages (such as <a href="https://en.wikipedia.org/wiki/C_(programming_language)" title="C (programming language)">C</a>).</p>
+<p>Because of the case insensitivity, the name of a subroutine or function "FOO" must be converted to a canonical case and format by the Fortran compiler so that it will be linked in the same way regardless of case. Different compilers have implemented this in various ways, and no standardization has occurred. The <a href="https://en.wikipedia.org/wiki/IBM_AIX_(operating_system)" class="mw-redirect" title="IBM AIX (operating system)">AIX</a> and <a href="https://en.wikipedia.org/wiki/HP-UX" title="HP-UX">HP-UX</a> Fortran compilers convert all identifiers to lower case ("foo"), while the <a href="https://en.wikipedia.org/wiki/Cray" title="Cray">Cray</a> <a href="https://en.wikipedia.org/wiki/Unicos" class="mw-redirect" title="Unicos">Unicos</a> Fortran compilers converted identifiers all upper case ("FOO"). The <a href="https://en.wikipedia.org/wiki/GNU" title="GNU">GNU</a> <a href="GNU_Compiler_Collection.html" title="GNU Compiler Collection">g77</a> compiler converts identifiers to lower case plus an underscore ("foo_"), except that identifiers already containing an underscore ("FOO_BAR") have two underscores appended ("foo_bar__"), following a convention established by <a href="https://en.wikipedia.org/wiki/F2c" title="F2c">f2c</a>. Many other compilers, including <a href="https://en.wikipedia.org/wiki/Silicon_Graphics" title="Silicon Graphics">SGI</a>'s <a href="https://en.wikipedia.org/wiki/IRIX" title="IRIX">IRIX</a> compilers, <a href="https://en.wikipedia.org/wiki/GNU_Fortran" title="GNU Fortran">GNU Fortran</a>, and <a href="https://en.wikipedia.org/wiki/Intel" title="Intel">Intel</a>'s Fortran compiler (except on Microsoft Windows), convert all identifiers to lower case plus an underscore ("foo_" and "foo_bar_"). On Microsoft Windows, the Intel Fortran compiler defaults to uppercase without an underscore.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">[4]</a></sup></p>
+<p>Identifiers in Fortran 90 modules must be further mangled, because the same procedure name may occur in different modules. Since the Fortran 2003 Standard requires that module procedure names not conflict with other external symbols,<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">[5]</a></sup> compilers tend to use the module name and the procedure name, with a distinct marker in between. For example, in the following module</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="k">module </span><span class="n">m</span> 
+<span class="k">contains</span>
+<span class="k">   </span><span class="kt">integer </span><span class="k">function </span><span class="n">five</span><span class="p">()</span>
+      <span class="n">five</span> <span class="o">=</span> <span class="mi">5</span>
+   <span class="k">end function </span><span class="n">five</span>
+<span class="k">end module </span><span class="n">m</span>
+</pre></div>
+<p>The name of the function will be mangled as <tt>__m_MOD_five</tt> (e.g., GNU Fortran), <tt>m_MP_five_</tt> (e.g., Intel's ifort), <tt>m.five_</tt> (e.g., Oracle's sun95), etc. Since Fortran does not allow overloading the name of a procedure, but uses <a href="https://en.wikipedia.org/wiki/Fortran_95_language_features#Overloading_and_generic_interfaces" title="Fortran 95 language features">generic interface blocks</a> and generic type-bound procedures instead, the mangled names do not need to incorporate clues about the arguments.</p>
+<p>The Fortran 2003 BIND option overrides any name mangling done by the compiler, as shown <a href="#C_name_decoration_in_Microsoft_Windows">above</a>.</p>
+<h3><span class="mw-headline" id="Rust">Rust</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Name_mangling&amp;action=edit&amp;section=20" title="Edit section: Rust">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<table class="plainlinks metadata ambox mbox-small-left ambox-content" role="presentation">
+<tr>
+<td class="mbox-image"><a href="https://en.wikipedia.org/wiki/File:Wiki_letter_w_cropped.svg" class="image"><img alt="[icon]" src="http://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Wiki_letter_w_cropped.svg/20px-Wiki_letter_w_cropped.svg.png" width="20" height="14" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Wiki_letter_w_cropped.svg/30px-Wiki_letter_w_cropped.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Wiki_letter_w_cropped.svg/40px-Wiki_letter_w_cropped.svg.png 2x" data-file-width="44" data-file-height="31" /></a></td>
+<td class="mbox-text"><span class="mbox-text-span"><b>This section needs expansion</b>. <small>You can help by <a class="external text" href="http://en.wikipedia.org/w/index.php?title=Name_mangling&amp;action=edit&amp;section=">adding to it</a>.</small> <small><i>(June 2014)</i></small></span></td>
+</tr>
+</table>
+<p>Function names are mangled by default in <a href="https://en.wikipedia.org/wiki/Rust_(programming_language)" title="Rust (programming language)">Rust</a>. However, this can be disabled by the <tt>#[no_mangle]</tt> function attribute. This attribute can be used to export functions to C, C++, or Objective-C.<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">[6]</a></sup> Additionally, along with the <tt>#[start]</tt> function attribute or the <tt>#[no_main]</tt> crate attribute, it allows the user to define a C-style entry point for the program.<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">[7]</a></sup> Starting from Rust 1.9, Rust uses a C++-style name-mangling scheme (which partly follows the Itanium C++ ABI).<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">[8]</a></sup></p>
+<h3><span class="mw-headline" id="Objective-C">Objective-C</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Name_mangling&amp;action=edit&amp;section=21" title="Edit section: Objective-C">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Essentially two forms of method exist in <a href="https://en.wikipedia.org/wiki/Objective-C" title="Objective-C">Objective-C</a>, the <a href="https://en.wikipedia.org/wiki/Static_method" class="mw-redirect" title="Static method">class ("static") method</a>, and the <a href="https://en.wikipedia.org/wiki/Instance_method" class="mw-redirect" title="Instance method">instance method</a>. A method declaration in Objective-C is of the following form</p>
+<pre>
++ (<i>return-type</i>) <i>name</i><sub>0</sub>:<i>parameter</i><sub>0</sub> <i>name</i><sub>1</sub>:<i>parameter</i><sub>1</sub> ...
+– (<i>return-type</i>) <i>name</i><sub>0</sub>:<i>parameter</i><sub>0</sub> <i>name</i><sub>1</sub>:<i>parameter</i><sub>1</sub> ...
+</pre>
+<p>Class methods are signified by +, instance methods use -. A typical class method declaration may then look like:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="p">+</span> <span class="p">(</span><span class="kt">id</span><span class="p">)</span> <span class="nf">initWithX:</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="nv">number</span> <span class="nf">andY:</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="nv">number</span><span class="p">;</span>
+<span class="p">+</span> <span class="p">(</span><span class="kt">id</span><span class="p">)</span> <span class="nf">new</span><span class="p">;</span>
+</pre></div>
+<p>with instance methods looking like</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="p">-</span> <span class="p">(</span><span class="kt">id</span><span class="p">)</span> <span class="nf">value</span><span class="p">;</span>
+<span class="p">-</span> <span class="p">(</span><span class="kt">id</span><span class="p">)</span> <span class="nf">setValue:</span> <span class="p">(</span><span class="kt">id</span><span class="p">)</span> <span class="nv">new_value</span><span class="p">;</span>
+</pre></div>
+<p>Each of these method declarations have a specific internal representation. When compiled, each method is named according to the following scheme for class methods:</p>
+<pre>
+_c_<i>Class</i>_<i>name</i><sub>0</sub>_<i>name</i><sub>1</sub>_ ...
+</pre>
+<p>and this for instance methods:</p>
+<pre>
+_i_<i>Class</i>_<i>name</i><sub>0</sub>_<i>name</i><sub>1</sub>_ ...
+</pre>
+<p>The colons in the Objective-C syntax are translated to underscores. So, the Objective-C class method <code class="mw-highlight" id="" style="" dir="ltr"><span class="p">+</span> <span class="p">(</span><span class="kt">id</span><span class="p">)</span> <span class="nf">initWithX:</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="nv">number</span> <span class="nf">andY:</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="nv">number</span><span class="p">;</span></code>, if belonging to the <code>Point</code> class would translate as <code>_c_Point_initWithX_andY_</code>, and the instance method (belonging to the same class) <code class="mw-highlight" id="" style="" dir="ltr"><span class="p">-</span> <span class="p">(</span><span class="kt">id</span><span class="p">)</span> <span class="nf">value</span><span class="p">;</span></code> would translate to <code>_i_Point_value</code>.</p>
+<p>Each of the methods of a class are labeled in this way. However, in order to look up a method that a class may respond to would be tedious if all methods are represented in this fashion. Each of the methods is assigned a unique symbol (such as an integer). Such a symbol is known as a <i>selector</i>. In Objective-C, one can manage selectors directly — they have a specific type in Objective-C — <code>SEL</code>.</p>
+<p>During compilation, a table is built that maps the textual representation (such as <code>_i_Point_value</code>) to selectors (which are given a type <code>SEL</code>). Managing selectors is more efficient than manipulating the textual representation of a method. Note that a selector only matches a method's name, not the class it belongs to — different classes can have different implementations of a method with the same name. Because of this, implementations of a method are given a specific identifier too — these are known as implementation pointers, and are given a type also, <code>IMP</code>.</p>
+<p>Message sends are encoded by the compiler as calls to the <code class="mw-highlight" id="" style="" dir="ltr"><span class="kt">id</span> <span class="n">objc_msgSend</span> <span class="p">(</span><span class="kt">id</span> <span class="n">receiver</span><span class="p">,</span> <span class="kt">SEL</span> <span class="n">selector</span><span class="p">,</span> <span class="p">...)</span></code> function, or one of its cousins, where <code>receiver</code> is the receiver of the message, and <code>SEL</code> determines the method to call. Each class has its own table that maps selectors to their implementations — the implementation pointer specifies where in memory the actual implementation of the method resides. There are separate tables for class and instance methods. Apart from being stored in the <code>SEL</code> to <code>IMP</code> lookup tables, the functions are essentially anonymous.</p>
+<p>The <code>SEL</code> value for a selector does not vary between classes. This enables <a href="https://en.wikipedia.org/wiki/Polymorphism_(computer_science)" title="Polymorphism (computer science)">polymorphism</a>.</p>
+<p>The Objective-C runtime maintains information about the argument and return types of methods. However, this information is not part of the name of the method, and can vary from class to class.</p>
+<p>Since Objective-C does not support <a href="https://en.wikipedia.org/wiki/Namespace_(programming)" class="mw-redirect" title="Namespace (programming)">namespaces</a>, there is no need for mangling of class names (that do appear as symbols in generated binaries).</p>
+<h3><span class="mw-headline" id="Swift">Swift</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Name_mangling&amp;action=edit&amp;section=22" title="Edit section: Swift">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<table class="plainlinks metadata ambox ambox-style ambox-Tone" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px"><img alt="" src="http://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/40px-Edit-clear.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/60px-Edit-clear.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/80px-Edit-clear.svg.png 2x" data-file-width="48" data-file-height="48" /></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This section's <b>tone or style may not reflect the <a href="https://en.wikipedia.org/wiki/Wikipedia:Writing_better_articles#Tone" title="Wikipedia:Writing better articles">encyclopedic tone</a> used on Wikipedia</b>. <span class="hide-when-compact">See Wikipedia's <a href="https://en.wikipedia.org/wiki/Wikipedia:Writing_better_articles#Tone" title="Wikipedia:Writing better articles">guide to writing better articles</a> for suggestions.</span> <small><i>(November 2015)</i></small> <small class="hide-when-compact"><i>(<a href="https://en.wikipedia.org/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></span></td>
+</tr>
+</table>
+<p>Swift keeps metadata about functions (and more) in their respective symbols, which is called name mangling. This metadata includes the function’s name, attributes, module name, argument types, return type, and more. For example:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kd">class</span> <span class="nc">Shape</span><span class="p">{</span> 
+    <span class="kd">func</span> <span class="nf">numberOfSides</span><span class="p">()</span> <span class="p">-&gt;</span> <span class="nb">Int</span> <span class="p">{</span> 
+        <span class="k">return</span> <span class="mi">5</span> 
+    <span class="p">}</span> 
+<span class="p">}</span>
+</pre></div>
+<p>The mangled name for the <code>simpleDescription</code> method is <b>_TFC9swifttest5Shape17simpleDescriptionfS0_FT_Si</b>. The components and their meanings are as follows:<sup id="cite_ref-9" class="reference"><a href="#cite_note-9">[9]</a></sup></p>
+<dl>
+<dt>_T</dt>
+<dd>The prefix for all Swift symbols. Everything will start with this.</dd>
+<dt>F</dt>
+<dd>Function.</dd>
+<dt>C</dt>
+<dd>Function of a class. (method)</dd>
+<dt>9swifttest</dt>
+<dd>The module name, with a prefixed length.</dd>
+<dt>5Shape</dt>
+<dd>The class name the function belongs to, again, with a prefixed length.</dd>
+<dt>17simpleDescription</dt>
+<dd>The function name.</dd>
+</dl>
+<table class="wikitable" align="right">
+<caption>Function Attributes</caption>
+<tr>
+<th>Character</th>
+<th>Type</th>
+</tr>
+<tr>
+<td>f</td>
+<td>Normal Function</td>
+</tr>
+<tr>
+<td>s</td>
+<td>Setter</td>
+</tr>
+<tr>
+<td>g</td>
+<td>Getter</td>
+</tr>
+<tr>
+<td>d</td>
+<td>Destructor</td>
+</tr>
+<tr>
+<td>D</td>
+<td>Deallocator</td>
+</tr>
+<tr>
+<td>c</td>
+<td>Constructor</td>
+</tr>
+<tr>
+<td>C</td>
+<td>Allocator</td>
+</tr>
+</table>
+<dl>
+<dt>f</dt>
+<dd>The function attribute. In this case it’s ‘f’, which is a normal function.</dd>
+<dt>S0_FT</dt>
+<dd>The author is not exactly sure what this component means, but it appears to mark the start of the arguments and return type.<sup class="noprint Inline-Template" style="white-space:nowrap;">[<i><a href="https://en.wikipedia.org/wiki/Wikipedia:Vagueness" title="Wikipedia:Vagueness"><span title="This information is too vague. (February 2016)">vague</span></a></i>]</sup></dd>
+<dt>_</dt>
+<dd>This underscore separates the argument types from the return type.</dd>
+<dd>Since the function takes no arguments, it comes directly after <b>S0_FT</b>.</dd>
+<dt>S</dt>
+<dd>This is the beginning of the return type.</dd>
+<dd>The ‘S’ stands for Swift; the return type is a Swift builtin type.</dd>
+<dd>The next character determines the type.</dd>
+<dt>i</dt>
+<dd>This is the Swift builtin type. A lowercase ‘I’, which stands for Int.</dd>
+</dl>
+<dl>
+<dd>
+<table class="wikitable" align="right">
+<caption>Swift Builtins</caption>
+<tr>
+<th>Character</th>
+<th>Type</th>
+</tr>
+<tr>
+<td>a</td>
+<td>Array</td>
+</tr>
+<tr>
+<td>b</td>
+<td>Bool</td>
+</tr>
+<tr>
+<td>c</td>
+<td>UnicodeScalar</td>
+</tr>
+<tr>
+<td>d</td>
+<td>Double</td>
+</tr>
+<tr>
+<td>f</td>
+<td>Float</td>
+</tr>
+<tr>
+<td>i</td>
+<td>Int</td>
+</tr>
+<tr>
+<td>u</td>
+<td>UInt</td>
+</tr>
+<tr>
+<td>Q</td>
+<td>ImplicitlyUnwrappedOptional</td>
+</tr>
+<tr>
+<td>S</td>
+<td>String</td>
+</tr>
+</table>
+</dd>
+</dl>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Name_mangling&amp;action=edit&amp;section=23" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Language_binding" title="Language binding">Language binding</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Foreign_function_interface" title="Foreign function interface">Foreign function interface</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Calling_convention" title="Calling convention">Calling convention</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Stropping_(syntax)" title="Stropping (syntax)">Stropping</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Application_programming_interface" title="Application programming interface">Application programming interface</a> (API)</li>
+<li><a href="https://en.wikipedia.org/wiki/Application_Binary_Interface" class="mw-redirect" title="Application Binary Interface">Application Binary Interface</a> (ABI)</li>
+<li><a href="https://en.wikipedia.org/wiki/Comparison_of_application_virtual_machines" class="mw-redirect" title="Comparison of application virtual machines">Comparison of application virtual machines</a></li>
+<li><a href="Java_Native_Interface.html" title="Java Native Interface">Java Native Interface</a></li>
+<li><a href="https://en.wikipedia.org/wiki/SWIG" title="SWIG">SWIG</a> – opensource interfaces bindings generator from many languages to many languages</li>
+<li><a href="https://en.wikipedia.org/w/index.php?title=Microsoft_Visual_C%2B%2B_Name_Mangling&amp;action=edit&amp;redlink=1" class="new" title="Microsoft Visual C++ Name Mangling (page does not exist)">Microsoft Visual C++ Name Mangling</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Name_mangling&amp;action=edit&amp;section=24" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://software.intel.com/en-us/forums/showthread.php?t=56817">http://software.intel.com/en-us/forums/showthread.php?t=56817</a></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://clang.llvm.org/docs/MSVCCompatibility.html#abi-features">"MSVC compatibility"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">13 May</span> 2016</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AName+mangling&amp;rft.btitle=MSVC+compatibility&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fclang.llvm.org%2Fdocs%2FMSVCCompatibility.html%23abi-features&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://mentorembedded.github.io/cxx-abi/abi.html#mangling">"Itanium C++ ABI, Section 5.1 External Names (a.k.a. Mangling)"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">16 May</span> 2016</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AName+mangling&amp;rft.btitle=Itanium+C%2B%2B+ABI%2C+Section+5.1+External+Names+%28a.k.a.+Mangling%29&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fmentorembedded.github.io%2Fcxx-abi%2Fabi.html%23mangling&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><i>User and Reference Guide for the Intel Fortran Compiler 15.0</i>, Intel Corporation (2014), <a rel="nofollow" class="external text" href="https://software.intel.com/en-us/node/525345">Summary of Mixed-Language Issues</a>. Accessed 17 Nov. 2014.</span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="https://software.intel.com/en-us/node/510637">https://software.intel.com/en-us/node/510637</a></span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://doc.rust-lang.org/book/ffi.html#calling-rust-code-from-c">"Foreign Function Interface # Calling Rust code from C"</a>. <i>Rust Manual</i>. rust-lang.org<span class="reference-accessdate">. Retrieved <span class="nowrap">13 May</span> 2016</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AName+mangling&amp;rft.atitle=Foreign+Function+Interface+%23+Calling+Rust+code+from+C&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fdoc.rust-lang.org%2Fbook%2Fffi.html%23calling-rust-code-from-c&amp;rft.jtitle=Rust+Manual&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://doc.rust-lang.org/book/no-stdlib.html">"No stdlib"</a>. <i>Rust Manual</i>. rust-lang.org<span class="reference-accessdate">. Retrieved <span class="nowrap">13 May</span> 2016</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AName+mangling&amp;rft.atitle=No+stdlib&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fdoc.rust-lang.org%2Fbook%2Fno-stdlib.html&amp;rft.jtitle=Rust+Manual&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://github.com/rust-lang/rust/blob/76affa5d6f5d1b8c3afcd4e0c6bbaee1fb0daeb4/src/librustc_trans/back/symbol_names.rs#L358">"rust/symbol_names.rs at 76affa5d6f5d1b8c3afcd4e0c6bbaee1fb0daeb4 · rust-lang/rust · GitHub"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">13 May</span> 2016</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AName+mangling&amp;rft.btitle=rust%2Fsymbol_names.rs+at+76affa5d6f5d1b8c3afcd4e0c6bbaee1fb0daeb4+%B7+rust-lang%2Frust+%B7+GitHub&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fgithub.com%2Frust-lang%2Frust%2Fblob%2F76affa5d6f5d1b8c3afcd4e0c6bbaee1fb0daeb4%2Fsrc%2Flibrustc_trans%2Fback%2Fsymbol_names.rs%23L358&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.eswick.com/2014/06/inside-swift/">inside swift</a></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Name_mangling&amp;action=edit&amp;section=25" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://mentorembedded.github.com/cxx-abi/abi.html#mangling">Linux Itanium ABI for C++</a>, including name mangling scheme.</li>
+<li><a rel="nofollow" class="external text" href="http://developer.apple.com/tools/mpw-tools/compilers/docs/abi_spec.pdf">Macintosh C/C++ ABI Standard Specification</a></li>
+<li><a rel="nofollow" class="external text" href="http://sources.redhat.com/binutils/docs-2.15/binutils/c--filt.html">c++filt</a> — filter to demangle encoded C++ symbols for GNU/Intel compilers</li>
+<li><a rel="nofollow" class="external text" href="http://msdn2.microsoft.com/en-us/library/5x49w699.aspx">undname</a> — msvc tool to demangle names.</li>
+<li><a rel="nofollow" class="external text" href="http://demangler.com/">demangler.com</a> — An online tool for demangling GCC and MSVC C++ symbols</li>
+<li><a rel="nofollow" class="external text" href="http://developer.apple.com/legacy/mac/library/documentation/Cocoa/Conceptual/OOPandObjC1/Articles/ocRuntimeSystem.html#//apple_ref/doc/uid/TP40005191-CH9-CJBBBCHG">The Objective-C Runtime System</a> — From Apple's <i><a rel="nofollow" class="external text" href="http://developer.apple.com/legacy/mac/library/documentation/Cocoa/Conceptual/OOPandObjC1/Introduction/introObjectiveC.html">The Objective-C Programming Language 1.0</a></i></li>
+<li><a rel="nofollow" class="external text" href="http://www.agner.org/optimize/calling_conventions.pdf">Calling conventions for different C++ compilers</a> by Agner Fog contains detailed description of name mangling schemes for various x86 and x64 C++ compilers (pp.&#160;24–42 in 2011-06-08 version)</li>
+<li><a rel="nofollow" class="external text" href="http://www.kegel.com/mangle.html#operators">C++ Name Mangling/Demangling</a> Quite detailed explanation of Visual C++ compiler name mangling scheme</li>
+<li><a rel="nofollow" class="external text" href="http://sourceforge.net/projects/php-ms-demangle/">PHP UnDecorateSymbolName</a> a php script that demangles Microsoft Visual C's function names.</li>
+<li><a rel="nofollow" class="external text" href="http://www.parashift.com/c++-faq-lite/mixing-c-and-cpp.html">Mixing C and C++ Code</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.iecc.com/linker/linker05.html">Symbol management – 'Linkers and Loaders' by John R. Levine</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.int0x80.gr/papers/name_mangling.pdf">Name mangling demystified by Fivos Kefallonitis</a></li>
+</ul>
+<div role="navigation" class="navbox" aria-labelledby="Application_binary_interface_.28ABI.29" style="padding:3px">
+<table class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="https://en.wikipedia.org/wiki/Template:Application_binary_interface" title="Template:Application binary interface"><abbr title="View this template" style=";;background:none transparent;border:none;">v</abbr></a></li>
+<li class="nv-talk"><a href="https://en.wikipedia.org/w/index.php?title=Template_talk:Application_binary_interface&amp;action=edit&amp;redlink=1" class="new" title="Template talk:Application binary interface (page does not exist)"><abbr title="Discuss this template" style=";;background:none transparent;border:none;">t</abbr></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Application_binary_interface&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;">e</abbr></a></li>
+</ul>
+</div>
+<div id="Application_binary_interface_.28ABI.29" style="font-size:114%"><a href="https://en.wikipedia.org/wiki/Application_binary_interface" title="Application binary interface">Application binary interface</a> (ABI)</div>
+</th>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Parts and<br />
+conventions</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Data_structure_alignment" title="Data structure alignment">Alignment</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Calling_convention" title="Calling convention">Calling convention</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Call_stack" title="Call stack">Call stack</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Library_(computing)" title="Library (computing)">Library</a>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Static_library" title="Static library">static</a></li>
+</ul>
+</li>
+<li><a href="https://en.wikipedia.org/wiki/Machine_code" title="Machine code">Machine code</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Memory_segmentation" title="Memory segmentation">Memory segmentation</a></li>
+<li><strong class="selflink">Name mangling</strong></li>
+<li><a href="https://en.wikipedia.org/wiki/Object_code" title="Object code">Object code</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Opaque_pointer" title="Opaque pointer">Opaque pointer</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Position-independent_code" title="Position-independent code">Position-independent code</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Relocation_(computing)" title="Relocation (computing)">Relocation</a></li>
+<li><a href="https://en.wikipedia.org/wiki/System_call" title="System call">System call</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Virtual_method_table" title="Virtual method table">Virtual method table</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Related topics</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Binary_code_compatibility" title="Binary code compatibility">Binary code compatibility</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Foreign_function_interface" title="Foreign function interface">Foreign function interface</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Language_binding" title="Language binding">Language binding</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Linker_(computing)" title="Linker (computing)">Linker</a>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Dynamic_linker" title="Dynamic linker">dynamic</a></li>
+</ul>
+</li>
+<li><a href="https://en.wikipedia.org/wiki/Loader_(computing)" title="Loader (computing)">Loader</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Year_2038_problem" title="Year 2038 problem">Year 2038 problem</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1269
+Cached time: 20161230194052
+Cache expiry: 2592000
+Dynamic content: false
+CPU time usage: 0.208 seconds
+Real time usage: 0.270 seconds
+Preprocessor visited node count: 1345/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 65502/2097152 bytes
+Template argument size: 13212/2097152 bytes
+Highest expansion depth: 12/40
+Expensive parser function count: 8/500
+Lua time usage: 0.074/10.000 seconds
+Lua memory usage: 3.09 MB/50 MB
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  187.747      1 - -total
+ 41.29%   77.522      8 - Template:Ambox
+ 28.78%   54.037      1 - Template:Multiple_issues
+ 25.53%   47.927      1 - Template:Reflist
+ 21.58%   40.513      5 - Template:Cite_web
+ 11.34%   21.289      1 - Template:About
+  8.48%   15.919      1 - Template:Vague
+  7.70%   14.450      1 - Template:Essay-like
+  7.41%   13.917      1 - Template:Fix
+  6.08%   11.423      1 - Template:Manual
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:725961-0!*!0!!en!4!* and timestamp 20161230194051 and revision id 755019807
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Name_mangling&amp;oldid=755019807">https://en.wikipedia.org/w/index.php?title=Name_mangling&amp;oldid=755019807</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Help_Category.html" title="Help:Category">Categories</a>: <ul><li><a href="https://en.wikipedia.org/wiki/Category:C++" title="Category:C++">C++</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Computer_libraries" title="Category:Computer libraries">Computer libraries</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Java_(programming_language)" title="Category:Java (programming language)">Java (programming language)</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Compiler_construction" title="Category:Compiler construction">Compiler construction</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Wikipedia_articles_needing_style_editing_from_September_2016" title="Category:Wikipedia articles needing style editing from September 2016">Wikipedia articles needing style editing from September 2016</a></li><li><a href="https://en.wikipedia.org/wiki/Category:All_articles_needing_style_editing" title="Category:All articles needing style editing">All articles needing style editing</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Articles_that_may_contain_original_research_from_September_2016" title="Category:Articles that may contain original research from September 2016">Articles that may contain original research from September 2016</a></li><li><a href="https://en.wikipedia.org/wiki/Category:All_articles_that_may_contain_original_research" title="Category:All articles that may contain original research">All articles that may contain original research</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Wikipedia_articles_that_are_too_technical_from_September_2016" title="Category:Wikipedia articles that are too technical from September 2016">Wikipedia articles that are too technical from September 2016</a></li><li><a href="https://en.wikipedia.org/wiki/Category:All_articles_that_are_too_technical" title="Category:All articles that are too technical">All articles that are too technical</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Articles_needing_expert_attention_from_September_2016" title="Category:Articles needing expert attention from September 2016">Articles needing expert attention from September 2016</a></li><li><a href="https://en.wikipedia.org/wiki/Category:All_articles_needing_expert_attention" title="Category:All articles needing expert attention">All articles needing expert attention</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Articles_needing_additional_references_from_December_2011" title="Category:Articles needing additional references from December 2011">Articles needing additional references from December 2011</a></li><li><a href="https://en.wikipedia.org/wiki/Category:All_articles_needing_additional_references" title="Category:All articles needing additional references">All articles needing additional references</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Articles_to_be_expanded_from_June_2014" title="Category:Articles to be expanded from June 2014">Articles to be expanded from June 2014</a></li><li><a href="https://en.wikipedia.org/wiki/Category:All_articles_to_be_expanded" title="Category:All articles to be expanded">All articles to be expanded</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Articles_using_small_message_boxes" title="Category:Articles using small message boxes">Articles using small message boxes</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Wikipedia_articles_needing_style_editing_from_November_2015" title="Category:Wikipedia articles needing style editing from November 2015">Wikipedia articles needing style editing from November 2015</a></li><li><a href="https://en.wikipedia.org/wiki/Category:All_Wikipedia_articles_needing_clarification" title="Category:All Wikipedia articles needing clarification">All Wikipedia articles needing clarification</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Wikipedia_articles_needing_clarification_from_February_2016" title="Category:Wikipedia articles needing clarification from February 2016">Wikipedia articles needing clarification from February 2016</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Pages_using_ISBN_magic_links" title="Category:Pages using ISBN magic links">Pages using ISBN magic links</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="Special_MyTalk.html" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="Special_MyContributions.html" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&amp;returnto=Name+mangling" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Name+mangling" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="Name_mangling.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+															<li  id="ca-talk"><span><a href="https://en.wikipedia.org/wiki/Talk:Name_mangling"  title="Discussion about the content page [t]" accesskey="t" rel="discussion">Talk</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="Name_mangling.html" >Read</a></span></li>
+															<li id="ca-edit"><span><a href="https://en.wikipedia.org/w/index.php?title=Name_mangling&amp;action=edit"  title="Edit this page [e]" accesskey="e">Edit</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="https://en.wikipedia.org/w/index.php?title=Name_mangling&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="https://en.wikipedia.org/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="Main_Page.html"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="Portal_Contents.html" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="Portal_Featured_content.html" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="Portal_Current_events.html" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="https://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="../../shop.wikimedia.org/index.html" title="Visit the Wikipedia store">Wikipedia store</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Interaction</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-help"><a href="Help_Contents.html" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="Wikipedia_About.html" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="Wikipedia_Community_portal.html" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="Wikipedia_Contact_us.html" title="How to contact Wikipedia">Contact page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="https://en.wikipedia.org/wiki/Special:WhatLinksHere/Name_mangling" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://en.wikipedia.org/wiki/Special:RecentChangesLinked/Name_mangling" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="Wikipedia_File_Upload_Wizard.html" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="https://en.wikipedia.org/w/index.php?title=Name_mangling&amp;oldid=755019807" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://en.wikipedia.org/w/index.php?title=Name_mangling&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q6961530" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="https://en.wikipedia.org/w/index.php?title=Special:CiteThisPage&amp;page=Name_mangling&amp;id=755019807" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Print/export</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Name+mangling">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Name+mangling&amp;returnto=Name+mangling&amp;oldid=755019807&amp;writer=rdf2latex">Download as PDF</a></li><li id="t-print"><a href="https://en.wikipedia.org/w/index.php?title=Name_mangling&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Languages</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/名前修飾" title="名前修飾 – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Dekorowanie_nazw" title="Dekorowanie nazw – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/名字修饰" title="名字修饰 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q6961530#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 15 December 2016, at 20:33.</li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="Wikipedia_Text_of_Creative_Commons_Attribution-ShareAlike_3.html">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="../../creativecommons.org/licenses/by-sa/3.0/index.html" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="../../wikimediafoundation.org/wiki/Terms_of_Use.html">Terms of Use</a> and <a href="../../wikimediafoundation.org/wiki/Privacy_policy.html">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="../../www.wikimediafoundation.org/index.html">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../../wikimediafoundation.org/wiki/Privacy_policy.html" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="Wikipedia_About.html" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="Wikipedia_General_disclaimer.html" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="Wikipedia_Contact_us.html">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a href="../../www.mediawiki.org/wiki/Special_MyLanguage/How_to_contribute.html">Developers</a></li>
+											<li id="footer-places-cookiestatement"><a href="../../wikimediafoundation.org/wiki/Cookie_statement.html">Cookie statement</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/w/index.php?title=Name_mangling&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="../../www.wikimediafoundation.org/index.html"><img src="https://en.wikipedia.org/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="../../www.mediawiki.org/index.html"><img src="https://en.wikipedia.org/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":64,"wgHostname":"mw1215"});});</script>
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Name_mangling by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:48 GMT -->
+</html>

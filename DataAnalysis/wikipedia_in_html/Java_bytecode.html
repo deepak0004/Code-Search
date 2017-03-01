@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Java_bytecode by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:35 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Java bytecode - Wikipedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Java_bytecode","wgTitle":"Java bytecode","wgCurRevisionId":736779149,"wgRevisionId":736779149,"wgArticleId":38321273,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles containing potentially dated statements from 2015","All articles containing potentially dated statements","Wikipedia articles needing clarification from August 2016","Wikipedia articles needing clarification from October 2010","Java platform","Assembly languages"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Java_bytecode","wgRelevantArticleId":38321273,"wgRequestId":"WHEVQgpAME4AAI18kgQAAABE","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgFlaggedRevsParams":{"tags":{}},"wgStableRevisionId":null,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"en","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgWikibaseItemId":"Q137496","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.cite.styles":"ready","ext.pygments":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@1dqfd7l",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["ext.cite.a11y","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.legacy.wikibits","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.watchlist-notice","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.gadget.featured-articles-links","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.interface","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="https://en.wikipedia.org/w/load.php?debug=false&amp;lang=en&amp;modules=ext.cite.styles%7Cext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="../w/load2c8d.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../w/load18b6.css?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.29.0-wmf.7"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="https://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Java_bytecode"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Java_bytecode&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Java_bytecode&amp;action=edit"/>
+<link rel="apple-touch-icon" href="https://en.wikipedia.org/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="../static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../w/api251f.php?action=rsd"/>
+<link rel="copyright" href="../../creativecommons.org/licenses/by-sa/3.0/index.html"/>
+<link rel="canonical" href="Java_bytecode.html"/>
+<link rel="dns-prefetch" href="../../login.wikimedia.org/index.html"/>
+<link rel="dns-prefetch" href="../../meta.wikimedia.org/index.html" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Java_bytecode rootpage-Java_bytecode skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">Java bytecode</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><script>function mfTempOpenSection(id){var block=document.getElementById("mf-section-"+id);block.className+=" open-block";block.previousSibling.className+=" open-block";}</script><p><b>Java bytecode</b> is the <a href="https://en.wikipedia.org/wiki/Instruction_set" title="Instruction set">instruction set</a> of the <a href="https://en.wikipedia.org/wiki/Java_virtual_machine" title="Java virtual machine">Java virtual machine</a>. Each <a href="https://en.wikipedia.org/wiki/Bytecode" title="Bytecode">bytecode</a> is composed of one, or in some cases two bytes that represent the instruction (<a href="https://en.wikipedia.org/wiki/Opcode" title="Opcode">opcode</a>), along with zero or more bytes for passing parameters.</p>
+<p>Of the 255 possible byte-long <a href="https://en.wikipedia.org/wiki/Opcode" title="Opcode">opcodes</a>, as of 2015<sup class="plainlinks noprint asof-tag update" style="display:none;"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Java_bytecode&amp;action=edit">[update]</a></sup>, 198 are in use (~78%), 54 are reserved for future use (~21%), and 3 instructions (~1%) are set aside as permanently unimplemented.<sup id="cite_ref-reserved_opcodes_1-0" class="reference"><a href="#cite_note-reserved_opcodes-1">[1]</a></sup></p>
+<p>The Java bytecode system does not directly support floating point operations beyond 32 bits, except indirectly via bytecodes that enable use of 64-bit and 80-bit intermediate IEEE floating point operations.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Relation_to_Java"><span class="tocnumber">1</span> <span class="toctext">Relation to Java</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Example"><span class="tocnumber">2</span> <span class="toctext">Example</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Generation"><span class="tocnumber">3</span> <span class="toctext">Generation</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Execution"><span class="tocnumber">4</span> <span class="toctext">Execution</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Support_for_dynamic_languages"><span class="tocnumber">5</span> <span class="toctext">Support for dynamic languages</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#See_also"><span class="tocnumber">6</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#References"><span class="tocnumber">7</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#External_links"><span class="tocnumber">8</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Relation_to_Java">Relation to Java</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_bytecode&amp;action=edit&amp;section=1" title="Edit section: Relation to Java">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>A <a href="Java_(programming_language).html" title="Java (programming language)">Java</a> programmer does not need to be aware of or understand Java bytecode at all. However, as suggested in the <a href="https://en.wikipedia.org/wiki/IBM" title="IBM">IBM</a> developerWorks journal, "Understanding bytecode and what bytecode is likely to be generated by a <a href="Java_compiler.html" title="Java compiler">Java compiler</a> helps the Java programmer in the same way that knowledge of <a href="https://en.wikipedia.org/wiki/Assembly_language" title="Assembly language">assembly</a> helps the <a href="https://en.wikipedia.org/wiki/C_(programming_language)" title="C (programming language)">C</a> or <a href="https://en.wikipedia.org/wiki/C++" title="C++">C++</a> programmer."<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">[2]</a></sup></p>
+<p>Instructions fall into a number of broad groups:</p>
+<ul>
+<li>Load and store (e.g. aload_0, istore)</li>
+<li>Arithmetic and logic (e.g. ladd, fcmpl)</li>
+<li>Type conversion (e.g. i2b, d2i)</li>
+<li>Object creation and manipulation (new, putfield)</li>
+<li>Operand stack management (e.g. swap, dup2)</li>
+<li>Control transfer (e.g. ifeq, goto)</li>
+<li>Method invocation and return (e.g. invokespecial, areturn)</li>
+</ul>
+<p>There are also a few instructions for a number of more specialized tasks such as exception throwing, synchronization, etc.</p>
+<p>Many instructions have prefixes and/or suffixes referring to the types of operands they operate on. These are as follows:</p>
+<table class="wikitable">
+<tr>
+<th>Prefix-suffix</th>
+<th>Operand type</th>
+</tr>
+<tr>
+<td><code>i</code></td>
+<td>integer</td>
+</tr>
+<tr>
+<td><code>l</code></td>
+<td>long</td>
+</tr>
+<tr>
+<td><code>s</code></td>
+<td>short</td>
+</tr>
+<tr>
+<td><code>b</code></td>
+<td>byte</td>
+</tr>
+<tr>
+<td><code>c</code></td>
+<td>character</td>
+</tr>
+<tr>
+<td><code>f</code></td>
+<td>float</td>
+</tr>
+<tr>
+<td><code>d</code></td>
+<td>double</td>
+</tr>
+<tr>
+<td><code>z</code></td>
+<td>boolean</td>
+</tr>
+<tr>
+<td><code>a</code></td>
+<td>reference</td>
+</tr>
+</table>
+<p>For example, "iadd" will add two integers, while "dadd" will add two doubles. The "const", "load", and "store" instructions may also take a suffix of the form "_<i>n</i>", where <i>n</i> is a number from 0–3 for "load" and "store". The maximum <i>n</i> for "const" differs by type.</p>
+<p>The "const" instructions push a value of the specified type onto the stack. For example, "iconst_5" will push an integer 5<sup class="noprint Inline-Template" style="margin-left:0.1em; white-space:nowrap;">[<i><a href="https://en.wikipedia.org/wiki/Wikipedia:Please_clarify" title="Wikipedia:Please clarify"><span title="The text near this tag may need clarification or removal of jargon. (August 2016)">clarification needed</span></a></i>]</sup>, while "dconst_1" will push a double 1. There is also an "aconst_null", which pushes "null". The <i>n</i> for the "load" and "store" instructions specifies the location in the variable table<sup class="noprint Inline-Template" style="margin-left:0.1em; white-space:nowrap;">[<i><a href="https://en.wikipedia.org/wiki/Wikipedia:Please_clarify" title="Wikipedia:Please clarify"><span title="The text near this tag may need clarification or removal of jargon. (October 2010)">clarification needed</span></a></i>]</sup> to load from or store to. The "aload_0" instruction pushes the object in variable 0 onto the stack (this is usually the "this" object). "istore_1" stores the integer on the top of the stack into variable 1. For variables with higher numbers the suffix is dropped and operands must be used.</p>
+<h2><span class="mw-headline" id="Example">Example</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_bytecode&amp;action=edit&amp;section=2" title="Edit section: Example">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Consider the following Java code:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="nl">outer:</span>
+<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">1000</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">2</span><span class="o">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">i</span><span class="o">;</span> <span class="n">j</span><span class="o">++)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">i</span> <span class="o">%</span> <span class="n">j</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span>
+            <span class="k">continue</span> <span class="n">outer</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span> <span class="o">(</span><span class="n">i</span><span class="o">);</span>
+<span class="o">}</span>
+</pre></div>
+<p>A Java compiler might translate the Java code above into byte code as follows, assuming the above was put in a method:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="mi">0</span><span class="p">:</span>   <span class="kr">iconst_2</span>
+<span class="mi">1</span><span class="p">:</span>   <span class="kr">istore_1</span>
+<span class="mi">2</span><span class="p">:</span>   <span class="kr">iload_1</span>
+<span class="mi">3</span><span class="p">:</span>   <span class="kr">sipush</span>  <span class="mi">1000</span>
+<span class="mi">6</span><span class="p">:</span>   <span class="kr">if_icmpge</span>       <span class="mi">44</span>
+<span class="mi">9</span><span class="p">:</span>   <span class="kr">iconst_2</span>
+<span class="mi">10</span><span class="p">:</span>  <span class="kr">istore_2</span>
+<span class="mi">11</span><span class="p">:</span>  <span class="kr">iload_2</span>
+<span class="mi">12</span><span class="p">:</span>  <span class="kr">iload_1</span>
+<span class="mi">13</span><span class="p">:</span>  <span class="kr">if_icmpge</span>       <span class="mi">31</span>
+<span class="mi">16</span><span class="p">:</span>  <span class="kr">iload_1</span>
+<span class="mi">17</span><span class="p">:</span>  <span class="kr">iload_2</span>
+<span class="mi">18</span><span class="p">:</span>  <span class="kr">irem</span>
+<span class="mi">19</span><span class="p">:</span>  <span class="kr">ifne</span>    <span class="mi">25</span>
+<span class="mi">22</span><span class="p">:</span>  <span class="kr">goto</span>    <span class="mi">38</span>
+<span class="mi">25</span><span class="p">:</span>  <span class="kr">iinc</span>    <span class="nl">2,</span> <span class="mi">1</span>
+<span class="mi">28</span><span class="p">:</span>  <span class="kr">goto</span>    <span class="mi">11</span>
+<span class="mi">31</span><span class="p">:</span>  <span class="kr">getstatic</span>       <span class="vc">#84;</span> <span class="kt">//</span> <span class="nl">Field</span> <span class="nl">java/lang/System.out</span><span class="p">:</span><span class="nl">Ljava/io/PrintStream;</span>
+<span class="mi">34</span><span class="p">:</span>  <span class="kr">iload_1</span>
+<span class="mi">35</span><span class="p">:</span>  <span class="kr">invokevirtual</span>   <span class="err">#85</span><span class="c1">; // Method java/io/PrintStream.println:(I)V</span>
+<span class="mi">38</span><span class="p">:</span>  <span class="kr">iinc</span>    <span class="nl">1,</span> <span class="mi">1</span>
+<span class="mi">41</span><span class="p">:</span>  <span class="kr">goto</span>    <span class="mi">2</span>
+<span class="mi">44</span><span class="p">:</span>  <span class="kr">return</span>
+</pre></div>
+<h2><span class="mw-headline" id="Generation">Generation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_bytecode&amp;action=edit&amp;section=3" title="Edit section: Generation">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div role="note" class="hatnote">Main article: <a href="List_of_JVM_languages.html" title="List of JVM languages">List of JVM languages</a></div>
+<p>The most common language targeting <a href="Java_Virtual_Machine.html" class="mw-redirect" title="Java Virtual Machine">Java Virtual Machine</a> by producing Java bytecode is Java. Originally only one compiler existed, the <a href="Javac.html" title="Javac">javac</a> compiler from Sun Microsystems, which compiles <a href="https://en.wikipedia.org/wiki/Java_source_code" class="mw-redirect" title="Java source code">Java source code</a> to Java bytecode; but because all the specifications for Java bytecode are now available, other parties have supplied compilers that produce Java bytecode. Examples of other compilers include:</p>
+<ul>
+<li><a href="Jikes.html" title="Jikes">Jikes</a>, compiles from Java to Java bytecode (developed by <a href="https://en.wikipedia.org/wiki/IBM" title="IBM">IBM</a>, implemented in <a href="https://en.wikipedia.org/wiki/C++" title="C++">C++</a>)</li>
+<li>Espresso, compiles from Java to Java bytecode (Java 1.0 only)</li>
+<li><a href="GNU_Compiler_for_Java.html" title="GNU Compiler for Java">GCJ</a>, the GNU Compiler for Java, compiles from Java to Java bytecode; it is also able to compile to native machine code and is available as part of the <a href="GNU_Compiler_Collection.html" title="GNU Compiler Collection">GNU Compiler Collection</a> (GCC).</li>
+</ul>
+<p>Some projects provide Java assemblers to enable writing Java bytecode by hand. Assembly code may be also generated by machine, for example by a compiler targeting a <a href="https://en.wikipedia.org/wiki/Java_virtual_machine" title="Java virtual machine">Java virtual machine</a>. Notable Java assemblers include:</p>
+<ul>
+<li><a href="Jasmin_(Java_assembler).html" class="mw-redirect" title="Jasmin (Java assembler)">Jasmin</a>, takes textual descriptions for Java classes, written in a simple assembly-like syntax using Java Virtual Machine instruction set and generates a Java class file<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">[3]</a></sup></li>
+<li><a href="https://en.wikipedia.org/w/index.php?title=Jamaica_(Java_assembler)&amp;action=edit&amp;redlink=1" class="new" title="Jamaica (Java assembler) (page does not exist)">Jamaica</a>, a <a href="https://en.wikipedia.org/wiki/Macro_(computer_science)" title="Macro (computer science)">macro</a> <a href="https://en.wikipedia.org/wiki/Assembly_language" title="Assembly language">assembly language</a> for the <a href="https://en.wikipedia.org/wiki/Java_virtual_machine" title="Java virtual machine">Java virtual machine</a>. Java syntax is used for class or interface definition. Method bodies are specified using bytecode instructions.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">[4]</a></sup></li>
+<li><a href="https://en.wikipedia.org/w/index.php?title=Krakatau_Bytecode_Tools&amp;action=edit&amp;redlink=1" class="new" title="Krakatau Bytecode Tools (page does not exist)">Krakatau</a> currently contains three tools: a decompiler and disassembler for Java classfiles and an assembler to create classfiles.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">[5]</a></sup></li>
+<li><a href="https://en.wikipedia.org/w/index.php?title=Lilac_(Java_assembler)&amp;action=edit&amp;redlink=1" class="new" title="Lilac (Java assembler) (page does not exist)">Lilac</a>, an assembler and disassembler for the <a href="https://en.wikipedia.org/wiki/Java_virtual_machine" title="Java virtual machine">Java virtual machine</a>.<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">[6]</a></sup></li>
+</ul>
+<p>Others have developed compilers, for different programming languages, in order to target the Java virtual machine, such as:</p>
+<ul>
+<li><a href="ColdFusion.html" class="mw-redirect" title="ColdFusion">ColdFusion</a></li>
+<li><a href="JRuby.html" title="JRuby">JRuby</a> and <a href="Jython.html" title="Jython">Jython</a>, two <a href="https://en.wikipedia.org/wiki/Scripting_language" title="Scripting language">scripting languages</a> based on <a href="https://en.wikipedia.org/wiki/Ruby_(programming_language)" title="Ruby (programming language)">Ruby</a> and <a href="https://en.wikipedia.org/wiki/Python_(programming_language)" title="Python (programming language)">Python</a></li>
+<li><a href="Groovy_(programming_language).html" title="Groovy (programming language)">Groovy</a>, a <a href="https://en.wikipedia.org/wiki/Scripting_language" title="Scripting language">scripting language</a> based on Java</li>
+<li><a href="Scala_(programming_language).html" title="Scala (programming language)">Scala</a>, a type-safe general-purpose programming language supporting object-oriented and functional programming</li>
+<li><a href="https://en.wikipedia.org/wiki/JGNAT" class="mw-redirect" title="JGNAT">JGNAT</a> and <a href="https://en.wikipedia.org/w/index.php?title=AdaMagic&amp;action=edit&amp;redlink=1" class="new" title="AdaMagic (page does not exist)">AppletMagic</a>, compile from the <a href="https://en.wikipedia.org/wiki/Ada_programming_language" class="mw-redirect" title="Ada programming language">Ada programming language</a> to Java bytecode</li>
+<li><a href="Java_Virtual_Machine.html#C_to_bytecode_compilers" class="mw-redirect" title="Java Virtual Machine">C to Java byte-code compilers</a></li>
+<li><a href="Clojure.html" title="Clojure">Clojure</a>, a functional, immutable, general-purpose programming language in the LISP family with a strong emphasis on concurrency</li>
+<li><a href="https://en.wikipedia.org/wiki/MIDletPascal" title="MIDletPascal">MIDletPascal</a></li>
+<li><a href="JavaFX_Script.html" title="JavaFX Script">JavaFX Script</a> code is also compiled to Java bytecode</li>
+<li><a href="https://en.wikipedia.org/wiki/Kotlin_(programming_language)" title="Kotlin (programming language)">Kotlin</a></li>
+</ul>
+<h2><span class="mw-headline" id="Execution">Execution</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_bytecode&amp;action=edit&amp;section=4" title="Edit section: Execution">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>There are several machines available today, both free and commercial products.</p>
+<div role="note" class="hatnote">Further information: <a href="https://en.wikipedia.org/wiki/Java_virtual_machine" title="Java virtual machine">Java virtual machine</a></div>
+<p>If executing Java bytecode in a Java virtual machine is not desirable, a developer can also compile Java source code or Java bytecode directly to native machine code with tools such as the <a href="https://en.wikipedia.org/wiki/GCJ" class="mw-redirect" title="GCJ">GNU Compiler for Java</a>. Some processors can execute Java bytecode natively. Such processors are known as <i><a href="Java_processor.html" title="Java processor">Java processors</a></i>.</p>
+<h2><span class="mw-headline" id="Support_for_dynamic_languages">Support for dynamic languages</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_bytecode&amp;action=edit&amp;section=5" title="Edit section: Support for dynamic languages">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div role="note" class="hatnote">Main article: <a href="List_of_JVM_languages.html" title="List of JVM languages">List of JVM languages</a></div>
+<p>The <a href="Java_Virtual_Machine.html" class="mw-redirect" title="Java Virtual Machine">Java Virtual Machine</a> provides some support for <a href="https://en.wikipedia.org/wiki/Type_system#Dynamic_typing" title="Type system">dynamically typed languages</a>. Most of the existing JVM instruction set is <a href="https://en.wikipedia.org/wiki/Type_system#Static_typing" title="Type system">statically typed</a> - in the sense that method calls have their signatures type-checked at <a href="https://en.wikipedia.org/wiki/Compile_time" title="Compile time">compile time</a>, without a mechanism to defer this decision to <a href="https://en.wikipedia.org/wiki/Run_time_(program_lifecycle_phase)" title="Run time (program lifecycle phase)">run time</a>, or to choose the method dispatch by an alternative approach.<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">[7]</a></sup></p>
+<p><a href="Java_Community_Process.html" title="Java Community Process">JSR</a> 292 (<i>Supporting Dynamically Typed Languages on the Java™ Platform</i>)<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">[8]</a></sup> added a new <code>invokedynamic</code> instruction at the JVM level, to allow method invocation relying on dynamic <a href="https://en.wikipedia.org/wiki/Type_system#Type_checking" title="Type system">type checking</a> (instead of the existing statically type-checked <code>invokevirtual</code> instruction). The <a href="Da_Vinci_Machine.html" title="Da Vinci Machine">Da Vinci Machine</a> is a prototype virtual machine implementation that hosts JVM extensions aimed at supporting dynamic languages. All JVMs supporting <a href="Java_Platform%2c_Standard_Edition.html" title="Java Platform, Standard Edition">JSE</a> 7 also include the <code>invokedynamic</code> opcode.</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_bytecode&amp;action=edit&amp;section=6" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div role="navigation" aria-label="Portals" class="noprint portal plainlist tright" style="margin:0.5em 0 0.5em 1em;border:solid #aaa 1px">
+<ul style="display:table;box-sizing:border-box;padding:0.1em;max-width:175px;background:#f9f9f9;font-size:85%;line-height:110%;font-style:italic;font-weight:bold">
+<li style="display:table-row"><span style="display:table-cell;padding:0.2em;vertical-align:middle;text-align:center"><a href="https://en.wikipedia.org/wiki/File:Wave.svg" class="image"><img alt="icon" src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/15px-Wave.svg.png" width="15" height="28" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/23px-Wave.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/31px-Wave.svg.png 2x" data-file-width="226" data-file-height="407" /></a></span><span style="display:table-cell;padding:0.2em 0.2em 0.2em 0.3em;vertical-align:middle"><a href="https://en.wikipedia.org/wiki/Portal:Java" title="Portal:Java">Java portal</a></span></li>
+</ul>
+</div>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Java_bytecode_instruction_listings" title="Java bytecode instruction listings">Java bytecode instruction listings</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Java_class_file" title="Java class file">Java class file</a></li>
+<li><a href="List_of_JVM_languages.html" title="List of JVM languages">List of JVM languages</a></li>
+<li><a href="Java_backporting_tools.html" title="Java backporting tools">Java backporting tools</a></li>
+<li><a href="https://en.wikipedia.org/wiki/C_to_Java_Virtual_Machine_compilers" class="mw-redirect" title="C to Java Virtual Machine compilers">C to Java Virtual Machine compilers</a></li>
+<li><a href="https://en.wikipedia.org/wiki/JStik" title="JStik">JStik</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Common_Intermediate_Language" title="Common Intermediate Language">Common Intermediate Language</a> (CIL), Microsoft's rival to Java bytecode</li>
+<li><a href="ObjectWeb_ASM.html" title="ObjectWeb ASM">ObjectWeb ASM</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_bytecode&amp;action=edit&amp;section=7" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist columns references-column-count references-column-count-2" style="-moz-column-count: 2; -webkit-column-count: 2; column-count: 2; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-reserved_opcodes-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-reserved_opcodes_1-0">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/specs/jvms/se7/html/jvms-6.html#jvms-6.2">VM Spec - Reserved Opcodes</a></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.ibm.com/developerworks/ibm/library/it-haggar_bytecode/">Understanding bytecode makes you a better programmer</a></span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://jasmin.sourceforge.net/">Jasmin Home Page</a></span></li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.judoscript.org/jamaica.html">Jamaica: The Java Virtual Machine (JVM) Macro Assembler</a></span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://github.com/Storyyeller/Krakatau">Krakatau Home Page</a></span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://lilac.sourceforge.net/">Lilac Home Page</a></span></li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><cite class="citation web">Nutter, Charles (2007-01-03). <a rel="nofollow" class="external text" href="http://headius.blogspot.com/2007/01/invokedynamic-actually-useful.html">"InvokeDynamic: Actually Useful?"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2008-01-25</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+bytecode&amp;rft.aufirst=Charles&amp;rft.aulast=Nutter&amp;rft.btitle=InvokeDynamic%3A+Actually+Useful%3F&amp;rft.date=2007-01-03&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fheadius.blogspot.com%2F2007%2F01%2Finvokedynamic-actually-useful.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.jcp.org/en/jsr/detail?id=292">see JSR 292</a></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_bytecode&amp;action=edit&amp;section=8" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table role="presentation" class="mbox-small plainlinks sistersitebox" style="border:1px solid #aaa;background-color:#f9f9f9">
+<tr>
+<td class="mbox-image"><a href="https://en.wikipedia.org/wiki/File:Wikibooks-logo-en-noslogan.svg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/40px-Wikibooks-logo-en-noslogan.svg.png" width="40" height="40" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/60px-Wikibooks-logo-en-noslogan.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/80px-Wikibooks-logo-en-noslogan.svg.png 2x" data-file-width="400" data-file-height="400" /></a></td>
+<td class="mbox-text plainlist">The Wikibook <i><a href="http://en.wikibooks.org/wiki/Java_Programming" class="extiw" title="wikibooks:Java Programming">Java Programming</a></i> has a page on the topic of: <i><b><a href="http://en.wikibooks.org/wiki/Java_Programming/Byte_Code" class="extiw" title="wikibooks:Java Programming/Byte Code">Java bytecode</a></b></i></td>
+</tr>
+</table>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/specs/jvms/se7/html/">Oracle's Java Virtual Machine Specification</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.is-research.de/info/vmlanguages/">Programming Languages for the Java Virtual Machine</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.drgarbage.com/bytecode-visualizer.html">Bytecode Visualizer – bytecode viewer and debugger (free Eclipse plugin)</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.adaptj.com/main/stacktrace">AdaptJ StackTrace – bytecode level debugging with a full control of the stack, the local variables, and the execution flow</a></li>
+<li><a rel="nofollow" class="external text" href="http://lulachronicles.blogspot.com/">Java Class Unpacker – plugin for Total Commander, it lets open class files as compressed archives and see fields and methods as files. The bytecode can be viewed as text using F3</a></li>
+</ul>
+<div role="navigation" class="navbox" aria-labelledby="Java" style="padding:3px">
+<table class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit">
+<tr>
+<th scope="col" class="navbox-title" colspan="3">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="https://en.wikipedia.org/wiki/Template:Java_(software_platform)" title="Template:Java (software platform)"><abbr title="View this template" style=";;background:none transparent;border:none;">v</abbr></a></li>
+<li class="nv-talk"><a href="https://en.wikipedia.org/wiki/Template_talk:Java_(software_platform)" title="Template talk:Java (software platform)"><abbr title="Discuss this template" style=";;background:none transparent;border:none;">t</abbr></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Java_(software_platform)&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;">e</abbr></a></li>
+</ul>
+</div>
+<div id="Java" style="font-size:114%"><a href="Java_(software_platform).html" title="Java (software platform)">Java</a></div>
+</th>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Java platforms</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Java_(programming_language).html" title="Java (programming language)">Java language</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Java_virtual_machine" title="Java virtual machine">JVM</a></li>
+<li><a href="Java_Platform%2c_Micro_Edition.html" title="Java Platform, Micro Edition">Micro Edition</a></li>
+<li><a href="Java_Platform%2c_Standard_Edition.html" title="Java Platform, Standard Edition">Standard Edition</a></li>
+<li><a href="Java_Platform%2c_Enterprise_Edition.html" title="Java Platform, Enterprise Edition">Enterprise Edition</a></li>
+<li><a href="Java_Card.html" title="Java Card">Java Card</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Android_software_development#SDK" title="Android software development">Android SDK</a></li>
+</ul>
+</div>
+</td>
+<td class="navbox-image" rowspan="13" style="width:0%;padding:0px 0px 0px 2px">
+<div><a href="https://en.wikipedia.org/wiki/File:Wave.svg" class="image"><img alt="Wave.svg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/75px-Wave.svg.png" width="75" height="135" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/113px-Wave.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/150px-Wave.svg.png 2x" data-file-width="226" data-file-height="407" /></a></div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Oracle technologies</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Squawk_virtual_machine.html" title="Squawk virtual machine">Squawk</a></li>
+<li><a href="Java_Development_Kit.html" title="Java Development Kit">Java Development Kit</a></li>
+<li><a href="OpenJDK.html" title="OpenJDK">OpenJDK</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Java_virtual_machine" title="Java virtual machine">Java virtual machine</a></li>
+<li><a href="JavaFX.html" title="JavaFX">JavaFX</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Maxine_Virtual_Machine" title="Maxine Virtual Machine">Maxine VM</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Platform technologies</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Java_applet.html" title="Java applet">Applets</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Java_servlet" title="Java servlet">Servlets</a></li>
+<li><a href="MIDlet.html" title="MIDlet">MIDlets</a></li>
+<li><a href="JavaServer_Pages.html" title="JavaServer Pages">JSP</a></li>
+<li><a href="Java_Web_Start.html" title="Java Web Start">Web Start (JNLP)</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Major third-party technologies</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Blackdown_Java.html" title="Blackdown Java">Blackdown</a></li>
+<li><a href="Eclipse_(software).html" title="Eclipse (software)">Eclipse</a></li>
+<li><a href="GNU_Classpath.html" title="GNU Classpath">GNU Classpath</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Google_Web_Toolkit" title="Google Web Toolkit">GWT</a></li>
+<li><a href="Apache_Harmony.html" title="Apache Harmony">Harmony</a></li>
+<li><a href="Hibernate_(Java).html" class="mw-redirect" title="Hibernate (Java)">Hibernate</a></li>
+<li><a href="IcedTea.html" title="IcedTea">IcedTea</a></li>
+<li><a href="Jazelle.html" title="Jazelle">Jazelle</a></li>
+<li><a href="Spring_Framework.html" title="Spring Framework">Spring</a></li>
+<li><a href="Apache_Struts.html" class="mw-redirect" title="Apache Struts">Struts</a></li>
+<li><a href="TopLink.html" title="TopLink">TopLink</a></li>
+<li><a href="https://en.wikipedia.org/wiki/WildFly" title="WildFly">WildFly</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">History</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Java_version_history.html" title="Java version history">Java version history</a></li>
+<li><a href="Java_Community_Process.html" title="Java Community Process">Java Community Process</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sun_Microsystems" title="Sun Microsystems">Sun Microsystems</a></li>
+<li><a href="Free_Java_implementations.html" title="Free Java implementations">Free Java implementations</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="List_of_JVM_languages.html" title="List of JVM languages">Major programming languages</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="BeanShell.html" title="BeanShell">BeanShell</a></li>
+<li><a href="Clojure.html" title="Clojure">Clojure</a></li>
+<li><a href="Groovy_(programming_language).html" title="Groovy (programming language)">Groovy</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Oxygene_(programming_language)" title="Oxygene (programming language)">Oxygene</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Tcl/Java" title="Tcl/Java">Java Tcl</a></li>
+<li><a href="JRuby.html" title="JRuby">JRuby</a></li>
+<li><a href="Jython.html" title="Jython">Jython</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Kotlin_(programming_language)" title="Kotlin (programming language)">Kotlin</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Processing_(programming_language)" title="Processing (programming language)">Processing</a></li>
+<li><a href="Rhino_(JavaScript_engine).html" title="Rhino (JavaScript engine)">Rhino</a></li>
+<li><a href="Scala_(programming_language).html" title="Scala (programming language)">Scala</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Java conferences</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="JavaOne.html" title="JavaOne">JavaOne</a></li>
+<li><a href="Devoxx.html" title="Devoxx">Devoxx</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1257
+Cached time: 20161231144312
+Cache expiry: 2592000
+Dynamic content: false
+CPU time usage: 0.168 seconds
+Real time usage: 0.621 seconds
+Preprocessor visited node count: 920/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 25378/2097152 bytes
+Template argument size: 1653/2097152 bytes
+Highest expansion depth: 12/40
+Expensive parser function count: 3/500
+Lua time usage: 0.066/10.000 seconds
+Lua memory usage: 2.56 MB/50 MB
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  576.759      1 - -total
+ 77.87%  449.105      1 - Template:Reflist
+ 76.09%  438.854      1 - Template:Cite_web
+  8.99%   51.876      2 - Template:Clarify
+  8.12%   46.806      2 - Template:Fix-span
+  4.09%   23.581      4 - Template:Category_handler
+  3.64%   21.011      1 - Template:As_of
+  3.48%   20.049      2 - Template:Replace
+  3.10%   17.856      1 - Template:DMCA
+  2.91%   16.789      1 - Template:Dated_maintenance_category
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:38321273-0!*!0!!en!4!* and timestamp 20161231144311 and revision id 736779149
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Java_bytecode&amp;oldid=736779149">https://en.wikipedia.org/w/index.php?title=Java_bytecode&amp;oldid=736779149</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Help_Category.html" title="Help:Category">Categories</a>: <ul><li><a href="Category_Java_platform.html" title="Category:Java platform">Java platform</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Assembly_languages" title="Category:Assembly languages">Assembly languages</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Articles_containing_potentially_dated_statements_from_2015" title="Category:Articles containing potentially dated statements from 2015">Articles containing potentially dated statements from 2015</a></li><li><a href="https://en.wikipedia.org/wiki/Category:All_articles_containing_potentially_dated_statements" title="Category:All articles containing potentially dated statements">All articles containing potentially dated statements</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Wikipedia_articles_needing_clarification_from_August_2016" title="Category:Wikipedia articles needing clarification from August 2016">Wikipedia articles needing clarification from August 2016</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Wikipedia_articles_needing_clarification_from_October_2010" title="Category:Wikipedia articles needing clarification from October 2010">Wikipedia articles needing clarification from October 2010</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="Special_MyTalk.html" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="Special_MyContributions.html" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&amp;returnto=Java+bytecode" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Java+bytecode" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="Java_bytecode.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+															<li  id="ca-talk"><span><a href="https://en.wikipedia.org/wiki/Talk:Java_bytecode"  title="Discussion about the content page [t]" accesskey="t" rel="discussion">Talk</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="Java_bytecode.html" >Read</a></span></li>
+															<li id="ca-edit"><span><a href="https://en.wikipedia.org/w/index.php?title=Java_bytecode&amp;action=edit"  title="Edit this page [e]" accesskey="e">Edit</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="https://en.wikipedia.org/w/index.php?title=Java_bytecode&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="https://en.wikipedia.org/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="Main_Page.html"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="Portal_Contents.html" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="Portal_Featured_content.html" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="Portal_Current_events.html" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="https://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="../../shop.wikimedia.org/index.html" title="Visit the Wikipedia store">Wikipedia store</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Interaction</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-help"><a href="Help_Contents.html" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="Wikipedia_About.html" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="Wikipedia_Community_portal.html" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="Wikipedia_Contact_us.html" title="How to contact Wikipedia">Contact page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="https://en.wikipedia.org/wiki/Special:WhatLinksHere/Java_bytecode" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://en.wikipedia.org/wiki/Special:RecentChangesLinked/Java_bytecode" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="Wikipedia_File_Upload_Wizard.html" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="https://en.wikipedia.org/w/index.php?title=Java_bytecode&amp;oldid=736779149" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://en.wikipedia.org/w/index.php?title=Java_bytecode&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q137496" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="https://en.wikipedia.org/w/index.php?title=Special:CiteThisPage&amp;page=Java_bytecode&amp;id=736779149" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Print/export</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Java+bytecode">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Java+bytecode&amp;returnto=Java+bytecode&amp;oldid=736779149&amp;writer=rdf2latex">Download as PDF</a></li><li id="t-print"><a href="https://en.wikipedia.org/w/index.php?title=Java_bytecode&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Languages</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-bs"><a href="https://bs.wikipedia.org/wiki/Java_bytecode" title="Java bytecode – Bosnian" lang="bs" hreflang="bs" class="interlanguage-link-target">Bosanski</a></li><li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Bytecode_(Java)" title="Bytecode (Java) – Catalan" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Bytecode_Java" title="Bytecode Java – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Bytecode_Java" title="Bytecode Java – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/자바_바이트코드" title="자바 바이트코드 – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-id"><a href="https://id.wikipedia.org/wiki/Bytecode_Java" title="Bytecode Java – Indonesian" lang="id" hreflang="id" class="interlanguage-link-target">Bahasa Indonesia</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/Java_bájtkód" title="Java bájtkód – Hungarian" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/Javaバイトコード" title="Javaバイトコード – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Kod_bajtowy_Javy" title="Kod bajtowy Javy – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Bytecode_Java" title="Bytecode Java – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/Байт-код_Java" title="Байт-код Java – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-sh"><a href="https://sh.wikipedia.org/wiki/Java_bytecode" title="Java bytecode – Serbo-Croatian" lang="sh" hreflang="sh" class="interlanguage-link-target">Srpskohrvatski / српскохрватски</a></li><li class="interlanguage-link interwiki-tr"><a href="https://tr.wikipedia.org/wiki/Java_bytecode" title="Java bytecode – Turkish" lang="tr" hreflang="tr" class="interlanguage-link-target">Türkçe</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/Java字节码" title="Java字节码 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q137496#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 29 August 2016, at 19:58.</li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="Wikipedia_Text_of_Creative_Commons_Attribution-ShareAlike_3.html">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="../../creativecommons.org/licenses/by-sa/3.0/index.html" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="../../wikimediafoundation.org/wiki/Terms_of_Use.html">Terms of Use</a> and <a href="../../wikimediafoundation.org/wiki/Privacy_policy.html">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="../../www.wikimediafoundation.org/index.html">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../../wikimediafoundation.org/wiki/Privacy_policy.html" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="Wikipedia_About.html" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="Wikipedia_General_disclaimer.html" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="Wikipedia_Contact_us.html">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a href="../../www.mediawiki.org/wiki/Special_MyLanguage/How_to_contribute.html">Developers</a></li>
+											<li id="footer-places-cookiestatement"><a href="../../wikimediafoundation.org/wiki/Cookie_statement.html">Cookie statement</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/w/index.php?title=Java_bytecode&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="../../www.wikimediafoundation.org/index.html"><img src="https://en.wikipedia.org/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="../../www.mediawiki.org/index.html"><img src="https://en.wikipedia.org/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":59,"wgHostname":"mw1243"});});</script>
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Java_bytecode by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:35 GMT -->
+</html>

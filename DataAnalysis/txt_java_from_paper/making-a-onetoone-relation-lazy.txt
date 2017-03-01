@@ -1,0 +1,8 @@
+    
+        In this application we are developing, we noticed that a view was particularly slow. I profiled the view and noticed that there was one query executed by hibernate which took 10 seconds even if there only were two object in the database to fetch. All OneToMany and ManyToMany relations were lazy so that wasn't the problem. When inspecting the actual SQL being executed, I noticed that there were over 80 joins in the query. 
+
+Further inspecting the issue, I noticed that the problem was caused by the deep hierarchy of OneToOne and ManyToOne relations between entity classes. So, I thought, I'll just make them fetched lazy, that should solve the problem. But annotating either @OneToOne(fetch=FetchType.LAZY) or @ManyToOne(fetch=FetchType.LAZY) doesn't seem to work. Either I get an exception or then they are not actually replaced with a proxy object and thus being lazy.
+
+Any ideas how I'll get this to work? Note that I do not use the persistence.xml to define relations or configuration details, everything is done in java code.
+
+                

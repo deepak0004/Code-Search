@@ -1,0 +1,13 @@
+    
+        How can i get request URL from JSP. 
+
+If i use following code within JSP i get - 
+
+System.out.println("servlet path= " + request.getServletPath());
+System.out.println("request URL= " + request.getRequestURL());
+System.out.println("request URI= " + request.getRequestURI());
+
+
+I get path to view(jsp) with jsp prefix. But i want to get URL from browser, that user type in address string. I can get valid URL in controller, that return jsp, then add it to view and get it within JSP. But prboably there are more elegant way to get valid URL within JSP ?
+
+                

@@ -1,0 +1,6 @@
+    
+        I mostly use Java and generics are relatively new. I keep reading that Java made the wrong decision or that .NET has better implementations etc. etc.
+
+So, what are the main differences between C++, C#, Java in generics? Pros/cons of each?
+
+                

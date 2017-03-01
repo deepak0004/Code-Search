@@ -1,0 +1,48 @@
+    
+        I googled for few days to try to get the clear picture of how this works. I have few questions that I couldn't find clear answers to :
+
+-What is the advantage of using DAO class with DAO interface?
+-How to handle Hibernate exceptions i.e
+
+public String doSomething(){
+            Session session = sessionFactory.getCurrentSession();
+            session.beginTransaction();
+
+              Query query = session.createQuery("");
+
+            Object o = query.uniqueResult();
+
+            session.close();
+
+            return "success";
+        }
+
+
+I'm not "forced" to try/catch, so how do I catch/intercept any exceptions that may occur?
+
+-Is opening session everytime for new DAO method more expensive than getting the current session? Should I close the session if I use get?
+
+Question Update :strong text
+
+I have @Service annotation in my service classes and for each method using dao interface I've got @Transactional above. Also I've added @Repository to all my DAO classes
+
+Update II :
+
+I'm considering opening bounty for this questions because I want to know more details and this time I'll provide some.
+
+
+<a href="http://pastebin.com/5Rg7KBNe" rel="nofollow">Spring context
+<a href="http://pastebin.com/fMjq5htw" rel="nofollow">Controller
+<a href="http://pastebin.com/w2GByEiA" rel="nofollow">Service Interface
+<a href="http://pastebin.com/LaS9vFHT" rel="nofollow">Service Implementation
+<a href="http://pastebin.com/91bFXDGi" rel="nofollow">DAO interface
+<a href="http://pastebin.com/vg88dJfE" rel="nofollow">DAO implementation
+
+
+So I want to utilize spring MVC as much as possible, how do I make session opening/closing handled by @Transactional?
+
+How do I catch the exceptions(i.e. non existing record or database failed) if any.
+
+What I'm doing wrong? Can anyone suggest some improvements?
+
+                

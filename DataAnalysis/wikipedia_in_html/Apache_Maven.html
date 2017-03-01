@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Apache_Maven by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:52:37 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Apache Maven - Wikipedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Apache_Maven","wgTitle":"Apache Maven","wgCurRevisionId":759671049,"wgRevisionId":759671049,"wgArticleId":1333305,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["CS1 errors: external links","Pages using ISBN magic links","Wikipedia articles that are too technical from October 2015","All articles that are too technical","Articles needing expert attention from October 2015","All articles needing expert attention","Articles lacking reliable references from October 2015","All articles lacking reliable references","Articles needing additional references from March 2012","All articles needing additional references","Pages using deprecated image syntax","Compiling tools","Java development tools","Apache Software Foundation","Build automation","Software using the Apache license"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Apache_Maven","wgRelevantArticleId":1333305,"wgRequestId":"WH3zmgpAAEUAAieSSMUAAAAA","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgFlaggedRevsParams":{"tags":{}},"wgStableRevisionId":null,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"en","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgWikibaseItemId":"Q139941","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.math.styles":"ready","ext.cite.styles":"ready","ext.pygments":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@1dqfd7l",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["ext.cite.a11y","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.legacy.wikibits","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.watchlist-notice","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.gadget.featured-articles-links","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.interface","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="https://en.wikipedia.org/w/load.php?debug=false&amp;lang=en&amp;modules=ext.cite.styles%7Cext.math.scripts%2Cstyles%7Cext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="../w/load2c8d.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../w/load18b6.css?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.29.0-wmf.7"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="https://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Apache_Maven"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Apache_Maven&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Apache_Maven&amp;action=edit"/>
+<link rel="apple-touch-icon" href="https://en.wikipedia.org/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="../static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../w/api251f.php?action=rsd"/>
+<link rel="copyright" href="../../creativecommons.org/licenses/by-sa/3.0/index.html"/>
+<link rel="canonical" href="Apache_Maven.html"/>
+<link rel="dns-prefetch" href="../../login.wikimedia.org/index.html"/>
+<link rel="dns-prefetch" href="../../meta.wikimedia.org/index.html" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Apache_Maven rootpage-Apache_Maven skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">Apache Maven</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><script>function mfTempOpenSection(id){var block=document.getElementById("mf-section-"+id);block.className+=" open-block";block.previousSibling.className+=" open-block";}</script><table class="plainlinks metadata ambox ambox-content ambox-multiple_issues compact-ambox" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Ambox_important.svg/40px-Ambox_important.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Ambox_important.svg/60px-Ambox_important.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Ambox_important.svg/80px-Ambox_important.svg.png 2x" data-file-width="40" data-file-height="40" /></div>
+</td>
+<td class="mbox-text">
+<div class="mw-collapsible" style="width:95%; margin: 0.2em 0;"><span class="mbox-text-span"><b>This article has multiple issues.</b> Please help <b><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Apache_Maven&amp;action=edit">improve it</a></b> or discuss these issues on the <b><a href="https://en.wikipedia.org/wiki/Talk:Apache_Maven" title="Talk:Apache Maven">talk page</a></b>. <small><i>(<a href="https://en.wikipedia.org/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove these template messages</a>)</i></small></span>
+<div class="mw-collapsible-content" style="margin-top: 0.3em;">
+<table class="plainlinks metadata ambox ambox-style ambox-technical" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px"><img alt="" src="http://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/40px-Edit-clear.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/60px-Edit-clear.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/80px-Edit-clear.svg.png 2x" data-file-width="48" data-file-height="48" /></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article <b>may be too <a href="https://en.wiktionary.org/wiki/technical#Adjective" class="extiw" title="wikt:technical">technical</a> for most readers to understand</b>. <span class="hide-when-compact">Please help <a class="external text" href="http://en.wikipedia.org/w/index.php?title=Apache_Maven&amp;action=edit">improve</a> this article to <a href="https://en.wikipedia.org/wiki/Wikipedia:Make_technical_articles_understandable" title="Wikipedia:Make technical articles understandable">make it understandable to non-experts</a>, without removing the technical details. The <a href="https://en.wikipedia.org/wiki/Talk:Apache_Maven" title="Talk:Apache Maven">talk page</a> may contain suggestions.</span> <small><i>(October 2015)</i></small> <small class="hide-when-compact"><i>(<a href="https://en.wikipedia.org/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></span></td>
+</tr>
+</table>
+<table class="plainlinks metadata ambox ambox-content ambox-Primary_sources" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px"><a href="https://en.wikipedia.org/wiki/File:Question_book-new.svg" class="image"><img alt="Question book-new.svg" src="http://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/50px-Question_book-new.svg.png" width="50" height="39" srcset="//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/75px-Question_book-new.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/100px-Question_book-new.svg.png 2x" data-file-width="512" data-file-height="399" /></a></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article <b>relies too much on <a href="https://en.wikipedia.org/wiki/Wikipedia:Verifiability" title="Wikipedia:Verifiability">references</a> to <a href="https://en.wikipedia.org/wiki/Wikipedia:No_original_research#Primary.2C_secondary_and_tertiary_sources" title="Wikipedia:No original research">primary sources</a></b>. <span class="hide-when-compact">Please improve this by adding <a href="https://en.wikipedia.org/wiki/Wikipedia:No_original_research#Primary.2C_secondary_and_tertiary_sources" title="Wikipedia:No original research">secondary or tertiary sources</a>.</span> <small><i>(October 2015)</i></small> <small class="hide-when-compact"><i>(<a href="https://en.wikipedia.org/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></span></td>
+</tr>
+</table>
+<table class="plainlinks metadata ambox ambox-content ambox-Refimprove" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px"><a href="https://en.wikipedia.org/wiki/File:Question_book-new.svg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/50px-Question_book-new.svg.png" width="50" height="39" srcset="//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/75px-Question_book-new.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/100px-Question_book-new.svg.png 2x" data-file-width="512" data-file-height="399" /></a></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article <b>needs additional citations for <a href="https://en.wikipedia.org/wiki/Wikipedia:Verifiability" title="Wikipedia:Verifiability">verification</a></b>. <span class="hide-when-compact">Please help <a class="external text" href="http://en.wikipedia.org/w/index.php?title=Apache_Maven&amp;action=edit">improve this article</a> by <a href="https://en.wikipedia.org/wiki/Help:Introduction_to_referencing_with_Wiki_Markup/1" title="Help:Introduction to referencing with Wiki Markup/1">adding citations to reliable sources</a>. Unsourced material may be challenged and removed.</span> <small><i>(March 2012)</i></small> <small class="hide-when-compact"><i>(<a href="https://en.wikipedia.org/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></span></td>
+</tr>
+</table>
+</div>
+</div>
+<small class="hide-when-compact"><i>(<a href="https://en.wikipedia.org/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></td>
+</tr>
+</table>
+<table class="infobox vevent" style="width:22em">
+<caption class="summary">Apache Maven</caption>
+<tr>
+<td colspan="2" style="text-align:center"><a href="https://en.wikipedia.org/wiki/File:Maven_logo.svg" class="image"><img alt="Maven logo.svg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Maven_logo.svg/220px-Maven_logo.svg.png" width="220" height="50" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Maven_logo.svg/330px-Maven_logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Maven_logo.svg/440px-Maven_logo.svg.png 2x" data-file-width="512" data-file-height="117" /></a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_developer" title="Software developer">Developer(s)</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Apache_Software_Foundation" title="Apache Software Foundation">Apache Software Foundation</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;">Initial release</th>
+<td>13&#160;July 2004<span class="noprint">; 12 years ago</span><span style="display:none">&#160;(<span class="bday dtstart published updated">2004-07-13</span>)</span></td>
+</tr>
+<tr>
+<td colspan="2" style="text-align:center"></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_release_life_cycle" title="Software release life cycle">Stable release</a></th>
+<td>
+<div style="margin:0px;">3.3.9<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[1]</a></sup> / 22&#160;November 2015<span class="noprint">; 13 months ago</span><span style="display:none">&#160;(<span class="bday dtstart published updated">2015-11-22</span>)</span><sup id="cite_ref-2" class="reference"><a href="#cite_note-2">[2]</a></sup></div>
+</td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Repository_(version_control)" title="Repository (version control)">Repository</a></th>
+<td><span class="url"><a rel="nofollow" class="external text" href="https://git-wip-us.apache.org/repos/asf/maven.git">git-wip-us<wbr />.apache<wbr />.org<wbr />/repos<wbr />/asf<wbr />/maven<wbr />.git</a></span></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;">Development status</th>
+<td>Active</td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;">Written in</th>
+<td><a href="Java_(programming_language).html" title="Java (programming language)">Java</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Operating_system" title="Operating system">Operating system</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Cross-platform" title="Cross-platform">Cross-platform</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_categories#Broad_categories" title="Software categories">Type</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Build_tool" class="mw-redirect" title="Build tool">Build tool</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_license" title="Software license">License</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Apache_License" title="Apache License">Apache License</a> 2.0</td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;">Website</th>
+<td><span class="url"><a rel="nofollow" class="external text" href="https://maven.apache.org/">maven<wbr />.apache<wbr />.org</a></span></td>
+</tr>
+</table>
+<p><b>Maven</b> is a <a href="https://en.wikipedia.org/wiki/Build_automation" title="Build automation">build automation</a> tool used primarily for <a href="Java_(programming_language).html" title="Java (programming language)">Java</a> projects. The word <i><a href="https://en.wikipedia.org/wiki/Maven" title="Maven">maven</a></i> means "accumulator of knowledge" in <a href="https://en.wikipedia.org/wiki/Yiddish" title="Yiddish">Yiddish</a>.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">[3]</a></sup></p>
+<p>Maven addresses two aspects of building software: first, it describes how software is built, and second, it describes its dependencies. Contrary to preceding tools like <a href="Apache_Ant.html" title="Apache Ant">Apache Ant</a>, it uses conventions for the build procedure, and only exceptions need to be written down. An <a href="https://en.wikipedia.org/wiki/XML" title="XML">XML</a> file describes the software project being built, its dependencies on other external modules and components, the build order, directories, and required <a href="https://en.wikipedia.org/wiki/Plug-in_(computing)" title="Plug-in (computing)">plug-ins</a>. It comes with pre-defined targets for performing certain well-defined tasks such as compilation of code and its packaging.</p>
+<p>Maven dynamically downloads <a href="Java_(programming_language).html" title="Java (programming language)">Java</a> libraries and Maven plug-ins from one or more repositories such as the Maven 2 Central Repository, and stores them in a local cache.<sup id="cite_ref-maven2repo_4-0" class="reference"><a href="#cite_note-maven2repo-4">[4]</a></sup> This local cache of downloaded <a href="https://en.wikipedia.org/wiki/Artifact_(software_development)" title="Artifact (software development)">artifacts</a> can also be updated with artifacts created by local projects. Public repositories can also be updated.</p>
+<p>Maven can also be used to build and manage projects written in <a href="https://en.wikipedia.org/wiki/C_Sharp_(programming_language)" title="C Sharp (programming language)">C#</a>, <a href="https://en.wikipedia.org/wiki/Ruby_(programming_language)" title="Ruby (programming language)">Ruby</a>, <a href="Scala_(programming_language).html" title="Scala (programming language)">Scala</a>, and other languages. The Maven project is hosted by the <a href="https://en.wikipedia.org/wiki/Apache_Software_Foundation" title="Apache Software Foundation">Apache Software Foundation</a>, where it was formerly part of the <a href="Jakarta_Project.html" title="Jakarta Project">Jakarta Project</a>.</p>
+<p>Maven is built using a plugin-based architecture that allows it to make use of any application controllable through standard input. Theoretically, this would allow anyone to write plugins to interface with build tools (compilers, unit test tools, etc.) for any other language. In reality, support and use for languages other than Java has been minimal. Currently a plugin for the .NET framework exists and is maintained,<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">[5]</a></sup> and a <a href="https://en.wikipedia.org/wiki/C_(programming_language)" title="C (programming language)">C</a>/<a href="https://en.wikipedia.org/wiki/C++" title="C++">C++</a> native plugin is maintained for Maven 2.<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">[6]</a></sup></p>
+<p>Alternative technologies like <a href="https://en.wikipedia.org/wiki/Gradle" title="Gradle">gradle</a> and <a href="https://en.wikipedia.org/wiki/Sbt" class="mw-redirect" title="Sbt">sbt</a> as build tools do not rely on <a href="https://en.wikipedia.org/wiki/XML" title="XML">XML</a>, but keep the key concepts Maven introduced. With <a href="https://en.wikipedia.org/wiki/Apache_Ivy" title="Apache Ivy">Apache Ivy</a>, a dedicated dependency manager was developed as well that also supports Maven repositories.<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">[7]</a></sup></p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Example"><span class="tocnumber">1</span> <span class="toctext">Example</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Concepts"><span class="tocnumber">2</span> <span class="toctext">Concepts</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Project_Object_Model"><span class="tocnumber">2.1</span> <span class="toctext">Project Object Model</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Plugins"><span class="tocnumber">2.2</span> <span class="toctext">Plugins</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Build_lifecycles"><span class="tocnumber">2.3</span> <span class="toctext">Build lifecycles</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Dependencies"><span class="tocnumber">2.4</span> <span class="toctext">Dependencies</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#Maven_compared_with_Ant"><span class="tocnumber">3</span> <span class="toctext">Maven compared with Ant</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#IDE_integration"><span class="tocnumber">4</span> <span class="toctext">IDE integration</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#History"><span class="tocnumber">5</span> <span class="toctext">History</span></a>
+<ul>
+<li class="toclevel-2 tocsection-10"><a href="#Maven_3"><span class="tocnumber">5.1</span> <span class="toctext">Maven 3</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-11"><a href="#See_also"><span class="tocnumber">6</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#References"><span class="tocnumber">7</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#Further_reading"><span class="tocnumber">8</span> <span class="toctext">Further reading</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#External_links"><span class="tocnumber">9</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Example">Example</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Apache_Maven&amp;action=edit&amp;section=1" title="Edit section: Example">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Maven projects are configured using a <a href="https://en.wikipedia.org/wiki/Project_Object_Model" class="mw-redirect" title="Project Object Model">Project Object Model</a>, which is stored in a <code>pom.xml</code>-file. Here's a minimal example:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="nt">&lt;project&gt;</span>
+  <span class="c">&lt;!-- model version is always 4.0.0 for Maven 2.x POMs --&gt;</span>
+  <span class="nt">&lt;modelVersion&gt;</span>4.0.0<span class="nt">&lt;/modelVersion&gt;</span>
+  
+  <span class="c">&lt;!-- project coordinates, i.e. a group of values which</span>
+<span class="c">       uniquely identify this project --&gt;</span>
+  
+  <span class="nt">&lt;groupId&gt;</span>com.mycompany.app<span class="nt">&lt;/groupId&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>my-app<span class="nt">&lt;/artifactId&gt;</span>
+  <span class="nt">&lt;version&gt;</span>1.0<span class="nt">&lt;/version&gt;</span>
+
+  <span class="c">&lt;!-- library dependencies --&gt;</span>
+  
+  <span class="nt">&lt;dependencies&gt;</span>
+    <span class="nt">&lt;dependency&gt;</span>
+    
+      <span class="c">&lt;!-- coordinates of the required library --&gt;</span>
+      
+      <span class="nt">&lt;groupId&gt;</span>junit<span class="nt">&lt;/groupId&gt;</span>
+      <span class="nt">&lt;artifactId&gt;</span>junit<span class="nt">&lt;/artifactId&gt;</span>
+      <span class="nt">&lt;version&gt;</span>3.8.1<span class="nt">&lt;/version&gt;</span>
+      
+      <span class="c">&lt;!-- this dependency is only used for running and compiling tests --&gt;</span>
+      
+      <span class="nt">&lt;scope&gt;</span>test<span class="nt">&lt;/scope&gt;</span>
+      
+    <span class="nt">&lt;/dependency&gt;</span>
+  <span class="nt">&lt;/dependencies&gt;</span>
+<span class="nt">&lt;/project&gt;</span>
+</pre></div>
+<p>This POM only defines a unique identifier for the project (<i>coordinates</i>) and its dependency on the <a href="JUnit.html" title="JUnit">JUnit</a> framework. However, that is already enough for building the project and running the <a href="https://en.wikipedia.org/wiki/Unit_testing" title="Unit testing">unit tests</a> associated with the project. Maven accomplishes this by embracing the idea of <a href="https://en.wikipedia.org/wiki/Convention_over_Configuration" class="mw-redirect" title="Convention over Configuration">Convention over Configuration</a>, that is, Maven provides default values for the project's configuration. The directory structure of a normal <a href="https://en.wikipedia.org/wiki/Programming_idiom" title="Programming idiom">idiomatic</a> Maven project has the following directory entries:</p>
+<div class="thumb tright">
+<div class="thumbinner" style="width:222px;"><a href="https://en.wikipedia.org/wiki/File:Maven_CoC.svg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Maven_CoC.svg/220px-Maven_CoC.svg.png" width="220" height="298" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Maven_CoC.svg/330px-Maven_CoC.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Maven_CoC.svg/440px-Maven_CoC.svg.png 2x" data-file-width="512" data-file-height="694" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="https://en.wikipedia.org/wiki/File:Maven_CoC.svg" class="internal" title="Enlarge"></a></div>
+The Maven software tool auto-generated this directory structure for a Java project.</div>
+</div>
+</div>
+<table class="wikitable">
+<tr>
+<th>Directory name</th>
+<th>Purpose</th>
+</tr>
+<tr>
+<td>project home</td>
+<td>Contains the pom.xml and all subdirectories.</td>
+</tr>
+<tr>
+<td>src/main/java</td>
+<td>Contains the deliverable Java sourcecode for the project.</td>
+</tr>
+<tr>
+<td>src/main/resources</td>
+<td>Contains the deliverable resources for the project, such as property files.</td>
+</tr>
+<tr>
+<td>src/test/java</td>
+<td>Contains the testing Java sourcecode (JUnit or TestNG test cases, for example) for the project.</td>
+</tr>
+<tr>
+<td>src/test/resources</td>
+<td>Contains resources necessary for testing.</td>
+</tr>
+</table>
+<p>Then the command</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+ mvn package
+</pre></div>
+<p>will compile all the Java files, run any tests, and package the deliverable code and resources into <code>target/my-app-1.0.jar</code> (assuming the artifactId is my-app and the version is 1.0.)</p>
+<p>Using Maven, the user provides only configuration for the project, while the configurable plug-ins do the actual work of compiling the project, cleaning target directories, running unit tests, generating API documentation and so on. In general, users should not have to write plugins themselves. Contrast this with <a href="Apache_Ant.html" title="Apache Ant">Ant</a> and <a href="https://en.wikipedia.org/wiki/Make_(software)" title="Make (software)">make</a>, in which one writes imperative procedures for doing the aforementioned tasks.</p>
+<h2><span class="mw-headline" id="Concepts">Concepts</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Apache_Maven&amp;action=edit&amp;section=2" title="Edit section: Concepts">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Project_Object_Model">Project Object Model</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Apache_Maven&amp;action=edit&amp;section=3" title="Edit section: Project Object Model">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>A Project Object Model (POM) provides all the configuration for a single project. General configuration covers the project's name, its owner and its dependencies on other projects. One can also configure individual phases of the build process, which are implemented as <a href="https://en.wikipedia.org/wiki/Plug-in_(computing)" title="Plug-in (computing)">plugins</a>. For example, one can configure the compiler-plugin to use Java version 1.5 for compilation, or specify packaging the project even if some unit tests fail.</p>
+<p>Larger projects should be divided into several modules, or sub-projects, each with its own POM. One can then write a root POM through which one can compile all the modules with a single command. POMs can also inherit configuration from other POMs. All POMs inherit from the Super POM<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">[8]</a></sup> by default. The Super POM provides default configuration, such as default source directories, default plugins, and so on.</p>
+<h3><span class="mw-headline" id="Plugins">Plugins</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Apache_Maven&amp;action=edit&amp;section=4" title="Edit section: Plugins">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Most of Maven's functionality is in <a href="https://en.wikipedia.org/wiki/Plug-in_(computing)" title="Plug-in (computing)">plugins</a>. A plugin provides a set of goals that can be executed using the following syntax:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+ mvn [plugin-name]:[goal-name]
+</pre></div>
+<p>For example, a Java project can be compiled with the compiler-plugin's compile-goal<sup id="cite_ref-9" class="reference"><a href="#cite_note-9">[9]</a></sup> by running <code>mvn compiler:compile</code>.</p>
+<p>There are Maven plugins for building, testing, source control management, running a web server, generating <a href="Eclipse_(software).html" title="Eclipse (software)">Eclipse</a> project files, and much more.<sup id="cite_ref-10" class="reference"><a href="#cite_note-10">[10]</a></sup> Plugins are introduced and configured in a &lt;plugins&gt;-section of a <code>pom.xml</code> file. Some basic plugins are included in every project by default, and they have sensible default settings.</p>
+<p>However, it would be cumbersome if the archetypical build sequence of building, testing and packaging a software project required running each respective goal manually:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+ mvn compiler:compile
+ mvn surefire:test
+ mvn jar:jar
+</pre></div>
+<p>Maven's lifecycle concept handles this issue.</p>
+<p>Plugins are the primary way to extend Maven. Developing a Maven plugin can be done by extending the org.apache.maven.plugin.AbstractMojo class. Example code and explanation for a Maven plugin to create a cloud-based virtual machine running an application server is given in the article <i>Automate development and management of cloud virtual machines</i>.<sup id="cite_ref-11" class="reference"><a href="#cite_note-11">[11]</a></sup></p>
+<h3><span class="mw-headline" id="Build_lifecycles">Build lifecycles</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Apache_Maven&amp;action=edit&amp;section=5" title="Edit section: Build lifecycles">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Build lifecycle is a list of named <i>phases</i> that can be used to give order to goal execution. One of Maven's standard lifecycles is the <i>default lifecycle</i>, which includes the following phases, in this order:<sup id="cite_ref-12" class="reference"><a href="#cite_note-12">[12]</a></sup></p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="lineno"> 1 </span> validate
+<span class="lineno"> 2 </span> generate-sources
+<span class="lineno"> 3 </span> process-sources
+<span class="lineno"> 4 </span> generate-resources
+<span class="lineno"> 5 </span> process-resources
+<span class="lineno"> 6 </span> compile
+<span class="lineno"> 7 </span> process-test-sources
+<span class="lineno"> 8 </span> process-test-resources
+<span class="lineno"> 9 </span> test-compile
+<span class="lineno">10 </span> test
+<span class="lineno">11 </span> package
+<span class="lineno">12 </span> install
+<span class="lineno">13 </span> deploy
+</pre></div>
+<p>Goals provided by plugins can be associated with different phases of the lifecycle. For example, by default, the goal "compiler:compile" is associated with the "compile" phase, while the goal "surefire:test" is associated with the "test" phase. Consider the following command:</p>
+<pre>
+mvn test
+</pre>
+<p>When the preceding command is executed, Maven runs all goals associated with each of the phases up to and including the "test" phase. In such a case, Maven runs the "resources:resources" goal associated with the "process-resources" phase, then "compiler:compile", and so on until it finally runs the "surefire:test" goal.</p>
+<p>Maven also has standard phases for cleaning the project and for generating a project site. If cleaning were part of the default lifecycle, the project would be cleaned every time it was built. This is clearly undesirable, so cleaning has been given its own lifecycle.</p>
+<p>Standard lifecycles enable users new to a project the ability to accurately build, test and install every Maven project by issuing the single command:</p>
+<pre>
+mvn install
+</pre>
+<p>By default, Maven packages the POM file in generated JAR and WAR files. Tools like diet4j<sup id="cite_ref-13" class="reference"><a href="#cite_note-13">[13]</a></sup> can use this information to recursively resolve and run Maven modules at run-time without requiring an "uber"-jar that contains all project code.</p>
+<h3><span class="mw-headline" id="Dependencies">Dependencies</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Apache_Maven&amp;action=edit&amp;section=6" title="Edit section: Dependencies">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>A central feature in Maven is <a href="https://en.wikipedia.org/w/index.php?title=Library_dependency&amp;action=edit&amp;redlink=1" class="new" title="Library dependency (page does not exist)">dependency management</a>. Maven's dependency-handling mechanism is organized around a coordinate system identifying individual artifacts such as software libraries or modules. The POM example above references the JUnit coordinates as a direct dependency of the project. A project that needs, say, the <a href="Hibernate_(Java).html" class="mw-redirect" title="Hibernate (Java)">Hibernate</a> library simply has to declare Hibernate's project coordinates in its POM. Maven will automatically download the dependency and the dependencies that Hibernate itself needs (called transitive dependencies) and store them in the user's local repository. Maven 2 <a rel="nofollow" class="external text" href="http://central.sonatype.org/">Central Repository</a><sup id="cite_ref-maven2repo_4-1" class="reference"><a href="#cite_note-maven2repo-4">[4]</a></sup> is used by default to search for libraries, but one can configure the repositories to be used (e.g., company-private repositories) within the POM.</p>
+<p>There are search engines such as The Central Repository Search Engine<sup id="cite_ref-14" class="reference"><a href="#cite_note-14">[14]</a></sup> which can be used to find out coordinates for different open-source libraries and frameworks.</p>
+<p>Projects developed on a single machine can depend on each other through the local repository. The local repository is a simple folder structure that acts both as a cache for downloaded dependencies and as a centralized storage place for locally built artifacts. The Maven command <code>mvn install</code> builds a project and places its binaries in the local repository. Then other projects can utilize this project by specifying its coordinates in their POMs.</p>
+<h2><span class="mw-headline" id="Maven_compared_with_Ant">Maven compared with Ant</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Apache_Maven&amp;action=edit&amp;section=7" title="Edit section: Maven compared with Ant">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The fundamental difference between Maven and Ant is that Maven's design regards all projects as having a certain structure and a set of supported task work-flows (e.g., getting resources from source control, compiling the project, unit testing, etc.). While most software projects in effect support these operations and actually do have a well-defined structure, Maven requires that this structure and the operation implementation details be defined in the POM file. Thus, Maven <a href="https://en.wikipedia.org/wiki/Convention_over_configuration" title="Convention over configuration">relies on a convention</a> on how to define projects and on the list of work-flows that are generally supported in all projects.<sup id="cite_ref-15" class="reference"><a href="#cite_note-15">[15]</a></sup></p>
+<p>This design constraint resembles the way that an IDE handles a project, and it provides many benefits, such as a succinct project definition, and the possibility of automatic integration of a Maven project with other development tools such as IDEs, build servers, etc.</p>
+<p>But one drawback to this approach is that Maven requires a user to first understand what a project is from the Maven point of view, and how Maven works with projects, because what happens when one executes a phase in Maven is not immediately obvious just from examining the Maven project file. In many cases, this required structure is also a significant hurdle in migrating a mature project to Maven, because it is usually hard to adapt from other approaches.</p>
+<p>In Ant, projects do not really exist from the tool's technical perspective. Ant works with XML build scripts defined in one or more files. It processes targets from these files and each target executes tasks. Each task performs a technical operation such as running a compiler or copying files around. Targets are executed primarily in the order given by their defined dependency on other targets. Thus, Ant is a tool that chains together targets and executes them based on inter-dependencies and other Boolean conditions.</p>
+<p>The benefits provided by Ant are also numerous. It has an XML language optimized for clearer definition of what each task does and upon what it depends. Also, all the information about what will be executed by an Ant target can be found in the Ant script.</p>
+<p>A developer not familiar with Ant would normally be able to determine what a simple Ant script does just by examining the script. This is not usually true for Maven.</p>
+<p>However, even an experienced developer who is new to a project using Ant cannot infer what the higher level structure of an Ant script is and what it does without examining the script in detail. Depending on the script's complexity, this can quickly become a daunting challenge. With Maven, a developer who previously worked with other Maven projects can quickly examine the structure of a never-before-seen Maven project and execute the standard Maven work-flows against it while already knowing what to expect as an outcome.</p>
+<p>It is possible to use Ant scripts that are defined and behave in a uniform manner for all projects in a working group or an organization. However, when the number and complexity of projects rises, it is also very easy to stray from the initially desired uniformity. With Maven this is less of a problem because the tool always imposes a certain way of doing things.</p>
+<p>Note that it is also possible to extend and configure Maven in a way that departs from the Maven way of doing things. This is particularly true for Maven 2 and newer releases, such as <a rel="nofollow" class="external text" href="https://maven.apache.org/guides/introduction/introduction-to-plugins.html">Mojos</a> or more formally, <a href="https://en.wikipedia.org/wiki/Plug-in_(computing)" title="Plug-in (computing)">plugins</a> and custom<sup id="cite_ref-16" class="reference"><a href="#cite_note-16">[16]</a></sup> project directory structures.</p>
+<h2><span class="mw-headline" id="IDE_integration">IDE integration</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Apache_Maven&amp;action=edit&amp;section=8" title="Edit section: IDE integration">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Add-ons to several popular <a href="https://en.wikipedia.org/wiki/Integrated_development_environment" title="Integrated development environment">integrated development environments</a> targeting the Java programming language exist to provide integration of Maven with the IDE's build mechanism and source editing tools, allowing Maven to compile projects from within the IDE, and also to set the classpath for code completion, highlighting compiler errors, etc. Examples of popular IDEs supporting development with Maven include:</p>
+<ul>
+<li><a href="Eclipse_(software).html" title="Eclipse (software)">Eclipse</a></li>
+<li><a href="NetBeans.html" title="NetBeans">NetBeans</a></li>
+<li><a href="IntelliJ_IDEA.html" title="IntelliJ IDEA">IntelliJ IDEA</a></li>
+<li><a href="JBuilder.html" title="JBuilder">JBuilder</a></li>
+<li><a href="JDeveloper.html" title="JDeveloper">JDeveloper</a> (version 11.1.2)</li>
+<li><a href="MyEclipse.html" title="MyEclipse">MyEclipse</a></li>
+</ul>
+<p>These add-ons also provide the ability to edit the POM or use the POM to determine a project's complete set of dependencies directly within the IDE.</p>
+<p>Some built-in features of IDEs are forfeited when the IDE no longer performs compilation. For example, Eclipse's JDT has the ability to recompile a single java source file after it has been edited. Many IDEs work with a flat set of projects instead of the hierarchy of folders preferred by Maven. This complicates the use of <a href="https://en.wikipedia.org/wiki/Software_configuration_management" title="Software configuration management">SCM</a> systems in IDEs when using Maven.<sup id="cite_ref-17" class="reference"><a href="#cite_note-17">[17]</a></sup><sup id="cite_ref-18" class="reference"><a href="#cite_note-18">[18]</a></sup><sup id="cite_ref-19" class="reference"><a href="#cite_note-19">[19]</a></sup></p>
+<h2><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Apache_Maven&amp;action=edit&amp;section=9" title="Edit section: History">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Maven, created by Takari's Jason van Zyl, began as a subproject of <a href="https://en.wikipedia.org/wiki/Apache_Turbine" class="mw-redirect" title="Apache Turbine">Apache Turbine</a> in 2002. In 2003, it was voted on and accepted as a top level <a href="https://en.wikipedia.org/wiki/Apache_Software_Foundation" title="Apache Software Foundation">Apache Software Foundation</a> project. In July 2004, Maven's release was the critical first milestone, v1.0. Maven 2 was declared v2.0 in October 2005 after about six months in beta cycles. Maven 3.0 was released in October 2010 being mostly backwards compatible with Maven 2.</p>
+<h3><span class="mw-headline" id="Maven_3">Maven 3</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Apache_Maven&amp;action=edit&amp;section=10" title="Edit section: Maven 3">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Maven 3.0 information began trickling out in 2008. After eight alpha releases, the first beta version of Maven 3.0 was released in April 2010. Maven 3.0 has reworked the core Project Builder infrastructure resulting with the POM's file-based representation being decoupled from its in-memory object representation. This has expanded the possibility for Maven 3.0 add-ons to leverage non-XML based project definition files. Languages suggested include <a href="https://en.wikipedia.org/wiki/Ruby_(programming_language)" title="Ruby (programming language)">Ruby</a> (already in private prototype by Jason van Zyl), <a href="https://en.wikipedia.org/wiki/YAML" title="YAML">YAML</a>, and <a href="Groovy_(programming_language).html" title="Groovy (programming language)">Groovy</a>.</p>
+<p>Special attention was given to ensuring backward compatibility of Maven 3 to Maven 2. For most projects, upgrading to Maven 3 will not require any adjustments of their project structure. The first beta of Maven 3 saw the introduction of a parallel build feature which leverages a configurable number of cores on a multi-core machine and is especially suited for large multi-module projects.</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Apache_Maven&amp;action=edit&amp;section=11" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div role="navigation" aria-label="Portals" class="noprint portal plainlist tright" style="margin:0.5em 0 0.5em 1em;border:solid #aaa 1px">
+<ul style="display:table;box-sizing:border-box;padding:0.1em;max-width:175px;background:#f9f9f9;font-size:85%;line-height:110%;font-style:italic;font-weight:bold">
+<li style="display:table-row"><span style="display:table-cell;padding:0.2em;vertical-align:middle;text-align:center"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_(2009).svg/28px-Free_and_open-source_software_logo_(2009).svg.png" width="28" height="28" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/42px-Free_and_open-source_software_logo_%282009%29.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/56px-Free_and_open-source_software_logo_%282009%29.svg.png 2x" data-file-width="512" data-file-height="512" /></span><span style="display:table-cell;padding:0.2em 0.2em 0.2em 0.3em;vertical-align:middle"><a href="https://en.wikipedia.org/wiki/Portal:Free_software" class="mw-redirect" title="Portal:Free software">Free software portal</a></span></li>
+</ul>
+</div>
+<ul>
+<li><a href="Apache_Ant.html" title="Apache Ant">Apache Ant</a>, an alternative dependency management tool for Java</li>
+<li><a href="Apache_Continuum.html" title="Apache Continuum">Apache Continuum</a>, a <a href="https://en.wikipedia.org/wiki/Continuous_integration" title="Continuous integration">continuous integration</a> server which integrates with Maven</li>
+<li><a href="Apache_Jelly.html" title="Apache Jelly">Apache Jelly</a>, a tool for turning XML into executable code</li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_Ivy" title="Apache Ivy">Apache Ivy</a>, an alternative dependency management tool for Java</li>
+<li><a href="https://en.wikipedia.org/wiki/Gradle" title="Gradle">Gradle</a>, a build tool based on convention over configuration</li>
+<li><a href="Hudson_(software).html" title="Hudson (software)">Hudson</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Jenkins_(software)" title="Jenkins (software)">Jenkins</a></li>
+<li><a href="https://en.wikipedia.org/wiki/List_of_build_automation_software" title="List of build automation software">List of build automation software</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Apache_Maven&amp;action=edit&amp;section=12" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist references-column-width" style="-moz-column-width: 35em; -webkit-column-width: 35em; column-width: 35em; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://maven.apache.org/docs/3.3.9/release-notes.html">"Maven – Release Notes – Maven 3.3.9"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AApache+Maven&amp;rft.btitle=Maven+%93+Release+Notes+%93+Maven+3.3.9&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fmaven.apache.org%2Fdocs%2F3.3.9%2Frelease-notes.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://maven.apache.org/docs/history.html">"Maven – Maven Releases History"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AApache+Maven&amp;rft.btitle=Maven+%93+Maven+Releases+History&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fmaven.apache.org%2Fdocs%2Fhistory.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text">Suereth, Joshua and Farwell, Matthew. <i>SBT in Action</i>. Manning Publications. 2015. <a href="https://en.wikipedia.org/wiki/Special:BookSources/9781617291272" class="internal mw-magiclink-isbn">ISBN 9781617291272</a></span></li>
+<li id="cite_note-maven2repo-4"><span class="mw-cite-backlink">^ <a href="#cite_ref-maven2repo_4-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-maven2repo_4-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://repo1.maven.org/maven2/">"Index of /maven2/"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AApache+Maven&amp;rft.btitle=Index+of+%2Fmaven2%2F&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Frepo1.maven.org%2Fmaven2%2F&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://doodleproject.sourceforge.net/mavenite/dotnet-maven-plugin/index.html">".NET Maven Plugin&#160;:: .NET Maven Plugin"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AApache+Maven&amp;rft.btitle=.NET+Maven+Plugin+%3A%3A+.NET+Maven+Plugin&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fdoodleproject.sourceforge.net%2Fmavenite%2Fdotnet-maven-plugin%2Findex.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><cite class="citation web">Laugstol, Trygve. <a rel="nofollow" class="external text" href="http://mojo.codehaus.org/maven-native/native-maven-plugin/index.html">"Mojo – MojoHaus Maven Plugins Project"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AApache+Maven&amp;rft.aufirst=Trygve&amp;rft.aulast=Laugstol&amp;rft.btitle=Mojo+%93+MojoHaus+Maven+Plugins+Project&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fmojo.codehaus.org%2Fmaven-native%2Fnative-maven-plugin%2Findex.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://ant.apache.org/ivy/history/2.2.0/resolver/ibiblio.html">"IBiblio Resolver | Apache Ivy™"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AApache+Maven&amp;rft.btitle=IBiblio+Resolver+%7C+Apache+Ivy%84%A2&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fant.apache.org%2Fivy%2Fhistory%2F2.2.0%2Fresolver%2Fibiblio.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://maven.apache.org/guides/introduction/introduction-to-the-pom.html#Super_POM">Super POM</a></span></li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><cite class="citation web">Punzalan, Edwin. <a rel="nofollow" class="external text" href="https://maven.apache.org/plugins/maven-compiler-plugin/">"Apache Maven Compiler Plugin – Introduction"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AApache+Maven&amp;rft.aufirst=Edwin&amp;rft.aulast=Punzalan&amp;rft.btitle=Apache+Maven+Compiler+Plugin+%93+Introduction&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fmaven.apache.org%2Fplugins%2Fmaven-compiler-plugin%2F&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><cite class="citation web">Marbaise, Brett Porter Jason van Zyl Dennis Lundberg Olivier Lamy Benson Margulies Karl-Heinz. <a rel="nofollow" class="external text" href="https://maven.apache.org/plugins/index.html">"Maven – Available Plugins"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AApache+Maven&amp;rft.aufirst=Brett+Porter+Jason+van+Zyl+Dennis+Lundberg+Olivier+Lamy+Benson+Margulies+Karl-Heinz&amp;rft.aulast=Marbaise&amp;rft.btitle=Maven+%93+Available+Plugins&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fmaven.apache.org%2Fplugins%2Findex.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text"><cite class="citation journal">Amies, Alex; Zou P X; Wang Yi S (29 Oct 2011). <a rel="nofollow" class="external text" href="http://www.ibm.com/developerworks/cloud/library/cl-automatecloud/index.html">"Automate development and management of cloud virtual machines"</a>. <i>IBM developerWorks</i>. IBM.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AApache+Maven&amp;rft.atitle=Automate+development+and+management+of+cloud+virtual+machines&amp;rft.aufirst=Alex&amp;rft.aulast=Amies&amp;rft.au=Wang+Yi+S&amp;rft.au=Zou+P+X&amp;rft.date=2011-10-29&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fwww.ibm.com%2Fdeveloperworks%2Fcloud%2Flibrary%2Fcl-automatecloud%2Findex.html&amp;rft.jtitle=IBM+developerWorks&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text"><cite class="citation web">Porter, Brett. <a rel="nofollow" class="external text" href="https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html#Lifecycle_Reference">"Maven – Introduction to the Build Lifecycle"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AApache+Maven&amp;rft.aufirst=Brett&amp;rft.aulast=Porter&amp;rft.btitle=Maven+%93+Introduction+to+the+Build+Lifecycle&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fmaven.apache.org%2Fguides%2Fintroduction%2Fintroduction-to-the-lifecycle.html%23Lifecycle_Reference&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-13">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://diet4j.org/">"diet4j - put Java JARs on a diet, and load maven modules as needed"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AApache+Maven&amp;rft.btitle=diet4j+-+put+Java+JARs+on+a+diet%2C+and+load+maven+modules+as+needed&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fdiet4j.org%2F&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-14"><span class="mw-cite-backlink"><b><a href="#cite_ref-14">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://search.maven.org/">The Central Repository Search Engine</a>,</span></li>
+<li id="cite_note-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-15">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.sonatype.com/books/mvnref-book/reference/installation-sect-compare-ant-maven.html">"Maven: The Complete Reference"</a>. Sonatype<span class="reference-accessdate">. Retrieved <span class="nowrap">11 April</span> 2013</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AApache+Maven&amp;rft.btitle=Maven%3A+The+Complete+Reference&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.sonatype.com%2Fbooks%2Fmvnref-book%2Freference%2Finstallation-sect-compare-ant-maven.html&amp;rft.pub=Sonatype&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-16"><span class="mw-cite-backlink"><b><a href="#cite_ref-16">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://www.packtpub.com/application-development/maven-build-customization">"Maven Build Customization"</a>. Packt<span class="reference-accessdate">. Retrieved <span class="nowrap">6 November</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AApache+Maven&amp;rft.btitle=Maven+Build+Customization&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fwww.packtpub.com%2Fapplication-development%2Fmaven-build-customization&amp;rft.pub=Packt&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-17"><span class="mw-cite-backlink"><b><a href="#cite_ref-17">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://web.archive.org/web/20150507014621/http://maven.apache.org/eclipse-plugin.html">"https://maven.apache.org/eclipse-plugin.html"</a>. Archived from <a rel="nofollow" class="external text" href="https://maven.apache.org/eclipse-plugin.html">the original</a> on May 7, 2015.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AApache+Maven&amp;rft.btitle=https%3A%2F%2Fmaven.apache.org%2Feclipse-plugin.html&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fmaven.apache.org%2Feclipse-plugin.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span> <span style="font-size:100%" class="error citation-comment">External link in <code style="color:inherit; border:inherit; padding:inherit;">|title=</code> (<a href="https://en.wikipedia.org/wiki/Help:CS1_errors#param_has_ext_link" title="Help:CS1 errors">help</a>)</span></span></li>
+<li id="cite_note-18"><span class="mw-cite-backlink"><b><a href="#cite_ref-18">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.jetbrains.com/idea/features/ant_maven.html#Maven_Integration">"IntelliJ IDEA&#160;:: Features"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AApache+Maven&amp;rft.btitle=IntelliJ+IDEA+%3A%3A+Features&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.jetbrains.com%2Fidea%2Ffeatures%2Fant_maven.html%23Maven_Integration&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-19"><span class="mw-cite-backlink"><b><a href="#cite_ref-19">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://wiki.netbeans.org/MavenBestPractices">"MavenBestPractices - NetBeans Wiki"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AApache+Maven&amp;rft.btitle=MavenBestPractices+-+NetBeans+Wiki&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwiki.netbeans.org%2FMavenBestPractices&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="Further_reading">Further reading</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Apache_Maven&amp;action=edit&amp;section=13" title="Edit section: Further reading">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="refbegin" style="">
+<ul>
+<li>A free online book - <cite class="citation web">O'Brien, Tim; et al. <a rel="nofollow" class="external text" href="http://www.sonatype.com/books/mvnref-book/reference/">"Maven: The Complete Reference"</a>. <i>Sonatype.com</i>. Sonatype<span class="reference-accessdate">. Retrieved <span class="nowrap">15 March</span> 2013</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AApache+Maven&amp;rft.atitle=Maven%3A+The+Complete+Reference&amp;rft.aufirst=Tim&amp;rft.aulast=O%27Brien&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.sonatype.com%2Fbooks%2Fmvnref-book%2Freference%2F&amp;rft.jtitle=Sonatype.com&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li>The anteater book: <cite class="citation book"><a rel="nofollow" class="external text" href="https://books.google.com/books?id=cBvZ4s72Z0gC"><i>Maven: The Definitive Guide</i></a>. Sonatype Company. O'Reilly Media, Inc. 2009. p.&#160;470. <a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="https://en.wikipedia.org/wiki/Special:BookSources/9780596551780" title="Special:BookSources/9780596551780">9780596551780</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2013-04-17</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AApache+Maven&amp;rft.btitle=Maven%3A+The+Definitive+Guide&amp;rft.date=2009&amp;rft.genre=book&amp;rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DcBvZ4s72Z0gC&amp;rft.isbn=9780596551780&amp;rft.pages=470&amp;rft.pub=O%27Reilly+Media%2C+Inc.&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li>A printed book - <cite id="CITEREFVan_Zyl2008" class="citation">Van Zyl, Jason (2008-10-01), <i>Maven: Definitive Guide</i> (first ed.), <a href="https://en.wikipedia.org/wiki/O%27Reilly_Media" title="O'Reilly Media">O'Reilly Media</a>, p.&#160;468, <a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="https://en.wikipedia.org/wiki/Special:BookSources/0-596-51733-5" title="Special:BookSources/0-596-51733-5">0-596-51733-5</a></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AApache+Maven&amp;rft.aufirst=Jason&amp;rft.aulast=Van+Zyl&amp;rft.btitle=Maven%3A+Definitive+Guide&amp;rft.date=2008-10-01&amp;rft.edition=first&amp;rft.genre=book&amp;rft.isbn=0-596-51733-5&amp;rft.pages=468&amp;rft.pub=O%27Reilly+Media&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite class="citation book">"Running JUnit tests from Maven2". <i>JUnit in Action</i> (2nd ed.). <a href="https://en.wikipedia.org/wiki/Manning_Publications" title="Manning Publications">Manning Publications</a>. 2011. pp.&#160;152–168. <a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="https://en.wikipedia.org/wiki/Special:BookSources/978-1-935182-02-3" title="Special:BookSources/978-1-935182-02-3">978-1-935182-02-3</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AApache+Maven&amp;rft.atitle=Running+JUnit+tests+from+Maven2&amp;rft.btitle=JUnit+in+Action&amp;rft.date=2011&amp;rft.edition=2nd&amp;rft.genre=bookitem&amp;rft.isbn=978-1-935182-02-3&amp;rft.pages=152-168&amp;rft.pub=Manning+Publications&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite class="citation book"><i>Maven Build Customization</i>. Packt. 2013. pp.&#160;1–250. <a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="https://en.wikipedia.org/wiki/Special:BookSources/9781783987221" title="Special:BookSources/9781783987221">9781783987221</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AApache+Maven&amp;rft.btitle=Maven+Build+Customization&amp;rft.date=2013&amp;rft.genre=book&amp;rft.isbn=9781783987221&amp;rft.pages=1-250&amp;rft.pub=Packt&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite class="citation book"><a rel="nofollow" class="external text" href="https://www.packtpub.com/application-development/mastering-apache-maven-3"><i>Mastering Apache Maven 3</i></a>. Packt. 2014. p.&#160;298. <a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="https://en.wikipedia.org/wiki/Special:BookSources/9781783983865" title="Special:BookSources/9781783983865">9781783983865</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AApache+Maven&amp;rft.btitle=Mastering+Apache+Maven+3&amp;rft.date=2014&amp;rft.genre=book&amp;rft_id=https%3A%2F%2Fwww.packtpub.com%2Fapplication-development%2Fmastering-apache-maven-3&amp;rft.isbn=9781783983865&amp;rft.pages=298&amp;rft.pub=Packt&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+</ul>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Apache_Maven&amp;action=edit&amp;section=14" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><span class="official-website"><span class="url"><a rel="nofollow" class="external text" href="https://maven.apache.org/">Official website</a></span></span></li>
+</ul>
+<p><br /></p>
+<div role="navigation" class="navbox" aria-labelledby="Apache_Software_Foundation" style="padding:3px">
+<table class="nowraplinks hlist collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit">
+<tr>
+<th scope="col" class="navbox-title" colspan="3">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="https://en.wikipedia.org/wiki/Template:Apache" title="Template:Apache"><abbr title="View this template" style=";;background:none transparent;border:none;">v</abbr></a></li>
+<li class="nv-talk"><a href="https://en.wikipedia.org/wiki/Template_talk:Apache" title="Template talk:Apache"><abbr title="Discuss this template" style=";;background:none transparent;border:none;">t</abbr></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Apache&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;">e</abbr></a></li>
+</ul>
+</div>
+<div id="Apache_Software_Foundation" style="font-size:114%"><a href="https://en.wikipedia.org/wiki/Apache_Software_Foundation" title="Apache Software Foundation">Apache Software Foundation</a></div>
+</th>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Top level projects</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Apache_Abdera.html" title="Apache Abdera">Abdera</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_Accumulo" title="Apache Accumulo">Accumulo</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_ActiveMQ" title="Apache ActiveMQ">ActiveMQ</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_Ambari" title="Apache Ambari">Ambari</a></li>
+<li><a href="Apache_Ant.html" title="Apache Ant">Ant</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_Apex" title="Apache Apex">Apex</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_Aries" title="Apache Aries">Aries</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_HTTP_Server" title="Apache HTTP Server">Apache HTTP Server</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_Portable_Runtime" title="Apache Portable Runtime">APR</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_Avro" title="Apache Avro">Avro</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_Axis" title="Apache Axis">Axis</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_Axis2" title="Apache Axis2">Axis2</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_Beam" title="Apache Beam">Beam</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_Bloodhound" title="Apache Bloodhound">Bloodhound</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_Brooklyn" title="Apache Brooklyn">Brooklyn</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_Buildr" title="Apache Buildr">Buildr</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_Calcite" title="Apache Calcite">Calcite</a></li>
+<li><a href="Apache_Camel.html" title="Apache Camel">Camel</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_Cassandra" title="Apache Cassandra">Cassandra</a></li>
+<li><a href="Apache_Cayenne.html" title="Apache Cayenne">Cayenne</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_Chemistry" title="Apache Chemistry">Chemistry</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_CloudStack" title="Apache CloudStack">CloudStack</a></li>
+<li><a href="Apache_Cocoon.html" title="Apache Cocoon">Cocoon</a></li>
+<li><a href="Apache_Continuum.html" title="Apache Continuum">Continuum</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_Cordova" title="Apache Cordova">Cordova</a></li>
+<li><a href="https://en.wikipedia.org/wiki/CouchDB" title="CouchDB">CouchDB</a></li>
+<li><a href="https://en.wikipedia.org/wiki/CTAKES" title="CTAKES">cTAKES</a></li>
+<li><a href="Apache_CXF.html" title="Apache CXF">CXF</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Deltacloud" title="Deltacloud">Deltacloud</a></li>
+<li><a href="Apache_Derby.html" title="Apache Derby">Derby</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_Directory" title="Apache Directory">Directory</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_Drill" title="Apache Drill">Drill</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_Empire-db" title="Apache Empire-db">Empire-db</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_Felix" title="Apache Felix">Felix</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_Flex" title="Apache Flex">Flex</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_Flink" title="Apache Flink">Flink</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_Flume" title="Apache Flume">Flume</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_Forrest" title="Apache Forrest">Forrest</a></li>
+<li><a href="Apache_Geronimo.html" title="Apache Geronimo">Geronimo</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_Gora" title="Apache Gora">Gora</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_Gump" title="Apache Gump">Gump</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_Hadoop" title="Apache Hadoop">Hadoop</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_Hama" title="Apache Hama">Hama</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_HBase" title="Apache HBase">HBase</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_Hive" title="Apache Hive">Hive</a></li>
+<li><a href="Apache_Jackrabbit.html" title="Apache Jackrabbit">Jackrabbit</a></li>
+<li><a href="Apache_James.html" title="Apache James">James</a></li>
+<li><a href="Apache_JMeter.html" title="Apache JMeter">JMeter</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_Kafka" title="Apache Kafka">Kafka</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_Karaf" class="mw-redirect" title="Apache Karaf">Karaf</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_Kylin" title="Apache Kylin">Kylin</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_Lucene" title="Apache Lucene">Lucene</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_Mahout" title="Apache Mahout">Mahout</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_Marmotta" title="Apache Marmotta">Marmotta</a></li>
+<li><strong class="selflink">Maven</strong></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_MINA" title="Apache MINA">MINA</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Mod_perl" title="Mod perl">mod_perl</a></li>
+<li><a href="Apache_MyFaces.html" title="Apache MyFaces">MyFaces</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_Nutch" title="Apache Nutch">Nutch</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_ODE" title="Apache ODE">ODE</a></li>
+<li><a href="Apache_OFBiz.html" title="Apache OFBiz">OFBiz</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Oozie" class="mw-redirect" title="Oozie">Oozie</a></li>
+<li><a href="Apache_OpenEJB.html" title="Apache OpenEJB">OpenEJB</a></li>
+<li><a href="Apache_OpenJPA.html" title="Apache OpenJPA">OpenJPA</a></li>
+<li><a href="https://en.wikipedia.org/wiki/OpenNLP" title="OpenNLP">OpenNLP</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_OpenOffice" title="Apache OpenOffice">OpenOffice</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_PDFBox" title="Apache PDFBox">PDFBox</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_Phoenix" title="Apache Phoenix">Phoenix</a></li>
+<li><a href="Apache_POI.html" title="Apache POI">POI</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Pig_(programming_tool)" title="Pig (programming tool)">Pig</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_Pivot" title="Apache Pivot">Pivot</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_Qpid" title="Apache Qpid">Qpid</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_River" class="mw-redirect" title="Apache River">River</a></li>
+<li><a href="Apache_Roller.html" title="Apache Roller">Roller</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_Samza" title="Apache Samza">Samza</a></li>
+<li><a href="Apache_ServiceMix.html" title="Apache ServiceMix">ServiceMix</a></li>
+<li><a href="Apache_Shiro.html" title="Apache Shiro">Shiro</a></li>
+<li><a href="Apache_Sling.html" title="Apache Sling">Sling</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_Spark" title="Apache Spark">Spark</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_Stanbol" title="Apache Stanbol">Stanbol</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Storm_(event_processor)" title="Storm (event processor)">Storm</a></li>
+<li><a href="https://en.wikipedia.org/wiki/SpamAssassin" title="SpamAssassin">SpamAssassin</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sqoop" title="Sqoop">Sqoop</a></li>
+<li><a href="Apache_Struts.html" class="mw-redirect" title="Apache Struts">Struts</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_Subversion" title="Apache Subversion">Subversion</a></li>
+<li><a href="Apache_Tapestry.html" title="Apache Tapestry">Tapestry</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_Thrift" title="Apache Thrift">Thrift</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_Tika" title="Apache Tika">Tika</a></li>
+<li><a href="https://en.wikipedia.org/w/index.php?title=Apache_Tinkerpop&amp;action=edit&amp;redlink=1" class="new" title="Apache Tinkerpop (page does not exist)">TinkerPop</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Java_view_technologies_and_frameworks#Apache_Tiles" title="Java view technologies and frameworks">Tiles</a></li>
+<li><a href="Apache_Tomcat.html" title="Apache Tomcat">Tomcat</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Traffic_Server" title="Traffic Server">Traffic Server</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_Turbine" class="mw-redirect" title="Apache Turbine">Turbine</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_Tuscany" title="Apache Tuscany">Tuscany</a></li>
+<li><a href="https://en.wikipedia.org/wiki/UIMA" title="UIMA">UIMA</a></li>
+<li><a href="Apache_Velocity.html" title="Apache Velocity">Velocity</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_Wave" title="Apache Wave">Wave</a></li>
+<li><a href="Apache_Wicket.html" title="Apache Wicket">Wicket</a></li>
+<li><a href="Apache_Wink.html" title="Apache Wink">Wink</a></li>
+<li><a href="Xalan.html" title="Xalan">Xalan</a></li>
+<li><a href="Xerces.html" title="Xerces">Xerces</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_ZooKeeper" title="Apache ZooKeeper">ZooKeeper</a></li>
+</ul>
+</div>
+</td>
+<td class="navbox-image" rowspan="15" style="width:0%;padding:0px 0px 0px 2px">
+<div><a href="https://en.wikipedia.org/wiki/File:Apache_Software_Foundation_Logo_(2016).svg" class="image" title="ASF logo"><img alt="ASF logo" src="http://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Apache_Software_Foundation_Logo_(2016).svg/200px-Apache_Software_Foundation_Logo_(2016).svg.png" width="200" height="98" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/db/Apache_Software_Foundation_Logo_%282016%29.svg/300px-Apache_Software_Foundation_Logo_%282016%29.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/db/Apache_Software_Foundation_Logo_%282016%29.svg/400px-Apache_Software_Foundation_Logo_%282016%29.svg.png 2x" data-file-width="512" data-file-height="250" /></a></div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Apache_Commons.html" title="Apache Commons">Commons projects</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Apache_Commons_Logging" title="Apache Commons Logging">Apache Commons Logging</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Byte_Code_Engineering_Library" title="Byte Code Engineering Library">BCEL</a></li>
+<li><a href="Bean_Scripting_Framework.html" title="Bean Scripting Framework">BSF</a></li>
+<li><a href="Commons_Daemon.html" title="Commons Daemon">Daemon</a></li>
+<li><a href="Apache_Jelly.html" title="Apache Jelly">Jelly</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Lucene.html" class="mw-redirect" title="Lucene">Lucene projects</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Apache_Lucene" title="Apache Lucene">Lucene Java</a></li>
+<li><a href="Apache_Solr.html" title="Apache Solr">Solr</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Hadoop.html" class="mw-redirect" title="Hadoop">Hadoop projects</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Hadoop.html" class="mw-redirect" title="Hadoop">Hadoop</a></li>
+<li><a href="https://en.wikipedia.org/wiki/HDFS" class="mw-redirect" title="HDFS">HDFS</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Other projects</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Batik_(software).html" title="Batik (software)">Batik</a></li>
+<li><a href="Chainsaw_(log_file_viewer).html" title="Chainsaw (log file viewer)">Chainsaw</a></li>
+<li><a href="Formatting_Objects_Processor.html" title="Formatting Objects Processor">FOP</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_Ivy" title="Apache Ivy">Ivy</a></li>
+<li><a href="Log4j.html" title="Log4j">Log4j</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_log4net" class="mw-redirect" title="Apache log4net">Log4Net</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_XAP" title="Apache XAP">XAP</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Apache_Incubator" title="Apache Incubator">Incubator projects</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Apache_XAP" title="Apache XAP">XAP</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_Singa" title="Apache Singa">Apache Singa</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Apache_Attic" title="Apache Attic">Apache Attic</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/AxKit" title="AxKit">AxKit</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_Beehive" title="Apache Beehive">Beehive</a></li>
+<li><a href="Apache_Click.html" title="Apache Click">Click</a></li>
+<li><a href="https://en.wikipedia.org/wiki/BlueSky_Open_Platform" title="BlueSky Open Platform">Bluesky</a></li>
+<li><a href="Jakarta_Cactus.html" title="Jakarta Cactus">Cactus</a></li>
+<li><a href="Jakarta_Project.html" title="Jakarta Project">Jakarta</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_Excalibur" title="Apache Excalibur">Excalibur</a></li>
+<li><a href="Apache_Harmony.html" title="Apache Harmony">Harmony</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_HiveMind" title="Apache HiveMind">HiveMind</a></li>
+<li><a href="Apache_Lenya.html" title="Apache Lenya">Lenya</a></li>
+<li><a href="Jakarta_Slide.html" title="Jakarta Slide">Slide</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_Shale" title="Apache Shale">Shale</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_Shindig" title="Apache Shindig">Shindig</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_C++_Standard_Library" title="Apache C++ Standard Library">stdcxx</a></li>
+<li><a href="https://en.wikipedia.org/wiki/IBATIS" title="IBATIS">iBATIS</a></li>
+<li><a href="XMLBeans.html" title="XMLBeans">XMLBeans</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Licenses</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Apache_License" title="Apache License">Apache License</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td class="navbox-abovebelow" colspan="3">
+<div>
+<ul>
+<li><img alt="Category" src="http://upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/16px-Folder_Hexagonal_Icon.svg.png" title="Category" width="16" height="14" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/24px-Folder_Hexagonal_Icon.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/32px-Folder_Hexagonal_Icon.svg.png 2x" data-file-width="36" data-file-height="31" /> <b><a href="https://en.wikipedia.org/wiki/Category:Apache_Software_Foundation" title="Category:Apache Software Foundation">Category</a></b></li>
+<li><img alt="Commons page" src="http://upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/12px-Commons-logo.svg.png" title="Commons page" width="12" height="16" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/18px-Commons-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/24px-Commons-logo.svg.png 2x" data-file-width="1024" data-file-height="1376" /> <b><a href="https://commons.wikimedia.org/wiki/Category:Apache_Software_Foundation" class="extiw" title="commons:Category:Apache Software Foundation">Commons</a></b></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1274
+Cached time: 20170117103610
+Cache expiry: 2592000
+Dynamic content: false
+CPU time usage: 0.312 seconds
+Real time usage: 0.473 seconds
+Preprocessor visited node count: 2037/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 91508/2097152 bytes
+Template argument size: 10774/2097152 bytes
+Highest expansion depth: 25/40
+Expensive parser function count: 6/500
+Lua time usage: 0.140/10.000 seconds
+Lua memory usage: 4.89 MB/50 MB
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  406.186      1 - -total
+ 26.30%  106.825      4 - Template:Ambox
+ 22.12%   89.862      2 - Template:Infobox
+ 21.16%   85.962      1 - Template:Multiple_issues
+ 20.44%   83.041      1 - Template:Reflist
+ 19.72%   80.096      1 - Template:Infobox_software
+ 16.32%   66.274     16 - Template:Cite_web
+  6.21%   25.218      1 - Template:Technical
+  4.81%   19.537      1 - Template:Infobox_software/simple
+  4.79%   19.452      2 - Template:Start_date_and_age
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:1333305-0!*!0!!en!4!* and timestamp 20170117103610 and revision id 759671049
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Apache_Maven&amp;oldid=759671049">https://en.wikipedia.org/w/index.php?title=Apache_Maven&amp;oldid=759671049</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Help_Category.html" title="Help:Category">Categories</a>: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Compiling_tools" title="Category:Compiling tools">Compiling tools</a></li><li><a href="Category_Java_development_tools.html" title="Category:Java development tools">Java development tools</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Apache_Software_Foundation" title="Category:Apache Software Foundation">Apache Software Foundation</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Build_automation" title="Category:Build automation">Build automation</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Software_using_the_Apache_license" title="Category:Software using the Apache license">Software using the Apache license</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="https://en.wikipedia.org/wiki/Category:CS1_errors:_external_links" title="Category:CS1 errors: external links">CS1 errors: external links</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Pages_using_ISBN_magic_links" title="Category:Pages using ISBN magic links">Pages using ISBN magic links</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Wikipedia_articles_that_are_too_technical_from_October_2015" title="Category:Wikipedia articles that are too technical from October 2015">Wikipedia articles that are too technical from October 2015</a></li><li><a href="https://en.wikipedia.org/wiki/Category:All_articles_that_are_too_technical" title="Category:All articles that are too technical">All articles that are too technical</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Articles_needing_expert_attention_from_October_2015" title="Category:Articles needing expert attention from October 2015">Articles needing expert attention from October 2015</a></li><li><a href="https://en.wikipedia.org/wiki/Category:All_articles_needing_expert_attention" title="Category:All articles needing expert attention">All articles needing expert attention</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Articles_lacking_reliable_references_from_October_2015" title="Category:Articles lacking reliable references from October 2015">Articles lacking reliable references from October 2015</a></li><li><a href="https://en.wikipedia.org/wiki/Category:All_articles_lacking_reliable_references" title="Category:All articles lacking reliable references">All articles lacking reliable references</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Articles_needing_additional_references_from_March_2012" title="Category:Articles needing additional references from March 2012">Articles needing additional references from March 2012</a></li><li><a href="https://en.wikipedia.org/wiki/Category:All_articles_needing_additional_references" title="Category:All articles needing additional references">All articles needing additional references</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Pages_using_deprecated_image_syntax" title="Category:Pages using deprecated image syntax">Pages using deprecated image syntax</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="Special_MyTalk.html" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="Special_MyContributions.html" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&amp;returnto=Apache+Maven" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Apache+Maven" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="Apache_Maven.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+															<li  id="ca-talk"><span><a href="https://en.wikipedia.org/wiki/Talk:Apache_Maven"  title="Discussion about the content page [t]" accesskey="t" rel="discussion">Talk</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="Apache_Maven.html" >Read</a></span></li>
+															<li id="ca-edit"><span><a href="https://en.wikipedia.org/w/index.php?title=Apache_Maven&amp;action=edit"  title="Edit this page [e]" accesskey="e">Edit</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="https://en.wikipedia.org/w/index.php?title=Apache_Maven&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="https://en.wikipedia.org/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="Main_Page.html"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="Portal_Contents.html" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="Portal_Featured_content.html" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="Portal_Current_events.html" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="https://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="../../shop.wikimedia.org/index.html" title="Visit the Wikipedia store">Wikipedia store</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Interaction</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-help"><a href="Help_Contents.html" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="Wikipedia_About.html" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="Wikipedia_Community_portal.html" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="Wikipedia_Contact_us.html" title="How to contact Wikipedia">Contact page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="https://en.wikipedia.org/wiki/Special:WhatLinksHere/Apache_Maven" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://en.wikipedia.org/wiki/Special:RecentChangesLinked/Apache_Maven" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="Wikipedia_File_Upload_Wizard.html" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="https://en.wikipedia.org/w/index.php?title=Apache_Maven&amp;oldid=759671049" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://en.wikipedia.org/w/index.php?title=Apache_Maven&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q139941" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="https://en.wikipedia.org/w/index.php?title=Special:CiteThisPage&amp;page=Apache_Maven&amp;id=759671049" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Print/export</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Apache+Maven">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Apache+Maven&amp;returnto=Apache+Maven&amp;oldid=759671049&amp;writer=rdf2latex">Download as PDF</a></li><li id="t-print"><a href="https://en.wikipedia.org/w/index.php?title=Apache_Maven&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Languages</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-ar"><a href="https://ar.wikipedia.org/wiki/أباتشي_ميفن" title="أباتشي ميفن – Arabic" lang="ar" hreflang="ar" class="interlanguage-link-target">العربية</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Apache_Maven" title="Apache Maven – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Apache_Maven" title="Apache Maven – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Maven" title="Maven – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-eu"><a href="https://eu.wikipedia.org/wiki/Maven" title="Maven – Basque" lang="eu" hreflang="eu" class="interlanguage-link-target">Euskara</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/آپاچی_ماون" title="آپاچی ماون – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Apache_Maven" title="Apache Maven – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/아파치_메이븐" title="아파치 메이븐 – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Apache_Maven" title="Apache Maven – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-he"><a href="https://he.wikipedia.org/wiki/Apache_Maven" title="Apache Maven – Hebrew" lang="he" hreflang="he" class="interlanguage-link-target">עברית</a></li><li class="interlanguage-link interwiki-kk"><a href="https://kk.wikipedia.org/wiki/Apache_Maven" title="Apache Maven – Kazakh" lang="kk" hreflang="kk" class="interlanguage-link-target">Қазақша</a></li><li class="interlanguage-link interwiki-lt"><a href="https://lt.wikipedia.org/wiki/Apache_Maven" title="Apache Maven – Lithuanian" lang="lt" hreflang="lt" class="interlanguage-link-target">Lietuvių</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/Apache_Maven" title="Apache Maven – Hungarian" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/Apache_Maven" title="Apache Maven – Dutch" lang="nl" hreflang="nl" class="interlanguage-link-target">Nederlands</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/Apache_Maven" title="Apache Maven – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-no"><a href="https://no.wikipedia.org/wiki/Apache_Maven" title="Apache Maven – Norwegian" lang="no" hreflang="no" class="interlanguage-link-target">Norsk bokmål</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Apache_Maven" title="Apache Maven – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Apache_Maven" title="Apache Maven – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ro"><a href="https://ro.wikipedia.org/wiki/Apache_Maven" title="Apache Maven – Romanian" lang="ro" hreflang="ro" class="interlanguage-link-target">Română</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/Apache_Maven" title="Apache Maven – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-sv"><a href="https://sv.wikipedia.org/wiki/Apache_Maven" title="Apache Maven – Swedish" lang="sv" hreflang="sv" class="interlanguage-link-target">Svenska</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/Apache_Maven" title="Apache Maven – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-vi"><a href="https://vi.wikipedia.org/wiki/Apache_Maven" title="Apache Maven – Vietnamese" lang="vi" hreflang="vi" class="interlanguage-link-target">Tiếng Việt</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/Apache_Maven" title="Apache Maven – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q139941#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 12 January 2017, at 15:09.</li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="Wikipedia_Text_of_Creative_Commons_Attribution-ShareAlike_3.html">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="../../creativecommons.org/licenses/by-sa/3.0/index.html" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="../../wikimediafoundation.org/wiki/Terms_of_Use.html">Terms of Use</a> and <a href="../../wikimediafoundation.org/wiki/Privacy_policy.html">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="../../www.wikimediafoundation.org/index.html">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../../wikimediafoundation.org/wiki/Privacy_policy.html" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="Wikipedia_About.html" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="Wikipedia_General_disclaimer.html" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="Wikipedia_Contact_us.html">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a href="../../www.mediawiki.org/wiki/Special_MyLanguage/How_to_contribute.html">Developers</a></li>
+											<li id="footer-places-cookiestatement"><a href="../../wikimediafoundation.org/wiki/Cookie_statement.html">Cookie statement</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/w/index.php?title=Apache_Maven&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="../../www.wikimediafoundation.org/index.html"><img src="https://en.wikipedia.org/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="../../www.mediawiki.org/index.html"><img src="https://en.wikipedia.org/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":544,"wgHostname":"mw1274"});});</script>
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Apache_Maven by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:52:37 GMT -->
+</html>

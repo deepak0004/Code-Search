@@ -1,0 +1,97 @@
+    
+        Motivation
+
+Recently I searched for a way to initialize a complex object without passing a lot of parameter to the constructor. I tried it with the builder pattern, but I don't like the fact, that I'm not able to check at compile time if I really set all needed values.
+
+Traditional builder pattern
+
+When I use the builder pattern to create my Complex object, the creation is more "typesafe", because it's easier to see what an argument is used for:
+
+new ComplexBuilder()
+        .setFirst( "first" )
+        .setSecond( "second" )
+        .setThird( "third" )
+        ...
+        .build();
+
+
+But now I have the problem, that I can easily miss an important parameter. I can check for it inside the build() method, but that is only at runtime. At compile time there is nothing that warns me, if I missed something.
+
+Enhanced builder pattern
+
+Now my idea was to create a builder, that "reminds" me if I missed a needed parameter. My first try looks like this:
+
+<img src="http://yuml.me/diagram/scale:75/class/%5BComplexBuilder%7C%20Complex%20instance%7CBuilder2%20setFirst%28%29%5D%2C%20%5BComplexBuilder%5D+-%5BBuilder2%7CBuilder3%20setSecond%28%29%5D%2C%20%5BBuilder2%5D+-%5BBuilder3%7CBuilder4%20setThird%28%29%5D%2C%20%5BBuilder3%5D+-%5BBuilder4%7CComplex%20build%28%29%5D%2C%20%5BBuilder4%5D-.-%3E%5BComplex%5D%2C" alt="uml">
+
+
+public class Complex {
+    private String m_first;
+    private String m_second;
+    private String m_third;
+
+    private Complex() {}
+
+    public static class ComplexBuilder {
+        private Complex m_complex;
+
+        public ComplexBuilder() {
+            m_complex = new Complex();
+        }
+
+        public Builder2 setFirst( String first ) {
+            m_complex.m_first = first;
+            return new Builder2();
+        }
+
+        public class Builder2 {
+            private Builder2() {}
+            Builder3 setSecond( String second ) {
+                m_complex.m_second = second;
+                return new Builder3();
+            }
+        }
+
+        public class Builder3 {
+            private Builder3() {}
+            Builder4 setThird( String third ) {
+                m_complex.m_third = third;
+                return new Builder4();
+            }
+        }
+
+        public class Builder4 {
+            private Builder4() {}
+            Complex build() {
+                return m_complex;
+            }
+        }
+    }
+}
+
+
+As you can see, each setter of the builder class returns a different internal builder class. Each internal builder class provides exactly one setter method and the last one provides only a build() method.
+
+Now the construction of an object again looks like this:
+
+new ComplexBuilder()
+    .setFirst( "first" )
+    .setSecond( "second" )
+    .setThird( "third" )
+    .build();
+
+
+...but there is no way to forget a needed parameter. The compiler wouldn't accept it.
+
+Optional parameters
+
+If I had optional parameters, I would use the last internal builder class Builder4 to set them like a "traditional" builder does, returning itself.
+
+Questions
+
+
+Is this a well known pattern? Does it have a special name?
+Do you see any pitfalls?
+Do you have any ideas to improve the implementation - in the sense of fewer lines of code?
+
+
+                

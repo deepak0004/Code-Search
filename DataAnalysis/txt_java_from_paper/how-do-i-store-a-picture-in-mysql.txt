@@ -1,0 +1,4 @@
+    
+        I want to store an image in a MySQL database. I have created a table with a BLOB datatype, but now how do I store the image in this table?
+
+                

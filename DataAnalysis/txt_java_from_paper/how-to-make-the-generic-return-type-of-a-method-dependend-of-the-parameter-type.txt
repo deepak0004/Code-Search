@@ -1,0 +1,11 @@
+    
+        I have a convert method, which takes a String and a class as arguments and constructs an object of the given class, which will be returned.
+
+The usage should look like this
+
+Something s = Converter.convert("...", Something.class)
+
+
+Is it possible to express this with Java generics?
+
+                

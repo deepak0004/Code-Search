@@ -1,0 +1,22 @@
+    
+        I'm trying to build a Servlet that calls a JSP page similar to the following:
+
+public void doGet(HttpServletRequest req, HttpServletResponse resp)
+		throws IOException, ServletException {
+	req.getRequestDispatcher("/WEB-INF/main.jsp").forward(req, resp);
+}
+
+
+I need this Servlet to respond to the domain's root (eg: <a href="http://example.com/" rel="nofollow">http://example.com/) so I'm using the following mapping in the web.xml:
+
+&lt;servlet-mapping&gt;
+	&lt;servlet-name&gt;MainServlet&lt;/servlet-name&gt;
+	&lt;url-pattern&gt;/*&lt;/url-pattern&gt;
+&lt;/servlet-mapping&gt;
+
+
+The problem I'm having is that this matches EVERYTHING, so when the dispatcher forwards to "/WEB-INF/main.jsp" this matches the url-pattern so the Servlet gets run again. This results in a loop that runs until it dies with a <a href="http://java.sun.com/j2se/1.4.2/docs/api/java/lang/StackOverflowError.html" rel="nofollow">java.lang.StackOverflowError.
+
+How can I match the root without preventing other scripts from being runnable?
+
+                

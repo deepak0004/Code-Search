@@ -1,0 +1,50 @@
+    
+        i just started using Uploadify flash plugin instead of standard HTML UI.
+And met the next problem:
+when I click "Upload Files" link,that progress is shown and "completed" status is appeared, but in reality - it didn't happened anything,Java Servlet isn't called from backend.
+There is upload servlet and uploading performed next way earlier:
+
+&lt; form enctype="multipart/form-data" method="post" target="uploadFrame"
+action="&lt;%= request.getContextPath() %&gt;/uploadFile?portletId=${portletId}&amp;remoteFolder=${remoteFolder}"&gt;...
+
+
+After providing Uploadify plugin, UI now looks like:
+
+plugin part(configuration):
+
+    &lt;script&gt;
+...  
+         oScript.text+= "$j('#uploadify').uploadify({";
+      oScript.text+= "'uploader' : 'kne-portlets/js/lib/uploadify/scripts/uploadify.swf',";
+      oScript.text+= "'script'   : '&lt;%= request.getContextPath() %&gt;/uploadFile?portletId=${portletId}&amp;remoteFolder=&lt;%= decodedString %&gt;',";
+      oScript.text+= "'cancelImg': 'kne-portlets/js/lib/uploadify/cancel.png',";
+      oScript.text+= "'folder'   : '&lt;%= decodedString %&gt;',";
+      oScript.text+= "'queueID'  : 'fileQueue',";
+      oScript.text+= "'auto'     : false,";
+      oScript.text+= "'multi'    : false,";
+      //oScript.text+= "'sizeLimit' : 1000";
+      oScript.text+= "});";
+      oScript.text+= "});"; 
+...   
+&lt;/script&gt;
+
+
+'scripts' parameter here points to Java Servlet on backend
+
+&lt;%= decodedString %&gt; is folder path, which value is \\file-srv\demo
+
+part for uploading:
+
+&lt;input type="file" name="uploadify" id="uploadify" /&gt;
+&lt;a href="javascript:$j('#uploadify').uploadifyUpload();"&gt;Upload Files&lt;/a&gt;
+
+
+Where is my fault?
+
+'Script' param in plugin config points to Java Servlet on backend and it's done,but Servlet isn't triggered.
+
+error, when 'script' param isn't correct:<a href="http://img190.imageshack.us/i/errormm.png/" rel="nofollow">http://img190.imageshack.us/i/errormm.png/
+
+Thank you for assistance.
+
+                

@@ -1,0 +1,4 @@
+    
+        This may be something common and trivial, but I seem to be having trouble finding a concrete answer. In C# there is a concept of delegates, which relates strongly to the idea of function pointers from C++. Is there a similar functionality in Java? Given that pointers are somewhat absent, what is the best way about this? And to be clear, we're talking first class here.
+
+                

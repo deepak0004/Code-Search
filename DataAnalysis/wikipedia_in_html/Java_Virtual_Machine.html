@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Java_Virtual_Machine by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:34 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Java virtual machine - Wikipedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Java_virtual_machine","wgTitle":"Java virtual machine","wgCurRevisionId":758027729,"wgRevisionId":758027729,"wgArticleId":16389,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles containing potentially dated statements from 2006","All articles containing potentially dated statements","Articles containing potentially dated statements from June 2015","Articles with DMOZ links","Java (programming language)","Java platform","Java platform software","Java specification requests","Java virtual machine","Stack-based virtual machines"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Java_virtual_machine","wgRelevantArticleId":16389,"wgRequestId":"WHam5QpAAD8AAhrjSlAAAAAC","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"Java_Virtual_Machine","wgFlaggedRevsParams":{"tags":{}},"wgStableRevisionId":null,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"en","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgInternalRedirectTargetUrl":"/wiki/Java_virtual_machine","wgWikibaseItemId":"Q193321","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.cite.styles":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@1dqfd7l",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["mediawiki.action.view.redirect","ext.cite.a11y","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.legacy.wikibits","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.watchlist-notice","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.gadget.featured-articles-links","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.interface","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="https://en.wikipedia.org/w/load.php?debug=false&amp;lang=en&amp;modules=ext.cite.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="../w/load2c8d.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../w/load18b6.css?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.29.0-wmf.7"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="https://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Java_virtual_machine"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Java_virtual_machine&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Java_virtual_machine&amp;action=edit"/>
+<link rel="apple-touch-icon" href="https://en.wikipedia.org/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="../static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../w/api251f.php?action=rsd"/>
+<link rel="copyright" href="../../creativecommons.org/licenses/by-sa/3.0/index.html"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Java_virtual_machine"/>
+<link rel="dns-prefetch" href="../../login.wikimedia.org/index.html"/>
+<link rel="dns-prefetch" href="../../meta.wikimedia.org/index.html" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Java_virtual_machine rootpage-Java_virtual_machine skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">Java virtual machine</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"><span class="mw-redirectedfrom">  (Redirected from <a href="https://en.wikipedia.org/w/index.php?title=Java_Virtual_Machine&amp;redirect=no" class="mw-redirect" title="Java Virtual Machine">Java Virtual Machine</a>)</span></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><script>function mfTempOpenSection(id){var block=document.getElementById("mf-section-"+id);block.className+=" open-block";block.previousSibling.className+=" open-block";}</script><div role="note" class="hatnote">"JRE" redirects here. For the podcast, see <a href="https://en.wikipedia.org/wiki/Joe_Rogan_Experience" class="mw-redirect" title="Joe Rogan Experience">Joe Rogan Experience</a>.</div>
+<div class="thumb tright">
+<div class="thumbinner" style="width:402px;"><a href="https://en.wikipedia.org/wiki/File:JvmSpec7.png" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/JvmSpec7.png/400px-JvmSpec7.png" width="400" height="242" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/dd/JvmSpec7.png/600px-JvmSpec7.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/dd/JvmSpec7.png/800px-JvmSpec7.png 2x" data-file-width="1152" data-file-height="698" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="https://en.wikipedia.org/wiki/File:JvmSpec7.png" class="internal" title="Enlarge"></a></div>
+Overview of a Java virtual machine (JVM) architecture based on The Java Virtual Machine Specification Java SE 7 Edition</div>
+</div>
+</div>
+<p>A <b>Java virtual machine</b> (<b>JVM</b>) is <a href="https://en.wikipedia.org/wiki/Virtual_machine#Process_virtual" title="Virtual machine">an abstract computing machine</a> that enables a computer to run a <a href="Java_(software_platform).html" title="Java (software platform)">Java</a> program. There are three notions of the JVM: specification, implementation, and instance. The specification is a document that formally describes what is required of a JVM implementation. Having a single specification ensures all implementations are <a href="https://en.wikipedia.org/wiki/Interoperability" title="Interoperability">interoperable</a>. A JVM implementation is a computer program that meets the requirements of the JVM specification. An instance of a JVM is an implementation running in a <a href="https://en.wikipedia.org/wiki/Process_(computing)" title="Process (computing)">process</a> that executes a computer program compiled into <a href="Java_bytecode.html" title="Java bytecode">Java bytecode</a>.</p>
+<p><b>Java Runtime Environment</b> (<b>JRE</b>) is a software package that contains what is required to run a Java program. It includes a Java Virtual Machine implementation together with an implementation of the <a href="Java_Class_Library.html" title="Java Class Library">Java Class Library</a>. The <a href="https://en.wikipedia.org/wiki/Oracle_Corporation" title="Oracle Corporation">Oracle Corporation</a>, which owns the Java trademark, distributes a Java Runtime environment with their Java Virtual Machine called <a href="HotSpot.html" title="HotSpot">HotSpot</a>.</p>
+<p><b><a href="Java_Development_Kit.html" title="Java Development Kit">Java Development Kit</a></b> (<b>JDK</b>) is a superset of a JRE and contains tools for Java programmers, e.g. a <a href="Javac.html" title="Javac">javac</a> compiler. The Java Development Kit is provided free of charge either by Oracle Corporation directly, or by the <a href="OpenJDK.html" title="OpenJDK">OpenJDK</a> open source project, which is governed by Oracle.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#JVM_specification"><span class="tocnumber">1</span> <span class="toctext">JVM specification</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Class_loader"><span class="tocnumber">2</span> <span class="toctext">Class loader</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Bytecode_instructions"><span class="tocnumber">3</span> <span class="toctext">Bytecode instructions</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#JVM_languages"><span class="tocnumber">4</span> <span class="toctext">JVM languages</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Bytecode_verifier"><span class="tocnumber">5</span> <span class="toctext">Bytecode verifier</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#Secure_execution_of_remote_code"><span class="tocnumber">5.1</span> <span class="toctext">Secure execution of remote code</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#Bytecode_interpreter_and_just-in-time_compiler"><span class="tocnumber">6</span> <span class="toctext">Bytecode interpreter and just-in-time compiler</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#JVM_in_the_web_browser"><span class="tocnumber">7</span> <span class="toctext">JVM in the web browser</span></a>
+<ul>
+<li class="toclevel-2 tocsection-9"><a href="#Java_applets"><span class="tocnumber">7.1</span> <span class="toctext">Java applets</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#JavaScript_JVMs_and_interpreters"><span class="tocnumber">7.2</span> <span class="toctext">JavaScript JVMs and interpreters</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Compilation_to_JavaScript"><span class="tocnumber">7.3</span> <span class="toctext">Compilation to JavaScript</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-12"><a href="#Java_Runtime_Environment_from_Oracle"><span class="tocnumber">8</span> <span class="toctext">Java Runtime Environment from Oracle</span></a>
+<ul>
+<li class="toclevel-2 tocsection-13"><a href="#Performance"><span class="tocnumber">8.1</span> <span class="toctext">Performance</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#Generational_heap"><span class="tocnumber">8.2</span> <span class="toctext">Generational heap</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#Security"><span class="tocnumber">8.3</span> <span class="toctext">Security</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-16"><a href="#See_also"><span class="tocnumber">9</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#Notes"><span class="tocnumber">10</span> <span class="toctext">Notes</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="#References"><span class="tocnumber">11</span> <span class="toctext">References</span></a>
+<ul>
+<li class="toclevel-2 tocsection-19"><a href="#External_links"><span class="tocnumber">11.1</span> <span class="toctext">External links</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="JVM_specification">JVM specification</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_virtual_machine&amp;action=edit&amp;section=1" title="Edit section: JVM specification">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The Java virtual machine is an abstract (virtual) computer defined by a specification. This specification omits implementation details that are not essential to ensure interoperability: the memory layout of run-time data areas, the garbage-collection algorithm used, and any internal optimization of the Java virtual machine instructions (their translation into machine code). The main reason for this omission is to not unnecessarily constrain implementers. Any Java application can be run only inside some concrete implementation of the abstract specification of the Java virtual machine.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[1]</a></sup></p>
+<p>Starting with <a href="Java_Platform%2c_Standard_Edition.html" title="Java Platform, Standard Edition">Java Platform, Standard Edition</a> (J2SE) 5.0, changes to the JVM specification have been developed under the <a href="Java_Community_Process.html" title="Java Community Process">Java Community Process</a> as JSR 924.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">[2]</a></sup> As of 2006<sup class="plainlinks noprint asof-tag update" style="display:none;"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Java_virtual_machine&amp;action=edit">[update]</a></sup>, changes to specification to support changes proposed to the <a href="Class_(file_format).html" class="mw-redirect" title="Class (file format)">class file format</a> (JSR 202)<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">[3]</a></sup> are being done as a maintenance release of JSR 924. The specification for the JVM was published as the <i>blue book</i>,<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">[4]</a></sup> The preface states:</p>
+<blockquote class="templatequote">
+<p>We intend that this specification should sufficiently document the Java Virtual Machine to make possible compatible clean-room implementations. Oracle provides tests that verify the proper operation of implementations of the Java Virtual Machine.</p>
+</blockquote>
+<p>One of Oracle's JVMs is named <a href="HotSpot.html" title="HotSpot">HotSpot</a>, the other, inherited from <a href="https://en.wikipedia.org/wiki/BEA_Systems" title="BEA Systems">BEA Systems</a> is <a href="JRockit.html" title="JRockit">JRockit</a>. <a href="https://en.wikipedia.org/wiki/Clean_room_design" title="Clean room design">Clean-room</a> Java implementations include <a href="Kaffe.html" title="Kaffe">Kaffe</a> and <a href="IBM_J9.html" title="IBM J9">IBM J9</a>. Oracle owns the Java trademark and may allow its use to certify implementation suites as fully compatible with Oracle's specification.</p>
+<h2><span class="mw-headline" id="Class_loader">Class loader</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_virtual_machine&amp;action=edit&amp;section=2" title="Edit section: Class loader">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div role="note" class="hatnote">Main article: <a href="https://en.wikipedia.org/wiki/Java_Class_loader" class="mw-redirect" title="Java Class loader">Java Class loader</a></div>
+<p>One of the organizational units of JVM byte code is a class. A class loader implementation must be able to recognize and load anything that conforms to the Java class file format. Any implementation is free to recognize other binary forms besides <i>class</i> files, but it must recognize <i>class</i> files.</p>
+<p>The class loader performs three basic activities in this strict order:</p>
+<ol>
+<li>Loading: finds and imports the binary data for a type</li>
+<li>Linking: performs verification, preparation, and (optionally) resolution
+<ul>
+<li>Verification: ensures the correctness of the imported type</li>
+<li>Preparation: allocates memory for class variables and initializing the memory to default values</li>
+<li>Resolution: transforms symbolic references from the type into direct references.</li>
+</ul>
+</li>
+<li>Initialization: invokes Java code that initializes class variables to their proper starting values.</li>
+</ol>
+<p>In general, there are two types of class loader: bootstrap class loader and user defined class loader.</p>
+<p>Every Java virtual machine implementation must have a bootstrap class loader, capable of loading trusted classes. The Java virtual machine specification doesn't specify how a class loader should locate classes.</p>
+<h2><span class="mw-headline" id="Bytecode_instructions">Bytecode instructions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_virtual_machine&amp;action=edit&amp;section=3" title="Edit section: Bytecode instructions">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div role="note" class="hatnote">Main article: <a href="Java_bytecode.html" title="Java bytecode">Java bytecode</a></div>
+<p>The JVM has <a href="https://en.wikipedia.org/wiki/Instruction_(computer_science)" class="mw-redirect" title="Instruction (computer science)">instructions</a> for the following groups of tasks:</p>
+<div class="hlist">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Load/store_architecture" title="Load/store architecture">Load and store</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Arithmetic" title="Arithmetic">Arithmetic</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Type_conversion" title="Type conversion">Type conversion</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Dynamic_memory_allocation" class="mw-redirect" title="Dynamic memory allocation">Object creation and manipulation</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Stack_(abstract_data_type)" title="Stack (abstract data type)">Operand stack management (push / pop)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Branch_(computer_science)" title="Branch (computer science)">Control transfer (branching)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Subroutine" title="Subroutine">Method invocation and return</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Exception_handling" title="Exception handling">Throwing exceptions</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Monitor_(synchronization)" title="Monitor (synchronization)">Monitor-based concurrency</a></li>
+</ul>
+</div>
+<p>The aim is binary compatibility. Each particular host <a href="https://en.wikipedia.org/wiki/Operating_system" title="Operating system">operating system</a> needs its own implementation of the JVM and runtime. These JVMs interpret the bytecode semantically the same way, but the actual implementation may be different. More complex than just emulating bytecode is compatibly and efficiently implementing the <a href="Java_Class_Library.html" title="Java Class Library">Java core API</a> that must be mapped to each host operating system.</p>
+<h2><span class="mw-headline" id="JVM_languages">JVM languages</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_virtual_machine&amp;action=edit&amp;section=4" title="Edit section: JVM languages">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div role="note" class="hatnote">Main article: <a href="List_of_JVM_languages.html" title="List of JVM languages">List of JVM languages</a></div>
+<p>A JVM language is any language with functionality that can be expressed in terms of a valid class file which can be hosted by the Java Virtual Machine. A class file contains Java Virtual Machine instructions (<a href="https://en.wikipedia.org/wiki/Java_byte_code" class="mw-redirect" title="Java byte code">Java byte code</a>) and a symbol table, as well as other ancillary information. The class file format is the hardware- and operating system-independent binary format used to represent compiled classes and interfaces.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">[5]</a></sup></p>
+<p>There are several JVM languages, both old languages ported to JVM and completely new languages. <a href="JRuby.html" title="JRuby">JRuby</a> and <a href="Jython.html" title="Jython">Jython</a> are perhaps the most well-known ports of existing languages, i.e. <a href="https://en.wikipedia.org/wiki/Ruby_(programming_language)" title="Ruby (programming language)">Ruby</a> and <a href="https://en.wikipedia.org/wiki/Python_(programming_language)" title="Python (programming language)">Python</a> respectively. Of the new languages that have been created from scratch to compile to Java bytecode, <a href="Clojure.html" title="Clojure">Clojure</a>, <a href="Groovy_(programming_language).html" title="Groovy (programming language)">Groovy</a> and <a href="Scala_(programming_language).html" title="Scala (programming language)">Scala</a> may be the most popular ones. A notable feature with the JVM languages is that they are <a href="https://en.wikipedia.org/wiki/Language_interoperability" title="Language interoperability">compatible with each other</a>, so that, for example, Scala libraries can be used with Java programs and vice versa.<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">[6]</a></sup></p>
+<p>Java 7 JVM implements <i>JSR 292: Supporting Dynamically Typed Languages</i><sup id="cite_ref-7" class="reference"><a href="#cite_note-7">[7]</a></sup> on the Java Platform, a new feature which supports dynamically typed languages in the JVM. This feature is developed within the <a href="Da_Vinci_Machine.html" title="Da Vinci Machine">Da Vinci Machine</a> project whose mission is to extend the JVM so that it supports languages other than Java.<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">[8]</a></sup><sup id="cite_ref-9" class="reference"><a href="#cite_note-9">[9]</a></sup></p>
+<h2><span class="mw-headline" id="Bytecode_verifier">Bytecode verifier</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_virtual_machine&amp;action=edit&amp;section=5" title="Edit section: Bytecode verifier">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>A basic philosophy of Java is that it is inherently <i>safe</i> from the standpoint that no user program can <i>crash</i> the host machine or otherwise interfere inappropriately with other operations on the host machine, and that it is possible to protect certain methods and data structures belonging to <i>trusted</i> code from access or corruption by <i>untrusted</i> code executing within the same JVM. Furthermore, common programmer errors that often led to data corruption or unpredictable behavior such as accessing off the end of an array or using an uninitialized pointer are not allowed to occur. Several features of Java combine to provide this safety, including the class model, the garbage-collected <a href="#Heap">heap</a>, and the verifier.</p>
+<p>The JVM <i>verifies</i> all bytecode before it is executed. This verification consists primarily of three types of checks:</p>
+<ul>
+<li>Branches are always to valid locations</li>
+<li>Data is always initialized and references are always type-safe</li>
+<li>Access to <i>private</i> or <i>package private</i> data and methods is rigidly controlled</li>
+</ul>
+<p>The first two of these checks take place primarily during the <i>verification</i> step that occurs when a class is loaded and made eligible for use. The third is primarily performed dynamically, when data items or methods of a class are first accessed by another class.</p>
+<p>The verifier permits only some bytecode sequences in valid programs, e.g. a <a href="https://en.wikipedia.org/wiki/Branch_(computer_science)" title="Branch (computer science)">jump (branch) instruction</a> can only target an instruction within the same <a href="https://en.wikipedia.org/wiki/Method_(computer_programming)" title="Method (computer programming)">method</a>. Furthermore, the verifier ensures that any given instruction operates on a fixed stack location,<sup id="cite_ref-10" class="reference"><a href="#cite_note-10">[10]</a></sup> allowing the JIT compiler to transform stack accesses into fixed register accesses. Because of this, that the JVM is a stack architecture does not imply a speed penalty for emulation on <a href="https://en.wikipedia.org/wiki/Register_machine" title="Register machine">register-based architectures</a> when using a JIT compiler. In the face of the code-verified JVM architecture, it makes no difference to a JIT compiler whether it gets named imaginary registers or imaginary stack positions that must be allocated to the target architecture's registers. In fact, code verification makes the JVM different from a classic stack architecture, of which efficient emulation with a JIT compiler is more complicated and typically carried out by a slower interpreter.</p>
+<p>The original specification for the bytecode verifier used natural language that was <i>incomplete or incorrect in some respects.</i> A number of attempts have been made to specify the JVM as a formal system. By doing this, the security of current JVM implementations can more thoroughly be analyzed, and potential security exploits prevented. It will also be possible to optimize the JVM by skipping unnecessary safety checks, if the application being run is proven to be safe.<sup id="cite_ref-11" class="reference"><a href="#cite_note-11">[11]</a></sup></p>
+<h3><span class="mw-headline" id="Secure_execution_of_remote_code">Secure execution of remote code</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_virtual_machine&amp;action=edit&amp;section=6" title="Edit section: Secure execution of remote code">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>A virtual machine architecture allows very fine-grained control over the actions that code within the machine is permitted to take. It assumes the code is "semantically" correct, that is, it successfully passed the (formal) bytecode verifier process, materialized by a tool, possibly off-board the virtual machine. This is designed to allow safe execution of untrusted code from remote sources, a model used by <a href="Java_applet.html" title="Java applet">Java applets</a>, and other secure code downloads. Once bytecode-verified, the downloaded code runs in a restricted <i><a href="https://en.wikipedia.org/wiki/Sandbox_(computer_security)" title="Sandbox (computer security)">sandbox</a></i>, which is designed to protect the user from misbehaving or malicious code. As an addition to the bytecode verification process, publishers can purchase a certificate with which to <a href="https://en.wikipedia.org/wiki/Digital_signature" title="Digital signature">digitally sign</a> applets as <i>safe</i>, giving them permission to ask the user to break out of the sandbox and access the local file system, <a href="https://en.wikipedia.org/wiki/Clipboard_(software)" class="mw-redirect" title="Clipboard (software)">clipboard</a>, execute external pieces of software, or network.</p>
+<p>Formal proof of bytecode verifiers have been done by the Javacard industry (Formal Development of an Embedded Verifier for Java Card Byte Code<sup id="cite_ref-12" class="reference"><a href="#cite_note-12">[12]</a></sup>)</p>
+<h2><span class="mw-headline" id="Bytecode_interpreter_and_just-in-time_compiler">Bytecode interpreter and just-in-time compiler</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_virtual_machine&amp;action=edit&amp;section=7" title="Edit section: Bytecode interpreter and just-in-time compiler">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>For each <a href="https://en.wikipedia.org/wiki/Hardware_architecture" title="Hardware architecture">hardware architecture</a> a different Java bytecode <a href="https://en.wikipedia.org/wiki/Interpreter_(computing)" title="Interpreter (computing)">interpreter</a> is needed. When a computer has a Java bytecode interpreter, it can run any Java bytecode program, and the same program can be run on any computer that has such an interpreter.</p>
+<p>When Java bytecode is executed by an interpreter, the execution will always be slower than the execution of the same program compiled into native machine language. This problem is mitigated by <a href="https://en.wikipedia.org/wiki/Just-in-time_compilation" title="Just-in-time compilation">just-in-time (JIT) compilers</a> for executing Java bytecode. A JIT compiler may translate Java bytecode into native machine language while executing the program. The translated parts of the program can then be executed much more quickly than they could be interpreted. This technique gets applied to those parts of a program frequently executed. This way a JIT compiler can significantly speed up the overall execution time.</p>
+<p>There is no necessary connection between the Java programming language and Java bytecode. A program written in Java can be compiled directly into the machine language of a real computer and programs written in other languages than Java can be compiled into Java bytecode.</p>
+<p>Java bytecode is intended to be platform-independent and secure.<sup id="cite_ref-13" class="reference"><a href="#cite_note-13">[13]</a></sup> Some JVM implementations do not include an interpreter, but consist only of a just-in-time compiler.<sup id="cite_ref-14" class="reference"><a href="#cite_note-14">[14]</a></sup></p>
+<h2><span class="mw-headline" id="JVM_in_the_web_browser">JVM in the web browser</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_virtual_machine&amp;action=edit&amp;section=8" title="Edit section: JVM in the web browser">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Since very early stages of the design process, Java (and JVM) has been marketed as a web technology for creating <a href="https://en.wikipedia.org/wiki/Rich_Internet_Applications" class="mw-redirect" title="Rich Internet Applications">Rich Internet Applications</a>.</p>
+<h3><span class="mw-headline" id="Java_applets">Java applets</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_virtual_machine&amp;action=edit&amp;section=9" title="Edit section: Java applets">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div role="note" class="hatnote">Main article: <a href="Java_applet.html" title="Java applet">Java applet</a></div>
+<p>On the client side, web browsers may be extended with a <a href="https://en.wikipedia.org/wiki/NPAPI" title="NPAPI">NPAPI</a> Java plugin which executes so called <a href="https://en.wikipedia.org/wiki/Java_applets" class="mw-redirect" title="Java applets">Java applets</a> embedded into HTML pages. The applet is allowed to draw into a rectangular region on the page assigned to it and use a restricted set of APIs that allow for example access to user's microphone or 3D acceleration. Java applets were superior to <a href="https://en.wikipedia.org/wiki/JavaScript" title="JavaScript">JavaScript</a> both in performance and features until approximately 2011, when JavaScript engines in browsers were made significantly faster and the <a href="https://en.wikipedia.org/wiki/HTML_5" class="mw-redirect" title="HTML 5">HTML 5</a> suite of web technologies started enhancing JavaScript with new APIs. Java applets are not able to modify the page outside its rectangular region which is not true about JavaScript. <a href="https://en.wikipedia.org/wiki/Adobe_Flash_Player" title="Adobe Flash Player">Adobe Flash Player</a>, the main competing technology, works in the same way in this respect. Java applets are not restricted to Java and in general can be created in any JVM language.</p>
+<p>As of April 2014, <a href="https://en.wikipedia.org/wiki/Google_Chrome" title="Google Chrome">Google Chrome</a> does not allow the use of any NPAPI plugins.<sup id="cite_ref-ars-chromenpapi_15-0" class="reference"><a href="#cite_note-ars-chromenpapi-15">[15]</a></sup> <a href="https://en.wikipedia.org/wiki/Mozilla_Firefox" class="mw-redirect" title="Mozilla Firefox">Mozilla Firefox</a> will also ban NPAPI plugins by the end of 2016. This means that Java applets can no longer be used in either browser.<sup id="cite_ref-pcw-firefoxnpapi_16-0" class="reference"><a href="#cite_note-pcw-firefoxnpapi-16">[16]</a></sup> Oracle ultimately announced in January 2016 that it will discontinue the Java web browser plugin effective Java 9.<sup id="cite_ref-ars-nopluginjdk9_17-0" class="reference"><a href="#cite_note-ars-nopluginjdk9-17">[17]</a></sup></p>
+<p>As of June 2015<sup class="plainlinks noprint asof-tag update" style="display:none;"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Java_virtual_machine&amp;action=edit">[update]</a></sup> according to W3Techs, Java applet use had fallen to 0.1% of all web sites. Flash had fallen to 10.8% and Silverlight to 0.1% of web sites.<sup id="cite_ref-18" class="reference"><a href="#cite_note-18">[18]</a></sup></p>
+<h3><span class="mw-headline" id="JavaScript_JVMs_and_interpreters">JavaScript JVMs and interpreters</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_virtual_machine&amp;action=edit&amp;section=10" title="Edit section: JavaScript JVMs and interpreters">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>As of May 2016, <a href="https://en.wikipedia.org/wiki/JavaPoly" title="JavaPoly">JavaPoly</a> allows users to import unmodified Java libraries, and invoke them directly from JavaScript. JavaPoly allows websites to use run unmodified Java libraries, even if the user does not have Java installed on their computer.<sup id="cite_ref-19" class="reference"><a href="#cite_note-19">[19]</a></sup></p>
+<h3><span class="mw-headline" id="Compilation_to_JavaScript">Compilation to JavaScript</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_virtual_machine&amp;action=edit&amp;section=11" title="Edit section: Compilation to JavaScript">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>With the continuing improvements in JavaScript execution speed, combined with the increased use of mobile devices whose web browsers do not implement support for plugins, there are efforts to target those users through compilation to JavaScript. It is possible to either compile the source code or JVM bytecode to JavaScript. Compiling the JVM bytecode which is universal across JVM languages allows building upon the existing compiler to bytecode.</p>
+<p>Main JVM bytecode to JavaScript compilers are TeaVM,<sup id="cite_ref-20" class="reference"><a href="#cite_note-20">[20]</a></sup> the compiler contained in Dragome Web SDK,<sup id="cite_ref-21" class="reference"><a href="#cite_note-21">[21]</a></sup> Bck2Brwsr,<sup id="cite_ref-22" class="reference"><a href="#cite_note-22">[22]</a></sup> and j2js-compiler.<sup id="cite_ref-23" class="reference"><a href="#cite_note-23">[23]</a></sup></p>
+<p>Leading compilers from JVM languages to JavaScript include the Java to JavaScript compiler contained in <a href="https://en.wikipedia.org/wiki/Google_Web_Toolkit" title="Google Web Toolkit">Google Web Toolkit</a>, Clojurescript (<a href="Clojure.html" title="Clojure">Clojure</a>), GrooScript (<a href="Groovy_(programming_language).html" title="Groovy (programming language)">Groovy</a>), <a href="Scala_(programming_language).html" title="Scala (programming language)">Scala.js</a> (Scala) and others.<sup id="cite_ref-24" class="reference"><a href="#cite_note-24">[24]</a></sup></p>
+<h2><span class="mw-headline" id="Java_Runtime_Environment_from_Oracle">Java Runtime Environment from Oracle</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_virtual_machine&amp;action=edit&amp;section=12" title="Edit section: Java Runtime Environment from Oracle">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div role="note" class="hatnote">Main article: <a href="HotSpot.html" title="HotSpot">HotSpot</a></div>
+<p>The Java Runtime Environment (JRE) released by Oracle is a software distribution containing a stand-alone Java VM (<a href="HotSpot.html" title="HotSpot">HotSpot</a>), browser plugin, Java standard libraries and a configuration tool. It is the most common Java environment installed on Windows computers. It is freely available for download at the website java.com.</p>
+<h3><span class="mw-headline" id="Performance">Performance</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_virtual_machine&amp;action=edit&amp;section=13" title="Edit section: Performance">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div role="note" class="hatnote">Main article: <a href="Java_performance.html" title="Java performance">Java performance</a></div>
+<p>The JVM specification gives a lot of leeway to implementors regarding the implementation details. Since Java 1.3, JRE from Oracle contains a JVM called HotSpot. It has been designed to be a high-performance JVM.</p>
+<p>To speed-up code execution, HotSpot relies on just-in-time compilation. To speed-up object allocation and garbage collection, HotSpot uses generational heap.</p>
+<h3><span class="mw-headline" id="Generational_heap">Generational heap</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_virtual_machine&amp;action=edit&amp;section=14" title="Edit section: Generational heap">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The <i>Java virtual machine heap</i> is the area of memory used by the JVM for <a href="https://en.wikipedia.org/wiki/Dynamic_memory_allocation" class="mw-redirect" title="Dynamic memory allocation">dynamic memory allocation</a>.<sup id="cite_ref-hotspotfaq_25-0" class="reference"><a href="#cite_note-hotspotfaq-25">[25]</a></sup></p>
+<p>In HotSpot the heap is divided into <i>generations</i>:</p>
+<ul>
+<li>The <i>young generation</i> stores short-lived <a href="https://en.wikipedia.org/wiki/Object_(computer_science)" title="Object (computer science)">objects</a> that are created and immediately <a href="https://en.wikipedia.org/wiki/Garbage_collection_(computer_science)" title="Garbage collection (computer science)">garbage collected</a>.</li>
+<li>Objects that persist longer are moved to the <i>old generation</i> (also called the <i>tenured generation</i>). This memory is subdivided into (two) Survivors spaces where the objects that survived the first and next garbage collections are stored.</li>
+</ul>
+<p>The <i>permanent generation</i> (or <i>permgen</i>) was used for <a href="Class_(file_format).html" class="mw-redirect" title="Class (file format)">class</a> definitions and associated metadata prior to Java 8. Permanent generation was not part of the heap.<sup id="cite_ref-permgen_26-0" class="reference"><a href="#cite_note-permgen-26">[26]</a></sup><sup id="cite_ref-27" class="reference"><a href="#cite_note-27">[27]</a></sup> The <i>permanent generation</i> was removed from Java 8.<sup id="cite_ref-28" class="reference"><a href="#cite_note-28">[28]</a></sup></p>
+<p>Originally there was no permanent generation, and objects and classes were stored together in the same area. But as class unloading occurs much more rarely than objects are collected, moving class structures to a specific area allowed significant performance improvements.<sup id="cite_ref-permgen_26-1" class="reference"><a href="#cite_note-permgen-26">[26]</a></sup></p>
+<h3><span class="mw-headline" id="Security">Security</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_virtual_machine&amp;action=edit&amp;section=15" title="Edit section: Security">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Oracle's JRE is installed on a large number of computers. Since any web page the user visits may run Java applets, Java provides an easily accessible <a href="https://en.wikipedia.org/wiki/Attack_surface" title="Attack surface">attack surface</a> to malicious web sites that the user visits. Kaspersky Labs reports that the Java web browser plugin is the method of choice for computer criminals. Java exploits are included in many exploit packs that hackers deploy onto hacked web sites.<sup id="cite_ref-29" class="reference"><a href="#cite_note-29">[29]</a></sup></p>
+<p>In the past, end users were often using an out-of-date version of JRE which was vulnerable to many known attacks. This led to the widely shared belief between users that Java is inherently insecure.<sup id="cite_ref-30" class="reference"><a href="#cite_note-30">[30]</a></sup> Since Java 1.7, Oracle's JRE for Windows includes automatic update functionality.</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_virtual_machine&amp;action=edit&amp;section=16" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div role="navigation" aria-label="Portals" class="noprint portal plainlist tright" style="margin:0.5em 0 0.5em 1em;border:solid #aaa 1px">
+<ul style="display:table;box-sizing:border-box;padding:0.1em;max-width:175px;background:#f9f9f9;font-size:85%;line-height:110%;font-style:italic;font-weight:bold">
+<li style="display:table-row"><span style="display:table-cell;padding:0.2em;vertical-align:middle;text-align:center"><a href="https://en.wikipedia.org/wiki/File:Wave.svg" class="image"><img alt="icon" src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/15px-Wave.svg.png" width="15" height="28" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/23px-Wave.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/31px-Wave.svg.png 2x" data-file-width="226" data-file-height="407" /></a></span><span style="display:table-cell;padding:0.2em 0.2em 0.2em 0.3em;vertical-align:middle"><a href="https://en.wikipedia.org/wiki/Portal:Java" title="Portal:Java">Java portal</a></span></li>
+</ul>
+</div>
+<ul>
+<li><a href="List_of_Java_virtual_machines.html" title="List of Java virtual machines">List of Java virtual machines</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Comparison_of_Java_virtual_machines" title="Comparison of Java virtual machines">Comparison of Java virtual machines</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Comparison_of_application_virtual_machines" class="mw-redirect" title="Comparison of application virtual machines">Comparison of application virtual machines</a></li>
+<li><a href="Automated_exception_handling.html" title="Automated exception handling">Automated exception handling</a></li>
+<li><a href="Java_performance.html" title="Java performance">Java performance</a></li>
+<li><a href="List_of_JVM_languages.html" title="List of JVM languages">List of JVM languages</a></li>
+<li><a href="Java_processor.html" title="Java processor">Java processor</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Common_Language_Runtime" title="Common Language Runtime">Common Language Runtime</a></li>
+</ul>
+<h2><span class="mw-headline" id="Notes">Notes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_virtual_machine&amp;action=edit&amp;section=17" title="Edit section: Notes">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist references-column-width" style="-moz-column-width: 30em; -webkit-column-width: 30em; column-width: 30em; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text">Bill Venners, <i><a rel="nofollow" class="external text" href="http://www.artima.com/insidejvm/ed2/index.html">Inside the Java Virtual Machine</a></i> Chapter 5</span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.jcp.org/en/jsr/detail?id=924">"The Java Community Process(SM) Program - JSRs: Java Specification Requests - detail JSR# 924"</a>. Jcp.org<span class="reference-accessdate">. Retrieved <span class="nowrap">2015-06-26</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+virtual+machine&amp;rft.btitle=The+Java+Community+Process%28SM%29+Program+-+JSRs%3A+Java+Specification+Requests+-+detail+JSR%23+924&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.jcp.org%2Fen%2Fjsr%2Fdetail%3Fid%3D924&amp;rft.pub=Jcp.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.jcp.org/en/jsr/detail?id=202">"The Java Community Process(SM) Program - JSRs: Java Specification Requests - detail JSR# 202"</a>. Jcp.org<span class="reference-accessdate">. Retrieved <span class="nowrap">2015-06-26</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+virtual+machine&amp;rft.btitle=The+Java+Community+Process%28SM%29+Program+-+JSRs%3A+Java+Specification+Requests+-+detail+JSR%23+202&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.jcp.org%2Fen%2Fjsr%2Fdetail%3Fid%3D202&amp;rft.pub=Jcp.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><i><a rel="nofollow" class="external text" href="http://java.sun.com/docs/books/vmspec/">The Java Virtual Machine Specification</a></i> (the <a rel="nofollow" class="external text" href="http://java.sun.com/docs/books/vmspec/html/VMSpecTOC.doc.html">first</a> and <a rel="nofollow" class="external text" href="http://java.sun.com/docs/books/vmspec/2nd-edition/html/VMSpecTOC.doc.html">second</a> editions are also available online).</span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/specs/jvms/se7/jvms7.pdf">"The Java Virtual Machine Specification&#160;: Java SE 7 Edition"</a> <span style="font-size:85%;">(PDF)</span>. Docs.oracle.com<span class="reference-accessdate">. Retrieved <span class="nowrap">2015-06-26</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+virtual+machine&amp;rft.btitle=The+Java+Virtual+Machine+Specification+%3A+Java+SE+7+Edition&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fdocs.oracle.com%2Fjavase%2Fspecs%2Fjvms%2Fse7%2Fjvms7.pdf&amp;rft.pub=Docs.oracle.com&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.scala-lang.org/old/faq/4">"Frequently Asked Questions - Java Interoperability"</a>. <i>scala-lang.org</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2015-11-18</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+virtual+machine&amp;rft.atitle=Frequently+Asked+Questions+-+Java+Interoperability&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.scala-lang.org%2Fold%2Ffaq%2F4&amp;rft.jtitle=scala-lang.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://jcp.org/en/jsr/detail?id=292">"The Java Community Process(SM) Program - JSRs: Java Specification Requests - detail JSR# 292"</a>. Jcp.org<span class="reference-accessdate">. Retrieved <span class="nowrap">2015-06-26</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+virtual+machine&amp;rft.btitle=The+Java+Community+Process%28SM%29+Program+-+JSRs%3A+Java+Specification+Requests+-+detail+JSR%23+292&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fjcp.org%2Fen%2Fjsr%2Fdetail%3Fid%3D292&amp;rft.pub=Jcp.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://openjdk.java.net/projects/mlvm/">"Da Vinci Machine project"</a>. Openjdk.java.net<span class="reference-accessdate">. Retrieved <span class="nowrap">2015-06-26</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+virtual+machine&amp;rft.btitle=Da+Vinci+Machine+project&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fopenjdk.java.net%2Fprojects%2Fmlvm%2F&amp;rft.pub=Openjdk.java.net&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.oracle.com/technetwork/articles/javase/dyntypelang-142348.html">"New JDK 7 Feature: Support for Dynamically Typed Languages in the Java Virtual Machine"</a>. Oracle.com<span class="reference-accessdate">. Retrieved <span class="nowrap">2015-06-26</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+virtual+machine&amp;rft.btitle=New+JDK+7+Feature%3A+Support+for+Dynamically+Typed+Languages+in+the+Java+Virtual+Machine&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.oracle.com%2Ftechnetwork%2Farticles%2Fjavase%2Fdyntypelang-142348.html&amp;rft.pub=Oracle.com&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://java.sun.com/docs/books/jvms/second_edition/html/ClassFile.doc.html#9766">"The Verification process"</a>. <i>The Java Virtual Machine Specification</i>. Sun Microsystems. 1999<span class="reference-accessdate">. Retrieved <span class="nowrap">2009-05-31</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+virtual+machine&amp;rft.atitle=The+Verification+process&amp;rft.date=1999&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fjava.sun.com%2Fdocs%2Fbooks%2Fjvms%2Fsecond_edition%2Fhtml%2FClassFile.doc.html%239766&amp;rft.jtitle=The+Java+Virtual+Machine+Specification&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text">Stephen N. Freund and John C. Mitchell. 1999. A formal framework for the Java bytecode language and verifier. In <i>Proceedings of the 14th ACM SIGPLAN conference on Object-oriented programming, systems, languages, and applications (OOPSLA '99)</i>, A. Michael Berman (Ed.) <a href="https://en.wikipedia.org/wiki/Association_for_Computing_Machinery" title="Association for Computing Machinery">Association for Computing Machinery</a>, New York, pp.147–166. <a href="https://en.wikipedia.org/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1145%2F320384.320397">10.1145/320384.320397</a></span></li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://www-sop.inria.fr/everest/Lilian.Burdy/CBR02dsn.pdf">http://www-sop.inria.fr/everest/Lilian.Burdy/CBR02dsn.pdf</a></span></li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-13">^</a></b></span> <span class="reference-text">David J. Eck, <i><a rel="nofollow" class="external text" href="http://math.hws.edu/javanotes/c1/s3.html">Introduction to Programming Using Java</a></i>, Seventh Edition, Version 7.0, August 2014 at Section 1.3 "The Java Virtual Machine"</span></li>
+<li id="cite_note-14"><span class="mw-cite-backlink"><b><a href="#cite_ref-14">^</a></b></span> <span class="reference-text"><i><a rel="nofollow" class="external text" href="http://docs.oracle.com/cd/E15289_01/doc.40/e15058/underst_jit.htm">Oracle JRockit Introduction</a></i> Release R28 at 2. "Understanding Just-In-Time Compilation and Optimization"</span></li>
+<li id="cite_note-ars-chromenpapi-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-ars-chromenpapi_15-0">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://arstechnica.com/information-technology/2015/04/chrome-starts-pushing-java-off-the-web-by-disabling-plugins/">"Chrome starts pushing Java off the Web by disabling plugins"</a>. <i>Ars Technica</i><span class="reference-accessdate">. Retrieved <span class="nowrap">9 December</span> 2015</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+virtual+machine&amp;rft.atitle=Chrome+starts+pushing+Java+off+the+Web+by+disabling+plugins&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Farstechnica.com%2Finformation-technology%2F2015%2F04%2Fchrome-starts-pushing-java-off-the-web-by-disabling-plugins%2F&amp;rft.jtitle=Ars+Technica&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-pcw-firefoxnpapi-16"><span class="mw-cite-backlink"><b><a href="#cite_ref-pcw-firefoxnpapi_16-0">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.pcworld.com/article/2990991/browsers/firefox-will-stop-supporting-npapi-plugins-by-end-of-2016-following-chromes-lead.html">"Firefox will stop supporting plugins by end of 2016, following Chrome's lead"</a>. <i>PC World</i><span class="reference-accessdate">. Retrieved <span class="nowrap">9 December</span> 2015</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+virtual+machine&amp;rft.atitle=Firefox+will+stop+supporting+plugins+by+end+of+2016%2C+following+Chrome%27s+lead&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.pcworld.com%2Farticle%2F2990991%2Fbrowsers%2Ffirefox-will-stop-supporting-npapi-plugins-by-end-of-2016-following-chromes-lead.html&amp;rft.jtitle=PC+World&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-ars-nopluginjdk9-17"><span class="mw-cite-backlink"><b><a href="#cite_ref-ars-nopluginjdk9_17-0">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://arstechnica.com/information-technology/2016/01/oracle-deprecates-the-java-browser-plugin-prepares-for-its-demise/">"Oracle deprecates the Java browser plugin, prepares for its demise"</a>. <i>Ars Technica</i><span class="reference-accessdate">. Retrieved <span class="nowrap">15 April</span> 2016</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+virtual+machine&amp;rft.atitle=Oracle+deprecates+the+Java+browser+plugin%2C+prepares+for+its+demise&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Farstechnica.com%2Finformation-technology%2F2016%2F01%2Foracle-deprecates-the-java-browser-plugin-prepares-for-its-demise%2F&amp;rft.jtitle=Ars+Technica&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-18"><span class="mw-cite-backlink"><b><a href="#cite_ref-18">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://w3techs.com/technologies/history_overview/client_side_language/all/y">"Historical yearly trends in the usage of client-side programming languages, June 2015"</a>. W3techs.com<span class="reference-accessdate">. Retrieved <span class="nowrap">2015-06-26</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+virtual+machine&amp;rft.btitle=Historical+yearly+trends+in+the+usage+of+client-side+programming+languages%2C+June+2015&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fw3techs.com%2Ftechnologies%2Fhistory_overview%2Fclient_side_language%2Fall%2Fy&amp;rft.pub=W3techs.com&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-19"><span class="mw-cite-backlink"><b><a href="#cite_ref-19">^</a></b></span> <span class="reference-text"><cite class="citation web">Krill, Paul (13 May 2016). <a rel="nofollow" class="external text" href="http://www.infoworld.com/article/3069995/java/new-javascript-library-brings-java-to-browsers-without-applets.html">"JavaPoly.js imports existing Java code and invokes it directly from JavaScript"</a>. InfoWorld<span class="reference-accessdate">. Retrieved <span class="nowrap">18 July</span> 2016</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+virtual+machine&amp;rft.aufirst=Paul&amp;rft.aulast=Krill&amp;rft.btitle=JavaPoly.js+imports+existing+Java+code+and+invokes+it+directly+from+JavaScript&amp;rft.date=2016-05-13&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.infoworld.com%2Farticle%2F3069995%2Fjava%2Fnew-javascript-library-brings-java-to-browsers-without-applets.html&amp;rft.pub=InfoWorld&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-20"><span class="mw-cite-backlink"><b><a href="#cite_ref-20">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://teavm.org/">"TeaVM project home page"</a>. Teavm.org<span class="reference-accessdate">. Retrieved <span class="nowrap">2015-06-26</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+virtual+machine&amp;rft.btitle=TeaVM+project+home+page&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fteavm.org%2F&amp;rft.pub=Teavm.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-21"><span class="mw-cite-backlink"><b><a href="#cite_ref-21">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.dragome.com/">"Dragome Web SDK"</a>. Dragome.com<span class="reference-accessdate">. Retrieved <span class="nowrap">2015-06-26</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+virtual+machine&amp;rft.btitle=Dragome+Web+SDK&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.dragome.com%2F&amp;rft.pub=Dragome.com&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-22"><span class="mw-cite-backlink"><b><a href="#cite_ref-22">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://wiki.apidesign.org/wiki/Bck2Brwsr">"Bck2Brwsr - APIDesign"</a>. Wiki.apidesign.org<span class="reference-accessdate">. Retrieved <span class="nowrap">2015-06-26</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+virtual+machine&amp;rft.btitle=Bck2Brwsr+-+APIDesign&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwiki.apidesign.org%2Fwiki%2FBck2Brwsr&amp;rft.pub=Wiki.apidesign.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-23"><span class="mw-cite-backlink"><b><a href="#cite_ref-23">^</a></b></span> <span class="reference-text">Wolfgang Kuehn (decatur). <a rel="nofollow" class="external text" href="https://github.com/decatur/j2js-compiler">j2js-compiler</a> GitHub</span></li>
+<li id="cite_note-24"><span class="mw-cite-backlink"><b><a href="#cite_ref-24">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://github.com/jashkenas/coffeescript/wiki/list-of-languages-that-compile-to-js">"List of languages that compile to JS · jashkenas/coffeescript Wiki · GitHub"</a>. Github.com. 2015-06-19<span class="reference-accessdate">. Retrieved <span class="nowrap">2015-06-26</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+virtual+machine&amp;rft.btitle=List+of+languages+that+compile+to+JS+%B7+jashkenas%2Fcoffeescript+Wiki+%B7+GitHub&amp;rft.date=2015-06-19&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fgithub.com%2Fjashkenas%2Fcoffeescript%2Fwiki%2Flist-of-languages-that-compile-to-js&amp;rft.pub=Github.com&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-hotspotfaq-25"><span class="mw-cite-backlink"><b><a href="#cite_ref-hotspotfaq_25-0">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://java.sun.com/docs/hotspot/gc1.4.2/faq.html">"Frequently Asked Questions about Garbage Collection in the Hotspot Java Virtual Machine"</a>. <a href="https://en.wikipedia.org/wiki/Sun_Microsystems" title="Sun Microsystems">Sun Microsystems</a>. 6 February 2003<span class="reference-accessdate">. Retrieved <span class="nowrap">7 February</span> 2009</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+virtual+machine&amp;rft.btitle=Frequently+Asked+Questions+about+Garbage+Collection+in+the+Hotspot+Java+Virtual+Machine&amp;rft.date=2003-02-06&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fjava.sun.com%2Fdocs%2Fhotspot%2Fgc1.4.2%2Ffaq.html&amp;rft.pub=Sun+Microsystems&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-permgen-26"><span class="mw-cite-backlink">^ <a href="#cite_ref-permgen_26-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-permgen_26-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation web">Masamitsu, Jon (28 November 2006). <a rel="nofollow" class="external text" href="https://blogs.oracle.com/jonthecollector/entry/presenting_the_permanent_generation">"Presenting the Permanent Generation"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">7 February</span> 2009</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+virtual+machine&amp;rft.aufirst=Jon&amp;rft.aulast=Masamitsu&amp;rft.btitle=Presenting+the+Permanent+Generation&amp;rft.date=2006-11-28&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fblogs.oracle.com%2Fjonthecollector%2Fentry%2Fpresenting_the_permanent_generation&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-27"><span class="mw-cite-backlink"><b><a href="#cite_ref-27">^</a></b></span> <span class="reference-text"><cite class="citation web">Nutter, Charles (11 September 2008). <a rel="nofollow" class="external text" href="http://blog.headius.com/2008/09/first-taste-of-invokedynamic.html">"A First Taste of InvokeDynamic"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">7 February</span> 2009</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+virtual+machine&amp;rft.aufirst=Charles&amp;rft.aulast=Nutter&amp;rft.btitle=A+First+Taste+of+InvokeDynamic&amp;rft.date=2008-09-11&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fblog.headius.com%2F2008%2F09%2Ffirst-taste-of-invokedynamic.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-28"><span class="mw-cite-backlink"><b><a href="#cite_ref-28">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://openjdk.java.net/jeps/122">"JEP 122: Remove the Permanent Generation"</a>. <a href="https://en.wikipedia.org/wiki/Oracle_Corporation" title="Oracle Corporation">Oracle Corporation</a>. 2012-12-04<span class="reference-accessdate">. Retrieved <span class="nowrap">2014-03-23</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+virtual+machine&amp;rft.btitle=JEP+122%3A+Remove+the+Permanent+Generation&amp;rft.date=2012-12-04&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fopenjdk.java.net%2Fjeps%2F122&amp;rft.pub=Oracle+Corporation&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-29"><span class="mw-cite-backlink"><b><a href="#cite_ref-29">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.kaspersky.com/about/news/virus/2013/Is_there_any_protection_against_Java_exploits">"Is there any protection against Java exploits? | Kaspersky Lab"</a>. Kaspersky.com. 2013-09-09<span class="reference-accessdate">. Retrieved <span class="nowrap">2015-06-26</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+virtual+machine&amp;rft.btitle=Is+there+any+protection+against+Java+exploits%3F+%26%23124%3B+Kaspersky+Lab&amp;rft.date=2013-09-09&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.kaspersky.com%2Fabout%2Fnews%2Fvirus%2F2013%2FIs_there_any_protection_against_Java_exploits&amp;rft.pub=Kaspersky.com&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-30"><span class="mw-cite-backlink"><b><a href="#cite_ref-30">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://lifehacker.com/5988800/what-is-java-is-it-insecure-and-should-i-use-it">"What Is Java, Is It Insecure, and Should I Use It?"</a>. Lifehacker.com. 2013-01-14<span class="reference-accessdate">. Retrieved <span class="nowrap">2015-06-26</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+virtual+machine&amp;rft.btitle=What+Is+Java%2C+Is+It+Insecure%2C+and+Should+I+Use+It%3F&amp;rft.date=2013-01-14&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Flifehacker.com%2F5988800%2Fwhat-is-java-is-it-insecure-and-should-i-use-it&amp;rft.pub=Lifehacker.com&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_virtual_machine&amp;action=edit&amp;section=18" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="refbegin" style="">
+<ul>
+<li><i><a rel="nofollow" class="external text" href="http://java.sun.com/docs/books/vmspec/2nd-edition/jvms-clarify.html">Clarifications and Amendments to the Java Virtual Machine Specification, Second Edition</a></i> includes list of changes to be made to support J2SE 5.0 and JSR 45</li>
+<li><a rel="nofollow" class="external text" href="http://www.jcp.org/en/jsr/detail?id=45">JSR 45</a>, specifies changes to the class file format to support source-level debugging of languages such as <a href="JavaServer_Pages.html" title="JavaServer Pages">JavaServer Pages</a> (JSP) and <a href="SQLJ.html" title="SQLJ">SQLJ</a> that are translated to Java</li>
+</ul>
+</div>
+<h3><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_virtual_machine&amp;action=edit&amp;section=19" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/specs/jvms/se7/html/index.html">The Java Virtual Machine Specification</a></li>
+<li><a rel="nofollow" class="external text" href="https://www.dmoz.org/Computers/Programming/Languages/Java/Implementations">Java implementations</a> at <a href="https://en.wikipedia.org/wiki/DMOZ" title="DMOZ">DMOZ</a></li>
+<li><a rel="nofollow" class="external text" href="http://openjdk.java.net/install/">How to download and install prebuilt OpenJDK packages</a></li>
+<li><a rel="nofollow" class="external text" href="https://java.com/en/download/help/download_options.xml"><b>How to Install Java?</b> (JRE from Oracle)</a></li>
+</ul>
+<div role="navigation" class="navbox" aria-labelledby="Java_virtual_machines_.28comparison.29" style="padding:3px">
+<table class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="https://en.wikipedia.org/wiki/Template:Java_Virtual_Machine" title="Template:Java Virtual Machine"><abbr title="View this template" style=";;background:none transparent;border:none;">v</abbr></a></li>
+<li class="nv-talk"><a href="https://en.wikipedia.org/wiki/Template_talk:Java_Virtual_Machine" title="Template talk:Java Virtual Machine"><abbr title="Discuss this template" style=";;background:none transparent;border:none;">t</abbr></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Java_Virtual_Machine&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;">e</abbr></a></li>
+</ul>
+</div>
+<div id="Java_virtual_machines_.28comparison.29" style="font-size:114%"><strong class="selflink">Java virtual machines</strong> (<a href="https://en.wikipedia.org/wiki/Comparison_of_Java_virtual_machines" title="Comparison of Java virtual machines">comparison</a>)</div>
+</th>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Sun/Oracle</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="HotSpot.html" title="HotSpot">HotSpot</a></li>
+<li><a href="K_virtual_machine.html" title="K virtual machine">KVM</a></li>
+<li><a href="OpenJDK.html" title="OpenJDK">OpenJDK</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Maxine_Virtual_Machine" title="Maxine Virtual Machine">Maxine VM</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Major implementations</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Excelsior_JET.html" title="Excelsior JET">Excelsior JET</a></li>
+<li><a href="JamVM.html" title="JamVM">JamVM</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Jikes_RVM" title="Jikes RVM">Jikes RVM</a></li>
+<li><a href="IKVM.html" title="IKVM.NET">IKVM.NET</a></li>
+<li><a href="IBM_J9.html" title="IBM J9">IBM J9</a></li>
+<li><a href="JRockit.html" title="JRockit">JRockit</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Embedded</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Excelsior_JET.html" title="Excelsior JET">Excelsior JET Embedded</a></li>
+<li><a href="https://en.wikipedia.org/wiki/JamaicaVM" title="JamaicaVM">JamaicaVM</a></li>
+<li><a href="Mika_VM.html" title="Mika VM">Mika VM</a></li>
+<li><a href="Mysaifu_JVM.html" title="Mysaifu JVM">Mysaifu</a></li>
+<li><a href="Squawk_virtual_machine.html" title="Squawk virtual machine">Squawk (Sun)</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Others</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="CACAO.html" title="CACAO">CACAO</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Dalvik_(software)" title="Dalvik (software)">Dalvik</a></li>
+<li><a href="JX_(operating_system).html" title="JX (operating system)">JX</a></li>
+<li><i><a href="List_of_Java_virtual_machines.html" title="List of Java virtual machines">more…</a></i></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Discontinued</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Apache_Harmony.html" title="Apache Harmony">Apache Harmony</a></li>
+<li><a href="GNU_Compiler_for_Java.html" title="GNU Compiler for Java">GCJ</a></li>
+<li><a href="Kaffe.html" title="Kaffe">Kaffe</a></li>
+<li><a href="Microsoft_Java_Virtual_Machine.html" title="Microsoft Java Virtual Machine">Microsoft JVM</a></li>
+<li><a href="SableVM.html" title="SableVM">SableVM</a></li>
+<li><a href="Jupiter_JVM.html" title="Jupiter JVM">Jupiter</a></li>
+<li><i><a href="https://en.wikipedia.org/wiki/Category:Discontinued_Java_virtual_machines" title="Category:Discontinued Java virtual machines">more…</a></i></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div role="navigation" class="navbox" aria-labelledby="Java" style="padding:3px">
+<table class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit">
+<tr>
+<th scope="col" class="navbox-title" colspan="3">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="https://en.wikipedia.org/wiki/Template:Java_(software_platform)" title="Template:Java (software platform)"><abbr title="View this template" style=";;background:none transparent;border:none;">v</abbr></a></li>
+<li class="nv-talk"><a href="https://en.wikipedia.org/wiki/Template_talk:Java_(software_platform)" title="Template talk:Java (software platform)"><abbr title="Discuss this template" style=";;background:none transparent;border:none;">t</abbr></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Java_(software_platform)&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;">e</abbr></a></li>
+</ul>
+</div>
+<div id="Java" style="font-size:114%"><a href="Java_(software_platform).html" title="Java (software platform)">Java</a></div>
+</th>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Java platforms</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Java_(programming_language).html" title="Java (programming language)">Java language</a></li>
+<li><strong class="selflink">JVM</strong></li>
+<li><a href="Java_Platform%2c_Micro_Edition.html" title="Java Platform, Micro Edition">Micro Edition</a></li>
+<li><a href="Java_Platform%2c_Standard_Edition.html" title="Java Platform, Standard Edition">Standard Edition</a></li>
+<li><a href="Java_Platform%2c_Enterprise_Edition.html" title="Java Platform, Enterprise Edition">Enterprise Edition</a></li>
+<li><a href="Java_Card.html" title="Java Card">Java Card</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Android_software_development#SDK" title="Android software development">Android SDK</a></li>
+</ul>
+</div>
+</td>
+<td class="navbox-image" rowspan="13" style="width:0%;padding:0px 0px 0px 2px">
+<div><a href="https://en.wikipedia.org/wiki/File:Wave.svg" class="image"><img alt="Wave.svg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/75px-Wave.svg.png" width="75" height="135" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/113px-Wave.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/150px-Wave.svg.png 2x" data-file-width="226" data-file-height="407" /></a></div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Oracle technologies</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Squawk_virtual_machine.html" title="Squawk virtual machine">Squawk</a></li>
+<li><a href="Java_Development_Kit.html" title="Java Development Kit">Java Development Kit</a></li>
+<li><a href="OpenJDK.html" title="OpenJDK">OpenJDK</a></li>
+<li><strong class="selflink">Java virtual machine</strong></li>
+<li><a href="JavaFX.html" title="JavaFX">JavaFX</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Maxine_Virtual_Machine" title="Maxine Virtual Machine">Maxine VM</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Platform technologies</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Java_applet.html" title="Java applet">Applets</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Java_servlet" title="Java servlet">Servlets</a></li>
+<li><a href="MIDlet.html" title="MIDlet">MIDlets</a></li>
+<li><a href="JavaServer_Pages.html" title="JavaServer Pages">JSP</a></li>
+<li><a href="Java_Web_Start.html" title="Java Web Start">Web Start (JNLP)</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Major third-party technologies</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Blackdown_Java.html" title="Blackdown Java">Blackdown</a></li>
+<li><a href="Eclipse_(software).html" title="Eclipse (software)">Eclipse</a></li>
+<li><a href="GNU_Classpath.html" title="GNU Classpath">GNU Classpath</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Google_Web_Toolkit" title="Google Web Toolkit">GWT</a></li>
+<li><a href="Apache_Harmony.html" title="Apache Harmony">Harmony</a></li>
+<li><a href="Hibernate_(Java).html" class="mw-redirect" title="Hibernate (Java)">Hibernate</a></li>
+<li><a href="IcedTea.html" title="IcedTea">IcedTea</a></li>
+<li><a href="Jazelle.html" title="Jazelle">Jazelle</a></li>
+<li><a href="Spring_Framework.html" title="Spring Framework">Spring</a></li>
+<li><a href="Apache_Struts.html" class="mw-redirect" title="Apache Struts">Struts</a></li>
+<li><a href="TopLink.html" title="TopLink">TopLink</a></li>
+<li><a href="https://en.wikipedia.org/wiki/WildFly" title="WildFly">WildFly</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">History</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Java_version_history.html" title="Java version history">Java version history</a></li>
+<li><a href="Java_Community_Process.html" title="Java Community Process">Java Community Process</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sun_Microsystems" title="Sun Microsystems">Sun Microsystems</a></li>
+<li><a href="Free_Java_implementations.html" title="Free Java implementations">Free Java implementations</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="List_of_JVM_languages.html" title="List of JVM languages">Major programming languages</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="BeanShell.html" title="BeanShell">BeanShell</a></li>
+<li><a href="Clojure.html" title="Clojure">Clojure</a></li>
+<li><a href="Groovy_(programming_language).html" title="Groovy (programming language)">Groovy</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Oxygene_(programming_language)" title="Oxygene (programming language)">Oxygene</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Tcl/Java" title="Tcl/Java">Java Tcl</a></li>
+<li><a href="JRuby.html" title="JRuby">JRuby</a></li>
+<li><a href="Jython.html" title="Jython">Jython</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Kotlin_(programming_language)" title="Kotlin (programming language)">Kotlin</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Processing_(programming_language)" title="Processing (programming language)">Processing</a></li>
+<li><a href="Rhino_(JavaScript_engine).html" title="Rhino (JavaScript engine)">Rhino</a></li>
+<li><a href="Scala_(programming_language).html" title="Scala (programming language)">Scala</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Java conferences</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="JavaOne.html" title="JavaOne">JavaOne</a></li>
+<li><a href="Devoxx.html" title="Devoxx">Devoxx</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div role="navigation" class="navbox" aria-labelledby="Sun_Microsystems_.28acquired_by_Oracle_Corp.2C_2010.29" style="padding:3px">
+<table class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="https://en.wikipedia.org/wiki/Template:Sun_Microsystems" title="Template:Sun Microsystems"><abbr title="View this template" style=";;background:none transparent;border:none;">v</abbr></a></li>
+<li class="nv-talk"><a href="https://en.wikipedia.org/wiki/Template_talk:Sun_Microsystems" title="Template talk:Sun Microsystems"><abbr title="Discuss this template" style=";;background:none transparent;border:none;">t</abbr></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Sun_Microsystems&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;">e</abbr></a></li>
+</ul>
+</div>
+<div id="Sun_Microsystems_.28acquired_by_Oracle_Corp.2C_2010.29" style="font-size:114%"><a href="https://en.wikipedia.org/wiki/Sun_Microsystems" title="Sun Microsystems">Sun Microsystems</a> <small>(<a href="https://en.wikipedia.org/wiki/Sun_acquisition_by_Oracle" title="Sun acquisition by Oracle">acquired</a> by <a href="https://en.wikipedia.org/wiki/Oracle_Corporation" title="Oracle Corporation">Oracle Corp</a>, 2010)</small></div>
+</th>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">People</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Bill_Joy" title="Bill Joy">Bill Joy</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Andy_Bechtolsheim" title="Andy Bechtolsheim">Andy Bechtolsheim</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Scott_McNealy" title="Scott McNealy">Scott McNealy</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Vinod_Khosla" title="Vinod Khosla">Vinod Khosla</a></li>
+<li><a href="https://en.wikipedia.org/wiki/List_of_Sun_Microsystems_employees" title="List of Sun Microsystems employees">List of notable employees</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Hardware</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Sun-1" title="Sun-1">Sun-1</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sun-2" title="Sun-2">Sun-2</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sun-3" title="Sun-3">Sun-3</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sun386i" title="Sun386i">Sun386i</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sun-4" title="Sun-4">Sun-4</a></li>
+<li><a href="https://en.wikipedia.org/wiki/SPARCstation" title="SPARCstation">SPARCstation</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sun_Netra" title="Sun Netra">Netra</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sun_Ultra_series" title="Sun Ultra series">Ultra</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sun_Enterprise" title="Sun Enterprise">Enterprise</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sun_Blade" title="Sun Blade">Sun Blade</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sun_Fire" title="Sun Fire">Sun Fire</a></li>
+<li><a href="https://en.wikipedia.org/wiki/SPARC_Enterprise" title="SPARC Enterprise">SPARC Enterprise</a></li>
+<li><a href="https://en.wikipedia.org/wiki/SPARC" title="SPARC">SPARC</a></li>
+<li><a href="https://en.wikipedia.org/wiki/JavaStation" title="JavaStation">JavaStation</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sun_Ray" title="Sun Ray">Sun Ray</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sun_Modular_Datacenter" title="Sun Modular Datacenter">Sun Modular Datacenter</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Category:Sun_Microsystems_hardware" title="Category:Sun Microsystems hardware"><i>more...</i></a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Software</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/SunOS" title="SunOS">SunOS</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Solaris_(operating_system)" title="Solaris (operating system)">Solaris</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Network_Information_Service" title="Network Information Service">NIS</a> (<a href="https://en.wikipedia.org/wiki/NIS+" title="NIS+">+</a>)</li>
+<li><a href="https://en.wikipedia.org/wiki/Network_File_System" title="Network File System">NFS</a></li>
+<li><a href="https://en.wikipedia.org/wiki/ZFS" title="ZFS">ZFS</a></li>
+<li><a href="https://en.wikipedia.org/wiki/SunView" title="SunView">SunView</a></li>
+<li><a href="https://en.wikipedia.org/wiki/NeWS" title="NeWS">NeWS</a></li>
+<li><a href="https://en.wikipedia.org/wiki/OpenWindows" title="OpenWindows">OpenWindows</a></li>
+<li><a href="Java_Desktop_System.html" title="Java Desktop System">Java Desktop System</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Oracle_Solaris_Studio" class="mw-redirect" title="Oracle Solaris Studio">Sun Studio</a></li>
+<li><a href="Java_(software_platform).html" title="Java (software platform)">Java</a></li>
+<li><a href="https://en.wikipedia.org/wiki/StarOffice" title="StarOffice">StarOffice</a></li>
+<li><a href="https://en.wikipedia.org/wiki/IPlanet" title="IPlanet">iPlanet</a>/<a href="https://en.wikipedia.org/wiki/Sun_ONE" title="Sun ONE">Sun ONE</a>/<a href="https://en.wikipedia.org/wiki/Sun_Java_System" title="Sun Java System">Java Enterprise System</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Oracle_Secure_Global_Desktop" title="Oracle Secure Global Desktop">Sun Secure Global Desktop</a></li>
+<li><a href="https://en.wikipedia.org/wiki/MySQL" title="MySQL">MySQL</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sun_xVM" title="Sun xVM">Sun xVM</a></li>
+<li><a href="GlassFish.html" title="GlassFish">GlassFish</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Category:Sun_Microsystems_software" title="Category:Sun Microsystems software"><i>more...</i></a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Storage</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Storage_Technology_Corporation" title="Storage Technology Corporation">StorageTek</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sun_Open_Storage" title="Sun Open Storage">Sun Open Storage</a></li>
+<li><a href="https://en.wikipedia.org/wiki/QFS" title="QFS">QFS</a></li>
+<li><a href="https://en.wikipedia.org/wiki/ZFS" title="ZFS">ZFS</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">High-performance computing</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Sun_Cloud" title="Sun Cloud">Sun Cloud</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sun_Constellation_System" title="Sun Constellation System">Sun Constellation System</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sun_Visualization_System" title="Sun Visualization System">Sun Visualization System</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Oracle_Grid_Engine" title="Oracle Grid Engine">Sun Grid Engine</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Lustre_(file_system)" title="Lustre (file system)">Lustre</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Research</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Sun_Microsystems_Laboratories" title="Sun Microsystems Laboratories">Sun Labs</a></li>
+<li><a href="PicoJava.html" title="PicoJava">picoJava</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Fortress_(programming_language)" title="Fortress (programming language)">Fortress</a></li>
+<li><a href="Project_Looking_Glass.html" title="Project Looking Glass">Project Looking Glass</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Education</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Oracle_Certification_Program" title="Oracle Certification Program">SCPs</a></li>
+<li><a href="BlueJ.html" title="BlueJ">BlueJ</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Community</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Common_Development_and_Distribution_License" title="Common Development and Distribution License">Common Development and Distribution License</a></li>
+<li><a href="Java_Community_Process.html" title="Java Community Process">Java Community Process</a></li>
+<li><a href="NetBeans.html" title="NetBeans">NetBeans</a></li>
+<li><a href="OpenOffice.html" title="OpenOffice.org">OpenOffice.org</a></li>
+<li><a href="https://en.wikipedia.org/wiki/OpenSolaris" title="OpenSolaris">OpenSolaris</a></li>
+<li><a href="https://en.wikipedia.org/wiki/OpenSPARC" title="OpenSPARC">OpenSPARC</a></li>
+<li><a href="OpenJDK.html" title="OpenJDK">OpenJDK</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Open_Source_University_Meetup" title="Open Source University Meetup">OSUM</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1285
+Cached time: 20170103015019
+Cache expiry: 2592000
+Dynamic content: false
+CPU time usage: 0.196 seconds
+Real time usage: 0.240 seconds
+Preprocessor visited node count: 1666/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 77728/2097152 bytes
+Template argument size: 2299/2097152 bytes
+Highest expansion depth: 12/40
+Expensive parser function count: 3/500
+Lua time usage: 0.084/10.000 seconds
+Lua memory usage: 3.87 MB/50 MB
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  189.427      1 - -total
+ 56.21%  106.476      1 - Template:Reflist
+ 42.18%   79.897     23 - Template:Cite_web
+  9.92%   18.784      1 - Template:Redirect
+  7.02%   13.298      3 - Template:Navbox
+  6.52%   12.342      2 - Template:As_of
+  4.97%    9.412      2 - Template:DMCA
+  4.40%    8.331      2 - Template:Dated_maintenance_category
+  3.95%    7.481      1 - Template:Java_Virtual_Machine
+  3.68%    6.962      6 - Template:Main_article
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:16389-0!*!0!!en!4!* and timestamp 20170103015020 and revision id 758027729
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Java_virtual_machine&amp;oldid=758027729">https://en.wikipedia.org/w/index.php?title=Java_virtual_machine&amp;oldid=758027729</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Help_Category.html" title="Help:Category">Categories</a>: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Java_(programming_language)" title="Category:Java (programming language)">Java (programming language)</a></li><li><a href="Category_Java_platform.html" title="Category:Java platform">Java platform</a></li><li><a href="Category_Java_platform_software.html" title="Category:Java platform software">Java platform software</a></li><li><a href="Category_Java_specification_requests.html" title="Category:Java specification requests">Java specification requests</a></li><li><a href="Category_Java_virtual_machine.html" title="Category:Java virtual machine">Java virtual machine</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Stack-based_virtual_machines" title="Category:Stack-based virtual machines">Stack-based virtual machines</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Articles_containing_potentially_dated_statements_from_2006" title="Category:Articles containing potentially dated statements from 2006">Articles containing potentially dated statements from 2006</a></li><li><a href="https://en.wikipedia.org/wiki/Category:All_articles_containing_potentially_dated_statements" title="Category:All articles containing potentially dated statements">All articles containing potentially dated statements</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Articles_containing_potentially_dated_statements_from_June_2015" title="Category:Articles containing potentially dated statements from June 2015">Articles containing potentially dated statements from June 2015</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Articles_with_DMOZ_links" title="Category:Articles with DMOZ links">Articles with DMOZ links</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="Special_MyTalk.html" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="Special_MyContributions.html" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&amp;returnto=Java+virtual+machine" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Java+virtual+machine" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="https://en.wikipedia.org/wiki/Java_virtual_machine"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+															<li  id="ca-talk"><span><a href="https://en.wikipedia.org/wiki/Talk:Java_virtual_machine"  title="Discussion about the content page [t]" accesskey="t" rel="discussion">Talk</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="https://en.wikipedia.org/wiki/Java_virtual_machine" >Read</a></span></li>
+															<li id="ca-edit"><span><a href="https://en.wikipedia.org/w/index.php?title=Java_virtual_machine&amp;action=edit"  title="Edit this page [e]" accesskey="e">Edit</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="https://en.wikipedia.org/w/index.php?title=Java_virtual_machine&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="https://en.wikipedia.org/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="Main_Page.html"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="Portal_Contents.html" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="Portal_Featured_content.html" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="Portal_Current_events.html" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="https://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="../../shop.wikimedia.org/index.html" title="Visit the Wikipedia store">Wikipedia store</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Interaction</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-help"><a href="Help_Contents.html" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="Wikipedia_About.html" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="Wikipedia_Community_portal.html" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="Wikipedia_Contact_us.html" title="How to contact Wikipedia">Contact page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="https://en.wikipedia.org/wiki/Special:WhatLinksHere/Java_virtual_machine" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://en.wikipedia.org/wiki/Special:RecentChangesLinked/Java_virtual_machine" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="Wikipedia_File_Upload_Wizard.html" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="https://en.wikipedia.org/w/index.php?title=Java_virtual_machine&amp;oldid=758027729" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://en.wikipedia.org/w/index.php?title=Java_virtual_machine&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q193321" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="https://en.wikipedia.org/w/index.php?title=Special:CiteThisPage&amp;page=Java_virtual_machine&amp;id=758027729" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Print/export</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Java+virtual+machine">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Java+virtual+machine&amp;returnto=Java+virtual+machine&amp;oldid=758027729&amp;writer=rdf2latex">Download as PDF</a></li><li id="t-print"><a href="https://en.wikipedia.org/w/index.php?title=Java_virtual_machine&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Languages</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-am"><a href="https://am.wikipedia.org/wiki/ጃቫ_ቨርቹአል_ማሽን" title="ጃቫ ቨርቹአል ማሽን – Amharic" lang="am" hreflang="am" class="interlanguage-link-target">አማርኛ</a></li><li class="interlanguage-link interwiki-ar"><a href="https://ar.wikipedia.org/wiki/آلة_جافا_الافتراضية" title="آلة جافا الافتراضية – Arabic" lang="ar" hreflang="ar" class="interlanguage-link-target">العربية</a></li><li class="interlanguage-link interwiki-bn"><a href="https://bn.wikipedia.org/wiki/জাভা_ভার্চুয়াল_মেশিন" title="জাভা ভার্চুয়াল মেশিন – Bangla" lang="bn" hreflang="bn" class="interlanguage-link-target">বাংলা</a></li><li class="interlanguage-link interwiki-bs"><a href="https://bs.wikipedia.org/wiki/Java_Virtual_Machine" title="Java Virtual Machine – Bosnian" lang="bs" hreflang="bs" class="interlanguage-link-target">Bosanski</a></li><li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Màquina_virtual_Java" title="Màquina virtual Java – Catalan" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Java_Virtual_Machine" title="Java Virtual Machine – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Java_Virtual_Machine" title="Java Virtual Machine – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Máquina_virtual_Java" title="Máquina virtual Java – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/ماشین_مجازی_جاوا" title="ماشین مجازی جاوا – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Machine_virtuelle_Java" title="Machine virtuelle Java – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/자바_가상_머신" title="자바 가상 머신 – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-hi"><a href="https://hi.wikipedia.org/wiki/जावा_आभासी_मशीन" title="जावा आभासी मशीन – Hindi" lang="hi" hreflang="hi" class="interlanguage-link-target">हिन्दी</a></li><li class="interlanguage-link interwiki-hr"><a href="https://hr.wikipedia.org/wiki/Java_(virtualni_stroj)" title="Java (virtualni stroj) – Croatian" lang="hr" hreflang="hr" class="interlanguage-link-target">Hrvatski</a></li><li class="interlanguage-link interwiki-id"><a href="https://id.wikipedia.org/wiki/Mesin_Virtual_Java" title="Mesin Virtual Java – Indonesian" lang="id" hreflang="id" class="interlanguage-link-target">Bahasa Indonesia</a></li><li class="interlanguage-link interwiki-ia"><a href="https://ia.wikipedia.org/wiki/Machina_virtual_Java" title="Machina virtual Java – Interlingua" lang="ia" hreflang="ia" class="interlanguage-link-target">Interlingua</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Macchina_virtuale_Java" title="Macchina virtuale Java – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-he"><a href="https://he.wikipedia.org/wiki/Java_Virtual_Machine" title="Java Virtual Machine – Hebrew" lang="he" hreflang="he" class="interlanguage-link-target">עברית</a></li><li class="interlanguage-link interwiki-kk"><a href="https://kk.wikipedia.org/wiki/Java_виртуалды_машинасы" title="Java виртуалды машинасы – Kazakh" lang="kk" hreflang="kk" class="interlanguage-link-target">Қазақша</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/Java_virtuális_gép" title="Java virtuális gép – Hungarian" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-ml"><a href="https://ml.wikipedia.org/wiki/ജാവ_വെർച്വൽ_മെഷീൻ" title="ജാവ വെർച്വൽ മെഷീൻ – Malayalam" lang="ml" hreflang="ml" class="interlanguage-link-target">മലയാളം</a></li><li class="interlanguage-link interwiki-mn"><a href="https://mn.wikipedia.org/wiki/Java_virtual_machine" title="Java virtual machine – Mongolian" lang="mn" hreflang="mn" class="interlanguage-link-target">Монгол</a></li><li class="interlanguage-link interwiki-my"><a href="https://my.wikipedia.org/wiki/Java_ဒြပ်မဲ့စက်" title="Java ဒြပ်မဲ့စက် – Burmese" lang="my" hreflang="my" class="interlanguage-link-target">မြန်မာဘာသာ</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/Java_Virtual_Machine" title="Java Virtual Machine – Dutch" lang="nl" hreflang="nl" class="interlanguage-link-target">Nederlands</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/Java仮想マシン" title="Java仮想マシン – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-pa"><a href="https://pa.wikipedia.org/wiki/ਜਾਵਾ_ਵਰਚੁਅਲ_ਮਸ਼ੀਨ" title="ਜਾਵਾ ਵਰਚੁਅਲ ਮਸ਼ੀਨ – Punjabi" lang="pa" hreflang="pa" class="interlanguage-link-target">ਪੰਜਾਬੀ</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Wirtualna_maszyna_Javy" title="Wirtualna maszyna Javy – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Máquina_virtual_Java" title="Máquina virtual Java – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/Java_Virtual_Machine" title="Java Virtual Machine – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-sq"><a href="https://sq.wikipedia.org/wiki/Java_Virtual_Machine" title="Java Virtual Machine – Albanian" lang="sq" hreflang="sq" class="interlanguage-link-target">Shqip</a></li><li class="interlanguage-link interwiki-simple"><a href="https://simple.wikipedia.org/wiki/Java_Virtual_Machine" title="Java Virtual Machine – Simple English" lang="simple" hreflang="simple" class="interlanguage-link-target">Simple English</a></li><li class="interlanguage-link interwiki-sr"><a href="https://sr.wikipedia.org/wiki/Јава_виртуелна_машина" title="Јава виртуелна машина – Serbian" lang="sr" hreflang="sr" class="interlanguage-link-target">Српски / srpski</a></li><li class="interlanguage-link interwiki-sh"><a href="https://sh.wikipedia.org/wiki/Java_(virtualna_mašina)" title="Java (virtualna mašina) – Serbo-Croatian" lang="sh" hreflang="sh" class="interlanguage-link-target">Srpskohrvatski / српскохрватски</a></li><li class="interlanguage-link interwiki-sv"><a href="https://sv.wikipedia.org/wiki/Java_Virtual_Machine" title="Java Virtual Machine – Swedish" lang="sv" hreflang="sv" class="interlanguage-link-target">Svenska</a></li><li class="interlanguage-link interwiki-tr"><a href="https://tr.wikipedia.org/wiki/Java_sanal_makinesi" title="Java sanal makinesi – Turkish" lang="tr" hreflang="tr" class="interlanguage-link-target">Türkçe</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/Віртуальна_машина_Java" title="Віртуальна машина Java – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/Java虚拟机" title="Java虚拟机 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q193321#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 3 January 2017, at 01:50.</li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="Wikipedia_Text_of_Creative_Commons_Attribution-ShareAlike_3.html">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="../../creativecommons.org/licenses/by-sa/3.0/index.html" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="../../wikimediafoundation.org/wiki/Terms_of_Use.html">Terms of Use</a> and <a href="../../wikimediafoundation.org/wiki/Privacy_policy.html">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="../../www.wikimediafoundation.org/index.html">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../../wikimediafoundation.org/wiki/Privacy_policy.html" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="Wikipedia_About.html" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="Wikipedia_General_disclaimer.html" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="Wikipedia_Contact_us.html">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a href="../../www.mediawiki.org/wiki/Special_MyLanguage/How_to_contribute.html">Developers</a></li>
+											<li id="footer-places-cookiestatement"><a href="../../wikimediafoundation.org/wiki/Cookie_statement.html">Cookie statement</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/w/index.php?title=Java_virtual_machine&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="../../www.wikimediafoundation.org/index.html"><img src="https://en.wikipedia.org/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="../../www.mediawiki.org/index.html"><img src="https://en.wikipedia.org/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":61,"wgHostname":"mw1268"});});</script>
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Java_Virtual_Machine by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:34 GMT -->
+</html>

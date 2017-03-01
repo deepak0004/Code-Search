@@ -1,0 +1,26 @@
+    
+        I have a JAX-RS web service implemented with Jersey library and now I want to test it. In order to do that I'd like to host this service in my test by preinitializing it with mocked services.
+
+What is the best way to host such a service and execute the test calls?
+
+@Path("/srv")
+public class MyService
+{
+   @GET
+   public void action(@Context UriInfo uri)
+   { ... }
+}
+
+@Test
+public void myTest()
+{
+   MyService service = new MyService();
+   service.setSomething(...);
+
+   // How do I host it?
+
+   // How do I call it?
+}
+
+
+                

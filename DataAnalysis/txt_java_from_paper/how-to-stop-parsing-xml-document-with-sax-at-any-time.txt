@@ -1,0 +1,4 @@
+    
+        I parse a big xml document with Sax, I want to stop parsing the document when some condition establish? How to do?
+
+                

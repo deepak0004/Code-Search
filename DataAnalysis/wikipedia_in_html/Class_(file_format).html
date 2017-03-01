@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Class_(file_format) by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:52:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Java class file - Wikipedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Java_class_file","wgTitle":"Java class file","wgCurRevisionId":759832214,"wgRevisionId":759832214,"wgArticleId":731735,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Java platform","Computer file formats"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Java_class_file","wgRelevantArticleId":731735,"wgRequestId":"WHovZQpAME8AAGV03WkAAAEA","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"Class_(file_format)","wgFlaggedRevsParams":{"tags":{}},"wgStableRevisionId":null,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"en","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgInternalRedirectTargetUrl":"/wiki/Java_class_file","wgWikibaseItemId":"Q2193155","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.cite.styles":"ready","ext.pygments":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@1dqfd7l",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["mediawiki.action.view.redirect","ext.cite.a11y","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.legacy.wikibits","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.watchlist-notice","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.gadget.featured-articles-links","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.interface","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="https://en.wikipedia.org/w/load.php?debug=false&amp;lang=en&amp;modules=ext.cite.styles%7Cext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="../w/load2c8d.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../w/load18b6.css?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.29.0-wmf.7"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="https://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Java_class_file"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Java_class_file&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Java_class_file&amp;action=edit"/>
+<link rel="apple-touch-icon" href="https://en.wikipedia.org/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="../static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../w/api251f.php?action=rsd"/>
+<link rel="copyright" href="../../creativecommons.org/licenses/by-sa/3.0/index.html"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Java_class_file"/>
+<link rel="dns-prefetch" href="../../login.wikimedia.org/index.html"/>
+<link rel="dns-prefetch" href="../../meta.wikimedia.org/index.html" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Java_class_file rootpage-Java_class_file skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">Java class file</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"><span class="mw-redirectedfrom">  (Redirected from <a href="https://en.wikipedia.org/w/index.php?title=Class_(file_format)&amp;redirect=no" class="mw-redirect" title="Class (file format)">Class (file format)</a>)</span></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><script>function mfTempOpenSection(id){var block=document.getElementById("mf-section-"+id);block.className+=" open-block";block.previousSibling.className+=" open-block";}</script><div role="note" class="hatnote">This article is about the data format. For classes in Java, see <a href="https://en.wikipedia.org/wiki/Class_(computer_programming)" title="Class (computer programming)">Class (computer programming)</a>.</div>
+<table class="infobox" style="width:22em">
+<caption style="font-size:130%; padding-bottom:0.15em;">Java class file</caption>
+<tr>
+<th scope="row" style="padding:0.2em 0;line-height:1.2em; padding-right:0.65em;">Developed&#160;by</th>
+<td style="line-height:1.35em;"><a href="https://en.wikipedia.org/wiki/Sun_Microsystems" title="Sun Microsystems">Sun Microsystems</a></td>
+</tr>
+</table>
+<p>A <b>Java class file</b> is a <a href="https://en.wikipedia.org/wiki/Computer_file" title="Computer file">file</a> (with the <tt>.class</tt> <a href="https://en.wikipedia.org/wiki/Filename_extension" title="Filename extension">filename extension</a>) containing <a href="Java_bytecode.html" title="Java bytecode">Java bytecode</a> that can be executed on the <a href="Java_Virtual_Machine.html" class="mw-redirect" title="Java Virtual Machine">Java Virtual Machine (JVM)</a>. A Java class file is produced by a <a href="Java_compiler.html" title="Java compiler">Java compiler</a> from <a href="Java_(programming_language).html" title="Java (programming language)">Java programming language</a> <a href="https://en.wikipedia.org/wiki/Source_file" class="mw-redirect" title="Source file">source files</a> (<tt>.java</tt> files) containing Java <a href="https://en.wikipedia.org/wiki/Class_(programming)" class="mw-redirect" title="Class (programming)">classes</a>. If a source file has more than one class, each class is compiled into a separate class file.</p>
+<p>JVMs are available for many <a href="https://en.wikipedia.org/wiki/Platform_(computing)" class="mw-redirect" title="Platform (computing)">platforms</a>, and a class file compiled on one platform will execute on a JVM of another platform. This makes Java <a href="https://en.wikipedia.org/wiki/Cross-platform" title="Cross-platform">platform-independent</a>.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#History"><span class="tocnumber">1</span> <span class="toctext">History</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#File_layout_and_structure"><span class="tocnumber">2</span> <span class="toctext">File layout and structure</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Sections"><span class="tocnumber">2.1</span> <span class="toctext">Sections</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Magic_Number"><span class="tocnumber">2.2</span> <span class="toctext">Magic Number</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#General_layout"><span class="tocnumber">2.3</span> <span class="toctext">General layout</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Representation_in_a_C-like_programming_language"><span class="tocnumber">2.4</span> <span class="toctext">Representation in a C-like programming language</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#The_constant_pool"><span class="tocnumber">2.5</span> <span class="toctext">The constant pool</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#See_also"><span class="tocnumber">3</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#References"><span class="tocnumber">4</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Further_reading"><span class="tocnumber">5</span> <span class="toctext">Further reading</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_class_file&amp;action=edit&amp;section=1" title="Edit section: History">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>On 11 December 2006, the class file format was modified under <a href="https://en.wikipedia.org/wiki/Java_Specification_Request" class="mw-redirect" title="Java Specification Request">Java Specification Request</a> (JSR) 202.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[1]</a></sup></p>
+<h2><span class="mw-headline" id="File_layout_and_structure">File layout and structure</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_class_file&amp;action=edit&amp;section=2" title="Edit section: File layout and structure">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Sections">Sections</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_class_file&amp;action=edit&amp;section=3" title="Edit section: Sections">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>There are 10 basic sections to the Java Class File structure:</p>
+<ul>
+<li><b><a href="https://en.wikipedia.org/wiki/Magic_number_(programming)" title="Magic number (programming)">Magic Number</a></b>: 0xCAFEBABE</li>
+<li><b>Version of Class File Format</b>: the minor and major versions of the class file</li>
+<li><b>Constant Pool</b>: Pool of constants for the class</li>
+<li><b>Access Flags</b>: for example whether the class is abstract, static, etc.</li>
+<li><b>This Class</b>: The name of the current class</li>
+<li><b><a href="https://en.wikipedia.org/wiki/Superclass_(computer_science)" class="mw-redirect" title="Superclass (computer science)">Super Class</a></b>: The name of the super class</li>
+<li><b><a href="https://en.wikipedia.org/wiki/Interface_(object-oriented_programming)" class="mw-redirect" title="Interface (object-oriented programming)">Interfaces</a></b>: Any interfaces in the class</li>
+<li><b>Fields</b>: Any fields in the class</li>
+<li><b><a href="https://en.wikipedia.org/wiki/Method_(computing)" class="mw-redirect" title="Method (computing)">Methods</a></b>: Any methods in the class</li>
+<li><b>Attributes</b>: Any attributes of the class (for example the name of the sourcefile, etc.)</li>
+</ul>
+<h3><span class="mw-headline" id="Magic_Number">Magic Number</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_class_file&amp;action=edit&amp;section=4" title="Edit section: Magic Number">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Class files are identified by the following 4 <a href="https://en.wikipedia.org/wiki/Byte" title="Byte">byte</a> <a href="https://en.wikipedia.org/wiki/Header_(computing)" title="Header (computing)">header</a> (in <a href="https://en.wikipedia.org/wiki/Hexadecimal" title="Hexadecimal">hexadecimal</a>): <code>CA FE BA BE</code> (the first 4 entries in the table below). The history of this <a href="https://en.wikipedia.org/wiki/Magic_number_(programming)" title="Magic number (programming)">magic number</a> was explained by <a href="James_Gosling.html" title="James Gosling">James Gosling</a> referring to a restaurant in <a href="https://en.wikipedia.org/wiki/Palo_Alto,_California" title="Palo Alto, California">Palo Alto</a>:<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">[2]</a></sup></p>
+<blockquote>
+<p>"We used to go to lunch at a place called St Michael's Alley. According to local legend, in the deep dark past, the <a href="https://en.wikipedia.org/wiki/Grateful_Dead" title="Grateful Dead">Grateful Dead</a> used to perform there before they made it big. It was a pretty funky place that was definitely a Grateful Dead Kinda Place. When <a href="https://en.wikipedia.org/wiki/Jerry_Garcia" title="Jerry Garcia">Jerry</a> died, they even put up a little Buddhist-esque shrine. When we used to go there, we referred to the place as Cafe Dead. Somewhere along the line it was noticed that this was a HEX number. I was re-vamping some file format code and needed a couple of <a href="https://en.wikipedia.org/wiki/Magic_number_(programming)" title="Magic number (programming)">magic numbers</a>: one for the persistent object file, and one for classes. I used CAFEDEAD for the object file format, and in <a href="https://en.wikipedia.org/wiki/Grep" title="Grep">grepping</a> for 4 character hex words that fit after "CAFE" (it seemed to be a good theme) I hit on BABE and decided to use it. At that time, it didn't seem terribly important or destined to go anywhere but the trash-can of history. So CAFEBABE became the class file format, and CAFEDEAD was the persistent object format. But the persistent object facility went away, and along with it went the use of CAFEDEAD - it was eventually replaced by RMI.</p>
+</blockquote>
+<h3><span class="mw-headline" id="General_layout">General layout</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_class_file&amp;action=edit&amp;section=5" title="Edit section: General layout">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Because the class file contains variable-sized items and does not also contain embedded file offsets (or pointers), it is typically parsed sequentially, from the first byte toward the end. At the lowest level the file format is described in terms of a few fundamental data types:</p>
+<ul>
+<li><b>u1</b>: an unsigned <a href="https://en.wikipedia.org/wiki/Octet_(computing)" title="Octet (computing)">8-bit</a> integer</li>
+<li><b>u2</b>: an unsigned <a href="https://en.wikipedia.org/wiki/16-bit" title="16-bit">16-bit</a> integer in <a href="https://en.wikipedia.org/wiki/Endianness" title="Endianness">big-endian</a> byte order</li>
+<li><b>u4</b>: an unsigned <a href="https://en.wikipedia.org/wiki/32-bit" title="32-bit">32-bit</a> integer in big-endian byte order</li>
+<li><b>table</b>: an array of variable-length items of some type. The number of items in the table is identified by a preceding count number, but the size in bytes of the table can only be determined by examining each of its items.</li>
+</ul>
+<p>Some of these fundamental types are then re-interpreted as higher-level values (such as strings or floating-point numbers), depending on context. There is no enforcement of word alignment, and so no padding bytes are ever used. The overall layout of the class file is as shown in the following table.</p>
+<table class="wikitable">
+<tr>
+<th>byte offset</th>
+<th>size</th>
+<th>type or value</th>
+<th>description</th>
+</tr>
+<tr>
+<td>0</td>
+<td rowspan="4">4 bytes</td>
+<td>u1 =<br />
+0xCA hex</td>
+<td rowspan="4"><a href="https://en.wikipedia.org/wiki/Magic_number_(programming)" title="Magic number (programming)">magic number</a> (CAFEBABE) used to identify file as conforming to the class file format</td>
+</tr>
+<tr>
+<td>1</td>
+<td>u1 =<br />
+0xFE hex</td>
+</tr>
+<tr>
+<td>2</td>
+<td>u1 =<br />
+0xBA hex</td>
+</tr>
+<tr>
+<td>3</td>
+<td>u1 =<br />
+0xBE hex</td>
+</tr>
+<tr>
+<td>4</td>
+<td rowspan="2">2 bytes</td>
+<td rowspan="2">u2</td>
+<td rowspan="2">minor version number of the class file format being used</td>
+</tr>
+<tr>
+<td>5</td>
+</tr>
+<tr>
+<td>6</td>
+<td rowspan="2">2 bytes</td>
+<td rowspan="2">u2</td>
+<td rowspan="2">major version number of the class file format being used.<br />
+<p>Java SE 9 = 53 (0x35 hex),<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">[3]</a></sup><br />
+Java SE 8 = 52 (0x34 hex),<br />
+Java SE 7 = 51 (0x33 hex),<br />
+Java SE 6.0 = 50 (0x32 hex),<br />
+Java SE 5.0 = 49 (0x31 hex),<br />
+JDK 1.4 = 48 (0x30 hex),<br />
+JDK 1.3 = 47 (0x2F hex),<br />
+JDK 1.2 = 46 (0x2E hex),<br />
+JDK 1.1 = 45 (0x2D hex).<br />
+For details of earlier version numbers see footnote 1 at <a rel="nofollow" class="external text" href="https://docs.oracle.com/javase/specs/jvms/se6/html/ClassFile.doc.html">The JavaTM Virtual Machine Specification 2nd edition</a></p>
+</td>
+</tr>
+<tr>
+<td>7</td>
+</tr>
+<tr>
+<td>8</td>
+<td rowspan="2">2 bytes</td>
+<td rowspan="2">u2</td>
+<td rowspan="2">constant pool count, number of entries in the following constant pool table. This count is at least one greater than the actual number of entries; see following discussion.</td>
+</tr>
+<tr>
+<td>9</td>
+</tr>
+<tr>
+<td>10</td>
+<td rowspan="4"><i>cpsize</i> (variable)</td>
+<td rowspan="4">table</td>
+<td rowspan="4">constant pool table, an array of variable-sized constant pool entries, containing items such as literal numbers, strings, and references to classes or methods. Indexed starting at 1, containing (<i>constant pool count</i> - 1) number of entries in total (see note).</td>
+</tr>
+<tr>
+<td>...</td>
+</tr>
+<tr>
+<td>...</td>
+</tr>
+<tr>
+<td>...</td>
+</tr>
+<tr>
+<td>10+<i>cpsize</i></td>
+<td rowspan="2">2 bytes</td>
+<td rowspan="2">u2</td>
+<td rowspan="2">access flags, a bitmask</td>
+</tr>
+<tr>
+<td>11+<i>cpsize</i></td>
+</tr>
+<tr>
+<td>12+<i>cpsize</i></td>
+<td rowspan="2">2 bytes</td>
+<td rowspan="2">u2</td>
+<td rowspan="2">identifies <i>this</i> class, index into the constant pool to a "Class"-type entry</td>
+</tr>
+<tr>
+<td>13+<i>cpsize</i></td>
+</tr>
+<tr>
+<td>14+<i>cpsize</i></td>
+<td rowspan="2">2 bytes</td>
+<td rowspan="2">u2</td>
+<td rowspan="2">identifies <i>super</i> class, index into the constant pool to a "Class"-type entry</td>
+</tr>
+<tr>
+<td>15+<i>cpsize</i></td>
+</tr>
+<tr>
+<td>16+<i>cpsize</i></td>
+<td rowspan="2">2 bytes</td>
+<td rowspan="2">u2</td>
+<td rowspan="2">interface count, number of entries in the following interface table</td>
+</tr>
+<tr>
+<td>17+<i>cpsize</i></td>
+</tr>
+<tr>
+<td>18+<i>cpsize</i></td>
+<td rowspan="4"><i>isize</i> (variable)</td>
+<td rowspan="4">table</td>
+<td rowspan="4">interface table, an array of variable-sized interfaces</td>
+</tr>
+<tr>
+<td>...</td>
+</tr>
+<tr>
+<td>...</td>
+</tr>
+<tr>
+<td>...</td>
+</tr>
+<tr>
+<td>18+<i>cpsize</i>+<i>isize</i></td>
+<td rowspan="2">2 bytes</td>
+<td rowspan="2">u2</td>
+<td rowspan="2">field count, number of entries in the following field table</td>
+</tr>
+<tr>
+<td>19+<i>cpsize</i>+<i>isize</i></td>
+</tr>
+<tr>
+<td>20+<i>cpsize</i>+<i>isize</i></td>
+<td rowspan="4"><i>fsize</i> (variable)</td>
+<td rowspan="4">table</td>
+<td rowspan="4">field table, variable length array of fields</td>
+</tr>
+<tr>
+<td>...</td>
+</tr>
+<tr>
+<td>...</td>
+</tr>
+<tr>
+<td>...</td>
+</tr>
+<tr>
+<td>20+<i>cpsize</i>+<i>isize</i>+<i>fsize</i></td>
+<td rowspan="2">2 bytes</td>
+<td rowspan="2">u2</td>
+<td rowspan="2">method count, number of entries in the following method table</td>
+</tr>
+<tr>
+<td>21+<i>cpsize</i>+<i>isize</i>+<i>fsize</i></td>
+</tr>
+<tr>
+<td>22+<i>cpsize</i>+<i>isize</i>+<i>fsize</i></td>
+<td rowspan="4"><i>msize</i> (variable)</td>
+<td rowspan="4">table</td>
+<td rowspan="4">method table, variable length array of methods</td>
+</tr>
+<tr>
+<td>...</td>
+</tr>
+<tr>
+<td>...</td>
+</tr>
+<tr>
+<td>...</td>
+</tr>
+<tr>
+<td>22+<i>cpsize</i>+<i>isize</i>+<i>fsize</i>+<i>msize</i></td>
+<td rowspan="2">2 bytes</td>
+<td rowspan="2">u2</td>
+<td rowspan="2">attribute count, number of entries in the following attribute table</td>
+</tr>
+<tr>
+<td>23+<i>cpsize</i>+<i>isize</i>+<i>fsize</i>+<i>msize</i></td>
+</tr>
+<tr>
+<td>24+<i>cpsize</i>+<i>isize</i>+<i>fsize</i>+<i>msize</i></td>
+<td rowspan="4"><i>asize</i> (variable)</td>
+<td rowspan="4">table</td>
+<td rowspan="4">attribute table, variable length array of attributes</td>
+</tr>
+<tr>
+<td>...</td>
+</tr>
+<tr>
+<td>...</td>
+</tr>
+<tr>
+<td>...</td>
+</tr>
+</table>
+<h3><span class="mw-headline" id="Representation_in_a_C-like_programming_language">Representation in a C-like programming language</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_class_file&amp;action=edit&amp;section=6" title="Edit section: Representation in a C-like programming language">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Since <a href="https://en.wikipedia.org/wiki/C_(programming_language)" title="C (programming language)">C</a> doesn't support multiple variable length arrays within a struct, the code below won't compile and only serves as a demonstration.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="k">struct</span> <span class="n">Class_File_Format</span> <span class="p">{</span>
+   <span class="n">u4</span> <span class="n">magic_number</span><span class="p">;</span>
+
+   <span class="n">u2</span> <span class="n">minor_version</span><span class="p">;</span>   
+   <span class="n">u2</span> <span class="n">major_version</span><span class="p">;</span>
+
+   <span class="n">u2</span> <span class="n">constant_pool_count</span><span class="p">;</span>   
+  
+   <span class="n">cp_info</span> <span class="n">constant_pool</span><span class="p">[</span><span class="n">constant_pool_count</span> <span class="o">-</span> <span class="mi">1</span><span class="p">];</span>
+
+   <span class="n">u2</span> <span class="n">access_flags</span><span class="p">;</span>
+
+   <span class="n">u2</span> <span class="n">this_class</span><span class="p">;</span>
+   <span class="n">u2</span> <span class="n">super_class</span><span class="p">;</span>
+
+   <span class="n">u2</span> <span class="n">interfaces_count</span><span class="p">;</span>   
+   
+   <span class="n">u2</span> <span class="n">interfaces</span><span class="p">[</span><span class="n">interfaces_count</span><span class="p">];</span>
+
+   <span class="n">u2</span> <span class="n">fields_count</span><span class="p">;</span>   
+   <span class="n">field_info</span> <span class="n">fields</span><span class="p">[</span><span class="n">fields_count</span><span class="p">];</span>
+
+   <span class="n">u2</span> <span class="n">methods_count</span><span class="p">;</span>
+   <span class="n">method_info</span> <span class="n">methods</span><span class="p">[</span><span class="n">methods_count</span><span class="p">];</span>
+
+   <span class="n">u2</span> <span class="n">attributes_count</span><span class="p">;</span>   
+   <span class="n">attribute_info</span> <span class="n">attributes</span><span class="p">[</span><span class="n">attributes_count</span><span class="p">];</span>
+<span class="p">}</span>
+</pre></div>
+<h3><span class="mw-headline" id="The_constant_pool">The constant pool</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_class_file&amp;action=edit&amp;section=7" title="Edit section: The constant pool">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The constant pool table is where most of the literal constant values are stored. This includes values such as numbers of all sorts, strings, identifier names, references to classes and methods, and type descriptors. All indexes, or references, to specific constants in the constant pool table are given by 16-bit (type u2) numbers, where index value 1 refers to the first constant in the table (index value 0 is invalid).</p>
+<p>Due to historic choices made during the file format development, the number of constants in the constant pool table is not actually the same as the constant pool count which precedes the table. First, the table is indexed starting at 1 (rather than 0), but the count should actually be interpreted as the maximum index plus one.<sup id="cite_ref-jvms-4.4_4-0" class="reference"><a href="#cite_note-jvms-4.4-4">[4]</a></sup> Additionally, two types of constants (longs and doubles) take up two consecutive slots in the table, although the second such slot is a phantom index that is never directly used.</p>
+<p>The type of each item (constant) in the constant pool is identified by an initial byte <i>tag</i>. The number of bytes following this tag and their interpretation are then dependent upon the tag value. The valid constant types and their tag values are:</p>
+<table class="wikitable">
+<tr>
+<th>Tag byte</th>
+<th>Additional bytes</th>
+<th>Description of constant</th>
+</tr>
+<tr>
+<td>1</td>
+<td>2+<i>x</i> bytes<br />
+(variable)</td>
+<td>UTF-8 (Unicode) string: a character string prefixed by a 16-bit number (type u2) indicating the number of bytes in the encoded string which immediately follows (which may be different than the number of characters). Note that the encoding used is not actually <a href="https://en.wikipedia.org/wiki/UTF-8" title="UTF-8">UTF-8</a>, but involves a slight modification of the Unicode standard encoding form.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>4 bytes</td>
+<td>Integer: a signed 32-bit <a href="https://en.wikipedia.org/wiki/Two%27s_complement" title="Two's complement">two's complement</a> number in big-endian format</td>
+</tr>
+<tr>
+<td>4</td>
+<td>4 bytes</td>
+<td>Float: a 32-bit single-precision <a href="https://en.wikipedia.org/wiki/IEEE_754" class="mw-redirect" title="IEEE 754">IEEE 754</a> floating-point number</td>
+</tr>
+<tr>
+<td>5</td>
+<td>8 bytes</td>
+<td>Long: a signed 64-bit two's complement number in big-endian format (takes two slots in the constant pool table)</td>
+</tr>
+<tr>
+<td>6</td>
+<td>8 bytes</td>
+<td>Double: a 64-bit double-precision IEEE 754 floating-point number (takes two slots in the constant pool table)</td>
+</tr>
+<tr>
+<td>7</td>
+<td>2 bytes</td>
+<td>Class reference: an index within the constant pool to a UTF-8 string containing the fully qualified class name (in <i>internal format</i>) (big-endian)</td>
+</tr>
+<tr>
+<td>8</td>
+<td>2 bytes</td>
+<td>String reference: an index within the constant pool to a UTF-8 string (big-endian too)</td>
+</tr>
+<tr>
+<td>9</td>
+<td>4 bytes</td>
+<td>Field reference: two indexes within the constant pool, the first pointing to a Class reference, the second to a Name and Type descriptor. (big-endian)</td>
+</tr>
+<tr>
+<td>10</td>
+<td>4 bytes</td>
+<td>Method reference: two indexes within the constant pool, the first pointing to a Class reference, the second to a Name and Type descriptor. (big-endian)</td>
+</tr>
+<tr>
+<td>11</td>
+<td>4 bytes</td>
+<td>Interface method reference: two indexes within the constant pool, the first pointing to a Class reference, the second to a Name and Type descriptor. (big-endian)</td>
+</tr>
+<tr>
+<td>12</td>
+<td>4 bytes</td>
+<td>Name and type descriptor: two indexes to UTF-8 strings within the constant pool, the first representing a name (identifier) and the second a specially encoded type descriptor.</td>
+</tr>
+<tr>
+<td>15</td>
+<td>3 bytes</td>
+<td>Method handle: this structure is used to represent a method handle and consists of one byte of type descriptor, followed by an index within the constant pool.<sup id="cite_ref-jvms-4.4_4-1" class="reference"><a href="#cite_note-jvms-4.4-4">[4]</a></sup></td>
+</tr>
+<tr>
+<td>16</td>
+<td>2 bytes</td>
+<td>Method type: this structure is used to represent a method type, and consists of an index within the constant pool.<sup id="cite_ref-jvms-4.4_4-2" class="reference"><a href="#cite_note-jvms-4.4-4">[4]</a></sup></td>
+</tr>
+<tr>
+<td>18</td>
+<td>4 bytes</td>
+<td>InvokeDynamic: this is used by an <i>invokedynamic</i> instruction to specify a bootstrap method, the dynamic invocation name, the argument and return types of the call, and optionally, a sequence of additional constants called static arguments to the bootstrap method.<sup id="cite_ref-jvms-4.4_4-3" class="reference"><a href="#cite_note-jvms-4.4-4">[4]</a></sup></td>
+</tr>
+</table>
+<p>There are only two integral constant types, integer and long. Other integral types appearing in the high-level language, such as boolean, byte, and short must be represented as an integer constant.</p>
+<p>Class names in Java, when fully qualified, are traditionally dot-separated, such as "java.lang.Object". However within the low-level Class reference constants, an internal form appears which uses slashes instead, such as "java/lang/Object".</p>
+<p>The Unicode strings, despite the moniker "UTF-8 string", are not actually encoded according to the Unicode standard, although it is similar. There are two differences (see <a href="https://en.wikipedia.org/wiki/UTF-8" title="UTF-8">UTF-8</a> for a complete discussion). The first is that the codepoint U+0000 is encoded as the two-byte sequence <code>C0 80</code> (in hex) instead of the standard single-byte encoding <code>00</code>. The second difference is that supplementary characters (those outside the <a href="https://en.wikipedia.org/wiki/Basic_Multilingual_Plane" class="mw-redirect" title="Basic Multilingual Plane">BMP</a> at U+10000 and above) are encoded using a surrogate-pair construction similar to <a href="https://en.wikipedia.org/wiki/UTF-16" title="UTF-16">UTF-16</a> rather than being directly encoded using UTF-8. In this case each of the two surrogates is encoded separately in UTF-8. For example, U+1D11E is encoded as the 6-byte sequence <code>ED A0 B4 ED B4 9E</code>, rather than the correct 4-byte UTF-8 encoding of <code>F0 9D 84 9E</code>.</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_class_file&amp;action=edit&amp;section=8" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div role="navigation" aria-label="Portals" class="noprint portal plainlist tright" style="margin:0.5em 0 0.5em 1em;border:solid #aaa 1px">
+<ul style="display:table;box-sizing:border-box;padding:0.1em;max-width:175px;background:#f9f9f9;font-size:85%;line-height:110%;font-style:italic;font-weight:bold">
+<li style="display:table-row"><span style="display:table-cell;padding:0.2em;vertical-align:middle;text-align:center"><a href="https://en.wikipedia.org/wiki/File:Wave.svg" class="image"><img alt="icon" src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/15px-Wave.svg.png" width="15" height="28" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/23px-Wave.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/31px-Wave.svg.png 2x" data-file-width="226" data-file-height="407" /></a></span><span style="display:table-cell;padding:0.2em 0.2em 0.2em 0.3em;vertical-align:middle"><a href="https://en.wikipedia.org/wiki/Portal:Java" title="Portal:Java">Java portal</a></span></li>
+</ul>
+</div>
+<ul>
+<li><a href="Java_bytecode.html" title="Java bytecode">Java bytecode</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_class_file&amp;action=edit&amp;section=9" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.jcp.org/en/jsr/detail?id=202">JSR 202</a> Java Class File Specification Update</span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://radio-weblogs.com/0100490/2003/01/28.html">James Gosling private communication to Bill Bumgarner</a></span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="https://bugs.openjdk.java.net/browse/JDK-8148785">https://bugs.openjdk.java.net/browse/JDK-8148785</a></span></li>
+<li id="cite_note-jvms-4.4-4"><span class="mw-cite-backlink">^ <a href="#cite_ref-jvms-4.4_4-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-jvms-4.4_4-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-jvms-4.4_4-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-jvms-4.4_4-3"><sup><i><b>d</b></i></sup></a></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://docs.oracle.com/javase/specs/jvms/se7/html/jvms-4.html#jvms-4.4">http://docs.oracle.com/javase/specs/jvms/se7/html/jvms-4.html#jvms-4.4</a></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="Further_reading">Further reading</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_class_file&amp;action=edit&amp;section=10" title="Edit section: Further reading">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><cite class="citation book"><a href="https://en.wikipedia.org/w/index.php?title=Tim_Lindholm&amp;action=edit&amp;redlink=1" class="new" title="Tim Lindholm (page does not exist)">Tim Lindholm</a>, Frank Yellin (1999). <a rel="nofollow" class="external text" href="https://docs.oracle.com/javase/specs/jvms/se6/html/ClassFile.doc.html"><i>The Java Virtual Machine Specification</i></a> (Second ed.). Prentice Hall. <a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="https://en.wikipedia.org/wiki/Special:BookSources/0-201-43294-3" title="Special:BookSources/0-201-43294-3">0-201-43294-3</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2008-10-13</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+class+file&amp;rft.au=Tim+Lindholm%2C+Frank+Yellin&amp;rft.btitle=The+Java+Virtual+Machine+Specification&amp;rft.date=1999&amp;rft.edition=Second&amp;rft.genre=book&amp;rft_id=https%3A%2F%2Fdocs.oracle.com%2Fjavase%2Fspecs%2Fjvms%2Fse6%2Fhtml%2FClassFile.doc.html&amp;rft.isbn=0-201-43294-3&amp;rft.pub=Prentice+Hall&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span> The official defining document of the <a href="Java_Virtual_Machine.html" class="mw-redirect" title="Java Virtual Machine">Java Virtual Machine</a>, which includes the class file format. Both the first and second editions of the book are freely available <a rel="nofollow" class="external text" href="https://docs.oracle.com/javase/specs/">online for viewing and/or download</a>.</li>
+</ul>
+<div role="navigation" class="navbox" aria-labelledby="Java" style="padding:3px">
+<table class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit">
+<tr>
+<th scope="col" class="navbox-title" colspan="3">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="https://en.wikipedia.org/wiki/Template:Java_(software_platform)" title="Template:Java (software platform)"><abbr title="View this template" style=";;background:none transparent;border:none;">v</abbr></a></li>
+<li class="nv-talk"><a href="https://en.wikipedia.org/wiki/Template_talk:Java_(software_platform)" title="Template talk:Java (software platform)"><abbr title="Discuss this template" style=";;background:none transparent;border:none;">t</abbr></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Java_(software_platform)&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;">e</abbr></a></li>
+</ul>
+</div>
+<div id="Java" style="font-size:114%"><a href="Java_(software_platform).html" title="Java (software platform)">Java</a></div>
+</th>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Java platforms</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Java_(programming_language).html" title="Java (programming language)">Java language</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Java_virtual_machine" title="Java virtual machine">JVM</a></li>
+<li><a href="Java_Platform%2c_Micro_Edition.html" title="Java Platform, Micro Edition">Micro Edition</a></li>
+<li><a href="Java_Platform%2c_Standard_Edition.html" title="Java Platform, Standard Edition">Standard Edition</a></li>
+<li><a href="Java_Platform%2c_Enterprise_Edition.html" title="Java Platform, Enterprise Edition">Enterprise Edition</a></li>
+<li><a href="Java_Card.html" title="Java Card">Java Card</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Android_software_development#SDK" title="Android software development">Android SDK</a></li>
+</ul>
+</div>
+</td>
+<td class="navbox-image" rowspan="13" style="width:0%;padding:0px 0px 0px 2px">
+<div><a href="https://en.wikipedia.org/wiki/File:Wave.svg" class="image"><img alt="Wave.svg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/75px-Wave.svg.png" width="75" height="135" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/113px-Wave.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/150px-Wave.svg.png 2x" data-file-width="226" data-file-height="407" /></a></div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Oracle technologies</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Squawk_virtual_machine.html" title="Squawk virtual machine">Squawk</a></li>
+<li><a href="Java_Development_Kit.html" title="Java Development Kit">Java Development Kit</a></li>
+<li><a href="OpenJDK.html" title="OpenJDK">OpenJDK</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Java_virtual_machine" title="Java virtual machine">Java virtual machine</a></li>
+<li><a href="JavaFX.html" title="JavaFX">JavaFX</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Maxine_Virtual_Machine" title="Maxine Virtual Machine">Maxine VM</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Platform technologies</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Java_applet.html" title="Java applet">Applets</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Java_servlet" title="Java servlet">Servlets</a></li>
+<li><a href="MIDlet.html" title="MIDlet">MIDlets</a></li>
+<li><a href="JavaServer_Pages.html" title="JavaServer Pages">JSP</a></li>
+<li><a href="Java_Web_Start.html" title="Java Web Start">Web Start (JNLP)</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Major third-party technologies</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Blackdown_Java.html" title="Blackdown Java">Blackdown</a></li>
+<li><a href="Eclipse_(software).html" title="Eclipse (software)">Eclipse</a></li>
+<li><a href="GNU_Classpath.html" title="GNU Classpath">GNU Classpath</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Google_Web_Toolkit" title="Google Web Toolkit">GWT</a></li>
+<li><a href="Apache_Harmony.html" title="Apache Harmony">Harmony</a></li>
+<li><a href="Hibernate_(Java).html" class="mw-redirect" title="Hibernate (Java)">Hibernate</a></li>
+<li><a href="IcedTea.html" title="IcedTea">IcedTea</a></li>
+<li><a href="Jazelle.html" title="Jazelle">Jazelle</a></li>
+<li><a href="Spring_Framework.html" title="Spring Framework">Spring</a></li>
+<li><a href="Apache_Struts.html" class="mw-redirect" title="Apache Struts">Struts</a></li>
+<li><a href="TopLink.html" title="TopLink">TopLink</a></li>
+<li><a href="https://en.wikipedia.org/wiki/WildFly" title="WildFly">WildFly</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">History</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Java_version_history.html" title="Java version history">Java version history</a></li>
+<li><a href="Java_Community_Process.html" title="Java Community Process">Java Community Process</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sun_Microsystems" title="Sun Microsystems">Sun Microsystems</a></li>
+<li><a href="Free_Java_implementations.html" title="Free Java implementations">Free Java implementations</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="List_of_JVM_languages.html" title="List of JVM languages">Major programming languages</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="BeanShell.html" title="BeanShell">BeanShell</a></li>
+<li><a href="Clojure.html" title="Clojure">Clojure</a></li>
+<li><a href="Groovy_(programming_language).html" title="Groovy (programming language)">Groovy</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Oxygene_(programming_language)" title="Oxygene (programming language)">Oxygene</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Tcl/Java" title="Tcl/Java">Java Tcl</a></li>
+<li><a href="JRuby.html" title="JRuby">JRuby</a></li>
+<li><a href="Jython.html" title="Jython">Jython</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Kotlin_(programming_language)" title="Kotlin (programming language)">Kotlin</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Processing_(programming_language)" title="Processing (programming language)">Processing</a></li>
+<li><a href="Rhino_(JavaScript_engine).html" title="Rhino (JavaScript engine)">Rhino</a></li>
+<li><a href="Scala_(programming_language).html" title="Scala (programming language)">Scala</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Java conferences</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="JavaOne.html" title="JavaOne">JavaOne</a></li>
+<li><a href="Devoxx.html" title="Devoxx">Devoxx</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1232
+Cached time: 20170113111514
+Cache expiry: 2592000
+Dynamic content: false
+CPU time usage: 0.116 seconds
+Real time usage: 0.154 seconds
+Preprocessor visited node count: 563/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 17992/2097152 bytes
+Template argument size: 126/2097152 bytes
+Highest expansion depth: 7/40
+Expensive parser function count: 0/500
+Lua time usage: 0.037/10.000 seconds
+Lua memory usage: 1.89 MB/50 MB
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  106.362      1 - -total
+ 27.62%   29.377      1 - Template:Cite_book
+ 25.55%   27.178      1 - Template:Infobox_file_format
+ 17.19%   18.283      1 - Template:About
+ 16.85%   17.921      1 - Template:Infobox
+  8.97%    9.540      1 - Template:Java_(Sun)
+  7.55%    8.026      1 - Template:Reflist
+  6.63%    7.052      1 - Template:Portal
+  6.25%    6.643      1 - Template:Navbox
+  1.87%    1.986      1 - Template:Main_other
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:731735-0!*!0!!en!4!* and timestamp 20170113111527 and revision id 759832214
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Java_class_file&amp;oldid=759832214">https://en.wikipedia.org/w/index.php?title=Java_class_file&amp;oldid=759832214</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Help_Category.html" title="Help:Category">Categories</a>: <ul><li><a href="Category_Java_platform.html" title="Category:Java platform">Java platform</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Computer_file_formats" title="Category:Computer file formats">Computer file formats</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="Special_MyTalk.html" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="Special_MyContributions.html" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&amp;returnto=Java+class+file" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Java+class+file" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="https://en.wikipedia.org/wiki/Java_class_file"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+															<li  id="ca-talk"><span><a href="https://en.wikipedia.org/wiki/Talk:Java_class_file"  title="Discussion about the content page [t]" accesskey="t" rel="discussion">Talk</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="https://en.wikipedia.org/wiki/Java_class_file" >Read</a></span></li>
+															<li id="ca-edit"><span><a href="https://en.wikipedia.org/w/index.php?title=Java_class_file&amp;action=edit"  title="Edit this page [e]" accesskey="e">Edit</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="https://en.wikipedia.org/w/index.php?title=Java_class_file&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="https://en.wikipedia.org/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="Main_Page.html"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="Portal_Contents.html" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="Portal_Featured_content.html" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="Portal_Current_events.html" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="https://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="../../shop.wikimedia.org/index.html" title="Visit the Wikipedia store">Wikipedia store</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Interaction</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-help"><a href="Help_Contents.html" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="Wikipedia_About.html" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="Wikipedia_Community_portal.html" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="Wikipedia_Contact_us.html" title="How to contact Wikipedia">Contact page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="https://en.wikipedia.org/wiki/Special:WhatLinksHere/Java_class_file" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://en.wikipedia.org/wiki/Special:RecentChangesLinked/Java_class_file" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="Wikipedia_File_Upload_Wizard.html" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="https://en.wikipedia.org/w/index.php?title=Java_class_file&amp;oldid=759832214" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://en.wikipedia.org/w/index.php?title=Java_class_file&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q2193155" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="https://en.wikipedia.org/w/index.php?title=Special:CiteThisPage&amp;page=Java_class_file&amp;id=759832214" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Print/export</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Java+class+file">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Java+class+file&amp;returnto=Java+class+file&amp;oldid=759832214&amp;writer=rdf2latex">Download as PDF</a></li><li id="t-print"><a href="https://en.wikipedia.org/w/index.php?title=Java_class_file&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-wikibase-otherprojects' aria-labelledby='p-wikibase-otherprojects-label'>
+			<h3 id='p-wikibase-otherprojects-label'>In other projects</h3>
+
+			<div class="body">
+									<ul>
+						<li class="wb-otherproject-link wb-otherproject-wikibooks"><a href="https://en.wikibooks.org/wiki/Java_Programming/Classes,_Objects_and_Types" hreflang="en">Wikibooks</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Languages</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Class_(format_de_fichier)" title="Class (format de fichier) – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ml"><a href="https://ml.wikipedia.org/wiki/ക്ലാസ്_ഫയൽ" title="ക്ലാസ് ഫയൽ – Malayalam" lang="ml" hreflang="ml" class="interlanguage-link-target">മലയാളം</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/Classfile" title="Classfile – Dutch" lang="nl" hreflang="nl" class="interlanguage-link-target">Nederlands</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/Javaクラスファイル" title="Javaクラスファイル – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q2193155#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 13 January 2017, at 11:15.</li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="Wikipedia_Text_of_Creative_Commons_Attribution-ShareAlike_3.html">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="../../creativecommons.org/licenses/by-sa/3.0/index.html" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="../../wikimediafoundation.org/wiki/Terms_of_Use.html">Terms of Use</a> and <a href="../../wikimediafoundation.org/wiki/Privacy_policy.html">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="../../www.wikimediafoundation.org/index.html">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../../wikimediafoundation.org/wiki/Privacy_policy.html" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="Wikipedia_About.html" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="Wikipedia_General_disclaimer.html" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="Wikipedia_Contact_us.html">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a href="../../www.mediawiki.org/wiki/Special_MyLanguage/How_to_contribute.html">Developers</a></li>
+											<li id="footer-places-cookiestatement"><a href="../../wikimediafoundation.org/wiki/Cookie_statement.html">Cookie statement</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/w/index.php?title=Java_class_file&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="../../www.wikimediafoundation.org/index.html"><img src="https://en.wikipedia.org/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="../../www.mediawiki.org/index.html"><img src="https://en.wikipedia.org/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":160,"wgHostname":"mw1244"});});</script>
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Class_(file_format) by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:52:46 GMT -->
+</html>

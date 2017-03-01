@@ -1,0 +1,4 @@
+    
+        Is it possible to send an email from my Java application using a Gmail account?  I have it configured to send using my company mail server, but that's not going to cut it when I distribute the application.  Answers using Hotmail or Yahoo mail are also acceptable.
+
+                

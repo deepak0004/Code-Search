@@ -1,0 +1,27 @@
+    
+        The problem: Consder the following floats[]:
+
+d[i] =     1.7 -0.3  2.1  0.5
+
+
+What I want is an array of int[] that represents the order of the original array with indices.
+
+s[i] =       1    3    0    2
+d[s[i]] = -0.3  0.5  1.7  2.1
+
+
+Of course it could be done with a custom comparator, a sorted set of custom objects, or by simply sorting the array and then searching for the indices in the original array (shudder).
+
+What I am in fact looking for is the equivalent for the second return argument of <a href="http://www.mathworks.com/access/helpdesk/help/techdoc/index.html?/access/helpdesk/help/techdoc/ref/sort.html" rel="nofollow">Matlab's sort function.
+
+Is there an easy way to do that (&lt;5 LOC)? May there be a solution that does not need to allocate a new object for each element?
+
+<hr />
+
+Update:
+
+Thanks for your responses. Unfortunately, none of what has been proposed so far resembles the simple and efficient solution I was hoping for. I therefore openened a thread in the JDK feedback forum, proposing the addition of a new class-library function to address the issue. Lets see what Sun/Oracle thinks about the issue.
+
+<a href="http://forums.java.net/jive/thread.jspa?threadID=62657&amp;tstart=0" rel="nofollow">http://forums.java.net/jive/thread.jspa?threadID=62657&amp;tstart=0
+
+                

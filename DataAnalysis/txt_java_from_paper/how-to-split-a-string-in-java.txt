@@ -1,0 +1,14 @@
+    
+        I have a string something like |serialNo|checkDelta?|checkFuture?|checkThis?|.
+
+Now i am using the following code to split the string.
+
+String[] splitString = str.split("|");
+
+but when i use this i get array of string that contains each and every alphabet, whereas i need string which contains letter like serialNo, checkDelta?, checkFuture?, checkthis?.
+
+How to get these? Am i missing some thing?
+
+Thanks
+
+                

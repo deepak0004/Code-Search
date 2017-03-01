@@ -1,0 +1,37 @@
+    
+        I can't understand where the final keyword is REALLY handy when it is used on method parameters.  
+
+If we exclude the usage of anonymous classes, readability and intent declaration then it seems almost worthless to me. 
+
+Enforcing that some data remains constant is not as strong as it seems. 
+
+A) If the parameter is a primitive then it will have no effect since the parameter is passed to the method as a value and changing it will have no effect outside the scope. 
+
+B) If we are passing a parameter by reference, then the reference itself is a local variable and if the reference is changed from within the method, that would not have any effect from outside of the method scope. 
+
+Consider the simple test example below.
+This test passes although the method changed the value of the reference given to it, it has no effect.
+
+public void testNullify(){
+
+	Collection&lt;Integer&gt; c  = new ArrayList&lt;Integer&gt;();		
+	nullify(c);
+	assertNotNull(c);		
+	final Collection&lt;Integer&gt; c1 = c;
+	assertTrue(c1.equals(c));
+	change(c);
+	assertTrue(c1.equals(c));
+}
+
+
+private void change(Collection&lt;Integer&gt; c) {
+	c = new ArrayList&lt;Integer&gt;();		
+}
+
+
+public void nullify(Collection&lt;?&gt; t){
+	t = null;		
+}
+
+
+                

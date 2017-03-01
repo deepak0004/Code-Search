@@ -1,0 +1,55 @@
+    
+        I'm taking a C# class right now and I'm trying to find out the best way of doing things. I come from a Java background and so I'm only familiar with Java best-practices; I'm a C# novice!
+
+In Java if I have a private property, I do this;
+
+private String name;
+
+public void setName(String name) {
+   this.name = name;
+}
+
+public String getName() {
+   return this.name;
+}
+
+
+In C#, I see that there are many ways of doing this.
+
+I can do it like Java:
+
+private string name;
+
+public void setName(string name) {
+   this.name = name;
+}
+
+public string getName() {
+   return this.name;
+}
+
+
+Or I can do it this way:
+
+private string name;
+
+public string Name {
+   get { return name; }
+   set { name = value; }
+}
+
+
+Or:
+
+public string Name { get; set; }
+
+
+Which one should I use, and what are the caveats or subtleties involved with each approach? When creating classes, I am following general best-practices that I know from Java (especially reading Effective Java). So for example, I am favoring immutability (providing setters only when necessary). I'm just curious to see how these practices fit in with the various ways of providing setters and getters in C#; essentially, how would I translate best-practices from the Java world into C#?
+
+EDIT
+
+I was posting this as a comment to Jon Skeet's answer but then it got long:
+
+What about a non-trivial property (i.e., with significant processing and validation perhaps)? Could I still expose it via a public property but with the logic encapsulated in get and set? Why would/should I do this over having dedicated setter and getter methods (with associated processing and validation logic).
+
+                

@@ -1,0 +1,52 @@
+    
+        I have 2 swing classes which extends JFrame. Both have show() method in there constructor. From ClassOne i called ClassTwo like new ClassTwo() on button click event. But if i press the button again new window for ClassTwo is opened. So how can i stop opening of ClassTwo window if one ClassTwo window is opened ?
+
+Edit
+
+now this problem is solved but now when i first open ClassTwo window it shows one window. Then after closing it when i again open ClassTwo window it opens two window and this count keep on increamenting. Why this is happening?
+
+EDIT 2
+
+I found that its not swing problem but its problem from MultiUsreChat class of Samck API. So anyone who have worked on it help me.
+
+the code in ClassOne is:
+
+if(!winList.contains(room_jid)){
+    new ClassTwo(room_jid,....);
+    winList.add(room_jid);
+}
+
+
+and in ClassTwo is:
+
+public ClassTwo(....){
+......
+    this.muc = new MultiUserChat(connection, room_jid);
+    if(!muc.isJoined())
+        muc.join(this.user_id);      //---- This line opens previously closed window.
+.....
+
+    if(!isVisible())
+       show();
+
+}
+
+
+Edit 3
+
+constructor of classone
+
+public ClassOne(){
+  JButton btn = new JButton("Open");
+  btn.addActionListener(new ActionListener(){
+     public void actionPerformed(ActionEvent e){
+       if(!winList.contains(room_jid)){
+           new ClassTwo(room_jid,....);
+            winList.add(room_jid);
+       }
+     }
+  });
+}
+
+
+                

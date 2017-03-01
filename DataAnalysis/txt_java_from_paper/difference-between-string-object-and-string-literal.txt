@@ -1,0 +1,7 @@
+    
+        what is difference between 
+String str = new String("abc");
+and 
+String str = "abc";
+
+                

@@ -1,0 +1,4 @@
+    
+        What is the best way to iterate through a HashMap?
+
+                

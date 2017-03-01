@@ -1,0 +1,24 @@
+    
+        I got an integer: 1695609641
+
+when I use method: 
+
+String hex = Integer.toHexString(1695609641);
+system.out.println(hex); 
+
+
+gives:
+
+6510f329
+
+
+but I want a byte array:
+
+byte[] bytearray = new byte[] { (byte) 0x65, (byte)0x10, (byte)0xf3, (byte)0x29};
+
+
+how can i make this?? :D
+
+thnx!
+
+                

@@ -1,0 +1,21 @@
+    
+        Is it possible for a JPA entity class to contain two embedded (@Embedded) fields? An example would be:
+
+@Entity
+public class Person {
+    @Embedded
+    public Address home;
+
+    @Embedded
+    public Address work;
+}
+
+public class Address {
+    public String street;
+    ...
+}
+
+
+In this case a Person can contain two Address instances - home and work. I'm using JPA with Hibernate's implementation. When I generate the schema using Hibernate Tools, it only embeds one Address. What I'd like is two embedded Address instances, each with its column names distinguished or pre-pended with some prefix (such as home and work). I know of @AttributeOverrides, but this requires that each attribute be individually overridden. This can get cumbersome if the embedded object (Address) gets big as each column needs to be individually overridden.
+
+                

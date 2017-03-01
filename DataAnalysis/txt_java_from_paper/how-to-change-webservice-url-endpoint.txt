@@ -1,0 +1,11 @@
+    
+        I generated a web-service client using JBoss utils (JAX-WS compatible)
+using Eclipse 'web service client from a wsdl'.
+
+So, the only thing I provided was a url to a web-service WSDL.
+
+Now, the web service provider tells me to change the "url of client endpoint application access" of the web-service.
+
+What is it and how to change it?
+
+                

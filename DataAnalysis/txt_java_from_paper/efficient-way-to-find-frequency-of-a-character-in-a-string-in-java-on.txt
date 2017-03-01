@@ -1,0 +1,16 @@
+    
+        In a recent interview I was asked to write the below program.
+Find out the character whose frequency is minimum in the given String ?
+So I tried by iterating through the string by using charAt and storing the character as key in a HashMap and the number of occurences as its value.
+Now Again I have to iterate on the Map to find the lowest element.
+
+Is there a more efficient way to do it as obviously the above one is too intensive i guess.
+
+Update and Another Solution
+
+After some thought process  and answers I think the best time that this can be is O(n).
+In the first iteration we will have to iterate through the String character by character and then store their frequency in an Array at the specific position(character is an int) and same time have two temporary variables which maintain the least count and the corresponding character.So when I go to the next character and store its frequency in arr[char] = arr[char]+1;At the same time I will check if the temp varible has a value greater than this value,if yes then the temp varible will be this value and also the char will be this one.In this way i suppose we dont need a second iteration to find the smallest and also no sorting is required I guess 
+
+.... Wat say  ? Or any more solutions
+
+                

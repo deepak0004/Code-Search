@@ -1,0 +1,9 @@
+    
+        Is there a standard idiom for comparing version numbers?  I can't just use a straight String compareTo because I don't know yet what the maximum number of point releases there will be.  I need to compare the versions and have the following hold true:
+
+1.0 &lt; 1.1
+1.0.1 &lt; 1.1
+1.9 &lt; 1.10
+
+
+                

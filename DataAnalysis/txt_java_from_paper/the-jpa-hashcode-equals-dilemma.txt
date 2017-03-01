@@ -1,0 +1,58 @@
+    
+        There have been <a href="http://stackoverflow.com/questions/4762573/should-embeddable-jpa-class-implement-equals-and-hashcode">some <a href="http://stackoverflow.com/questions/3147166/how-to-implement-equals-and-hashcode-methods-in-baseentity-of-jpa">discussions here about JPA entities and which hashCode() / equals() implementation should be used for JPA entity classes.
+Most of them if not all depend on Hibernate, but I'd like to discuss them JPA-implementation neutral (I am using EclipseLink btw)
+
+All possible implementations are having their own advantages and disadvantages regarding:
+
+
+hashCode()/equals() contract conformity (immutability) for List/Set operations
+If identical objects (e.g. from different sessions, dynamic proxies from lazy loaded data structures) can be detected
+If entities behave correctly in detached (or non-persisted) state 
+
+
+
+As far I can see, there are three options: 
+
+
+Do not override them and rely on Object.equals() and Object.hashCode()
+
+hashCode()/equals() works
+cannot identify identical objects, problems with dynamic proxies
+no problems with detached entities
+
+Override them, based on the primary key
+
+hashCode()/equals() broken
+correct identity (for all managed entities)
+problems with detached entities
+
+Override them, based on the Business-Id (non-primary key fields - what about foreign keys?)
+
+hashCode()/equals() broken
+correct identity (for all managed entities)
+No problems with detached entities
+
+
+
+My questions are:
+
+
+Did I miss an option and/or pro/contra point?
+What option did you choose and why?
+
+
+
+UPDATE:
+
+hashCode()/equals() broken means that hashCode() may return a different value from one invocation to another which is (when correctly implemented) not broken in the sense of the Object API documentation
+but causes problems when trying to retrieve a changed entity from a Map,  Set or other hash-based Collections.
+
+With the consequence that JPA implementations (at least EclipseLink) will not work correctly in some cases.
+
+UPDATE 2:
+
+Thank you for all answers, most of them with remarkable quality.
+Unfortuntely, I am still unsure which approach will be the best for real life application or at least or how determine the best approach for my application.
+Because of this, I'll keep the question open and hope for some more discussions and/or opinions.
+
+                

@@ -1,0 +1,17 @@
+    
+        I need to get UTF-8 working in my Java webapp (servlets + JSP, no framework used) to support дце etc. for regular Finnish text and Cyrillic alphabets like ??? for special cases.
+
+My setup is the following:
+
+
+Development encironment: Windows XP
+Production encironment: Debian
+
+
+Database used: MySQL 5.x
+
+Users mainly use Firefox2 but also Opera 9.x, FF3, IE7 and Google Chrome are used to access the site.
+
+How to achieve this?
+
+                

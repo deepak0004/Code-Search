@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from en.wikipedia.org/wiki/JUnit by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>JUnit - Wikipedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"JUnit","wgTitle":"JUnit","wgCurRevisionId":760467260,"wgRevisionId":760467260,"wgArticleId":16226,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles with example Java code","Cross-platform software","Extreme programming","Free software programmed in Java (programming language)","Java development tools","Java platform","Unit testing frameworks","Software using the Eclipse license"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"JUnit","wgRelevantArticleId":16226,"wgRequestId":"WH3zOwpAMFMAAFF3TVYAAAGN","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgFlaggedRevsParams":{"tags":{}},"wgStableRevisionId":null,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"en","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgWikibaseItemId":"Q847675","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.math.styles":"ready","ext.cite.styles":"ready","ext.pygments":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@1dqfd7l",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["ext.cite.a11y","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.legacy.wikibits","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.watchlist-notice","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.gadget.featured-articles-links","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.interface","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="https://en.wikipedia.org/w/load.php?debug=false&amp;lang=en&amp;modules=ext.cite.styles%7Cext.math.scripts%2Cstyles%7Cext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="../w/load2c8d.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../w/load18b6.css?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.29.0-wmf.7"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="https://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/JUnit"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=JUnit&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=JUnit&amp;action=edit"/>
+<link rel="apple-touch-icon" href="https://en.wikipedia.org/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="../static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../w/api251f.php?action=rsd"/>
+<link rel="copyright" href="../../creativecommons.org/licenses/by-sa/3.0/index.html"/>
+<link rel="canonical" href="JUnit.html"/>
+<link rel="dns-prefetch" href="../../login.wikimedia.org/index.html"/>
+<link rel="dns-prefetch" href="../../meta.wikimedia.org/index.html" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-JUnit rootpage-JUnit skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">JUnit</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><script>function mfTempOpenSection(id){var block=document.getElementById("mf-section-"+id);block.className+=" open-block";block.previousSibling.className+=" open-block";}</script><div role="note" class="hatnote">Not to be confused with <a href="https://en.wikipedia.org/wiki/G-Unit" title="G-Unit">G-Unit</a>.</div>
+<div role="note" class="hatnote">"Junit" redirects here. For the Egyptian goddess, see <a href="https://en.wikipedia.org/wiki/Iunit" title="Iunit">Iunit</a>.</div>
+<table class="infobox vevent" style="width:22em">
+<caption class="summary">JUnit</caption>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_developer" title="Software developer">Developer(s)</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Kent_Beck" title="Kent Beck">Kent Beck</a>, <a href="Erich_Gamma.html" title="Erich Gamma">Erich Gamma</a>, David Saff, Mike Clark (University of Calgary)</td>
+</tr>
+<tr>
+<td colspan="2" style="text-align:center"></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_release_life_cycle" title="Software release life cycle">Stable release</a></th>
+<td>
+<div style="margin:0px;">4.12<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[1]</a></sup> / December&#160;4,&#160;2014<span style="display:none">&#160;(<span class="bday dtstart published updated">2014-12-04</span>)</span></div>
+</td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_release_life_cycle" title="Software release life cycle">Preview release</a></th>
+<td>
+<div style="margin:0px;">5 Milestone 3 / November&#160;30,&#160;2016<span style="display:none">&#160;(<span class="bday dtstart published updated">2016-11-30</span>)</span></div>
+</td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Repository_(version_control)" title="Repository (version control)">Repository</a></th>
+<td><span class="url"><a rel="nofollow" class="external text" href="https://github.com/junit-team/junit4">github<wbr />.com<wbr />/junit-team<wbr />/junit4</a></span></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;">Written in</th>
+<td><a href="https://en.wikipedia.org/wiki/Java_programming_language" class="mw-redirect" title="Java programming language">Java</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Operating_system" title="Operating system">Operating system</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Cross-platform" title="Cross-platform">Cross-platform</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_categories#Broad_categories" title="Software categories">Type</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Unit_testing" title="Unit testing">Unit testing</a> tool</td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_license" title="Software license">License</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Eclipse_Public_License" title="Eclipse Public License">Eclipse Public License</a><sup id="cite_ref-2" class="reference"><a href="#cite_note-2">[2]</a></sup> (<a href="https://en.wikipedia.org/wiki/Software_relicensing" title="Software relicensing">relicensed</a> from CPL before)</td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;">Website</th>
+<td><span class="url"><a rel="nofollow" class="external text" href="http://junit.org/">junit<wbr />.org</a></span></td>
+</tr>
+</table>
+<p><b>JUnit</b> is a <a href="https://en.wikipedia.org/wiki/Unit_testing" title="Unit testing">unit testing</a> <a href="https://en.wikipedia.org/wiki/Software_framework" title="Software framework">framework</a> for the <a href="Java_(programming_language).html" title="Java (programming language)">Java programming language</a>. JUnit has been important in the development of <a href="https://en.wikipedia.org/wiki/Test-driven_development" title="Test-driven development">test-driven development</a>, and is one of a family of <a href="https://en.wikipedia.org/wiki/Unit_testing" title="Unit testing">unit testing</a> frameworks which is collectively known as <a href="https://en.wikipedia.org/wiki/XUnit" title="XUnit">xUnit</a> that originated with <a href="https://en.wikipedia.org/wiki/SUnit" title="SUnit">SUnit</a>.</p>
+<p>JUnit is linked as a <a href="JAR_(file_format).html" title="JAR (file format)">JAR</a> at compile-time; the framework resides under package <code>junit.framework</code> for JUnit 3.8 and earlier, and under package <code>org.junit</code> for JUnit 4 and later.</p>
+<p>A research survey performed in 2013 across 10,000 Java projects hosted on GitHub found that JUnit, (in a tie with <a href="SLF4J.html" title="SLF4J">slf4j-api</a>), was the most commonly included external library. Each library was used by 30.7% of projects. <sup id="cite_ref-3" class="reference"><a href="#cite_note-3">[3]</a></sup></p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Example_of_JUnit_test_fixture"><span class="tocnumber">1</span> <span class="toctext">Example of JUnit test fixture</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Ports"><span class="tocnumber">2</span> <span class="toctext">Ports</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#See_also"><span class="tocnumber">3</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#References"><span class="tocnumber">4</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#External_links"><span class="tocnumber">5</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Example_of_JUnit_test_fixture">Example of JUnit test fixture</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=JUnit&amp;action=edit&amp;section=1" title="Edit section: Example of JUnit test fixture">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>A JUnit <a href="https://en.wikipedia.org/wiki/Test_fixture" title="Test fixture">test fixture</a> is a Java object. With older versions of JUnit, fixtures had to inherit from <code>junit.framework.TestCase</code>, but the new tests using JUnit 4 should not do this.<sup id="cite_ref-JUnitCookbook_4-0" class="reference"><a href="#cite_note-JUnitCookbook-4">[4]</a></sup> Test methods must be annotated by the <code>@Test</code> <a href="Java_annotation.html" title="Java annotation">annotation</a>. If the situation requires it,<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">[5]</a></sup> it is also possible to define a method to execute before (or after) each (or all) of the test methods with the <code>@Before</code> (or <code>@After</code>) and <code>@BeforeClass</code> (or <code>@AfterClass</code>) annotations.<sup id="cite_ref-JUnitCookbook_4-1" class="reference"><a href="#cite_note-JUnitCookbook-4">[4]</a></sup></p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kn">import</span> <span class="nn">org.junit.*</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">FoobarTest</span> <span class="o">{</span>
+    <span class="nd">@BeforeClass</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">setUpClass</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
+        <span class="c1">// Code executed before the first test method</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Before</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setUp</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
+        <span class="c1">// Code executed before each test</span>
+    <span class="o">}</span>
+ 
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testOneThing</span><span class="o">()</span> <span class="o">{</span>
+        <span class="c1">// Code that tests one thing</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testAnotherThing</span><span class="o">()</span> <span class="o">{</span>
+        <span class="c1">// Code that tests another thing</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testSomethingElse</span><span class="o">()</span> <span class="o">{</span>
+        <span class="c1">// Code that tests something else</span>
+    <span class="o">}</span>
+
+    <span class="nd">@After</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">tearDown</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
+        <span class="c1">// Code executed after each test </span>
+    <span class="o">}</span>
+ 
+    <span class="nd">@AfterClass</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">tearDownClass</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
+        <span class="c1">// Code executed after the last test method </span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+<h2><span class="mw-headline" id="Ports">Ports</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=JUnit&amp;action=edit&amp;section=2" title="Edit section: Ports">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>JUnit alternatives have been <a href="https://en.wikipedia.org/wiki/List_of_unit_testing_frameworks" title="List of unit testing frameworks">written in other languages</a> including:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Actionscript" class="mw-redirect" title="Actionscript">Actionscript</a> (<a rel="nofollow" class="external text" href="http://www.flexunit.org/">FlexUnit</a>)</li>
+<li><a href="https://en.wikipedia.org/wiki/Ada_(programming_language)" title="Ada (programming language)">Ada</a> (<a rel="nofollow" class="external text" href="http://libre.adacore.com/libre/tools/aunit/">AUnit</a>)</li>
+<li><a href="https://en.wikipedia.org/wiki/C_(programming_language)" title="C (programming language)">C</a> (<a rel="nofollow" class="external text" href="http://cunit.sourceforge.net/">CUnit</a>)</li>
+<li><a href="https://en.wikipedia.org/wiki/C_Sharp_(programming_language)" title="C Sharp (programming language)">C#</a> (<a href="https://en.wikipedia.org/wiki/NUnit" title="NUnit">NUnit</a>)</li>
+<li><a href="https://en.wikipedia.org/wiki/C++" title="C++">C++</a> (<a href="https://en.wikipedia.org/wiki/CPPUnit" class="mw-redirect" title="CPPUnit">CPPUnit</a>, <a rel="nofollow" class="external text" href="http://cxxtest.com/">CxxTest</a>)</li>
+<li><a href="https://en.wikipedia.org/wiki/Coldfusion" class="mw-redirect" title="Coldfusion">Coldfusion</a> (<a href="https://en.wikipedia.org/w/index.php?title=MXUnit&amp;action=edit&amp;redlink=1" class="new" title="MXUnit (page does not exist)">MXUnit</a>)</li>
+<li><a href="https://en.wikipedia.org/wiki/Erlang_(programming_language)" title="Erlang (programming language)">Erlang</a> (<a rel="nofollow" class="external text" href="http://www.erlang.org/doc/apps/eunit/chapter.html">EUnit</a>)</li>
+<li><a href="https://en.wikipedia.org/wiki/Eiffel_(programming_language)" title="Eiffel (programming language)">Eiffel</a> (<a rel="nofollow" class="external text" href="https://docs.eiffel.com/book/eiffelstudio/using-autotest">Auto-Test</a>) - JUnit inspired getest (from Gobosoft), which led to Auto-Test in Eiffel Studio.</li>
+<li><a href="https://en.wikipedia.org/wiki/Fortran" title="Fortran">Fortran</a> (<a href="https://en.wikipedia.org/wiki/FUnit" title="FUnit">fUnit</a>, <a href="https://en.wikipedia.org/wiki/PFUnit" title="PFUnit">pFUnit</a>)</li>
+<li><a href="https://en.wikipedia.org/wiki/CodeGear_Delphi" class="mw-redirect" title="CodeGear Delphi">Delphi</a> (<a href="https://en.wikipedia.org/wiki/DUnit" title="DUnit">DUnit</a>)</li>
+<li><a href="https://en.wikipedia.org/wiki/Free_Pascal" title="Free Pascal">Free Pascal</a> (<a rel="nofollow" class="external text" href="http://camelos.sourceforge.net/fpcUnit.html">FPCUnit</a>)</li>
+<li><a href="https://en.wikipedia.org/wiki/Haskell_(programming_language)" title="Haskell (programming language)">Haskell</a> (<a rel="nofollow" class="external text" href="http://hackage.haskell.org/package/HUnit">HUnit</a>)</li>
+<li><a href="https://en.wikipedia.org/wiki/JavaScript" title="JavaScript">JavaScript</a> (<a href="https://en.wikipedia.org/wiki/JSUnit" class="mw-redirect" title="JSUnit">JSUnit</a>)</li>
+<li><a href="https://en.wikipedia.org/wiki/Microsoft_.NET" class="mw-redirect" title="Microsoft .NET">Microsoft .NET</a> (<a href="https://en.wikipedia.org/wiki/NUnit" title="NUnit">NUnit</a>)</li>
+<li><a href="https://en.wikipedia.org/wiki/Objective-C" title="Objective-C">Objective-C</a> (<a rel="nofollow" class="external text" href="http://www.sente.ch/software/ocunit/">OCUnit</a>)</li>
+<li><a href="https://en.wikipedia.org/wiki/OCaml" title="OCaml">OCaml</a> (<a rel="nofollow" class="external text" href="http://ounit.forge.ocamlcore.org/">OUnit</a>)</li>
+<li><a href="https://en.wikipedia.org/wiki/Perl" title="Perl">Perl</a> (<a rel="nofollow" class="external text" href="http://metacpan.org/module/Test::Class">Test::Class</a> and <a rel="nofollow" class="external text" href="http://metacpan.org/module/Test::Unit">Test::Unit</a>)</li>
+<li><a href="https://en.wikipedia.org/wiki/PHP" title="PHP">PHP</a> (<a href="https://en.wikipedia.org/wiki/PHPUnit" title="PHPUnit">PHPUnit</a>)</li>
+<li><a href="https://en.wikipedia.org/wiki/Python_(programming_language)" title="Python (programming language)">Python</a> (<a href="https://en.wikipedia.org/wiki/PyUnit" class="mw-redirect" title="PyUnit">PyUnit</a>)</li>
+<li><a href="https://en.wikipedia.org/wiki/Qt_(framework)" class="mw-redirect" title="Qt (framework)">Qt</a> (QTestLib)</li>
+<li><a href="https://en.wikipedia.org/wiki/R_(programming_language)" title="R (programming language)">R</a> (<a rel="nofollow" class="external text" href="http://runit.sourceforge.net/">RUnit</a>)</li>
+<li><a href="https://en.wikipedia.org/wiki/Ruby_(programming_language)" title="Ruby (programming language)">Ruby</a> (<a href="https://en.wikipedia.org/w/index.php?title=Unit-testing_frameworks_for_Ruby_(programming_language)&amp;action=edit&amp;redlink=1" class="new" title="Unit-testing frameworks for Ruby (programming language) (page does not exist)">Test::Unit</a>)</li>
+</ul>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=JUnit&amp;action=edit&amp;section=3" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div role="navigation" aria-label="Portals" class="noprint portal plainlist tright" style="margin:0.5em 0 0.5em 1em;border:solid #aaa 1px">
+<ul style="display:table;box-sizing:border-box;padding:0.1em;max-width:175px;background:#f9f9f9;font-size:85%;line-height:110%;font-style:italic;font-weight:bold">
+<li style="display:table-row"><span style="display:table-cell;padding:0.2em;vertical-align:middle;text-align:center"><a href="https://en.wikipedia.org/wiki/File:Green_bug_and_broom.svg" class="image"><img alt="icon" src="http://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Green_bug_and_broom.svg/32px-Green_bug_and_broom.svg.png" width="32" height="28" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/83/Green_bug_and_broom.svg/48px-Green_bug_and_broom.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/83/Green_bug_and_broom.svg/64px-Green_bug_and_broom.svg.png 2x" data-file-width="447" data-file-height="385" /></a></span><span style="display:table-cell;padding:0.2em 0.2em 0.2em 0.3em;vertical-align:middle"><a href="https://en.wikipedia.org/wiki/Portal:Software_Testing" class="mw-redirect" title="Portal:Software Testing">Software Testing portal</a></span></li>
+<li style="display:table-row"><span style="display:table-cell;padding:0.2em;vertical-align:middle;text-align:center"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_(2009).svg/28px-Free_and_open-source_software_logo_(2009).svg.png" width="28" height="28" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/42px-Free_and_open-source_software_logo_%282009%29.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/56px-Free_and_open-source_software_logo_%282009%29.svg.png 2x" data-file-width="512" data-file-height="512" /></span><span style="display:table-cell;padding:0.2em 0.2em 0.2em 0.3em;vertical-align:middle"><a href="https://en.wikipedia.org/wiki/Portal:Free_software" class="mw-redirect" title="Portal:Free software">Free software portal</a></span></li>
+</ul>
+</div>
+<ul>
+<li><a href="TestNG.html" title="TestNG">TestNG</a>, another test framework for Java</li>
+<li><a href="https://en.wikipedia.org/wiki/Mock_object" title="Mock object">Mock object</a>, a technique used during unit testing</li>
+<li><a href="https://en.wikipedia.org/wiki/Mockito" title="Mockito">Mockito</a> and <a href="https://en.wikipedia.org/w/index.php?title=PowerMock&amp;action=edit&amp;redlink=1" class="new" title="PowerMock (page does not exist)">PowerMock</a>, mocking extensions to JUnit</li>
+<li><a href="https://en.wikipedia.org/w/index.php?title=JUnit-Tools&amp;action=edit&amp;redlink=1" class="new" title="JUnit-Tools (page does not exist)">JUnit-Tools</a>, a set of tools to optimize the creation and maintainability of junit-tests (www.junit-tools.org)</li>
+<li><a href="https://en.wikipedia.org/wiki/EvoSuite" title="EvoSuite">EvoSuite</a>, a tool to automatically generate JUnit tests</li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=JUnit&amp;action=edit&amp;section=4" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://github.com/junit-team/junit/releases">JUnit Releases</a></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://github.com/junit-team/junit/commit/3171c4b29cb207e71fc2f752f0fbcb235bc8e784">"Relicense JUnit from CPL to EPL"</a>. Philippe Marschall. 18 May 2013<span class="reference-accessdate">. Retrieved <span class="nowrap">20 September</span> 2013</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJUnit&amp;rft.btitle=Relicense+JUnit+from+CPL+to+EPL&amp;rft.date=2013-05-18&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fgithub.com%2Fjunit-team%2Fjunit%2Fcommit%2F3171c4b29cb207e71fc2f752f0fbcb235bc8e784&amp;rft.pub=Philippe+Marschall&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.takipiblog.com/2013/11/20/we-analyzed-30000-github-projects-here-are-the-top-100-libraries-in-java-js-and-ruby/">"We Analyzed 30,000 GitHub Projects – Here Are The Top 100 Libraries in Java, JS and Ruby"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJUnit&amp;rft.btitle=We+Analyzed+30%2C000+GitHub+Projects+%93+Here+Are+The+Top+100+Libraries+in+Java%2C+JS+and+Ruby&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.takipiblog.com%2F2013%2F11%2F20%2Fwe-analyzed-30000-github-projects-here-are-the-top-100-libraries-in-java-js-and-ruby%2F&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-JUnitCookbook-4"><span class="mw-cite-backlink">^ <a href="#cite_ref-JUnitCookbook_4-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-JUnitCookbook_4-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation web"><a href="https://en.wikipedia.org/wiki/Kent_Beck" title="Kent Beck">Kent Beck</a>, <a href="Erich_Gamma.html" title="Erich Gamma">Erich Gamma</a>. <a rel="nofollow" class="external text" href="http://junit.sourceforge.net/doc/cookbook/cookbook.htm">"JUnit Cookbook"</a>. junit.sourceforge.net<span class="reference-accessdate">. Retrieved <span class="nowrap">2011-05-21</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJUnit&amp;rft.au=Kent+Beck%2C+Erich+Gamma&amp;rft.btitle=JUnit+Cookbook&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fjunit.sourceforge.net%2Fdoc%2Fcookbook%2Fcookbook.htm&amp;rft.pub=junit.sourceforge.net&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><cite class="citation web"><a href="https://en.wikipedia.org/wiki/Kent_Beck" title="Kent Beck">Kent Beck</a>. <a rel="nofollow" class="external text" href="http://c2.com/cgi/wiki?ExpensiveSetUpSmell">"Expensive Setup Smell"</a>. C2 Wiki<span class="reference-accessdate">. Retrieved <span class="nowrap">2011-11-28</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJUnit&amp;rft.au=Kent+Beck&amp;rft.btitle=Expensive+Setup+Smell&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fc2.com%2Fcgi%2Fwiki%3FExpensiveSetUpSmell&amp;rft.pub=C2+Wiki&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=JUnit&amp;action=edit&amp;section=5" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><span class="official-website"><span class="url"><a rel="nofollow" class="external text" href="http://junit.org/">Official website</a></span></span></li>
+<li><a rel="nofollow" class="external text" href="http://www.ibm.com/developerworks/java/library/j-junit4/">An early look at JUnit 4</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.methodsandtools.com/tools/tools.php?junit">JUnit Presentation</a></li>
+<li><a rel="nofollow" class="external text" href="http://memorynotfound.com/category/testing/junit/">JUnit Tutorials</a></li>
+</ul>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1248
+Cached time: 20170117103435
+Cache expiry: 2592000
+Dynamic content: false
+CPU time usage: 0.116 seconds
+Real time usage: 0.152 seconds
+Preprocessor visited node count: 808/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 18709/2097152 bytes
+Template argument size: 1648/2097152 bytes
+Highest expansion depth: 25/40
+Expensive parser function count: 3/500
+Lua time usage: 0.051/10.000 seconds
+Lua memory usage: 2.77 MB/50 MB
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  131.507      1 - -total
+ 53.27%   70.049      2 - Template:Infobox
+ 42.66%   56.095      1 - Template:Infobox_software
+ 28.49%   37.471      1 - Template:Reflist
+ 23.41%   30.787      4 - Template:Cite_web
+ 15.91%   20.929      1 - Template:Infobox_software/simple
+ 12.21%   16.063      1 - Template:Distinguish
+  5.66%    7.439      1 - Template:Portal
+  5.46%    7.182      2 - Template:Release_date
+  5.35%    7.037      1 - Template:Official_website
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:16226-0!*!0!!en!4!* and timestamp 20170117103435 and revision id 760467260
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=JUnit&amp;oldid=760467260">https://en.wikipedia.org/w/index.php?title=JUnit&amp;oldid=760467260</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Help_Category.html" title="Help:Category">Categories</a>: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Cross-platform_software" title="Category:Cross-platform software">Cross-platform software</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Extreme_programming" title="Category:Extreme programming">Extreme programming</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Free_software_programmed_in_Java_(programming_language)" title="Category:Free software programmed in Java (programming language)">Free software programmed in Java (programming language)</a></li><li><a href="Category_Java_development_tools.html" title="Category:Java development tools">Java development tools</a></li><li><a href="Category_Java_platform.html" title="Category:Java platform">Java platform</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Unit_testing_frameworks" title="Category:Unit testing frameworks">Unit testing frameworks</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Software_using_the_Eclipse_license" title="Category:Software using the Eclipse license">Software using the Eclipse license</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="Category_Articles_with_example_Java_code.html" title="Category:Articles with example Java code">Articles with example Java code</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="Special_MyTalk.html" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="Special_MyContributions.html" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&amp;returnto=JUnit" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=JUnit" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="JUnit.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+															<li  id="ca-talk"><span><a href="https://en.wikipedia.org/wiki/Talk:JUnit"  title="Discussion about the content page [t]" accesskey="t" rel="discussion">Talk</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="JUnit.html" >Read</a></span></li>
+															<li id="ca-edit"><span><a href="https://en.wikipedia.org/w/index.php?title=JUnit&amp;action=edit"  title="Edit this page [e]" accesskey="e">Edit</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="https://en.wikipedia.org/w/index.php?title=JUnit&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="https://en.wikipedia.org/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="Main_Page.html"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="Portal_Contents.html" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="Portal_Featured_content.html" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="Portal_Current_events.html" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="https://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="../../shop.wikimedia.org/index.html" title="Visit the Wikipedia store">Wikipedia store</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Interaction</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-help"><a href="Help_Contents.html" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="Wikipedia_About.html" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="Wikipedia_Community_portal.html" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="Wikipedia_Contact_us.html" title="How to contact Wikipedia">Contact page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="https://en.wikipedia.org/wiki/Special:WhatLinksHere/JUnit" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://en.wikipedia.org/wiki/Special:RecentChangesLinked/JUnit" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="Wikipedia_File_Upload_Wizard.html" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="https://en.wikipedia.org/w/index.php?title=JUnit&amp;oldid=760467260" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://en.wikipedia.org/w/index.php?title=JUnit&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q847675" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="https://en.wikipedia.org/w/index.php?title=Special:CiteThisPage&amp;page=JUnit&amp;id=760467260" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Print/export</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=JUnit">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=JUnit&amp;returnto=JUnit&amp;oldid=760467260&amp;writer=rdf2latex">Download as PDF</a></li><li id="t-print"><a href="https://en.wikipedia.org/w/index.php?title=JUnit&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Languages</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/JUnit" title="JUnit – Catalan" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/JUnit" title="JUnit – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/JUnit" title="JUnit – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/JUnit" title="JUnit – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/JUnit" title="JUnit – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/JUnit" title="JUnit – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-he"><a href="https://he.wikipedia.org/wiki/JUnit" title="JUnit – Hebrew" lang="he" hreflang="he" class="interlanguage-link-target">עברית</a></li><li class="interlanguage-link interwiki-lt"><a href="https://lt.wikipedia.org/wiki/JUnit" title="JUnit – Lithuanian" lang="lt" hreflang="lt" class="interlanguage-link-target">Lietuvių</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/JUnit" title="JUnit – Hungarian" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-ms"><a href="https://ms.wikipedia.org/wiki/JUnit" title="JUnit – Malay" lang="ms" hreflang="ms" class="interlanguage-link-target">Bahasa Melayu</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/JUnit" title="JUnit – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-no"><a href="https://no.wikipedia.org/wiki/JUnit" title="JUnit – Norwegian" lang="no" hreflang="no" class="interlanguage-link-target">Norsk bokmål</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/JUnit" title="JUnit – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/JUnit" title="JUnit – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/JUnit" title="JUnit – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-sv"><a href="https://sv.wikipedia.org/wiki/JUnit" title="JUnit – Swedish" lang="sv" hreflang="sv" class="interlanguage-link-target">Svenska</a></li><li class="interlanguage-link interwiki-ta"><a href="https://ta.wikipedia.org/wiki/ஜேயூனிட்" title="ஜேயூனிட் – Tamil" lang="ta" hreflang="ta" class="interlanguage-link-target">தமிழ்</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/JUnit" title="JUnit – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/JUnit" title="JUnit – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q847675#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 17 January 2017, at 04:26.</li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="Wikipedia_Text_of_Creative_Commons_Attribution-ShareAlike_3.html">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="../../creativecommons.org/licenses/by-sa/3.0/index.html" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="../../wikimediafoundation.org/wiki/Terms_of_Use.html">Terms of Use</a> and <a href="../../wikimediafoundation.org/wiki/Privacy_policy.html">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="../../www.wikimediafoundation.org/index.html">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../../wikimediafoundation.org/wiki/Privacy_policy.html" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="Wikipedia_About.html" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="Wikipedia_General_disclaimer.html" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="Wikipedia_Contact_us.html">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a href="../../www.mediawiki.org/wiki/Special_MyLanguage/How_to_contribute.html">Developers</a></li>
+											<li id="footer-places-cookiestatement"><a href="../../wikimediafoundation.org/wiki/Cookie_statement.html">Cookie statement</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/w/index.php?title=JUnit&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="../../www.wikimediafoundation.org/index.html"><img src="https://en.wikipedia.org/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="../../www.mediawiki.org/index.html"><img src="https://en.wikipedia.org/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":221,"wgHostname":"mw1248"});});</script>
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/JUnit by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:19 GMT -->
+</html>

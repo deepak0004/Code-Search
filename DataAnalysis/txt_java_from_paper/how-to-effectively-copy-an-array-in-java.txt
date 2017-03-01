@@ -1,0 +1,17 @@
+    
+        The toArray method in ArrayList , Bloch uses both System.arraycopy and Arrays.copyOf to copy an array .
+
+public &lt;T&gt; T[] toArray(T[] a) {
+  if (a.length &lt; size)
+        // Make a new array of a's runtime type, but my contents:
+        return (T[]) Arrays.copyOf(elementData, size, a.getClass());
+    System.arraycopy(elementData, 0, a, 0, size);
+    if (a.length &gt; size)
+        a[size] = null;
+    return a;
+}
+
+
+How to compare these two copy methods , when to use which ? Thanks.
+
+                

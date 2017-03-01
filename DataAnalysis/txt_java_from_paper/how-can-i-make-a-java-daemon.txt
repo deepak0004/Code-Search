@@ -1,0 +1,5 @@
+    
+        I need to do a periodic operation (call a java method) in my web app (jsp on tomcat).
+How can i do this ? Java daemon or others solutions ?
+
+                

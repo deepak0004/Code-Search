@@ -1,0 +1,210 @@
+    
+        What I am trying to do is read a .java file, and pick out all of the identifiers and store them in a list.  My problem is with the .split() method.  If you run this code the way it is, you will get ArrayOutOfBounds, but if you change the delimiter from "." to anything else, the code works.  But I need to lines parsed by "." so is there another way I could accomplish this?
+
+import java.io.BufferedReader;
+
+import java.io.FileNotFoundException;
+
+import java.io.FileReader;
+
+import java.io.IOException;
+
+import java.util.*;
+
+
+
+public class MyHash {
+
+private static String[] reserved = new String[100];
+
+private static List list = new LinkedList();
+
+private static List list2 = new LinkedList();
+
+public static void main (String args[]){
+  Hashtable hashtable  = new Hashtable(997);
+  makeReserved();
+  readFile();                                                 
+  String line;
+  ListIterator itr = list.listIterator();
+  int listIndex = 0;
+  while (listIndex &lt; list.size()) {                                       
+
+        if (itr.hasNext()){
+          line = itr.next().toString();
+          //PROBLEM IS HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+          String[] words = line.split(".");  //CHANGE THIS AND IT WILL WORK
+          System.out.println(words[0]);      //TESTING TO SEE IF IT WORKED
+        }
+        listIndex++;
+        }
+  }
+
+
+
+
+
+
+
+
+
+public static void readFile() {
+    String text;
+    String[] words;
+    BufferedReader in = null; 
+    try {
+        in = new BufferedReader(new FileReader("MyHash.java")); //NAME OF INPUT FILE
+
+
+    } catch (FileNotFoundException ex) {
+        Logger.getLogger(MyHash.class.getName()).log(Level.SEVERE, null, ex);
+    }
+    try {
+        while ((text = in.readLine()) != null){
+        text = text.trim();
+        words = text.split("\\s+");
+        for (int i = 0; i &lt; words.length; i++){
+            list.add(words[i]);
+        }
+        for (int j = 0; j &lt; reserved.length; j++){
+            if (list.contains(reserved[j])){
+                list.remove(reserved[j]);
+            }
+        }
+
+
+    }
+
+    } catch (IOException ex) {
+        Logger.getLogger(MyHash.class.getName()).log(Level.SEVERE, null, ex);
+    }
+    try {
+        in.close();
+    } catch (IOException ex) {
+        Logger.getLogger(MyHash.class.getName()).log(Level.SEVERE, null, ex);
+    }
+
+}
+
+
+
+public static int keyIt (int x) {
+   int key = x % 997;
+   return key;
+}
+
+public static int horner (String word){
+    int length = word.length();
+    char[] letters = new char[length];
+
+    for (int i = 0; i &lt; length; i++){
+        letters[i]=word.charAt(i);
+    }
+
+    char[] alphabet = new char[26];
+    String abc = "abcdefghijklmnopqrstuvwxyz";
+
+    for (int i = 0; i &lt; 26; i++){
+        alphabet[i]=abc.charAt(i);
+    }
+
+    int[] numbers = new int[length];
+    int place = 0;
+    for (int i = 0; i &lt; length; i++){
+        for (int j = 0; j &lt; 26; j++){
+            if (alphabet[j]==letters[i]){
+                numbers[place]=j+1;
+                place++;
+
+            }
+        }
+    }
+
+    int hornered = numbers[0] * 32;
+
+    for (int i = 1; i &lt; numbers.length; i++){
+
+        hornered += numbers[i];
+        if (i == numbers.length -1){
+            return hornered;
+        }
+        hornered = hornered % 997;
+        hornered *= 32;
+    }
+    return hornered;
+}
+
+public static String[] makeReserved (){
+    reserved[0] = "abstract";
+    reserved[1] = "assert";
+    reserved[2] = "boolean";
+    reserved[3] = "break";
+    reserved[4] = "byte";
+    reserved[5] = "case";
+    reserved[6] = "catch";
+    reserved[7] = "char";
+    reserved[8] = "class";
+    reserved[9] = "const";
+    reserved[10] = "continue";
+    reserved[11] = "default";
+    reserved[12] = "do";
+    reserved[13] = "double";
+    reserved[14] = "else";
+    reserved[15] = "enum";
+    reserved[16] = "extends";
+    reserved[17] = "false";
+    reserved[18] = "final";
+    reserved[19] = "finally";
+    reserved[20] = "float";
+    reserved[21] = "for";
+    reserved[22] = "goto";
+    reserved[23] = "if";
+    reserved[24] = "implements";
+    reserved[25] = "import";
+    reserved[26] = "instanceof";
+    reserved[27] = "int";
+    reserved[28] = "interface";
+    reserved[29] = "long";
+    reserved[30] = "native";
+    reserved[31] = "new";
+    reserved[32] = "null";
+    reserved[33] = "package";
+    reserved[34] = "private";
+    reserved[35] = "protected";
+    reserved[36] = "public";
+    reserved[37] = "return";
+    reserved[38] = "short";
+    reserved[39] = "static";
+    reserved[40] = "strictfp";
+    reserved[41] = "super";
+    reserved[42] = "switch";
+    reserved[43] = "synchronize";
+    reserved[44] = "this";
+    reserved[45] = "throw";
+    reserved[46] = "throws";
+    reserved[47] = "trasient";
+    reserved[48] = "true";
+    reserved[49] = "try";
+    reserved[50] = "void";
+    reserved[51] = "volatile";
+    reserved[52] = "while";
+    reserved[53] = "=";
+    reserved[54] = "==";
+    reserved[55] = "!=";
+    reserved[56] = "+";
+    reserved[57] = "-";
+    reserved[58] = "*";
+    reserved[59] = "/";
+    reserved[60] = "{";
+    reserved[61] = "}";
+
+
+
+
+    return reserved;
+}
+
+
+}
+
+                

@@ -1,0 +1,6 @@
+    
+        I'm putting together a quick and dirty animation using swing (hehehe).  I would like the window to be maximized.  How can I do that?
+
+Thanks in advance :)
+
+                

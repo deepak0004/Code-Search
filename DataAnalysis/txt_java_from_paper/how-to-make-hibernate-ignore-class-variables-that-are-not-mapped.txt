@@ -1,0 +1,44 @@
+    
+        I thought hibernate takes into consideration only class variables that are annotated with @Column.  But strangely today when I added a variable (that is not mapped to any column, just a variable i need in the class), it is trying to include that variable in the select statement as a column name and throws the error - 
+
+Unknown column 'team1_.agencyName' in 'field list'
+
+My class - 
+
+@Entity
+@Table(name="team")
+public class Team extends BaseObject implements Serializable {
+
+@Id  @GeneratedValue(strategy=GenerationType.AUTO)
+private Long id;
+
+@Column(length=50)
+private String name;
+
+@Column(length=10)
+private String code;
+
+@Column(name = "agency_id")
+private Long agencyId;
+
+private String agencyName; //note: not annotated.
+
+}
+
+
+FYI...I use the above class in another class with many to many mapping
+
+@ManyToMany(fetch = FetchType.EAGER) 
+@JoinTable(
+        name="user_team",
+        joinColumns = { @JoinColumn( name="user_id") },
+        inverseJoinColumns = @JoinColumn( name="team_id")
+)    
+public Set&lt;Team&gt; getTeams() {
+    return teams;
+}
+
+
+Why is this happening?!
+
+                

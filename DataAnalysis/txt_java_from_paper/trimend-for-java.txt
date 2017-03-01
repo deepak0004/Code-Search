@@ -1,0 +1,6 @@
+    
+        In the process of converting a C# application to Java, I came across the use of String's TrimEnd method. Is there an equivalent Java implementation? I can't seem to find one.
+
+I'd rather not replace it with trim, since I don't want to change the meaning or operation of the program at this point unless I have to.
+
+                

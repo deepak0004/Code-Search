@@ -1,0 +1,6 @@
+    
+        I'm a beginner when it comes to design patterns , and I have a question related to the decorator design pattern . Presuming I have a class named A , and I want to use the decorator design pattern . Correct me if I'm wrong , but for that to work , we'll need to create a decorator class ( ADecorator ) , which will hold a reference to an A instance , and all the other decorators will extend this to add functionality .
+
+I don't understand why do we have to create a decorator class , instead of using an A instance ?
+
+                

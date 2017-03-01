@@ -1,0 +1,13 @@
+    
+        Sorry I can't find a question answering this, I'm almost certain someone else has raised it before. 
+
+My problem is that I'm writing some system libraries to run embedded devices. I have commands which can be sent to these devices over radio broadcasts. This can only be done by text. inside the system libraries I have a  thread which handles the commands which looks like this
+
+if (value.equals("A")) { doCommandA() }
+else if (value.equals("B")) { doCommandB() } 
+else if etc. 
+
+
+The problem is that there are a lot of commands to it will quickly spiral to something out of control. Horrible to look out, painful to debug and mind boggling to understand in a few months time. 
+
+                

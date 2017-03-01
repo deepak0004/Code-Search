@@ -1,0 +1,49 @@
+    
+        As a follow up to a <a href="http://stackoverflow.com/questions/151590/java-how-do-detect-a-remote-side-socket-close">recent question, I wonder why it is impossible in Java, without attempting reading/writing on a TCP socket, to detect that the socket has been gracefully closed by the peer? This seems to be the case regardless of whether one uses the pre-NIO Socket or the NIO SocketChannel.
+
+When a peer gracefully closes a TCP connection, the TCP stacks on both sides of the connection know about the fact. The server-side (the one that initiates the shutdown) ends up in state FIN_WAIT2, whereas the client-side (the one that does not explicitly respond to the shutdown) ends up in state CLOSE_WAIT. Why isn't there a method in Socket or SocketChannel that can query the TCP stack to see whether the underlying TCP connection has been terminated? Is it that the TCP stack doesn't provide such status information? Or is it a design decision to avoid a costly call into the kernel?
+
+With the help of the users who have already posted some answers to this question, I think I see where the issue might be coming from. The side that doesn't explicitly close the connection ends up in TCP state CLOSE_WAIT meaning that the connection is in the process of shutting down and waits for the side to issue its own CLOSE operation. I suppose it's fair enough that isConnected returns true and isClosed returns false, but why isn't there something like isClosing?
+
+Below are the test classes that use pre-NIO sockets. But identical results are obtained using NIO.
+
+import java.net.ServerSocket;
+import java.net.Socket;
+
+public class MyServer {
+  public static void main(String[] args) throws Exception {
+    final ServerSocket ss = new ServerSocket(12345);
+    final Socket cs = ss.accept();
+    System.out.println("Accepted connection");
+    Thread.sleep(5000);
+    cs.close();
+    System.out.println("Closed connection");
+    ss.close();
+    Thread.sleep(100000);
+  }
+}
+
+
+import java.net.Socket;
+
+public class MyClient {
+  public static void main(String[] args) throws Exception {
+    final Socket s = new Socket("localhost", 12345);
+    for (int i = 0; i &lt; 10; i++) {
+      System.out.println("connected: " + s.isConnected() + 
+        ", closed: " + s.isClosed());
+      Thread.sleep(1000);
+    }
+    Thread.sleep(100000);
+  }
+}
+
+
+When the test client connects to the test server the output remains unchanged even after the server initiates the shutdown of the connection:
+
+connected: true, closed: false
+connected: true, closed: false
+...
+
+
+                

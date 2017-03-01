@@ -1,0 +1,12 @@
+    
+        Let's assume I have a table with field of type VARCHAR. And I need to get data from that table sorted alphabetically by that field. 
+
+What is the best way (for performance): add order by field to the SQL-query or sort the data when it's already fetched?
+
+I'm using Java (with Hibernate), but I can't tell anything about DB engine. It could be any popular relational database (like MySQL or MS Sql Server or Oracle or HSQL DB or any other).
+
+The amount of records in table can vary greatly but let's assume there are 5k records.
+
+UPD: how well does 2nd level hibernate cache (EHCache for example) support sorted data?
+
+                

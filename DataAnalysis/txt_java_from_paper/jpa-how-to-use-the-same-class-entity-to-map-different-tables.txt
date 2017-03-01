@@ -1,0 +1,6 @@
+    
+        I have two tables: Ta and Tb. They have exactly the same table structure but different table names.
+
+I try to create one entity class to map the table structures.  Some of my common application modules will use this entity class to dynamically query and update either Ta or Tb based on parameters.  Can it be done in JPA?  How can I write the program to dynamically mapping the entity class to different tables at run time?
+
+                

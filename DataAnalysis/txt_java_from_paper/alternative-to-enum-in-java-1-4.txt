@@ -1,0 +1,22 @@
+    
+        Since Java 1.4 doesn't have enums I'm am doing something like this:
+
+public class SomeClass {
+     public static int SOME_VALUE_1 = 0;
+     public static int SOME_VALUE_2 = 1;
+     public static int SOME_VALUE_3 = 2;
+
+     public void receiveSomeValue(int someValue) {
+            // do something
+     }
+ }
+
+
+The caller of receiveSomeValue should pass one those 3 values but he can pass any other int. 
+If it were an enum the caller could only pass one valid value.
+
+Should receiveSomeValue throw an InvalidValueException?
+
+What are good alternatives to Java 5 enums?
+
+                

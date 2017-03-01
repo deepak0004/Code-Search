@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Hibernate_(Java) by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:07 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Hibernate (framework) - Wikipedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Hibernate_(framework)","wgTitle":"Hibernate (framework)","wgCurRevisionId":759678581,"wgRevisionId":759678581,"wgArticleId":1329800,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Pages using deprecated image syntax","Articles containing potentially dated statements from 2010","All articles containing potentially dated statements","Wikipedia articles needing clarification from June 2011","Official website different in Wikidata and Wikipedia","Wikipedia articles with GND identifiers","Object-relational mapping","Java platform","Java enterprise platform","Red Hat software","Cross-platform software","Persistence frameworks"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Hibernate_(framework)","wgRelevantArticleId":1329800,"wgRequestId":"WHeqxApAMFoAAFCVXCMAAAAW","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"Hibernate_(Java)","wgFlaggedRevsParams":{"tags":{}},"wgStableRevisionId":null,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"en","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgInternalRedirectTargetUrl":"/wiki/Hibernate_(framework)","wgWikibaseItemId":"Q747866","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.cite.styles":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@1dqfd7l",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["mediawiki.action.view.redirect","ext.cite.a11y","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.legacy.wikibits","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.watchlist-notice","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.gadget.featured-articles-links","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.interface","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="https://en.wikipedia.org/w/load.php?debug=false&amp;lang=en&amp;modules=ext.cite.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="../w/load2c8d.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../w/load18b6.css?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.29.0-wmf.7"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="https://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Hibernate_(framework)"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Hibernate_(framework)&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Hibernate_(framework)&amp;action=edit"/>
+<link rel="apple-touch-icon" href="https://en.wikipedia.org/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="../static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../w/api251f.php?action=rsd"/>
+<link rel="copyright" href="../../creativecommons.org/licenses/by-sa/3.0/index.html"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Hibernate_(framework)"/>
+<link rel="dns-prefetch" href="../../login.wikimedia.org/index.html"/>
+<link rel="dns-prefetch" href="../../meta.wikimedia.org/index.html" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Hibernate_framework rootpage-Hibernate_framework skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">Hibernate (framework)</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"><span class="mw-redirectedfrom">  (Redirected from <a href="https://en.wikipedia.org/w/index.php?title=Hibernate_(Java)&amp;redirect=no" class="mw-redirect" title="Hibernate (Java)">Hibernate (Java)</a>)</span></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><script>function mfTempOpenSection(id){var block=document.getElementById("mf-section-"+id);block.className+=" open-block";block.previousSibling.className+=" open-block";}</script><table class="infobox vevent" style="width:22em">
+<caption class="summary">Hibernate ORM</caption>
+<tr>
+<td colspan="2" style="text-align:center"><a href="https://en.wikipedia.org/wiki/File:Hibernate_logo_a.png" class="image"><img alt="Hibernate logo a.png" src="http://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Hibernate_logo_a.png/250px-Hibernate_logo_a.png" width="250" height="69" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/2/22/Hibernate_logo_a.png/375px-Hibernate_logo_a.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/2/22/Hibernate_logo_a.png/500px-Hibernate_logo_a.png 2x" data-file-width="2313" data-file-height="642" /></a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_developer" title="Software developer">Developer(s)</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Red_Hat" title="Red Hat">Red Hat</a></td>
+</tr>
+<tr>
+<td colspan="2" style="text-align:center"></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_release_life_cycle" title="Software release life cycle">Stable release</a></th>
+<td>
+<div style="margin:0px;">v5.2.5 / November&#160;24, 2016<span class="noprint">; 49 days ago</span><span style="display:none">&#160;(<span class="bday dtstart published updated">2016-11-24</span>)</span></div>
+</td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Source_code_repository" class="mw-redirect" title="Source code repository">Repository</a></th>
+<td><span class="url"><a rel="nofollow" class="external text" href="https://github.com/hibernate/hibernate-orm">github<wbr />.com<wbr />/hibernate<wbr />/hibernate-orm</a></span></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;">Development status</th>
+<td>Active</td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;">Written in</th>
+<td><a href="Java_(programming_language).html" title="Java (programming language)">Java</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Operating_system" title="Operating system">Operating system</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Cross-platform" title="Cross-platform">Cross-platform</a> (<a href="https://en.wikipedia.org/wiki/JVM" class="mw-redirect" title="JVM">JVM</a>)</td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Computing_platform" title="Computing platform">Platform</a></th>
+<td><a href="Java_Virtual_Machine.html" class="mw-redirect" title="Java Virtual Machine">Java Virtual Machine</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/List_of_software_categories" class="mw-redirect" title="List of software categories">Type</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Object-relational_mapping" title="Object-relational mapping">Object-relational mapping</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_license" title="Software license">License</a></th>
+<td><a href="https://en.wikipedia.org/wiki/GNU_Lesser_General_Public_License" title="GNU Lesser General Public License">GNU Lesser General Public License</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;">Website</th>
+<td><span class="url"><a rel="nofollow" class="external text" href="http://hibernate.org/">hibernate<wbr />.org</a></span></td>
+</tr>
+</table>
+<p><b>Hibernate ORM</b> (Hibernate in short) is an <a href="https://en.wikipedia.org/wiki/Object-relational_mapping" title="Object-relational mapping">object-relational mapping</a> tool for the <a href="Java_(programming_language).html" title="Java (programming language)">Java</a> programming language. It provides a <a href="https://en.wikipedia.org/wiki/Software_framework" title="Software framework">framework</a> for mapping an <a href="https://en.wikipedia.org/wiki/Object-oriented_programming" title="Object-oriented programming">object-oriented</a> domain model to a <a href="https://en.wikipedia.org/wiki/Relational_database" title="Relational database">relational database</a>. Hibernate solves <a href="https://en.wikipedia.org/wiki/Object-relational_impedance_mismatch" title="Object-relational impedance mismatch">object-relational impedance mismatch</a> problems by replacing direct, <a href="https://en.wikipedia.org/wiki/Persistence_(computer_science)" title="Persistence (computer science)">persistent</a> database accesses with high-level object handling functions.</p>
+<p>Hibernate is <a href="https://en.wikipedia.org/wiki/Free_software" title="Free software">free software</a> that is distributed under the <a href="https://en.wikipedia.org/wiki/GNU_Lesser_General_Public_License" title="GNU Lesser General Public License">GNU Lesser General Public License</a> 2.1.</p>
+<p>Hibernate's primary feature is mapping from Java classes to <a href="https://en.wikipedia.org/wiki/Table_(database)" title="Table (database)">database tables</a>, and mapping from Java data types to <a href="https://en.wikipedia.org/wiki/SQL" title="SQL">SQL</a> data types. Hibernate also provides data query and retrieval facilities. It generates SQL calls and relieves the developer from the manual handling and object conversion of the result set.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Mapping"><span class="tocnumber">1</span> <span class="toctext">Mapping</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Hibernate_Query_Language_.28HQL.29"><span class="tocnumber">2</span> <span class="toctext">Hibernate Query Language (HQL)</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Persistence"><span class="tocnumber">3</span> <span class="toctext">Persistence</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Integration"><span class="tocnumber">4</span> <span class="toctext">Integration</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Entities_and_components"><span class="tocnumber">5</span> <span class="toctext">Entities and components</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#History"><span class="tocnumber">6</span> <span class="toctext">History</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Application_programming_interface"><span class="tocnumber">7</span> <span class="toctext">Application programming interface</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="#org.hibernate.SessionFactory_interface"><span class="tocnumber">7.1</span> <span class="toctext">org.hibernate.SessionFactory interface</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#org.hibernate.Session_interface"><span class="tocnumber">7.2</span> <span class="toctext">org.hibernate.Session interface</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#Software_components"><span class="tocnumber">8</span> <span class="toctext">Software components</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#See_also"><span class="tocnumber">9</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#References"><span class="tocnumber">10</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#Bibliography"><span class="tocnumber">11</span> <span class="toctext">Bibliography</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#External_links"><span class="tocnumber">12</span> <span class="toctext">External links</span></a>
+<ul>
+<li class="toclevel-2 tocsection-15"><a href="#Further_reading"><span class="tocnumber">12.1</span> <span class="toctext">Further reading</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Mapping">Mapping</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Hibernate_(framework)&amp;action=edit&amp;section=1" title="Edit section: Mapping">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The mapping of Java classes to database tables is implemented by the configuration of an <a href="https://en.wikipedia.org/wiki/XML" title="XML">XML</a> file or by using <a href="Java_annotation.html" title="Java annotation">Java Annotations</a>. When using an XML file, Hibernate can <a href="https://en.wikipedia.org/wiki/Program_synthesis" title="Program synthesis">generate</a> skeleton <a href="https://en.wikipedia.org/wiki/Source_code" title="Source code">source code</a> for the persistence classes. This is auxiliary when annotations are used. Hibernate can use the XML file or the Java annotations to maintain the <a href="https://en.wikipedia.org/wiki/Database_schema" title="Database schema">database schema</a>.</p>
+<p>There are provided facilities to arrange <a href="https://en.wikipedia.org/wiki/One-to-many_(data_model)" title="One-to-many (data model)">one-to-many</a> and <a href="https://en.wikipedia.org/wiki/Many-to-many_(data_model)" title="Many-to-many (data model)">many-to-many</a> relationships between classes. In addition to managing associations between objects, Hibernate can also manage <a href="https://en.wikipedia.org/wiki/Reflexive_relation" title="Reflexive relation">reflexive</a> associations wherein an object has a one-to-many relationship with other instances of the <a href="https://en.wikipedia.org/wiki/Class_(computer_programming)" title="Class (computer programming)">class</a> <a href="https://en.wikipedia.org/wiki/Data_type" title="Data type">type</a>.</p>
+<p>Hibernate supports the mapping of custom value types. This makes the following scenarios possible:</p>
+<ul>
+<li>Overriding the default SQL type when mapping a column to a property.</li>
+<li>Mapping Java <a href="https://en.wikipedia.org/wiki/Enumerated_type" title="Enumerated type">Enums</a> to columns as though they were regular properties.</li>
+<li>Mapping a single property to multiple columns.</li>
+</ul>
+<p><b>Definition:</b> Objects in a <a href="https://en.wikipedia.org/wiki/Object-oriented_programming" title="Object-oriented programming">object-oriented</a> application follow <a href="https://en.wikipedia.org/wiki/Object-oriented_programming" title="Object-oriented programming">OOP</a> principles, while objects in the back-end follow <a href="https://en.wikipedia.org/wiki/Database_normalization" title="Database normalization">database normalization</a> principles, resulting in different representation requirements. This problem is called "<a href="https://en.wikipedia.org/wiki/Object-relational_impedance_mismatch" title="Object-relational impedance mismatch">object-relational impedance mismatch</a>". Mapping is a way of resolving the object-relational impedance mismatch problem.</p>
+<p>Mapping informs the ORM tool of what Java class object to store in which database table.</p>
+<h2><span class="mw-headline" id="Hibernate_Query_Language_.28HQL.29">Hibernate Query Language (HQL)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Hibernate_(framework)&amp;action=edit&amp;section=2" title="Edit section: Hibernate Query Language (HQL)">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Hibernate provides an <a href="https://en.wikipedia.org/wiki/SQL" title="SQL">SQL</a> inspired language called <a href="https://en.wikipedia.org/wiki/Hibernate_Query_Language" class="mw-redirect" title="Hibernate Query Language">Hibernate Query Language</a> (HQL) that allows SQL-like queries to be written against Hibernate's data objects. <i>Criteria Queries</i> are provided as an <a href="https://en.wikipedia.org/wiki/Object-oriented_programming" title="Object-oriented programming">object-oriented</a> alternative to HQL. Criteria Query is used to modify the objects and provide the restriction for the objects. HQL (Hibernate Query Language) is the object-oriented version of SQL. It generates database independent queries so that there is no need to write database-specific queries. Without this capability, changing the database would require individual SQL queries to be changed as well, leading to maintenance issues.</p>
+<h2><span class="mw-headline" id="Persistence">Persistence</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Hibernate_(framework)&amp;action=edit&amp;section=3" title="Edit section: Persistence">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Hibernate provides transparent persistence for <a href="Plain_Old_Java_Object.html" title="Plain Old Java Object">Plain Old Java Objects</a> (POJOs). The only strict requirement for a persistent class is a <a href="Nullary_constructor.html" title="Nullary constructor">no-argument constructor</a>, not necessarily <i>public</i>. Proper behavior in some applications also requires special attention to the <i>equals()</i> and <i>hashCode()</i> methods.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[1]</a></sup></p>
+<p>Collections of data objects are typically stored in Java collection classes such as implementations of the Set and List interfaces. <a href="Generics_in_Java.html" title="Generics in Java">Java generics</a>, introduced in Java 5, are supported. Hibernate can be configured to <a href="https://en.wikipedia.org/wiki/Lazy_load" class="mw-redirect" title="Lazy load">lazy load</a> associated collections. Lazy loading is the default as of Hibernate 3.</p>
+<p>Related objects can be configured to <i><a href="https://en.wikipedia.org/wiki/Propagation_constraint" title="Propagation constraint">cascade</a></i> operations from one to the other. For example, a parent Album object can be configured to cascade its save and/or delete operation to its child Track objects.</p>
+<h2><span class="mw-headline" id="Integration">Integration</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Hibernate_(framework)&amp;action=edit&amp;section=4" title="Edit section: Integration">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Hibernate can be used both in standalone <a href="Java_(programming_language).html" title="Java (programming language)">Java</a> applications and in <a href="https://en.wikipedia.org/wiki/Java_EE" class="mw-redirect" title="Java EE">Java EE</a> applications using <a href="Java_Servlet.html" class="mw-redirect" title="Java Servlet">servlets</a>, <a href="https://en.wikipedia.org/wiki/EJB" class="mw-redirect" title="EJB">EJB</a> session beans, and <a href="Java_Business_Integration.html" title="Java Business Integration">JBI</a> service components. It can also be included as a feature in other programming languages. For example, <a href="https://en.wikipedia.org/wiki/Adobe_Systems" title="Adobe Systems">Adobe</a> integrated Hibernate into version 9 of <a href="ColdFusion.html" class="mw-redirect" title="ColdFusion">ColdFusion</a> (which runs on J2EE app servers) with an abstraction layer of new functions and syntax added into <a href="https://en.wikipedia.org/wiki/CFML" class="mw-redirect" title="CFML">CFML</a>.</p>
+<h2><span class="mw-headline" id="Entities_and_components">Entities and components</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Hibernate_(framework)&amp;action=edit&amp;section=5" title="Edit section: Entities and components">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>In Hibernate <a href="https://en.wikipedia.org/wiki/Jargon" title="Jargon">jargon</a>, an <i>entity</i> is a stand-alone object in Hibernate's <a href="https://en.wikipedia.org/wiki/Persistence_(computer_science)" title="Persistence (computer science)">persistent</a> mechanism which can be manipulated independently of other objects. In contrast, a <i>component</i> is subordinate to an entity and can be manipulated only with respect to that entity. For example, an Album object may represent an entity; but the Tracks object associated with the Album objects would represent a <i>component</i> of the Album entity, if it is assumed that Tracks can only be saved or retrieved from the database through the Album object. Unlike J2EE, Hibernate can switch databases.</p>
+<h2><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Hibernate_(framework)&amp;action=edit&amp;section=6" title="Edit section: History">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Hibernate was started in 2001 by Gavin King with colleagues from Cirrus Technologies as an alternative to using EJB2-style entity beans. The original goal was to offer better persistence capabilities than those offered by EJB2; by simplifying the complexities and supplementing certain missing features.</p>
+<p>In early 2003, the Hibernate development team began Hibernate2 releases, which offered many significant improvements over the first release.</p>
+<p><a href="https://en.wikipedia.org/wiki/JBoss_(company)" title="JBoss (company)">JBoss, Inc.</a> (now part of <a href="https://en.wikipedia.org/wiki/Red_Hat" title="Red Hat">Red Hat</a>) later hired the lead Hibernate developers in order to further its development.</p>
+<p>In 2005, Hibernate version 3.0 was released. Key features included a new Interceptor/Callback architecture, user defined filters, and JDK 5.0 <a href="Java_annotation.html" title="Java annotation">Annotations</a> (Java's <a href="https://en.wikipedia.org/wiki/Metadata" title="Metadata">metadata</a> feature). As of 2010<sup class="plainlinks noprint asof-tag update" style="display:none;"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Hibernate_(framework)&amp;action=edit">[update]</a></sup>, Hibernate 3 (version 3.5.0 and up) was a certified implementation of the <a href="Java_Persistence_API.html#JPA_2.0" title="Java Persistence API">Java Persistence API 2.0</a> specification via a wrapper for the Core module which provides conformity with the <a rel="nofollow" class="external text" href="http://jcp.org/en/jsr/detail?id=317">JSR 317</a> standard.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">[2]</a></sup></p>
+<p>In Dec 2011, Hibernate Core 4.0.0 Final was released. This includes new features such as multi-tenancy support, introduction of ServiceRegistry (a major change in how Hibernate builds and manages "services"), better session opening from SessionFactory, improved integration via <i>org.hibernate.integrator.spi.Integrator</i> and auto discovery, <a href="https://en.wikipedia.org/wiki/Internationalization_and_localization" title="Internationalization and localization">internationalization</a> support, message codes in logging, and a more distinction between the API, SPI or implementation classes.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">[3]</a></sup></p>
+<p>In Dec 2012, Hibernate ORM 4.1.9 Final was released.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">[4]</a></sup></p>
+<p>In Mar 2013, Hibernate ORM 4.2 Final was released.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">[5]</a></sup></p>
+<p>In Dec 2013, Hibernate ORM 4.3.0 Final was released.<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">[6]</a></sup> It features <a href="Java_Persistence_API.html#JPA_2.1" title="Java Persistence API">Java Persistence API 2.1</a>.<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">[7]</a></sup></p>
+<p>In Sep 2015, Hibernate ORM 5.0.2 Final was released. It has improved bootstrapping, hibernate-java8, hibernate-spatial, Karaf support.</p>
+<h2><span class="mw-headline" id="Application_programming_interface">Application programming interface</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Hibernate_(framework)&amp;action=edit&amp;section=7" title="Edit section: Application programming interface">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The Hibernate API is provided in the <a href="Java_package.html" title="Java package">Java package</a> org.hibernate.<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">[8]</a></sup></p>
+<h3><span class="mw-headline" id="org.hibernate.SessionFactory_interface"><a rel="nofollow" class="external text" href="http://docs.jboss.org/hibernate/stable/core/javadocs/org/hibernate/SessionFactory.html">org.hibernate.SessionFactory</a> interface</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Hibernate_(framework)&amp;action=edit&amp;section=8" title="Edit section: org.hibernate.SessionFactory interface">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h3><span class="mw-headline" id="org.hibernate.Session_interface">org.hibernate.Session interface</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Hibernate_(framework)&amp;action=edit&amp;section=9" title="Edit section: org.hibernate.Session interface">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The org.hibernate.Session interface<sup id="cite_ref-9" class="reference"><a href="#cite_note-9">[9]</a></sup> represents a Hibernate session, i.e., the main point of the manipulation performed on the database entities. The latter activities include (among the other things) managing the persistence state (<a href="https://en.wikipedia.org/wiki/Transient_(computer_programming)" title="Transient (computer programming)">transient</a>, <a href="Java_Persistence_API.html" title="Java Persistence API">persisted</a>, detached<sup class="noprint Inline-Template" style="margin-left:0.1em; white-space:nowrap;">[<i><a href="https://en.wikipedia.org/wiki/Wikipedia:Please_clarify" title="Wikipedia:Please clarify"><span title="The text near this tag may need clarification or removal of jargon. (June 2011)">clarification needed</span></a></i>]</sup>) of the objects, fetching the persisted ones from the database and the management of the transaction demarcation<sup class="noprint Inline-Template" style="margin-left:0.1em; white-space:nowrap;">[<i><a href="https://en.wikipedia.org/wiki/Wikipedia:Please_clarify" title="Wikipedia:Please clarify"><span title="The text near this tag may need clarification or removal of jargon. (June 2011)">clarification needed</span></a></i>]</sup>.</p>
+<p>A session is intended to last as long as the logical transaction on the database. Due to the latter feature, Session implementations are not expected to be thread safe nor to be used by multiple clients.</p>
+<h2><span class="mw-headline" id="Software_components">Software components</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Hibernate_(framework)&amp;action=edit&amp;section=10" title="Edit section: Software components">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The Hibernate software includes the following components:<sup id="cite_ref-10" class="reference"><a href="#cite_note-10">[10]</a></sup></p>
+<ul>
+<li>Hibernate ORM (known as Hibernate Core before release 4.1<sup id="cite_ref-11" class="reference"><a href="#cite_note-11">[11]</a></sup>) – the base software for an object-relational mapping solution for Java environments<sup id="cite_ref-12" class="reference"><a href="#cite_note-12">[12]</a></sup></li>
+<li>Hibernate Annotations (merged into Hibernate Core/ORM since version 3.6<sup id="cite_ref-13" class="reference"><a href="#cite_note-13">[13]</a></sup>) – metadata that governs the transformation of data between the object-oriented model and the relational database model according to the JSR 317 <a href="Java_Persistence_API.html" title="Java Persistence API">Java Persistence API</a> (JPA 2)<sup id="cite_ref-14" class="reference"><a href="#cite_note-14">[14]</a></sup></li>
+<li>Hibernate EntityManager – together with Hibernate Annotations, a wrapper that implements a JSR 317 <a href="Java_Persistence_API.html" title="Java Persistence API">Java Persistence API</a> (JPA 2) persistence solution on top of Hibernate Core<sup id="cite_ref-15" class="reference"><a href="#cite_note-15">[15]</a></sup></li>
+<li>Hibernate Envers – auditing and versioning of persistent classes<sup id="cite_ref-16" class="reference"><a href="#cite_note-16">[16]</a></sup></li>
+<li>Hibernate OGM (Object/Grid Mapper) – an extension to store data in a <a href="https://en.wikipedia.org/wiki/NoSQL" title="NoSQL">NoSQL</a> store<sup id="cite_ref-17" class="reference"><a href="#cite_note-17">[17]</a></sup></li>
+<li>Hibernate Shards – <a href="https://en.wikipedia.org/wiki/Shard_(database_architecture)" title="Shard (database architecture)">horizontal partitioning</a> for multiple relational databases<sup id="cite_ref-18" class="reference"><a href="#cite_note-18">[18]</a></sup>
+<ul>
+<li>While Hibernate Shards is not compatible with 4.x releases of Hibernate Core, some of the Shards capability was integrated into Core in the 4.0 release</li>
+</ul>
+</li>
+<li>Hibernate Search – integrates the full text library functionality from <a href="https://en.wikipedia.org/wiki/Apache_Lucene" title="Apache Lucene">Apache Lucene</a> in the Hibernate and JPA model<sup id="cite_ref-19" class="reference"><a href="#cite_note-19">[19]</a></sup></li>
+<li>Hibernate Tools – a set of tools implemented as a suite of <a href="Eclipse_(software).html" title="Eclipse (software)">Eclipse</a> plugins and <a href="https://en.wikipedia.org/wiki/Ant_(software)" class="mw-redirect" title="Ant (software)">Ant</a> tasks included in <a href="https://en.wikipedia.org/wiki/JBoss_Developer_Studio" title="JBoss Developer Studio">JBoss Developer Studio</a><sup id="cite_ref-20" class="reference"><a href="#cite_note-20">[20]</a></sup></li>
+<li>Hibernate Validator – the <a href="https://en.wikipedia.org/wiki/Reference_implementation" title="Reference implementation">reference implementation</a> of JSR 303 <a href="https://en.wikipedia.org/wiki/Bean_Validation" title="Bean Validation">Bean Validation</a><sup id="cite_ref-21" class="reference"><a href="#cite_note-21">[21]</a></sup></li>
+<li>Hibernate Metamodel Generator – an annotation processor that creates JSR 317 <a href="Java_Persistence_API.html" title="Java Persistence API">Java Persistence API</a> (JPA 2) static metamodel classes using the JSR 269 <a href="Metadata_facility_for_Java.html" title="Metadata facility for Java">Pluggable Annotation Processing API</a><sup id="cite_ref-22" class="reference"><a href="#cite_note-22">[22]</a></sup></li>
+<li><a href="https://en.wikipedia.org/wiki/NHibernate" title="NHibernate">NHibernate</a> – an object-relational mapping solution for the <a href="https://en.wikipedia.org/wiki/.NET_Framework" title=".NET Framework">.NET Framework</a><sup id="cite_ref-23" class="reference"><a href="#cite_note-23">[23]</a></sup></li>
+</ul>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Hibernate_(framework)&amp;action=edit&amp;section=11" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div role="navigation" aria-label="Portals" class="noprint portal plainlist tright" style="margin:0.5em 0 0.5em 1em;border:solid #aaa 1px">
+<ul style="display:table;box-sizing:border-box;padding:0.1em;max-width:175px;background:#f9f9f9;font-size:85%;line-height:110%;font-style:italic;font-weight:bold">
+<li style="display:table-row"><span style="display:table-cell;padding:0.2em;vertical-align:middle;text-align:center"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_(2009).svg/28px-Free_and_open-source_software_logo_(2009).svg.png" width="28" height="28" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/42px-Free_and_open-source_software_logo_%282009%29.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/56px-Free_and_open-source_software_logo_%282009%29.svg.png 2x" data-file-width="512" data-file-height="512" /></span><span style="display:table-cell;padding:0.2em 0.2em 0.2em 0.3em;vertical-align:middle"><a href="https://en.wikipedia.org/wiki/Portal:Free_software" class="mw-redirect" title="Portal:Free software">Free software portal</a></span></li>
+<li style="display:table-row"><span style="display:table-cell;padding:0.2em;vertical-align:middle;text-align:center"><a href="https://en.wikipedia.org/wiki/File:Wave.svg" class="image"><img alt="icon" src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/15px-Wave.svg.png" width="15" height="28" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/23px-Wave.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/31px-Wave.svg.png 2x" data-file-width="226" data-file-height="407" /></a></span><span style="display:table-cell;padding:0.2em 0.2em 0.2em 0.3em;vertical-align:middle"><a href="https://en.wikipedia.org/wiki/Portal:Java" title="Portal:Java">Java portal</a></span></li>
+</ul>
+</div>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/List_of_JBoss_software" title="List of JBoss software">List of JBoss software</a></li>
+<li><a href="https://en.wikipedia.org/wiki/List_of_object-relational_mapping_software" title="List of object-relational mapping software">List of object-relational mapping software</a></li>
+<li><a href="https://en.wikipedia.org/wiki/NHibernate" title="NHibernate">NHibernate</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Serialization" title="Serialization">Serialization</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Service_Data_Object" class="mw-redirect" title="Service Data Object">Service Data Object</a></li>
+<li><a href="https://en.wikipedia.org/wiki/MySQL" title="MySQL">MySQL</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_Cassandra" title="Apache Cassandra">Apache Cassandra</a></li>
+<li><a href="Spring_Framework.html" title="Spring Framework">Spring Framework</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Hibernate_(framework)&amp;action=edit&amp;section=12" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist columns references-column-width" style="-moz-column-width: 35em; -webkit-column-width: 35em; column-width: 35em; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://community.jboss.org/wiki/EqualsAndHashCode">"Equals and HashCode"</a>. JBoss Community.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHibernate+%28framework%29&amp;rft.btitle=Equals+and+HashCode&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fcommunity.jboss.org%2Fwiki%2FEqualsAndHashCode&amp;rft.pub=JBoss+Community&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://in.relation.to/Bloggers/Hibernate350FinalRelease">"Hibernate 3.5.0-Final release"</a>. In Relation To...</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHibernate+%28framework%29&amp;rft.btitle=Hibernate+3.5.0-Final+release&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fin.relation.to%2FBloggers%2FHibernate350FinalRelease&amp;rft.pub=In+Relation+To...&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://www.hibernate.org/orm/downloads/">http://www.hibernate.org/orm/downloads/</a></span></li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://in.relation.to/23792.lace">http://in.relation.to/23792.lace</a></span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://grepcode.com/snapshot/repository.jboss.org/nexus/content/repositories/releases/org.hibernate/hibernate-core/4.2.0.Final">http://grepcode.com/snapshot/repository.jboss.org/nexus/content/repositories/releases/org.hibernate/hibernate-core/4.2.0.Final</a></span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://grepcode.com/snapshot/repository.jboss.org/nexus/content/repositories/releases/org.hibernate/hibernate-core/4.3.0.Final">http://grepcode.com/snapshot/repository.jboss.org/nexus/content/repositories/releases/org.hibernate/hibernate-core/4.3.0.Final</a></span></li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://hibernate.org/orm/downloads/">http://hibernate.org/orm/downloads/</a></span></li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://docs.jboss.org/hibernate/stable/core/javadocs/index.html?overview-summary.html">http://docs.jboss.org/hibernate/stable/core/javadocs/index.html?overview-summary.html</a></span></li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://docs.jboss.org/hibernate/stable/core/javadocs/org/hibernate/Session.html">http://docs.jboss.org/hibernate/stable/core/javadocs/org/hibernate/Session.html</a></span></li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.hibernate.org/">"Hibernate: Relational Persistence for Java and .NET"</a>. JBoss Community.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHibernate+%28framework%29&amp;rft.btitle=Hibernate%3A+Relational+Persistence+for+Java+and+.NET&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.hibernate.org%2F&amp;rft.pub=JBoss+Community&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://in.relation.to/Bloggers/HibernateORM410Release">"Hibernate ORM 4.1.0 Release"</a>. JBoss Community.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHibernate+%28framework%29&amp;rft.btitle=Hibernate+ORM+4.1.0+Release&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fin.relation.to%2FBloggers%2FHibernateORM410Release&amp;rft.pub=JBoss+Community&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://docs.jboss.org/hibernate/orm/4.1/manual/en-US/html/">"HIBERNATE - Relational Persistence for Idiomatic Java"</a>. JBoss Community.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHibernate+%28framework%29&amp;rft.btitle=HIBERNATE+-+Relational+Persistence+for+Idiomatic+Java&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fdocs.jboss.org%2Fhibernate%2Form%2F4.1%2Fmanual%2Fen-US%2Fhtml%2F&amp;rft.pub=JBoss+Community&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-13">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://in.relation.to/Bloggers/NoMoreHibernateannotationsModule">"No more hibernate-annotations module"</a>. JBoss Community.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHibernate+%28framework%29&amp;rft.btitle=No+more+hibernate-annotations+module&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fin.relation.to%2FBloggers%2FNoMoreHibernateannotationsModule&amp;rft.pub=JBoss+Community&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-14"><span class="mw-cite-backlink"><b><a href="#cite_ref-14">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://docs.jboss.org/hibernate/annotations/3.5/reference/en/html_single/">"Hibernate Annotations"</a>. JBoss Community.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHibernate+%28framework%29&amp;rft.btitle=Hibernate+Annotations&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fdocs.jboss.org%2Fhibernate%2Fannotations%2F3.5%2Freference%2Fen%2Fhtml_single%2F&amp;rft.pub=JBoss+Community&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-15">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://docs.jboss.org/hibernate/entitymanager/3.6/reference/en/html_single/">"Hibernate EntityManager"</a>. JBoss Community.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHibernate+%28framework%29&amp;rft.btitle=Hibernate+EntityManager&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fdocs.jboss.org%2Fhibernate%2Fentitymanager%2F3.6%2Freference%2Fen%2Fhtml_single%2F&amp;rft.pub=JBoss+Community&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-16"><span class="mw-cite-backlink"><b><a href="#cite_ref-16">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://docs.jboss.org/hibernate/envers/3.6/reference/en-US/html_single/">"Hibernate Envers – Easy Entity Auditing"</a>. JBoss Community.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHibernate+%28framework%29&amp;rft.btitle=Hibernate+Envers+%93+Easy+Entity+Auditing&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fdocs.jboss.org%2Fhibernate%2Fenvers%2F3.6%2Freference%2Fen-US%2Fhtml_single%2F&amp;rft.pub=JBoss+Community&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-17"><span class="mw-cite-backlink"><b><a href="#cite_ref-17">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://hibernate.org/ogm/">"Hibernate OGM"</a>. JBoss Community.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHibernate+%28framework%29&amp;rft.btitle=Hibernate+OGM&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fhibernate.org%2Fogm%2F&amp;rft.pub=JBoss+Community&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-18"><span class="mw-cite-backlink"><b><a href="#cite_ref-18">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.hibernate.org/subprojects/shards.html">"Hibernate Shards"</a>. JBoss Community.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHibernate+%28framework%29&amp;rft.btitle=Hibernate+Shards&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.hibernate.org%2Fsubprojects%2Fshards.html&amp;rft.pub=JBoss+Community&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-19"><span class="mw-cite-backlink"><b><a href="#cite_ref-19">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.hibernate.org/search/">"Hibernate Search"</a>. JBoss Community.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHibernate+%28framework%29&amp;rft.btitle=Hibernate+Search&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.hibernate.org%2Fsearch%2F&amp;rft.pub=JBoss+Community&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-20"><span class="mw-cite-backlink"><b><a href="#cite_ref-20">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.hibernate.org/tools/">"Hibernate Tools for Eclipse and Ant"</a>. JBoss Community.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHibernate+%28framework%29&amp;rft.btitle=Hibernate+Tools+for+Eclipse+and+Ant&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.hibernate.org%2Ftools%2F&amp;rft.pub=JBoss+Community&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-21"><span class="mw-cite-backlink"><b><a href="#cite_ref-21">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.hibernate.org/validator/">"Hibernate Validator"</a>. JBoss Community.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHibernate+%28framework%29&amp;rft.btitle=Hibernate+Validator&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.hibernate.org%2Fvalidator%2F&amp;rft.pub=JBoss+Community&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-22"><span class="mw-cite-backlink"><b><a href="#cite_ref-22">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.hibernate.org/subprojects/jpamodelgen.html">"Hibernate Metamodel Generator"</a>. JBoss Community.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHibernate+%28framework%29&amp;rft.btitle=Hibernate+Metamodel+Generator&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.hibernate.org%2Fsubprojects%2Fjpamodelgen.html&amp;rft.pub=JBoss+Community&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-23"><span class="mw-cite-backlink"><b><a href="#cite_ref-23">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://nhforge.org/">"NHibernate"</a>. NHibernate Forge.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHibernate+%28framework%29&amp;rft.btitle=NHibernate&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fnhforge.org%2F&amp;rft.pub=NHibernate+Forge&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="Bibliography">Bibliography</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Hibernate_(framework)&amp;action=edit&amp;section=13" title="Edit section: Bibliography">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="refbegin columns references-column-width" style="-moz-column-width: 35em; -webkit-column-width: 35em; column-width: 35em;">
+<ul>
+<li><cite id="CITEREFLinwoodMinter2010" class="citation">Linwood, Jeff; Minter, Dave (May 28, 2010), <a rel="nofollow" class="external text" href="http://www.apress.com/book/view/9781430228509"><i>Beginning Hibernate</i></a> (Second ed.), <a href="https://en.wikipedia.org/wiki/Apress" title="Apress">Apress</a>, p.&#160;400, <a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="https://en.wikipedia.org/wiki/Special:BookSources/1-4302-2850-4" title="Special:BookSources/1-4302-2850-4">1-4302-2850-4</a></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHibernate+%28framework%29&amp;rft.aufirst=Jeff&amp;rft.aulast=Linwood&amp;rft.au=Minter%2C+Dave&amp;rft.btitle=Beginning+Hibernate&amp;rft.date=2010-05-28&amp;rft.edition=Second&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.apress.com%2Fbook%2Fview%2F9781430228509&amp;rft.isbn=1-4302-2850-4&amp;rft.pages=400&amp;rft.pub=Apress&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite id="CITEREFBernardGriffin2008" class="citation">Bernard, Emmanuel; Griffin, John (December 30, 2008), <i>Hibernate Search in Action</i> (First ed.), <a href="https://en.wikipedia.org/wiki/Manning_Publications" title="Manning Publications">Manning Publications</a>, p.&#160;488, <a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="https://en.wikipedia.org/wiki/Special:BookSources/1-933988-64-9" title="Special:BookSources/1-933988-64-9">1-933988-64-9</a></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHibernate+%28framework%29&amp;rft.aufirst=Emmanuel&amp;rft.au=Griffin%2C+John&amp;rft.aulast=Bernard&amp;rft.btitle=Hibernate+Search+in+Action&amp;rft.date=2008-12-30&amp;rft.edition=First&amp;rft.genre=book&amp;rft.isbn=1-933988-64-9&amp;rft.pages=488&amp;rft.pub=Manning+Publications&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite id="CITEREFElliottO.27Brien2008" class="citation">Elliott, James; O'Brien, Tim (April 22, 2008), <a rel="nofollow" class="external text" href="http://oreilly.com/catalog/9780596517724/"><i>Harnessing Hibernate</i></a> (First ed.), <a href="https://en.wikipedia.org/wiki/O%27Reilly_Media" title="O'Reilly Media">O'Reilly Media</a>, p.&#160;380, <a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="https://en.wikipedia.org/wiki/Special:BookSources/0-596-51772-6" title="Special:BookSources/0-596-51772-6">0-596-51772-6</a></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHibernate+%28framework%29&amp;rft.aufirst=James&amp;rft.aulast=Elliott&amp;rft.au=O%27Brien%2C+Tim&amp;rft.btitle=Harnessing+Hibernate&amp;rft.date=2008-04-22&amp;rft.edition=First&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Foreilly.com%2Fcatalog%2F9780596517724%2F&amp;rft.isbn=0-596-51772-6&amp;rft.pages=380&amp;rft.pub=O%27Reilly+Media&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite id="CITEREFKingChristian2006" class="citation">King, Gavin; Christian, Bauer (November 24, 2006), <i>Java Persistence with Hibernate</i> (Second ed.), <a href="https://en.wikipedia.org/wiki/Manning_Publications" title="Manning Publications">Manning Publications</a>, p.&#160;880, <a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="https://en.wikipedia.org/wiki/Special:BookSources/1-932394-88-5" title="Special:BookSources/1-932394-88-5">1-932394-88-5</a></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHibernate+%28framework%29&amp;rft.au=Christian%2C+Bauer&amp;rft.aufirst=Gavin&amp;rft.aulast=King&amp;rft.btitle=Java+Persistence+with+Hibernate&amp;rft.date=2006-11-24&amp;rft.edition=Second&amp;rft.genre=book&amp;rft.isbn=1-932394-88-5&amp;rft.pages=880&amp;rft.pub=Manning+Publications&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite id="CITEREFLinwoodMinter2006" class="citation">Linwood, Jeff; Minter, Dave (August 25, 2006), <a rel="nofollow" class="external text" href="http://www.apress.com/book/view/9781590596937"><i>Beginning Hibernate: From Novice to Professional</i></a> (Third ed.), <a href="https://en.wikipedia.org/wiki/Apress" title="Apress">Apress</a>, p.&#160;360, <a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="https://en.wikipedia.org/wiki/Special:BookSources/1-59059-693-5" title="Special:BookSources/1-59059-693-5">1-59059-693-5</a></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHibernate+%28framework%29&amp;rft.aufirst=Jeff&amp;rft.aulast=Linwood&amp;rft.au=Minter%2C+Dave&amp;rft.btitle=Beginning+Hibernate%3A+From+Novice+to+Professional&amp;rft.date=2006-08-25&amp;rft.edition=Third&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.apress.com%2Fbook%2Fview%2F9781590596937&amp;rft.isbn=1-59059-693-5&amp;rft.pages=360&amp;rft.pub=Apress&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite id="CITEREFMinterLinwood2005" class="citation">Minter, Dave; Linwood, Jeff (June 27, 2005), <a rel="nofollow" class="external text" href="http://www.apress.com/book/view/1590595114"><i>Pro Hibernate 3</i></a> (First ed.), <a href="https://en.wikipedia.org/wiki/Apress" title="Apress">Apress</a>, p.&#160;242, <a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="https://en.wikipedia.org/wiki/Special:BookSources/1-59059-511-4" title="Special:BookSources/1-59059-511-4">1-59059-511-4</a></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHibernate+%28framework%29&amp;rft.aufirst=Dave&amp;rft.aulast=Minter&amp;rft.au=Linwood%2C+Jeff&amp;rft.btitle=Pro+Hibernate+3&amp;rft.date=2005-06-27&amp;rft.edition=First&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.apress.com%2Fbook%2Fview%2F1590595114&amp;rft.isbn=1-59059-511-4&amp;rft.pages=242&amp;rft.pub=Apress&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite id="CITEREFIverson2004" class="citation">Iverson, Will (December 2, 2004), <i>Hibernate: A J2EE Developer's Guide</i> (First ed.), <a href="https://en.wikipedia.org/wiki/Addison_Wesley" class="mw-redirect" title="Addison Wesley">Addison Wesley</a>, p.&#160;384, <a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="https://en.wikipedia.org/wiki/Special:BookSources/0-321-26819-9" title="Special:BookSources/0-321-26819-9">0-321-26819-9</a></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHibernate+%28framework%29&amp;rft.aufirst=Will&amp;rft.aulast=Iverson&amp;rft.btitle=Hibernate%3A+A+J2EE+Developer%27s+Guide&amp;rft.date=2004-12-02&amp;rft.edition=First&amp;rft.genre=book&amp;rft.isbn=0-321-26819-9&amp;rft.pages=384&amp;rft.pub=Addison+Wesley&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite id="CITEREFPughGradecki2004" class="citation">Pugh, Eric; Gradecki, Joseph D. (October 8, 2004), <a rel="nofollow" class="external text" href="http://p2p.wrox.com/book-professional-hibernate-148/"><i>Professional Hibernate (Programmer to Programmer)</i></a> (First ed.), <a href="https://en.wikipedia.org/wiki/Wrox_Press" title="Wrox Press">Wrox</a>, p.&#160;456, <a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="https://en.wikipedia.org/wiki/Special:BookSources/0-7645-7677-1" title="Special:BookSources/0-7645-7677-1">0-7645-7677-1</a></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHibernate+%28framework%29&amp;rft.aufirst=Eric&amp;rft.au=Gradecki%2C+Joseph+D.&amp;rft.aulast=Pugh&amp;rft.btitle=Professional+Hibernate+%28Programmer+to+Programmer%29&amp;rft.date=2004-10-08&amp;rft.edition=First&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fp2p.wrox.com%2Fbook-professional-hibernate-148%2F&amp;rft.isbn=0-7645-7677-1&amp;rft.pages=456&amp;rft.pub=Wrox&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite id="CITEREFKingChristian2004" class="citation">King, Gavin; Christian, Bauer (August 1, 2004), <i>Hibernate In Action</i> (Second ed.), <a href="https://en.wikipedia.org/wiki/Manning_Publications" title="Manning Publications">Manning Publications</a>, p.&#160;400, <a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="https://en.wikipedia.org/wiki/Special:BookSources/1-932394-15-X" title="Special:BookSources/1-932394-15-X">1-932394-15-X</a></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHibernate+%28framework%29&amp;rft.au=Christian%2C+Bauer&amp;rft.aufirst=Gavin&amp;rft.aulast=King&amp;rft.btitle=Hibernate+In+Action&amp;rft.date=2004-08-01&amp;rft.edition=Second&amp;rft.genre=book&amp;rft.isbn=1-932394-15-X&amp;rft.pages=400&amp;rft.pub=Manning+Publications&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite id="CITEREFJames2004" class="citation">James, Elliott (May 10, 2004), <a rel="nofollow" class="external text" href="http://oreilly.com/catalog/9780596006969/"><i>Hibernate: A Developer's Notebook</i></a> (First ed.), <a href="https://en.wikipedia.org/wiki/O%27Reilly_Media" title="O'Reilly Media">O'Reilly Media</a>, p.&#160;190, <a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="https://en.wikipedia.org/wiki/Special:BookSources/0-596-00696-9" title="Special:BookSources/0-596-00696-9">0-596-00696-9</a></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHibernate+%28framework%29&amp;rft.aufirst=Elliott&amp;rft.aulast=James&amp;rft.btitle=Hibernate%3A+A+Developer%27s+Notebook&amp;rft.date=2004-05-10&amp;rft.edition=First&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Foreilly.com%2Fcatalog%2F9780596006969%2F&amp;rft.isbn=0-596-00696-9&amp;rft.pages=190&amp;rft.pub=O%27Reilly+Media&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+</ul>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Hibernate_(framework)&amp;action=edit&amp;section=14" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><span class="official-website"><span class="url"><a rel="nofollow" class="external text" href="http://www.hibernate.org/">Official website</a></span></span></li>
+<li><a rel="nofollow" class="external text" href="http://www.javafree.org/artigo/871462/Interview-with-Gavin-King-founder-of-Hibernate.html">Interview with Gavin King, founder of Hibernate</a></li>
+<li><a rel="nofollow" class="external text" href="http://docs.jboss.org/hibernate/stable/core/manual/en-US/html/">Hibernate Reference Documentation</a></li>
+<li><a rel="nofollow" class="external text" href="http://code.google.com/p/scale4j/">scale4j is highly scalable domain oriented data-distributed platform for java built on top of hibernate</a></li>
+<li><a rel="nofollow" class="external text" href="http://torpedoquery.org/">TorpedoQuery - Type safe Hibernate query builder</a></li>
+<li><a rel="nofollow" class="external text" href="http://java360.co.in/best-recommended-books-for-hibernate-framework/">Best Recommended books for Hibernate framework</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.javaquery.com/2014/10/how-hibernate-interpret-order-of-join.html">How Hibernate interpret Order of JOIN on a Table?</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.javaquery.com/2014/09/when-hibernate-uses-inner-join.html">When Hibernate uses INNER JOIN?</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.javaquery.com/2014/01/how-to-call-stored-procedure-in.html">How To Call Stored Procedure In Hibernate</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.javaquery.com/2013/12/how-to-create-hibernate-query-log.html">How to create Hibernate query log?</a></li>
+</ul>
+<h3><span class="mw-headline" id="Further_reading">Further reading</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Hibernate_(framework)&amp;action=edit&amp;section=15" title="Edit section: Further reading">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://memorynotfound.com/category/database/hibernate/">Java Hibernate Tutorials</a></li>
+<li><a rel="nofollow" class="external text" href="http://howtodoinjava.com/hibernate-tutorials/">Hibernate Tutorials</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.mkyong.com/tutorials/hibernate-tutorials/">Hibernate Tutorial</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.javatips.net/blog/2011/12/hibernate-annotations-tutorial">Hibernate Annotations Tutorial</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.javatips.net/blog/2012/12/java-persistence-jpa-2-0-tutorial-with-hibernate">Java Persistence (JPA 2.0) Tutorial With Hibernate</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.javacodegeeks.com/2015/03/hibernate-tutorial.html">Hibernate Tutorial by Java Code Geeks</a></li>
+<li><a rel="nofollow" class="external text" href="http://wisenitsolutions.com/IT-Courses/JPA-Hibernate-Training">Hibernate Training</a></li>
+</ul>
+<div role="navigation" class="navbox" aria-labelledby="Java_Persistence_API" style="padding:3px">
+<table class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="https://en.wikipedia.org/wiki/Template:Java_Persistence_API" title="Template:Java Persistence API"><abbr title="View this template" style=";;background:none transparent;border:none;">v</abbr></a></li>
+<li class="nv-talk"><a href="https://en.wikipedia.org/wiki/Template_talk:Java_Persistence_API" title="Template talk:Java Persistence API"><abbr title="Discuss this template" style=";;background:none transparent;border:none;">t</abbr></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Java_Persistence_API&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;">e</abbr></a></li>
+</ul>
+</div>
+<div id="Java_Persistence_API" style="font-size:114%"><a href="Java_Persistence_API.html" title="Java Persistence API">Java Persistence API</a></div>
+</th>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td colspan="2" class="navbox-list navbox-odd hlist" style="width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="DataNucleus.html" title="DataNucleus">DataNucleus</a></li>
+<li><a href="EclipseLink.html" title="EclipseLink">EclipseLink</a></li>
+<li><a href="Hibernate_(Java).html" class="mw-redirect" title="Hibernate (Java)">Hibernate</a></li>
+<li><a href="https://en.wikipedia.org/wiki/ObjectDB" title="ObjectDB">ObjectDB</a></li>
+<li><a href="Apache_OpenJPA.html" title="Apache OpenJPA">OpenJPA</a></li>
+<li><a href="TopLink.html" title="TopLink">TopLink</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div role="navigation" class="navbox" aria-labelledby="Java" style="padding:3px">
+<table class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit">
+<tr>
+<th scope="col" class="navbox-title" colspan="3">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="https://en.wikipedia.org/wiki/Template:Java_(software_platform)" title="Template:Java (software platform)"><abbr title="View this template" style=";;background:none transparent;border:none;">v</abbr></a></li>
+<li class="nv-talk"><a href="https://en.wikipedia.org/wiki/Template_talk:Java_(software_platform)" title="Template talk:Java (software platform)"><abbr title="Discuss this template" style=";;background:none transparent;border:none;">t</abbr></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Java_(software_platform)&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;">e</abbr></a></li>
+</ul>
+</div>
+<div id="Java" style="font-size:114%"><a href="Java_(software_platform).html" title="Java (software platform)">Java</a></div>
+</th>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Java platforms</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Java_(programming_language).html" title="Java (programming language)">Java language</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Java_virtual_machine" title="Java virtual machine">JVM</a></li>
+<li><a href="Java_Platform%2c_Micro_Edition.html" title="Java Platform, Micro Edition">Micro Edition</a></li>
+<li><a href="Java_Platform%2c_Standard_Edition.html" title="Java Platform, Standard Edition">Standard Edition</a></li>
+<li><a href="Java_Platform%2c_Enterprise_Edition.html" title="Java Platform, Enterprise Edition">Enterprise Edition</a></li>
+<li><a href="Java_Card.html" title="Java Card">Java Card</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Android_software_development#SDK" title="Android software development">Android SDK</a></li>
+</ul>
+</div>
+</td>
+<td class="navbox-image" rowspan="13" style="width:0%;padding:0px 0px 0px 2px">
+<div><a href="https://en.wikipedia.org/wiki/File:Wave.svg" class="image"><img alt="Wave.svg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/75px-Wave.svg.png" width="75" height="135" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/113px-Wave.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/150px-Wave.svg.png 2x" data-file-width="226" data-file-height="407" /></a></div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Oracle technologies</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Squawk_virtual_machine.html" title="Squawk virtual machine">Squawk</a></li>
+<li><a href="Java_Development_Kit.html" title="Java Development Kit">Java Development Kit</a></li>
+<li><a href="OpenJDK.html" title="OpenJDK">OpenJDK</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Java_virtual_machine" title="Java virtual machine">Java virtual machine</a></li>
+<li><a href="JavaFX.html" title="JavaFX">JavaFX</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Maxine_Virtual_Machine" title="Maxine Virtual Machine">Maxine VM</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Platform technologies</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Java_applet.html" title="Java applet">Applets</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Java_servlet" title="Java servlet">Servlets</a></li>
+<li><a href="MIDlet.html" title="MIDlet">MIDlets</a></li>
+<li><a href="JavaServer_Pages.html" title="JavaServer Pages">JSP</a></li>
+<li><a href="Java_Web_Start.html" title="Java Web Start">Web Start (JNLP)</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Major third-party technologies</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Blackdown_Java.html" title="Blackdown Java">Blackdown</a></li>
+<li><a href="Eclipse_(software).html" title="Eclipse (software)">Eclipse</a></li>
+<li><a href="GNU_Classpath.html" title="GNU Classpath">GNU Classpath</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Google_Web_Toolkit" title="Google Web Toolkit">GWT</a></li>
+<li><a href="Apache_Harmony.html" title="Apache Harmony">Harmony</a></li>
+<li><a href="Hibernate_(Java).html" class="mw-redirect" title="Hibernate (Java)">Hibernate</a></li>
+<li><a href="IcedTea.html" title="IcedTea">IcedTea</a></li>
+<li><a href="Jazelle.html" title="Jazelle">Jazelle</a></li>
+<li><a href="Spring_Framework.html" title="Spring Framework">Spring</a></li>
+<li><a href="Apache_Struts.html" class="mw-redirect" title="Apache Struts">Struts</a></li>
+<li><a href="TopLink.html" title="TopLink">TopLink</a></li>
+<li><a href="https://en.wikipedia.org/wiki/WildFly" title="WildFly">WildFly</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">History</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Java_version_history.html" title="Java version history">Java version history</a></li>
+<li><a href="Java_Community_Process.html" title="Java Community Process">Java Community Process</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sun_Microsystems" title="Sun Microsystems">Sun Microsystems</a></li>
+<li><a href="Free_Java_implementations.html" title="Free Java implementations">Free Java implementations</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="List_of_JVM_languages.html" title="List of JVM languages">Major programming languages</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="BeanShell.html" title="BeanShell">BeanShell</a></li>
+<li><a href="Clojure.html" title="Clojure">Clojure</a></li>
+<li><a href="Groovy_(programming_language).html" title="Groovy (programming language)">Groovy</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Oxygene_(programming_language)" title="Oxygene (programming language)">Oxygene</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Tcl/Java" title="Tcl/Java">Java Tcl</a></li>
+<li><a href="JRuby.html" title="JRuby">JRuby</a></li>
+<li><a href="Jython.html" title="Jython">Jython</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Kotlin_(programming_language)" title="Kotlin (programming language)">Kotlin</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Processing_(programming_language)" title="Processing (programming language)">Processing</a></li>
+<li><a href="Rhino_(JavaScript_engine).html" title="Rhino (JavaScript engine)">Rhino</a></li>
+<li><a href="Scala_(programming_language).html" title="Scala (programming language)">Scala</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Java conferences</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="JavaOne.html" title="JavaOne">JavaOne</a></li>
+<li><a href="Devoxx.html" title="Devoxx">Devoxx</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div role="navigation" class="navbox" aria-label="Navbox" style="padding:3px">
+<table class="nowraplinks hlist navbox-inner" style="border-spacing:0;background:transparent;color:inherit">
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Help:Authority_control" title="Help:Authority control">Authority control</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><span style="white-space:nowrap;"><a href="https://en.wikipedia.org/wiki/Integrated_Authority_File" title="Integrated Authority File">GND</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://d-nb.info/gnd/4785089-9">4785089-9</a></span></span></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1290
+Cached time: 20170112155841
+Cache expiry: 2592000
+Dynamic content: false
+CPU time usage: 0.268 seconds
+Real time usage: 0.349 seconds
+Preprocessor visited node count: 2223/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 76304/2097152 bytes
+Template argument size: 2589/2097152 bytes
+Highest expansion depth: 25/40
+Expensive parser function count: 4/500
+Lua time usage: 0.127/10.000 seconds
+Lua memory usage: 5.8 MB/50 MB
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  297.842      1 - -total
+ 36.03%  107.304      2 - Template:Infobox
+ 29.80%   88.761      1 - Template:Infobox_software
+ 25.13%   74.860      1 - Template:Reflist
+ 19.78%   58.927     16 - Template:Cite_web
+ 13.00%   38.705      2 - Template:Clarify
+ 11.54%   34.377      2 - Template:Fix-span
+ 10.96%   32.646     10 - Template:Citation
+  8.80%   26.223      1 - Template:Infobox_software/simple
+  6.08%   18.110      4 - Template:Category_handler
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:1329800-0!*!0!!en!4!* and timestamp 20170112155930 and revision id 759678581
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Hibernate_(framework)&amp;oldid=759678581">https://en.wikipedia.org/w/index.php?title=Hibernate_(framework)&amp;oldid=759678581</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Help_Category.html" title="Help:Category">Categories</a>: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Object-relational_mapping" title="Category:Object-relational mapping">Object-relational mapping</a></li><li><a href="Category_Java_platform.html" title="Category:Java platform">Java platform</a></li><li><a href="Category_Java_enterprise_platform.html" title="Category:Java enterprise platform">Java enterprise platform</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Red_Hat_software" title="Category:Red Hat software">Red Hat software</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Cross-platform_software" title="Category:Cross-platform software">Cross-platform software</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Persistence_frameworks" title="Category:Persistence frameworks">Persistence frameworks</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Pages_using_deprecated_image_syntax" title="Category:Pages using deprecated image syntax">Pages using deprecated image syntax</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Articles_containing_potentially_dated_statements_from_2010" title="Category:Articles containing potentially dated statements from 2010">Articles containing potentially dated statements from 2010</a></li><li><a href="https://en.wikipedia.org/wiki/Category:All_articles_containing_potentially_dated_statements" title="Category:All articles containing potentially dated statements">All articles containing potentially dated statements</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Wikipedia_articles_needing_clarification_from_June_2011" title="Category:Wikipedia articles needing clarification from June 2011">Wikipedia articles needing clarification from June 2011</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Official_website_different_in_Wikidata_and_Wikipedia" title="Category:Official website different in Wikidata and Wikipedia">Official website different in Wikidata and Wikipedia</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Wikipedia_articles_with_GND_identifiers" title="Category:Wikipedia articles with GND identifiers">Wikipedia articles with GND identifiers</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="Special_MyTalk.html" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="Special_MyContributions.html" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&amp;returnto=Hibernate+%28framework%29" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Hibernate+%28framework%29" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="https://en.wikipedia.org/wiki/Hibernate_(framework)"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+															<li  id="ca-talk"><span><a href="https://en.wikipedia.org/wiki/Talk:Hibernate_(framework)"  title="Discussion about the content page [t]" accesskey="t" rel="discussion">Talk</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="https://en.wikipedia.org/wiki/Hibernate_(framework)" >Read</a></span></li>
+															<li id="ca-edit"><span><a href="https://en.wikipedia.org/w/index.php?title=Hibernate_(framework)&amp;action=edit"  title="Edit this page [e]" accesskey="e">Edit</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="https://en.wikipedia.org/w/index.php?title=Hibernate_(framework)&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="https://en.wikipedia.org/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="Main_Page.html"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="Portal_Contents.html" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="Portal_Featured_content.html" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="Portal_Current_events.html" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="https://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="../../shop.wikimedia.org/index.html" title="Visit the Wikipedia store">Wikipedia store</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Interaction</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-help"><a href="Help_Contents.html" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="Wikipedia_About.html" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="Wikipedia_Community_portal.html" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="Wikipedia_Contact_us.html" title="How to contact Wikipedia">Contact page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="https://en.wikipedia.org/wiki/Special:WhatLinksHere/Hibernate_(framework)" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://en.wikipedia.org/wiki/Special:RecentChangesLinked/Hibernate_(framework)" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="Wikipedia_File_Upload_Wizard.html" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="https://en.wikipedia.org/w/index.php?title=Hibernate_(framework)&amp;oldid=759678581" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://en.wikipedia.org/w/index.php?title=Hibernate_(framework)&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q747866" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="https://en.wikipedia.org/w/index.php?title=Special:CiteThisPage&amp;page=Hibernate_%28framework%29&amp;id=759678581" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Print/export</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Hibernate+%28framework%29">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Hibernate+%28framework%29&amp;returnto=Hibernate+%28framework%29&amp;oldid=759678581&amp;writer=rdf2latex">Download as PDF</a></li><li id="t-print"><a href="https://en.wikipedia.org/w/index.php?title=Hibernate_(framework)&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-wikibase-otherprojects' aria-labelledby='p-wikibase-otherprojects-label'>
+			<h3 id='p-wikibase-otherprojects-label'>In other projects</h3>
+
+			<div class="body">
+									<ul>
+						<li class="wb-otherproject-link wb-otherproject-commons"><a href="https://commons.wikimedia.org/wiki/Category:Hibernate" hreflang="en">Wikimedia Commons</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Languages</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-ar"><a href="https://ar.wikipedia.org/wiki/هايبرنت" title="هايبرنت – Arabic" lang="ar" hreflang="ar" class="interlanguage-link-target">العربية</a></li><li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Hibernate" title="Hibernate – Catalan" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Hibernate" title="Hibernate – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Hibernate_(Framework)" title="Hibernate (Framework) – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-et"><a href="https://et.wikipedia.org/wiki/Hibernate" title="Hibernate – Estonian" lang="et" hreflang="et" class="interlanguage-link-target">Eesti</a></li><li class="interlanguage-link interwiki-el"><a href="https://el.wikipedia.org/wiki/Hibernate_Framework" title="Hibernate Framework – Greek" lang="el" hreflang="el" class="interlanguage-link-target">Ελληνικά</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Hibernate" title="Hibernate – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/هایبرنیت_(جاوا)" title="هایبرنیت (جاوا) – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Hibernate" title="Hibernate – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/하이버네이트" title="하이버네이트 – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Hibernate" title="Hibernate – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-he"><a href="https://he.wikipedia.org/wiki/Hibernate" title="Hibernate – Hebrew" lang="he" hreflang="he" class="interlanguage-link-target">עברית</a></li><li class="interlanguage-link interwiki-kk"><a href="https://kk.wikipedia.org/wiki/Hibernate_(Framework)" title="Hibernate (Framework) – Kazakh" lang="kk" hreflang="kk" class="interlanguage-link-target">Қазақша</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/Hibernate" title="Hibernate – Hungarian" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-mn"><a href="https://mn.wikipedia.org/wiki/Hibernate_(Java)" title="Hibernate (Java) – Mongolian" lang="mn" hreflang="mn" class="interlanguage-link-target">Монгол</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/Hibernate" title="Hibernate – Dutch" lang="nl" hreflang="nl" class="interlanguage-link-target">Nederlands</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/Hibernate" title="Hibernate – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Hibernate" title="Hibernate – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Hibernate" title="Hibernate – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/Hibernate_(библиотека)" title="Hibernate (библиотека) – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-tr"><a href="https://tr.wikipedia.org/wiki/Hibernate" title="Hibernate – Turkish" lang="tr" hreflang="tr" class="interlanguage-link-target">Türkçe</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/Hibernate" title="Hibernate – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/Hibernate" title="Hibernate – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q747866#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 12 January 2017, at 15:59.</li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="Wikipedia_Text_of_Creative_Commons_Attribution-ShareAlike_3.html">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="../../creativecommons.org/licenses/by-sa/3.0/index.html" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="../../wikimediafoundation.org/wiki/Terms_of_Use.html">Terms of Use</a> and <a href="../../wikimediafoundation.org/wiki/Privacy_policy.html">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="../../www.wikimediafoundation.org/index.html">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../../wikimediafoundation.org/wiki/Privacy_policy.html" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="Wikipedia_About.html" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="Wikipedia_General_disclaimer.html" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="Wikipedia_Contact_us.html">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a href="../../www.mediawiki.org/wiki/Special_MyLanguage/How_to_contribute.html">Developers</a></li>
+											<li id="footer-places-cookiestatement"><a href="../../wikimediafoundation.org/wiki/Cookie_statement.html">Cookie statement</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/w/index.php?title=Hibernate_(framework)&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="../../www.wikimediafoundation.org/index.html"><img src="https://en.wikipedia.org/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="../../www.mediawiki.org/index.html"><img src="https://en.wikipedia.org/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":83,"wgHostname":"mw1255"});});</script>
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Hibernate_(Java) by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:07 GMT -->
+</html>

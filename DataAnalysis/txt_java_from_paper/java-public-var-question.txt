@@ -1,0 +1,17 @@
+    
+        
+  Possible Duplicate:
+  <a href="http://stackoverflow.com/questions/2903385/property-and-encapsulation">Property and Encapsulation  
+
+
+
+
+NEWB Alert!!
+
+I am starting with Android and Java and I am starting to understand it but I am wondering why I should use getters and setters and not just public variables?
+
+I see many people make a private variable and create a get and set method.
+
+What is the idea here?
+
+                

@@ -1,0 +1,61 @@
+    
+        I'm a beginner in Java.  I'm trying, for training purpose, to build myself a chess game application.  Within my class Case, that will be used to instanciate all the 64 cases of my board, I write get/set methods to find if there's a Piece occupant in the instances of the case.
+
+I read that returning "null" is a bad practice, so I throw an exception instead to signify that the case is free.  But, I wonder how to set the occupant's pointer to "null"; can I simply push "null" as a parameter when I will call this method?
+
+Also, could taking/returning "null" be an acceptable/good practice?
+
+public Piece getOccupant(){
+    if (this.occupant == null)
+        throw new IllegalArgumentException(this.occupant + " is Empty");
+    return this.occupant;
+}
+public void setOccupant(Piece newOccupant){
+    this.occupant = newOccupant;
+}
+
+
+Thanks!
+
+[Update]
+
+Thanks to all of your for your comments, ideas, corrections and recommendations.  Here is the updated version of my code for this part, and I feel satisfied with it, as it served its purpose (increase my understanding thru practice).
+
+/*
+ * Modifiers of Occupant
+ */
+/**
+ * Used to find if a Piece is located in this Cell
+ * @return a Piece reference to the occupant.  Will send a 
+ * null pointer if cell is empty
+ */
+public Piece getOccupant(){
+    return this.occupant;
+}
+/**
+ * Used to set a new occupant in the Cell.
+ * @param newOccupant is a reference to a Piece instance, 
+ * and should be set to null if the cell is emptied, or using
+ * the method clear().
+ */
+public void setOccupant(Piece newOccupant){
+    this.occupant = newOccupant;
+}
+/**
+ * Used to verify if a Cell is empty of any occupant
+ * @return true if cell is empty.
+ */
+public boolean isEmpty(){
+    if(this.occupant == null)
+        return true;
+    return false;
+}
+/**
+ * Free the cell of any occupant, if any were
+ */
+public void clear(){
+    this.occupant = null;
+}
+
+
+                

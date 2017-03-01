@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Bouncy_Castle_(cryptography) by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:52:44 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Bouncy Castle (cryptography) - Wikipedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Bouncy_Castle_(cryptography)","wgTitle":"Bouncy Castle (cryptography)","wgCurRevisionId":748143284,"wgRevisionId":748143284,"wgArticleId":3636963,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Cryptographic software","Java (programming language) libraries","Software using the MIT license","Transport Layer Security implementation"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Bouncy_Castle_(cryptography)","wgRelevantArticleId":3636963,"wgRequestId":"WH31KwpAMEsAAHYQkMsAAABT","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgFlaggedRevsParams":{"tags":{}},"wgStableRevisionId":null,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"en","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgWikibaseItemId":"Q2090083","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.cite.styles":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@1dqfd7l",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["ext.cite.a11y","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.legacy.wikibits","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.watchlist-notice","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.gadget.featured-articles-links","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.interface","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="https://en.wikipedia.org/w/load.php?debug=false&amp;lang=en&amp;modules=ext.cite.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="../w/load2c8d.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../w/load18b6.css?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.29.0-wmf.7"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="https://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Bouncy_Castle_(cryptography)"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Bouncy_Castle_(cryptography)&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Bouncy_Castle_(cryptography)&amp;action=edit"/>
+<link rel="apple-touch-icon" href="https://en.wikipedia.org/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="../static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../w/api251f.php?action=rsd"/>
+<link rel="copyright" href="../../creativecommons.org/licenses/by-sa/3.0/index.html"/>
+<link rel="canonical" href="Bouncy_Castle_(cryptography).html"/>
+<link rel="dns-prefetch" href="../../login.wikimedia.org/index.html"/>
+<link rel="dns-prefetch" href="../../meta.wikimedia.org/index.html" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Bouncy_Castle_cryptography rootpage-Bouncy_Castle_cryptography skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">Bouncy Castle (cryptography)</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><script>function mfTempOpenSection(id){var block=document.getElementById("mf-section-"+id);block.className+=" open-block";block.previousSibling.className+=" open-block";}</script><table class="infobox vevent" style="width:22em">
+<caption class="summary">Bouncy Castle</caption>
+<tr>
+<td colspan="2" style="text-align:center"></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_release_life_cycle" title="Software release life cycle">Stable release</a></th>
+<td>
+<p>1.56 (Java) <small>(December&#160;23, 2016<span class="noprint">; 25 days ago</span><span style="display:none">&#160;(<span class="bday dtstart published updated">2016-12-23</span>)</span> <sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[1]</a></sup>)</small> <small class="plainlinks"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Latest_stable_software_release/Bouncy_Castle&amp;action=edit">[±]</a></small><br /></p>
+1.8.1 (C#) <small>(December&#160;28, 2015<span class="noprint">; 12 months ago</span><span style="display:none">&#160;(<span class="bday dtstart published updated">2015-12-28</span>)</span> <sup id="cite_ref-2" class="reference"><a href="#cite_note-2">[2]</a></sup>)</small> <small class="plainlinks"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Latest_stable_software_release/Bouncy_Castle&amp;action=edit">[±]</a></small></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Repository_(version_control)" title="Repository (version control)">Repository</a></th>
+<td><span class="url"><a rel="nofollow" class="external text" href="http://git.bouncycastle.org/repositories/bc-java">git<wbr />.bouncycastle<wbr />.org<wbr />/repositories<wbr />/bc-java</a></span></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;">Written in</th>
+<td><a href="https://en.wikipedia.org/wiki/C_Sharp_(programming_language)" title="C Sharp (programming language)">C#</a> and <a href="Java_(programming_language).html" title="Java (programming language)">Java</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Operating_system" title="Operating system">Operating system</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Cross-platform" title="Cross-platform">Cross-platform</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_categories#Broad_categories" title="Software categories">Type</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Cryptography" title="Cryptography">Cryptography</a> <a href="https://en.wikipedia.org/wiki/Application_programming_interface" title="Application programming interface">API</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_license" title="Software license">License</a></th>
+<td><a href="https://en.wikipedia.org/wiki/MIT_License" title="MIT License">MIT License</a><sup id="cite_ref-license_3-0" class="reference"><a href="#cite_note-license-3">[3]</a></sup></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;">Website</th>
+<td><span class="url"><a rel="nofollow" class="external text" href="http://bouncycastle.org/">bouncycastle<wbr />.org</a></span></td>
+</tr>
+</table>
+<p><b>Bouncy Castle</b> is a collection of <a href="https://en.wikipedia.org/wiki/Application_Programming_Interface" class="mw-redirect" title="Application Programming Interface">APIs</a> used in <a href="https://en.wikipedia.org/wiki/Cryptography" title="Cryptography">cryptography</a>. It includes APIs for both the <a href="Java_(programming_language).html" title="Java (programming language)">Java</a> and the <a href="https://en.wikipedia.org/wiki/C_Sharp_(programming_language)" title="C Sharp (programming language)">C#</a> programming languages. The APIs are supported by a registered <a href="https://en.wikipedia.org/wiki/Australian" class="mw-redirect" title="Australian">Australian</a> <a href="https://en.wikipedia.org/wiki/Charitable_organization" title="Charitable organization">charitable organization</a>: Legion of the Bouncy Castle Inc.</p>
+<p>Bouncy Castle is Australian in origin and therefore American restrictions on the <a href="https://en.wikipedia.org/wiki/Export_of_cryptography_in_the_United_States" class="mw-redirect" title="Export of cryptography in the United States">export of cryptographic software</a> do not apply to it.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#History"><span class="tocnumber">1</span> <span class="toctext">History</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Architecture"><span class="tocnumber">2</span> <span class="toctext">Architecture</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Spongy_Castle"><span class="tocnumber">3</span> <span class="toctext">Spongy Castle</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#See_also"><span class="tocnumber">4</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Notes"><span class="tocnumber">5</span> <span class="toctext">Notes</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#External_links"><span class="tocnumber">6</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Bouncy_Castle_(cryptography)&amp;action=edit&amp;section=1" title="Edit section: History">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Bouncy Castle started when two colleagues were tired of having to re-invent a set of cryptography libraries each time they changed jobs working in server-side <a href="https://en.wikipedia.org/wiki/JavaSE" class="mw-redirect" title="JavaSE">JavaSE</a>. One of the developers was active in <a href="Java_Platform%2c_Micro_Edition.html" title="Java Platform, Micro Edition">JavaME</a> (J2ME at that time) development as a hobby and a design consideration was to include the greatest range of Java VMs for the library, including those on J2ME.</p>
+<p>This design consideration led to the architecture that exists in Bouncy Castle.</p>
+<p>Some key properties of the project are:</p>
+<ul>
+<li>Founded in May 2000. Now has around 20,000 downloads a month, including 5000 of the full Java distribution.</li>
+<li>Originally just Java, C# API added in 2006.</li>
+<li>Original Java API around 27,000 lines including test code. Provided support for J2ME, a JCE/JCA provider, and basic X.509 certificate generation.</li>
+<li>Latest Java release, 1.53, 390,640 lines including test code. Supports same functionality as original release (with a larger number of algorithms) plus PKCS#10, PKCS#12, CMS, S/MIME, OpenPGP, DTLS, TLS, OCSP, TSP, CMP, CRMF, DVCS, DANE, and Attribute Certificates.</li>
+<li>C# API around 145,000 lines. Supports most of what the Java API does.</li>
+<li>Strong emphasis on standards compliance and adaptability.</li>
+<li>Public support facilities include an issue tracker, dev mailing list and a wiki all available at the website.</li>
+<li>Commercial support provided under resources for the relevant API listed on the Bouncy Castle website</li>
+</ul>
+<p>On 18 October 2013, a not-for-profit association, the Legion of the Bouncy Castle Inc. was established in the state of Victoria, Australia, by the core developers and others to take ownership of the project and support the ongoing development of the APIs. The association was recognised as an Australian charity with a purpose of advancement in education and a purpose that is beneficial to the community by the <a href="https://en.wikipedia.org/wiki/Australian_Charities_and_Not-For-Profits_Commission" title="Australian Charities and Not-For-Profits Commission">Australian Charities and Not-For-Profits Commission</a> on 7 November 2013. The association was authorised to fundraise to support its purposes on 29 November 2013 by <a href="https://en.wikipedia.org/wiki/Consumer_Affairs_Victoria" title="Consumer Affairs Victoria">Consumer Affairs Victoria</a>.</p>
+<h2><span class="mw-headline" id="Architecture">Architecture</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Bouncy_Castle_(cryptography)&amp;action=edit&amp;section=2" title="Edit section: Architecture">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The Bouncy Castle architecture consists of two main components that support the base cryptographic capabilities. These are known as the 'light-weight' API, and the <a href="Java_Cryptography_Extension.html" title="Java Cryptography Extension">Java Cryptography Extension</a> (JCE) provider. There are further components that are built upon the JCE provider which support additional functionality such as <a href="https://en.wikipedia.org/wiki/Pretty_Good_Privacy" title="Pretty Good Privacy">PGP</a> support, <a href="https://en.wikipedia.org/wiki/S/MIME" title="S/MIME">S/MIME</a> and similar.</p>
+<p>The low-level, or 'light-weight', API is a set of APIs that implement all the underlying cryptographic algorithms. The APIs were designed to be simple enough to use if needed, but provided the basic building blocks for the JCE provider. The intent is to use the low-level API in memory constrained devices (JavaME) or when easy access to the JCE libraries is not possible (such as distribution in an <a href="Java_applet.html" title="Java applet">applet</a>). As the light-weight API is just Java code, the Java virtual machine (JVM) does not impose any restrictions on the operation of the code, and at early times of the Bouncy Castle history it was the only way to develop strong cryptography that was not crippled by the Jurisdiction Policy files which prevented any JCE providers from performing "strong" encryption.</p>
+<p>The JCE-compatible provider is built upon the low-level APIs. As such, the source code for the JCE provider is an example of how to implement many of the "common" crypto problems using the low-level API. Many projects have been built using the JCE provider, including an Open Source Certificate Authority <a rel="nofollow" class="external text" href="http://sourceforge.net/projects/ejbca/">EJBCA</a>.</p>
+<h2><span class="mw-headline" id="Spongy_Castle">Spongy Castle</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Bouncy_Castle_(cryptography)&amp;action=edit&amp;section=3" title="Edit section: Spongy Castle">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The <a href="https://en.wikipedia.org/wiki/Android_(operating_system)" title="Android (operating system)">Android operating system</a>, as of early 2014, includes a customized version of Bouncy Castle.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">[4]</a></sup> Due to class name conflicts, this prevents Android applications from including and using the official release of Bouncy Castle as-is. A third-party project called <i>Spongy Castle</i> distributes a renamed version of the library to work around this issue.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">[5]</a></sup></p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Bouncy_Castle_(cryptography)&amp;action=edit&amp;section=4" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div role="navigation" aria-label="Portals" class="noprint portal plainlist tright" style="margin:0.5em 0 0.5em 1em;border:solid #aaa 1px">
+<ul style="display:table;box-sizing:border-box;padding:0.1em;max-width:175px;background:#f9f9f9;font-size:85%;line-height:110%;font-style:italic;font-weight:bold">
+<li style="display:table-row"><span style="display:table-cell;padding:0.2em;vertical-align:middle;text-align:center"><a href="https://en.wikipedia.org/wiki/File:Crypto_key.svg" class="image"><img alt="icon" src="http://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Crypto_key.svg/32px-Crypto_key.svg.png" width="32" height="13" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Crypto_key.svg/48px-Crypto_key.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/65/Crypto_key.svg/64px-Crypto_key.svg.png 2x" data-file-width="651" data-file-height="271" /></a></span><span style="display:table-cell;padding:0.2em 0.2em 0.2em 0.3em;vertical-align:middle"><a href="https://en.wikipedia.org/wiki/Portal:Cryptography" title="Portal:Cryptography">Cryptography portal</a></span></li>
+</ul>
+</div>
+<ul>
+<li><a href="Java_Cryptography_Architecture.html" title="Java Cryptography Architecture">Java Cryptography Architecture</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Comparison_of_cryptography_libraries" title="Comparison of cryptography libraries">Comparison of cryptography libraries</a></li>
+</ul>
+<h2><span class="mw-headline" id="Notes">Notes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Bouncy_Castle_(cryptography)&amp;action=edit&amp;section=5" title="Edit section: Notes">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.bouncycastle.org/latest_releases.html">"Latest Java Releases - bouncycastle.org"</a>. 2016-08-19<span class="reference-accessdate">. Retrieved <span class="nowrap">2016-09-03</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABouncy+Castle+%28cryptography%29&amp;rft.btitle=Latest+Java+Releases+-+bouncycastle.org&amp;rft.date=2016-08-19&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.bouncycastle.org%2Flatest_releases.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.bouncycastle.org/csharp/">"The Legion of the Bouncy Castle C# Cryptography APIs"</a>. 2015-12-28<span class="reference-accessdate">. Retrieved <span class="nowrap">2015-12-29</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABouncy+Castle+%28cryptography%29&amp;rft.btitle=The+Legion+of+the+Bouncy+Castle+C%23+Cryptography+APIs&amp;rft.date=2015-12-28&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.bouncycastle.org%2Fcsharp%2F&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-license-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-license_3-0">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://bouncycastle.org/licence.html">"Bouncy Castle - LICENSE"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABouncy+Castle+%28cryptography%29&amp;rft.btitle=Bouncy+Castle+-+LICENSE&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fbouncycastle.org%2Flicence.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><cite class="citation book">Reimer Pohlmann Schneider (October 17, 2014). <i>ISSE 2014 Securing Electronic Business Processes: Highlights of the Information Security Solutions Europe 2014 Conference</i>. Springer. p.&#160;205.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABouncy+Castle+%28cryptography%29&amp;rft.au=Reimer+Pohlmann+Schneider&amp;rft.btitle=ISSE+2014+Securing+Electronic+Business+Processes%3A+Highlights+of+the+Information+Security+Solutions+Europe+2014+Conference&amp;rft.date=2014-10-17&amp;rft.genre=book&amp;rft.pages=205&amp;rft.pub=Springer&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://rtyley.github.io/spongycastle/">"Spongy Castle"</a>. Github<span class="reference-accessdate">. Retrieved <span class="nowrap">April 29,</span> 2013</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABouncy+Castle+%28cryptography%29&amp;rft.btitle=Spongy+Castle&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Frtyley.github.io%2Fspongycastle%2F&amp;rft.pub=Github&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Bouncy_Castle_(cryptography)&amp;action=edit&amp;section=6" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><cite id="Legion_of_the_Bouncy_Castle" class="citation web"><a rel="nofollow" class="external text" href="http://www.bouncycastle.org/">"Legion of the Bouncy Castle"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABouncy+Castle+%28cryptography%29&amp;rft.btitle=Legion+of+the+Bouncy+Castle&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.bouncycastle.org%2F&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite id="mindprod.2C_bouncy_castle" class="citation web">Roedy Green. <a rel="nofollow" class="external text" href="http://mindprod.com/jgloss/bouncycastle.html">"Bouncy Castle"</a>. Mindprod Java glossary.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABouncy+Castle+%28cryptography%29&amp;rft.au=Roedy+Green&amp;rft.btitle=Bouncy+Castle&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fmindprod.com%2Fjgloss%2Fbouncycastle.html&amp;rft.pub=Mindprod+Java+glossary&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><a rel="nofollow" class="external text" href="https://code.google.com/p/kpbe/">kpbe</a> An open source Password Based Encryption tool for files that uses Bouncy Castle C# implementation</li>
+<li><a rel="nofollow" class="external text" href="https://web.archive.org/web/20140827014455/https://www.cryptool.org/en/jcryptool-en">JCrypTool</a> (JCT) is a widespread open source e-learning tool illustrating more than 100 cryptographic and cryptanalytic concepts. It uses the Bouncy Castle Java implementation. JCT is built with Java/Eclipse/RCP/SWT and runs on Windows, MacOS, and Linux. See <a href="https://en.wikipedia.org/wiki/CrypTool" title="CrypTool">CrypTool</a>.</li>
+</ul>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1199
+Cached time: 20170117104149
+Cache expiry: 2592000
+Dynamic content: false
+CPU time usage: 0.168 seconds
+Real time usage: 0.213 seconds
+Preprocessor visited node count: 1038/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 26495/2097152 bytes
+Template argument size: 1770/2097152 bytes
+Highest expansion depth: 29/40
+Expensive parser function count: 2/500
+Lua time usage: 0.073/10.000 seconds
+Lua memory usage: 2.69 MB/50 MB
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  191.748      1 - -total
+ 84.34%  161.725      2 - Template:Infobox
+ 62.37%  119.593      1 - Template:Infobox_Software
+ 29.21%   56.018      1 - Template:Reflist
+ 26.81%   51.401      1 - Template:Infobox_software/simple
+ 25.45%   48.801      6 - Template:Cite_web
+ 17.79%   34.105      1 - Template:Latest_stable_software_release/Bouncy_Castle
+ 17.13%   32.849      2 - Template:LSR
+ 14.81%   28.393      2 - Template:Release_date_and_age
+  6.00%   11.514      2 - Template:Time_ago
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:3636963-0!*!0!!en!4!* and timestamp 20170117104148 and revision id 748143284
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Bouncy_Castle_(cryptography)&amp;oldid=748143284">https://en.wikipedia.org/w/index.php?title=Bouncy_Castle_(cryptography)&amp;oldid=748143284</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Help_Category.html" title="Help:Category">Categories</a>: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Cryptographic_software" title="Category:Cryptographic software">Cryptographic software</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Java_(programming_language)_libraries" title="Category:Java (programming language) libraries">Java (programming language) libraries</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Software_using_the_MIT_license" title="Category:Software using the MIT license">Software using the MIT license</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Transport_Layer_Security_implementation" title="Category:Transport Layer Security implementation">Transport Layer Security implementation</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="Special_MyTalk.html" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="Special_MyContributions.html" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&amp;returnto=Bouncy+Castle+%28cryptography%29" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Bouncy+Castle+%28cryptography%29" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="Bouncy_Castle_(cryptography).html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+															<li  id="ca-talk"><span><a href="https://en.wikipedia.org/wiki/Talk:Bouncy_Castle_(cryptography)"  title="Discussion about the content page [t]" accesskey="t" rel="discussion">Talk</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="Bouncy_Castle_(cryptography).html" >Read</a></span></li>
+															<li id="ca-edit"><span><a href="https://en.wikipedia.org/w/index.php?title=Bouncy_Castle_(cryptography)&amp;action=edit"  title="Edit this page [e]" accesskey="e">Edit</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="https://en.wikipedia.org/w/index.php?title=Bouncy_Castle_(cryptography)&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="https://en.wikipedia.org/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="Main_Page.html"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="Portal_Contents.html" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="Portal_Featured_content.html" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="Portal_Current_events.html" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="https://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="../../shop.wikimedia.org/index.html" title="Visit the Wikipedia store">Wikipedia store</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Interaction</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-help"><a href="Help_Contents.html" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="Wikipedia_About.html" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="Wikipedia_Community_portal.html" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="Wikipedia_Contact_us.html" title="How to contact Wikipedia">Contact page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="https://en.wikipedia.org/wiki/Special:WhatLinksHere/Bouncy_Castle_(cryptography)" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://en.wikipedia.org/wiki/Special:RecentChangesLinked/Bouncy_Castle_(cryptography)" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="Wikipedia_File_Upload_Wizard.html" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="https://en.wikipedia.org/w/index.php?title=Bouncy_Castle_(cryptography)&amp;oldid=748143284" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://en.wikipedia.org/w/index.php?title=Bouncy_Castle_(cryptography)&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q2090083" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="https://en.wikipedia.org/w/index.php?title=Special:CiteThisPage&amp;page=Bouncy_Castle_%28cryptography%29&amp;id=748143284" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Print/export</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Bouncy+Castle+%28cryptography%29">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Bouncy+Castle+%28cryptography%29&amp;returnto=Bouncy+Castle+%28cryptography%29&amp;oldid=748143284&amp;writer=rdf2latex">Download as PDF</a></li><li id="t-print"><a href="https://en.wikipedia.org/w/index.php?title=Bouncy_Castle_(cryptography)&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Languages</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Bouncy_Castle" title="Bouncy Castle – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Bouncy_Castle" title="Bouncy Castle – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Bouncy_Castle_(criptografia)" title="Bouncy Castle (criptografia) – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/Bouncy_Castle" title="Bouncy Castle – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q2090083#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 6 November 2016, at 16:00.</li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="Wikipedia_Text_of_Creative_Commons_Attribution-ShareAlike_3.html">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="../../creativecommons.org/licenses/by-sa/3.0/index.html" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="../../wikimediafoundation.org/wiki/Terms_of_Use.html">Terms of Use</a> and <a href="../../wikimediafoundation.org/wiki/Privacy_policy.html">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="../../www.wikimediafoundation.org/index.html">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../../wikimediafoundation.org/wiki/Privacy_policy.html" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="Wikipedia_About.html" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="Wikipedia_General_disclaimer.html" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="Wikipedia_Contact_us.html">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a href="../../www.mediawiki.org/wiki/Special_MyLanguage/How_to_contribute.html">Developers</a></li>
+											<li id="footer-places-cookiestatement"><a href="../../wikimediafoundation.org/wiki/Cookie_statement.html">Cookie statement</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/w/index.php?title=Bouncy_Castle_(cryptography)&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="../../www.wikimediafoundation.org/index.html"><img src="https://en.wikipedia.org/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="../../www.mediawiki.org/index.html"><img src="https://en.wikipedia.org/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":58,"wgHostname":"mw1240"});});</script>
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Bouncy_Castle_(cryptography) by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:52:44 GMT -->
+</html>

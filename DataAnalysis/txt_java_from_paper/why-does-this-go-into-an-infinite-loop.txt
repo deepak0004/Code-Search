@@ -1,0 +1,50 @@
+    
+        I'm a teacher, and yesterday a student wrote the following code:
+
+public class Tests {
+
+    public static void main(String[] args) throws Exception {
+        int x = 0;
+        while(x&lt;3) {
+            x = x++;
+            System.out.println(x);
+        }
+    }
+}
+
+
+we know he should have writen just x++ or x=x+1, but on x = x++; it should first attribute x to itself, and later increment x. Why does x continue with 0 as value?
+
+--update
+
+Here's the bytecode:
+
+public class Tests extends java.lang.Object{
+public Tests();
+  Code:
+   0:   aload_0
+   1:   invokespecial   #1; //Method java/lang/Object."&lt;init&gt;":()V
+   4:   return
+
+public static void main(java.lang.String[])   throws java.lang.Exception;
+  Code:
+   0:   iconst_0
+   1:   istore_1
+   2:   iload_1
+   3:   iconst_3
+   4:   if_icmpge   22
+   7:   iload_1
+   8:   iinc    1, 1
+   11:  istore_1
+   12:  getstatic   #2; //Field java/lang/System.out:Ljava/io/PrintStream;
+   15:  iload_1
+   16:  invokevirtual   #3; //Method java/io/PrintStream.println:(I)V
+   19:  goto    2
+   22:  return
+
+}
+
+
+I'll read about the <a href="http://en.wikipedia.org/wiki/Java_bytecode_instruction_listings" rel="nofollow">instructions to try to understand...
+
+                

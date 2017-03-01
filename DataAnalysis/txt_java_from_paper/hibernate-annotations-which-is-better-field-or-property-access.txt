@@ -1,0 +1,7 @@
+    
+        This question is somewhat related to <a href="http://stackoverflow.com/questions/305880/hibernate-annotation-placement-question">http://stackoverflow.com/questions/305880/hibernate-annotation-placement-question.
+
+But I want to know which is better? Access via properties or access via fields?
+What are the advantages and disadvantages of each?
+
+                

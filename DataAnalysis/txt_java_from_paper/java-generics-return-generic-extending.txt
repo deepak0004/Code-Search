@@ -1,0 +1,32 @@
+    
+        Why am i not allowed to do this?
+
+public abstract class A {}
+public class B extends A {}
+...
+
+public ArrayList&lt;A&gt; foo()
+{
+  return new ArrayList&lt;B&gt;();
+}
+
+
+I changed to public since there are so many people that love to point stupid errors.
+
+Why should i have to write ALL this code. Just to satisfy Java's non-senses?
+
+public List&lt;A&gt; foo() 
+{ 
+  List&lt;A&gt; aList = new ArrayList&lt;A&gt;(); 
+  List&lt;B&gt; bList = new ArrayList&lt;B&gt;();
+  /* fill bList*/
+
+  for (B b : bList)
+  {
+    aList.add(b);
+  }
+  return aList;
+}
+
+
+                

@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Fisher–Yates_shuffle by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:01 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Fisher–Yates shuffle - Wikipedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Fisher–Yates_shuffle","wgTitle":"Fisher–Yates shuffle","wgCurRevisionId":754655942,"wgRevisionId":754655942,"wgArticleId":12684962,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["CS1 errors: external links","Pages using ISBN magic links","Combinatorial algorithms","Randomized algorithms","Permutations","Monte Carlo methods"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Fisher–Yates_shuffle","wgRelevantArticleId":12684962,"wgRequestId":"WH4SdApAIDcAAF-2i2cAAAAY","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgFlaggedRevsParams":{"tags":{}},"wgStableRevisionId":null,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"en","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgWikibaseItemId":"Q6522952","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.cite.styles":"ready","ext.pygments":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@1dqfd7l",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["ext.cite.a11y","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.legacy.wikibits","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.watchlist-notice","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.gadget.featured-articles-links","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.interface","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="https://en.wikipedia.org/w/load.php?debug=false&amp;lang=en&amp;modules=ext.cite.styles%7Cext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="../w/load2c8d.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../w/load18b6.css?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.29.0-wmf.7"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="https://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Fisher–Yates_shuffle"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Fisher%E2%80%93Yates_shuffle&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Fisher%E2%80%93Yates_shuffle&amp;action=edit"/>
+<link rel="apple-touch-icon" href="https://en.wikipedia.org/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="../static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../w/api251f.php?action=rsd"/>
+<link rel="copyright" href="../../creativecommons.org/licenses/by-sa/3.0/index.html"/>
+<link rel="canonical" href="Fisher%e2%80%93Yates_shuffle.html"/>
+<link rel="dns-prefetch" href="../../login.wikimedia.org/index.html"/>
+<link rel="dns-prefetch" href="../../meta.wikimedia.org/index.html" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Fisher–Yates_shuffle rootpage-Fisher–Yates_shuffle skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">Fisher–Yates shuffle</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><script>function mfTempOpenSection(id){var block=document.getElementById("mf-section-"+id);block.className+=" open-block";block.previousSibling.className+=" open-block";}</script><div class="thumb tright">
+<div class="thumbinner" style="width:202px;"><a href="https://en.wikipedia.org/wiki/File:Biologist_and_statistician_Ronald_Fisher.jpg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Biologist_and_statistician_Ronald_Fisher.jpg/200px-Biologist_and_statistician_Ronald_Fisher.jpg" width="200" height="254" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/37/Biologist_and_statistician_Ronald_Fisher.jpg/300px-Biologist_and_statistician_Ronald_Fisher.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/37/Biologist_and_statistician_Ronald_Fisher.jpg/400px-Biologist_and_statistician_Ronald_Fisher.jpg 2x" data-file-width="971" data-file-height="1231" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="https://en.wikipedia.org/wiki/File:Biologist_and_statistician_Ronald_Fisher.jpg" class="internal" title="Enlarge"></a></div>
+Ronald Fisher</div>
+</div>
+</div>
+<p>The <b>Fisher–Yates shuffle</b> is an <a href="https://en.wikipedia.org/wiki/Algorithm" title="Algorithm">algorithm</a> for generating a <a href="https://en.wikipedia.org/wiki/Random_permutation" title="Random permutation">random permutation</a> of a <a href="https://en.wikipedia.org/wiki/Finite_set" title="Finite set">finite set</a>—in plain terms, the algorithm <a href="https://en.wikipedia.org/wiki/Shuffling" title="Shuffling">shuffles</a> the set. The algorithm effectively puts all the elements into a hat; it continually determines the next element by randomly drawing an element from the hat until no elements remain. The algorithm produces an <a href="https://en.wikipedia.org/wiki/Biased_sample" class="mw-redirect" title="Biased sample">unbiased</a> permutation: every permutation is equally likely. The modern version of the algorithm is efficient: it takes time proportional to the number of items being shuffled and shuffles them <a href="https://en.wikipedia.org/wiki/In-place_algorithm" title="In-place algorithm">in place</a>.</p>
+<p>The Fisher–Yates shuffle is named after <a href="https://en.wikipedia.org/wiki/Ronald_Fisher" title="Ronald Fisher">Ronald Fisher</a> and <a href="https://en.wikipedia.org/wiki/Frank_Yates" title="Frank Yates">Frank Yates</a>, who first described it, and is also known as the <b>Knuth shuffle</b> after <a href="https://en.wikipedia.org/wiki/Donald_Knuth" title="Donald Knuth">Donald Knuth</a>. A variant of the Fisher–Yates shuffle, known as <b>Sattolo's algorithm</b>, may be used to generate random <a href="https://en.wikipedia.org/wiki/Cyclic_permutation" title="Cyclic permutation">cyclic permutations</a> of length <i>n</i> instead of random permutations.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Fisher_and_Yates.27_original_method"><span class="tocnumber">1</span> <span class="toctext">Fisher and Yates' original method</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#The_modern_algorithm"><span class="tocnumber">2</span> <span class="toctext">The modern algorithm</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#The_.22inside-out.22_algorithm"><span class="tocnumber">3</span> <span class="toctext">The "inside-out" algorithm</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Examples"><span class="tocnumber">4</span> <span class="toctext">Examples</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#Pencil-and-paper_method"><span class="tocnumber">4.1</span> <span class="toctext">Pencil-and-paper method</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Modern_method"><span class="tocnumber">4.2</span> <span class="toctext">Modern method</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#Variants"><span class="tocnumber">5</span> <span class="toctext">Variants</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="#Sattolo.27s_algorithm"><span class="tocnumber">5.1</span> <span class="toctext">Sattolo's algorithm</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#Comparison_with_other_shuffling_algorithms"><span class="tocnumber">6</span> <span class="toctext">Comparison with other shuffling algorithms</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Potential_sources_of_bias"><span class="tocnumber">7</span> <span class="toctext">Potential sources of bias</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#Implementation_errors"><span class="tocnumber">7.1</span> <span class="toctext">Implementation errors</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Modulo_bias"><span class="tocnumber">7.2</span> <span class="toctext">Modulo bias</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Pseudorandom_generators:_problems_involving_state_space.2C_seeding.2C_and_usage"><span class="tocnumber">7.3</span> <span class="toctext">Pseudorandom generators: problems involving state space, seeding, and usage</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-14"><a href="#See_also"><span class="tocnumber">8</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#References"><span class="tocnumber">9</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#External_links"><span class="tocnumber">10</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Fisher_and_Yates.27_original_method">Fisher and Yates' original method</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Fisher%E2%80%93Yates_shuffle&amp;action=edit&amp;section=1" title="Edit section: Fisher and Yates' original method">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The Fisher–Yates shuffle, in its original form, was described in 1938 by <a href="https://en.wikipedia.org/wiki/Ronald_Fisher" title="Ronald Fisher">Ronald Fisher</a> and <a href="https://en.wikipedia.org/wiki/Frank_Yates" title="Frank Yates">Frank Yates</a> in their book <i>Statistical tables for biological, agricultural and medical research</i>.<sup id="cite_ref-fisheryates_1-0" class="reference"><a href="#cite_note-fisheryates-1">[1]</a></sup> Their description of the algorithm used pencil and paper; a table of random numbers provided the randomness. The basic method given for generating a random permutation of the numbers 1 through <i>N</i> goes as follows:</p>
+<ol>
+<li>Write down the numbers from 1 through <i>N</i>.</li>
+<li>Pick a random number <i>k</i> between one and the number of unstruck numbers remaining (inclusive).</li>
+<li>Counting from the low end, strike out the <i>k</i>th number not yet struck out, and write it down at the end of a separate list.</li>
+<li>Repeat from step 2 until all the numbers have been struck out.</li>
+<li>The sequence of numbers written down in step 3 is now a random permutation of the original numbers.</li>
+</ol>
+<p>Provided that the random numbers picked in step 2 above are truly random and unbiased, so will the resulting permutation be. Fisher and Yates took care to describe how to obtain such random numbers in any desired range from the supplied tables in a manner which avoids any bias. They also suggested the possibility of using a simpler method — picking random numbers from one to <i>N</i> and discarding any duplicates—to generate the first half of the permutation, and only applying the more complex algorithm to the remaining half, where picking a duplicate number would otherwise become frustratingly common.</p>
+<h2><span class="mw-headline" id="The_modern_algorithm">The modern algorithm</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Fisher%E2%80%93Yates_shuffle&amp;action=edit&amp;section=2" title="Edit section: The modern algorithm">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The modern version of the Fisher–Yates shuffle, designed for computer use, was introduced by <a href="https://en.wikipedia.org/w/index.php?title=Richard_Durstenfeld&amp;action=edit&amp;redlink=1" class="new" title="Richard Durstenfeld (page does not exist)">Richard Durstenfeld</a> in 1964<sup id="cite_ref-cacm_2-0" class="reference"><a href="#cite_note-cacm-2">[2]</a></sup> and popularized by <a href="https://en.wikipedia.org/wiki/Donald_E._Knuth" class="mw-redirect" title="Donald E. Knuth">Donald E. Knuth</a> in <i><a href="https://en.wikipedia.org/wiki/The_Art_of_Computer_Programming" title="The Art of Computer Programming">The Art of Computer Programming</a></i> as "Algorithm P".<sup id="cite_ref-knuth_3-0" class="reference"><a href="#cite_note-knuth-3">[3]</a></sup> Neither Durstenfeld nor Knuth, in the first edition of his book, acknowledged the work of Fisher and Yates; they may not have been aware of it. Subsequent editions of <i>The Art of Computer Programming</i> mention Fisher and Yates' contribution.<sup id="cite_ref-knuth3_4-0" class="reference"><a href="#cite_note-knuth3-4">[4]</a></sup></p>
+<p>The algorithm described by Durstenfeld differs from that given by Fisher and Yates in a small but significant way. Whereas a naïve computer implementation of Fisher and Yates' method would spend needless time counting the remaining numbers in step 3 above, Durstenfeld's solution is to move the "struck" numbers to the end of the list by swapping them with the last unstruck number at each iteration. This reduces the algorithm's <a href="https://en.wikipedia.org/wiki/Time_complexity" title="Time complexity">time complexity</a> to <i>O</i>(<i>n</i>), compared to <i>O</i>(<i>n</i><sup>2</sup>) for the naïve implementation.<sup id="cite_ref-nist_5-0" class="reference"><a href="#cite_note-nist-5">[5]</a></sup> This change gives the following algorithm (for a zero-based <a href="https://en.wikipedia.org/wiki/Array_data_structure" title="Array data structure">array</a>).</p>
+<pre>
+-- To shuffle an array <i>a</i> of <i>n</i> elements (indices 0..n-1):
+<b>for</b> <i>i</i> <b>from</b> <i>n</i>−1 <b>downto</b> 1 <b>do</b>
+     <i>j</i> ← random integer such that 0 ≤ <i>j</i> ≤ <i>i</i>
+     exchange <i>a</i>[<i>j</i>] and <i>a</i>[<i>i</i>]
+</pre>
+<p>An equivalent version which shuffles the array in the opposite direction (from lowest index to highest) is:</p>
+<pre>
+-- To shuffle an array <i>a</i> of <i>n</i> elements (indices 0..n-1):
+<b>for</b> <i>i</i> <b>from</b> 0 <b>to</b> <i>n</i>−2 <b>do</b>
+     <i>j</i> ← random integer such that i ≤ <i>j</i> &lt; <i>n</i>
+     exchange <i>a</i>[<i>i</i>] and <i>a</i>[j]
+</pre>
+<h2><span class="mw-headline" id="The_.22inside-out.22_algorithm">The "inside-out" algorithm</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Fisher%E2%80%93Yates_shuffle&amp;action=edit&amp;section=3" title="Edit section: The &quot;inside-out&quot; algorithm">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The Fisher–Yates shuffle, as implemented by Durstenfeld, is an <i>in-place shuffle</i>. That is, given a preinitialized array, it shuffles the elements of the array in place, rather than producing a shuffled copy of the array. This can be an advantage if the array to be shuffled is large.</p>
+<p>To simultaneously initialize and shuffle an array, a bit more efficiency can be attained by doing an "inside-out" version of the shuffle. In this version, one successively places element number <i>i</i> into a random position among the first <i>i</i> positions in the array, after moving the element previously occupying that position to position <i>i</i>. In case the random position happens to be number <i>i</i>, this "move" (to the same place) involves an uninitialised value, but that does not matter, as the value is then immediately overwritten. No separate initialization is needed, and no exchange is performed. In the common case where <i>source</i> is defined by some simple function, such as the integers from 0 to <i>n</i>&#160;−&#160;1, <i>source</i> can simply be replaced with the function since <i>source</i> is never altered during execution.</p>
+<pre>
+To initialize an array <i>a</i> of <i>n</i> elements to a randomly shuffled copy of <i>source</i>, both 0-based:
+  <b>for</b> <i>i</i> <b>from</b> 0 <b>to</b> <i>n</i> − 1 <b>do</b>
+      <i>j</i> ← random integer such that 0 ≤ <i>j</i> ≤ <i>i</i>
+      <b>if</b> <i>j</i> ≠ <i>i</i>
+          <i>a</i>[<i>i</i>] ← <i>a</i>[<i>j</i>]
+      <i>a</i>[<i>j</i>] ← <i>source</i>[<i>i</i>]
+</pre>
+<p>The inside-out shuffle can be seen to be correct by <a href="https://en.wikipedia.org/wiki/Mathematical_induction" title="Mathematical induction">induction</a>. Assuming a perfect random number generator, every one of the <i>n</i>! different sequences of random numbers that could be obtained from the calls of <i>random</i> will produce a different permutation of the values, so all of these are obtained exactly once. The condition that checks if <i>j</i> ≠ <i>i</i> may be omitted in languages that have no problems accessing uninitialized array values, and for which assigning is cheaper than comparing.</p>
+<p>Another advantage of this technique is that the algorithm can be modified so that even when we do not know "n", the number of elements in <i>source</i>, we can still generate a uniformly distributed random permutation of the <i>source</i> data. Below the array <i>a</i> is built iteratively starting from empty, and <i>a</i>.length represents the current number of elements seen.</p>
+<pre>
+To initialize an empty array <i>a</i> to a randomly shuffled copy of <i>source</i> whose length is not known:
+  <b>while</b> <i>source</i>.moreDataAvailable
+      <i>j</i> ← random integer such that 0 ≤ <i>j</i> ≤ <i>a</i>.length
+      <b>if</b> j = <i>a</i>.length
+          <i>a</i>.append(<i>source</i>.next)
+      <b>else</b>
+          <i>a</i>.append(<i>a</i>[<i>j</i>])
+          <i>a</i>[<i>j</i>] ← <i>source</i>.next
+</pre>
+<h2><span class="mw-headline" id="Examples">Examples</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Fisher%E2%80%93Yates_shuffle&amp;action=edit&amp;section=4" title="Edit section: Examples">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Pencil-and-paper_method">Pencil-and-paper method</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Fisher%E2%80%93Yates_shuffle&amp;action=edit&amp;section=5" title="Edit section: Pencil-and-paper method">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>As an example, we'll permute the numbers from 1 to 8 using <a href="#Fisher_and_Yates.27_original_method">Fisher and Yates' original method</a>. We'll start by writing the numbers out on a piece of scratch paper:</p>
+<table class="wikitable">
+<tr>
+<th>Range</th>
+<th>Roll</th>
+<th>Scratch</th>
+<th>Result</th>
+</tr>
+<tr>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>1 2 3 4 5 6 7 8</td>
+<td>&#160;</td>
+</tr>
+</table>
+<p>Now we roll a random number <i>k</i> from 1 to 8—let's make it 3—and strike out the <i>k</i>th (i.e. third) number (3, of course) on the scratch pad and write it down as the result:</p>
+<table class="wikitable">
+<tr>
+<th>Range</th>
+<th>Roll</th>
+<th>Scratch</th>
+<th>Result</th>
+</tr>
+<tr>
+<td>1–8</td>
+<td>3</td>
+<td>1 2 <s><span style="color:gray;">3</span></s> 4 5 6 7 8</td>
+<td>3</td>
+</tr>
+</table>
+<p>Now we pick a second random number, this time from 1 to 7: it turns out to be 4. Now we strike out the fourth number <i>not yet struck</i> off the scratch pad—that's number 5—and add it to the result:</p>
+<table class="wikitable">
+<tr>
+<th>Range</th>
+<th>Roll</th>
+<th>Scratch</th>
+<th>Result</th>
+</tr>
+<tr>
+<td>1–7</td>
+<td>4</td>
+<td>1 2 <s><span style="color:gray;">3</span></s> 4 <s><span style="color:gray;">5</span></s> 6 7 8</td>
+<td>3 5</td>
+</tr>
+</table>
+<p>Now we pick the next random number from 1 to 6, and then from 1 to 5, and so on, always repeating the strike-out process as above:</p>
+<table class="wikitable">
+<tr>
+<th>Range</th>
+<th>Roll</th>
+<th>Scratch</th>
+<th>Result</th>
+</tr>
+<tr>
+<td>1–6</td>
+<td>5</td>
+<td>1 2 <s><span style="color:gray;">3</span></s> 4 <s><span style="color:gray;">5</span></s> 6 <s><span style="color:gray;">7</span></s> 8</td>
+<td>3 5 7</td>
+</tr>
+<tr>
+<td>1–5</td>
+<td>3</td>
+<td>1 2 <s><span style="color:gray;">3</span></s> <s><span style="color:gray;">4</span></s> <s><span style="color:gray;">5</span></s> 6 <s><span style="color:gray;">7</span></s> 8</td>
+<td>3 5 7 4</td>
+</tr>
+<tr>
+<td>1–4</td>
+<td>4</td>
+<td>1 2 <s><span style="color:gray;">3</span></s> <s><span style="color:gray;">4</span></s> <s><span style="color:gray;">5</span></s> 6 <s><span style="color:gray;">7</span></s> <s><span style="color:gray;">8</span></s></td>
+<td>3 5 7 4 8</td>
+</tr>
+<tr>
+<td>1–3</td>
+<td>1</td>
+<td><s><span style="color:gray;">1</span></s> 2 <s><span style="color:gray;">3</span></s> <s><span style="color:gray;">4</span></s> <s><span style="color:gray;">5</span></s> 6 <s><span style="color:gray;">7</span></s> <s><span style="color:gray;">8</span></s></td>
+<td>3 5 7 4 8 1</td>
+</tr>
+<tr>
+<td>1–2</td>
+<td>2</td>
+<td><s><span style="color:gray;">1</span></s> 2 <s><span style="color:gray;">3</span></s> <s><span style="color:gray;">4</span></s> <s><span style="color:gray;">5</span></s> <s><span style="color:gray;">6</span></s> <s><span style="color:gray;">7</span></s> <s><span style="color:gray;">8</span></s></td>
+<td>3 5 7 4 8 1 6</td>
+</tr>
+<tr>
+<td>&#160;</td>
+<td>&#160;</td>
+<td><s><span style="color:gray;">1</span></s> <s><span style="color:gray;">2</span></s> <s><span style="color:gray;">3</span></s> <s><span style="color:gray;">4</span></s> <s><span style="color:gray;">5</span></s> <s><span style="color:gray;">6</span></s> <s><span style="color:gray;">7</span></s> <s><span style="color:gray;">8</span></s></td>
+<td>3 5 7 4 8 1 6 2</td>
+</tr>
+</table>
+<h3><span class="mw-headline" id="Modern_method">Modern method</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Fisher%E2%80%93Yates_shuffle&amp;action=edit&amp;section=6" title="Edit section: Modern method">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>We'll now do the same thing using <a href="#The_modern_algorithm">Durstenfeld's version</a> of the algorithm: this time, instead of striking out the chosen numbers and copying them elsewhere, we'll swap them with the last number not yet chosen. We'll start by writing out the numbers from 1 to 8 as before:</p>
+<table class="wikitable">
+<tr>
+<th>Range</th>
+<th>Roll</th>
+<th>Scratch</th>
+<th>Result</th>
+</tr>
+<tr>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>1 2 3 4 5 6 7 8</td>
+<td>&#160;</td>
+</tr>
+</table>
+<p>For our first roll, we roll a random number from 1 to 8: this time it is 6, so we swap the 6th and 8th numbers in the list:</p>
+<table class="wikitable">
+<tr>
+<th>Range</th>
+<th>Roll</th>
+<th>Scratch</th>
+<th>Result</th>
+</tr>
+<tr>
+<td>1–8</td>
+<td>6</td>
+<td>1 2 3 4 5 <b>8</b> 7</td>
+<td><b>6</b></td>
+</tr>
+</table>
+<p>The next random number we roll from 1 to 7, and turns out to be 2. Thus, we swap the 2nd and 7th numbers and move on:</p>
+<table class="wikitable">
+<tr>
+<th>Range</th>
+<th>Roll</th>
+<th>Scratch</th>
+<th>Result</th>
+</tr>
+<tr>
+<td>1–7</td>
+<td>2</td>
+<td>1 <b>7</b> 3 4 5 8</td>
+<td><b>2</b> 6</td>
+</tr>
+</table>
+<p>The next random number we roll is from 1 to 6, and just happens to be 6, which means we leave the 6th number in the list (which, after the swap above, is now number 8) in place and just move to the next step. Again, we proceed the same way until the permutation is complete:</p>
+<table class="wikitable">
+<tr>
+<th>Range</th>
+<th>Roll</th>
+<th>Scratch</th>
+<th>Result</th>
+</tr>
+<tr>
+<td>1–6</td>
+<td>6</td>
+<td>1 7 3 4 5</td>
+<td><b>8</b> 2 6</td>
+</tr>
+<tr>
+<td>1–5</td>
+<td>1</td>
+<td align="right"><b>5</b> 7 3 4</td>
+<td><b>1</b> 8 2 6</td>
+</tr>
+<tr>
+<td>1–4</td>
+<td>3</td>
+<td align="right">5 7 <b>4</b></td>
+<td><b>3</b> 1 8 2 6</td>
+</tr>
+<tr>
+<td>1–3</td>
+<td>3</td>
+<td align="right">5 7</td>
+<td><b>4</b> 3 1 8 2 6</td>
+</tr>
+<tr>
+<td>1–2</td>
+<td>1</td>
+<td align="right"><b>7</b></td>
+<td><b>5</b> 4 3 1 8 2 6</td>
+</tr>
+</table>
+<p>At this point there's nothing more that can be done, so the resulting permutation is 7 5 4 3 1 8 2 6.</p>
+<h2><span class="mw-headline" id="Variants">Variants</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Fisher%E2%80%93Yates_shuffle&amp;action=edit&amp;section=7" title="Edit section: Variants">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Sattolo.27s_algorithm">Sattolo's algorithm</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Fisher%E2%80%93Yates_shuffle&amp;action=edit&amp;section=8" title="Edit section: Sattolo's algorithm">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>A very similar algorithm was published in 1986 by <a href="https://en.wikipedia.org/w/index.php?title=Sandra_Sattolo&amp;action=edit&amp;redlink=1" class="new" title="Sandra Sattolo (page does not exist)">Sandra Sattolo</a> for generating uniformly distributed <a href="https://en.wikipedia.org/wiki/Cyclic_permutation" title="Cyclic permutation">cycles</a> of (maximal) length <i>n</i>.<sup id="cite_ref-sattolo_6-0" class="reference"><a href="#cite_note-sattolo-6">[6]</a></sup><sup id="cite_ref-wilson_7-0" class="reference"><a href="#cite_note-wilson-7">[7]</a></sup> The only difference between Durstenfeld's and Sattolo's algorithms is that in the latter, in step 2 above, the random number <i>j</i> is chosen from the range between 1 and <i>i</i>−1 (rather than between 1 and <i>i</i>) inclusive. This simple change modifies the algorithm so that the resulting permutation always consists of a single cycle.</p>
+<p>In fact, as described below, it is quite easy to <i>accidentally</i> implement Sattolo's algorithm when the ordinary Fisher–Yates shuffle is intended. This will bias the results by causing the permutations to be picked from the smaller set of (<i>n</i>−1)! cycles of length <i>N</i>, instead of from the full set of all <i>n</i>! possible permutations.</p>
+<p>The fact that Sattolo's algorithm always produces a cycle of length <i>n</i> can be shown by <a href="https://en.wikipedia.org/wiki/Mathematical_induction" title="Mathematical induction">induction</a>. Assume by induction that after the initial iteration of the loop, the remaining iterations permute the first <i>n</i>&#160;−&#160;1 elements according to a cycle of length <i>n</i>&#160;−&#160;1 (those remaining iterations are just Sattolo's algorithm applied to those first <i>n</i>&#160;−&#160;1 elements). This means that tracing the initial element to its new position <i>p</i>, then the element originally at position <i>p</i> to its new position, and so forth, one only gets back to the initial position after having visited all other positions. Suppose the initial iteration swapped the final element with the one at (non-final) position <i>k</i>, and that the subsequent permutation of first <i>n</i>&#160;−&#160;1 elements then moved it to position&#160;<i>l</i>; we compare the permutation&#160;<i>π</i> of all <i>n</i> elements with that remaining permutation&#160;<i>σ</i> of the first <i>n</i>&#160;−&#160;1 elements. Tracing successive positions as just mentioned, there is no difference between <i>π</i> and <i>σ</i> until arriving at position&#160;<i>k</i>. But then, under&#160;<i>π</i> the element originally at position&#160;<i>k</i> is moved to the final position rather than to position&#160;<i>l</i>, and the element originally at the final position is moved to position&#160;<i>l</i>. From there on, the sequence of positions for&#160;<i>π</i> again follows the sequence for&#160;<i>σ</i>, and all positions will have been visited before getting back to the initial position, as required.</p>
+<p>As for the equal probability of the permutations, it suffices to observe that the modified algorithm involves (<i>n</i>−1)! distinct possible sequences of random numbers produced, each of which clearly produces a different permutation, and each of which occurs—assuming the random number source is unbiased—with equal probability. The (<i>n</i>−1)! different permutations so produced precisely exhaust the set of cycles of length <i>n</i>: each such cycle has a unique <a href="https://en.wikipedia.org/wiki/Cycle_notation" class="mw-redirect" title="Cycle notation">cycle notation</a> with the value <i>n</i> in the final position, which allows for (<i>n</i>−1)! permutations of the remaining values to fill the other positions of the cycle notation.</p>
+<p>A sample implementation of Sattolo's algorithm in <a href="https://en.wikipedia.org/wiki/Python_(programming_language)" title="Python (programming language)">Python</a> is:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randrange</span>
+
+<span class="k">def</span> <span class="nf">sattoloCycle</span><span class="p">(</span><span class="n">items</span><span class="p">):</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">items</span><span class="p">)</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span>
+        <span class="n">j</span> <span class="o">=</span> <span class="n">randrange</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>  <span class="c1"># 0 &lt;= j &lt;= i-1</span>
+        <span class="n">items</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">items</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">items</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">items</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+    <span class="k">return</span>
+</pre></div>
+<h2><span class="mw-headline" id="Comparison_with_other_shuffling_algorithms">Comparison with other shuffling algorithms</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Fisher%E2%80%93Yates_shuffle&amp;action=edit&amp;section=9" title="Edit section: Comparison with other shuffling algorithms">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The Fisher–Yates shuffle is quite efficient; indeed, its asymptotic time and space complexity are optimal. Combined with a high-quality unbiased random number source, it is also guaranteed to produce unbiased results. Compared to some other solutions, it also has the advantage that, if only part of the resulting permutation is needed, it can be stopped halfway through, or even stopped and restarted repeatedly, generating the permutation incrementally as needed.</p>
+<p>An alternative method assigns a random number to each element of the set to be shuffled and then sorts the set according to the assigned numbers. The sorting method has the same asymptotic time complexity as Fisher-Yates: although general sorting is <i>O</i>(<i>n</i>&#160;log&#160;<i>n</i>), numbers are efficiently sorted using <a href="https://en.wikipedia.org/wiki/Radix_sort" title="Radix sort">Radix sort</a> in <i>O</i>(<i>n</i>) time. Like the Fisher–Yates shuffle, the sorting method produces unbiased results. However, care must be taken to ensure that the assigned random numbers are never duplicated, since sorting algorithms typically don't order elements randomly in case of a tie.<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">[8]</a></sup> Additionally, this method requires asymptotically larger space: <i>O</i>(<i>n</i>) additional storage space for the random numbers, versus <i>O</i>(1) space for the Fisher–Yates shuffle. Finally, we note that the sorting method has a simple parallel implementation, unlike the Fisher–Yates shuffle, which is sequential.</p>
+<p>A variant of the above method that has seen some use in languages that support sorting with user-specified comparison functions is to shuffle a list by sorting it with a comparison function that returns random values. However, <i>this is an extremely bad method</i>: it is very likely to produce highly non-uniform distributions, which in addition depends heavily on the sorting algorithm used.<sup id="cite_ref-9" class="reference"><a href="#cite_note-9">[9]</a></sup><sup id="cite_ref-10" class="reference"><a href="#cite_note-10">[10]</a></sup> For instance suppose <a href="https://en.wikipedia.org/wiki/Quicksort" title="Quicksort">quicksort</a> is used as sorting algorithm, with a fixed element selected as first <a href="https://en.wikipedia.org/wiki/Pivot_element" title="Pivot element">pivot element</a>. The algorithm starts comparing the pivot with all other elements to separate them into those less and those greater than it, and the relative sizes of those groups will determine the final place of the pivot element. For a uniformly distributed <a href="https://en.wikipedia.org/wiki/Random_permutation" title="Random permutation">random permutation</a>, each possible final position should be equally likely for the pivot element, but if each of the initial comparisons returns "less" or "greater" with equal probability, then that position will have a <a href="https://en.wikipedia.org/wiki/Binomial_distribution" title="Binomial distribution">binomial distribution</a> for <i>p</i>&#160;=&#160;1/2, which gives positions near the middle of the sequence with a much higher probability for than positions near the ends. Randomized comparison functions applied to other sorting methods like <a href="https://en.wikipedia.org/wiki/Merge_sort" title="Merge sort">merge sort</a> may produce results that appear more uniform, but are not quite so either, since merging two sequences by repeatedly choosing one of them with equal probability (until the choice is forced by the exhaustion of one sequence) does not produce results with a uniform distribution; instead the probability to choose a sequence should be proportional to the number of elements left in it. In fact no method that uses only two-way random events with equal probability (<a href="https://en.wikipedia.org/wiki/Bernoulli_process" title="Bernoulli process">"coin flipping"</a>), repeated a bounded number of times, can produce permutations of a sequence (of more than two elements) with a uniform distribution, because every execution path will have as probability a rational number with as denominator a <a href="https://en.wikipedia.org/wiki/Power_of_2" class="mw-redirect" title="Power of 2">power of 2</a>, while the required probability 1/<i>n</i>! for each possible permutation is not of that form.</p>
+<p>In principle this shuffling method can even result in program failures like endless loops or access violations, because the correctness of a sorting algorithm may depend on properties of the order relation (like <a href="https://en.wikipedia.org/wiki/Transitive_relation" title="Transitive relation">transitivity</a>) that a comparison producing random values will certainly not have.<sup id="cite_ref-11" class="reference"><a href="#cite_note-11">[11]</a></sup> While this kind of behaviour should not occur with sorting routines that never perform a comparison whose outcome can be predicted with certainty (based on previous comparisons), there can be valid reasons for deliberately making such comparisons. For instance the fact that any element should compare equal to itself allows using them as <a href="https://en.wikipedia.org/wiki/Sentinel_value" title="Sentinel value">sentinel value</a> for efficiency reasons, and if this is the case, a random comparison function would break the sorting algorithm.</p>
+<h2><span class="mw-headline" id="Potential_sources_of_bias">Potential sources of bias</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Fisher%E2%80%93Yates_shuffle&amp;action=edit&amp;section=10" title="Edit section: Potential sources of bias">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Care must be taken when implementing the Fisher–Yates shuffle, both in the implementation of the algorithm itself and in the generation of the random numbers it is built on, otherwise the results may show detectable bias. A number of common sources of bias have been listed below.</p>
+<h3><span class="mw-headline" id="Implementation_errors">Implementation errors</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Fisher%E2%80%93Yates_shuffle&amp;action=edit&amp;section=11" title="Edit section: Implementation errors">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>A common error when implementing the Fisher–Yates shuffle is to pick the random numbers from the wrong range.<sup id="cite_ref-12" class="reference"><a href="#cite_note-12">[12]</a></sup> The flawed algorithm may appear to work correctly, but it will not produce each possible permutation with equal probability, and it may not produce certain permutations at all. For example, a common <a href="https://en.wikipedia.org/wiki/Off-by-one_error" title="Off-by-one error">off-by-one error</a> would be choosing the index <i>j</i> of the entry to swap in <a href="#The_modern_algorithm">the example above</a> to be always strictly less than the index <i>i</i> of the entry it will be swapped with. This turns the Fisher–Yates shuffle into <a href="#Sattolo.27s_algorithm">Sattolo's algorithm</a>, which produces only permutations consisting of a single cycle involving all elements: in particular, with this modification, no element of the array can ever end up in its original position.</p>
+<div class="thumb tright">
+<div class="thumbinner" style="width:222px;"><a href="https://en.wikipedia.org/wiki/File:Probabilities7.svg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Probabilities7.svg/220px-Probabilities7.svg.png" width="220" height="165" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/90/Probabilities7.svg/330px-Probabilities7.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/90/Probabilities7.svg/440px-Probabilities7.svg.png 2x" data-file-width="360" data-file-height="270" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="https://en.wikipedia.org/wiki/File:Probabilities7.svg" class="internal" title="Enlarge"></a></div>
+Order bias from incorrect implementation</div>
+</div>
+</div>
+<div class="thumb tright">
+<div class="thumbinner" style="width:222px;"><a href="https://en.wikipedia.org/wiki/File:Orderbias.png" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Orderbias.png/220px-Orderbias.png" width="220" height="220" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/41/Orderbias.png/330px-Orderbias.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/41/Orderbias.png/440px-Orderbias.png 2x" data-file-width="480" data-file-height="480" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="https://en.wikipedia.org/wiki/File:Orderbias.png" class="internal" title="Enlarge"></a></div>
+Order bias from incorrect implementation - n = 1000</div>
+</div>
+</div>
+<p>Similarly, always selecting <i>j</i> from the entire range of valid array indices on <i>every</i> iteration also produces a result which is biased, albeit less obviously so. This can be seen from the fact that doing so yields <i>n</i><sup><i>n</i></sup> distinct possible sequences of swaps, whereas there are only <a href="https://en.wikipedia.org/wiki/Factorial" title="Factorial"><i>n</i>!</a> possible permutations of an <i>n</i>-element array. Since <i>n</i><sup><i>n</i></sup> can never be evenly divisible by <i>n</i>! when <i>n</i> &gt; 2 (as the latter is divisible by <i>n</i>−1, which shares no <a href="https://en.wikipedia.org/wiki/Prime_factor" title="Prime factor">prime factors</a> with <i>n</i>), some permutations must be produced by more of the <i>n</i><sup><i>n</i></sup> sequences of swaps than others. As a concrete example of this bias, observe the distribution of possible outcomes of shuffling a three-element array [1, 2, 3]. There are 6 possible permutations of this array (3! = 6), but the algorithm produces 27 possible shuffles (3<sup>3</sup> = 27). In this case, [1, 2, 3], [3, 1, 2], and [3, 2, 1] each result from 4 of the 27 shuffles, while each of the remaining 3 permutations occurs in 5 of the 27 shuffles.</p>
+<p>The matrix to the right shows the probability of each element in a list of length 7 ending up in any other position. Observe that for most elements, ending up in their original position (the matrix's main diagonal) has lowest probability, and moving one slot backwards has highest probability.</p>
+<h3><span class="mw-headline" id="Modulo_bias">Modulo bias</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Fisher%E2%80%93Yates_shuffle&amp;action=edit&amp;section=12" title="Edit section: Modulo bias">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Doing a Fisher–Yates shuffle involves picking <a href="https://en.wikipedia.org/wiki/Uniform_distribution_(discrete)" class="mw-redirect" title="Uniform distribution (discrete)">uniformly distributed</a> random integers from various ranges. Most <a href="https://en.wikipedia.org/wiki/Random_number_generator" class="mw-redirect" title="Random number generator">random number generators</a>, however—whether true or <a href="https://en.wikipedia.org/wiki/Pseudorandom" class="mw-redirect" title="Pseudorandom">pseudorandom</a>—will only directly provide numbers in some fixed range, such as, say, from 0 to 2<sup>32</sup>−1. A simple and commonly used way to force such numbers into a desired smaller range is to apply the <a href="https://en.wikipedia.org/wiki/Modulo_operator" class="mw-redirect" title="Modulo operator">modulo operator</a>; that is, to divide them by the size of the range and take the remainder. However, the need, in a Fisher–Yates shuffle, to generate random numbers in every range from 0–1 to 0–<i>n</i> pretty much guarantees that some of these ranges will not evenly divide the natural range of the random number generator. Thus, the remainders will not always be evenly distributed and, worse yet, the bias will be systematically in favor of small remainders.</p>
+<p>For example, assume that your random number source gives numbers from 0 to 99 (as was the case for Fisher and Yates' original tables), and that you wish to obtain an unbiased random number from 0 to 15. If you simply divide the numbers by 16 and take the remainder, you'll find that the numbers 0–3 occur about 17% more often than others. This is because 16 does not evenly divide 100: the largest multiple of 16 less than or equal to 100 is 6×16 = 96, and it is the numbers in the incomplete range 96–99 that cause the bias. The simplest way to fix the problem is to discard those numbers before taking the remainder and to keep trying again until a number in the suitable range comes up. While in principle this could, in the worst case, take forever, the <a href="https://en.wikipedia.org/wiki/Expected_value" title="Expected value">expected number</a> of retries will always be less than one.</p>
+<p>A related problem occurs with implementations that first generate a random <a href="https://en.wikipedia.org/wiki/Floating-point" class="mw-redirect" title="Floating-point">floating-point</a> number—usually in the range [0,1)—and then multiply it by the size of the desired range and round down. The problem here is that random floating-point numbers, however carefully generated, always have only finite precision. This means that there are only a finite number of possible floating point values in any given range, and if the range is divided into a number of segments that doesn't divide this number evenly, some segments will end up with more possible values than others. While the resulting bias will not show the same systematic downward trend as in the previous case, it will still be there.</p>
+<h3><span class="mw-headline" id="Pseudorandom_generators:_problems_involving_state_space.2C_seeding.2C_and_usage">Pseudorandom generators: problems involving state space, seeding, and usage</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Fisher%E2%80%93Yates_shuffle&amp;action=edit&amp;section=13" title="Edit section: Pseudorandom generators: problems involving state space, seeding, and usage">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<table class="wikitable" style="margin:0 0 0 1em; text-align:right; float:right;">
+<caption>Size of PRNG seeds and the largest list where every permutation could be reached</caption>
+<tr>
+<th>seed bits</th>
+<th>maximum list length</th>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>5</td>
+<td>4</td>
+</tr>
+<tr>
+<td>7</td>
+<td>5</td>
+</tr>
+<tr>
+<td>10</td>
+<td>6</td>
+</tr>
+<tr>
+<td>13</td>
+<td>7</td>
+</tr>
+<tr>
+<td>16</td>
+<td>8</td>
+</tr>
+<tr>
+<td>22</td>
+<td>10</td>
+</tr>
+<tr>
+<td>24</td>
+<td>10</td>
+</tr>
+<tr>
+<td>32</td>
+<td>12</td>
+</tr>
+<tr>
+<td>48</td>
+<td>16</td>
+</tr>
+<tr>
+<td>64</td>
+<td>20</td>
+</tr>
+<tr>
+<td>128</td>
+<td>34</td>
+</tr>
+<tr>
+<td>160</td>
+<td>40</td>
+</tr>
+<tr>
+<td>226</td>
+<td>52</td>
+</tr>
+<tr>
+<td>256</td>
+<td>57</td>
+</tr>
+<tr>
+<td>512</td>
+<td>98</td>
+</tr>
+<tr>
+<td>1024</td>
+<td>170</td>
+</tr>
+<tr>
+<td>1600</td>
+<td>245</td>
+</tr>
+<tr>
+<td>19937</td>
+<td>2080</td>
+</tr>
+<tr>
+<td>44497</td>
+<td>4199</td>
+</tr>
+</table>
+<p>An additional problem occurs when the Fisher–Yates shuffle is used with a <a href="https://en.wikipedia.org/wiki/Pseudorandom_number_generator" title="Pseudorandom number generator">pseudorandom number generator</a> or PRNG: as the sequence of numbers output by such a generator is entirely determined by its internal state at the start of a sequence, a shuffle driven by such a generator cannot possibly produce more distinct permutations than the generator has distinct possible states. Even when the number of possible states exceeds the number of permutations, the irregular nature of the mapping from sequences of numbers to permutations means that some permutations will occur more often than others. Thus, to minimize bias, the number of states of the PRNG should exceed the number of permutations by at least several orders of magnitude.</p>
+<p>For example, the built-in pseudorandom number generator provided by many programming languages and/or libraries may often have only 32 bits of internal state, which means it can only produce 2<sup>32</sup> different sequences of numbers. If such a generator is used to shuffle a deck of 52 <a href="https://en.wikipedia.org/wiki/Playing_card" title="Playing card">playing cards</a>, it can only ever produce a very small fraction of the <a href="https://en.wikipedia.org/wiki/Factorial" title="Factorial">52!</a> ≈ 2<sup>225.6</sup> possible permutations. It is impossible for a generator with less than 226 bits of internal state to produce all the possible permutations of a 52-card deck.</p>
+<p>No pseudorandom number generator can produce more distinct sequences, starting from the point of initialization, than there are distinct seed values it may be initialized with. Thus, a generator that has 1024 bits of internal state but which is initialized with a 32-bit seed can still only produce 2<sup>32</sup> different permutations right after initialization. It can produce more permutations if one exercises the generator a great many times before starting to use it for generating permutations, but this is a very inefficient way of increasing randomness: supposing one can arrange to use the generator a random number of up to a billion, say 2<sup>30</sup> for simplicity, times between initialization and generating permutations, then the number of possible permutations is still only 2<sup>62</sup>.</p>
+<p>A further problem occurs when a simple <a href="https://en.wikipedia.org/wiki/Linear_congruential_generator" title="Linear congruential generator">linear congruential</a> PRNG is used with the divide-and-take-remainder method of range reduction described above. The problem here is that the low-order bits of a linear congruential PRNG are less random than the high-order ones: the low <i>n</i> bits of the generator themselves have a period of at most 2<sup><i>n</i></sup>. When the divisor is a power of two, taking the remainder essentially means throwing away the high-order bits, such that one ends up with a significantly less random value. This is an example of the general rule that a poor-quality RNG or PRNG will produce poor-quality shuffles.</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Fisher%E2%80%93Yates_shuffle&amp;action=edit&amp;section=14" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/RC4" title="RC4">RC4</a>, a stream cipher based on shuffling an array</li>
+<li><a href="https://en.wikipedia.org/wiki/Reservoir_sampling" title="Reservoir sampling">Reservoir sampling</a>, in particular Algorithm R which is a specialization of the Fisher–Yates shuffle</li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Fisher%E2%80%93Yates_shuffle&amp;action=edit&amp;section=15" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist columns references-column-width" style="-moz-column-width: 30em; -webkit-column-width: 30em; column-width: 30em; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-fisheryates-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-fisheryates_1-0">^</a></b></span> <span class="reference-text"><cite class="citation book"><a href="https://en.wikipedia.org/wiki/Ronald_A._Fisher" class="mw-redirect" title="Ronald A. Fisher">Fisher, Ronald A.</a>; <a href="https://en.wikipedia.org/wiki/Frank_Yates" title="Frank Yates">Yates, Frank</a> (1948) [1938]. <i>Statistical tables for biological, agricultural and medical research</i> (3rd ed.). London: Oliver &amp; Boyd. pp.&#160;26–27. <a href="https://en.wikipedia.org/wiki/OCLC" title="OCLC">OCLC</a>&#160;<a rel="nofollow" class="external text" href="http://www.worldcat.org/oclc/14222135">14222135</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFisher%93Yates+shuffle&amp;rft.aufirst=Ronald+A.&amp;rft.aulast=Fisher&amp;rft.au=Yates%2C+Frank&amp;rft.btitle=Statistical+tables+for+biological%2C+agricultural+and+medical+research&amp;rft.date=1948&amp;rft.edition=3rd&amp;rft.genre=book&amp;rft_id=info%3Aoclcnum%2F14222135&amp;rft.pages=26-27&amp;rft.place=London&amp;rft.pub=Oliver+%26+Boyd&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span> Note: the 6th edition, <a href="https://en.wikipedia.org/wiki/Special:BookSources/0028447204" class="internal mw-magiclink-isbn">ISBN 0-02-844720-4</a>, is <a rel="nofollow" class="external text" href="http://hdl.handle.net/2440/10701">available on the web</a>, but gives a different shuffling algorithm by <a href="https://en.wikipedia.org/wiki/C._R._Rao" title="C. R. Rao">C. R. Rao</a>.</span></li>
+<li id="cite_note-cacm-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-cacm_2-0">^</a></b></span> <span class="reference-text"><cite class="citation journal">Durstenfeld, R. (July 1964). "Algorithm 235: Random permutation". <i>Communications of the ACM</i>. <b>7</b> (7): 420. <a href="https://en.wikipedia.org/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1145%2F364520.364540">10.1145/364520.364540</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFisher%93Yates+shuffle&amp;rft.atitle=Algorithm+235%3A+Random+permutation&amp;rft.aufirst=R.&amp;rft.aulast=Durstenfeld&amp;rft.date=1964-07&amp;rft.genre=article&amp;rft_id=info%3Adoi%2F10.1145%2F364520.364540&amp;rft.issue=7&amp;rft.jtitle=Communications+of+the+ACM&amp;rft.pages=420&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=7" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-knuth-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-knuth_3-0">^</a></b></span> <span class="reference-text"><cite class="citation book">Knuth, Donald E. (1969). <i>Seminumerical algorithms</i>. The Art of Computer Programming. <b>2</b>. Reading, MA: Addison–Wesley. pp.&#160;139–140. <a href="https://en.wikipedia.org/wiki/OCLC" title="OCLC">OCLC</a>&#160;<a rel="nofollow" class="external text" href="http://www.worldcat.org/oclc/85975465">85975465</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFisher%93Yates+shuffle&amp;rft.aufirst=Donald+E.&amp;rft.aulast=Knuth&amp;rft.btitle=Seminumerical+algorithms&amp;rft.date=1969&amp;rft.genre=book&amp;rft_id=info%3Aoclcnum%2F85975465&amp;rft.pages=139-140&amp;rft.place=Reading%2C+MA&amp;rft.pub=Addison%93Wesley&amp;rft.series=The+Art+of+Computer+Programming&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-knuth3-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-knuth3_4-0">^</a></b></span> <span class="reference-text"><cite class="citation book">Knuth (1998). <i>Seminumerical algorithms</i>. The Art of Computer Programming. <b>2</b> (3rd ed.). Boston: Addison–Wesley. pp.&#160;145–146. <a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="https://en.wikipedia.org/wiki/Special:BookSources/0-201-89684-2" title="Special:BookSources/0-201-89684-2">0-201-89684-2</a>. <a href="https://en.wikipedia.org/wiki/OCLC" title="OCLC">OCLC</a>&#160;<a rel="nofollow" class="external text" href="http://www.worldcat.org/oclc/38207978">38207978</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFisher%93Yates+shuffle&amp;rft.au=Knuth&amp;rft.btitle=Seminumerical+algorithms&amp;rft.date=1998&amp;rft.edition=3rd&amp;rft.genre=book&amp;rft_id=info%3Aoclcnum%2F38207978&amp;rft.isbn=0-201-89684-2&amp;rft.pages=145-146&amp;rft.place=Boston&amp;rft.pub=Addison%93Wesley&amp;rft.series=The+Art+of+Computer+Programming&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-nist-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-nist_5-0">^</a></b></span> <span class="reference-text"><cite class="citation web">Black, Paul E. (2005-12-19). <a rel="nofollow" class="external text" href="https://xlinux.nist.gov/dads/HTML/fisherYatesShuffle.html">"Fisher–Yates shuffle"</a>. <i>Dictionary of Algorithms and Data Structures</i>. <a href="https://en.wikipedia.org/wiki/National_Institute_of_Standards_and_Technology" title="National Institute of Standards and Technology">National Institute of Standards and Technology</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2007-08-09</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFisher%93Yates+shuffle&amp;rft.atitle=Fisher%93Yates+shuffle&amp;rft.aufirst=Paul+E.&amp;rft.aulast=Black&amp;rft.date=2005-12-19&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fxlinux.nist.gov%2Fdads%2FHTML%2FfisherYatesShuffle.html&amp;rft.jtitle=Dictionary+of+Algorithms+and+Data+Structures&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-sattolo-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-sattolo_6-0">^</a></b></span> <span class="reference-text"><cite class="citation journal">Sattolo, Sandra (1986-05-30). "An algorithm to generate a random cyclic permutation". <i>Information Processing Letters</i>. <b>22</b> (6): 315–3017.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFisher%93Yates+shuffle&amp;rft.atitle=An+algorithm+to+generate+a+random+cyclic+permutation&amp;rft.aufirst=Sandra&amp;rft.aulast=Sattolo&amp;rft.date=1986-05-30&amp;rft.genre=article&amp;rft.issue=6&amp;rft.jtitle=Information+Processing+Letters&amp;rft.pages=315-3017&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=22" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-wilson-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-wilson_7-0">^</a></b></span> <span class="reference-text"><cite class="citation conference">Wilson, Mark C. (2004-06-21). <a rel="nofollow" class="external text" href="http://algo.inria.fr/seminars/summary/Wilson2004b.pdf">"Overview of Sattolo's Algorithm"</a> <span style="font-size:85%;">(PDF)</span>. In F. Chyzak (ed.). <i>INRIA Research Report</i>. <a rel="nofollow" class="external text" href="http://algo.inria.fr/seminars/allyears.html">Algorithms Seminar 2002–2004</a>. <b>5542</b>. summary by Éric Fusy. pp.&#160;105–108. <a href="https://en.wikipedia.org/wiki/International_Standard_Serial_Number" title="International Standard Serial Number">ISSN</a>&#160;<a rel="nofollow" class="external text" href="http://www.worldcat.org/issn/0249-6399">0249-6399</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFisher%93Yates+shuffle&amp;rft.atitle=Overview+of+Sattolo%27s+Algorithm&amp;rft.aufirst=Mark+C.&amp;rft.aulast=Wilson&amp;rft.btitle=INRIA+Research+Report&amp;rft.date=2004-06-21&amp;rft.genre=conference&amp;rft_id=http%3A%2F%2Falgo.inria.fr%2Fseminars%2Fsummary%2FWilson2004b.pdf&amp;rft.issn=0249-6399&amp;rft.pages=105-108&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://okmij.org/ftp/Haskell/perfect-shuffle.txt">"Provably perfect shuffle algorithms"</a>. <i>Oleg Kiselyov</i>. 3 Sep 2001<span class="reference-accessdate">. Retrieved <span class="nowrap">2013-07-09</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFisher%93Yates+shuffle&amp;rft.atitle=Provably+perfect+shuffle+algorithms&amp;rft.date=2001-09-03&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fokmij.org%2Fftp%2FHaskell%2Fperfect-shuffle.txt&amp;rft.jtitle=Oleg+Kiselyov&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://szeryf.wordpress.com/2007/06/19/a-simple-shuffle-that-proved-not-so-simple-after-all/">"A simple shuffle that proved not so simple after all"</a>. <i>require ‘brain’</i>. 2007-06-19<span class="reference-accessdate">. Retrieved <span class="nowrap">2007-08-09</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFisher%93Yates+shuffle&amp;rft.atitle=A+simple+shuffle+that+proved+not+so+simple+after+all&amp;rft.date=2007-06-19&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fszeryf.wordpress.com%2F2007%2F06%2F19%2Fa-simple-shuffle-that-proved-not-so-simple-after-all%2F&amp;rft.jtitle=require+%98brain%99&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.robweir.com/blog/2010/02/microsoft-random-browser-ballot.html">"Doing the Microsoft Shuffle: Algorithm Fail in Browser Ballot"</a>. <i>Rob Weir: An Antic Disposition</i>. 2010-02-27<span class="reference-accessdate">. Retrieved <span class="nowrap">2010-02-28</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFisher%93Yates+shuffle&amp;rft.atitle=Doing+the+Microsoft+Shuffle%3A+Algorithm+Fail+in+Browser+Ballot&amp;rft.date=2010-02-27&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.robweir.com%2Fblog%2F2010%2F02%2Fmicrosoft-random-browser-ballot.html&amp;rft.jtitle=Rob+Weir%3A+An+Antic+Disposition&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://blogs.msdn.com/oldnewthing/archive/2009/05/08/9595334.aspx">"Writing a sort comparison function, redux"</a>. <i>require ‘brain’</i>. 2009-05-08<span class="reference-accessdate">. Retrieved <span class="nowrap">2009-05-08</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFisher%93Yates+shuffle&amp;rft.atitle=Writing+a+sort+comparison+function%2C+redux&amp;rft.date=2009-05-08&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fblogs.msdn.com%2Foldnewthing%2Farchive%2F2009%2F05%2F08%2F9595334.aspx&amp;rft.jtitle=require+%98brain%99&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text"><cite class="citation web">Jeff Atwood (December 7, 2007). <a rel="nofollow" class="external text" href="http://www.codinghorror.com/blog/2007/12/the-danger-of-naivete.html">"The Danger of Naïveté"</a>. <i><a rel="nofollow" class="external text" href="http://www.codinghorror.com/">Coding Horror: programming and human factors</a></i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFisher%93Yates+shuffle&amp;rft.atitle=The+Danger+of+Na%C3%AFvet%C3%A9&amp;rft.au=Jeff+Atwood&amp;rft.date=2007-12-07&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.codinghorror.com%2Fblog%2F2007%2F12%2Fthe-danger-of-naivete.html&amp;rft.jtitle=%5Bhttp%3A%2F%2Fwww.codinghorror.com%2F+Coding+Horror%3A+programming+and+human+factors%5D&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span> <span style="font-size:100%" class="error citation-comment">External link in <code style="color:inherit; border:inherit; padding:inherit;">|work=</code> (<a href="https://en.wikipedia.org/wiki/Help:CS1_errors#param_has_ext_link" title="Help:CS1 errors">help</a>)</span></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Fisher%E2%80%93Yates_shuffle&amp;action=edit&amp;section=16" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://bost.ocks.org/mike/shuffle/">An interactive example</a></li>
+</ul>
+<div role="navigation" class="navbox" aria-labelledby="Donald_Knuth" style="padding:3px">
+<table class="nowraplinks hlist collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="https://en.wikipedia.org/wiki/Template:Donald_Knuth_navbox" title="Template:Donald Knuth navbox"><abbr title="View this template" style=";;background:none transparent;border:none;">v</abbr></a></li>
+<li class="nv-talk"><a href="https://en.wikipedia.org/wiki/Template_talk:Donald_Knuth_navbox" title="Template talk:Donald Knuth navbox"><abbr title="Discuss this template" style=";;background:none transparent;border:none;">t</abbr></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Donald_Knuth_navbox&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;">e</abbr></a></li>
+</ul>
+</div>
+<div id="Donald_Knuth" style="font-size:114%"><a href="https://en.wikipedia.org/wiki/Donald_Knuth" title="Donald Knuth">Donald Knuth</a></div>
+</th>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Publications</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><i><a href="https://en.wikipedia.org/wiki/The_Art_of_Computer_Programming" title="The Art of Computer Programming">The Art of Computer Programming</a></i></li>
+<li>"<a href="https://en.wikipedia.org/wiki/The_Complexity_of_Songs" title="The Complexity of Songs">The Complexity of Songs</a>"</li>
+<li><i><a href="https://en.wikipedia.org/wiki/Computers_and_Typesetting" title="Computers and Typesetting">Computers and Typesetting</a></i></li>
+<li><i><a href="https://en.wikipedia.org/wiki/Concrete_Mathematics" title="Concrete Mathematics">Concrete Mathematics</a></i></li>
+<li><i><a href="https://en.wikipedia.org/wiki/Surreal_Numbers_(book)" class="mw-redirect" title="Surreal Numbers (book)">Surreal Numbers</a></i></li>
+<li><i><a href="https://en.wikipedia.org/wiki/Things_a_Computer_Scientist_Rarely_Talks_About" title="Things a Computer Scientist Rarely Talks About">Things a Computer Scientist Rarely Talks About</a></i></li>
+<li><i><a href="https://en.wikipedia.org/wiki/Selected_papers_series_of_Knuth" title="Selected papers series of Knuth">Selected papers series</a></i></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Software" title="Software">Software</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/TeX" title="TeX">TeX</a></li>
+<li><a href="https://en.wikipedia.org/wiki/METAFONT" class="mw-redirect" title="METAFONT">METAFONT</a></li>
+<li>MIXAL (<a href="https://en.wikipedia.org/wiki/MIX" title="MIX">MIX</a></li>
+<li><a href="https://en.wikipedia.org/wiki/MMIX" title="MMIX">MMIX</a></li>
+<li><a href="https://en.wikipedia.org/wiki/GNU_MIX_Development_Kit" title="GNU MIX Development Kit">GNU MDK</a>)</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Font" title="Font">Fonts</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/AMS_Euler" title="AMS Euler">AMS Euler</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Computer_Modern" title="Computer Modern">Computer Modern</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Concrete_Roman" title="Concrete Roman">Concrete Roman</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Literate_programming" title="Literate programming">Literate programming</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/WEB" title="WEB">WEB</a></li>
+<li><a href="https://en.wikipedia.org/wiki/CWEB" title="CWEB">CWEB</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Algorithm" title="Algorithm">Algorithms</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Knuth%27s_Algorithm_X" title="Knuth's Algorithm X">Knuth's Algorithm X</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Knuth–Bendix_completion_algorithm" title="Knuth–Bendix completion algorithm">Knuth–Bendix completion algorithm</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Knuth–Morris–Pratt_algorithm" title="Knuth–Morris–Pratt algorithm">Knuth–Morris–Pratt algorithm</a></li>
+<li><strong class="selflink">Knuth shuffle</strong></li>
+<li><a href="https://en.wikipedia.org/wiki/Robinson–Schensted–Knuth_correspondence" title="Robinson–Schensted–Knuth correspondence">Robinson–Schensted–Knuth correspondence</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Trabb_Pardo–Knuth_algorithm" title="Trabb Pardo–Knuth algorithm">Trabb Pardo–Knuth algorithm</a></li>
+<li>Generalization of <a href="https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm" title="Dijkstra's algorithm">Dijkstra's algorithm</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Knuth%27s_Simpath_algorithm" title="Knuth's Simpath algorithm">Knuth's Simpath algorithm</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Other</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Dancing_Links" title="Dancing Links">Dancing Links</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Knuth_reward_check" title="Knuth reward check">Knuth reward check</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Knuth_Prize" title="Knuth Prize">Knuth Prize</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Man_or_boy_test" title="Man or boy test">Man or boy test</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Quater-imaginary_base" title="Quater-imaginary base">Quater-imaginary base</a></li>
+<li><a href="https://en.wikipedia.org/wiki/-yllion" title="-yllion">-yllion</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Potrzebie#System_of_measurement" title="Potrzebie">Potrzebie system of weights and measures</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1224
+Cached time: 20170112210802
+Cache expiry: 2592000
+Dynamic content: false
+CPU time usage: 0.132 seconds
+Real time usage: 0.157 seconds
+Preprocessor visited node count: 727/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 29984/2097152 bytes
+Template argument size: 32/2097152 bytes
+Highest expansion depth: 7/40
+Expensive parser function count: 0/500
+Lua time usage: 0.054/10.000 seconds
+Lua memory usage: 2.77 MB/50 MB
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  101.978      1 - -total
+ 88.54%   90.292      1 - Template:Reflist
+ 40.78%   41.587      3 - Template:Cite_book
+ 19.38%   19.761      6 - Template:Cite_web
+ 11.38%   11.606      1 - Template:Donald_Knuth_navbox
+  9.74%    9.929      1 - Template:Navbox
+  7.10%    7.239      2 - Template:Cite_journal
+  4.70%    4.791      1 - Template:Cite_conference
+  1.05%    1.066      1 - Template:Column-width
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:12684962-0!*!0!!en!4!* and timestamp 20170112210802 and revision id 754655942
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Fisher%e2%80%93Yates_shuffle&amp;oldid=754655942">https://en.wikipedia.org/w/index.php?title=Fisher–Yates_shuffle&amp;oldid=754655942</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Help_Category.html" title="Help:Category">Categories</a>: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Combinatorial_algorithms" title="Category:Combinatorial algorithms">Combinatorial algorithms</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Randomized_algorithms" title="Category:Randomized algorithms">Randomized algorithms</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Permutations" title="Category:Permutations">Permutations</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Monte_Carlo_methods" title="Category:Monte Carlo methods">Monte Carlo methods</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="https://en.wikipedia.org/wiki/Category:CS1_errors:_external_links" title="Category:CS1 errors: external links">CS1 errors: external links</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Pages_using_ISBN_magic_links" title="Category:Pages using ISBN magic links">Pages using ISBN magic links</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="Special_MyTalk.html" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="Special_MyContributions.html" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&amp;returnto=Fisher%E2%80%93Yates+shuffle" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Fisher%E2%80%93Yates+shuffle" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="Fisher%e2%80%93Yates_shuffle.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+															<li  id="ca-talk"><span><a href="https://en.wikipedia.org/wiki/Talk:Fisher–Yates_shuffle"  title="Discussion about the content page [t]" accesskey="t" rel="discussion">Talk</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="Fisher%e2%80%93Yates_shuffle.html" >Read</a></span></li>
+															<li id="ca-edit"><span><a href="https://en.wikipedia.org/w/index.php?title=Fisher%E2%80%93Yates_shuffle&amp;action=edit"  title="Edit this page [e]" accesskey="e">Edit</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="https://en.wikipedia.org/w/index.php?title=Fisher%E2%80%93Yates_shuffle&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="https://en.wikipedia.org/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="Main_Page.html"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="Portal_Contents.html" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="Portal_Featured_content.html" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="Portal_Current_events.html" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="https://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="../../shop.wikimedia.org/index.html" title="Visit the Wikipedia store">Wikipedia store</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Interaction</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-help"><a href="Help_Contents.html" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="Wikipedia_About.html" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="Wikipedia_Community_portal.html" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="Wikipedia_Contact_us.html" title="How to contact Wikipedia">Contact page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="https://en.wikipedia.org/wiki/Special:WhatLinksHere/Fisher–Yates_shuffle" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://en.wikipedia.org/wiki/Special:RecentChangesLinked/Fisher–Yates_shuffle" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="Wikipedia_File_Upload_Wizard.html" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="https://en.wikipedia.org/w/index.php?title=Fisher%E2%80%93Yates_shuffle&amp;oldid=754655942" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://en.wikipedia.org/w/index.php?title=Fisher%E2%80%93Yates_shuffle&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q6522952" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="https://en.wikipedia.org/w/index.php?title=Special:CiteThisPage&amp;page=Fisher%E2%80%93Yates_shuffle&amp;id=754655942" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Print/export</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Fisher%E2%80%93Yates+shuffle">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Fisher%E2%80%93Yates+shuffle&amp;returnto=Fisher%E2%80%93Yates+shuffle&amp;oldid=754655942&amp;writer=rdf2latex">Download as PDF</a></li><li id="t-print"><a href="https://en.wikipedia.org/w/index.php?title=Fisher%E2%80%93Yates_shuffle&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Languages</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Fisher-Yates-Verfahren" title="Fisher-Yates-Verfahren – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Algoritmo_Fisher-Yates" title="Algoritmo Fisher-Yates – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Mélange_de_Fisher-Yates" title="Mélange de Fisher-Yates – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/フィッシャー_-_イェーツのシャッフル" title="フィッシャー - イェーツのシャッフル – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/Тасование_Фишера–Йетса" title="Тасование Фишера–Йетса – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-th"><a href="https://th.wikipedia.org/wiki/ขั้นตอนวิธีการสลับแบบสุ่มของฟิชเชอร์-เยตส์" title="ขั้นตอนวิธีการสลับแบบสุ่มของฟิชเชอร์-เยตส์ – Thai" lang="th" hreflang="th" class="interlanguage-link-target">ไทย</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q6522952#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 13 December 2016, at 20:20.</li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="Wikipedia_Text_of_Creative_Commons_Attribution-ShareAlike_3.html">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="../../creativecommons.org/licenses/by-sa/3.0/index.html" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="../../wikimediafoundation.org/wiki/Terms_of_Use.html">Terms of Use</a> and <a href="../../wikimediafoundation.org/wiki/Privacy_policy.html">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="../../www.wikimediafoundation.org/index.html">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../../wikimediafoundation.org/wiki/Privacy_policy.html" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="Wikipedia_About.html" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="Wikipedia_General_disclaimer.html" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="Wikipedia_Contact_us.html">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a href="../../www.mediawiki.org/wiki/Special_MyLanguage/How_to_contribute.html">Developers</a></li>
+											<li id="footer-places-cookiestatement"><a href="../../wikimediafoundation.org/wiki/Cookie_statement.html">Cookie statement</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/w/index.php?title=Fisher%E2%80%93Yates_shuffle&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="../../www.wikimediafoundation.org/index.html"><img src="https://en.wikipedia.org/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="../../www.mediawiki.org/index.html"><img src="https://en.wikipedia.org/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":57,"wgHostname":"mw1185"});});</script>
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Fisher–Yates_shuffle by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:01 GMT -->
+</html>

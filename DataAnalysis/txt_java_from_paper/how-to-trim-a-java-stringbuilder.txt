@@ -1,0 +1,13 @@
+    
+        I have a StringBuilder object that needs to be trimmed (i.e. all whitespace chars /u0020 and below removed from either end).
+
+I can't seem to find a method in string builder that would do this.
+
+Here's what I'm doing now:
+
+String trimmedStr = strBuilder.toString().trim();
+
+
+This gives exactly the desired output, but it requires two Strings to be allocated instead of one.  Is there a more efficient to trim the string while it's still in the StringBuilder?
+
+                

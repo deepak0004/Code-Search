@@ -1,0 +1,21 @@
+    
+        How would I be able to accomplish the following:
+
+public class testClass implements Interface {
+     public testClass(Interface[] args) {
+     }
+}
+
+
+So that I could declare 
+
+Interface testObject = new testClass(new class1(4), new class2(5));
+
+
+Where class1 and class2 are also classes that implement Interface.
+
+Also, once I accomplish this, how would I be able to refer to each individual parameter taken in to be used in testClass?
+
+Thanks :)
+
+                

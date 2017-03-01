@@ -1,0 +1,89 @@
+    
+        I'm working on a tiny web library and wonder wheter I should call the HTTP handler methods for GET, POST, PUT etc. reflectivly or not.
+
+Fixed Methods
+
+First the variant with an if else ... block calling methods given in the base class where they have a default implementation returning an error to the client. Since a request to an unsupported method needs a header with the allowed methods, I need to look up reflectivly what methods are actully overriden (like the Servlet API does, by the way).  
+
+public abstract class Resource {
+
+    public Response handle(HttpServletRequest request) {
+        String action = request.getMethod();
+        if(action.equals("GET"))
+            return get(request);
+        else if(action.equals("POST"))
+            return post(request);
+        ...
+    }
+
+    protected Response get(HttpServletRequest request) {
+        return new Response(METHOD_NOT_ALLOWED);
+    }
+
+    protected Response post(HttpServletRequest request) {
+        return new Response(METHOD_NOT_ALLOWED);
+    }
+
+}
+
+
+The disadvantage of this solution is the reduced flexible, since the usable methods are fixed in the base class until the handle methods gets reimplemented in a subclass.
+
+Variable Methods
+
+The other variant is to look up HTTP handler methods reflectivly depending on their signature (take HttpServletRequest and return Response). These methods would be stored in a Map and called reflectivly depending on the key in the map.
+
+public abstract class Resource {
+
+    private Map&lt;String, Method&gt; handlers;
+
+    public Resource() {
+        handlers = findHttpHandlerMethodsReflectivly();
+    }
+
+    public Response handle(HttpServletRequest request) {
+        String action = request.getMethod();
+        Method handler = handlers.get(action);
+        return (Response)handler.invoke(this, request);
+    }
+
+}
+
+
+The advantage of this solution is the simple implementation and flexibilty, but the disadvantages are perhaps a bit more runtime overhead due to the search in the map and the reflective method call. And the interface of the class is somewhat "soft" (or dynamic) and the compiler has no chance to check it. But I'm not sure if this would be a disadvantage since no other classes should rely on the HTTP handler methods, they are the external web interface and the border of the Java system.
+
+Strategy Pattern
+
+The third option and the cleanest OOP would be the strategy pattern as recommend by "polygenelubricants". It would look like this:
+
+class MyResource extends Resource {
+
+    register("GET", 
+        new RequestHandler{
+            @Override Response handle(HttpServletRequest request) {
+                new Response(OK);
+            }
+        }
+    );
+
+}
+
+
+It is clean OOP but the code is realy ugly and verbose. I would prefer Scala with closures here even though the tool support for Scala is still poor. Compare this to the solution with inheritance and fixed methods:
+
+class MyResource extends Resource {
+
+    @Override Response get(HttpServletRequest request) {
+        return new Resonse(OK);
+    }
+
+}
+
+
+What would you prefer and why? Other ideas?
+
+Solution
+
+I've learned that reflection is not needed here due to the fixed set of HTTP methods. The approach with the strategy pattern is clean, but it looks to verbose to me. So I decided to go with the fixed methods and inheritance.
+
+                

@@ -1,0 +1,50 @@
+    
+        Is it generally considered bad practice to provide Iterator implementations that are "infinite"; i.e. where calls to hasNext() always(*) return true?
+
+Typically I'd say "yes" because the calling code could behave erratically, but in the below implementation hasNext() will return true unless the caller removes all elements from the List that the iterator was initialised with; i.e. there is a termination condition.  Do you think this is a legitimate use of Iterator?  It doesn't seem to violate the contract although I suppose one could argue it's unintuitive.
+
+public class CyclicIterator&lt;T&gt; implements Iterator&lt;T&gt; {
+  private final List&lt;T&gt; l;
+  private Iterator&lt;T&gt; it;
+
+  public CyclicIterator&lt;T&gt;(List&lt;T&gt; l) {
+    this.l = l;
+    this.it = l.iterator();
+  }
+
+  public boolean hasNext() {
+    return !l.isEmpty();
+  }
+
+  public T next() {
+    T ret;
+
+    if (!hasNext()) {
+      throw new NoSuchElementException();
+    } else if (it.hasNext()) {
+      ret = it.next();
+    } else {
+      it = l.iterator();
+      ret = it.next();
+    }
+
+    return ret;
+  }
+
+  public void remove() {
+    it.remove();
+  }
+}
+
+
+(Pedantic) EDIT
+
+Some people have commented how an Iterator could be used to generate values from an unbounded sequence such as the Fibonacci sequence.  However, the Java Iterator documentation states that an Iterator is:
+
+
+  An iterator over a collection.
+
+
+Now you could argue that the Fibonacci sequence is an infinite collection but in Java I would equate collection with the java.util.Collection interface, which offers methods such as size() implying that a collection must be bounded.  Therefore, is it legitimate to use Iterator as a generator of values from an unbounded sequence?
+
+                

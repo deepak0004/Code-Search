@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Java_Database_Connectivity by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:28 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Java Database Connectivity - Wikipedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Java_Database_Connectivity","wgTitle":"Java Database Connectivity","wgCurRevisionId":755554576,"wgRevisionId":755554576,"wgArticleId":26257672,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Commons category with local link same as on Wikidata","All articles with unsourced statements","Articles with unsourced statements from January 2012","Java platform","Java specification requests","SQL data access","Java APIs","Database APIs"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Java_Database_Connectivity","wgRelevantArticleId":26257672,"wgRequestId":"WH34pwpAAEUAACThIPkAAAAV","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgFlaggedRevsParams":{"tags":{}},"wgStableRevisionId":null,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"en","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgWikibaseItemId":"Q722772","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.math.styles":"ready","ext.cite.styles":"ready","ext.pygments":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@1dqfd7l",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["ext.cite.a11y","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.legacy.wikibits","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.watchlist-notice","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.gadget.featured-articles-links","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.interface","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="https://en.wikipedia.org/w/load.php?debug=false&amp;lang=en&amp;modules=ext.cite.styles%7Cext.math.scripts%2Cstyles%7Cext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="../w/load2c8d.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../w/load18b6.css?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.29.0-wmf.7"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="https://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Java_Database_Connectivity"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Java_Database_Connectivity&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Java_Database_Connectivity&amp;action=edit"/>
+<link rel="apple-touch-icon" href="https://en.wikipedia.org/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="../static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../w/api251f.php?action=rsd"/>
+<link rel="copyright" href="../../creativecommons.org/licenses/by-sa/3.0/index.html"/>
+<link rel="canonical" href="Java_Database_Connectivity.html"/>
+<link rel="dns-prefetch" href="../../login.wikimedia.org/index.html"/>
+<link rel="dns-prefetch" href="../../meta.wikimedia.org/index.html" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Java_Database_Connectivity rootpage-Java_Database_Connectivity skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">Java Database Connectivity</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><script>function mfTempOpenSection(id){var block=document.getElementById("mf-section-"+id);block.className+=" open-block";block.previousSibling.className+=" open-block";}</script><table class="infobox vevent" style="width:22em">
+<caption class="summary">JDBC</caption>
+<tr>
+<td colspan="2" style="text-align:center"></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_release_life_cycle" title="Software release life cycle">Stable release</a></th>
+<td>
+<div style="margin:0px;">JDBC 4.2 / December&#160;5,&#160;2013<span style="display:none">&#160;(<span class="bday dtstart published updated">2013-12-05</span>)</span></div>
+</td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Operating_system" title="Operating system">Operating system</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Cross-platform" title="Cross-platform">Cross-platform</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_categories#Broad_categories" title="Software categories">Type</a></th>
+<td>Data access API</td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;">Website</th>
+<td><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/8/docs/">Java SE 8</a></td>
+</tr>
+</table>
+<p><b>Java Database Connectivity</b> (<b>JDBC</b>) is an <a href="https://en.wikipedia.org/wiki/Application_programming_interface" title="Application programming interface">application programming interface</a> (API) for the programming language <a href="Java_(programming_language).html" title="Java (programming language)">Java</a>, which defines how a client may access a <a href="https://en.wikipedia.org/wiki/Database" title="Database">database</a>. It is part of the <a href="https://en.wikipedia.org/wiki/Java_Standard_Edition" class="mw-redirect" title="Java Standard Edition">Java Standard Edition</a> platform, from <a href="https://en.wikipedia.org/wiki/Oracle_Corporation" title="Oracle Corporation">Oracle Corporation</a>. It provides methods to query and update data in a database, and is oriented towards <a href="https://en.wikipedia.org/wiki/Relational_database" title="Relational database">relational databases</a>. A JDBC-to-<a href="https://en.wikipedia.org/wiki/ODBC" class="mw-redirect" title="ODBC">ODBC</a> bridge enables connections to any ODBC-accessible data source in the <a href="https://en.wikipedia.org/wiki/Java_virtual_machine" title="Java virtual machine">Java virtual machine</a> (JVM) host environment.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#History_and_implementation"><span class="tocnumber">1</span> <span class="toctext">History and implementation</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Functionality"><span class="tocnumber">2</span> <span class="toctext">Functionality</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Examples"><span class="tocnumber">3</span> <span class="toctext">Examples</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#JDBC_drivers"><span class="tocnumber">4</span> <span class="toctext">JDBC drivers</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#Types"><span class="tocnumber">4.1</span> <span class="toctext">Types</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Sources"><span class="tocnumber">4.2</span> <span class="toctext">Sources</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#See_also"><span class="tocnumber">5</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#References"><span class="tocnumber">6</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#External_links"><span class="tocnumber">7</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="History_and_implementation">History and implementation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Database_Connectivity&amp;action=edit&amp;section=1" title="Edit section: History and implementation">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Sun Microsystems released JDBC as part of <a href="Java_Development_Kit.html" title="Java Development Kit">Java Development Kit</a> (JDK) 1.1 on February 19, 1997.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[1]</a></sup> Since then it has been part of the <a href="Java_Platform%2c_Standard_Edition.html" title="Java Platform, Standard Edition">Java Platform, Standard Edition</a> (Java SE).</p>
+<p>The JDBC classes are contained in the <a href="Java_package.html" title="Java package">Java package</a> <code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/8/docs/api/java/sql/package-summary.html">java.sql</a></code> and <code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/8/docs/api/javax/sql/package-summary.html">javax.sql</a></code>.</p>
+<p>Starting with version 3.1, JDBC has been developed under the <a href="Java_Community_Process.html" title="Java Community Process">Java Community Process</a>. JSR 54 specifies JDBC 3.0 (included in J2SE 1.4), JSR 114 specifies the JDBC Rowset additions, and JSR 221 is the specification of JDBC 4.0 (included in Java SE 6).<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">[2]</a></sup></p>
+<p>JDBC 4.1, is specified by a maintenance release 1 of JSR 221<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">[3]</a></sup> and is included in Java SE 7.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">[4]</a></sup></p>
+<p>The latest version, JDBC 4.2, is specified by a maintenance release 2 of JSR 221<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">[5]</a></sup> and is included in Java SE 8.<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">[6]</a></sup></p>
+<h2><span class="mw-headline" id="Functionality">Functionality</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Database_Connectivity&amp;action=edit&amp;section=2" title="Edit section: Functionality">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>JDBC allows multiple implementations to exist and be used by the same application. The API provides a mechanism for dynamically loading the correct Java packages and registering them with the JDBC Driver Manager. The Driver Manager is used as a connection factory for creating JDBC connections.</p>
+<p>JDBC connections support creating and executing statements. These may be update statements such as SQL's CREATE, INSERT, UPDATE and DELETE, or they may be query statements such as SELECT. Additionally, stored procedures may be invoked through a JDBC connection. JDBC represents statements using one of the following classes:</p>
+<ul>
+<li><code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/8/docs/api/java/sql/Statement.html">Statement</a></code> – the statement is sent to the database server each and every time.</li>
+<li><code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/8/docs/api/java/sql/PreparedStatement.html">PreparedStatement</a></code> – the statement is cached and then the <a href="https://en.wikipedia.org/wiki/Query_plan" title="Query plan">execution path</a> is pre-determined on the database server allowing it to be executed multiple times in an efficient manner.</li>
+<li><code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/8/docs/api/java/sql/CallableStatement.html">CallableStatement</a></code> – used for executing <a href="https://en.wikipedia.org/wiki/Stored_procedures" class="mw-redirect" title="Stored procedures">stored procedures</a> on the database.</li>
+</ul>
+<p>Update statements such as INSERT, UPDATE and DELETE return an update count that indicates how many <a href="https://en.wikipedia.org/wiki/Row_(database)" title="Row (database)">rows</a> were affected in the database. These statements do not return any other information.</p>
+<p>Query statements return a JDBC row result set. The row result set is used to walk over the <a href="https://en.wikipedia.org/wiki/Result_set" title="Result set">result set</a>. Individual <a href="https://en.wikipedia.org/wiki/Column_(database)" title="Column (database)">columns</a> in a row are retrieved either by name or by column number. There may be any number of rows in the result set. The row result set has metadata that describes the names of the columns and their types.</p>
+<p>There is an extension to the basic JDBC API in the <code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/8/docs/api/javax/sql/package-summary.html">javax.sql</a></code>.</p>
+<p>JDBC connections are often managed via a <a href="https://en.wikipedia.org/wiki/Connection_pool" title="Connection pool">connection pool</a> rather than obtained directly from the driver.</p>
+<h2><span class="mw-headline" id="Examples">Examples</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Database_Connectivity&amp;action=edit&amp;section=3" title="Edit section: Examples">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>When a Java application needs a database connection, one of the <code>DriverManager.getConnection()</code> methods is used to create a JDBC connection. The URL used is dependent upon the particular database and JDBC driver. It will always begin with the "jdbc:" protocol, but the rest is up to the particular vendor.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="n">Connection</span> <span class="n">conn</span> <span class="o">=</span> <span class="n">DriverManager</span><span class="o">.</span><span class="na">getConnection</span><span class="o">(</span>
+     <span class="s">"jdbc:somejdbcvendor:other data needed by some jdbc vendor"</span><span class="o">,</span>
+     <span class="s">"myLogin"</span><span class="o">,</span>
+     <span class="s">"myPassword"</span> <span class="o">);</span>
+<span class="k">try</span> <span class="o">{</span>
+     <span class="cm">/* you use the connection here */</span>
+<span class="o">}</span> <span class="k">finally</span> <span class="o">{</span>
+    <span class="c1">//It's important to close the connection when you are done with it</span>
+    <span class="k">try</span> <span class="o">{</span> <span class="n">conn</span><span class="o">.</span><span class="na">close</span><span class="o">();</span> <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">Throwable</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span> <span class="cm">/* Propagate the original exception</span>
+<span class="cm">instead of this one that you want just logged */</span> <span class="n">logger</span><span class="o">.</span><span class="na">warn</span><span class="o">(</span><span class="s">"Could not close JDBC Connection"</span><span class="o">,</span><span class="n">e</span><span class="o">);</span> <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+<p>Starting from Java SE 7 you can use Java's <a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html">try-with-resources</a> statement to make the above code cleaner:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="k">try</span> <span class="o">(</span><span class="n">Connection</span> <span class="n">conn</span> <span class="o">=</span> <span class="n">DriverManager</span><span class="o">.</span><span class="na">getConnection</span><span class="o">(</span>
+     <span class="s">"jdbc:somejdbcvendor:other data needed by some jdbc vendor"</span><span class="o">,</span>
+     <span class="s">"myLogin"</span><span class="o">,</span>
+     <span class="s">"myPassword"</span> <span class="o">)</span> <span class="o">)</span> <span class="o">{</span>
+     <span class="cm">/* you use the connection here */</span>
+<span class="o">}</span>  <span class="c1">// the VM will take care of closing the connection</span>
+</pre></div>
+<p>Once a connection is established, a statement can be created.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="k">try</span> <span class="o">(</span><span class="n">Statement</span> <span class="n">stmt</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="na">createStatement</span><span class="o">())</span> <span class="o">{</span>
+    <span class="n">stmt</span><span class="o">.</span><span class="na">executeUpdate</span><span class="o">(</span> <span class="s">"INSERT INTO MyTable( name ) VALUES ( 'my name' ) "</span> <span class="o">);</span>
+<span class="o">}</span>
+</pre></div>
+<p>Note that Connections, Statements, and ResultSets often tie up <a href="https://en.wikipedia.org/wiki/Operating_system" title="Operating system">operating system</a> resources such as sockets or <a href="https://en.wikipedia.org/wiki/File_descriptor" title="File descriptor">file descriptors</a>. In the case of Connections to remote database servers, further resources are tied up on the server, e.g., <a href="https://en.wikipedia.org/wiki/Cursor_(databases)" title="Cursor (databases)">cursors</a> for currently open ResultSets. It is vital to <code>close()</code> any JDBC object as soon as it has played its part; <a href="https://en.wikipedia.org/wiki/Garbage_collection_(computer_science)" title="Garbage collection (computer science)">garbage collection</a> should not be relied upon. The above try-with-resources construct is a code pattern that obviates this.</p>
+<p>Data is retrieved from the database using a database query mechanism. The example below shows creating a statement and executing a query.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="k">try</span> <span class="o">(</span><span class="n">Statement</span> <span class="n">stmt</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="na">createStatement</span><span class="o">();</span>
+    <span class="n">ResultSet</span> <span class="n">rs</span> <span class="o">=</span> <span class="n">stmt</span><span class="o">.</span><span class="na">executeQuery</span><span class="o">(</span> <span class="s">"SELECT * FROM MyTable"</span> <span class="o">)</span>
+<span class="o">)</span> <span class="o">{</span>
+    <span class="k">while</span> <span class="o">(</span> <span class="n">rs</span><span class="o">.</span><span class="na">next</span><span class="o">()</span> <span class="o">)</span> <span class="o">{</span>
+        <span class="kt">int</span> <span class="n">numColumns</span> <span class="o">=</span> <span class="n">rs</span><span class="o">.</span><span class="na">getMetaData</span><span class="o">().</span><span class="na">getColumnCount</span><span class="o">();</span>
+        <span class="k">for</span> <span class="o">(</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">numColumns</span> <span class="o">;</span> <span class="n">i</span><span class="o">++</span> <span class="o">)</span> <span class="o">{</span>
+           <span class="c1">// Column numbers start at 1.</span>
+           <span class="c1">// Also there are many methods on the result set to return</span>
+           <span class="c1">//  the column as a particular type. Refer to the Sun documentation</span>
+           <span class="c1">//  for the list of valid conversions.</span>
+           <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span> <span class="s">"COLUMN "</span> <span class="o">+</span> <span class="n">i</span> <span class="o">+</span> <span class="s">" = "</span> <span class="o">+</span> <span class="n">rs</span><span class="o">.</span><span class="na">getObject</span><span class="o">(</span><span class="n">i</span><span class="o">)</span> <span class="o">);</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+<p>An example of a <code>PreparedStatement</code> query, using <code>conn</code> and class from first example.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="k">try</span> <span class="o">(</span><span class="n">PreparedStatement</span> <span class="n">ps</span> <span class="o">=</span>
+    <span class="n">conn</span><span class="o">.</span><span class="na">prepareStatement</span><span class="o">(</span> <span class="s">"SELECT i.*, j.* FROM Omega i, Zappa j WHERE i.name = ? AND j.num = ?"</span> <span class="o">)</span>
+<span class="o">){</span>
+    <span class="c1">// In the SQL statement being prepared, each question mark is a placeholder</span>
+    <span class="c1">// that must be replaced with a value you provide through a "set" method invocation.</span>
+    <span class="c1">// The following two method calls replace the two placeholders; the first is</span>
+    <span class="c1">// replaced by a string value, and the second by an integer value.</span>
+    <span class="n">ps</span><span class="o">.</span><span class="na">setString</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="s">"Poor Yorick"</span><span class="o">);</span>
+    <span class="n">ps</span><span class="o">.</span><span class="na">setInt</span><span class="o">(</span><span class="mi">2</span><span class="o">,</span> <span class="mi">8008</span><span class="o">);</span>
+
+    <span class="c1">// The ResultSet, rs, conveys the result of executing the SQL statement.</span>
+    <span class="c1">// Each time you call rs.next(), an internal row pointer, or cursor,</span>
+    <span class="c1">// is advanced to the next row of the result.  The cursor initially is</span>
+    <span class="c1">// positioned before the first row.</span>
+    <span class="k">try</span> <span class="o">(</span><span class="n">ResultSet</span> <span class="n">rs</span> <span class="o">=</span> <span class="n">ps</span><span class="o">.</span><span class="na">executeQuery</span><span class="o">())</span> <span class="o">{</span>
+        <span class="k">while</span> <span class="o">(</span> <span class="n">rs</span><span class="o">.</span><span class="na">next</span><span class="o">()</span> <span class="o">)</span> <span class="o">{</span>
+            <span class="kt">int</span> <span class="n">numColumns</span> <span class="o">=</span> <span class="n">rs</span><span class="o">.</span><span class="na">getMetaData</span><span class="o">().</span><span class="na">getColumnCount</span><span class="o">();</span>
+            <span class="k">for</span> <span class="o">(</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">numColumns</span> <span class="o">;</span> <span class="n">i</span><span class="o">++</span> <span class="o">)</span> <span class="o">{</span>
+                <span class="c1">// Column numbers start at 1.</span>
+                <span class="c1">// Also there are many methods on the result set to return</span>
+                <span class="c1">// the column as a particular type. Refer to the Sun documentation</span>
+                <span class="c1">// for the list of valid conversions.</span>
+                <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span> <span class="s">"COLUMN "</span> <span class="o">+</span> <span class="n">i</span> <span class="o">+</span> <span class="s">" = "</span> <span class="o">+</span> <span class="n">rs</span><span class="o">.</span><span class="na">getObject</span><span class="o">(</span><span class="n">i</span><span class="o">)</span> <span class="o">);</span>
+            <span class="o">}</span> <span class="c1">// for</span>
+        <span class="o">}</span> <span class="c1">// while</span>
+    <span class="o">}</span> <span class="c1">// try</span>
+<span class="o">}</span> <span class="c1">// try</span>
+</pre></div>
+<p>If a database operation fails, JDBC raises an <code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/8/docs/api/java/sql/SQLException.html">SQLException</a></code>. There is typically very little one can do to recover from such an error, apart from logging it with as much detail as possible. It is recommended that the SQLException be translated into an application domain exception (an unchecked one) that eventually results in a transaction rollback and a notification to the user.</p>
+<p>An example of a <a href="https://en.wikipedia.org/wiki/Database_transaction" title="Database transaction">database transaction</a>:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kt">boolean</span> <span class="n">autoCommitDefault</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="na">getAutoCommit</span><span class="o">();</span>
+<span class="k">try</span> <span class="o">{</span>
+    <span class="n">conn</span><span class="o">.</span><span class="na">setAutoCommit</span><span class="o">(</span><span class="kc">false</span><span class="o">);</span>
+
+    <span class="cm">/* You execute statements against conn here transactionally */</span>
+
+    <span class="n">conn</span><span class="o">.</span><span class="na">commit</span><span class="o">();</span>
+<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">Throwable</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">try</span> <span class="o">{</span> <span class="n">conn</span><span class="o">.</span><span class="na">rollback</span><span class="o">();</span> <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">Throwable</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span> <span class="n">logger</span><span class="o">.</span><span class="na">warn</span><span class="o">(</span><span class="s">"Could not rollback transaction"</span><span class="o">,</span><span class="n">e</span><span class="o">);</span> <span class="o">}</span>
+    <span class="k">throw</span> <span class="n">e</span><span class="o">;</span>
+<span class="o">}</span> <span class="k">finally</span> <span class="o">{</span>
+    <span class="k">try</span> <span class="o">{</span> <span class="n">conn</span><span class="o">.</span><span class="na">setAutoCommit</span><span class="o">(</span><span class="n">autoCommitDefault</span><span class="o">);</span> <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">Throwable</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span> <span class="n">logger</span><span class="o">.</span><span class="na">warn</span><span class="o">(</span><span class="s">"Could not restore AutoCommit setting"</span><span class="o">,</span><span class="n">e</span><span class="o">);</span> <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+<p><b>Here are examples of host database types which Java can convert to with a function</b>.</p>
+<table class="wikitable">
+<caption><code>setXXX()</code> Methods</caption>
+<tr>
+<th>Oracle Datatype</th>
+<th><code>setXXX()</code></th>
+</tr>
+<tr>
+<td>CHAR</td>
+<td><code>setString()</code></td>
+</tr>
+<tr>
+<td>VARCHAR2</td>
+<td><code>setString()</code></td>
+</tr>
+<tr>
+<td rowspan="8">NUMBER</td>
+<td><code>setBigDecimal()</code></td>
+</tr>
+<tr>
+<td><code>setBoolean()</code></td>
+</tr>
+<tr>
+<td><code>setByte()</code></td>
+</tr>
+<tr>
+<td><code>setShort()</code></td>
+</tr>
+<tr>
+<td><code>setInt()</code></td>
+</tr>
+<tr>
+<td><code>setLong()</code></td>
+</tr>
+<tr>
+<td><code>setFloat()</code></td>
+</tr>
+<tr>
+<td><code>setDouble()</code></td>
+</tr>
+<tr>
+<td>INTEGER</td>
+<td><code>setInt()</code></td>
+</tr>
+<tr>
+<td>FLOAT</td>
+<td><code>setDouble()</code></td>
+</tr>
+<tr>
+<td>CLOB</td>
+<td><code>setClob()</code></td>
+</tr>
+<tr>
+<td>BLOB</td>
+<td><code>setBlob()</code></td>
+</tr>
+<tr>
+<td>RAW</td>
+<td><code>setBytes()</code></td>
+</tr>
+<tr>
+<td>LONGRAW</td>
+<td><code>setBytes()</code></td>
+</tr>
+<tr>
+<td rowspan="3">DATE</td>
+<td><code>setDate()</code></td>
+</tr>
+<tr>
+<td><code>setTime()</code></td>
+</tr>
+<tr>
+<td><code>setTimestamp()</code></td>
+</tr>
+</table>
+<p>For an example of a <code>CallableStatement</code> (to call stored procedures in the database), see the <a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/8/docs/">Java SE 8</a>.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kn">import</span> <span class="nn">java.sql.Connection</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.sql.DriverManager</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.sql.Statement</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Mydb1</span> <span class="o">{</span>
+   <span class="kd">static</span> <span class="n">String</span> <span class="n">URL</span> <span class="o">=</span> <span class="s">"jdbc:mysql://localhost/mydb"</span><span class="o">;</span>
+
+   <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">try</span><span class="o">{</span>
+        <span class="n">Class</span><span class="o">.</span><span class="na">forName</span><span class="o">(</span><span class="s">"com.mysql.jdbc.Driver"</span><span class="o">);</span>
+
+        <span class="n">Connection</span> <span class="n">conn</span> <span class="o">=</span> <span class="n">DriverManager</span><span class="o">.</span><span class="na">getConnection</span><span class="o">(</span><span class="n">URL</span><span class="o">,</span><span class="s">"root"</span><span class="o">,</span><span class="s">"root"</span><span class="o">);</span>
+        <span class="n">Statement</span> <span class="n">stmt</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="na">createStatement</span><span class="o">();</span>
+      
+        <span class="n">String</span> <span class="n">sql</span> <span class="o">=</span> <span class="s">"INSERT INTO emp1 VALUES ('pctb5361','gajanan','krpuram',968666668)"</span><span class="o">;</span>
+        <span class="n">stmt</span><span class="o">.</span><span class="na">executeUpdate</span><span class="o">(</span><span class="n">sql</span><span class="o">);</span>
+           
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Inserted records into the table..."</span><span class="o">);</span>
+      <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+         <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+      <span class="o">}</span>
+   <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+<h2><span class="mw-headline" id="JDBC_drivers">JDBC drivers</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Database_Connectivity&amp;action=edit&amp;section=4" title="Edit section: JDBC drivers">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div role="note" class="hatnote">Main article: <a href="JDBC_driver.html" title="JDBC driver">JDBC driver</a></div>
+<p>JDBC drivers are client-side <a href="Adapter_pattern.html" title="Adapter pattern">adapters</a> (installed on the client machine, not on the server) that convert requests from Java programs to a protocol that the DBMS can understand.</p>
+<h3><span class="mw-headline" id="Types">Types</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Database_Connectivity&amp;action=edit&amp;section=5" title="Edit section: Types">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Commercial and free drivers provide connectivity to most relational-database servers. These drivers fall into one of the following types:</p>
+<ul>
+<li><a href="JDBC_driver.html#Type_1_Driver_-_JDBC-ODBC_bridge" title="JDBC driver">Type 1</a> that calls native code of the locally available ODBC driver. [Note: In JDBC 4.2, JDBC-ODBC bridge has been removed <sup id="cite_ref-7" class="reference"><a href="#cite_note-7">[7]</a></sup>]</li>
+<li><a href="JDBC_driver.html#Type_2_Driver_-_Native-API_Driver" title="JDBC driver">Type 2</a> that calls database vendor native library on a client side. This code then talks to database over the network.</li>
+<li><a href="JDBC_driver.html#Type_3_Driver_-_Network-Protocol_Driver.28MiddleWare_Driver.29" title="JDBC driver">Type 3</a>, the pure-java driver that talks with the server-side middleware that then talks to the database.</li>
+<li><a href="JDBC_driver.html#Type_4_Driver_-_Database-Protocol_Driver.28Pure_Java_Driver.29" title="JDBC driver">Type 4</a>, the pure-java driver that uses database native protocol.</li>
+</ul>
+<p>Note also a type called an <a href="https://en.wikipedia.org/w/index.php?title=Internal_JDBC_driver&amp;action=edit&amp;redlink=1" class="new" title="Internal JDBC driver (page does not exist)">internal JDBC driver</a> - a driver embedded with JRE in Java-enabled SQL databases. It is used for <a href="Java_stored_procedure.html" class="mw-redirect" title="Java stored procedure">Java stored procedures</a>. This does not fit into the classification scheme above, although it would likely resemble either a type 2 or type 4 driver (depending on whether the database itself is implemented in Java or not). An example of this is the KPRB (Kernel Program Bundled) driver<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">[8]</a></sup> supplied with <a href="https://en.wikipedia.org/wiki/Oracle_Database" title="Oracle Database">Oracle RDBMS</a>. "jdbc:default:connection" offers a relatively standard way of making such a connection (at least the Oracle database and <a href="Apache_Derby.html" title="Apache Derby">Apache Derby</a> support it). However, in the case of an internal JDBC driver, the JDBC client actually runs as part of the database being accessed, and so can access data directly rather than through network protocols.</p>
+<h3><span class="mw-headline" id="Sources">Sources</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Database_Connectivity&amp;action=edit&amp;section=6" title="Edit section: Sources">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Oracle_Corporation" title="Oracle Corporation">Oracle</a> provides a <a rel="nofollow" class="external text" href="http://www.oracle.com/technetwork/java/index-136695.html">list of some JDBC drivers and vendors</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Simba_Technologies" title="Simba Technologies">Simba Technologies</a> ships an SDK for building custom JDBC Drivers for any custom/proprietary relational data source</li>
+<li>CData Software ships type 4 JDBC Drivers for various applications, databases, and Web APIs <a rel="nofollow" class="external autonumber" href="http://www.cdata.com/jdbc/">[1]</a>.</li>
+<li>RSSBus Type 4 JDBC Drivers for applications, databases, and web services <a rel="nofollow" class="external autonumber" href="http://www.rssbus.com/jdbc/">[2]</a>.</li>
+<li>DataDirect Technologies provides a comprehensive suite of fast Type 4 JDBC drivers for all major database they advertise as Type 5<sup id="cite_ref-datadirect_9-0" class="reference"><a href="#cite_note-datadirect-9">[9]</a></sup></li>
+<li>IDS Software provides a Type 3 JDBC driver for concurrent access to all major databases. Supported features include resultset caching, SSL encryption, custom data source, dbShield</li>
+<li><a href="https://en.wikipedia.org/wiki/OpenLink_Software" title="OpenLink Software">OpenLink Software</a> ships JDBC Drivers for a variety of databases, including Bridges to other data access mechanisms (e.g., ODBC, JDBC) which can provide more functionality than the targeted mechanism</li>
+<li>JDBaccess is a Java persistence library for <a href="https://en.wikipedia.org/wiki/MySQL" title="MySQL">MySQL</a> and <a href="https://en.wikipedia.org/wiki/Oracle_database" class="mw-redirect" title="Oracle database">Oracle</a> which defines major database access operations in an easy usable API above JDBC</li>
+<li><a href="https://en.wikipedia.org/w/index.php?title=JNetDirect_Incorporated&amp;action=edit&amp;redlink=1" class="new" title="JNetDirect Incorporated (page does not exist)">JNetDirect</a> provides a suite of fully Sun J2EE certified high-performance JDBC drivers.</li>
+<li>JDBCR4 is a service program written by <a href="https://en.wikipedia.org/wiki/Scott_Klement" title="Scott Klement">Scott Klement</a> to allow access to JDBC from <a href="https://en.wikipedia.org/wiki/IBM_RPG" title="IBM RPG">RPG</a> on the <a href="https://en.wikipedia.org/wiki/IBM_i" title="IBM i">IBM i</a>.<sup id="cite_ref-10" class="reference"><a href="#cite_note-10">[10]</a></sup></li>
+<li><a href="HSQLDB.html" title="HSQLDB">HSQLDB</a> is a <a href="https://en.wikipedia.org/wiki/Relational_database_management_system" title="Relational database management system">RDBMS</a> with a JDBC driver and is available under a BSD license.</li>
+<li>SchemaCrawler<sup id="cite_ref-schemacrawler_11-0" class="reference"><a href="#cite_note-schemacrawler-11">[11]</a></sup> is an open source API that leverages JDBC, and makes database metadata available as plain old Java objects (POJOs)</li>
+</ul>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Database_Connectivity&amp;action=edit&amp;section=7" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/GNU_Data_Access" class="mw-redirect" title="GNU Data Access">GNU Data Access</a> (GDA)</li>
+<li><a href="https://en.wikipedia.org/wiki/Open_Database_Connectivity" title="Open Database Connectivity">Open Database Connectivity</a> (ODBC)</li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Database_Connectivity&amp;action=edit&amp;section=8" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://web.archive.org/web/20080210044125/http://www.sun.com/smi/Press/sunflash/1997-02/sunflash.970219.0001.xml">"Sun Ships JDK 1.1 -- Javabeans Included"</a>. <i>www.sun.com</i>. <a href="https://en.wikipedia.org/wiki/Sun_Microsystems" title="Sun Microsystems">Sun Microsystems</a>. 1997-02-19. Archived from <a rel="nofollow" class="external text" href="http://www.sun.com/smi/Press/sunflash/1997-02/sunflash.970219.0001.xml">the original</a> on 2008-02-10<span class="reference-accessdate">. Retrieved <span class="nowrap">2010-02-15</span></span>. <q>February 19, 1997 - The JDK 1.1 [...] is now available [...]. This release of the JDK includes: [...] Robust new features including JDBC for database connectivity</q></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+Database+Connectivity&amp;rft.atitle=Sun+Ships+JDK+1.1+--+Javabeans+Included&amp;rft.date=1997-02-19&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.sun.com%2Fsmi%2FPress%2Fsunflash%2F1997-02%2Fsunflash.970219.0001.xml&amp;rft.jtitle=www.sun.com&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://java.sun.com/products/jdbc/download.html#corespec40">JDBC API Specification Version: 4.0</a>.</span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://jcp.org/aboutJava/communityprocess/mrel/jsr221/index.html">JSR-000221 JDBC API Specification 4.1 (Maintenance Release 1)</a></span></li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://docs.oracle.com/javase/7/docs/technotes/guides/jdbc/jdbc_41.html">http://docs.oracle.com/javase/7/docs/technotes/guides/jdbc/jdbc_41.html</a></span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://jcp.org/aboutJava/communityprocess/mrel/jsr221/index2.html">JSR-000221 JDBC API Specification 4.2 (Maintenance Release 2)</a></span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://docs.oracle.com/javase/8/docs/technotes/guides/jdbc/jdbc_42.html">http://docs.oracle.com/javase/8/docs/technotes/guides/jdbc/jdbc_42.html</a></span></li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="https://docs.oracle.com/javase/8/docs/technotes/guides/jdbc/">https://docs.oracle.com/javase/8/docs/technotes/guides/jdbc/</a></span></li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><cite class="citation book">Greenwald, Rick; Stackowiak, Robert; Stern, Jonathan (2004) [1999]. <a rel="nofollow" class="external text" href="https://books.google.com/books?id=CTebAgAAQBAJ"><i>Oracle Essentials: Oracle Database 10g</i></a>. Essentials Series (3 ed.). Sebastopol, California: O'Reilly Media, Inc. p.&#160;318. <a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="https://en.wikipedia.org/wiki/Special:BookSources/9780596005856" title="Special:BookSources/9780596005856">9780596005856</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2016-11-03</span></span>. <q><i>The in-database JDBC driver (JDBC KPRB)</i>[:] Java code uses the JDBC KPRB (Kernel Program Bundled) version to access SQL on the same server.</q></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+Database+Connectivity&amp;rft.aufirst=Rick&amp;rft.aulast=Greenwald&amp;rft.au=Stackowiak%2C+Robert&amp;rft.au=Stern%2C+Jonathan&amp;rft.btitle=Oracle+Essentials%3A+Oracle+Database+10g&amp;rft.date=2004&amp;rft.edition=3&amp;rft.genre=book&amp;rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DCTebAgAAQBAJ&amp;rft.isbn=9780596005856&amp;rft.pages=318&amp;rft.place=Sebastopol%2C+California&amp;rft.pub=O%27Reilly+Media%2C+Inc.&amp;rft.series=Essentials+Series&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-datadirect-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-datadirect_9-0">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.datadirect.com/products/features/data-connectivity/type-5-jdbc/index.html">"New Type 5 JDBC Driver&#160;— DataDirect Connect"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+Database+Connectivity&amp;rft.btitle=New+Type+5+JDBC+Driver+%94+DataDirect+Connect&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.datadirect.com%2Fproducts%2Ffeatures%2Fdata-connectivity%2Ftype-5-jdbc%2Findex.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://iprodeveloper.com/rpg-programming/access-external-databases-rpg-jdbcr4">"Access External Databases from RPG with JDBCR4 Meat of the Matter"</a>. 28 June 2012<span class="reference-accessdate">. Retrieved <span class="nowrap">12 April</span> 2016</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+Database+Connectivity&amp;rft.btitle=Access+External+Databases+from+RPG+with+JDBCR4+Meat+of+the+Matter&amp;rft.date=2012-06-28&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fiprodeveloper.com%2Frpg-programming%2Faccess-external-databases-rpg-jdbcr4&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-schemacrawler-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-schemacrawler_11-0">^</a></b></span> <span class="reference-text"><cite class="citation web">Sualeh Fatehi. <a rel="nofollow" class="external text" href="http://schemacrawler.sourceforge.net/">"SchemaCrawler"</a>. <i>SourceForge</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava+Database+Connectivity&amp;rft.atitle=SchemaCrawler&amp;rft.au=Sualeh+Fatehi&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fschemacrawler.sourceforge.net%2F&amp;rft.jtitle=SourceForge&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Java_Database_Connectivity&amp;action=edit&amp;section=9" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table role="presentation" class="mbox-small plainlinks sistersitebox" style="border:1px solid #aaa;background-color:#f9f9f9">
+<tr>
+<td class="mbox-image"><a href="https://en.wikipedia.org/wiki/File:Commons-logo.svg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/30px-Commons-logo.svg.png" width="30" height="40" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/45px-Commons-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/59px-Commons-logo.svg.png 2x" data-file-width="1024" data-file-height="1376" /></a></td>
+<td class="mbox-text plainlist">Wikimedia Commons has media related to <i><b><a href="https://commons.wikimedia.org/wiki/Category:JDBC" class="extiw" title="commons:Category:JDBC">JDBC</a></b></i>.</td>
+</tr>
+</table>
+<table role="presentation" class="mbox-small plainlinks sistersitebox" style="border:1px solid #aaa;background-color:#f9f9f9">
+<tr>
+<td class="mbox-image"><a href="https://en.wikipedia.org/wiki/File:Wikibooks-logo-en-noslogan.svg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/40px-Wikibooks-logo-en-noslogan.svg.png" width="40" height="40" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/60px-Wikibooks-logo-en-noslogan.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/80px-Wikibooks-logo-en-noslogan.svg.png 2x" data-file-width="400" data-file-height="400" /></a></td>
+<td class="mbox-text plainlist">Wikibooks has a book on the topic of: <i><b><a href="https://en.wikibooks.org/wiki/Java_Programming/Database_Programming" class="extiw" title="wikibooks:Java Programming/Database Programming">Java Programming/Database Programming</a></b></i></td>
+</tr>
+</table>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/8/docs/">Java SE 8</a> This documentation has examples where the JDBC resources are not closed appropriately (swallowing primary exceptions and being able to cause NullPointerExceptions) and has code prone to <a href="https://en.wikipedia.org/wiki/SQL_injection" title="SQL injection">SQL injection</a><sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">[<i><a href="https://en.wikipedia.org/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (January 2012)">citation needed</span></a></i>]</sup></li>
+<li><code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/8/docs/api/java/sql/package-summary.html">java.sql</a></code> API <a href="Javadoc.html" title="Javadoc">Javadoc</a> documentation</li>
+<li><code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/8/docs/api/javax/sql/package-summary.html">javax.sql</a></code> API Javadoc documentation</li>
+<li><a rel="nofollow" class="external text" href="http://www.orbroker.org/">O/R Broker</a> Scala JDBC framework</li>
+<li><a rel="nofollow" class="external text" href="http://www.hsqldb.org/doc/2.0/util-guide/sqltool-chapt.html">SqlTool</a> Open source, command-line, generic JDBC client utility. Works with any JDBC-supporting database.</li>
+<li><a rel="nofollow" class="external text" href="http://codeoftheday.blogspot.com/2012/12/java-database-connectivity-jdbc-url.html">JDBC URL Strings and related information of All Databases.</a></li>
+</ul>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1274
+Cached time: 20170117105744
+Cache expiry: 2592000
+Dynamic content: false
+CPU time usage: 0.200 seconds
+Real time usage: 0.724 seconds
+Preprocessor visited node count: 1336/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 21897/2097152 bytes
+Template argument size: 2107/2097152 bytes
+Highest expansion depth: 25/40
+Expensive parser function count: 3/500
+Lua time usage: 0.077/10.000 seconds
+Lua memory usage: 2.49 MB/50 MB
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  689.006      1 - -total
+  9.94%   68.477      1 - Template:Reflist
+  9.12%   62.823      2 - Template:Infobox
+  7.71%   53.127      1 - Template:Infobox_software
+  7.22%   49.777      4 - Template:Cite_web
+  5.77%   39.781      1 - Template:Citation_needed
+  5.04%   34.750      1 - Template:Fix
+  3.13%   21.577      1 - Template:Commons_category
+  2.97%   20.467      2 - Template:Category_handler
+  2.36%   16.239      1 - Template:Infobox_software/simple
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:26257672-0!*!0!!en!4!* and timestamp 20170117105743 and revision id 755554576
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Java_Database_Connectivity&amp;oldid=755554576">https://en.wikipedia.org/w/index.php?title=Java_Database_Connectivity&amp;oldid=755554576</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Help_Category.html" title="Help:Category">Categories</a>: <ul><li><a href="Category_Java_platform.html" title="Category:Java platform">Java platform</a></li><li><a href="Category_Java_specification_requests.html" title="Category:Java specification requests">Java specification requests</a></li><li><a href="https://en.wikipedia.org/wiki/Category:SQL_data_access" title="Category:SQL data access">SQL data access</a></li><li><a href="Category_Java_APIs.html" title="Category:Java APIs">Java APIs</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Database_APIs" title="Category:Database APIs">Database APIs</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Commons_category_with_local_link_same_as_on_Wikidata" title="Category:Commons category with local link same as on Wikidata">Commons category with local link same as on Wikidata</a></li><li><a href="https://en.wikipedia.org/wiki/Category:All_articles_with_unsourced_statements" title="Category:All articles with unsourced statements">All articles with unsourced statements</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Articles_with_unsourced_statements_from_January_2012" title="Category:Articles with unsourced statements from January 2012">Articles with unsourced statements from January 2012</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="Special_MyTalk.html" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="Special_MyContributions.html" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&amp;returnto=Java+Database+Connectivity" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Java+Database+Connectivity" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="Java_Database_Connectivity.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+															<li  id="ca-talk"><span><a href="https://en.wikipedia.org/wiki/Talk:Java_Database_Connectivity"  title="Discussion about the content page [t]" accesskey="t" rel="discussion">Talk</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="Java_Database_Connectivity.html" >Read</a></span></li>
+															<li id="ca-edit"><span><a href="https://en.wikipedia.org/w/index.php?title=Java_Database_Connectivity&amp;action=edit"  title="Edit this page [e]" accesskey="e">Edit</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="https://en.wikipedia.org/w/index.php?title=Java_Database_Connectivity&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="https://en.wikipedia.org/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="Main_Page.html"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="Portal_Contents.html" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="Portal_Featured_content.html" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="Portal_Current_events.html" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="https://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="../../shop.wikimedia.org/index.html" title="Visit the Wikipedia store">Wikipedia store</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Interaction</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-help"><a href="Help_Contents.html" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="Wikipedia_About.html" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="Wikipedia_Community_portal.html" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="Wikipedia_Contact_us.html" title="How to contact Wikipedia">Contact page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="https://en.wikipedia.org/wiki/Special:WhatLinksHere/Java_Database_Connectivity" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://en.wikipedia.org/wiki/Special:RecentChangesLinked/Java_Database_Connectivity" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="Wikipedia_File_Upload_Wizard.html" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="https://en.wikipedia.org/w/index.php?title=Java_Database_Connectivity&amp;oldid=755554576" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://en.wikipedia.org/w/index.php?title=Java_Database_Connectivity&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q722772" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="https://en.wikipedia.org/w/index.php?title=Special:CiteThisPage&amp;page=Java_Database_Connectivity&amp;id=755554576" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Print/export</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Java+Database+Connectivity">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Java+Database+Connectivity&amp;returnto=Java+Database+Connectivity&amp;oldid=755554576&amp;writer=rdf2latex">Download as PDF</a></li><li id="t-print"><a href="https://en.wikipedia.org/w/index.php?title=Java_Database_Connectivity&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-wikibase-otherprojects' aria-labelledby='p-wikibase-otherprojects-label'>
+			<h3 id='p-wikibase-otherprojects-label'>In other projects</h3>
+
+			<div class="body">
+									<ul>
+						<li class="wb-otherproject-link wb-otherproject-commons"><a href="https://commons.wikimedia.org/wiki/Category:JDBC" hreflang="en">Wikimedia Commons</a></li><li class="wb-otherproject-link wb-otherproject-wikibooks"><a href="https://en.wikibooks.org/wiki/Java_Programming/Database_Programming" hreflang="en">Wikibooks</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Languages</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-ar"><a href="https://ar.wikipedia.org/wiki/جي_دي_بي_سي" title="جي دي بي سي – Arabic" lang="ar" hreflang="ar" class="interlanguage-link-target">العربية</a></li><li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Java_Database_Connectivity" title="Java Database Connectivity – Catalan" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Java_Database_Connectivity" title="Java Database Connectivity – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-da"><a href="https://da.wikipedia.org/wiki/JDBC" title="JDBC – Danish" lang="da" hreflang="da" class="interlanguage-link-target">Dansk</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Java_Database_Connectivity" title="Java Database Connectivity – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-el"><a href="https://el.wikipedia.org/wiki/JDBC" title="JDBC – Greek" lang="el" hreflang="el" class="interlanguage-link-target">Ελληνικά</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Java_Database_Connectivity" title="Java Database Connectivity – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Java_Database_Connectivity" title="Java Database Connectivity – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/JDBC" title="JDBC – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Java_DataBase_Connectivity" title="Java DataBase Connectivity – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-kk"><a href="https://kk.wikipedia.org/wiki/Java_Database_Connectivity" title="Java Database Connectivity – Kazakh" lang="kk" hreflang="kk" class="interlanguage-link-target">Қазақша</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/Java_Database_Connectivity" title="Java Database Connectivity – Hungarian" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/Java_DataBase_Connectivity" title="Java DataBase Connectivity – Dutch" lang="nl" hreflang="nl" class="interlanguage-link-target">Nederlands</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/JDBC" title="JDBC – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-no"><a href="https://no.wikipedia.org/wiki/JDBC" title="JDBC – Norwegian" lang="no" hreflang="no" class="interlanguage-link-target">Norsk bokmål</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Java_DataBase_Connectivity" title="Java DataBase Connectivity – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/JDBC" title="JDBC – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/Java_Database_Connectivity" title="Java Database Connectivity – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-fi"><a href="https://fi.wikipedia.org/wiki/Java_Database_Connectivity" title="Java Database Connectivity – Finnish" lang="fi" hreflang="fi" class="interlanguage-link-target">Suomi</a></li><li class="interlanguage-link interwiki-sv"><a href="https://sv.wikipedia.org/wiki/Java_Database_Connectivity" title="Java Database Connectivity – Swedish" lang="sv" hreflang="sv" class="interlanguage-link-target">Svenska</a></li><li class="interlanguage-link interwiki-th"><a href="https://th.wikipedia.org/wiki/เจดีบีซี" title="เจดีบีซี – Thai" lang="th" hreflang="th" class="interlanguage-link-target">ไทย</a></li><li class="interlanguage-link interwiki-tr"><a href="https://tr.wikipedia.org/wiki/Java_Database_Connectivity" title="Java Database Connectivity – Turkish" lang="tr" hreflang="tr" class="interlanguage-link-target">Türkçe</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/Java_Database_Connectivity" title="Java Database Connectivity – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-vi"><a href="https://vi.wikipedia.org/wiki/Java_Dabase_Connectivity" title="Java Dabase Connectivity – Vietnamese" lang="vi" hreflang="vi" class="interlanguage-link-target">Tiếng Việt</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/Java数据库连接" title="Java数据库连接 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q722772#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 18 December 2016, at 20:19.</li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="Wikipedia_Text_of_Creative_Commons_Attribution-ShareAlike_3.html">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="../../creativecommons.org/licenses/by-sa/3.0/index.html" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="../../wikimediafoundation.org/wiki/Terms_of_Use.html">Terms of Use</a> and <a href="../../wikimediafoundation.org/wiki/Privacy_policy.html">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="../../www.wikimediafoundation.org/index.html">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../../wikimediafoundation.org/wiki/Privacy_policy.html" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="Wikipedia_About.html" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="Wikipedia_General_disclaimer.html" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="Wikipedia_Contact_us.html">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a href="../../www.mediawiki.org/wiki/Special_MyLanguage/How_to_contribute.html">Developers</a></li>
+											<li id="footer-places-cookiestatement"><a href="../../wikimediafoundation.org/wiki/Cookie_statement.html">Cookie statement</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/w/index.php?title=Java_Database_Connectivity&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="../../www.wikimediafoundation.org/index.html"><img src="https://en.wikipedia.org/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="../../www.mediawiki.org/index.html"><img src="https://en.wikipedia.org/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":797,"wgHostname":"mw1274"});});</script>
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Java_Database_Connectivity by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:28 GMT -->
+</html>

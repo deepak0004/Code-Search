@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from en.wikipedia.org/wiki/GlassFish by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:04 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>GlassFish - Wikipedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"GlassFish","wgTitle":"GlassFish","wgCurRevisionId":757945735,"wgRevisionId":757945735,"wgArticleId":3077850,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Pages using deprecated image syntax","Web server software programmed in Java","Free software application servers","Sun Microsystems software","Software using the CDDL license"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"GlassFish","wgRelevantArticleId":3077850,"wgRequestId":"WH32mgpAAEIAAjtIN@MAAAAE","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgFlaggedRevsParams":{"tags":{}},"wgStableRevisionId":null,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"en","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgWikibaseItemId":"Q68847","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.cite.styles":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@1dqfd7l",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["ext.cite.a11y","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.legacy.wikibits","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.watchlist-notice","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.gadget.featured-articles-links","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.interface","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="https://en.wikipedia.org/w/load.php?debug=false&amp;lang=en&amp;modules=ext.cite.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="../w/load2c8d.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../w/load18b6.css?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.29.0-wmf.7"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="https://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/GlassFish"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=GlassFish&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=GlassFish&amp;action=edit"/>
+<link rel="apple-touch-icon" href="https://en.wikipedia.org/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="../static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../w/api251f.php?action=rsd"/>
+<link rel="copyright" href="../../creativecommons.org/licenses/by-sa/3.0/index.html"/>
+<link rel="canonical" href="GlassFish.html"/>
+<link rel="dns-prefetch" href="../../login.wikimedia.org/index.html"/>
+<link rel="dns-prefetch" href="../../meta.wikimedia.org/index.html" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-GlassFish rootpage-GlassFish skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">GlassFish</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><script>function mfTempOpenSection(id){var block=document.getElementById("mf-section-"+id);block.className+=" open-block";block.previousSibling.className+=" open-block";}</script><div role="note" class="hatnote">This article is about a software product. For the freshwater and marine fish, see <a href="https://en.wikipedia.org/wiki/Ambassidae" title="Ambassidae">Ambassidae</a>.</div>
+<table class="infobox vevent" style="width:22em">
+<caption class="summary">GlassFish</caption>
+<tr>
+<td colspan="2" style="text-align:center"><a href="https://en.wikipedia.org/wiki/File:GlassFish_logo.svg" class="image"><img alt="GlassFish logo.svg" src="http://upload.wikimedia.org/wikipedia/en/thumb/8/85/GlassFish_logo.svg/95px-GlassFish_logo.svg.png" width="95" height="42" srcset="//upload.wikimedia.org/wikipedia/en/thumb/8/85/GlassFish_logo.svg/142px-GlassFish_logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/8/85/GlassFish_logo.svg/190px-GlassFish_logo.svg.png 2x" data-file-width="563" data-file-height="250" /></a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_developer" title="Software developer">Developer(s)</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Oracle_Corporation" title="Oracle Corporation">Oracle Corporation</a> (initial code from <a href="https://en.wikipedia.org/wiki/Sun_Microsystems" title="Sun Microsystems">Sun Microsystems</a>)</td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;">Initial release</th>
+<td>6&#160;June 2005<span class="noprint">; 11 years ago</span><span style="display:none">&#160;(<span class="bday dtstart published updated">2005-06-06</span>)</span></td>
+</tr>
+<tr>
+<td colspan="2" style="text-align:center"></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_release_life_cycle" title="Software release life cycle">Stable release</a></th>
+<td>
+<div style="margin:0px;">4.1.1 / 7&#160;October 2015<span class="noprint">; 15 months ago</span><span style="display:none">&#160;(<span class="bday dtstart published updated">2015-10-07</span>)</span></div>
+</td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Repository_(version_control)" title="Repository (version control)">Repository</a></th>
+<td><span class="url"><a rel="nofollow" class="external text" href="https://java.net/projects/glassfish/sources/svn/show/trunk/main">java<wbr />.net<wbr />/projects<wbr />/glassfish<wbr />/sources<wbr />/svn<wbr />/show<wbr />/trunk<wbr />/main</a></span></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;">Written in</th>
+<td><a href="Java_(programming_language).html" title="Java (programming language)">Java</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Operating_system" title="Operating system">Operating system</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Cross-platform" title="Cross-platform">Cross-platform</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;">Available in</th>
+<td>English</td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_categories#Broad_categories" title="Software categories">Type</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Application_server" title="Application server">Application server</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_license" title="Software license">License</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Common_Development_and_Distribution_License" title="Common Development and Distribution License">Common Development and Distribution License</a> &amp; <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License" title="GNU General Public License">GNU General Public License</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;">Website</th>
+<td><span class="url"><a rel="nofollow" class="external text" href="http://glassfish.java.net/">glassfish<wbr />.java<wbr />.net</a></span></td>
+</tr>
+</table>
+<p><b>GlassFish</b> is an <a href="https://en.wikipedia.org/wiki/Open-source_software" title="Open-source software">open-source</a> <a href="https://en.wikipedia.org/wiki/Application_server" title="Application server">application server</a> project started by <a href="https://en.wikipedia.org/wiki/Sun_Microsystems" title="Sun Microsystems">Sun Microsystems</a> for the <a href="Java_Platform%2c_Enterprise_Edition.html" title="Java Platform, Enterprise Edition">Java EE</a> platform and now sponsored by <a href="https://en.wikipedia.org/wiki/Oracle_Corporation" title="Oracle Corporation">Oracle Corporation</a>. The supported version is called Oracle GlassFish Server. GlassFish is <a href="https://en.wikipedia.org/wiki/Free_software" title="Free software">free software</a>, <a href="https://en.wikipedia.org/wiki/Dual-licensing" class="mw-redirect" title="Dual-licensing">dual-licensed</a> under two <a href="https://en.wikipedia.org/wiki/Free_software_licence" class="mw-redirect" title="Free software licence">free software licences</a>: the <a href="https://en.wikipedia.org/wiki/Common_Development_and_Distribution_License" title="Common Development and Distribution License">Common Development and Distribution License</a> (CDDL) and the <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License" title="GNU General Public License">GNU General Public License</a> (GPL) with the <a href="https://en.wikipedia.org/wiki/GPL_linking_exception#The_classpath_exception" title="GPL linking exception">classpath exception</a>.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Overview"><span class="tocnumber">1</span> <span class="toctext">Overview</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Releases"><span class="tocnumber">2</span> <span class="toctext">Releases</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Roadmap_and_end_of_Oracle_commercial_support"><span class="tocnumber">3</span> <span class="toctext">Roadmap and end of Oracle commercial support</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#See_also"><span class="tocnumber">4</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#References"><span class="tocnumber">5</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#External_links"><span class="tocnumber">6</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Overview">Overview</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=GlassFish&amp;action=edit&amp;section=1" title="Edit section: Overview">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>GlassFish is the <a href="https://en.wikipedia.org/wiki/Reference_implementation" title="Reference implementation">reference implementation</a> of Java EE and as such supports <a href="https://en.wikipedia.org/wiki/Enterprise_JavaBeans" title="Enterprise JavaBeans">Enterprise JavaBeans</a>, <a href="Java_Persistence_API.html" title="Java Persistence API">JPA</a>, <a href="JavaServer_Faces.html" title="JavaServer Faces">JavaServer Faces</a>, <a href="Java_Message_Service.html" title="Java Message Service">JMS</a>, <a href="https://en.wikipedia.org/wiki/Remote_Method_Invocation" class="mw-redirect" title="Remote Method Invocation">RMI</a>, <a href="JavaServer_Pages.html" title="JavaServer Pages">JavaServer Pages</a>, <a href="Java_Servlet.html" class="mw-redirect" title="Java Servlet">servlets</a>, etc. This allows developers to create enterprise applications that are portable and scalable, and that integrate with legacy technologies. Optional components can also be installed for additional services.</p>
+<p>Built on a modular kernel powered by <a href="https://en.wikipedia.org/wiki/OSGi" title="OSGi">OSGi</a>, GlassFish runs straight on top of the <a href="https://en.wikipedia.org/wiki/Apache_Felix" title="Apache Felix">Apache Felix</a> implementation. It also runs with <a href="https://en.wikipedia.org/wiki/Equinox_OSGi" class="mw-redirect" title="Equinox OSGi">Equinox OSGi</a> or Knopflerfish OSGi runtimes. <a href="https://en.wikipedia.org/wiki/HK2_DI_Kernel" title="HK2 DI Kernel">HK2</a> abstracts the OSGi module system to provide components, which can also be viewed as services. Such services can be discovered and injected at runtime.</p>
+<p>GlassFish is based on <a href="https://en.wikipedia.org/wiki/Source_code" title="Source code">source code</a> released by Sun and <a href="https://en.wikipedia.org/wiki/Oracle_Corporation" title="Oracle Corporation">Oracle Corporation</a>'s <a href="TopLink.html" title="TopLink">TopLink</a> <a href="https://en.wikipedia.org/wiki/Persistence_(computer_science)" title="Persistence (computer science)">persistence</a> system. It uses a derivative of <a href="Apache_Tomcat.html" title="Apache Tomcat">Apache Tomcat</a> as the <a href="https://en.wikipedia.org/wiki/Servlet" class="mw-redirect" title="Servlet">servlet</a> container for serving Web content, with an added component called <a href="https://en.wikipedia.org/wiki/Project_Grizzly(Software)" class="mw-redirect" title="Project Grizzly(Software)">Grizzly</a> which uses Java <a href="New_I/O.html" class="mw-redirect" title="New I/O">New I/O</a> (NIO) for scalability and speed.</p>
+<h2><span class="mw-headline" id="Releases">Releases</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=GlassFish&amp;action=edit&amp;section=2" title="Edit section: Releases">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Sun Microsystems launched the GlassFish project on 6 June 2005. On 4 May 2006, Project GlassFish released the first version that supports the Java EE 5 specification.</p>
+<p>On 8 May 2007 Project <a href="SailFin.html" title="SailFin">SailFin</a> was announced at <a href="JavaOne.html" title="JavaOne">JavaOne</a> as a sub-project under Project GlassFish. Project SailFin aims to add <a href="https://en.wikipedia.org/wiki/Session_Initiation_Protocol" title="Session Initiation Protocol">Session Initiation Protocol</a> (SIP) <a href="https://en.wikipedia.org/wiki/Servlet" class="mw-redirect" title="Servlet">servlet</a> functionality to GlassFish.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[1]</a></sup></p>
+<p>On 17 September 2007 the GlassFish community released version 2 (a.k.a. Sun Java System Application Server 9.1) with full enterprise clustering capabilities, <a href="https://en.wikipedia.org/wiki/Microsoft" title="Microsoft">Microsoft</a>-interoperable Web Services.</p>
+<p>On 21 January 2009 Sun Microsystems and the community released version GlassFish 2.1 (a.k.a. Sun GlassFish Enterprise Server 2.1) which serves as the basis for the Sailfin SIP AppServer project (a.k.a. Sun Communication Application Server).</p>
+<p>On 10 December 2009 GlassFish v3 was released. Being the Java EE reference implementation, this was the first application server to completely implement <a href="https://en.wikipedia.org/w/index.php?title=Java_EE_6&amp;action=edit&amp;redlink=1" class="new" title="Java EE 6 (page does not exist)">Java EE 6</a> <a rel="nofollow" class="external text" href="http://jcp.org/en/jsr/detail?id=316">JSR 316</a>. JSR 316 was however approved with <a rel="nofollow" class="external text" href="http://www.oreillynet.com/onjava/blog/2007/07/jsr_316_java_ee_6_spec_approve_1.html">reservations</a>. In this version GlassFish adds new features to ease migration from Tomcat to GlassFish.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">[2]</a></sup> The other main new features are around modularity (GlassFish v3 Prelude already shipped with an <a href="https://en.wikipedia.org/wiki/Apache_Felix" title="Apache Felix">Apache Felix</a> <a href="https://en.wikipedia.org/wiki/OSGi" title="OSGi">OSGi</a> runtime), startup time (a few seconds), deploy-on-change (provided by NetBeans and Eclipse plugins), and session preservation across redeployments.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">[3]</a></sup></p>
+<p>On 25 March 2010, soon after the acquisition of Sun Microsystems, Oracle issued a <a rel="nofollow" class="external text" href="http://glassfish.org/roadmap">Roadmap</a> for versions 3.0.1, 3.1, 3.2 and 4.0 with themes revolving around clustering, virtualization and integration with <a href="https://en.wikipedia.org/w/index.php?title=Coherence_(Oracle_software)&amp;action=edit&amp;redlink=1" class="new" title="Coherence (Oracle software) (page does not exist)">Coherence</a> and other Oracle technologies. The open source community remains otherwise unaffected.</p>
+<p>On 28 February 2011, Oracle Corporation released GlassFish v3.1. This version introduced support for ssh-based provisioning, centralized admin, clustering and load-balancing. It maintains its support for both the Web Profile and full Java EE 6 Platform specifications.</p>
+<p>On 28 July 2011, Oracle Corporation released GlassFish v3.1.1. This is fix release for GlassFish v3.1 with multiple component updates (Weld, Mojarra, Jersey, EclipseLink, ...), JDK 7 support, AIX support and more.</p>
+<p>On 29 February 2012, Oracle Corporation released GlassFish v3.1.2. This release includes bug fixes and new features including administration console enhancements, transaction recovery from a database and new thread pool properties.</p>
+<p>On 17 July 2012, Oracle Corporation released GlassFish v3.1.2.2. This is a "micro" release to address some exceptional issues in the product.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">[4]</a></sup></p>
+<p>On 12 June 2013, Oracle Corporation released GlassFish 4.0. This major release brings <a href="Java_Platform%2c_Enterprise_Edition.html" title="Java Platform, Enterprise Edition">Java Platform, Enterprise Edition</a> 7 support.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">[5]</a></sup></p>
+<p>On 9 September 2014, Oracle Corporation released GlassFish 4.1. This release includes many bug fixes (over a thousand) and the latest MR releases of CDI and WebSockets.<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">[6]</a></sup></p>
+<p>On 7 October 2015, Oracle Corporation released GlassFish 4.1.1 This release includes many bug fixes and security fixes as well as updates to many underlying components.<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">[7]</a></sup></p>
+<h2><span class="mw-headline" id="Roadmap_and_end_of_Oracle_commercial_support">Roadmap and end of Oracle commercial support</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=GlassFish&amp;action=edit&amp;section=3" title="Edit section: Roadmap and end of Oracle commercial support">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The commercially supported version of GlassFish is known as <b>Oracle GlassFish Server</b>,<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">[8]</a></sup> formerly Sun GlassFish Enterprise Server, and previously Sun Java System Application Server (SJSAS) has a history, along with other <a href="https://en.wikipedia.org/wiki/IPlanet" title="IPlanet">iPlanet</a> software, going back to <a href="https://en.wikipedia.org/wiki/Netscape_Application_Server" title="Netscape Application Server">Netscape Application Server</a>. This includes code from other companies such as <a href="https://en.wikipedia.org/wiki/Oracle_Corporation" title="Oracle Corporation">Oracle Corporation</a> for TopLink Essentials. <a href="https://en.wikipedia.org/wiki/Ericsson" title="Ericsson">Ericssons</a> <a href="https://en.wikipedia.org/wiki/Session_Initiation_Protocol" title="Session Initiation Protocol">SIP</a> Servlet support is included, the opensource version of it is SailFish, developing towards JSR-289.<sup id="cite_ref-9" class="reference"><a href="#cite_note-9">[9]</a></sup> In 2010, the difference between the commercial and open source edition was already quite small.<sup id="cite_ref-10" class="reference"><a href="#cite_note-10">[10]</a></sup></p>
+<p>On 4 November 2013, Oracle announced the future roadmap for Java EE and Glassfish Server, with a 4.1 open-source edition planned and continuing open-sources updates to GlassFish but with an end to commercial Oracle support.<sup id="cite_ref-11" class="reference"><a href="#cite_note-11">[11]</a></sup><sup id="cite_ref-12" class="reference"><a href="#cite_note-12">[12]</a></sup> Commercial customers will instead be encouraged to transition to Oracle's alternative product, <a href="https://en.wikipedia.org/wiki/Oracle_WebLogic_Server" title="Oracle WebLogic Server">Oracle WebLogic Server</a>. The only fork of Glassfish currently available with commercial support is <a href="https://en.wikipedia.org/wiki/Payara_Server" title="Payara Server">Payara Server</a>.</p>
+<p>Open-source GlassFish is planned to continue at least through version 5, and the Java EE 8 Reference Implementation will be derived from GlassFish Server Open Source Edition 5. This replicates what has been done in past Java EE and GlassFish Server releases.</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=GlassFish&amp;action=edit&amp;section=4" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div role="navigation" aria-label="Portals" class="noprint portal plainlist tright" style="margin:0.5em 0 0.5em 1em;border:solid #aaa 1px">
+<ul style="display:table;box-sizing:border-box;padding:0.1em;max-width:175px;background:#f9f9f9;font-size:85%;line-height:110%;font-style:italic;font-weight:bold">
+<li style="display:table-row"><span style="display:table-cell;padding:0.2em;vertical-align:middle;text-align:center"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_(2009).svg/28px-Free_and_open-source_software_logo_(2009).svg.png" width="28" height="28" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/42px-Free_and_open-source_software_logo_%282009%29.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/56px-Free_and_open-source_software_logo_%282009%29.svg.png 2x" data-file-width="512" data-file-height="512" /></span><span style="display:table-cell;padding:0.2em 0.2em 0.2em 0.3em;vertical-align:middle"><a href="https://en.wikipedia.org/wiki/Portal:Free_software" class="mw-redirect" title="Portal:Free software">Free software portal</a></span></li>
+</ul>
+</div>
+<p>Other CDDL-licensed, Java-based services:</p>
+<ul>
+<li><a href="OpenDS.html" class="mw-redirect" title="OpenDS">OpenDS</a></li>
+<li><a href="OpenSSO.html" class="mw-redirect" title="OpenSSO">OpenSSO</a></li>
+<li><a href="Open_ESB.html" class="mw-redirect" title="Open ESB">Open ESB</a></li>
+</ul>
+<p>Other Java EE application servers:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/WildFly" title="WildFly">WildFly</a></li>
+<li><a href="IBM_WebSphere_Application_Server.html" title="IBM WebSphere Application Server">WebSphere AS</a></li>
+<li><a href="https://en.wikipedia.org/wiki/WebLogic" class="mw-redirect" title="WebLogic">WebLogic Server</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_TomEE" title="Apache TomEE">Apache TomEE</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Payara_Server" title="Payara Server">Payara Server</a></li>
+<li><a href="Apache_Geronimo.html" title="Apache Geronimo">Apache Geronimo</a></li>
+<li><a href="Comparison_of_application_servers.html#Java_EE" title="Comparison of application servers">Comparison of application servers</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=GlassFish&amp;action=edit&amp;section=5" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://jcp.org/en/jsr/detail?id=289">The Java Community Process(SM) Program - JSRs: Java Specification Requests - detail JSR# 289</a></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://blogs.sun.com/jluehe/entry/glassfish_v3_adds_support_for">GlassFish v3 adds support for Tomcat-style valves</a></span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.slideshare.net/pelegri/saved-session-state-in-glassfish-v3-prelude-presentation">GlassFish session preservation across redeployments</a></span></li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://blogs.oracle.com/theaquarium/entry/glassfish_server_3_1_2">GlassFish Server 3.1.2.2 Now Available</a></span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://blogs.oracle.com/theaquarium/entry/java_ee_7_glassfish_4">Java EE 7 / GlassFish 4.0 Launch Coverage</a></span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://blogs.oracle.com/theaquarium/entry/glassfish_server_open_source_edition">/ GlassFish 4.1 release coverage</a></span></li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://blogs.oracle.com/theaquarium/entry/glassfish_4_1_1_has">/ GlassFish 4.1.1 release coverage</a></span></li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.oracle.com/us/products/middleware/application-server/oracle-glassfish-server-faq-071872.pdf">Oracle GlassFish Server: Frequently Asked Questions</a></span></li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://wikis.oracle.com/display/GlassFish/Sip">A short introduction to SIP.</a></span></li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://wikis.oracle.com/display/GlassFish/FaqGlassFishV2vsSJSAS91">How does GlassFish v2 differ from the Sun GlassFish Enterprise Server v2?</a></span></li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://blogs.oracle.com/theaquarium/entry/java_ee_and_glassfish_server">Java EE and GlassFish Server Roadmap Update</a></span></li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.theregister.co.uk/2013/11/05/no_commercial_support_for_glassfish_4/">The Register -- Want a support contract for GlassFish 4.0? Tough luck, says Oracle</a>, 2013-11-04.</span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=GlassFish&amp;action=edit&amp;section=6" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://glassfish.java.net/">GlassFish Project</a></li>
+<li><a rel="nofollow" class="external text" href="https://wikis.oracle.com/display/GlassFish/GlassFishWiki">GlassFish Wiki</a></li>
+<li><a rel="nofollow" class="external text" href="http://blogs.oracle.com/theaquarium">The Aquarium</a> Latest GlassFish news and blogs</li>
+<li><a rel="nofollow" class="external text" href="http://gesker.blogspot.com/2007/03/jspwikiglassfish-install-part-1.html">Glassfish &amp; JSPWiki Getting Started Series</a></li>
+<li><a rel="nofollow" class="external text" href="http://sailfin.java.net/">SailFin Project</a></li>
+<li><a rel="nofollow" class="external text" href="http://glassfish.java.net/quality/portal/">GlassFish Quality Community</a></li>
+</ul>
+<div role="navigation" class="navbox" aria-labelledby="GlassFish_Server_Stack" style="padding:3px">
+<table class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="https://en.wikipedia.org/wiki/Template:GlassFish" title="Template:GlassFish"><abbr title="View this template" style=";;background:none transparent;border:none;">v</abbr></a></li>
+<li class="nv-talk"><a href="https://en.wikipedia.org/wiki/Template_talk:GlassFish" title="Template talk:GlassFish"><abbr title="Discuss this template" style=";;background:none transparent;border:none;">t</abbr></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:GlassFish&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;">e</abbr></a></li>
+</ul>
+</div>
+<div id="GlassFish_Server_Stack" style="font-size:114%"><strong class="selflink">GlassFish</strong> Server Stack</div>
+</th>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><i>Core</i></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><strong class="selflink">GlassFish</strong></li>
+<li>Samples</li>
+<li><a href="https://en.wikipedia.org/wiki/Project_Grizzly_(software)" title="Project Grizzly (software)">Grizzly</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Project_Metro" title="Project Metro">Metro</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Project_Jersey" title="Project Jersey">Jersey</a></li>
+<li><a href="Open_Message_Queue.html" title="Open Message Queue">OpenMQ</a></li>
+<li><a href="SailFin.html" title="SailFin">SailFin</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Project_Shoal_(software)" title="Project Shoal (software)">Shoal</a></li>
+<li><a href="https://en.wikipedia.org/wiki/HK2_DI_Kernel" title="HK2 DI Kernel">HK2</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><i><a href="https://en.wikipedia.org/wiki/Web_Application" class="mw-redirect" title="Web Application">Web Components</a></i></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="JavaServer_Pages.html" title="JavaServer Pages">JSP</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Expression_Language" class="mw-redirect" title="Expression Language">Expression Language</a></li>
+<li><a href="https://en.wikipedia.org/wiki/JSTL" class="mw-redirect" title="JSTL">JSTL</a></li>
+<li><a href="JavaServer_Faces.html" title="JavaServer Faces">JSF</a></li>
+<li><a href="https://en.wikipedia.org/w/index.php?title=JSF_Templates&amp;action=edit&amp;redlink=1" class="new" title="JSF Templates (page does not exist)">JSF Templates</a></li>
+<li>WoodStock</li>
+<li><a href="https://en.wikipedia.org/wiki/Project_Phobos" title="Project Phobos">Phobos</a></li>
+<li><a href="https://en.wikipedia.org/wiki/WebSockets" class="mw-redirect" title="WebSockets">WebSockets</a></li>
+<li><a href="https://en.wikipedia.org/w/index.php?title=LRWP_in_Java&amp;action=edit&amp;redlink=1" class="new" title="LRWP in Java (page does not exist)">LRWP in Java</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><i><a href="https://en.wikipedia.org/wiki/Web_Services" class="mw-redirect" title="Web Services">Web Services</a></i></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/JAX-WS" class="mw-redirect" title="JAX-WS">JAX-WS</a></li>
+<li><a href="https://en.wikipedia.org/wiki/WSIT" class="mw-redirect" title="WSIT">WSIT</a></li>
+<li><a href="https://en.wikipedia.org/wiki/JAXB" class="mw-redirect" title="JAXB">JAXB</a></li>
+<li><a href="https://en.wikipedia.org/wiki/JAXP" class="mw-redirect" title="JAXP">JAXP</a></li>
+<li><a href="https://en.wikipedia.org/w/index.php?title=Wiseman(Software)&amp;action=edit&amp;redlink=1" class="new" title="Wiseman(Software) (page does not exist)">Wiseman</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><i>Tools</i></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Hudson_(software).html" title="Hudson (software)">Hudson</a></li>
+<li>Japex</li>
+<li>OpenInstaller</li>
+<li>IDE plugins</li>
+<li>WS Monitor</li>
+<li>License tools</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div role="navigation" class="navbox" aria-labelledby="Sun_Microsystems_.28acquired_by_Oracle_Corp.2C_2010.29" style="padding:3px">
+<table class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="https://en.wikipedia.org/wiki/Template:Sun_Microsystems" title="Template:Sun Microsystems"><abbr title="View this template" style=";;background:none transparent;border:none;">v</abbr></a></li>
+<li class="nv-talk"><a href="https://en.wikipedia.org/wiki/Template_talk:Sun_Microsystems" title="Template talk:Sun Microsystems"><abbr title="Discuss this template" style=";;background:none transparent;border:none;">t</abbr></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Sun_Microsystems&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;">e</abbr></a></li>
+</ul>
+</div>
+<div id="Sun_Microsystems_.28acquired_by_Oracle_Corp.2C_2010.29" style="font-size:114%"><a href="https://en.wikipedia.org/wiki/Sun_Microsystems" title="Sun Microsystems">Sun Microsystems</a> <small>(<a href="https://en.wikipedia.org/wiki/Sun_acquisition_by_Oracle" title="Sun acquisition by Oracle">acquired</a> by <a href="https://en.wikipedia.org/wiki/Oracle_Corporation" title="Oracle Corporation">Oracle Corp</a>, 2010)</small></div>
+</th>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">People</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Bill_Joy" title="Bill Joy">Bill Joy</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Andy_Bechtolsheim" title="Andy Bechtolsheim">Andy Bechtolsheim</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Scott_McNealy" title="Scott McNealy">Scott McNealy</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Vinod_Khosla" title="Vinod Khosla">Vinod Khosla</a></li>
+<li><a href="https://en.wikipedia.org/wiki/List_of_Sun_Microsystems_employees" title="List of Sun Microsystems employees">List of notable employees</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Hardware</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Sun-1" title="Sun-1">Sun-1</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sun-2" title="Sun-2">Sun-2</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sun-3" title="Sun-3">Sun-3</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sun386i" title="Sun386i">Sun386i</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sun-4" title="Sun-4">Sun-4</a></li>
+<li><a href="https://en.wikipedia.org/wiki/SPARCstation" title="SPARCstation">SPARCstation</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sun_Netra" title="Sun Netra">Netra</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sun_Ultra_series" title="Sun Ultra series">Ultra</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sun_Enterprise" title="Sun Enterprise">Enterprise</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sun_Blade" title="Sun Blade">Sun Blade</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sun_Fire" title="Sun Fire">Sun Fire</a></li>
+<li><a href="https://en.wikipedia.org/wiki/SPARC_Enterprise" title="SPARC Enterprise">SPARC Enterprise</a></li>
+<li><a href="https://en.wikipedia.org/wiki/SPARC" title="SPARC">SPARC</a></li>
+<li><a href="https://en.wikipedia.org/wiki/JavaStation" title="JavaStation">JavaStation</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sun_Ray" title="Sun Ray">Sun Ray</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sun_Modular_Datacenter" title="Sun Modular Datacenter">Sun Modular Datacenter</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Category:Sun_Microsystems_hardware" title="Category:Sun Microsystems hardware"><i>more...</i></a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Software</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/SunOS" title="SunOS">SunOS</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Solaris_(operating_system)" title="Solaris (operating system)">Solaris</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Network_Information_Service" title="Network Information Service">NIS</a> (<a href="https://en.wikipedia.org/wiki/NIS+" title="NIS+">+</a>)</li>
+<li><a href="https://en.wikipedia.org/wiki/Network_File_System" title="Network File System">NFS</a></li>
+<li><a href="https://en.wikipedia.org/wiki/ZFS" title="ZFS">ZFS</a></li>
+<li><a href="https://en.wikipedia.org/wiki/SunView" title="SunView">SunView</a></li>
+<li><a href="https://en.wikipedia.org/wiki/NeWS" title="NeWS">NeWS</a></li>
+<li><a href="https://en.wikipedia.org/wiki/OpenWindows" title="OpenWindows">OpenWindows</a></li>
+<li><a href="Java_Desktop_System.html" title="Java Desktop System">Java Desktop System</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Oracle_Solaris_Studio" class="mw-redirect" title="Oracle Solaris Studio">Sun Studio</a></li>
+<li><a href="Java_(software_platform).html" title="Java (software platform)">Java</a></li>
+<li><a href="https://en.wikipedia.org/wiki/StarOffice" title="StarOffice">StarOffice</a></li>
+<li><a href="https://en.wikipedia.org/wiki/IPlanet" title="IPlanet">iPlanet</a>/<a href="https://en.wikipedia.org/wiki/Sun_ONE" title="Sun ONE">Sun ONE</a>/<a href="https://en.wikipedia.org/wiki/Sun_Java_System" title="Sun Java System">Java Enterprise System</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Oracle_Secure_Global_Desktop" title="Oracle Secure Global Desktop">Sun Secure Global Desktop</a></li>
+<li><a href="https://en.wikipedia.org/wiki/MySQL" title="MySQL">MySQL</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sun_xVM" title="Sun xVM">Sun xVM</a></li>
+<li><strong class="selflink">GlassFish</strong></li>
+<li><a href="https://en.wikipedia.org/wiki/Category:Sun_Microsystems_software" title="Category:Sun Microsystems software"><i>more...</i></a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Storage</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Storage_Technology_Corporation" title="Storage Technology Corporation">StorageTek</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sun_Open_Storage" title="Sun Open Storage">Sun Open Storage</a></li>
+<li><a href="https://en.wikipedia.org/wiki/QFS" title="QFS">QFS</a></li>
+<li><a href="https://en.wikipedia.org/wiki/ZFS" title="ZFS">ZFS</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">High-performance computing</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Sun_Cloud" title="Sun Cloud">Sun Cloud</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sun_Constellation_System" title="Sun Constellation System">Sun Constellation System</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sun_Visualization_System" title="Sun Visualization System">Sun Visualization System</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Oracle_Grid_Engine" title="Oracle Grid Engine">Sun Grid Engine</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Lustre_(file_system)" title="Lustre (file system)">Lustre</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Research</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Sun_Microsystems_Laboratories" title="Sun Microsystems Laboratories">Sun Labs</a></li>
+<li><a href="PicoJava.html" title="PicoJava">picoJava</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Fortress_(programming_language)" title="Fortress (programming language)">Fortress</a></li>
+<li><a href="Project_Looking_Glass.html" title="Project Looking Glass">Project Looking Glass</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Education</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Oracle_Certification_Program" title="Oracle Certification Program">SCPs</a></li>
+<li><a href="BlueJ.html" title="BlueJ">BlueJ</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Community</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Common_Development_and_Distribution_License" title="Common Development and Distribution License">Common Development and Distribution License</a></li>
+<li><a href="Java_Community_Process.html" title="Java Community Process">Java Community Process</a></li>
+<li><a href="NetBeans.html" title="NetBeans">NetBeans</a></li>
+<li><a href="OpenOffice.html" title="OpenOffice.org">OpenOffice.org</a></li>
+<li><a href="https://en.wikipedia.org/wiki/OpenSolaris" title="OpenSolaris">OpenSolaris</a></li>
+<li><a href="https://en.wikipedia.org/wiki/OpenSPARC" title="OpenSPARC">OpenSPARC</a></li>
+<li><a href="OpenJDK.html" title="OpenJDK">OpenJDK</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Open_Source_University_Meetup" title="Open Source University Meetup">OSUM</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div role="navigation" class="navbox" aria-labelledby="Oracle_Corporation" style="padding:3px">
+<table class="nowraplinks hlist collapsible collapsed navbox-inner" style="border-spacing:0;background:transparent;color:inherit">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="https://en.wikipedia.org/wiki/Template:Oracle" title="Template:Oracle"><abbr title="View this template" style=";;background:none transparent;border:none;">v</abbr></a></li>
+<li class="nv-talk"><a href="https://en.wikipedia.org/wiki/Template_talk:Oracle" title="Template talk:Oracle"><abbr title="Discuss this template" style=";;background:none transparent;border:none;">t</abbr></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Oracle&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;">e</abbr></a></li>
+</ul>
+</div>
+<div id="Oracle_Corporation" style="font-size:114%"><a href="https://en.wikipedia.org/wiki/Oracle_Corporation" title="Oracle Corporation">Oracle Corporation</a></div>
+</th>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Corporation" title="Corporation">Corporate</a> <a href="https://en.wikipedia.org/wiki/Board_of_directors" title="Board of directors">directors</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/w/index.php?title=Jeffrey_Berg&amp;action=edit&amp;redlink=1" class="new" title="Jeffrey Berg (page does not exist)">Jeffrey Berg</a></li>
+<li><a href="https://en.wikipedia.org/w/index.php?title=H._Raymond_Bingham&amp;action=edit&amp;redlink=1" class="new" title="H. Raymond Bingham (page does not exist)">H. Raymond Bingham</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Michael_Boskin" title="Michael Boskin">Michael Boskin</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Safra_A._Catz" title="Safra A. Catz">Safra A. Catz</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Larry_Ellison" title="Larry Ellison">Larry Ellison</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Héctor_García-Molina" title="Héctor García-Molina">Héctor García-Molina</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Joseph_Grundfest" title="Joseph Grundfest">Joseph Grundfest</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Jeffrey_O._Henley" class="mw-redirect" title="Jeffrey O. Henley">Jeffrey O. Henley</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Mark_Hurd" title="Mark Hurd">Mark Hurd</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Jack_Kemp" title="Jack Kemp">Jack F. Kemp</a></li>
+<li><a href="https://en.wikipedia.org/w/index.php?title=Donald_L._Lucas&amp;action=edit&amp;redlink=1" class="new" title="Donald L. Lucas (page does not exist)">Donald L. Lucas</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Naomi_O._Seligman" title="Naomi O. Seligman">Naomi O. Seligman</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Mergers_and_acquisitions" title="Mergers and acquisitions">Acquisitions</a> (<a href="https://en.wikipedia.org/wiki/List_of_acquisitions_by_Oracle" title="List of acquisitions by Oracle">list</a>)</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Sun_Microsystems" title="Sun Microsystems">Sun</a></li>
+<li><a href="https://en.wikipedia.org/wiki/PeopleSoft" title="PeopleSoft">PeopleSoft</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Oracle_Hyperion" title="Oracle Hyperion">Hyperion</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Siebel_Systems" title="Siebel Systems">Siebel</a></li>
+<li><a href="https://en.wikipedia.org/wiki/BEA_Systems" title="BEA Systems">BEA</a></li>
+<li><a href="https://en.wikipedia.org/wiki/JD_Edwards" title="JD Edwards">JD Edwards</a></li>
+<li><a href="https://en.wikipedia.org/wiki/RightNow_Technologies" title="RightNow Technologies">RightNow</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Virtual_Iron" title="Virtual Iron">Virtual Iron</a></li>
+<li><a href="https://en.wikipedia.org/wiki/TimesTen" title="TimesTen">TimesTen</a></li>
+<li><a href="https://en.wikipedia.org/w/index.php?title=Retek&amp;action=edit&amp;redlink=1" class="new" title="Retek (page does not exist)">Retek</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sunopsis" title="Sunopsis">Sunopsis</a></li>
+<li><a href="https://en.wikipedia.org/wiki/NetSuite" title="NetSuite">NetSuite</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Database" title="Database">DBMS</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Oracle_Database" title="Oracle Database">Oracle Database</a></li>
+<li><a href="https://en.wikipedia.org/wiki/MySQL" title="MySQL">MySQL</a></li>
+<li><a href="https://en.wikipedia.org/wiki/InnoDB" title="InnoDB">InnoDB</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Berkeley_DB" title="Berkeley DB">Berkeley DB</a></li>
+<li><a href="https://en.wikipedia.org/wiki/TimesTen" title="TimesTen">TimesTen</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Oracle_Rdb" title="Oracle Rdb">Rdb</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Essbase" title="Essbase">Essbase</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Programming_language" title="Programming language">Programming languages</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="Java_(programming_language).html" title="Java (programming language)">Java</a></li>
+<li><a href="https://en.wikipedia.org/wiki/PL/SQL" title="PL/SQL">PL/SQL</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Integrated_development_environment" title="Integrated development environment">IDE</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="JDeveloper.html" title="JDeveloper">JDeveloper</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Oracle_Forms" title="Oracle Forms">Forms</a></li>
+<li><a href="NetBeans.html" title="NetBeans">NetBeans</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Oracle_Application_Express" title="Oracle Application Express">Apex</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Oracle_SQL_Developer" title="Oracle SQL Developer">SQL Developer</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Oracle_Developer_Studio" title="Oracle Developer Studio">Developer Studio</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Middleware_(distributed_applications)" title="Middleware (distributed applications)">Middleware</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Oracle_Fusion_Middleware" title="Oracle Fusion Middleware">Fusion Middleware</a></li>
+<li><a href="Oracle_WebCenter.html" title="Oracle WebCenter">WebCenter</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Oracle_SOA_Suite" title="Oracle SOA Suite">SOA Suite</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Oracle_WebLogic_Server" title="Oracle WebLogic Server">WebLogic Server</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Oracle_Coherence" title="Oracle Coherence">Coherence</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Tuxedo_(software)" title="Tuxedo (software)">Tuxedo</a></li>
+<li><strong class="selflink">GlassFish</strong></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Operating_system" title="Operating system">Operating systems</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Oracle_Linux" title="Oracle Linux">Oracle Linux</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Solaris_(operating_system)" title="Solaris (operating system)">Oracle Solaris</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Computer_hardware" title="Computer hardware">Computer hardware</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Sun_Fire" title="Sun Fire">Sun Fire</a></li>
+<li><a href="https://en.wikipedia.org/wiki/SPARC" title="SPARC">SPARC</a> (<a href="https://en.wikipedia.org/wiki/SPARC_T-Series" title="SPARC T-Series">T-Series</a>, <a href="https://en.wikipedia.org/wiki/SPARC_Enterprise" title="SPARC Enterprise">Enterprise</a>)</li>
+<li><a href="https://en.wikipedia.org/wiki/Storage_Technology_Corporation" title="Storage Technology Corporation">StorageTek</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Computer_appliance" title="Computer appliance">Computer appliances</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Oracle_Exadata" title="Oracle Exadata">Oracle Exadata</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Oracle_Exalogic" title="Oracle Exalogic">Oracle Exalogic</a></li>
+<li><a href="https://en.wikipedia.org/w/index.php?title=Oracle_Exalytics&amp;action=edit&amp;redlink=1" class="new" title="Oracle Exalytics (page does not exist)">Oracle Exalytics</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Oracle_Big_Data_Appliance" title="Oracle Big Data Appliance">Big Data Appliance</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Education and recognition</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Oracle_Certification_Program" title="Oracle Certification Program">Oracle Certification Program</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td class="navbox-abovebelow" colspan="2">
+<div>
+<ul>
+<li><img alt="Category" src="http://upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/16px-Folder_Hexagonal_Icon.svg.png" title="Category" width="16" height="14" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/24px-Folder_Hexagonal_Icon.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/32px-Folder_Hexagonal_Icon.svg.png 2x" data-file-width="36" data-file-height="31" /> <b><a href="https://en.wikipedia.org/wiki/Category:Oracle_Corporation" title="Category:Oracle Corporation">Category</a></b></li>
+<li><img alt="Commons page" src="http://upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/12px-Commons-logo.svg.png" title="Commons page" width="12" height="16" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/18px-Commons-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/24px-Commons-logo.svg.png 2x" data-file-width="1024" data-file-height="1376" /> <a href="https://commons.wikimedia.org/wiki/Category:Oracle_Corporation" class="extiw" title="commons:Category:Oracle Corporation"><b>Commons</b></a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1231
+Cached time: 20170117104148
+Cache expiry: 2592000
+Dynamic content: false
+CPU time usage: 0.212 seconds
+Real time usage: 0.258 seconds
+Preprocessor visited node count: 1292/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 53516/2097152 bytes
+Template argument size: 1777/2097152 bytes
+Highest expansion depth: 25/40
+Expensive parser function count: 2/500
+Lua time usage: 0.054/10.000 seconds
+Lua memory usage: 1.93 MB/50 MB
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  165.283      1 - -total
+ 59.54%   98.416      2 - Template:Infobox
+ 50.81%   83.984      1 - Template:Infobox_software
+ 15.37%   25.400      3 - Template:Navbox
+ 14.19%   23.449      2 - Template:Start_date_and_age
+ 13.70%   22.645      1 - Template:Infobox_software/simple
+ 11.43%   18.885      1 - Template:About
+  7.80%   12.887      1 - Template:Oracle
+  7.26%   12.003      1 - Template:Reflist
+  6.23%   10.298      1 - Template:Portal
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:3077850-0!*!0!!en!4!* and timestamp 20170117104148 and revision id 757945735
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=GlassFish&amp;oldid=757945735">https://en.wikipedia.org/w/index.php?title=GlassFish&amp;oldid=757945735</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Help_Category.html" title="Help:Category">Categories</a>: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Web_server_software_programmed_in_Java" title="Category:Web server software programmed in Java">Web server software programmed in Java</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Free_software_application_servers" title="Category:Free software application servers">Free software application servers</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Sun_Microsystems_software" title="Category:Sun Microsystems software">Sun Microsystems software</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Software_using_the_CDDL_license" title="Category:Software using the CDDL license">Software using the CDDL license</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Pages_using_deprecated_image_syntax" title="Category:Pages using deprecated image syntax">Pages using deprecated image syntax</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="Special_MyTalk.html" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="Special_MyContributions.html" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&amp;returnto=GlassFish" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=GlassFish" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="GlassFish.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+															<li  id="ca-talk"><span><a href="https://en.wikipedia.org/wiki/Talk:GlassFish"  title="Discussion about the content page [t]" accesskey="t" rel="discussion">Talk</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="GlassFish.html" >Read</a></span></li>
+															<li id="ca-edit"><span><a href="https://en.wikipedia.org/w/index.php?title=GlassFish&amp;action=edit"  title="Edit this page [e]" accesskey="e">Edit</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="https://en.wikipedia.org/w/index.php?title=GlassFish&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="https://en.wikipedia.org/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="Main_Page.html"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="Portal_Contents.html" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="Portal_Featured_content.html" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="Portal_Current_events.html" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="https://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="../../shop.wikimedia.org/index.html" title="Visit the Wikipedia store">Wikipedia store</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Interaction</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-help"><a href="Help_Contents.html" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="Wikipedia_About.html" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="Wikipedia_Community_portal.html" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="Wikipedia_Contact_us.html" title="How to contact Wikipedia">Contact page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="https://en.wikipedia.org/wiki/Special:WhatLinksHere/GlassFish" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://en.wikipedia.org/wiki/Special:RecentChangesLinked/GlassFish" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="Wikipedia_File_Upload_Wizard.html" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="https://en.wikipedia.org/w/index.php?title=GlassFish&amp;oldid=757945735" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://en.wikipedia.org/w/index.php?title=GlassFish&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q68847" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="https://en.wikipedia.org/w/index.php?title=Special:CiteThisPage&amp;page=GlassFish&amp;id=757945735" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Print/export</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=GlassFish">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=GlassFish&amp;returnto=GlassFish&amp;oldid=757945735&amp;writer=rdf2latex">Download as PDF</a></li><li id="t-print"><a href="https://en.wikipedia.org/w/index.php?title=GlassFish&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Languages</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/GlassFish" title="GlassFish – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/GlassFish" title="GlassFish – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/GlassFish" title="GlassFish – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/GlassFish" title="GlassFish – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/글래스피시" title="글래스피시 – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/GlassFish" title="GlassFish – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-kk"><a href="https://kk.wikipedia.org/wiki/GlassFish" title="GlassFish – Kazakh" lang="kk" hreflang="kk" class="interlanguage-link-target">Қазақша</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/GlassFish" title="GlassFish – Hungarian" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/GlassFish" title="GlassFish – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/GlassFish" title="GlassFish – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/GlassFish" title="GlassFish – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/GlassFish" title="GlassFish – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/GlassFish" title="GlassFish – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/GlassFish" title="GlassFish – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q68847#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 2 January 2017, at 16:55.</li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="Wikipedia_Text_of_Creative_Commons_Attribution-ShareAlike_3.html">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="../../creativecommons.org/licenses/by-sa/3.0/index.html" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="../../wikimediafoundation.org/wiki/Terms_of_Use.html">Terms of Use</a> and <a href="../../wikimediafoundation.org/wiki/Privacy_policy.html">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="../../www.wikimediafoundation.org/index.html">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../../wikimediafoundation.org/wiki/Privacy_policy.html" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="Wikipedia_About.html" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="Wikipedia_General_disclaimer.html" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="Wikipedia_Contact_us.html">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a href="../../www.mediawiki.org/wiki/Special_MyLanguage/How_to_contribute.html">Developers</a></li>
+											<li id="footer-places-cookiestatement"><a href="../../wikimediafoundation.org/wiki/Cookie_statement.html">Cookie statement</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/w/index.php?title=GlassFish&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="../../www.wikimediafoundation.org/index.html"><img src="https://en.wikipedia.org/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="../../www.mediawiki.org/index.html"><img src="https://en.wikipedia.org/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":95,"wgHostname":"mw1271"});});</script>
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/GlassFish by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:05 GMT -->
+</html>

@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Lift_(web_framework) by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:41 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Lift (web framework) - Wikipedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Lift_(web_framework)","wgTitle":"Lift (web framework)","wgCurRevisionId":716819636,"wgRevisionId":716819636,"wgArticleId":14307754,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Wikipedia articles with GND identifiers","Web frameworks","Scala (programming language)","Cross-platform software","Java platform","Free software programmed in Scala","Software using the Apache license"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Lift_(web_framework)","wgRelevantArticleId":14307754,"wgRequestId":"WH36awpAMEsAAHYQaq8AAABL","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgFlaggedRevsParams":{"tags":{}},"wgStableRevisionId":null,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"en","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgWikibaseItemId":"Q1814618","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.math.styles":"ready","ext.cite.styles":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@1dqfd7l",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["ext.cite.a11y","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.legacy.wikibits","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.watchlist-notice","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.gadget.featured-articles-links","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.interface","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="https://en.wikipedia.org/w/load.php?debug=false&amp;lang=en&amp;modules=ext.cite.styles%7Cext.math.scripts%2Cstyles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="../w/load2c8d.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../w/load18b6.css?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.29.0-wmf.7"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="https://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Lift_(web_framework)"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Lift_(web_framework)&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Lift_(web_framework)&amp;action=edit"/>
+<link rel="apple-touch-icon" href="https://en.wikipedia.org/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="../static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../w/api251f.php?action=rsd"/>
+<link rel="copyright" href="../../creativecommons.org/licenses/by-sa/3.0/index.html"/>
+<link rel="canonical" href="Lift_(web_framework).html"/>
+<link rel="dns-prefetch" href="../../login.wikimedia.org/index.html"/>
+<link rel="dns-prefetch" href="../../meta.wikimedia.org/index.html" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Lift_web_framework rootpage-Lift_web_framework skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">Lift (web framework)</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><script>function mfTempOpenSection(id){var block=document.getElementById("mf-section-"+id);block.className+=" open-block";block.previousSibling.className+=" open-block";}</script><table class="infobox vevent" style="width:22em">
+<caption class="summary">Lift</caption>
+<tr>
+<td colspan="2" style="text-align:center"><a href="https://en.wikipedia.org/wiki/File:Lift-logo.jpg" class="image"><img alt="Lift-logo.jpg" src="http://upload.wikimedia.org/wikipedia/commons/b/b7/Lift-logo.jpg" width="185" height="89" data-file-width="185" data-file-height="89" /></a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_developer" title="Software developer">Original author(s)</a></th>
+<td>David Pollak<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[1]</a></sup></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_developer" title="Software developer">Developer(s)</a></th>
+<td><a rel="nofollow" class="external text" href="http://liftweb.net/team.html">Lift Team</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;">Initial release</th>
+<td>2007</td>
+</tr>
+<tr>
+<td colspan="2" style="text-align:center"></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_release_life_cycle" title="Software release life cycle">Stable release</a></th>
+<td>
+<div style="margin:0px;">2.6<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">[2]</a></sup> / January&#160;11,&#160;2015<span style="display:none">&#160;(<span class="bday dtstart published updated">2015-01-11</span>)</span></div>
+</td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_release_life_cycle" title="Software release life cycle">Preview release</a></th>
+<td>
+<div style="margin:0px;">3.0-RC1<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">[3]</a></sup> / March&#160;19,&#160;2016<span style="display:none">&#160;(<span class="bday dtstart published updated">2016-03-19</span>)</span></div>
+</td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;">Development status</th>
+<td>Active</td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;">Written in</th>
+<td><a href="Scala_(programming_language).html" title="Scala (programming language)">Scala</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Operating_system" title="Operating system">Operating system</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Cross-platform" title="Cross-platform">Cross-platform</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_categories#Broad_categories" title="Software categories">Type</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Web_framework" title="Web framework">Web framework</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_license" title="Software license">License</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Apache_License" title="Apache License">Apache 2.0 License</a></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;">Website</th>
+<td><span class="url"><a rel="nofollow" class="external text" href="http://liftweb.net/">liftweb<wbr />.net</a></span></td>
+</tr>
+</table>
+<p><b>Lift</b> is a <a href="https://en.wikipedia.org/wiki/Free_and_open-source_software" title="Free and open-source software">free and open-source</a> <a href="https://en.wikipedia.org/wiki/Web_framework" title="Web framework">web framework</a> that is designed for the <a href="Scala_(programming_language).html" title="Scala (programming language)">Scala programming language</a>. It was originally created by <a rel="nofollow" class="external text" href="http://goodstuff.im/">David Pollak</a> who was dissatisfied with certain aspects of the <a href="https://en.wikipedia.org/wiki/Ruby_on_Rails" title="Ruby on Rails">Ruby on Rails</a> framework.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">[4]</a></sup> Lift was launched as an <a href="https://en.wikipedia.org/wiki/Open_source" class="mw-redirect" title="Open source">open source</a> project on February 26, 2007 under the <a href="https://en.wikipedia.org/wiki/Apache_License" title="Apache License">Apache 2.0 license</a>. A commercially popular web platform often cited as being developed using Lift is <a href="https://en.wikipedia.org/wiki/Foursquare" title="Foursquare">Foursquare</a>.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">[5]</a></sup></p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Design_goals_and_overview"><span class="tocnumber">1</span> <span class="toctext">Design goals and overview</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#History"><span class="tocnumber">2</span> <span class="toctext">History</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#References"><span class="tocnumber">3</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Further_reading"><span class="tocnumber">4</span> <span class="toctext">Further reading</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#External_links"><span class="tocnumber">5</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Design_goals_and_overview">Design goals and overview</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Lift_(web_framework)&amp;action=edit&amp;section=1" title="Edit section: Design goals and overview">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Lift is an expressive framework for writing web applications. It draws upon concepts from peer frameworks such as <a href="Grails_(framework).html" title="Grails (framework)">Grails</a>, <a href="https://en.wikipedia.org/wiki/Ruby_on_Rails" title="Ruby on Rails">Ruby on Rails</a>, <a href="https://en.wikipedia.org/wiki/Seaside_(software)" title="Seaside (software)">Seaside</a>, <a href="Apache_Wicket.html" title="Apache Wicket">Wicket</a> and <a href="https://en.wikipedia.org/wiki/Django_(web_framework)" title="Django (web framework)">Django</a>. It favors <a href="https://en.wikipedia.org/wiki/Convention_over_configuration" title="Convention over configuration">convention over configuration</a> in the style of Ruby on Rails, although it does not prescribe the <a href="https://en.wikipedia.org/wiki/Model–view–controller" title="Model–view–controller">model–view–controller</a> (MVC) <a href="https://en.wikipedia.org/wiki/Architectural_pattern" title="Architectural pattern">architectural pattern</a>. Rather, Lift is chiefly modeled upon the so-called "View First" (designer friendly) approach to web page development inspired by the Wicket framework. Lift is also designed to be a high-performance, scalable web framework by leveraging Scala actors to support more concurrent requests than is possible with a thread-per-request server.</p>
+<p>As <a href="Scala_(programming_language).html" title="Scala (programming language)">Scala</a> program code executes within the <a href="https://en.wikipedia.org/wiki/Java_virtual_machine" title="Java virtual machine">Java virtual machine</a> (JVM), any existing <a href="Java_(programming_language).html" title="Java (programming language)">Java</a> library and <a href="Web_container.html" title="Web container">web container</a> can be used in running Lift applications. Lift web applications are thus packaged as <a href="https://en.wikipedia.org/wiki/WAR_file_format_(Sun)" class="mw-redirect" title="WAR file format (Sun)">WAR</a> files and deployed on any <a href="Java_Servlet.html" class="mw-redirect" title="Java Servlet">servlet</a> 2.4 engine (for example, <a href="Apache_Tomcat.html" title="Apache Tomcat">Tomcat</a> 5.5.xx, <a href="Jetty_(web_server).html" title="Jetty (web server)">Jetty</a> 6.0, etc.). Lift programmers may use the standard Scala/Java development toolchain including <a href="https://en.wikipedia.org/wiki/Integrated_development_environment" title="Integrated development environment">IDEs</a> such as <a href="Eclipse_(software).html" title="Eclipse (software)">Eclipse</a>, <a href="NetBeans.html" title="NetBeans">NetBeans</a> and <a href="IntelliJ_IDEA.html" title="IntelliJ IDEA">IDEA</a>. Dynamic web content is authored via templates using standard <a href="https://en.wikipedia.org/wiki/HTML5" title="HTML5">HTML5</a> or <a href="https://en.wikipedia.org/wiki/XHTML" title="XHTML">XHTML</a> editors. Lift applications also benefit from native support for advanced web development techniques such as <a href="https://en.wikipedia.org/wiki/Comet_(programming)" title="Comet (programming)">Comet</a> and <a href="https://en.wikipedia.org/wiki/Ajax_(programming)" title="Ajax (programming)">Ajax</a>.</p>
+<p>The main characteristics of Lift applications are:</p>
+<ul>
+<li>Resistant to common vulnerabilities including many of the <a href="https://en.wikipedia.org/wiki/OWASP" title="OWASP">OWASP</a>.</li>
+<li>Fast to build, concise and easy to maintain.</li>
+<li>High performance and scale in the real world to handle big traffic levels.</li>
+<li>Interactive like a desktop application.</li>
+</ul>
+<h2><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Lift_(web_framework)&amp;action=edit&amp;section=2" title="Edit section: History">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The stable version 1.0 of Lift was released on February 26, 2009 (two years after initiation of the project).<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">[6]</a></sup> Lift 2.0 was released in June 2010.<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">[7]</a></sup> David Pollak, the original creator of Lift, discussed the release of Lift 2.0 on the popular <a href="https://en.wikipedia.org/wiki/FLOSS_Weekly" title="FLOSS Weekly">FLOSS weekly</a> podcast.<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">[8]</a></sup></p>
+<p>Lift reached five years of continuous development on February 26, 2012.<sup id="cite_ref-9" class="reference"><a href="#cite_note-9">[9]</a></sup></p>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Lift_(web_framework)&amp;action=edit&amp;section=3" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div role="navigation" aria-label="Portals" class="noprint portal plainlist tright" style="margin:0.5em 0 0.5em 1em;border:solid #aaa 1px">
+<ul style="display:table;box-sizing:border-box;padding:0.1em;max-width:175px;background:#f9f9f9;font-size:85%;line-height:110%;font-style:italic;font-weight:bold">
+<li style="display:table-row"><span style="display:table-cell;padding:0.2em;vertical-align:middle;text-align:center"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_(2009).svg/28px-Free_and_open-source_software_logo_(2009).svg.png" width="28" height="28" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/42px-Free_and_open-source_software_logo_%282009%29.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/56px-Free_and_open-source_software_logo_%282009%29.svg.png 2x" data-file-width="512" data-file-height="512" /></span><span style="display:table-cell;padding:0.2em 0.2em 0.2em 0.3em;vertical-align:middle"><a href="https://en.wikipedia.org/wiki/Portal:Free_software" class="mw-redirect" title="Portal:Free software">Free software portal</a></span></li>
+</ul>
+</div>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://liftweb.net/team.html">"Lift&#160;:: Team"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">8 August</span> 2015</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALift+%28web+framework%29&amp;rft.btitle=Lift+%3A%3A+Team&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fliftweb.net%2Fteam.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://liftweb.net/26">"Lift&#160;:: 2.6"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">8 August</span> 2015</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALift+%28web+framework%29&amp;rft.btitle=Lift+%3A%3A+2.6&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fliftweb.net%2F26&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://liftweb.net/30_rc1">"Lift&#160;:: 3.0-RC1"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">15 April</span> 2016</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALift+%28web+framework%29&amp;rft.btitle=Lift+%3A%3A+3.0-RC1&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fliftweb.net%2F30_rc1&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.infoq.com/news/2008/03/liftweb">"David Pollak on lift and Scala"</a>. <i>InfoQ</i><span class="reference-accessdate">. Retrieved <span class="nowrap">8 August</span> 2015</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALift+%28web+framework%29&amp;rft.atitle=David+Pollak+on+lift+and+Scala&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.infoq.com%2Fnews%2F2008%2F03%2Fliftweb&amp;rft.jtitle=InfoQ&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.scala-lang.org/node/5130">"Foursquare move to Scala/Lift"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">8 August</span> 2015</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALift+%28web+framework%29&amp;rft.btitle=Foursquare+move+to+Scala%2FLift&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.scala-lang.org%2Fnode%2F5130&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://blog.lostlake.org/index.php?/archives/92-Lift-1.0-is-available.html">"Home"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">8 August</span> 2015</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALift+%28web+framework%29&amp;rft.btitle=Home&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fblog.lostlake.org%2Findex.php%3F%2Farchives%2F92-Lift-1.0-is-available.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://liftweb.net/20_ga">"Lift&#160;:: 2.0 GA"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">8 August</span> 2015</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALift+%28web+framework%29&amp;rft.btitle=Lift+%3A%3A+2.0+GA&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fliftweb.net%2F20_ga&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://twit.tv/floss125">"FLOSS Weekly 125"</a>. <i>TWiT.tv</i><span class="reference-accessdate">. Retrieved <span class="nowrap">8 August</span> 2015</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALift+%28web+framework%29&amp;rft.atitle=FLOSS+Weekly+125&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Ftwit.tv%2Ffloss125&amp;rft.jtitle=TWiT.tv&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://liftweb.net/5th_anniversary">"Lift&#160;:: Happy 5th Birthday"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">8 August</span> 2015</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALift+%28web+framework%29&amp;rft.btitle=Lift+%3A%3A+Happy+5th+Birthday&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fliftweb.net%2F5th_anniversary&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="Further_reading">Further reading</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Lift_(web_framework)&amp;action=edit&amp;section=4" title="Edit section: Further reading">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="refbegin" style="">
+<ul>
+<li><cite id="CITEREFChen-BeckerWeirDanciu2009" class="citation">Chen-Becker, Derek; Weir, Tyler; Danciu, Marius (May 25, 2009), <a rel="nofollow" class="external text" href="http://www.amazon.com/Definitive-Guide-Lift-Scala-Based-Framework/dp/1430224215"><i>The Definitive Guide to Lift: A Scala-based Web Framework</i></a> (1st ed.), <a href="https://en.wikipedia.org/wiki/Apress" title="Apress">Apress</a>, p.&#160;200, <a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="https://en.wikipedia.org/wiki/Special:BookSources/1-4302-2421-5" title="Special:BookSources/1-4302-2421-5">1-4302-2421-5</a></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALift+%28web+framework%29&amp;rft.au=Danciu%2C+Marius&amp;rft.aufirst=Derek&amp;rft.aulast=Chen-Becker&amp;rft.au=Weir%2C+Tyler&amp;rft.btitle=The+Definitive+Guide+to+Lift%3A+A+Scala-based+Web+Framework&amp;rft.date=2009-05-25&amp;rft.edition=1st&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.amazon.com%2FDefinitive-Guide-Lift-Scala-Based-Framework%2Fdp%2F1430224215&amp;rft.isbn=1-4302-2421-5&amp;rft.pages=200&amp;rft.pub=Apress&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+</ul>
+</div>
+<div class="refbegin" style="">
+<ul>
+<li><cite id="CITEREFUhlmann2013" class="citation">Uhlmann, Torsten (January 2013), <a rel="nofollow" class="external text" href="http://www.packtpub.com/lift-web-applications/book"><i>Instant Lift Web Applications How-to</i></a> (1st ed.), <a href="https://en.wikipedia.org/wiki/Packt" title="Packt">Packt</a>, p.&#160;96, <a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="https://en.wikipedia.org/wiki/Special:BookSources/1849519781" title="Special:BookSources/1849519781">1849519781</a></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALift+%28web+framework%29&amp;rft.aufirst=Torsten&amp;rft.aulast=Uhlmann&amp;rft.btitle=Instant+Lift+Web+Applications+How-to&amp;rft.date=2013-01&amp;rft.edition=1st&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.packtpub.com%2Flift-web-applications%2Fbook&amp;rft.isbn=1849519781&amp;rft.pages=96&amp;rft.pub=Packt&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+</ul>
+</div>
+<div class="refbegin" style="">
+<ul>
+<li><cite id="CITEREFDallaway2013" class="citation">Dallaway, Richard (June 2013), <a rel="nofollow" class="external text" href="http://shop.oreilly.com/product/0636920029151.do"><i>Lift Cookbook: Recipes from the Community for Building Web Applications with Scala</i></a> (1st ed.), <a href="https://en.wikipedia.org/wiki/O%27Reilly_Media" title="O'Reilly Media">O'Reilly Media</a>, p.&#160;256, <a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="https://en.wikipedia.org/wiki/Special:BookSources/978-1-4493-6268-3" title="Special:BookSources/978-1-4493-6268-3">978-1-4493-6268-3</a></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALift+%28web+framework%29&amp;rft.aufirst=Richard&amp;rft.aulast=Dallaway&amp;rft.btitle=Lift+Cookbook%3A+Recipes+from+the+Community+for+Building+Web+Applications+with+Scala&amp;rft.date=2013-06&amp;rft.edition=1st&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fshop.oreilly.com%2Fproduct%2F0636920029151.do&amp;rft.isbn=978-1-4493-6268-3&amp;rft.pages=256&amp;rft.pub=O%27Reilly+Media&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+</ul>
+</div>
+<div class="refbegin" style="">
+<ul>
+<li><cite id="CITEREFGarcia_Jr.2013" class="citation">Garcia Jr., Gilberto T. (September 2013), <a rel="nofollow" class="external text" href="http://www.packtpub.com/lift-web-applications/book"><i>Lift Application Development Cookbook</i></a> (1st ed.), <a href="https://en.wikipedia.org/wiki/Packt" title="Packt">Packt</a>, p.&#160;254, <a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="https://en.wikipedia.org/wiki/Special:BookSources/9781849515887" title="Special:BookSources/9781849515887">9781849515887</a></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALift+%28web+framework%29&amp;rft.aufirst=Gilberto+T.&amp;rft.aulast=Garcia+Jr.&amp;rft.btitle=Lift+Application+Development+Cookbook&amp;rft.date=2013-09&amp;rft.edition=1st&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.packtpub.com%2Flift-web-applications%2Fbook&amp;rft.isbn=9781849515887&amp;rft.pages=254&amp;rft.pub=Packt&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+</ul>
+</div>
+<div class="refbegin" style=""></div>
+<div class="refbegin" style="">
+<ul>
+<li><cite id="CITEREFPollak" class="citation">Pollak, David, <a rel="nofollow" class="external text" href="http://simply.liftweb.net/"><i>Simply Lift</i></a> (Online Early Access ed.)</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALift+%28web+framework%29&amp;rft.aufirst=David&amp;rft.aulast=Pollak&amp;rft.btitle=Simply+Lift&amp;rft.edition=Online+Early+Access&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fsimply.liftweb.net%2F&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+</ul>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Lift_(web_framework)&amp;action=edit&amp;section=5" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><span class="official-website"><span class="url"><a rel="nofollow" class="external text" href="http://liftweb.net/">Official website</a></span></span></li>
+<li><a rel="nofollow" class="external text" href="http://www.ohloh.net/p/liftweb">Lift project metrics</a> on <a href="https://en.wikipedia.org/wiki/Ohloh" class="mw-redirect" title="Ohloh">Ohloh</a></li>
+<li><a rel="nofollow" class="external text" href="https://github.com/astamuse/asta4d">Asta4D: Lift inspired Java port</a></li>
+</ul>
+<div role="navigation" class="navbox" aria-labelledby="Web_frameworks" style="padding:3px">
+<table class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="https://en.wikipedia.org/wiki/Template:Web_frameworks" title="Template:Web frameworks"><abbr title="View this template" style=";;background:none transparent;border:none;">v</abbr></a></li>
+<li class="nv-talk"><a href="https://en.wikipedia.org/wiki/Template_talk:Web_frameworks" title="Template talk:Web frameworks"><abbr title="Discuss this template" style=";;background:none transparent;border:none;">t</abbr></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Web_frameworks&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;">e</abbr></a></li>
+</ul>
+</div>
+<div id="Web_frameworks" style="font-size:114%"><a href="https://en.wikipedia.org/wiki/Web_framework" title="Web framework">Web frameworks</a></div>
+</th>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td class="navbox-abovebelow hlist" colspan="2">
+<div>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Comparison_of_web_frameworks" title="Comparison of web frameworks">Comparison</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Common_Language_Infrastructure" title="Common Language Infrastructure">CLI</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/ASP.NET" title="ASP.NET">ASP.NET</a>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/ASP.NET_Core" title="ASP.NET Core">Core</a></li>
+<li><a href="https://en.wikipedia.org/wiki/ASP.NET_AJAX" title="ASP.NET AJAX">AJAX</a></li>
+<li><a href="https://en.wikipedia.org/wiki/ASP.NET_Dynamic_Data" title="ASP.NET Dynamic Data">Dynamic Data</a></li>
+<li><a href="https://en.wikipedia.org/wiki/ASP.NET_MVC" title="ASP.NET MVC">MVC</a></li>
+<li><a href="https://en.wikipedia.org/wiki/ASP.NET_Razor" title="ASP.NET Razor">Razor</a></li>
+<li><a href="https://en.wikipedia.org/wiki/ASP.NET" title="ASP.NET">Web Forms</a></li>
+</ul>
+</li>
+<li><a href="https://en.wikipedia.org/wiki/Base_One_Foundation_Component_Library" title="Base One Foundation Component Library">BFC</a></li>
+<li><a href="https://en.wikipedia.org/wiki/MonoRail_(software)" title="MonoRail (software)">MonoRail</a></li>
+<li><a href="https://en.wikipedia.org/wiki/OpenRasta" title="OpenRasta">OpenRasta</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Umbraco" title="Umbraco">Umbraco</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="ColdFusion.html" class="mw-redirect" title="ColdFusion">ColdFusion</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/ColdFusion_on_Wheels" title="ColdFusion on Wheels">CFWheels</a></li>
+<li><a href="https://en.wikipedia.org/wiki/ColdBox_Platform" title="ColdBox Platform">ColdBox Platform</a></li>
+<li><a href="https://en.wikipedia.org/wiki/ColdSpring_Framework" title="ColdSpring Framework">ColdSpring</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Fusebox_(programming)" title="Fusebox (programming)">Fusebox</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Mach-II" title="Mach-II">Mach-II</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Model-Glue" title="Model-Glue">Model-Glue</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Common_Lisp" title="Common Lisp">Common Lisp</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Caveman2" title="Caveman2">Caveman2</a></li>
+<li><a href="https://en.wikipedia.org/wiki/CL-HTTP" title="CL-HTTP">CL-HTTP</a></li>
+<li><a href="https://en.wikipedia.org/wiki/UnCommon_Web" title="UnCommon Web">UnCommon Web</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Weblocks" title="Weblocks">Weblocks</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/C++" title="C++">C++</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/CppCMS" title="CppCMS">CppCMS</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Wt_(web_toolkit)" title="Wt (web toolkit)">Wt</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/D_(programming_language)" title="D (programming language)">D</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Vibe.d" title="Vibe.d">Vibe.d</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Haskell_(programming_language)" title="Haskell (programming language)">Haskell</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Happstack" title="Happstack">Happstack</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Yesod_(web_framework)" class="mw-redirect" title="Yesod (web framework)">Yesod</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Snap_(web_framework)" title="Snap (web framework)">Snap</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Java_(software_platform).html" title="Java (software platform)">Java</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="AppFuse.html" title="AppFuse">AppFuse</a></li>
+<li><a href="Flexive.html" title="Flexive">Flexive</a></li>
+<li><a href="Grails_(framework).html" title="Grails (framework)">Grails</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Google_Web_Toolkit" title="Google Web Toolkit">GWT</a></li>
+<li><a href="ICEfaces.html" title="ICEfaces">ICEfaces</a></li>
+<li><a href="ItsNat.html" title="ItsNat">ItsNat</a></li>
+<li><a href="JavaServer_Faces.html" title="JavaServer Faces">JavaServer Faces</a></li>
+<li><a href="https://en.wikipedia.org/wiki/JHipster" title="JHipster">JHipster</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Jspx-bay" title="Jspx-bay">Jspx</a></li>
+<li><a href="https://en.wikipedia.org/wiki/JWt_(Java_web_toolkit)" title="JWt (Java web toolkit)">JWt</a></li>
+<li><a href="OpenXava.html" title="OpenXava">OpenXava</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Play_framework" class="mw-redirect" title="Play framework">Play</a></li>
+<li><a href="Reasonable_Server_Faces.html" title="Reasonable Server Faces">Reasonable Server Faces</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Remote_Application_Platform" title="Remote Application Platform">Remote Application Platform</a></li>
+<li><a href="RIFE.html" title="RIFE">RIFE</a></li>
+<li><a href="JBoss_Seam.html" title="JBoss Seam">Seam</a></li>
+<li><a href="Spring_Framework.html#Model-view-controller_framework" title="Spring Framework">Spring</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Stripes_(framework)" title="Stripes (framework)">Stripes</a></li>
+<li><a href="Apache_Struts.html" class="mw-redirect" title="Apache Struts">Struts</a></li>
+<li><a href="Apache_Tapestry.html" title="Apache Tapestry">Tapestry</a></li>
+<li><a href="Vaadin.html" title="Vaadin">Vaadin</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Vert.x" title="Vert.x">Vert.x</a></li>
+<li><a href="WebWork.html" title="WebWork">WebWork</a></li>
+<li><a href="Apache_Wicket.html" title="Apache Wicket">Wicket</a></li>
+<li><a href="https://en.wikipedia.org/wiki/WaveMaker" title="WaveMaker">WaveMaker</a></li>
+<li><a href="ZK_(framework).html" title="ZK (framework)">ZK</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/JavaScript" title="JavaScript">JavaScript</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Ample_SDK" title="Ample SDK">Ample SDK</a></li>
+<li><a href="https://en.wikipedia.org/wiki/AngularJS" title="AngularJS">AngularJS</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Backbone.js" title="Backbone.js">Backbone.js</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Chaplin.js" title="Chaplin.js">Chaplin.js</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Google_Closure_Tools" title="Google Closure Tools">Closure</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Dojo_Toolkit" title="Dojo Toolkit">Dojo Toolkit</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Ember.js" title="Ember.js">Ember.js</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Ext_JS" title="Ext JS">Ext JS</a></li>
+<li><a href="https://en.wikipedia.org/wiki/JQuery" title="JQuery">jQuery</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Meteor_(web_framework)" title="Meteor (web framework)">Meteor</a></li>
+<li><a href="https://en.wikipedia.org/wiki/MooTools" title="MooTools">MooTools</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Node.js" title="Node.js">Node.js</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Prototype_JavaScript_Framework" title="Prototype JavaScript Framework">Prototype</a></li>
+<li><a href="https://en.wikipedia.org/wiki/React_(JavaScript_library)" title="React (JavaScript library)">React</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Rico_(Ajax)" title="Rico (Ajax)">Rico</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Script.aculo.us" title="Script.aculo.us">script.aculo.us</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sencha_Touch" title="Sencha Touch">Sencha Touch</a></li>
+<li><a href="https://en.wikipedia.org/wiki/SproutCore" title="SproutCore">SproutCore</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Wakanda_(software)" title="Wakanda (software)">Wakanda</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Perl" title="Perl">Perl</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Catalyst_(software)" title="Catalyst (software)">Catalyst</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Dancer_(software)" title="Dancer (software)">Dancer</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Mason_(Perl)" title="Mason (Perl)">Mason</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Maypole_framework" class="mw-redirect" title="Maypole framework">Maypole</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Mojolicious" title="Mojolicious">Mojolicious</a></li>
+<li><a href="https://en.wikipedia.org/wiki/WebGUI" title="WebGUI">WebGUI</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/PHP" title="PHP">PHP</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/CakePHP" title="CakePHP">CakePHP</a></li>
+<li><a href="https://en.wikipedia.org/wiki/CodeIgniter" title="CodeIgniter">CodeIgniter</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Fat-Free_Framework" title="Fat-Free Framework">Fat-Free</a></li>
+<li><a href="https://en.wikipedia.org/wiki/FuelPHP" title="FuelPHP">FuelPHP</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Gyroscope_(software)" title="Gyroscope (software)">Gyroscope</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Horde_(software)" title="Horde (software)">Horde</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Kohana_(framework)" title="Kohana (framework)">Kohana</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Laravel" title="Laravel">Laravel</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Lithium_(software)" title="Lithium (software)">Lithium</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Midgard_(software)" title="Midgard (software)">Midgard</a></li>
+<li><a href="https://en.wikipedia.org/wiki/MODX" title="MODX">MODX</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Nette_Framework" title="Nette Framework">Nette Framework</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Phalcon_(framework)" title="Phalcon (framework)">Phalcon</a></li>
+<li><a href="https://en.wikipedia.org/wiki/PRADO_(framework)" title="PRADO (framework)">PRADO</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Qcodo" title="Qcodo">Qcodo</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Silex_(web_framework)" title="Silex (web framework)">Silex</a></li>
+<li><a href="https://en.wikipedia.org/wiki/SilverStripe" title="SilverStripe">SilverStripe</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Symfony" title="Symfony">Symfony</a></li>
+<li><a href="https://en.wikipedia.org/wiki/TYPO3" title="TYPO3">TYPO3</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Xaraya" title="Xaraya">Xaraya</a></li>
+<li><a href="https://en.wikipedia.org/wiki/XOOPS" title="XOOPS">XOOPS</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Yii" title="Yii">Yii</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Zend_Framework" title="Zend Framework">Zend Framework</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Python_(programming_language)" title="Python (programming language)">Python</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Zope#BlueBream" title="Zope">BlueBream</a></li>
+<li><a href="https://en.wikipedia.org/wiki/CherryPy" title="CherryPy">CherryPy</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Django_(web_framework)" title="Django (web framework)">Django</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Flask_(web_framework)" title="Flask (web framework)">Flask</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Grok_(web_framework)" title="Grok (web framework)">Grok</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Nevow" title="Nevow">Nevow</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Pyjs" title="Pyjs">Pyjs</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Pylons_project#Pylons_Framework" title="Pylons project">Pylons</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Pylons_project#Pyramid" title="Pylons project">Pyramid</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Quixote_(web_framework)" title="Quixote (web framework)">Quixote</a></li>
+<li><a href="https://en.wikipedia.org/wiki/TACTIC_(web_framework)" title="TACTIC (web framework)">TACTIC</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Tornado_(web_server)" title="Tornado (web server)">Tornado</a></li>
+<li><a href="https://en.wikipedia.org/wiki/TurboGears" title="TurboGears">TurboGears</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Web2py" title="Web2py">web2py</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Webware_for_Python" title="Webware for Python">Webware</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Zope#Zope_2" title="Zope">Zope 2</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Ruby_(programming_language)" title="Ruby (programming language)">Ruby</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Camping_(microframework)" title="Camping (microframework)">Camping</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Merb" title="Merb">Merb</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Padrino_(web_framework)" title="Padrino (web framework)">Padrino</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Ruby_on_Rails" title="Ruby on Rails">Ruby on Rails</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sinatra_(software)" title="Sinatra (software)">Sinatra</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Scala_(programming_language).html" title="Scala (programming language)">Scala</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><strong class="selflink">Lift</strong></li>
+<li><a href="https://en.wikipedia.org/wiki/Play_framework" class="mw-redirect" title="Play framework">Play</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Scalatra" title="Scalatra">Scalatra</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Smalltalk" title="Smalltalk">Smalltalk</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/AIDA/Web" title="AIDA/Web">AIDA/Web</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Seaside_(software)" title="Seaside (software)">Seaside</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Other languages</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Oracle_Application_Express" title="Oracle Application Express">Application Express</a> (<a href="https://en.wikipedia.org/wiki/PL/SQL" title="PL/SQL">PL/SQL</a>)</li>
+<li><a href="Grails_(framework).html" title="Grails (framework)">Grails</a> (<a href="Groovy_(programming_language).html" title="Groovy (programming language)">Groovy</a>)</li>
+<li><a href="https://en.wikipedia.org/wiki/Kepler_(software)" title="Kepler (software)">Kepler</a> (<a href="https://en.wikipedia.org/wiki/Lua_(programming_language)" title="Lua (programming language)">Lua</a>)</li>
+<li><a href="https://en.wikipedia.org/wiki/OpenACS" class="mw-redirect" title="OpenACS">OpenACS</a> (<a href="https://en.wikipedia.org/wiki/Tcl" title="Tcl">Tcl</a>)</li>
+<li><a href="https://en.wikipedia.org/wiki/SproutCore" title="SproutCore">SproutCore</a> (<a href="https://en.wikipedia.org/wiki/JavaScript" title="JavaScript">JavaScript</a>/<a href="https://en.wikipedia.org/wiki/Ruby_(programming_language)" title="Ruby (programming language)">Ruby</a>)</li>
+<li><a href="https://en.wikipedia.org/wiki/Yaws_(web_server)" title="Yaws (web server)">Yaws</a> (<a href="https://en.wikipedia.org/wiki/Erlang_(programming_language)" title="Erlang (programming language)">Erlang</a>)</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div role="navigation" class="navbox" aria-label="Navbox" style="padding:3px">
+<table class="nowraplinks hlist navbox-inner" style="border-spacing:0;background:transparent;color:inherit">
+<tr>
+<th scope="row" class="navbox-group"><a href="https://en.wikipedia.org/wiki/Help:Authority_control" title="Help:Authority control">Authority control</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><span style="white-space:nowrap;"><a href="https://en.wikipedia.org/wiki/Integrated_Authority_File" title="Integrated Authority File">GND</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://d-nb.info/gnd/7738986-4">7738986-4</a></span></span></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1240
+Cached time: 20170117110515
+Cache expiry: 2592000
+Dynamic content: false
+CPU time usage: 0.184 seconds
+Real time usage: 0.236 seconds
+Preprocessor visited node count: 1337/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 62113/2097152 bytes
+Template argument size: 1673/2097152 bytes
+Highest expansion depth: 25/40
+Expensive parser function count: 2/500
+Lua time usage: 0.081/10.000 seconds
+Lua memory usage: 3.44 MB/50 MB
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  186.030      1 - -total
+ 46.64%   86.765      2 - Template:Infobox
+ 38.48%   71.578      1 - Template:Infobox_software
+ 30.18%   56.146      1 - Template:Reflist
+ 25.19%   46.866      9 - Template:Cite_web
+ 13.25%   24.658      1 - Template:Infobox_software/simple
+ 10.03%   18.653      5 - Template:Citation
+  5.77%   10.736      1 - Template:Web_frameworks
+  4.82%    8.967      1 - Template:Navbox
+  4.82%    8.960      1 - Template:Official_URL
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:14307754-0!*!0!!en!4!* and timestamp 20170117110515 and revision id 716819636
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Lift_(web_framework)&amp;oldid=716819636">https://en.wikipedia.org/w/index.php?title=Lift_(web_framework)&amp;oldid=716819636</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Help_Category.html" title="Help:Category">Categories</a>: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Web_frameworks" title="Category:Web frameworks">Web frameworks</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Scala_(programming_language)" title="Category:Scala (programming language)">Scala (programming language)</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Cross-platform_software" title="Category:Cross-platform software">Cross-platform software</a></li><li><a href="Category_Java_platform.html" title="Category:Java platform">Java platform</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Free_software_programmed_in_Scala" title="Category:Free software programmed in Scala">Free software programmed in Scala</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Software_using_the_Apache_license" title="Category:Software using the Apache license">Software using the Apache license</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Wikipedia_articles_with_GND_identifiers" title="Category:Wikipedia articles with GND identifiers">Wikipedia articles with GND identifiers</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="Special_MyTalk.html" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="Special_MyContributions.html" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&amp;returnto=Lift+%28web+framework%29" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Lift+%28web+framework%29" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="Lift_(web_framework).html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+															<li  id="ca-talk"><span><a href="https://en.wikipedia.org/wiki/Talk:Lift_(web_framework)"  title="Discussion about the content page [t]" accesskey="t" rel="discussion">Talk</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="Lift_(web_framework).html" >Read</a></span></li>
+															<li id="ca-edit"><span><a href="https://en.wikipedia.org/w/index.php?title=Lift_(web_framework)&amp;action=edit"  title="Edit this page [e]" accesskey="e">Edit</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="https://en.wikipedia.org/w/index.php?title=Lift_(web_framework)&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="https://en.wikipedia.org/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="Main_Page.html"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="Portal_Contents.html" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="Portal_Featured_content.html" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="Portal_Current_events.html" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="https://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="../../shop.wikimedia.org/index.html" title="Visit the Wikipedia store">Wikipedia store</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Interaction</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-help"><a href="Help_Contents.html" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="Wikipedia_About.html" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="Wikipedia_Community_portal.html" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="Wikipedia_Contact_us.html" title="How to contact Wikipedia">Contact page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="https://en.wikipedia.org/wiki/Special:WhatLinksHere/Lift_(web_framework)" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://en.wikipedia.org/wiki/Special:RecentChangesLinked/Lift_(web_framework)" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="Wikipedia_File_Upload_Wizard.html" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="https://en.wikipedia.org/w/index.php?title=Lift_(web_framework)&amp;oldid=716819636" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://en.wikipedia.org/w/index.php?title=Lift_(web_framework)&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q1814618" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="https://en.wikipedia.org/w/index.php?title=Special:CiteThisPage&amp;page=Lift_%28web_framework%29&amp;id=716819636" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Print/export</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Lift+%28web+framework%29">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Lift+%28web+framework%29&amp;returnto=Lift+%28web+framework%29&amp;oldid=716819636&amp;writer=rdf2latex">Download as PDF</a></li><li id="t-print"><a href="https://en.wikipedia.org/w/index.php?title=Lift_(web_framework)&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Languages</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Lift_(Framework)" title="Lift (Framework) – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/Lift" title="Lift – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Lift_framework" title="Lift framework – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/Lift_(фреймворк)" title="Lift (фреймворк) – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/Lift_(Web應用框架)" title="Lift (Web應用框架) – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q1814618#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 24 April 2016, at 02:28.</li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="Wikipedia_Text_of_Creative_Commons_Attribution-ShareAlike_3.html">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="../../creativecommons.org/licenses/by-sa/3.0/index.html" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="../../wikimediafoundation.org/wiki/Terms_of_Use.html">Terms of Use</a> and <a href="../../wikimediafoundation.org/wiki/Privacy_policy.html">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="../../www.wikimediafoundation.org/index.html">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../../wikimediafoundation.org/wiki/Privacy_policy.html" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="Wikipedia_About.html" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="Wikipedia_General_disclaimer.html" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="Wikipedia_Contact_us.html">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a href="../../www.mediawiki.org/wiki/Special_MyLanguage/How_to_contribute.html">Developers</a></li>
+											<li id="footer-places-cookiestatement"><a href="../../wikimediafoundation.org/wiki/Cookie_statement.html">Cookie statement</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/w/index.php?title=Lift_(web_framework)&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="../../www.wikimediafoundation.org/index.html"><img src="https://en.wikipedia.org/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="../../www.mediawiki.org/index.html"><img src="https://en.wikipedia.org/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":308,"wgHostname":"mw1240"});});</script>
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Lift_(web_framework) by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:41 GMT -->
+</html>

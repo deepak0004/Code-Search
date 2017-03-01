@@ -1,0 +1,28 @@
+    
+        I have a handful of helper methods that convert enum values into a list of strings suitable for display by an HTML &lt;select&gt; element. I was wondering if it's possible to refactor these into a single polymorphic method. 
+
+This is an example of one of my existing methods:
+
+/**
+ * Gets the list of available colours.
+ * 
+ * @return the list of available colours
+ */
+public static List&lt;String&gt; getColours() {
+  List&lt;String&gt; colours = new ArrayList&lt;String&gt;();
+
+  for (Colour colour : Colour.values()) {
+    colours.add(colour.getDisplayValue());  
+  }
+
+  return colours;
+}
+
+
+I'm still pretty new to Java generics, so I'm not sure how to pass a generic enum to the method and have that used within the for loop as well.
+
+Note that I know that the enums in question will all have that getDisplayValue method, but unfortunately they don't share a common type that defines it (and I can't introduce one), so I guess that will have to be accessed reflectively...?
+
+Thanks in advance for any help.
+
+                

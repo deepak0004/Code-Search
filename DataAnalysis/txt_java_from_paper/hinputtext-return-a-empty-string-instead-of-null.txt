@@ -1,0 +1,18 @@
+    
+        i make a JSF 2.0 Application and i use many h:inputText fields to input data in my database. Some fields are not required
+
+&lt;h:inputText value="#{registerBean.user.phoneNumber}" id="phoneNumber" &gt;
+                            &lt;f:validateLength maximum="20" /&gt;
+                        &lt;/h:inputText&gt;&lt;br/&gt;
+
+
+When the user leave this field empty JSF returns "" instead of NULL.
+
+How can i fix this behavior without check every String with
+
+if(string.equals(""){ string = null}
+
+
+Thanks.
+
+                

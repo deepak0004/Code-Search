@@ -1,0 +1,4 @@
+    
+        What's a simple/easy way to access the system clock using Java, so that I can calculate the elapsed time of an event?
+
+                

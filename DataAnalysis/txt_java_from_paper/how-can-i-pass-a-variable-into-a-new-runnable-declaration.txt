@@ -1,0 +1,24 @@
+    
+        I have the following :
+
+Runnable done = new Runnable()
+    {
+        public void run()
+        {
+            System.out.println("Hello");
+        }
+    };
+
+
+And then in my Android activity I'll call something like : 
+
+runOnUIThread(done);
+
+
+Which I then call. However, I want that "Hello" not to be hardcoded, so I can pass it in. Otherwise I'll have to have one of these declarations for every String I want to print.
+
+(This is actually an android question, but slimmed it down to basic Java so its easier to answer)
+
+Thanks
+
+                

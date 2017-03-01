@@ -1,0 +1,6 @@
+    
+        What would be the easiest way to detach a specific JPA Entity Bean that was acquired through an EntityManager. Alternatively, could I have a query return detached objects in the first place so they would essentially act as 'read only'?
+
+The reason why I want to do this is becuase I want to modify the data within the bean - with in my application only, but not ever have it persisted to the database. In my program, I eventually have to call flush() on the EntityManager, which would persist all changes from attached entities to the underyling database, but I want to exclude specific objects.
+
+                

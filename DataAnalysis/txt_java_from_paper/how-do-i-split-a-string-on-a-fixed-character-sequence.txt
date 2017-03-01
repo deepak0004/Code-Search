@@ -1,0 +1,16 @@
+    
+        Suppose I have following string:
+
+String asd = "this is test ass this is test"
+
+
+and I want to split the string using "ass" character sequence.
+
+I used:
+
+asd.split("ass");
+
+
+It doesn't work. What do I need to do?
+
+                

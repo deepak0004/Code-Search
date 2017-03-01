@@ -1,0 +1,17 @@
+    
+        i am having the list myEmpls 
+
+List myEmpls = new ArrayList();
+
+
+In this list i have added used defined objects.
+
+LogConf e = getLogs(el);
+    //add it to list
+ myEmpls.add(e);
+
+
+Now how to iterate the list of objects and get the values from this objects.
+How to do this?
+
+                

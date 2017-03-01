@@ -1,0 +1,4 @@
+    
+        I would like to be able to write a Java class in one package which can access non-public methods of a class in another package without having to make it a subclass of the other class. Is this possible?
+
+                

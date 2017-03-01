@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Groovy_(programming_language) by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:06 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Groovy (programming language) - Wikipedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Groovy_(programming_language)","wgTitle":"Groovy (programming language)","wgCurRevisionId":755918671,"wgRevisionId":755918671,"wgArticleId":508401,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Pages using deprecated image syntax","All articles with unsourced statements","Articles with unsourced statements from May 2012","Articles with unsourced statements from November 2008","Articles with unsourced statements from June 2016","Articles with DMOZ links","Articles with example code","2003 introductions","Dynamically typed programming languages","Java programming language family","Java specification requests","JVM programming languages","Object-oriented programming languages","Programming languages created in 2003","Scripting languages","Software using the Apache license"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Groovy_(programming_language)","wgRelevantArticleId":508401,"wgRequestId":"WHpATgpAMFgAALZ37V0AAAJP","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgFlaggedRevsParams":{"tags":{}},"wgStableRevisionId":null,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"en","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgWikibaseItemId":"Q504453","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.cite.styles":"ready","ext.pygments":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@1dqfd7l",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["ext.cite.a11y","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.legacy.wikibits","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.watchlist-notice","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.gadget.featured-articles-links","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.interface","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="https://en.wikipedia.org/w/load.php?debug=false&amp;lang=en&amp;modules=ext.cite.styles%7Cext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="../w/load2c8d.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../w/load18b6.css?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.29.0-wmf.7"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="https://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Groovy_(programming_language)"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Groovy_(programming_language)&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="https://en.wikipedia.org/w/index.php?title=Groovy_(programming_language)&amp;action=edit"/>
+<link rel="apple-touch-icon" href="https://en.wikipedia.org/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="../static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../w/api251f.php?action=rsd"/>
+<link rel="copyright" href="../../creativecommons.org/licenses/by-sa/3.0/index.html"/>
+<link rel="canonical" href="Groovy_(programming_language).html"/>
+<link rel="dns-prefetch" href="../../login.wikimedia.org/index.html"/>
+<link rel="dns-prefetch" href="../../meta.wikimedia.org/index.html" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Groovy_programming_language rootpage-Groovy_programming_language skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">Groovy (programming language)</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><script>function mfTempOpenSection(id){var block=document.getElementById("mf-section-"+id);block.className+=" open-block";block.previousSibling.className+=" open-block";}</script><table class="infobox vevent" style="width:22em">
+<caption class="summary">Groovy</caption>
+<tr>
+<td colspan="2" style="text-align:center"><a href="https://en.wikipedia.org/wiki/File:Groovy-logo.svg" class="image" title="Groovy-logo"><img alt="Groovy-logo" src="http://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Groovy-logo.svg/220px-Groovy-logo.svg.png" width="220" height="109" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/36/Groovy-logo.svg/330px-Groovy-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/36/Groovy-logo.svg/440px-Groovy-logo.svg.png 2x" data-file-width="614" data-file-height="304" /></a></td>
+</tr>
+<tr>
+<th scope="row"><a href="https://en.wikipedia.org/wiki/Programming_paradigm" title="Programming paradigm">Paradigm</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Object-oriented_programming" title="Object-oriented programming">Object-oriented</a>, <a href="https://en.wikipedia.org/wiki/Imperative_programming" title="Imperative programming">imperative</a>, <a href="https://en.wikipedia.org/wiki/Scripting_language" title="Scripting language">scripting</a></td>
+</tr>
+<tr>
+<th scope="row"><a href="https://en.wikipedia.org/wiki/Software_design" title="Software design">Designed&#160;by</a></th>
+<td><a href="https://en.wikipedia.org/wiki/James_Strachan_(programmer)" title="James Strachan (programmer)">James Strachan</a></td>
+</tr>
+<tr>
+<th scope="row"><a href="https://en.wikipedia.org/wiki/Software_developer" title="Software developer">Developer</a></th>
+<td class="organiser">Guillaume Laforge (PMC Chair)<br />
+Jochen Theodorou (Tech Lead)<br />
+Paul King<br />
+Cedric Champeau</td>
+</tr>
+<tr>
+<th scope="row">First&#160;appeared</th>
+<td>2003<span class="noprint">; 14&#160;years ago</span><span style="display:none">&#160;(<span class="bday dtstart published updated">2003</span>)</span></td>
+</tr>
+<tr>
+<td colspan="2" style="text-align:center"></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap;"><a href="https://en.wikipedia.org/wiki/Software_release_life_cycle" title="Software release life cycle">Stable release</a></th>
+<td>
+<div style="margin:0px;">2.4.7 / June&#160;7, 2016<span class="noprint">; 7 months ago</span><span style="display:none">&#160;(<span class="bday dtstart published updated">2016-06-07</span>)</span></div>
+</td>
+</tr>
+<tr>
+<th scope="row"><a href="https://en.wikipedia.org/wiki/Type_system" title="Type system">Typing discipline</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Dynamic_typing" class="mw-redirect" title="Dynamic typing">Dynamic</a>, <a href="https://en.wikipedia.org/wiki/Static_typing" class="mw-redirect" title="Static typing">Static</a>, <a href="https://en.wikipedia.org/wiki/Strong_typing" class="mw-redirect" title="Strong typing">Strong</a>, <a href="https://en.wikipedia.org/wiki/Duck_typing" title="Duck typing">Duck</a></td>
+</tr>
+<tr>
+<th scope="row"><a href="https://en.wikipedia.org/wiki/Computing_platform" title="Computing platform">Platform</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Java_SE" class="mw-redirect" title="Java SE">Java SE</a></td>
+</tr>
+<tr>
+<th scope="row"><a href="https://en.wikipedia.org/wiki/Software_license" title="Software license">License</a></th>
+<td><a href="https://en.wikipedia.org/wiki/Apache_License" title="Apache License">Apache License</a> v2.0</td>
+</tr>
+<tr>
+<th scope="row"><a href="https://en.wikipedia.org/wiki/Filename_extension" title="Filename extension">Filename extensions</a></th>
+<td>.groovy</td>
+</tr>
+<tr>
+<th scope="row">Website</th>
+<td><span class="url"><a rel="nofollow" class="external text" href="http://groovy-lang.org/">groovy-lang<wbr />.org</a></span></td>
+</tr>
+<tr>
+<th colspan="2" style="text-align:center;background-color: #eee;">Influenced by</th>
+</tr>
+<tr>
+<td colspan="2" style="text-align:center"><a href="Java_(programming_language).html" title="Java (programming language)">Java</a>, <a href="https://en.wikipedia.org/wiki/Python_(programming_language)" title="Python (programming language)">Python</a>, <a href="https://en.wikipedia.org/wiki/Ruby_(programming_language)" title="Ruby (programming language)">Ruby</a>, <a href="https://en.wikipedia.org/wiki/Perl" title="Perl">Perl</a>, <a href="https://en.wikipedia.org/wiki/Smalltalk" title="Smalltalk">Smalltalk</a>, <a href="https://en.wikipedia.org/wiki/Objective-C" title="Objective-C">Objective-C</a></td>
+</tr>
+<tr>
+<th colspan="2" style="text-align:center;background-color: #eee;">Influenced</th>
+</tr>
+<tr>
+<td colspan="2" style="text-align:center"><a href="https://en.wikipedia.org/wiki/Kotlin_(programming_language)" title="Kotlin (programming language)">Kotlin</a></td>
+</tr>
+</table>
+<p><a href="https://en.wikipedia.org/wiki/Apache_Software_Foundation" title="Apache Software Foundation">Apache</a> <b>Groovy</b> is an <a href="https://en.wikipedia.org/wiki/Object-oriented_programming" title="Object-oriented programming">object-oriented</a> <a href="https://en.wikipedia.org/wiki/Programming_language" title="Programming language">programming language</a> for the <a href="https://en.wikipedia.org/wiki/Java_platform" class="mw-redirect" title="Java platform">Java platform</a>. It is a <a href="https://en.wikipedia.org/wiki/Dynamic_programming_language" title="Dynamic programming language">dynamic language</a> with features similar to those of <a href="https://en.wikipedia.org/wiki/Python_(programming_language)" title="Python (programming language)">Python</a>, <a href="https://en.wikipedia.org/wiki/Ruby_(programming_language)" title="Ruby (programming language)">Ruby</a>, <a href="https://en.wikipedia.org/wiki/Perl" title="Perl">Perl</a>, and <a href="https://en.wikipedia.org/wiki/Smalltalk" title="Smalltalk">Smalltalk</a>. It can be used as a <a href="https://en.wikipedia.org/wiki/Scripting_language" title="Scripting language">scripting language</a> for the Java Platform, is dynamically compiled to <a href="Java_Virtual_Machine.html" class="mw-redirect" title="Java Virtual Machine">Java Virtual Machine</a> (JVM) <a href="https://en.wikipedia.org/wiki/Bytecode" title="Bytecode">bytecode</a>, and interoperates with other Java code and <a href="https://en.wikipedia.org/wiki/Library_(computer_science)" class="mw-redirect" title="Library (computer science)">libraries</a>. Groovy uses a Java-like <a href="https://en.wikipedia.org/wiki/Curly_bracket_programming_language" class="mw-redirect" title="Curly bracket programming language">curly-bracket syntax</a>. Most Java code is also syntactically valid Groovy, although semantics may be different.</p>
+<p>Groovy 1.0 was released on January 2, 2007, and Groovy 2.0 in July, 2012. Since version 2, Groovy can also be <a href="https://en.wikipedia.org/wiki/Static_typing" class="mw-redirect" title="Static typing">compiled statically</a>, offering <a href="https://en.wikipedia.org/wiki/Type_inference" title="Type inference">type inference</a> and performance very close to that of Java.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[1]</a></sup><sup id="cite_ref-2" class="reference"><a href="#cite_note-2">[2]</a></sup> Groovy 2.4 was the last major release under <a href="https://en.wikipedia.org/wiki/Pivotal_Software" title="Pivotal Software">Pivotal Software</a>'s sponsorship which ended in March 2015.<sup id="cite_ref-blog.pivotal.io_3-0" class="reference"><a href="#cite_note-blog.pivotal.io-3">[3]</a></sup> Groovy has since changed its governance structure to a Project Management Committee (PMC) in the Apache Software Foundation.<sup id="cite_ref-Groovy_joins_Apache_Incubator_4-0" class="reference"><a href="#cite_note-Groovy_joins_Apache_Incubator-4">[4]</a></sup></p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#History"><span class="tocnumber">1</span> <span class="toctext">History</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Features"><span class="tocnumber">2</span> <span class="toctext">Features</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#GroovyBeans_.2F_Properties"><span class="tocnumber">2.1</span> <span class="toctext">GroovyBeans / Properties</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Prototype_extension"><span class="tocnumber">2.2</span> <span class="toctext">Prototype extension</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Dot_and_parentheses"><span class="tocnumber">2.3</span> <span class="toctext">Dot and parentheses</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Functional_programming"><span class="tocnumber">2.4</span> <span class="toctext">Functional programming</span></a>
+<ul>
+<li class="toclevel-3 tocsection-7"><a href="#Closures"><span class="tocnumber">2.4.1</span> <span class="toctext">Closures</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="#Curry"><span class="tocnumber">2.4.2</span> <span class="toctext">Curry</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-9"><a href="#XML_and_JSON_processing"><span class="tocnumber">2.5</span> <span class="toctext">XML and JSON processing</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#String_interpolation"><span class="tocnumber">2.6</span> <span class="toctext">String interpolation</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#AST_.28Abstract_Syntax_Tree.29_Transformation"><span class="tocnumber">2.7</span> <span class="toctext">AST (Abstract Syntax Tree) Transformation</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Traits"><span class="tocnumber">2.8</span> <span class="toctext">Traits</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-13"><a href="#Adoption"><span class="tocnumber">3</span> <span class="toctext">Adoption</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#IDE_support"><span class="tocnumber">4</span> <span class="toctext">IDE support</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#See_also"><span class="tocnumber">5</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#References"><span class="tocnumber">6</span> <span class="toctext">References</span></a>
+<ul>
+<li class="toclevel-2 tocsection-17"><a href="#Citations"><span class="tocnumber">6.1</span> <span class="toctext">Citations</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#Sources"><span class="tocnumber">6.2</span> <span class="toctext">Sources</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-19"><a href="#External_links"><span class="tocnumber">7</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Groovy_(programming_language)&amp;action=edit&amp;section=1" title="Edit section: History">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="https://en.wikipedia.org/wiki/James_Strachan_(programmer)" title="James Strachan (programmer)">James Strachan</a> first talked about the development of Groovy on his blog in August 2003.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">[5]</a></sup> Several versions were released between 2004 and 2006. After the <a href="Java_Community_Process.html" title="Java Community Process">Java Community Process</a> (JCP) standardization process began, the version numbering changed and a version called "1.0" was released on January 2, 2007. After various betas and release candidates numbered 1.1, on December 7, 2007, Groovy 1.1 Final was released and immediately rebranded as Groovy 1.5 as a reflection of the many changes made.</p>
+<p>In 2007, Groovy won the first prize at JAX 2007 innovation award.<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">[6]</a></sup> In 2008, <a href="Grails_(framework).html" title="Grails (framework)">Grails</a>, a Groovy <a href="https://en.wikipedia.org/wiki/Web_framework" title="Web framework">web framework</a>, won the second prize at JAX 2008 innovation award.<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">[7]</a></sup></p>
+<p>In November 2008, <a href="https://en.wikipedia.org/wiki/SpringSource" title="SpringSource">SpringSource</a> acquired the Groovy and Grails company (G2One).<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">[8]</a></sup> In August 2009 <a href="https://en.wikipedia.org/wiki/VMWare" class="mw-redirect" title="VMWare">VMWare</a> acquired SpringSource.<sup id="cite_ref-9" class="reference"><a href="#cite_note-9">[9]</a></sup></p>
+<p>Strachan had left the project silently a year before the Groovy 1.0 release in 2007.<sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">[<i><a href="https://en.wikipedia.org/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (May 2012)">citation needed</span></a></i>]</sup> In Oct 2016, Strachan stated "I still love groovy (jenkins pipelines are so groovy!), java, go, typescript and kotlin".<sup id="cite_ref-10" class="reference"><a href="#cite_note-10">[10]</a></sup></p>
+<p>In March 2004, Groovy had been submitted to the JCP as JSR 241<sup id="cite_ref-11" class="reference"><a href="#cite_note-11">[11]</a></sup> and accepted by ballot. After 8 years of inactivity, the Spec Lead changed its status to dormant in April 2012.</p>
+<p>On July 2, 2012, Groovy 2.0 was released, which, among other new features, added static compilation and a static type checker to Groovy.</p>
+<p>When the <a href="https://en.wikipedia.org/wiki/Pivotal_Software" title="Pivotal Software">Pivotal</a> joint venture was spun-off by <a href="https://en.wikipedia.org/wiki/EMC_Corporation" class="mw-redirect" title="EMC Corporation">EMC</a> and VMware in April 2013, Groovy and Grails formed part of its product portfolio. Pivotal ceased sponsoring Groovy and Grails from April 2015.<sup id="cite_ref-blog.pivotal.io_3-1" class="reference"><a href="#cite_note-blog.pivotal.io-3">[3]</a></sup> That same month, Groovy changed its governance structure from a <a href="https://en.wikipedia.org/w/index.php?title=Codehaus&amp;action=edit&amp;redlink=1" class="new" title="Codehaus (page does not exist)">Codehaus</a> repository to a Project Management Committee (PMC) in the <a href="https://en.wikipedia.org/wiki/Apache_Software_Foundation" title="Apache Software Foundation">Apache Software Foundation</a> via its incubator.<sup id="cite_ref-Groovy_joins_Apache_Incubator_4-1" class="reference"><a href="#cite_note-Groovy_joins_Apache_Incubator-4">[4]</a></sup> Groovy graduated from Apache's incubator and become a top-level project in November 2015.<sup id="cite_ref-12" class="reference"><a href="#cite_note-12">[12]</a></sup></p>
+<h2><span class="mw-headline" id="Features">Features</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Groovy_(programming_language)&amp;action=edit&amp;section=2" title="Edit section: Features">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Most valid Java files are also valid Groovy files. Although the two languages are similar, Groovy code can be more compact, because it does not require all the elements that Java requires.<sup id="cite_ref-konig32_13-0" class="reference"><a href="#cite_note-konig32-13">[13]</a></sup> This makes it possible for Java programmers to learn Groovy gradually by starting with familiar Java syntax before acquiring more Groovy <a href="https://en.wikipedia.org/wiki/Programming_idiom" title="Programming idiom">idioms</a>.<sup id="cite_ref-14" class="reference"><a href="#cite_note-14">[14]</a></sup></p>
+<p>Groovy features not available in Java include both static and <a href="https://en.wikipedia.org/wiki/Dynamic_typing" class="mw-redirect" title="Dynamic typing">dynamic typing</a> (with the <i>def</i> keyword), <a href="https://en.wikipedia.org/wiki/Operator_overloading" title="Operator overloading">operator overloading</a>, native syntax for lists and <a href="https://en.wikipedia.org/wiki/Associative_array" title="Associative array">associative arrays</a> (maps), native support for <a href="https://en.wikipedia.org/wiki/Regular_expression" title="Regular expression">regular expressions</a>, <a href="https://en.wikipedia.org/w/index.php?title=Polymorphic_iteration&amp;action=edit&amp;redlink=1" class="new" title="Polymorphic iteration (page does not exist)">polymorphic iteration</a>, expressions embedded inside strings, additional helper methods, and the <a href="https://en.wikipedia.org/wiki/Safe_navigation_operator" title="Safe navigation operator">safe navigation operator</a> "?." to check automatically for <a href="https://en.wikipedia.org/wiki/Null_pointer" title="Null pointer">nulls</a> (for example, "variable?.method()", or "variable?.field").<sup id="cite_ref-15" class="reference"><a href="#cite_note-15">[15]</a></sup></p>
+<p>Since version 2 Groovy also supports modularity (being able to ship only the needed jars according to the project needs, thus reducing the size of groovy's lib), type checking, static compilation, Project Coin syntax enhancements, <a href="Java_syntax.html#Code_blocks" title="Java syntax">multicatch blocks</a> and ongoing performance enhancements using JDK7's invoke dynamic instruction.<sup id="cite_ref-16" class="reference"><a href="#cite_note-16">[16]</a></sup></p>
+<p>Groovy provides native support for various <a href="https://en.wikipedia.org/wiki/Markup_language" title="Markup language">markup languages</a> such as <a href="https://en.wikipedia.org/wiki/XML" title="XML">XML</a> and <a href="https://en.wikipedia.org/wiki/HTML" title="HTML">HTML</a>, accomplished via an inline <a href="https://en.wikipedia.org/wiki/Document_Object_Model" title="Document Object Model">DOM</a> syntax. This feature enables the definition and manipulation of many types of heterogeneous data assets with a uniform and concise syntax and programming methodology.<sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">[<i><a href="https://en.wikipedia.org/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (November 2008)">citation needed</span></a></i>]</sup></p>
+<p>Unlike Java, a Groovy source code file can be executed as an (uncompiled) <a href="https://en.wikipedia.org/wiki/Scripting_language" title="Scripting language">script</a> if it contains code outside any class definition, if it is a class with a <i>main</i> method, or if it is a <i>Runnable</i> or <i>GroovyTestCase</i>. A Groovy script is fully parsed, compiled, and generated before execution (similar to Perl and Ruby). This occurs under the hood, and the compiled version is not saved as an artifact of the process.<sup id="cite_ref-konig37_8_17-0" class="reference"><a href="#cite_note-konig37_8-17">[17]</a></sup></p>
+<h3><span class="mw-headline" id="GroovyBeans_.2F_Properties">GroovyBeans / Properties</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Groovy_(programming_language)&amp;action=edit&amp;section=3" title="Edit section: GroovyBeans / Properties">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><i>GroovyBeans</i> are Groovy's version of <a href="https://en.wikipedia.org/wiki/JavaBeans" title="JavaBeans">JavaBeans</a>. Groovy implicitly generates getters and setters. In the following code, setColor(String color) and getColor() are implicitly generated; and the last two lines, which appear to access color directly, are actually calling the implicitly generated methods.<sup id="cite_ref-konig38_9_18-0" class="reference"><a href="#cite_note-konig38_9-18">[18]</a></sup></p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kd">class</span> <span class="nc">AGroovyBean</span> <span class="o">{</span>
+  <span class="n">String</span> <span class="n">color</span>
+<span class="o">}</span>
+
+<span class="kt">def</span> <span class="n">myGroovyBean</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AGroovyBean</span><span class="o">()</span>
+
+<span class="n">myGroovyBean</span><span class="o">.</span><span class="na">setColor</span><span class="o">(</span><span class="s1">'baby blue'</span><span class="o">)</span>
+<span class="k">assert</span> <span class="n">myGroovyBean</span><span class="o">.</span><span class="na">getColor</span><span class="o">()</span> <span class="o">==</span> <span class="s1">'baby blue'</span>
+
+<span class="n">myGroovyBean</span><span class="o">.</span><span class="na">color</span> <span class="o">=</span> <span class="s1">'pewter'</span>
+<span class="k">assert</span> <span class="n">myGroovyBean</span><span class="o">.</span><span class="na">color</span> <span class="o">==</span> <span class="s1">'pewter'</span>
+</pre></div>
+<p>Groovy offers simple, consistent syntax for handling <i>lists</i> and <i>maps</i>, reminiscent of Java's <i>array</i> syntax.<sup id="cite_ref-konig41_3_19-0" class="reference"><a href="#cite_note-konig41_3-19">[19]</a></sup></p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kt">def</span> <span class="n">movieList</span> <span class="o">=</span> <span class="o">[</span><span class="s1">'Dersu Uzala'</span><span class="o">,</span> <span class="s1">'Ran'</span><span class="o">,</span> <span class="s1">'Seven Samurai'</span><span class="o">]</span>  <span class="c1">//looks like an array, but is a list</span>
+<span class="k">assert</span> <span class="n">movieList</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span> <span class="o">==</span> <span class="s1">'Seven Samurai'</span>
+<span class="n">movieList</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span> <span class="o">=</span> <span class="s1">'Casablanca'</span>  <span class="c1">// adds an element to the list</span>
+<span class="k">assert</span> <span class="n">movieList</span><span class="o">.</span><span class="na">size</span><span class="o">()</span> <span class="o">==</span> <span class="mi">4</span>
+
+<span class="kt">def</span> <span class="n">monthMap</span> <span class="o">=</span> <span class="o">[</span> <span class="s1">'January'</span> <span class="o">:</span> <span class="mi">31</span><span class="o">,</span> <span class="s1">'February'</span> <span class="o">:</span> <span class="mi">28</span><span class="o">,</span> <span class="s1">'March'</span> <span class="o">:</span> <span class="mi">31</span> <span class="o">]</span>  <span class="c1">//declares a map</span>
+<span class="k">assert</span> <span class="n">monthMap</span><span class="o">[</span><span class="s1">'March'</span><span class="o">]</span> <span class="o">==</span> <span class="mi">31</span>  <span class="c1">// accesses an entry</span>
+<span class="n">monthMap</span><span class="o">[</span><span class="s1">'April'</span><span class="o">]</span> <span class="o">=</span> <span class="mi">30</span>  <span class="c1">// adds an entry to the map</span>
+<span class="k">assert</span> <span class="n">monthMap</span><span class="o">.</span><span class="na">size</span><span class="o">()</span> <span class="o">==</span> <span class="mi">4</span>
+</pre></div>
+<h3><span class="mw-headline" id="Prototype_extension">Prototype extension</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Groovy_(programming_language)&amp;action=edit&amp;section=4" title="Edit section: Prototype extension">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Groovy offers support for <a href="https://en.wikipedia.org/wiki/Prototype-based_programming" title="Prototype-based programming">prototype extension</a> through ExpandoMetaClass, Extension Modules (only in Groovy 2), Objective-C-like <a href="https://en.wikipedia.org/wiki/Objective-C#Categories" title="Objective-C">Categories</a> and DelegatingMetaClass.<sup id="cite_ref-20" class="reference"><a href="#cite_note-20">[20]</a></sup></p>
+<p>ExpandoMetaClass offers a <a href="https://en.wikipedia.org/wiki/Domain-specific_language" title="Domain-specific language">domain-specific language</a> (DSL) to express the changes in the class easily, similar to <a href="https://en.wikipedia.org/wiki/Ruby_programming_language" class="mw-redirect" title="Ruby programming language">Ruby's</a> open class concept:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="n">Number</span><span class="o">.</span><span class="na">metaClass</span> <span class="o">{</span>
+  <span class="n">sqrt</span> <span class="o">=</span> <span class="o">{</span> <span class="n">Math</span><span class="o">.</span><span class="na">sqrt</span><span class="o">(</span><span class="n">delegate</span><span class="o">)</span> <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="k">assert</span> <span class="mi">9</span><span class="o">.</span><span class="na">sqrt</span><span class="o">()</span> <span class="o">==</span> <span class="mi">3</span>
+<span class="k">assert</span> <span class="mi">4</span><span class="o">.</span><span class="na">sqrt</span><span class="o">()</span> <span class="o">==</span> <span class="mi">2</span>
+</pre></div>
+<p>Groovy's changes in code through prototyping are not visible in Java, since each attribute/method invocation in Groovy goes through the metaclass registry. The changed code can only be accessed from Java by going to the metaclass registry.</p>
+<p>Groovy also allows overriding methods as <code>getProperty()</code>, <code>propertyMissing()</code> among others, enabling the developer to intercept calls to an object and specify an action for them, in a simplified <a href="https://en.wikipedia.org/wiki/Aspect-oriented_programming" title="Aspect-oriented programming">aspect-oriented</a> way. The following code enables the class <code>java.lang.String</code> to respond to the <code>hex</code> property:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kd">enum</span> <span class="n">Color</span> <span class="o">{</span>
+  <span class="n">BLACK</span><span class="o">(</span><span class="s1">'#000000'</span><span class="o">),</span> <span class="n">WHITE</span><span class="o">(</span><span class="s1">'#FFFFFF'</span><span class="o">),</span> <span class="n">RED</span><span class="o">(</span><span class="s1">'#FF0000'</span><span class="o">),</span> <span class="n">BLUE</span><span class="o">(</span><span class="s1">'#0000FF'</span><span class="o">)</span>
+  <span class="n">String</span> <span class="n">hex</span>
+  <span class="nf">Color</span><span class="o">(</span><span class="n">String</span> <span class="n">hex</span><span class="o">)</span> <span class="o">{</span> 
+    <span class="k">this</span><span class="o">.</span><span class="na">hex</span> <span class="o">=</span> <span class="n">hex</span> 
+  <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="n">String</span><span class="o">.</span><span class="na">metaClass</span><span class="o">.</span><span class="na">getProperty</span> <span class="o">=</span> <span class="o">{</span> <span class="n">String</span> <span class="n">property</span> <span class="o">-&gt;</span>
+  <span class="kt">def</span> <span class="n">stringColor</span> <span class="o">=</span> <span class="n">delegate</span>
+  <span class="k">if</span> <span class="o">(</span><span class="n">property</span> <span class="o">==</span> <span class="s1">'hex'</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">Color</span><span class="o">.</span><span class="na">values</span><span class="o">().</span><span class="na">find</span> <span class="o">{</span> <span class="n">it</span><span class="o">.</span><span class="na">name</span><span class="o">().</span><span class="na">equalsIgnoreCase</span> <span class="n">stringColor</span> <span class="o">}?.</span><span class="na">hex</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="k">assert</span> <span class="s2">"WHITE"</span><span class="o">.</span><span class="na">hex</span> <span class="o">==</span> <span class="s2">"#FFFFFF"</span>
+<span class="k">assert</span> <span class="s2">"BLUE"</span><span class="o">.</span><span class="na">hex</span> <span class="o">==</span> <span class="s2">"#0000FF"</span>
+<span class="k">assert</span> <span class="s2">"BLACK"</span><span class="o">.</span><span class="na">hex</span> <span class="o">==</span> <span class="s2">"#000000"</span>
+<span class="k">assert</span> <span class="s2">"GREEN"</span><span class="o">.</span><span class="na">hex</span> <span class="o">==</span> <span class="kc">null</span>
+</pre></div>
+<p>The Grails framework uses metaprogramming extensively to enable <a href="Grails_(framework).html#Persistence" title="Grails (framework)">GORM</a> dynamic finders, like <code>User.findByName('Josh')</code> and others.<sup id="cite_ref-21" class="reference"><a href="#cite_note-21">[21]</a></sup></p>
+<h3><span class="mw-headline" id="Dot_and_parentheses">Dot and parentheses</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Groovy_(programming_language)&amp;action=edit&amp;section=5" title="Edit section: Dot and parentheses">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Groovy's syntax permits omitting parentheses and dots in some situations. The following groovy code</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="n">take</span><span class="o">(</span><span class="n">coffee</span><span class="o">).</span><span class="na">with</span><span class="o">(</span><span class="n">sugar</span><span class="o">,</span> <span class="n">milk</span><span class="o">).</span><span class="na">and</span><span class="o">(</span><span class="n">liquor</span><span class="o">)</span>
+</pre></div>
+<p>can be written as</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="n">take</span> <span class="n">coffee</span> <span class="n">with</span> <span class="n">sugar</span><span class="o">,</span> <span class="n">milk</span> <span class="n">and</span> <span class="n">liquor</span>
+</pre></div>
+<p>enabling the development of <a href="https://en.wikipedia.org/wiki/Domain-specific_language" title="Domain-specific language">domain-specific languages</a> (DSLs) which look like plain English.</p>
+<h3><span class="mw-headline" id="Functional_programming">Functional programming</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Groovy_(programming_language)&amp;action=edit&amp;section=6" title="Edit section: Functional programming">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Although Groovy is mostly an object-oriented language, it also offers <a href="https://en.wikipedia.org/wiki/Functional_programming" title="Functional programming">functional</a> features.</p>
+<h4><span class="mw-headline" id="Closures">Closures</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Groovy_(programming_language)&amp;action=edit&amp;section=7" title="Edit section: Closures">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>According to Groovy's documentation: "Closures in Groovy work similar to a 'method pointer', enabling code to be written and run in a later point in time".<sup id="cite_ref-22" class="reference"><a href="#cite_note-22">[22]</a></sup> Groovy's closures support free variables, i.e. variables which have not been explicitly passed as a parameter to it, but exist in its declaration context, <a href="https://en.wikipedia.org/wiki/Partial_application" title="Partial application">partial application</a> (which it terms '<a href="https://en.wikipedia.org/wiki/Currying" title="Currying">currying</a>'<sup id="cite_ref-:0_23-0" class="reference"><a href="#cite_note-:0-23">[23]</a></sup>), delegation, implicit, typed and untyped parameters.</p>
+<p>When working on Collections of a determined type, the closure passed to an operation on the collection can be inferred:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="n">list</span> <span class="o">=</span> <span class="o">[</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">6</span><span class="o">,</span> <span class="mi">7</span><span class="o">,</span> <span class="mi">8</span><span class="o">,</span> <span class="mi">9</span><span class="o">]</span>
+
+<span class="cm">/* </span>
+<span class="cm"> * Non-zero numbers are coerced to true, so when it % 2 == 0 (even), it is false.</span>
+<span class="cm"> * The type of the implicit "it" parameter can be inferred as an Integer by the IDE.</span>
+<span class="cm"> * It could also be written as:</span>
+<span class="cm"> * list.findAll { Integer i -&gt; i % 2 }</span>
+<span class="cm"> * list.findAll { i -&gt; i % 2 }</span>
+<span class="cm"> */</span>
+<span class="kt">def</span> <span class="n">odds</span> <span class="o">=</span> <span class="n">list</span><span class="o">.</span><span class="na">findAll</span> <span class="o">{</span> <span class="n">it</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">}</span>
+
+<span class="k">assert</span> <span class="n">odds</span> <span class="o">==</span> <span class="o">[</span><span class="mi">1</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">7</span><span class="o">,</span> <span class="mi">9</span><span class="o">]</span>
+</pre></div>
+<p>A group of expressions can be written in a closure block without reference to an implementation and the responding object can be assigned at a later point using delegation:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="c1">// This block of code contains expressions without reference to an implementation</span>
+<span class="kt">def</span> <span class="n">operations</span> <span class="o">=</span> <span class="o">{</span>
+  <span class="n">declare</span> <span class="mi">5</span>
+  <span class="n">sum</span> <span class="mi">4</span>
+  <span class="n">divide</span> <span class="mi">3</span>
+  <span class="n">print</span>
+<span class="o">}</span>
+</pre></div>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="cm">/* </span>
+<span class="cm"> * This class will handle the operations that can be used in the closure above. We could declare </span>
+<span class="cm"> * another class having the same methods, but using, for example, webservice operations in the</span>
+<span class="cm"> * calculations.</span>
+<span class="cm"> */</span>
+<span class="kd">class</span> <span class="nc">Expression</span> <span class="o">{</span>
+  <span class="n">BigDecimal</span> <span class="n">value</span>
+
+  <span class="cm">/* </span>
+<span class="cm">   * Though an Integer is passed as a parameter, it is coerced into a BigDecimal, as we defined. </span>
+<span class="cm">   * If the class had a 'declare(Integer value)' method, it would be used instead.</span>
+<span class="cm">   */</span>
+  <span class="kt">def</span> <span class="nf">declare</span><span class="o">(</span><span class="n">BigDecimal</span> <span class="n">value</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">value</span> <span class="o">=</span> <span class="n">value</span>
+  <span class="o">}</span>
+  
+  <span class="kt">def</span> <span class="nf">sum</span><span class="o">(</span><span class="n">BigDecimal</span> <span class="n">valueToAdd</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">value</span> <span class="o">+=</span> <span class="n">valueToAdd</span>
+  <span class="o">}</span>
+  
+  <span class="kt">def</span> <span class="nf">divide</span><span class="o">(</span><span class="n">BigDecimal</span> <span class="n">divisor</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">value</span> <span class="o">/=</span> <span class="n">divisor</span>
+  <span class="o">}</span>
+  
+  <span class="kt">def</span> <span class="nf">propertyMissing</span><span class="o">(</span><span class="n">String</span> <span class="n">property</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">property</span> <span class="o">==</span> <span class="s2">"print"</span><span class="o">)</span> <span class="n">println</span> <span class="n">value</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="c1">// Here we define who is going to respond the expressions in the block</span>
+<span class="n">operations</span><span class="o">.</span><span class="na">delegate</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Expression</span><span class="o">()</span>
+<span class="n">operations</span><span class="o">()</span>
+</pre></div>
+<h4><span class="mw-headline" id="Curry">Curry</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Groovy_(programming_language)&amp;action=edit&amp;section=8" title="Edit section: Curry">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Usually called <i><a href="https://en.wikipedia.org/wiki/Partial_application" title="Partial application">partial application</a></i>,<sup id="cite_ref-:0_23-1" class="reference"><a href="#cite_note-:0-23">[23]</a></sup> this Groovy feature allows closures' parameters to be set to a default parameter in any of their arguments, creating a new closure with the bound value. If you supply one argument to the curry() method you will fix the first argument. If you supply N arguments you will fix arguments 1..N.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kt">def</span> <span class="n">joinTwoWordsWithSymbol</span> <span class="o">=</span> <span class="o">{</span> <span class="n">symbol</span><span class="o">,</span> <span class="n">first</span><span class="o">,</span> <span class="n">second</span> <span class="o">-&gt;</span> <span class="n">first</span> <span class="o">+</span> <span class="n">symbol</span> <span class="o">+</span> <span class="n">second</span> <span class="o">}</span>
+<span class="k">assert</span> <span class="nf">joinTwoWordsWithSymbol</span><span class="o">(</span><span class="s1">'#'</span><span class="o">,</span> <span class="s1">'Hello'</span><span class="o">,</span> <span class="s1">'World'</span><span class="o">)</span> <span class="o">==</span> <span class="s1">'Hello#World'</span>
+
+<span class="kt">def</span> <span class="n">concatWords</span> <span class="o">=</span> <span class="n">joinTwoWordsWithSymbol</span><span class="o">.</span><span class="na">curry</span><span class="o">(</span><span class="s1">' '</span><span class="o">)</span>
+<span class="k">assert</span> <span class="nf">concatWords</span><span class="o">(</span><span class="s1">'Hello'</span><span class="o">,</span> <span class="s1">'World'</span><span class="o">)</span> <span class="o">==</span> <span class="s1">'Hello World'</span>
+
+<span class="kt">def</span> <span class="n">prependHello</span> <span class="o">=</span> <span class="n">concatWords</span><span class="o">.</span><span class="na">curry</span><span class="o">(</span><span class="s1">'Hello'</span><span class="o">)</span>
+<span class="c1">// def prependHello = joinTwoWordsWithSymbol.curry(' ', 'Hello')</span>
+<span class="k">assert</span> <span class="nf">prependHello</span><span class="o">(</span><span class="s1">'World'</span><span class="o">)</span> <span class="o">==</span> <span class="s1">'Hello World'</span>
+</pre></div>
+<p>Curry can also be used in the reversed direction (fixing arguments N to N-1) using rcurry.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kt">def</span> <span class="n">power</span> <span class="o">=</span> <span class="o">{</span> <span class="n">BigDecimal</span> <span class="n">value</span><span class="o">,</span> <span class="n">BigDecimal</span> <span class="n">power</span> <span class="o">-&gt;</span>
+  <span class="n">value</span> <span class="o">**</span> <span class="n">power</span>
+<span class="o">}</span>
+
+<span class="kt">def</span> <span class="n">square</span> <span class="o">=</span> <span class="n">power</span><span class="o">.</span><span class="na">rcurry</span><span class="o">(</span><span class="mi">2</span><span class="o">)</span>
+<span class="kt">def</span> <span class="n">cube</span> <span class="o">=</span> <span class="n">power</span><span class="o">.</span><span class="na">rcurry</span><span class="o">(</span><span class="mi">3</span><span class="o">)</span>
+
+<span class="k">assert</span> <span class="nf">power</span><span class="o">(</span><span class="mi">2</span><span class="o">,</span> <span class="mi">2</span><span class="o">)</span> <span class="o">==</span> <span class="mi">4</span>
+<span class="k">assert</span> <span class="nf">square</span><span class="o">(</span><span class="mi">4</span><span class="o">)</span> <span class="o">==</span> <span class="mi">16</span>
+<span class="k">assert</span> <span class="nf">cube</span><span class="o">(</span><span class="mi">3</span><span class="o">)</span> <span class="o">==</span> <span class="mi">27</span>
+</pre></div>
+<p>Groovy also supports <a href="https://en.wikipedia.org/wiki/Lazy_evaluation" title="Lazy evaluation">lazy evaluation</a>,<sup id="cite_ref-24" class="reference"><a href="#cite_note-24">[24]</a></sup><sup id="cite_ref-25" class="reference"><a href="#cite_note-25">[25]</a></sup> reduce/fold,<sup id="cite_ref-26" class="reference"><a href="#cite_note-26">[26]</a></sup> infinite structures and immutability,<sup id="cite_ref-27" class="reference"><a href="#cite_note-27">[27]</a></sup> among others.<sup id="cite_ref-28" class="reference"><a href="#cite_note-28">[28]</a></sup></p>
+<h3><span class="mw-headline" id="XML_and_JSON_processing">XML and JSON processing</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Groovy_(programming_language)&amp;action=edit&amp;section=9" title="Edit section: XML and JSON processing">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>On XML and <a href="https://en.wikipedia.org/wiki/JSON" title="JSON">JSON</a> processing Groovy employs the <a href="Builder_pattern.html" title="Builder pattern">Builder pattern</a>, making the production of the data structure less verbose. For example, the following XML:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="nt">&lt;languages&gt;</span>
+  <span class="nt">&lt;language</span> <span class="na">year=</span><span class="s">"1995"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;name&gt;</span>java<span class="nt">&lt;/name&gt;</span>
+    <span class="nt">&lt;paradigm&gt;</span>Object oriented<span class="nt">&lt;/paradigm&gt;</span>
+    <span class="nt">&lt;typing&gt;</span>Static<span class="nt">&lt;/typing&gt;</span>
+  <span class="nt">&lt;/language&gt;</span>
+  <span class="nt">&lt;language</span> <span class="na">year=</span><span class="s">"1995"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;name&gt;</span>ruby<span class="nt">&lt;/name&gt;</span>
+    <span class="nt">&lt;paradigm&gt;</span>Object oriented, Functional<span class="nt">&lt;/paradigm&gt;</span>
+    <span class="nt">&lt;typing&gt;</span>Dynamic, duck typing<span class="nt">&lt;/typing&gt;</span>
+  <span class="nt">&lt;/language&gt;</span>  
+  <span class="nt">&lt;language</span> <span class="na">year=</span><span class="s">"2003"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;name&gt;</span>groovy<span class="nt">&lt;/name&gt;</span>
+    <span class="nt">&lt;paradigm&gt;</span>Object oriented, Functional<span class="nt">&lt;/paradigm&gt;</span>
+    <span class="nt">&lt;typing&gt;</span>Dynamic, Static, Duck typing<span class="nt">&lt;/typing&gt;</span>
+  <span class="nt">&lt;/language&gt;</span>
+<span class="nt">&lt;/languages&gt;</span>
+</pre></div>
+<p>Can be generated through the following Groovy code:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kt">def</span> <span class="n">writer</span> <span class="o">=</span> <span class="k">new</span> <span class="n">StringWriter</span><span class="o">()</span>
+<span class="kt">def</span> <span class="n">builder</span> <span class="o">=</span> <span class="k">new</span> <span class="n">groovy</span><span class="o">.</span><span class="na">xml</span><span class="o">.</span><span class="na">MarkupBuilder</span><span class="o">(</span><span class="n">writer</span><span class="o">)</span>
+<span class="n">builder</span><span class="o">.</span><span class="na">languages</span> <span class="o">{</span>
+  <span class="n">language</span><span class="o">(</span><span class="nl">year:</span> <span class="mi">1995</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">name</span> <span class="s2">"java"</span>
+    <span class="n">paradigm</span> <span class="s2">"Object oriented"</span>
+    <span class="n">typing</span> <span class="s2">"Static"</span>
+  <span class="o">}</span>
+  <span class="n">language</span> <span class="o">(</span><span class="nl">year:</span> <span class="mi">1995</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">name</span> <span class="s2">"ruby"</span>
+    <span class="n">paradigm</span> <span class="s2">"Object oriented, Functional"</span>
+    <span class="n">typing</span> <span class="s2">"Dynamic, Duck typing"</span>
+  <span class="o">}</span>
+  <span class="n">language</span> <span class="o">(</span><span class="nl">year:</span> <span class="mi">2003</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">name</span> <span class="s2">"groovy"</span>
+    <span class="n">paradigm</span> <span class="s2">"Object oriented, Functional"</span>
+    <span class="n">typing</span> <span class="s2">"Dynamic, Static, Duck typing"</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+<p>And also can be processed in a streaming way through <code>StreamingMarkupBuilder</code>. To change the implementation to JSON, we can just swap the <code>MarkupBuilder</code> to <code>JsonBuilder</code>.<sup id="cite_ref-29" class="reference"><a href="#cite_note-29">[29]</a></sup></p>
+<p>To parse it and search for a functional language we can use Groovy's <code>findAll</code> method:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kt">def</span> <span class="n">languages</span> <span class="o">=</span> <span class="k">new</span> <span class="n">XmlSlurper</span><span class="o">().</span><span class="na">parseText</span> <span class="n">writer</span><span class="o">.</span><span class="na">toString</span><span class="o">()</span>
+
+<span class="c1">// Here we employ groovy's regex syntax for a matcher (=~) which will be coerced to a boolean value: </span>
+<span class="c1">// either true if the value contains our string, or false otherwise.</span>
+<span class="kt">def</span> <span class="n">functional</span> <span class="o">=</span> <span class="n">languages</span><span class="o">.</span><span class="na">language</span><span class="o">.</span><span class="na">findAll</span> <span class="o">{</span> <span class="n">it</span><span class="o">.</span><span class="na">paradigm</span> <span class="o">=~</span> <span class="s2">"functional"</span> <span class="o">}</span>
+<span class="k">assert</span> <span class="n">functional</span><span class="o">.</span><span class="na">collect</span> <span class="o">{</span> <span class="n">it</span><span class="o">.</span><span class="na">name</span> <span class="o">}</span> <span class="o">==</span> <span class="o">[</span><span class="s2">"ruby"</span><span class="o">,</span> <span class="s2">"groovy"</span><span class="o">]</span>
+</pre></div>
+<h3><span class="mw-headline" id="String_interpolation">String interpolation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Groovy_(programming_language)&amp;action=edit&amp;section=10" title="Edit section: String interpolation">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>In Groovy we can interpolate the string with variables and expressions by using GStrings:<sup id="cite_ref-30" class="reference"><a href="#cite_note-30">[30]</a></sup></p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="n">BigDecimal</span> <span class="n">account</span> <span class="o">=</span> <span class="mf">10.0</span>
+<span class="kt">def</span> <span class="n">text</span> <span class="o">=</span> <span class="s2">"Your account shows currently a balance of $account"</span>
+<span class="k">assert</span> <span class="n">text</span> <span class="o">==</span> <span class="s2">"Your account shows currently a balance of 10.0"</span>
+</pre></div>
+<p>GStrings containing variables and expressions must be declared using double quotes.</p>
+<p>A complex expression must be enclosed in curly brackets. This prevents parts of it from being interpreted as belonging to the surrounding string instead of to the expression:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="n">BigDecimal</span> <span class="n">minus</span> <span class="o">=</span> <span class="mf">4.0</span>
+<span class="n">text</span> <span class="o">=</span> <span class="s2">"Your account shows currently a balance of ${account - minus}"</span>
+<span class="k">assert</span> <span class="n">text</span> <span class="o">==</span> <span class="s2">"Your account shows currently a balance of 6.0"</span>
+
+<span class="c1">// Without the brackets to isolate the expression, we would have the following:</span>
+<span class="n">text</span> <span class="o">=</span> <span class="s2">"Your account shows currently a balance of $account - minus"</span>
+<span class="k">assert</span> <span class="n">text</span> <span class="o">==</span> <span class="s2">"Your account shows currently a balance of 10.0 - minus"</span>
+</pre></div>
+<p>Expression evaluation can be deferred by employing arrow syntax:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="n">BigDecimal</span> <span class="n">tax</span> <span class="o">=</span> <span class="mf">0.15</span>
+<span class="n">text</span> <span class="o">=</span> <span class="s2">"Your account shows currently a balance of ${-&gt;account - account * tax}"</span>
+<span class="n">tax</span> <span class="o">=</span> <span class="mf">0.10</span>
+
+<span class="c1">// The tax value was changed AFTER declaration of the GString. The expression </span>
+<span class="c1">// variables are bound only when the expression must actually be evaluated:</span>
+
+<span class="k">assert</span> <span class="n">text</span> <span class="o">==</span> <span class="s2">"Your account shows currently a balance of 9.000"</span>
+</pre></div>
+<h3><span class="mw-headline" id="AST_.28Abstract_Syntax_Tree.29_Transformation">AST (Abstract Syntax Tree) Transformation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Groovy_(programming_language)&amp;action=edit&amp;section=11" title="Edit section: AST (Abstract Syntax Tree) Transformation">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>According to Groovy's own documentation, "When the Groovy compiler compiles Groovy scripts and classes, at some point in the process, the source code will end up being represented in memory in the form of a Concrete Syntax Tree, then transformed into an Abstract Syntax Tree. The purpose of AST Transformations is to let developers hook into the compilation process to be able to modify the AST before it is turned into bytecode that will be run by the JVM. AST Transformations provides Groovy with improved compile-time metaprogramming capabilities allowing powerful flexibility at the language level, without a runtime performance penalty.".<sup id="cite_ref-31" class="reference"><a href="#cite_note-31">[31]</a></sup></p>
+<p>Examples of ASTs in Groovy are:</p>
+<ul>
+<li>Singleton transformation;</li>
+<li>Category and Mixin transformation;</li>
+<li>Immutable AST Macro;</li>
+<li>Newify transformation;</li>
+</ul>
+<p>Among others.</p>
+<h3><span class="mw-headline" id="Traits">Traits</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Groovy_(programming_language)&amp;action=edit&amp;section=12" title="Edit section: Traits">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>According to Groovy's documentation, "<a href="https://en.wikipedia.org/wiki/Trait_(computer_programming)" title="Trait (computer programming)">Traits</a> are a structural construct of the language which allow: composition of behaviors, runtime implementation of interfaces, behavior overriding, and compatibility with static type checking/compilation."</p>
+<p>Traits can be seen as interfaces carrying both default implementations and state. A trait is defined using the trait keyword:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="n">trait</span> <span class="n">FlyingAbility</span> <span class="o">{</span> <span class="cm">/* declaration of a trait */</span>
+    <span class="n">String</span> <span class="nf">fly</span><span class="o">()</span> <span class="o">{</span> <span class="s2">"I'm flying!"</span> <span class="o">}</span> <span class="cm">/* declaration of a method inside a trait */</span>
+<span class="o">}</span>
+</pre></div>
+<p>Then it can be used like a normal interface using the implements keyword:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kd">class</span> <span class="nc">Bird</span> <span class="kd">implements</span> <span class="n">FlyingAbility</span> <span class="o">{}</span> <span class="cm">/* Adds the trait FlyingAbility to the Bird class capabilities */</span>
+<span class="kt">def</span> <span class="n">b</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Bird</span><span class="o">()</span> <span class="cm">/* instantiate a new Bird */</span>
+<span class="k">assert</span> <span class="n">b</span><span class="o">.</span><span class="na">fly</span><span class="o">()</span> <span class="o">==</span> <span class="s2">"I'm flying!"</span> <span class="cm">/* the Bird class automatically gets the behavior of the FlyingAbility trait */</span>
+</pre></div>
+<p>Traits allow a wide range of capabilities, from simple composition to testing.</p>
+<h2><span class="mw-headline" id="Adoption">Adoption</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Groovy_(programming_language)&amp;action=edit&amp;section=13" title="Edit section: Adoption">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="EXo_Platform.html" title="EXo Platform">eXo Platform</a>, an Open Source Enterprise Social Collaboration Platform uses Groovy.</li>
+<li>Wired.com uses Groovy and Grails for the Product Reviews standalone section of the website.<sup id="cite_ref-32" class="reference"><a href="#cite_note-32">[32]</a></sup></li>
+<li>Though Groovy can be integrated into any JVM environment, the JBoss Seam framework provides Groovy, besides Java, as a development language, out of the box.<sup id="cite_ref-33" class="reference"><a href="#cite_note-33">[33]</a></sup></li>
+<li>The European Patent Office (EPO) developed a Data Flow Language in Groovy "to leverage similarities in the processes for communicating with each individual country’s patent office, and transform them into a single, universal process."<sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">[<i><a href="https://en.wikipedia.org/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (May 2012)">citation needed</span></a></i>]</sup></li>
+<li>Linkedin uses Groovy and Grails for some of their subsystems.<sup id="cite_ref-34" class="reference"><a href="#cite_note-34">[34]</a></sup></li>
+<li><a href="https://en.wikipedia.org/wiki/XWiki" title="XWiki">XWiki</a> SAS uses Groovy as scripting language in their collaborative open-source product.<sup id="cite_ref-35" class="reference"><a href="#cite_note-35">[35]</a></sup></li>
+<li><a href="https://en.wikipedia.org/wiki/SoapUI" title="SoapUI">SoapUI</a> provides Groovy as a language for webservice tests development.<sup id="cite_ref-36" class="reference"><a href="#cite_note-36">[36]</a></sup></li>
+<li>Sky.com uses Groovy and Grails to serve massive online media content.<sup id="cite_ref-37" class="reference"><a href="#cite_note-37">[37]</a></sup></li>
+<li><a href="https://en.wikipedia.org/wiki/DataMelt" title="DataMelt">DataMelt</a> integrates Groovy into a numeric and statistic data-analysis framework</li>
+<li>vCalc.com uses Groovy for all of the user defined mathematics in its math crowd-sourcing engine.<sup id="cite_ref-38" class="reference"><a href="#cite_note-38">[38]</a></sup></li>
+<li><a href="https://en.wikipedia.org/wiki/Eucalyptus_(software)" title="Eucalyptus (software)">Eucalyptus</a>, a cloud management system, uses a significant amount of Groovy.</li>
+<li><a href="Apache_OFBiz.html" title="Apache OFBiz">Apache OFBiz</a>, the <a href="https://en.wikipedia.org/wiki/Open_source" class="mw-redirect" title="Open source">open source</a> <a href="https://en.wikipedia.org/wiki/Enterprise_resource_planning" title="Enterprise resource planning">enterprise resource planning</a> (ERP) system, uses Groovy.<sup id="cite_ref-39" class="reference"><a href="#cite_note-39">[39]</a></sup><sup id="cite_ref-40" class="reference"><a href="#cite_note-40">[40]</a></sup></li>
+<li><a href="https://en.wikipedia.org/wiki/SmartThings" title="SmartThings">SmartThings</a>, an open platform for <a href="https://en.wikipedia.org/wiki/Smart_home" class="mw-redirect" title="Smart home">smart homes</a> and the consumer <a href="https://en.wikipedia.org/wiki/Internet_of_Things" class="mw-redirect" title="Internet of Things">Internet of Things</a>, uses a security-oriented subset of Groovy<sup id="cite_ref-41" class="reference"><a href="#cite_note-41">[41]</a></sup></li>
+<li><a href="https://en.wikipedia.org/wiki/Survata" title="Survata">Survata</a>, a market research startup, uses Groovy and Grails.<sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">[<i><a href="https://en.wikipedia.org/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (June 2016)">citation needed</span></a></i>]</sup></li>
+<li><a href="https://en.wikipedia.org/wiki/Jenkins_(software)" title="Jenkins (software)">Jenkins</a>, a platform for <a href="https://en.wikipedia.org/wiki/Continuous_integration" title="Continuous integration">continuous integration</a>. With version 2, Jenkins includes a <i>Pipeline</i> plugin that allows for build instructions to be written in Groovy.<sup id="cite_ref-42" class="reference"><a href="#cite_note-42">[42]</a></sup></li>
+</ul>
+<h2><span class="mw-headline" id="IDE_support">IDE support</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Groovy_(programming_language)&amp;action=edit&amp;section=14" title="Edit section: IDE support">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Many <a href="https://en.wikipedia.org/wiki/Integrated_development_environment" title="Integrated development environment">integrated development environments</a> and <a href="https://en.wikipedia.org/wiki/Text_editors" class="mw-redirect" title="Text editors">text editors</a> support Groovy:</p>
+<ul>
+<li><a href="Eclipse_(software).html" title="Eclipse (software)">Eclipse</a>, through Groovy-Eclipse</li>
+<li><a href="https://en.wikipedia.org/wiki/Emacs" title="Emacs">Emacs</a>, using the groovy-emacs-mode project's groovy-mode.</li>
+<li><a href="IntelliJ_IDEA.html" title="IntelliJ IDEA">IntelliJ IDEA</a>, Community Edition, Grails/Griffon in the Ultimate Edition only</li>
+<li><a href="NetBeans.html" title="NetBeans">NetBeans</a>, since version 6.5</li>
+<li><a href="https://en.wikipedia.org/wiki/TextMate" title="TextMate">TextMate</a></li>
+<li><a href="https://en.wikipedia.org/wiki/DataMelt" title="DataMelt">DataMelt</a> Java IDE</li>
+<li><a href="https://en.wikipedia.org/wiki/Sublime_Text_2" class="mw-redirect" title="Sublime Text 2">Sublime Text 2</a>, a cross platform text editor</li>
+<li><a href="JDeveloper.html" title="JDeveloper">JDeveloper</a>, for use with <a href="https://en.wikipedia.org/wiki/Oracle_ADF" class="mw-redirect" title="Oracle ADF">Oracle ADF</a></li>
+<li><a href="JEdit.html" title="JEdit">jEdit</a>, an advanced text editor for the <a href="Java_(software_platform).html" title="Java (software platform)">Java Platform</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Kate_(text_editor)" title="Kate (text editor)">Kate</a>, an advanced text editor for <a href="https://en.wikipedia.org/wiki/KDE" title="KDE">KDE</a> supports Groovy and over 200 other file formats</li>
+<li><a href="https://en.wikipedia.org/wiki/Notepad++" title="Notepad++">Notepad++</a>, an advanced text editor for <a href="https://en.wikipedia.org/wiki/Microsoft_Windows" title="Microsoft Windows">Microsoft Windows</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Android_Studio" title="Android Studio">Android Studio</a>, IDE used for making <a href="https://en.wikipedia.org/wiki/Android_(operating_system)" title="Android (operating system)">Android</a> apps</li>
+<li>Atom IDE</li>
+</ul>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Groovy_(programming_language)&amp;action=edit&amp;section=15" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div role="navigation" aria-label="Portals" class="noprint portal plainlist tright" style="margin:0.5em 0 0.5em 1em;border:solid #aaa 1px">
+<ul style="display:table;box-sizing:border-box;padding:0.1em;max-width:175px;background:#f9f9f9;font-size:85%;line-height:110%;font-style:italic;font-weight:bold">
+<li style="display:table-row"><span style="display:table-cell;padding:0.2em;vertical-align:middle;text-align:center"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_(2009).svg/28px-Free_and_open-source_software_logo_(2009).svg.png" width="28" height="28" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/42px-Free_and_open-source_software_logo_%282009%29.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/56px-Free_and_open-source_software_logo_%282009%29.svg.png 2x" data-file-width="512" data-file-height="512" /></span><span style="display:table-cell;padding:0.2em 0.2em 0.2em 0.3em;vertical-align:middle"><a href="https://en.wikipedia.org/wiki/Portal:Free_software" class="mw-redirect" title="Portal:Free software">Free software portal</a></span></li>
+</ul>
+</div>
+<ul>
+<li><a href="Griffon_(framework).html" title="Griffon (framework)">Griffon</a> – a desktop framework</li>
+<li><a href="https://en.wikipedia.org/wiki/Gradle" title="Gradle">Gradle</a> – a build automation tool</li>
+<li><a href="https://en.wikipedia.org/wiki/Project_Zero" title="Project Zero">Project Zero</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Comparison_of_programming_languages" title="Comparison of programming languages">Comparison of programming languages</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Groovy_(programming_language)&amp;action=edit&amp;section=16" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Citations">Citations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Groovy_(programming_language)&amp;action=edit&amp;section=17" title="Edit section: Citations">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="reflist columns references-column-width" style="-moz-column-width: 30em; -webkit-column-width: 30em; column-width: 30em; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://objectscape.blogspot.com.br/2012/08/groovy-20-performance-compared-to-java.html">"Groovy 2.0 Performance compared to Java"</a>. 25 Aug 2012.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGroovy+%28programming+language%29&amp;rft.btitle=Groovy+2.0+Performance+compared+to+Java&amp;rft.date=2012-08-25&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fobjectscape.blogspot.com.br%2F2012%2F08%2Fgroovy-20-performance-compared-to-java.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://blog.evan-wong.com/2012/07/java-vs-groovy20-vs-scala-simple.html">"Java vs Groovy2.0 vs Scala Simple Performance Test"</a>. 10 Jul 2012.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGroovy+%28programming+language%29&amp;rft.btitle=Java+vs+Groovy2.0+vs+Scala+Simple+Performance+Test&amp;rft.date=2012-07-10&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fblog.evan-wong.com%2F2012%2F07%2Fjava-vs-groovy20-vs-scala-simple.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-blog.pivotal.io-3"><span class="mw-cite-backlink">^ <a href="#cite_ref-blog.pivotal.io_3-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-blog.pivotal.io_3-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://blog.pivotal.io/pivotal/news-2/groovy-2-4-and-grails-3-0-to-be-last-major-releases-under-pivotal-sponsorship">"Groovy 2.4 And Grails 3.0 To Be Last Major Releases Under Pivotal Sponsorship"</a>. 19 Jan 2015.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGroovy+%28programming+language%29&amp;rft.btitle=Groovy+2.4+And+Grails+3.0+To+Be+Last+Major+Releases+Under+Pivotal+Sponsorship&amp;rft.date=2015-01-19&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fblog.pivotal.io%2Fpivotal%2Fnews-2%2Fgroovy-2-4-and-grails-3-0-to-be-last-major-releases-under-pivotal-sponsorship&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-Groovy_joins_Apache_Incubator-4"><span class="mw-cite-backlink">^ <a href="#cite_ref-Groovy_joins_Apache_Incubator_4-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Groovy_joins_Apache_Incubator_4-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://blogs.apache.org/foundation/entry/groovy_submitted_to_become_a">"Groovy joins Apache Incubator"</a>. 11 Mar 2015.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGroovy+%28programming+language%29&amp;rft.btitle=Groovy+joins+Apache+Incubator&amp;rft.date=2015-03-11&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fblogs.apache.org%2Ffoundation%2Fentry%2Fgroovy_submitted_to_become_a&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><cite class="citation web">James Strachan (29 Aug 2003). <a rel="nofollow" class="external text" href="http://radio.weblogs.com/0112098/2003/08/29.html">"Groovy - the birth of a new dynamic language for the Java platform"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGroovy+%28programming+language%29&amp;rft.au=James+Strachan&amp;rft.btitle=Groovy+-+the+birth+of+a+new+dynamic+language+for+the+Java+platform&amp;rft.date=2003-08-29&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fradio.weblogs.com%2F0112098%2F2003%2F08%2F29.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://docs.codehaus.org/display/GROOVY/2007/04/26/Groovy+wins+first+prize+at+JAX+2007+innovation+award">"Groovy wins first prize at JAX 2007 innovation award"</a>. 2007-04-26.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGroovy+%28programming+language%29&amp;rft.btitle=Groovy+wins+first+prize+at+JAX+2007+innovation+award&amp;rft.date=2007-04-26&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fdocs.codehaus.org%2Fdisplay%2FGROOVY%2F2007%2F04%2F26%2FGroovy%2Bwins%2Bfirst%2Bprize%2Bat%2BJAX%2B2007%2Binnovation%2Baward&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://jax-award.de/jax_award08/proposal_view_de.php?id=240&amp;show=more">"They say a lot can happen over a cup of coffee"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGroovy+%28programming+language%29&amp;rft.btitle=They+say+a+lot+can+happen+over+a+cup+of+coffee&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fjax-award.de%2Fjax_award08%2Fproposal_view_de.php%3Fid%3D240%26show%3Dmore&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.indicthreads.com/2138/springsource-acquires-groovy-and-grails-company-g2one/">"SpringSource Acquires Groovy and Grails company (G2One)"</a>. 11 Nov 2008.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGroovy+%28programming+language%29&amp;rft.btitle=SpringSource+Acquires+Groovy+and+Grails+company+%28G2One%29&amp;rft.date=2008-11-11&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.indicthreads.com%2F2138%2Fspringsource-acquires-groovy-and-grails-company-g2one%2F&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://techcrunch.com/2009/08/10/vmware-acquires-springsource/">"VMWare Acquires SpringSource"</a>. 10 Aug 2009.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGroovy+%28programming+language%29&amp;rft.btitle=VMWare+Acquires+SpringSource&amp;rft.date=2009-08-10&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Ftechcrunch.com%2F2009%2F08%2F10%2Fvmware-acquires-springsource%2F&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://twitter.com/jstrachan/status/784333918078169088">"Tweet from James Strachan"</a>. November 24, 2016<span class="reference-accessdate">. Retrieved <span class="nowrap">2016-11-24</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGroovy+%28programming+language%29&amp;rft.btitle=Tweet+from+James+Strachan&amp;rft.date=2016-11-24&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Ftwitter.com%2Fjstrachan%2Fstatus%2F784333918078169088&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.jcp.org/en/jsr/detail?id=241">"Java Community Process JSR 241"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGroovy+%28programming+language%29&amp;rft.btitle=Java+Community+Process+JSR+241&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.jcp.org%2Fen%2Fjsr%2Fdetail%3Fid%3D241&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://mail-archives.apache.org/mod_mbox/groovy-dev/201511.mbox/%3CCAEWfVJ%3DBz-tiTTYHiPc8vY26CopLm3pPy_LADvvFh4vjVs%3Dosw%40mail.gmail.com%3E">"Announcement on dev mailing list"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGroovy+%28programming+language%29&amp;rft.btitle=Announcement+on+dev+mailing+list&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fmail-archives.apache.org%2Fmod_mbox%2Fgroovy-dev%2F201511.mbox%2F%253CCAEWfVJ%253DBz-tiTTYHiPc8vY26CopLm3pPy_LADvvFh4vjVs%253Dosw%2540mail.gmail.com%253E&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-konig32-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-konig32_13-0">^</a></b></span> <span class="reference-text">König 2007, pg. 32</span></li>
+<li id="cite_note-14"><span class="mw-cite-backlink"><b><a href="#cite_ref-14">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://groovy.codehaus.org/Groovy+style+and+language+feature+guidelines+for+Java+developers">"Groovy style and language feature guidelines for Java developers"</a>. Groovy.codehaus.org<span class="reference-accessdate">. Retrieved <span class="nowrap">2015-01-22</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGroovy+%28programming+language%29&amp;rft.btitle=Groovy+style+and+language+feature+guidelines+for+Java+developers&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fgroovy.codehaus.org%2FGroovy%2Bstyle%2Band%2Blanguage%2Bfeature%2Bguidelines%2Bfor%2BJava%2Bdevelopers&amp;rft.pub=Groovy.codehaus.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-15">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://groovy.codehaus.org/Differences+from+Java">"Groovy - Differences from Java"</a>. Groovy.codehaus.org<span class="reference-accessdate">. Retrieved <span class="nowrap">2013-08-12</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGroovy+%28programming+language%29&amp;rft.btitle=Groovy+-+Differences+from+Java&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fgroovy.codehaus.org%2FDifferences%2Bfrom%2BJava&amp;rft.pub=Groovy.codehaus.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-16"><span class="mw-cite-backlink"><b><a href="#cite_ref-16">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.infoq.com/articles/new-groovy-20">"What's new in Groovy 2.0?"</a>. 28 Jun 2012.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGroovy+%28programming+language%29&amp;rft.btitle=What%27s+new+in+Groovy+2.0%3F&amp;rft.date=2012-06-28&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.infoq.com%2Farticles%2Fnew-groovy-20&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-konig37_8-17"><span class="mw-cite-backlink"><b><a href="#cite_ref-konig37_8_17-0">^</a></b></span> <span class="reference-text">König 2007, pp. 37-8</span></li>
+<li id="cite_note-konig38_9-18"><span class="mw-cite-backlink"><b><a href="#cite_ref-konig38_9_18-0">^</a></b></span> <span class="reference-text">König 2007, pp. 38-9</span></li>
+<li id="cite_note-konig41_3-19"><span class="mw-cite-backlink"><b><a href="#cite_ref-konig41_3_19-0">^</a></b></span> <span class="reference-text">König 2007, pp. 41-3</span></li>
+<li id="cite_note-20"><span class="mw-cite-backlink"><b><a href="#cite_ref-20">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://groovy.codehaus.org/JN3525-MetaClasses">"JN3525-MetaClasses"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGroovy+%28programming+language%29&amp;rft.btitle=JN3525-MetaClasses&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fgroovy.codehaus.org%2FJN3525-MetaClasses&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-21"><span class="mw-cite-backlink"><b><a href="#cite_ref-21">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.slideshare.net/zenMonkey/metaprogramming-techniques-in-groovy-and-grails">"Metaprogramming Techniques in Groovy and Grails"</a>. 11 Jun 2009.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGroovy+%28programming+language%29&amp;rft.btitle=Metaprogramming+Techniques+in+Groovy+and+Grails&amp;rft.date=2009-06-11&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.slideshare.net%2FzenMonkey%2Fmetaprogramming-techniques-in-groovy-and-grails&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-22"><span class="mw-cite-backlink"><b><a href="#cite_ref-22">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://groovy.codehaus.org/Closures">"Groovy - Closures"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGroovy+%28programming+language%29&amp;rft.btitle=Groovy+-+Closures&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fgroovy.codehaus.org%2FClosures&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-:0-23"><span class="mw-cite-backlink">^ <a href="#cite_ref-:0_23-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-:0_23-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://programmers.stackexchange.com/questions/152868/does-groovy-call-partial-application-currying">"Does groovy call partial application 'currying</a>'". 10 Aug 2013</span></li>
+<li id="cite_note-24"><span class="mw-cite-backlink"><b><a href="#cite_ref-24">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://groovy.codehaus.org/Lazy+transformation">"Groovy - Lazy Transformation"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGroovy+%28programming+language%29&amp;rft.btitle=Groovy+-+Lazy+Transformation&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fgroovy.codehaus.org%2FLazy%2Btransformation&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-25"><span class="mw-cite-backlink"><b><a href="#cite_ref-25">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://ndpar.blogspot.com.br/2011/02/lazy-lists-in-groovy.html">"Side Notes: Lazy lists in Groovy"</a>. 3 Feb 2011.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGroovy+%28programming+language%29&amp;rft.btitle=Side+Notes%3A+Lazy+lists+in+Groovy&amp;rft.date=2011-02-03&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fndpar.blogspot.com.br%2F2011%2F02%2Flazy-lists-in-groovy.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-26"><span class="mw-cite-backlink"><b><a href="#cite_ref-26">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://bendoerr.me/posts/2011-06-20-groovy-inject.html">"Groovy's Fold"</a>. 20 Jun 2011.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGroovy+%28programming+language%29&amp;rft.btitle=Groovy%27s+Fold&amp;rft.date=2011-06-20&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fbendoerr.me%2Fposts%2F2011-06-20-groovy-inject.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-27"><span class="mw-cite-backlink"><b><a href="#cite_ref-27">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.slideshare.net/arturoherrero/functional-programming-with-groovy">"Functional Programming with Groovy"</a>. 5 Nov 2011.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGroovy+%28programming+language%29&amp;rft.btitle=Functional+Programming+with+Groovy&amp;rft.date=2011-11-05&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.slideshare.net%2Farturoherrero%2Ffunctional-programming-with-groovy&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-28"><span class="mw-cite-backlink"><b><a href="#cite_ref-28">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://groovy.codehaus.org/Functional+Programming+with+Groovy">"Function programming in Groovy"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGroovy+%28programming+language%29&amp;rft.btitle=Function+programming+in+Groovy&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fgroovy.codehaus.org%2FFunctional%2BProgramming%2Bwith%2BGroovy&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-29"><span class="mw-cite-backlink"><b><a href="#cite_ref-29">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://groovy.codehaus.org/gapi/groovy/json/JsonBuilder.html">"JsonBuilder"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGroovy+%28programming+language%29&amp;rft.btitle=JsonBuilder&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fgroovy.codehaus.org%2Fgapi%2Fgroovy%2Fjson%2FJsonBuilder.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-30"><span class="mw-cite-backlink"><b><a href="#cite_ref-30">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://rajakannappan.blogspot.com.br/2009/12/groovy-strings-different-ways-of.html">"Groovy Strings - Different ways of creating them"</a>. 26 Dec 2009.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGroovy+%28programming+language%29&amp;rft.btitle=Groovy+Strings+-+Different+ways+of+creating+them&amp;rft.date=2009-12-26&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Frajakannappan.blogspot.com.br%2F2009%2F12%2Fgroovy-strings-different-ways-of.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-31"><span class="mw-cite-backlink"><b><a href="#cite_ref-31">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://groovy.codehaus.org/Compile-time+Metaprogramming+-+AST+Transformations">"Compile-time Metaprogramming - AST Transformations"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGroovy+%28programming+language%29&amp;rft.btitle=Compile-time+Metaprogramming+-+AST+Transformations&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fgroovy.codehaus.org%2FCompile-time%2BMetaprogramming%2B-%2BAST%2BTransformations&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-32"><span class="mw-cite-backlink"><b><a href="#cite_ref-32">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.springsource.org/files/uploads/all/pdf_files/customer/S2_CaseStudy_Wired_USLET_EN.pdf">"Wired.Com"</a> <span style="font-size:85%;">(PDF)</span>. <i>www.springsource.org</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2015-06-02</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGroovy+%28programming+language%29&amp;rft.atitle=Wired.Com&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.springsource.org%2Ffiles%2Fuploads%2Fall%2Fpdf_files%2Fcustomer%2FS2_CaseStudy_Wired_USLET_EN.pdf&amp;rft.jtitle=www.springsource.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-33"><span class="mw-cite-backlink"><b><a href="#cite_ref-33">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://docs.jboss.org/seam/2.0.2.GA/reference/en-US/html/groovy.html">"Chapter 11. Groovy integration"</a>. <i>docs.jboss.org</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2015-06-02</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGroovy+%28programming+language%29&amp;rft.atitle=Chapter+11.+Groovy+integration&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fdocs.jboss.org%2Fseam%2F2.0.2.GA%2Freference%2Fen-US%2Fhtml%2Fgroovy.html&amp;rft.jtitle=docs.jboss.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-34"><span class="mw-cite-backlink"><b><a href="#cite_ref-34">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://blog.linkedin.com/2008/06/11/grails-at-linkedin/">"Grails at LinkedIn"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2015-06-02</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGroovy+%28programming+language%29&amp;rft.btitle=Grails+at+LinkedIn&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fblog.linkedin.com%2F2008%2F06%2F11%2Fgrails-at-linkedin%2F&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-35"><span class="mw-cite-backlink"><b><a href="#cite_ref-35">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.springsource.org/files/uploads/all/pdf_files/customer/S2_CaseStudy_XWiki.pdf">"XWiki SAS"</a> <span style="font-size:85%;">(PDF)</span>. <i>www.springsource.org</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2015-06-02</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGroovy+%28programming+language%29&amp;rft.atitle=XWiki+SAS&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.springsource.org%2Ffiles%2Fuploads%2Fall%2Fpdf_files%2Fcustomer%2FS2_CaseStudy_XWiki.pdf&amp;rft.jtitle=www.springsource.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-36"><span class="mw-cite-backlink"><b><a href="#cite_ref-36">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.soapui.org/Scripting-Properties/scripting-and-the-script-library.html">"Scripting and the Script Library | Scripting &amp; Properties"</a>. <i>www.soapui.org</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2015-06-02</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGroovy+%28programming+language%29&amp;rft.atitle=Scripting+and+the+Script+Library+%7C+Scripting+%26+Properties&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.soapui.org%2FScripting-Properties%2Fscripting-and-the-script-library.html&amp;rft.jtitle=www.soapui.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-37"><span class="mw-cite-backlink"><b><a href="#cite_ref-37">^</a></b></span> <span class="reference-text"><cite class="citation web">Rocher, Graeme (October 2, 2008). <a rel="nofollow" class="external text" href="http://graemerocher.blogspot.com.br/2008/10/skycom-relaunches-written-in-grails.html">"Graeme Rocher's Blog: Sky.com relaunches written in Grails"</a>. <i>Graeme Rocher's Blog</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2015-06-02</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGroovy+%28programming+language%29&amp;rft.atitle=Graeme+Rocher%27s+Blog%3A+Sky.com+relaunches+written+in+Grails&amp;rft.aufirst=Graeme&amp;rft.aulast=Rocher&amp;rft.date=2008-10-02&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fgraemerocher.blogspot.com.br%2F2008%2F10%2Fskycom-relaunches-written-in-grails.html&amp;rft.jtitle=Graeme+Rocher%27s+Blog&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-38"><span class="mw-cite-backlink"><b><a href="#cite_ref-38">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.anu.ac.ke/1403/vcalc-the-first-ever-social-platform-for-the-world-of-math/">"vCalc, the First ever Social Platform for the world of Math"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2016-05-05</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGroovy+%28programming+language%29&amp;rft.btitle=vCalc%2C+the+First+ever+Social+Platform+for+the+world+of+Math&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.anu.ac.ke%2F1403%2Fvcalc-the-first-ever-social-platform-for-the-world-of-math%2F&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-39"><span class="mw-cite-backlink"><b><a href="#cite_ref-39">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://cwiki.apache.org/confluence/display/OFBIZ/Groovy+DSL+for+OFBiz+business+logic">"Groovy DSL for OFBiz business logic"</a>. <i>Apache OFBiz Project Open Wiki</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGroovy+%28programming+language%29&amp;rft.atitle=Groovy+DSL+for+OFBiz+business+logic&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fcwiki.apache.org%2Fconfluence%2Fdisplay%2FOFBIZ%2FGroovy%2BDSL%2Bfor%2BOFBiz%2Bbusiness%2Blogic&amp;rft.jtitle=Apache+OFBiz+Project+Open+Wiki&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-40"><span class="mw-cite-backlink"><b><a href="#cite_ref-40">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://cwiki.apache.org/confluence/display/OFBIZ/Simple-methods+examples+using+Groovy">"Simple-methods examples using Groovy"</a>. <i>Apache OFBiz Project Open Wiki</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGroovy+%28programming+language%29&amp;rft.atitle=Simple-methods+examples+using+Groovy&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fcwiki.apache.org%2Fconfluence%2Fdisplay%2FOFBIZ%2FSimple-methods%2Bexamples%2Busing%2BGroovy&amp;rft.jtitle=Apache+OFBiz+Project+Open+Wiki&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-41"><span class="mw-cite-backlink"><b><a href="#cite_ref-41">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://iotsecurity.eecs.umich.edu/img/Paper27_CameraReady_SmartThings_Revised_IEEEGen.pdf">Security Analysis of Emerging Smart Home Applications</a></span></li>
+<li id="cite_note-42"><span class="mw-cite-backlink"><b><a href="#cite_ref-42">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://jenkins.io/doc/book/pipeline/overview/">"Jenkins Pipeline"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGroovy+%28programming+language%29&amp;rft.btitle=Jenkins+Pipeline&amp;rft.genre=unknown&amp;rft_id=https%3A%2F%2Fjenkins.io%2Fdoc%2Fbook%2Fpipeline%2Foverview%2F&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+</div>
+<h3><span class="mw-headline" id="Sources">Sources</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Groovy_(programming_language)&amp;action=edit&amp;section=18" title="Edit section: Sources">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="refbegin" style="">
+<ul>
+<li><cite class="citation book">König, Dierk; Paul King; Guillaume Laforge; Hamlet D'Arcy; Cédric Champeau; Erik Pragt; Jon Skeet (2015). <i>Groovy in Action, Second Edition</i>. Manning. <a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="https://en.wikipedia.org/wiki/Special:BookSources/978-1-935182-44-3" title="Special:BookSources/978-1-935182-44-3">978-1-935182-44-3</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGroovy+%28programming+language%29&amp;rft.au=C%C3%A9dric+Champeau&amp;rft.au=Erik+Pragt&amp;rft.aufirst=Dierk&amp;rft.au=Guillaume+Laforge&amp;rft.au=Hamlet+D%27Arcy&amp;rft.au=Jon+Skeet&amp;rft.aulast=K%C3%B6nig&amp;rft.au=Paul+King&amp;rft.btitle=Groovy+in+Action%2C+Second+Edition&amp;rft.date=2015&amp;rft.genre=book&amp;rft.isbn=978-1-935182-44-3&amp;rft.pub=Manning&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite class="citation book">Barclay, Kenneth; John Savage. <a rel="nofollow" class="external text" href="http://www.elsevier.com/wps/find/bookdescription.cws_home/709814/description#description"><i>Groovy Programming: An Introduction for Java Developers</i></a>. <a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="https://en.wikipedia.org/wiki/Special:BookSources/978-0-12-372507-3" title="Special:BookSources/978-0-12-372507-3">978-0-12-372507-3</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGroovy+%28programming+language%29&amp;rft.aufirst=Kenneth&amp;rft.au=John+Savage&amp;rft.aulast=Barclay&amp;rft.btitle=Groovy+Programming%3A+An+Introduction+for+Java+Developers&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.elsevier.com%2Fwps%2Ffind%2Fbookdescription.cws_home%2F709814%2Fdescription%23description&amp;rft.isbn=978-0-12-372507-3&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite class="citation book">Davis, Scott. <i>Groovy Recipes: Greasing the Wheels of Java</i>. <a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="https://en.wikipedia.org/wiki/Special:BookSources/978-0-9787392-9-4" title="Special:BookSources/978-0-9787392-9-4">978-0-9787392-9-4</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGroovy+%28programming+language%29&amp;rft.aufirst=Scott&amp;rft.aulast=Davis&amp;rft.btitle=Groovy+Recipes%3A+Greasing+the+Wheels+of+Java&amp;rft.genre=book&amp;rft.isbn=978-0-9787392-9-4&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite class="citation book">Subramaniam, Venkat. <i>Programming Groovy: Dynamic Productivity for the Java Developer</i>. <a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="https://en.wikipedia.org/wiki/Special:BookSources/978-1-934356-09-8" title="Special:BookSources/978-1-934356-09-8">978-1-934356-09-8</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGroovy+%28programming+language%29&amp;rft.aufirst=Venkat&amp;rft.aulast=Subramaniam&amp;rft.btitle=Programming+Groovy%3A+Dynamic+Productivity+for+the+Java+Developer&amp;rft.genre=book&amp;rft.isbn=978-1-934356-09-8&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+</ul>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikipedia.org/w/index.php?title=Groovy_(programming_language)&amp;action=edit&amp;section=19" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><span class="official-website"><span class="url"><a rel="nofollow" class="external text" href="http://groovy-lang.org/">Official website</a></span></span></li>
+<li><a rel="nofollow" class="external text" href="https://www.dmoz.org/Computers/Programming/Languages/Java/Extensions/Groovy">Groovy</a> at <a href="https://en.wikipedia.org/wiki/DMOZ" title="DMOZ">DMOZ</a></li>
+</ul>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1287
+Cached time: 20170114123752
+Cache expiry: 86400
+Dynamic content: true
+CPU time usage: 0.400 seconds
+Real time usage: 0.989 seconds
+Preprocessor visited node count: 2665/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 69105/2097152 bytes
+Template argument size: 3766/2097152 bytes
+Highest expansion depth: 25/40
+Expensive parser function count: 5/500
+Lua time usage: 0.200/10.000 seconds
+Lua memory usage: 4.97 MB/50 MB
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  934.238      1 - -total
+ 19.43%  181.481      1 - Template:Reflist
+ 14.85%  138.725     36 - Template:Cite_web
+ 11.03%  103.035      2 - Template:Infobox
+  9.07%   84.767      1 - Template:Infobox_programming_language
+  7.94%   74.146      4 - Template:Citation_needed
+  7.16%   66.895      4 - Template:Fix
+  3.62%   33.840      4 - Template:Delink
+  3.13%   29.231      8 - Template:Category_handler
+  2.94%   27.474      1 - Template:Infobox_software/simple
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:508401-0!*!0!!en!4!* and timestamp 20170114123751 and revision id 755918671
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Groovy_(programming_language)&amp;oldid=755918671">https://en.wikipedia.org/w/index.php?title=Groovy_(programming_language)&amp;oldid=755918671</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Help_Category.html" title="Help:Category">Categories</a>: <ul><li><a href="https://en.wikipedia.org/wiki/Category:2003_introductions" title="Category:2003 introductions">2003 introductions</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Dynamically_typed_programming_languages" title="Category:Dynamically typed programming languages">Dynamically typed programming languages</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Java_programming_language_family" title="Category:Java programming language family">Java programming language family</a></li><li><a href="Category_Java_specification_requests.html" title="Category:Java specification requests">Java specification requests</a></li><li><a href="Category_JVM_programming_languages.html" title="Category:JVM programming languages">JVM programming languages</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Object-oriented_programming_languages" title="Category:Object-oriented programming languages">Object-oriented programming languages</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Programming_languages_created_in_2003" title="Category:Programming languages created in 2003">Programming languages created in 2003</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Scripting_languages" title="Category:Scripting languages">Scripting languages</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Software_using_the_Apache_license" title="Category:Software using the Apache license">Software using the Apache license</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="https://en.wikipedia.org/wiki/Category:Pages_using_deprecated_image_syntax" title="Category:Pages using deprecated image syntax">Pages using deprecated image syntax</a></li><li><a href="https://en.wikipedia.org/wiki/Category:All_articles_with_unsourced_statements" title="Category:All articles with unsourced statements">All articles with unsourced statements</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Articles_with_unsourced_statements_from_May_2012" title="Category:Articles with unsourced statements from May 2012">Articles with unsourced statements from May 2012</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Articles_with_unsourced_statements_from_November_2008" title="Category:Articles with unsourced statements from November 2008">Articles with unsourced statements from November 2008</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Articles_with_unsourced_statements_from_June_2016" title="Category:Articles with unsourced statements from June 2016">Articles with unsourced statements from June 2016</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Articles_with_DMOZ_links" title="Category:Articles with DMOZ links">Articles with DMOZ links</a></li><li><a href="https://en.wikipedia.org/wiki/Category:Articles_with_example_code" title="Category:Articles with example code">Articles with example code</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="Special_MyTalk.html" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="Special_MyContributions.html" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&amp;returnto=Groovy+%28programming+language%29" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Groovy+%28programming+language%29" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="Groovy_(programming_language).html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+															<li  id="ca-talk"><span><a href="https://en.wikipedia.org/wiki/Talk:Groovy_(programming_language)"  title="Discussion about the content page [t]" accesskey="t" rel="discussion">Talk</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="Groovy_(programming_language).html" >Read</a></span></li>
+															<li id="ca-edit"><span><a href="https://en.wikipedia.org/w/index.php?title=Groovy_(programming_language)&amp;action=edit"  title="Edit this page [e]" accesskey="e">Edit</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="https://en.wikipedia.org/w/index.php?title=Groovy_(programming_language)&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="https://en.wikipedia.org/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="Main_Page.html"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="Portal_Contents.html" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="Portal_Featured_content.html" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="Portal_Current_events.html" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="https://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="../../shop.wikimedia.org/index.html" title="Visit the Wikipedia store">Wikipedia store</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Interaction</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-help"><a href="Help_Contents.html" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="Wikipedia_About.html" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="Wikipedia_Community_portal.html" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="Wikipedia_Contact_us.html" title="How to contact Wikipedia">Contact page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="https://en.wikipedia.org/wiki/Special:WhatLinksHere/Groovy_(programming_language)" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://en.wikipedia.org/wiki/Special:RecentChangesLinked/Groovy_(programming_language)" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="Wikipedia_File_Upload_Wizard.html" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="https://en.wikipedia.org/w/index.php?title=Groovy_(programming_language)&amp;oldid=755918671" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://en.wikipedia.org/w/index.php?title=Groovy_(programming_language)&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q504453" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="https://en.wikipedia.org/w/index.php?title=Special:CiteThisPage&amp;page=Groovy_%28programming_language%29&amp;id=755918671" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Print/export</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Groovy+%28programming+language%29">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="https://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Groovy+%28programming+language%29&amp;returnto=Groovy+%28programming+language%29&amp;oldid=755918671&amp;writer=rdf2latex">Download as PDF</a></li><li id="t-print"><a href="https://en.wikipedia.org/w/index.php?title=Groovy_(programming_language)&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Languages</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-ar"><a href="https://ar.wikipedia.org/wiki/جروفي_(لغة_برمجة)" title="جروفي (لغة برمجة) – Arabic" lang="ar" hreflang="ar" class="interlanguage-link-target">العربية</a></li><li class="interlanguage-link interwiki-bg"><a href="https://bg.wikipedia.org/wiki/Groovy_(език_за_програмиране)" title="Groovy (език за програмиране) – Bulgarian" lang="bg" hreflang="bg" class="interlanguage-link-target">Български</a></li><li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Groovy" title="Groovy – Catalan" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Groovy" title="Groovy – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Groovy" title="Groovy – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Groovy_(lenguaje_de_programación)" title="Groovy (lenguaje de programación) – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/گرووی_(زبان_برنامه‌نویسی)" title="گرووی (زبان برنامه‌نویسی) – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Groovy_(langage)" title="Groovy (langage) – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/그루비" title="그루비 – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Groovy" title="Groovy – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-he"><a href="https://he.wikipedia.org/wiki/Groovy" title="Groovy – Hebrew" lang="he" hreflang="he" class="interlanguage-link-target">עברית</a></li><li class="interlanguage-link interwiki-ka"><a href="https://ka.wikipedia.org/wiki/გრუვი" title="გრუვი – Georgian" lang="ka" hreflang="ka" class="interlanguage-link-target">ქართული</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/Groovy" title="Groovy – Hungarian" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/Groovy" title="Groovy – Dutch" lang="nl" hreflang="nl" class="interlanguage-link-target">Nederlands</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/Groovy" title="Groovy – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Groovy" title="Groovy – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Groovy" title="Groovy – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ro"><a href="https://ro.wikipedia.org/wiki/Groovy" title="Groovy – Romanian" lang="ro" hreflang="ro" class="interlanguage-link-target">Română</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/Groovy" title="Groovy – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-sr"><a href="https://sr.wikipedia.org/wiki/Груви_(програмски_језик)" title="Груви (програмски језик) – Serbian" lang="sr" hreflang="sr" class="interlanguage-link-target">Српски / srpski</a></li><li class="interlanguage-link interwiki-sv"><a href="https://sv.wikipedia.org/wiki/Groovy_(programspråk)" title="Groovy (programspråk) – Swedish" lang="sv" hreflang="sv" class="interlanguage-link-target">Svenska</a></li><li class="interlanguage-link interwiki-th"><a href="https://th.wikipedia.org/wiki/ภาษากรูวี" title="ภาษากรูวี – Thai" lang="th" hreflang="th" class="interlanguage-link-target">ไทย</a></li><li class="interlanguage-link interwiki-tr"><a href="https://tr.wikipedia.org/wiki/Groovy" title="Groovy – Turkish" lang="tr" hreflang="tr" class="interlanguage-link-target">Türkçe</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/Groovy" title="Groovy – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-vi"><a href="https://vi.wikipedia.org/wiki/Groovy_(ngôn_ngữ_lập_trình)" title="Groovy (ngôn ngữ lập trình) – Vietnamese" lang="vi" hreflang="vi" class="interlanguage-link-target">Tiếng Việt</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/Groovy" title="Groovy – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q504453#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 20 December 2016, at 22:42.</li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="Wikipedia_Text_of_Creative_Commons_Attribution-ShareAlike_3.html">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="../../creativecommons.org/licenses/by-sa/3.0/index.html" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="../../wikimediafoundation.org/wiki/Terms_of_Use.html">Terms of Use</a> and <a href="../../wikimediafoundation.org/wiki/Privacy_policy.html">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="../../www.wikimediafoundation.org/index.html">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="../../wikimediafoundation.org/wiki/Privacy_policy.html" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="Wikipedia_About.html" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="Wikipedia_General_disclaimer.html" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="Wikipedia_Contact_us.html">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a href="../../www.mediawiki.org/wiki/Special_MyLanguage/How_to_contribute.html">Developers</a></li>
+											<li id="footer-places-cookiestatement"><a href="../../wikimediafoundation.org/wiki/Cookie_statement.html">Cookie statement</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/w/index.php?title=Groovy_(programming_language)&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="../../www.wikimediafoundation.org/index.html"><img src="https://en.wikipedia.org/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="../../www.mediawiki.org/index.html"><img src="https://en.wikipedia.org/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":58,"wgHostname":"mw1253"});});</script>
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Groovy_(programming_language) by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2017 12:53:06 GMT -->
+</html>

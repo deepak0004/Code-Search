@@ -1,0 +1,15 @@
+    
+        how I can rewrite this:
+
+for (int i = 0; i &lt; numberOfSpaces; i++) {
+    System.out.print(" ");
+}
+
+
+using String.format()?
+
+PS
+
+I'm pretty sure that this is possible but the <a href="http://java.sun.com/javase/6/docs/api/java/util/Formatter.html#syntax" rel="nofollow">javadoc is a bit confusing.
+
+                
