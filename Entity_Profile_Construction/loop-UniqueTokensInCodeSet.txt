@@ -1,0 +1,22 @@
+for ( ) : { ; objectarraylist o.dosomthing object o
+exception jparser.getjsonfromurl strictmode.threadpolicy jsonobject seo.getjsonarray catch s1 new ( ) + null try ; < = > super.oncreate seo.getstring string log folio.length for strictmode.threadpolicy.builder json.getjsonobject strictmode.setthreadpolicy setcontentview image_urls1 json seo policy image_urls.add jsonarray e jsonparser i log.v arraylist urllist permitall m url int 0.0 r.layout.main build jparser folio { savedinstancestate } folio.getstring
+some tbody thead for while here.. da.getemail iterator patcases itr1 if table itr1.hasnext ! & patcases.iterator ( ) i + passedvalues.length int 0.0 rcount null { ; system.out.println < = } > tr patcases.size
+for ( color.gray i ) jbutton + 2000.0 int thread.sleep 0.0 color.white 10.0 ; { [ setbackground < repaint = ]
+cabbages.size cabbage n_good_cabbages c1.y c1.x else maxy-miny 480.0 if new ! % maxy & maxx ( ) * + maxx-minx math.pow - c1 c2 1.0 cabbages.get math.sqrt true ; < = > y.getlocation 170.0 distance cabbages.add for math.random point miny c2.x minx n_bad_cabbages c2.y cabbage_radius goodcabbage badcabbage cabbage.draw break false i j cabbage.getlocation int 15.0 r 0.0 boolean 2.0 y { window
+exception else chain.dofilter runtimeexception catch ioexception if new httpservletresponsewrapper ( ) servletexception rq.getrequesturi + throws applicationvalues.uriignore uri.indexof final log.error true try : ; = rq dispatcheruri request string for httpservletrequest result rsw log.info chain rq.getrequestdispatcher e break forward httpservletresponse false i uri filterchain uriisdispatchable 0.0 boolean throw response { forwardpath } return
+for linearlayout childll.setlayoutparams text.settextsize layoutparams linearlayout.vertical childll.addview r.id.mylayoutid text text.setgravity text.setlayoutparams new childll ( this ) i + int textview layoutparams.wrap_content mainll mainll.addview 0.0 text.settext layoutparams.fill_parent gravity.left 12.0 5.0 ; findviewbyid < = childll.setgravity childll.setorientation
+g.drawstring g ( x ) y super.paint ; +
+50.0 400.0 beazer 570.0 250.0 else 20.0 480.0 editor. if 80.0 new color.blue 200.0 450.0 in 140.0 author g.drawoval templates 180.0 this ( 240.0 pigment ) * + 35.0 280.0 350.0 75.0 100.0 ; setbackground 125.0 = > template @ g.drawline choose tools setlayout g.drawrect g.drawstring and george e.getx super.paint e.gety 160.0 change g closedoors the 0.0 boolean 330.0 addmouselistener 500.0 x 120.0 y to | flowlayout mymouselistener open stuff g.fillrect
+system.out.print for ( ) mid + int high 0.0 low 10.0 ; { system.out.println < =
+( ) + while int 1.0 3.0 5.0 x ; { system.out.println < = if >
+f v foo for ( ) : vector ; < > f.dostuff
+pe for ( ) : payroll.getentries { ; calculatetotals payroll payrollentry recalculatepayrollentry
+string ( ) joptionpane.showinputdialog control while int 0.0 1.0 ; { system.out.println = value if
+dig string aux num system.in while keyb find scanner val keyb.nextint new % ( ) index + int string.valueof 0.0 1.0 2.0 dig.indexof ; system.out.println { = >
+destination back 24.0 23.0 22.0 21.0 20.0 new go 16.0 15.0 0.0 14.0 13.0 1.0 2.0 12.0 11.0 3.0 4.0 10.0 5.0 visited 6.0 7.0 : 8.0 9.0 to 19.0 18.0 17.0
+thestack.peek thestack.push thestack.isempty for while thestack.pop else nverts vertexlist [ ] if getadjunvisitedvertex adjmat ! & ( false ) wasvisited j + int 0.0 -1.0 lastvisited 1.0 v true ; system.out.println { < = } return
+string for button.getid button [ ] log.d new ispositionempty ( this false ) i button.setonclicklistener boardstring + int n string.valueof 0.0 imageview final counti buttonid view.onclicklistener 8.0 ; { < = countn board
+java.lang.stackoverflowerror 0.0
+
+type_three type_two type_one ;
+myelementtype myelementtype.values for ( ) : type

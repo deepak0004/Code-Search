@@ -1,0 +1,40 @@
+packets.size packets.equals flavour for ( index ) counter + int 0.0 else ; { system.out.println < = if return
+date data num findnum getcurrentmin do while getcurrenttotal. passcount sales printwriter readdata password else from date.tostring getcurrenttotal if fname ! new method pass & double getcurrentmax ( count this ) * + total. currentmin str inputdata input null totalamount 10.0 ; system.exit < day. = > average access string countnum printfile for bufferedreader filereader pass.equals total current min and checkpass of [ row currentmax ] filewriter max will column length joptionpane.showinputdialog double.parsedouble int writefile the 0.0 findnum.readline print sale -1.0 2.0 input.length { system.out.println time file. } return
+exception new tfactory e transformerfactory ( transformer fileoutputstream ) transformer.transform streamresult transformerfactory.newinstance streamsource tfactory.newtransformer try ; catch =
+maxvalue1 maxvalue2 value2 value1 borderlayout.north 300.0 20.0 btn1.addactionlistener new package static void double panel.add ( ) jbutton + jtextfield jframe.exit_on_close frame.setdefaultcloseoperation true ; < = maxvalue1.gettext frame for frame.add textfieldtodouble [ panel frame.setvisible ] todouble jpanel i double.parsedouble int buildthegui maxvalue2.gettext 0.0 frame.setsize borderlayout.south jframe x btn1 { system.out.println
+integer.parseint string clockout 30.0 23.0 22.0 else convertedtimeout [ 45.0 ] if hours splitfields double minutes ( ) + int time.split 15.0 0.0 1.0 31.0 53.0 7.0 8.0 ; time < | = > 37.0 return
+exception mminstream activity mmserversocket.accept while mmoutstream madapter r.id.relativelayout_layout inputstream outputstream relativelayout mmserversocket.close catch socket.getinputstream text this.getname my_uuid log.d madapter.listenusingrfcommwithservicerecord new activity.findviewbyid bluetoothsocket layout.findviewbyid e ( ) tmpin datainputstream r.id.textview_text textview layout tmpout this.activity mmserversocket dataoutputstream text.settext null socket.getoutputstream true try ; socket { = } mminstream.tostring bluetoothadapter.getdefaultadapter
+line.contains string def reader.readline reader line line.split bufferedreader while predef else inputstreamreader predef.substring [ ] if new ! read ( openstream predef.indexof ) url args 0.0 newurl 1.0 null ; { } = return
+input static 1.0 string currentelections index [ ; + ] = int
+sub string for dog_count str.substring if ! ( i ) + int str.length catanswer 0.0 doganswer -1.0 sub.equals 2.0 true cat_count ; { < = } return
+
+result formatter.format somestring new string ( ) myclass ; =
+0.0 3.0 ( newstring ) myobject.setattribute4 myobject.setattribute1 [ ; ]
+wort.length-i-1 string for istpalindrom else wort.length-1 [ ] if warray palindrom ! % ( false ) i wort int wort.tochararray wort.length 0.0 boolean 2.0 char true ; system.out.println { < = } return
+sub a arrays.tostring string ( ) ; [ system.out.println = ] sub.split
+new null ( tipoacessobean.acao acessobean ) tipoacessobean.tela ; acessos.add
+singlestring string searcharray for ( false ) singlestring.equals true : ; if return searchstring
+keygenerator.getinstance secretkey string ( ) generatekey 0.0 key.tostring stringkey ; system.out.println = key
+for freq integer charmap character tochararray loop [ hashmap ] if new charmap.get ( false ) + charmap.put args 0.0 boolean 1.0 isnotunique null char true : ; { system.out.println < = > ?
+values. be string values for attributename nominal strings and of fastvector vector attribute passed if a denoting method constructor ) is string. - attributevalues attributes. the null name attributes : to assumed parameters attribute.
+string ( ) ; system.out.println + = s1 s2
+start---- 0.0 4444.0 1.0 34.0 11.0 22.0 i 56.0 -
+string ( pattern for matcher.group ) i + pattern.compile while matcher.find int 0.0 s 1.0 compile system.out.println ; { < = matcher.groupcount
+date new convertor.todatabasestring string dateconvertor ( ) assertequals convertor converteddate ; convertor.convert =
+modes string hashset valtocheck s.tolowercase legalvals.add public else legalvals.contains if ` new static lower ( ) check + legalvals str s { ; < = } > return
+string s.indexof part1 part2 ( ) + s.contains double.parsedouble int n long 0.0 1.0 s.length s.substring w1 ; w2 if =
+exception m_vwprogress resentity.getcontent currentline while inputstream me buffered log.i catch toast.length_long if new ! ntotalsize nuploadsize ( ) + multipartentity httppost.setentity responsepost.getentity super.onpostexecute filebody m_vwprogress.setprogress responsepost null httppost true currentline.getbytes try ; pfp = string stringbuilder.append show pfp.length bufferedreader result client.execute file httpentity m_activity inputstreamreader resentity stringbuilder.tostring publishprogress inputstream.close m_bsuccess strattachedfile toast.maketext e length false log.v buffered.readline int me.addpart string.valueof httpresponse 0.0 boolean s m_vwprogress.dismiss { stringbuilder } return
+string5 string6 string4 string1 string2
+dig string aux num system.in while keyb find scanner val keyb.nextint new % ( ) index + int string.valueof 0.0 1.0 2.0 dig.indexof ; system.out.println { = >
+berkshire country swindon address whiltshire town data city united 51.0 county reading wallingford kingdom oxfordshire hill crescent road bonny street 5.0 house_no 78.0 |
+col_index do while else mediastore.audio.media._id if new ( this ) mediastore.audio.media.external_content_uri + list songname 1.0 null r.id.songs songss ; numsongs < = > cursor managedquery string tempcursor.getstring tempcursor.getcount setlistadapter tempcursor.movetonext [ ] tempcursor mediastore.audio.media.data tempcursor.getcolumnindexorthrow mediastore.audio.media.display_name songname.add proj tempcursor.movetofirst arraylist int 0.0 arrayadapter -1.0 mediastore.audio.artists.artist currentnum { } return
+void string foo errortext ( ) main error int { ; system.out.println =
+somecontent 0.0 ( xxx ) saveimage operatorspecific customer
+character.isdigit text.charat ( count ) + - output compressedtext 0.0 1.0 pos else text.substring uncompress ; { character.isletter text if = return text.equals
+string hello.split ( ) divider_pattern 0.0 array hello ; [ system.out.println = ]
+
+wb.getsheetat displays while output number inputstream find finish if new findrow method row.getcell cellcontent ( this ) * is + sheet.getrow rownum input filename month 10.0 hssfrow : ; system.exit = row.getrownum string for wb cell fileinputstream total cell.getrichstringcellvalue of sheet hssfworkbook row value getstring colnr rownr int the hssfcell cell.cell_type_string 0.0 hssfsheet system.out.println to { cell.getcelltype return
+string ( ) descriptionlist.add 0.0 split descriptionintro descriptionshortened [ ; ] = jsonobject.getstring tostring
+date return
+bytearrayoutputstream new request.getinputstream string ( orgin ) ; streams.asstring =
+float.tostring float long 1.073741824E9 file localobject math.round else if long.tostring f ( length ) * + l str 0.0 1024.0 1048576.0 100.0 ; = >

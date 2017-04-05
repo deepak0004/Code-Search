@@ -1,0 +1,85 @@
+( ( ( ) ) ),58
+( ( ) ( ) ) ;,58
+( ( ) ;,58
+{ ( ) ;,58
+{,58
+= ( ) ( ) ;,58
+( = = ) {,58
+( new ( ( ) ( ) ) ) ;,61
+= ( ) + ( ( ) ) ;,61
+= ( ) new ( ) ;,62
+= new ( ( ) ) ;,62
+new ( ( ) ) ;,63
+( = = ) return ;,63
+= ( ) new ;,64
+( ( ) < ( ) ) {,65
+( + ( ) + ) ;,66
+= new ;,68
+( ( ) > ( ) ) {,69
+( < > = ( ) ; ( ) ; ) {,70
+< > = ( ( ) ) ;,76
+= < > ( new ( ) ) ;,77
+( ) <,77
+return new < > ( ) {,87
+< > ( ) {,87
+( < > ) {,87
+< > {,107
+= ( = = ) ;,116
+( = ) {,116
+( ( ) ( ) ) {,116
+( < < > >,117
+< <,117
+return ( new integer ( ( ) ) ) ;,117
+return ( value ( ) ) ;,117
+( class < > ) {,117
+< > > > ),123
+( ) { return ;,128
+new ( ) ;,130
+( = ; < ( ) ; + + ) {,136
+( = ; < ; + + ) {,142
+return + ;,156
+( > ) {,160
+( class < > value ) {,163
+= new arraylist < > ( ) ;,164
+;,174
+( ( ) ) {,174
+return new < > ( ) ;,174
+return ( arraylist < > ) ;,180
+= value ;,185
+< > = new < > ( ) ;,188
+( new ( ) ) ;,189
+list < > ;,198
+< < > > = new < < > > ( ) ;,210
+arraylist < > = new arraylist < > ( ) ;,210
+< arraylist > = new < arraylist > ( ) ;,210
+( ( ( ) ) ) {,232
+< < > > ;,234
+new ( new arraylist < > ( ) ) add ( new ( ) ) ;,256
+< class < > > = ;,258
+list < > = new < > ( ) ;,262
+arraylist < > ;,264
+< >,264
+= + ;,272
+( new integer ( ) ) ;,276
+( ) {,290
+return arraylist ;,293
+test < integer > = new test < integer > ( ) {,309
+return ( ( ) ) ;,315
+arraylist arraylist = new arraylist ( ) ;,315
+class test < > {,317
+( = ; < + ; + + ) {,360
+= list ;,390
+= new < > ( ) ;,415
+return new ( ) ;,420
+= new ( ) ;,512
+list = new arraylist ;,562
+( ( ) ) ;,580
+return ( ) ;,585
+< > ;,749
+= ( ) ;,812
+list < arraylist > ;,915
+list = new arraylist ( ) ;,1085
+= ;,1334
+( ),1450
+return ;,1606
+( ) ;,2262

@@ -1,0 +1,1327 @@
+Java App : Unable to read iso-8859-1 encoded file correctly
+Java, pass-by-value, reference variables
+Java, infinite while loop, incrementation
+Different form actions based on select change events
+Java : How to determine the correct charset encoding of a stream
+Why am I getting a "Path not correct" error while running a batch file on a remote system?
+Java NIO: Sending large messages quickly leads to truncated packets and data loss
+How to delete buttonGroup in netbeans 6.5
+In Java, when should I create a checked exception, and when should it be a runtime exception?
+replacing regex in java string
+What happened to android.provider.Telephony?
+Why should I use the keyword "final" on a method parameter in Java?
+Understanding the need for a DI framework
+Why doesn't Java allow generic subclasses of Throwable?
+How to easily load a XML-based Config File into a Java Class?
+Why does autoboxing make some calls ambiguous in Java?
+replacing regex in java string, which contains `&#xA;` symbol
+Returning a string entered as reverse text in Java
+How to change auto-generated code when creating new class in Eclipse
+Mercurial and a sort of Continuous Integration workflow for Java project
+Basic array initialization and sorting question
+Object reference in java
+Execute a Java program from our Java program
+Type erasure, overriding and generics
+Prefuse Toolkit: dynamically adding nodes and edges
+Spring IoC and Generic Interface Type
+Can someone explain this JDBC Exception to me?
+Passing a million numbers from java to matlab?
+Generics in Java, using wildcards
+How can I measure time with microsecond precision in Java?
+1-line IF statements in java
+EL in a JSP stopped evaluating
+Java Paint Method Doesn't Paint?
+How do I mock a method with generic objects in JMockit?
+Maven FindBugs plugin
+How to handle escape sequences in string literals in ANTLR 3?
+Is it possible to have a MouseMotionListener listen to all system mouse motion events?
+Is there more to an interface than having the correct methods
+Adding fields to a WebService
+Using Condition in Regular Expressions
+How to count the number of occurrences of an element in a List
+How can I successfully extend Graphics in Java
+Specify authentication in container rather than web.xml
+Web Service using Axis 2: Complex type or simple type parameters?
+What is the effect of "*" in regular expressions?
+How can I initialise a static Map?
+Problem with FTPClient class in java
+Java serialization and instance sharing using remote services
+How can I make Java3D start faster?
+JPA/Hibernate store date in UTC time zone
+Java equivalent of unsigned long long?
+Why must delegation to a different constructor happen first in a Java constructor?
+Multidimensional array in Python
+Difference between parseInt and valueOf in java?
+Fastest way to create a Java message dialog (swing/awt/other)?
+java.awt.HeadlessException - Applet not displayed - Part 2
+Absence of property syntax in Java
+RE: Big XML file
+Casting to Unknown Type When Class Name as a String
+How do I address unchecked cast warnings?
+can't run swing from the command line
+How do I change the description of input's displayed for an operation defined using a MXBean
+Doubt in FileAppender in log4j API
+How to implement one-to-many relationships in Ibatis?
+Is System.nanoTime() completely useless?
+Is there a good reference for using OLE Automation (from Java)?
+What's the difference between ConcurrentHashMap and Collections.synchronizedMap(Map)?
+Inheritance in Java - "Cannot find symbol constructor"
+How to throw an informative exception from AccessDecisionManager that uses voters
+Custom Spring sterotype annotation with scope of prototype?
+How to by-pass inheritance in java when invoking a method
+How to handle OutOfMemoryError in Java?
+Reading from a socket not waiting for input?
+Best way to measure execution time in automated regression tests
+Progress Dialog in Swing
+How do I disable the Cancel Button when using javax.swing.ProgressMonitor?
+Best Practice: Initialize JUnit class fields in setUp() or at declaration?
+Use Mockito to verify that nothing is called after a method
+Java multiply operation behavior
+Regex in Java, finding start and end tag
+Java: Playing WAV sounds
+Detect windows logout event in Java application
+What name do you use for the parameter in a static variable setter method?
+try-catch block in Java - execution statements in catch code
+How is Java's notion of static different from C#'s?
+List<Map<String,Object>> to org.json.JSONObject?
+2-D (concurrent) HashMap: 2-property key type? hashmap of hashmaps? [update]
+Why can't I define a static method in a Java interface?
+C# equivalent of Java 'implements' keyword?
+SAX Parser In Applet Failure
+Should I use Java's String.format() if performance is important?
+How to set up multiple source folders within a single Eclipse project?
+Flex/LCDS Server-to-data-source Paging
+How do I compare strings in Java?
+Saving a BufferedWriter instance in a class. Any problems?
+Regular expression to parse option string
+Factory methods for implementations of Java interfaces wrapped with Scala implicits?
+Can someone explain to me what the reasoning behind passing by "value" and not by "reference" in Java is?
+Java HTTP Snooper(Proxy) Does Not Forward Server Response
+How to initialize a value in web.xml from a JNDI variable?
+How to make the output text attribute value as a hyperlink?
+Java: Basic OOP Question
+Netbeans, Ant and RMIC (Java RMIC Compiler) (Help with)
+Clean way to combine multiple jars? Preferably using Ant
+Multiple ways to move through an Iterator
+limit map key and value types - more complicated
+How do I align textPosition for a label?
+In Java, is the "finally" block guaranteed to be called (in the main method)?
+Does Java 6 open a default port for JMX remote connections?
+Java socket programming
+The use of "this" in Java
+Database framework developing
+Best practices in internationalizing text with lots of markup?
+If-less code: is it just an intellectual challenge or is it concretely useful?
+Using "this" with methods (in Java)
+How assign bean's property an Enum value in Spring config file?
+spring not enforcing method security annotations
+Right-click context menu for Java JTree?
+Java: Array of primitive data types does not autobox
+When should I use the "strictfp" keyword in java?
+renaming DLL functions in JNA using StdCallFunctionMapper
+Hibernate HQL with list getters
+getting boolean properties from objects in jsp el
+Is it possible to pass the X Display name to the JVM
+How do I get a simple, Hello World Java applet to work in a browser in Mac OS X?
+Unexpected multithreaded result
+Separate INFO and ERROR logs from java.util.logging
+Is null a Java keyword?
+Applying the MVP pattern to JDialogs
+Java "params" in method signature?
+Why would Java classloading fail on Linux, but succeed on Windows?
+parsing XML that contain XML in elements, Can this be done
+Oracle connections in Spring
+Doubt in build.xml file in Apache-Ant1.6.5
+How do I calculate the cosine similarity of two vectors?
+Networking problem in Java ME
+Can you find all classes in a package using reflection?
+Servlet long processing cancelation when browser closes
+Swing Reuse in Java
+Event handling with Jython & Swing
+Hibernate's setFirstResult() issue with Oracle jdbc driver
+Trouble getting Hibernate Core and Hibernate Annotations using Apache Ivy (but it's also Maven2 related.)
+Using SHA1 and RSA with java.security.Signature vs. MessageDigest and Cipher
+A Java collection of value pairs? (tuples?)
+Java Menu Mnemonics in Resource Files
+Duplicate set of columns from one table to another table
+How can I serialise a javabean to be loaded by Spring's DataBinder?
+Making a component less sensitive to Dragging in Swing
+Checking whether all enum values are mapped?
+Getting Raw XML From SOAPMessage in Java
+Basic Spring help
+Android TextView Timer
+URL routing and relative links in Tomcat 5.5
+How to set or export display variable through java code?
+Best practices for performance benchmarking test
+Best way to concatenate List of String objects?
+FileChannel & RandomAccessFile don't seem to work
+How to run Unix shell script from Java code?
+Java: Accounting for taskbars/menubars/etc when placing a window on the desktop?
+Moving focus from JTextArea using tab key
+How to open user system preferred editor for given file?
+How do you get Java sockets working with public IPs?
+How to call upon a gameOver method in a Java game when sprite "falls off" the screen?
+Compilation error on Zxing
+Why some method in Java modify the original value and some do not?
+How do I split a concatenated string into multiple floating point values?
+XPath can't find an engine
+How to check if a Java character is a currency symbol
+Use reflection to iterate over class members
+How to avoid stale MySQL/Hibernate connections (MySQLNonTransientConnectionException)
+Why does my J2ME DateField not display the correct date?
+the right way to select monospaced fonts in Swing
+Is there an equivalent to the Scanner class in C# for strings?
+Using nsis to retrieve choices from checkboxes
+In the Java Plug-In applet options, what does jar "pre-loading" do?
+What do I need to learn to build a web app in Java?
+How to fix a Resource not Found error in OC4J?
+Getting Ant <javac> to recognise a classpath
+SSL socket php code needs to be converted to Java
+Do .NET GUI components support HTML (like Java swing does)?
+Using AesCryptoServiceProvider in VB.NET
+Why is this simple applet using up >50% of my CPU?
+Handling different API versions in same Java source
+Java BrowserLauncher throwing InvocationTargetException
+RMI/Exception handling in a custom JVM
+Server and Client using Sockets
+HTTP URL Address Encoding in Java
+how can i fetch combo box value into my DAO using struts 2?
+struts2 <s:select...> tag
+ANTLR Grammar for Java Regular Expression syntax
+How to get JSP scriptlet value in struts tag
+Quartz scheduler not displaying Log4j messages
+Android coverflow
+Converting a Stripes application to use Friendly URLs
+client-side applet caching?
+How to use SAXParseException effectively in Java
+Spring MVC web app i18n
+How to override method to invoke superclass' superclass method?
+Get heap dump from a remote application in Java using JVisualVM
+Creating a "logical exclusive or" operator in Java
+Refactoring classes that use global variables
+Server disconnects in Java
+Reset/remove a border in Swing
+Synchronizing Jena OntModels with bnodes
+Swing component prints text differently than it displays it
+Searching For Non Final Static Variables in Eclipse
+What to pass to the Arrays instance method toArray(T[] a) method?
+How do I throw an Exception from the caller's scope?
+Generating Jena Bnode IDs
+Can I dynamically unload and reload (other versions of the same) JAR?
+Java Annotations not working
+Instantiating an inner class
+FileOutputStream file not found error
+bytecode instrumentation using ClassFileTransformer.transform
+Convert String XML fragment to Document Node in Java
+Struts2, best practice for using method={1}
+Prohibit direct extension of Java class outside its package
+Java type cannot be resolved
+Introducing Brevity Into C# / Java
+Hibernate Query API and Java 1.5/Generics
+Best way to convert from "Simple Class Name" to "Full Class Name" to Object in Java
+Do you use (or define) non standard annotations, and for what reason. How about recursive annotations?
+What is the memory overhead of a Java method?
+Problems reading/writing UTF-8 data in MySQL from Java using JDBC connector 5.1
+Really force file sync/flush in Java
+Way of jumping to a page in a local pdf?
+Debugging JBehave scenarios
+Return a nested class type in Java
+Best Practice: Java static non final variables
+How can I read files in my WEB-INF directory?
+Using a UUID as a Database Primary Key, Java type is a byte[]
+memcached Monitoring
+How to display data from txt file in specific format
+Partial bean serialization and deserialization+merging
+Getting "unixtime" in Java
+Java Main Method, Good Coding Style
+Documentation not visible in Javadoc
+Comparing elements in a generic list
+Please confirm that this XMPP code is not threadsafe
+uniqueidentifier in Sql Server database - how to generate in Java environment?
+CRC calculation in Java
+Why isn't my @BeforeClass method running?
+How deep would you expect the immutability of an immutable list to be?
+A quick way to solve java.security.AccessControlException
+Why can't I update my J2ME RecordStore?
+Why the jsf view is not updated after new data in the backing bean are loaded from database?
+struts2 Tiles - getting error while executing
+validating mailto links in java
+Persistent data structures in Java
+How does Maven know where to find Java 1.5
+read file in classpath
+Simple exception handling in Java
+NullPointerException while using put method of HashMap
+Simulate app.config for Java?
+How to batch delete using bulkUpdate
+Mapping enum to a table with hibernate annotation
+Intent of Spring form command
+Would this be the correct place to use the java keyword "interface"?
+Can a Spring form command be a Map?
+strange problem with java.net.URL and java.net.URLConnection
+When are two columns that look the same not the same in oracle?
+Does the super class not call the overridden method?
+Java's Scanner vs String.split() vs StringTokenizer; which should I use?
+2 bytes to short java
+xmlbeans - set content of a complex type
+Create Weak Multimap with Google Collections
+Strange behaviour when accessing Oracle 8i table from servlet
+Persist java.util.Properties as serialized object using JDO/DataNucleus
+Two-way relation in JPA
+Java - map a list of objects to a list with values of their property attributes
+Why does Java main() method accept an array of String args?
+Make URL Request from Servlet and retain Header information
+Java annotations
+Please help with my JSP Internationalization problem
+Servlets + JAX-WS
+How to use URLClassLoader to load a *.class file?
+Math.random() versus Random.nextInt(int)
+How to efficiently get short array from resources on Android?
+Querying the DNS service records to find the hostname and TCP/IP
+java.net.ConnectException: Connection timed out: connect exception occur
+Create a clickable image in a GridView in Android
+Java Socket close not detected
+C# or Java: Prepend strings with StringBuilder?
+Why can't java find the JUnit framework?
+How can I check if a resource bundle key does not exist using JSTL tags?
+Java method: Finding object in array list given a known attribute value
+Setting up a Gallery of Images with NetBeans
+JavaFX Bind/Loop question
+Reading text file in J2ME
+Java: Using a foreign class which conforms to my interface
+Extract cursor image in Java
+Random behavior differences between C# and Java: the seed
+Hibernate/mysql connection pooling
+How do I sort a Set to a List in Java?
+directories in a zip file when using java.util.zip.ZipOutputStream
+How do I catch this exception in Swing?
+Noise in background when generating sine wave in Java
+Protected class structure in Java?
+How do I sort records in a text file using Java?
+Swing: why wont my custom component repaint?
+Getting invalid runtime when publishing google app java web application
+Testing a concrete third-party class with JMock
+Control class loading order in Java
+Splitting a swing control into equal parts
+Java socket question
+Capture Console Output of a Specific Thread in Java
+How to force redraw of an ex-invisible group's content in SWT?
+What is the namespace to use for adding JSP taglib support into facelets pages?
+TreeViolationException problem
+LongClick event also triggers Click event
+How do I parse text into lists in Java?
+How to determine if binary tree is balanced?
+Acquiring a spring configuration value from a custom class
+JAVA - Difficulties with a simple server seeing the clients
+Tags and attributes in Lucene shared across documents
+Cannot connect to Tomcat's MBeanServer via jconsole in Java6
+space in Java command-line arguments
+How can I manage sessions in Java EE?
+In-process ActiveMQ producer/consumer example?
+Java Reflection: How to get the name of a variable?
+What does the return keyword do in a void method in Java?
+Retrieving format string from Format object
+Java Regex Grouping Problem
+Java Array HashCode implementation
+Would this cause Garbage Collection issues
+How to show a second MVC group as a dialog box in griffon
+EnumSet for pre-1.5 fake enums?
+Why won't my text show up?
+Classpath problems with Jini ClassDep, Java's dependency finder
+Java Generics Wildcarding With Multiple Classes
+JSF backing bean structure (best practices)
+Java Generic List<List<? extends Number>>
+Arrays in Objective-C main method. Sigserve errors. Newb
+java string to datetime conversion issue
+Autogenerate value objects
+Math operators in Criteria queries
+Annotation ElementType
+How can I find the current time as a long in C#?
+Java Transactions API and .NET System.Transactions
+Lauching a Java app from a batch file with the correct JRE
+override java final methods via reflection or other means?
+Porting a comparator from C# to Java
+Why doesn't my Ant master build file work properly?
+Speeding up Tomcat in debug mode with Eclipse IDE
+Blackberry JDE HTTPConnection problems
+What's the best way to handle this "try - error - clean -retry" case?
+When I persist, the entity doesn't show up in the list view
+Excract JPanel into new class in NetBeans
+Advise in AspectJ to change control flow
+How to instantiate (inside a method) different classes that implement the same interface?
+JSP syntactical error in scripting
+When do @SessionAttributes in SpringMVC get removed? (With code sample)
+Getting Java JDK to compile on ubuntu
+Should we need to differentiate between Interface class and abstract class, in terms of naming convention?
+Running a Jar file alone
+Java gridlayout with empty cells
+How to do this using java expression language
+Meaning of new Class(...){{...}} initialization idiom
+How to obtain class instance of generic argument type
+UserNameToken in soap from Java
+XStream short dynamic aliases
+Can't retrieve urlencoded umlauts. [solution: use UTF8]
+Problem sending Apple Push Notification using Java and REST
+Compiling Error On BlackBerry
+Class is a raw type. References to generic type Class<T> should be parameterized
+Splitting child node from XML file into their own XML files
+Analysing Thread behaviour in Java
+Should a collection of constants be placed in a class or interface?
+Java Sound API noise after processing the byte array with a fraction number
+Java not releasing oracle cursors
+how to display custom error message in jsp for spring security auth exception
+How to receive what was sent by convertAndSend?
+Why does Java not support type inference for constructors?
+Java: Use ObjectOutputStream without serializable
+Setting proxy in java, URL vs System.setProperty?
+How to use a single checkstyle suppression file in Maven for all modules
+Removing DOM nodes when traversing a NodeList
+One-arg ctor A(x) implicitly invoking super() and NOT super(x)
+Implementing Collections based (DDD) Repository with Hibernate
+Disappearing jar entry when loading using SPI
+java iterator/iterable subinterface
+java - adjusting jslider looks on windows laf
+Spring Security oddity in <intercept-url> when specifying method
+Class libraries for Java's immense verbosity
+Java exception not caught
+Saving an Array to a Text file in Java
+Student's Result program in Java
+Java regex to remove all trailing numbers?
+Load DLL (using JNA) inside an OSGi bundle
+Error in Java Expression
+Java Generics: casting to ? (or a way to use an arbitrary Foo<?>)
+Search for file in directory with multiple directories
+java.sql.SQLException: No suitable driver found for jdbc:derby:
+Object locking in Java
+How to implement generic type-safe deep cloning in a Java class hierarchy?
+Is there a way to retrieve the autoincrement ID from a prepared statement
+Table not created by Hibernate
+Reading/writing binary structures: how to simplify this code?
+Google App Engine / JDO : store computed values
+java - why does graphics.drawString() not redraw?
+Why am I getting a crash when exiting my Activity?
+Java For-Each Loop : Sort order
+JDBC THIN Oracle with Java6
+Multiline JLabels - Java
+Find a line in a file and remove it
+multithreaded multiclient programming
+Optional parametrization in Java with Generics
+JTextPane prevents scrolling in the parent JScrollPane
+Java Webservice and Polymorphism
+How using BigDecimal would affect application performance?
+ActionListener on JLabel or JTable cell
+writing a BitSet to a file in java
+How to check if a URL exists or returns 404 with Java?
+Downloaded PDF with Java is corrupt?
+One-To-Many Relationship with Join Table
+Java: testing thread access to "not thread-safe" methods
+Adding "this" reference to Array fails in Java Constructor
+Including comments in Java regular expressions
+How to refactor global variables out of your code
+Very slow read from DVD in Java and .Net
+Using the NetBeans GUI editor, how can I create a JTextField or JFormattedText field that must be validated against a regular expression?
+mysql/jdbc function in out param
+JSP displaying single and double quotes as symbol
+Why does this Java regex cause "illegal escape character" errors?
+How to get the hash algorithm name using the OID in Java?
+Are there any Java-compilers that leverage an OSGi-environment instead of using the classpath?
+How to implement a custom ColumnSorter with ScrollTable (GWT-incubator)
+Domain name interpretation utility for java
+JPA Instrumentation
+Java properties - .properties files vs xml?
+java wait for dialog to be closed
+Java Syntax: byte f()[] vs. byte[] f()
+Richfaces needlessly hitting the database
+Parse Map from properties files
+Error adding auto-complete component to ICEFaces screen
+What is the best way to clean up an Object in Java?
+IntelilJ 8.1 with 2 GWT modules
+JAX-WS and XSD Validation
+Cannot create schema from Hibernate
+How to embed HSQLDB in file with Spring to a WebApp
+How do I get more debug messages from Hibernate?
+In Java, when is the constructor for an enumerated constant invoked?
+JavaMail ClassNotFound
+Make transactionless EJB call inside a transaction
+Prevent XSS attempts on a Tomcat/Struts 1 web application (without source code)
+spring-mvc download action
+How do I run JUnit from NetBeans?
+Java Application NoClassDefFoundError
+how do i store a File from Java web app in an oracle directory (not table)
+MAC OS X Custom Application Keeping Bouncing in the Dock
+@OneToOne getting returned as ManyToOneType
+Spring Security Child Thread Context
+TZ Var to Java TimeZone?
+JAVA's System.currentTimeMillis() or C#'s Environment.TickCount?
+Can I inject an interface subtype in Spring?
+Java Condition Operators Speed vs Versions of Hotspot VM
+IllegalArgumentException when setting Image in Jigloo
+Running an Eclipse Plugin
+Java Persistence / JPA: @Column vs @Basic
+steps for invoking webservices in J2ME application
+including an exe file to jar
+Reading files inside a JAR file
+How do I get the input from a textfield in a netbeans RCP app?
+Objective c - static members and constants
+Recursive text conversion
+Java Hashmap: How to get key from value?
+action listening for a JFrame
+ArrayList without the copying overhead?
+java generics - one impl class, multiple views
+Java: Inherit constructor
+How to create Java documentation in order of appearance?
+Java: How to Indent XML Generated by Transformer
+Java: Find .txt files in specified folder
+parsing a XML file in java
+JBoss Seam - Can't @In annotations be used at the same time with accessor methods for different properties?
+Java: XML Transform, line break in Text node, breaks indenting
+Trimming inputs in JBoss Seam
+Duplicating custom nodes in JavaFX
+C# and Java : 3 / 2 * 3.2 = 3.2, why?
+Performance: Single Variable Assignment vs Objectgraph Navigation (Java)
+Find type parameter of method return type in Java 6 annotation processor
+calling an exe file inside jar
+How can my thread get stuck in isConnectionReset (PlainSocketImpl)
+Spring 3.0M4 and passing objects as parameters to POST
+Scrollable JPanel
+Java Regex not working - why?
+How to display a date as ISO8601 with JSTL?
+Maven - Archiva - Setting up Archiva for different geographic locations
+Text Extraction from HTML Java
+How can I ignore a superclass?
+Why is Java Vector class considered obsolete or deprecated?
+Help me implement a rewindable buffer
+Struts 2 and locale question
+How can I find the intersecting point of three planes?
+trouble making polymorphism defeat those switch/case statements
+JButton needs to change JTextfield text
+Displaying XHTML in Swing (JEditorPane)
+Copy directory from a jar file
+JButtons need to modify 8 JTextFields using an Array. Listen to Buttons or Text?
+Comparing Values in a file with an array
+How do I translate this SHA function in Java to an equivalent in Ruby?
+Java: Regex on byte array
+Formatting (for money) with setText(String.valueOf)
+why use jsp:useBean here but not just create a new object?
+Java Thread using static or non-static nested class
+How to use an array constant in an annotation
+How to Serialize a list in java?
+Is it possible to use IMAP + paging?
+Read Java Internet Connections settings - jdk1.4
+How to encode a parameter with a url in struts?
+How to make Ant prefer classes from a linked JAR over JDK classes?
+Graph algorithm - Looking to improve scalability
+why these two sources calculate different sha-1 sums
+Time synchronization in java
+Do I need to close() both FileReader and BufferedReader?
+right align property not working while giving width to tds
+How can I configure HTTPClient to authenticate against a SOCKS proxy?
+Java parse and update xml value in thread
+Getting the used file name from a Properties instance
+Restlet-1.1 example\book\rest\ch2\Example2_5 no client connectors for HTTPS
+Why is java.lang.Thread in the Google App Engine whitelist?
+UnknownHostException for server java
+How to get selected items in OpenSymphony WebWork select
+Building an absolute URL from a relative URL in Java
+XML handling in Java
+How important are naming conventions for getters in Java?
+Real-time graphing in Java
+Unescaped "." still matches when used in a negation group
+Session/cookie management in Apache JMeter
+How do I create a new log4j ConsoleAppender in code as opposed to config?
+Spring load time weaving not detecting class annotated with @configurable
+Java - writeLong method of DataOutputStream and writing hex
+Is there a way to get a timeZone with (only) a country code (valid ISO-3166 code)?
+Delete a hibernate entity with tapestry5 gives : "a different object with the same identifier value was already associated with the session"
+How do I check if a Socket is currently connected in Java?
+How to express inter project dependencies in Eclipse PDE
+Hotfixing Code running inside Web Container with Groovy
+Hibernate - Get all entites created in a cascading create
+How do I build and distribute my Java project?
+Java: Generic casting down generates warning, why?
+Dozer InstantiationException mapping Calendar class
+Issues receving in RXTX
+Concurrency file system
+syntax highlighting for javadoc?
+How can i get generic type from a Class object?
+How to make RSACryptoServiceProvider work without padding (nopadding)?
+Java: Create DOM Element from Element, not Document
+Encrypting with RSA private key in Java
+Java while loop not looping
+session persistance across browser/server restart using google app-engine
+Is it a Test Driven Development approach?
+Java Reflection: Why is it so slow?
+Mitigating verbosity of Maven pom.xml files (or: a critique of Maven by a fan)
+How do I configure autoformatting in Eclipse?
+How do I create a distributable application in Clojure?
+List<A> canot be sent to method( List<super-class-of-A> ) - why not?
+Deadlock in ThreadPoolExecutor
+Why is String " " being read as NULL when mapping from the database to an object using ibatis?
+Error java.lang.OutOfMemoryError: GC overhead limit exceeded
+Extract a certain div in HTML using Java+RegEx
+Starting an external program in Java and piping it's output
+Why is this covariant override permitted if the method is concrete, but not if abstract?
+How to use JAXBElement<String> in Web Service?
+Eclipse complains about name clash if an interface with a method having a generic argument is implemented
+(java) Writing in file little endian
+updating an object with JDO and GAE
+JPA Nested Select Left Outer Join
+best java approach for stream filtering in XML?
+What is the syntax to check for element present using Style in IE
+Convert a JSON string to object in Java ME?
+creating sybase stored procedure that returns jdbc statement.getWarning
+How to make JOptionPane.showConfirmDialog have No selected by default?
+JavaWebStart app randomly fails
+CheckboxCellEditor shows text and not a check box
+How to initialize a ByteBuffer if you don't know how many bytes to allocate beforehand?
+simple example to use Xerces XNI?
+error in combobox using SEAM 2.1.2 and JBOSS 4.2.3GA
+refactoring and removing case statements when circling over an enum structure
+Change AD Password with Java
+Issue with this simple code
+Passing command line arguments to javaws (Java WebStart) executable
+Stacks in Java with exceptions
+Maven dependency within dependency with different scope
+Is there a regular expression for finding/replacing the common start of all lines in a chunk of text?
+Compile error when adding ActionListener to Array created GUI
+Hibernate Entity sort column configuration
+Convert a JSON string to object in J2ME?
+linking methods from an enum to member variables of client class
+Not writing the int value. Please correct the program
+Handling Runtime dependencies
+finding kth largest element in an array implemented bag
+Problems building Drools 4 project in Eclipse
+Java regular expression to match patterns and extract them
+want to upgrade application over the air
+Java: Netbeans debugging session works faster than normal run
+Good J2ME Project Design
+JavaBean Introspection in Servlets [Tomcat]
+java.util.zip - Recreating directory structure
+Java Multithreading and Inheritance
+How do I get my Maven Integration tests to run
+How to print multiple arrays of different types in Java?
+Java Webstart with Tibco Native Libs
+Simple Java Sound Applet won't work!!! ARG!
+Spring MVC; avoiding file extension in url?
+Eclipse function/plugin that finds corresponding junit class?
+Sandboxing JSR-223
+How should I choose where to store an object in C++?
+What are all the possible values for SQLException.getSQLState?
+java - passing array in oracle stored procedure
+Is there a Unicode equivalent for `{\pGraph}` in Java / POSIX regular expressions?
+Communication between two nodes running Java apps using SSH tunnel
+Find by Object Attributes in JPA
+XML Digital Signature validation
+What are the advantages  of using named queries under Hibernate Annotation
+CallableStatement setString - Unsupported character(s)?
+tagging methods and calling them from a client object by tag
+Using Hibernate sequence generators manually
+How can I give a component more than one DropTargetListener?
+Handling special characters in XML when transforming with Saxon
+Fresh OpenEMM installation shows bean errors on some pages
+.NET TripleDESCryptoServiceProvider equivalent in Java
+Can't create foreign key
+Proper EJB Exception handling - ClassNotFoundException from client
+How to unit test a Spring MVC controller using @PathVariable?
+Save using JFileChooser with pre-populated file name?
+Accessing the value of a Richfaces calendar during validation
+how to do a system pause in java for debugging?
+Redirects in Glassfish (adding trailing slash)
+Deploying Jersey-enabled servlet to Tomcat: Exceptions
+Is it possible to write files to a remote directory using java?
+How to check if internet connection is present in java?
+java.lang.ClassNotFoundException: DataSource in Glassfish
+Compare two Java objects with a check for null
+Scope of Static Class Variables in Java
+urlrewritefilter problem with velocity template rendering
+Tutorials for Java errors and syntax
+Remoting SWT GUI
+Bytecode instrumentation generating java verifier error
+how to make a copy-paste script with jcreator?
+AppEngine datastore: "Object with id ... is managed by a different Object Manager"
+What does CascadeType.REFRESH actually do?
+How to create a thread that runs all the time my application is running
+java.lang.UnsatisfiedLinkError no *****.dll in java.library.path
+how can I set the log4j conversionpattern at runtime
+In what case would a programmer get the webApplicationContext out of DispatchServlet?
+Output Parameters in Java
+Injecting an object into a HttpSessionAttributeListener via Guice?
+Reading a file and editing it in Java
+Function to Sanitize HTML Id attribute in Java
+Java Date vs Calendar
+Eclipse Modelling Framework (EMF): How to get the DomainModel from a Magicdraw UML2 Export
+Using Java to change xml to html
+hibernate mapping file without all properties
+Why is String the only class for which literals exist in Java?
+Is there a Java 1.4 library that returns time in microseconds?
+Tomcat: Set cookie value multiple times for 1 request?
+Is there a Java method that encodes a collection of parameters as a URL query component?
+Wrapping Booleans in Objects
+How should I make JBoss temporarily ignore an MBean service?
+Starting Tomcat with remote debugging (jdwp) when installed as a windows service
+How can I use an inner class instance from another inner class method?
+Input Required for Message Passing?
+Why does ServletContext#getRealPath("/") return a relative path?
+Is Java guaranteed to inline string constants if they can be determined at compile time
+Java http call returning response code: 501
+Compressing with Java Decompressing with PHP
+Using log4j with inherited classes
+Is calling Java's Calendar.getTime() necessary to update the object?
+How to Map unset property to value without getting NullPointerException in Dozer
+How to send parameters from a servlet
+Why should you have to dispose() a java.awt.Window that goes out of scope?
+Eclipse ignoring incorrect @Override annotations
+WAS 6.1, Java 5 : Interesting Issue - Request with word 'CD' not reaching the servlet
+Stream video to a server
+ZIP on the fly immediatelly
+Groovy: generate equals and hashCode methods
+Android SQLite and huge data sets
+How to implement pessimistic locking in JPA with Glassfish 2.1?
+Question about Seam context scope
+cache key generation
+Synchronization in threads for Java
+Application not working as expected
+Executing script inside method with BeanShell
+Why Java OutputStream.write() Takes Integer but Writes Bytes
+C# to Java: Base64String, MemoryStream, GZipStream
+A Stackoverflow mapping (Hibernate)
+How do I link two Java files together during compilation using GCJ?
+Why does Double.NaN equal itself when wrapped in a Double instance?
+ASP.NET MVC vs Spring MVC
+How do I prevent the Java XML Transformer using "HTML" method from adding <META> tag?
+How to stop the task scheduled in Java.util.Timer class
+Signal handling using "TERM"
+Java Spring MVC stateless-to-stateful handover
+Facebook: Getting Incorrect Signature (104) when Getting Session Key
+retrieve proxied instance from spring
+Is there a way to determine what type a class is an instance of in Java?
+refactoring Java arrays and primitives (double[][]) to Collections and Generics (List<List<Double>>)
+Problem when unit-testing the stop method of my RMI Server
+How can produce a DOCTYPE declaration with DOM level 3 serialization API?
+Invoking Java webservice from dot net client
+Controlling the placement of the paginator
+Where does JSP initialize?
+Difference between Socket.connect(Adreess,timeout) and FTPClient.setSoTimeOu
+Extract data with regex from html
+How to Parse Negative Long in Hex in Java
+Testing for multiple exceptions with JUnit 4 annotations
+Oracle ResultSetMetaData getPrecision/getScale
+Automatically Creating Manifest File with Eclipse for JAR Files
+Enabling logging of a third party component
+Which is the best approach?
+Apache Commons SCXML State Machine Framework
+Want to invoke a linux shell command from Java
+How do I dump a MySQL database using ant?
+Problem in understanding cstutoringcenter problem 43 solution bug
+How does Java's System.exit() work with try/catch/finally blocks?
+How do I compare two longs as unsigned in Java?
+Reading string value from Excel with HSSF but it's double
+Hibernate subquery
+Binding Component <-> Container (Enabled property)
+log4j rootlogger turn off logger for some classes
+How to declare a function during program execution?
+How to test for equality of complex object graphs?
+Including additional resources with OSGi bundles
+Java: ObjectOutputStream with Serializable problem
+Can I reference another property in a properties file (use ${property})
+Adding validations to Java Beans via Annotations
+Optimizing Java code
+cannot find symbol: java.net.Socket
+Modify request parameter with servlet filter
+Eclipse's .ini settings don't seem to be helping me change the max heap size
+Hibernate Mapping Package
+Hibernate Search Annotations not Inherited
+Compressing strings for client/server transport in Java
+Java JAX-RPC NoClassDefFoundError
+How do I use linkedlists for java?
+Defensive copy: should it be specified in the Javadoc?
+How to test visibility of values between threads
+How do I read formatted input in Java?
+DIY Form handling, PRG, Validation
+Can enums be subclassed to add new elements?
+Selenium - Could not start Selenium session: Failed to start new browser session: Error while launching browser
+Refactoring List<Foo> to FooList
+Unit test proper data structure creation
+Encrypt and decrypt file in J2ME
+GregorianCalendar
+Java: Access modifier more restrictive than 'protected', less restrictive than 'private'?
+Jasperviewer in Netbeans: java.lang.OutOfMemoryError: Java heap space
+How to manage M threads (1 per task) ensuring only N threads at the same time. With N < M. In Java
+private final static attribute vs private final attribute
+GregorianCalendar constant date
+GregorianCalendar months
+Struts2 + jQuery - Sending regular updates to the client
+adding days to a date
+Which object is created in which part of memory?
+Should a "static final Logger" be declared in UPPER-CASE?
+Illegal argument exception
+Illegal argument exception
+Unable to get ResultSet from the MySql DataBase
+Reusable Hibernate EntityManager (J2SE)
+Extending Generic Abstract Class & Correct Use of Super
+Using an ActionListener in one class to start a timer in another class
+Java Executors: how can I stop submitted tasks?
+IntervalTree DeleteNode Java Implementation
+How do I load/unload a Linux kernel module with a Java Program?
+Java: Parsing a string to a double
+How do you use the crypt library in C for DES encryption? (setkey, encrypt, crypt, etc.)
+ResultSetMetaData returning BigDecimal insted of int
+java inheritance versus composition (implementing a stack)
+How to replace multiple occurences of a string in a text file with a variable entered by the user and save all to a new file?
+Container.remove(int i) throws unexpected ArrayIndexOutOfBoundsException
+How do i merge multiple .png images as a single image using java?
+How to keep bound JTable up to date?
+NoClassDefFoundError while running from jar
+Deploying a CXF web service in Spring Framework
+Easy way to fill a JTable with CSV data
+Mapping hibernate components to a separate table
+Create Excel with style with JasperReports
+Start Java Runtime Process with Administrator rights on Vista
+What happens to TimerTask after execution?
+If I change the base class that a Java Exception class extends, do I need to update the serialVersionUID value?
+How can I make a constructor's argument be available from instance initialisers?
+How to execute a batch file from java?
+Java - passing input into external C/C++ application
+How to map in XML List<Entity> field with hibernate
+How do I sort a list by different parameters at different timed
+Java decompiler written in the United States
+Threadsafe double buffered cache (not for graphics) in Java?
+Blackberry App, display images from Web
+regex backreferences in IntelliJ
+Count Frequency in a Randomly Generated List of Numbers
+How do I change the address used by a CXF Web Service to one different than the one specified in the wsdl file?
+How do you design a good permgen space string in Java?
+Emulating user input for java.util.Scanner
+How do I change the "level" of validation that Ant's XMLValidate task provides?
+Autostart spring app
+Java maximum memory on Windows XP
+How best to store Subversion version information in EAR's?
+How do I use BGGA closures prototype on standard Mac JDK6?
+Selection overridden by formatter
+Why log4j cannot generate backup files?
+Getting started with mobile programming. What is a good platform?
+Problems with shutting down JBoss in Eclipse if I change JNDI port
+How to do dynamic URL redirects in Struts 2?
+Object arrays in method signatures
+.toArray(new MyClass[0]) or .toArray(new MyClass[myList.size()])?
+Complex profiles in maven
+String to Int in java - Likely bad data, need to avoid exceptions
+Java: Are concurrent reads and writes possible on a blocking SocketChannel via Object(In|Out)putStreams?
+How to mock the InitialContext class with jmockit?
+Error connecting to oracle. Getting an UnsatisfiedLinkError for the method t2cGetCharSet
+Updating an object within a Set
+Java: Serializing beginner problem :-(
+Why does the string "¿" get translated to "Â¿" when calling .getBytes()
+Java2D: Clipping a Graphics object with a Line
+Swing: Is there a way to differentiate between a user-caused ItemEvent and an application-caused one?
+Why is ¿ displayed different in Windows vs Linux even when using UTF-8?
+How can elements be added to a wildcard generic collection?
+How can I enumerate all classes in a package and add them to a List?
+How can I run all JUnit unit tests except those ending in "IntegrationTest" in my IntelliJ IDEA project using the integrated test runner?
+Ruby and duck typing: design by contract impossible?
+How to implement a single instance Java application?
+Cookie getMaxAge
+Firefox cuts files, whose name contains spaces, in a Struts application
+What is a good design for a query "layer" for Java JPA
+IP subnet verification in JSP
+PreparedStatement IN clause alternatives?
+Does JEditorPane have Charset problems when showing HTML?
+Generic, annotation-driven event notification frameworks
+How to resolve a Java Rounding Double issue
+Why does HttpServlet implement Serializable?
+Java RMI Tutorial - AccessControlException: access denied (java.io.FilePermission 
+Why an InitialContext on Remote EJB3 Session Beans
+Dynamically find the class that represents a primitive Java type
+Using Collections API to Shuffle
+JUnit TestCase object instantiation
+How do I use oracle.jdbc.driver.OracleLog?
+Design of inheritance for Validate interfaces
+Regexp: Substituting a version number in an XML file
+How to determine the class of a generic type?
+Spring + Hibernate: how to have a configurable PK generator?
+How to test whether method return type matches List<String>
+IBM Websphere OutOfMemoryException
+Classpath including JAR within a JAR
+Where (which layer) to put Entity query methods, "persist" methods etc.?
+HTTP 1.1 Persistent Connections using Sockets in Java
+Is there a preference for nested try/catch blocks?
+What is the best practice for JPA/Hibernate entity classes and synchronization?
+How to tell if a URL parameter needs to be encoded in Java
+Serialization of objects: no thread state can be involved, right?
+CountDownLatch vs. Semaphore
+Switching on a string/implementing button actions
+Will reassigning a variable in every iteration of a loop affect performance?
+why does parsing this date string throw an unparseable date exception?
+Is it possible to detect if an exception occurred before I entered a finally block?
+Is there a Java standard "both null or equal" static method?
+java.beans.Introspector getBeanInfo does not pickup any superinterface's properties
+Navigation on validation failure in Seam/JSF
+Understanding the "cannot find symbol" error
+Java Generics Syntax for arrays
+How can I turn an int into three bytes in Java?
+Overriding the java equals() method quirk
+ResultSet: Retrieving column values by index versus retrieving by label
+How do I catch ClassCastException?
+Importing Delphi Web Services into Java
+Tools for finding Shared Mutable data bugs in Java
+What is the best way for converting phone numbers into international format (E.164) using Java?
+Import package.* vs import package.SpecificType
+Java equivalents of C# String.Format() and String.Join()
+ListCellRenderer not Firing Events on Child Components
+Catching exceptions with tomcat and a servlet
+How do I join two lists in Java?
+Eclipse as IDE + Mercurial for version control + ? Bug tracking = Good idea?
+How to format methods with large parameter lists
+IE6 generated strange worksheet name when doing export from java application
+Java MessageFormat - How can I insert values between single quotes?
+JUnit and junit.framework.TestSuite - No runnable methods
+Is String.hashCode() portable across VMs, JDKs and OSs?
+Storing more than 1 data item at a single index in a linked-list?
+Java, Alfresco Web Service API and Unicode NamedValues
+How to go about mocking a class with final methods?
+How should I configure Jetty 7 pre3 to use oracle JDBC source?
+How to stop java process gracefully?
+Web Service throwing exception using Axis2 Java
+Attach Source Issue in Eclipse
+How do I get the size of a java.sql.ResultSet?
+Setting a log file name to include current date in Log4j
+Ant's wrong directory on property
+Consuming web services with jboss
+JNDI without a J2EE Container (with JNP? Maybe some other provider?)
+Setting tab size in TableCellRenderer
+Getting drawable area of an AWT frame in Mac OS X?
+How to specify JVM argument for Maven built executable JAR
+BGGA closures as a bolt-on solution to java?
+ArrayIndexOutOfBoundsException in XMLEntityScanner.peekChar reading XML from HttpRequest
+How do I change java logging console output from std err to std out?
+RAII in Java... is resource disposal always so ugly?
+what is the difference between using the visitor design pattern or using an interface?
+How do I get java logging output to appear on a single line?
+What is the best way to use JavaDoc to document a Java enum?
+What is the quickest way to detect an unreachable host in Java?
+Why is Class.newInstance() "evil"?
+How to fetch the middle mouse button in java?
+synchronizing io operation in java on a string method argument?
+What libs can I use to bind POJOs to external files for TDD without much overhead?
+How can I find out what enums are defined by a class?
+Cobertura refuses to acknowledge code was covered
+Java: Triple Curly Bracing
+How do I reference assets from a different subdomain (or CDN) in production?
+How to get Cobertura to fail M2 build for low code coverage
+Java file input as command line argument
+What is the easiest/best/most correct way to iterate through the characters of a string in Java?
+Eclipse Abstract Syntax Tree Programmatic Access
+Why can't I use a type argument in a type parameter with multiple bounds?
+Parameterized test case classes in JUnit 3.x
+Hibernate @ManyToMany mapping with composite keys
+Is there a text wrap function in the java standard library?
+Why an abstract class implementing an interface can miss the declaration/implementation of one of the interface's methods?
+What causes javac to issue the "uses unchecked or unsafe operations" warning
+How to Parsing "Event XML" in Java?
+How do you compare two version Strings in Java?
+Convert audio stream to WAV byte array in Java without temp file
+How do you programatically authenticate to a web server using NTLM Authentication with apache's commons httpclient?
+A shell script for timing my program measures it at 0 seconds
+random access file in java
+Java- Changing swing background colour?
+How do I read strings in J2ME?
+Deep cloning multidimensional arrays in Java...?
+run oracle sql script from java
+How do I split strings in J2ME?
+What is the buffer size to create a .zip archive using Java?
+How do I parse a base query (à la Google Data) in Java?
+How do I make vim indent java annotations correctly?
+Using system environment variables in log4j xml configuration
+How do I get which JRadioButton is selected from a ButtonGroup
+Simple java client code for Web Service - something to do with QName?
+Are there any Ant conventions similar to Maven2 conventions?
+How to set a long Java classpath in Windows?
+Primary key from inserted row jdbc?
+Spring initialization order
+Best way to list files in Java, sorted by Date Modified?
+compiling only part of the source tree with ant
+What is the mask for emails using swing's MaskFormatter
+How do I identify immutable objects in Java
+Can't compile class calling a method in an interface with a generic list argument
+How do I remove repeated elements from ArrayList?
+Problem checking out (from VSS) and building maven project in Hudson
+Is it possible to unimplement an interface in derived class in Java?
+How to construct a relative path in Java from two absolute paths (or URLs)?
+How do I split a string on a fixed character sequence?
+Reusing a resultMap for different column names
+Why can final constants in Java be overridden?
+Transform a String to URL standard String in Java
+Named blocks to limit variable scope: good idea?
+The most sophisticated way for creating comma-separated Strings from a Collection/Array/List?
+At runtime, find all classes in a Java application that extend a base class
+Class with single method -- best approach?
+How do you get the length of a list in the JSF expression language?
+Object(Output|Input)Stream binary protocol
+Build Eclipse Java Project from Command Line
+wrapped exception from a component
+How do I unit test a Java method which uses ProcessBuilder and Process?
+How do you debug a series of Aspect in eclipse?
+How do I prevent Eclipse from hanging on startup?
+recursion instead of multi-loops
+Jsp useBean with struts
+Best API for simple 2D graphics with Java
+Why does AbstractQueuedSynchronizer interrupt on acquring lock
+How do I get a platform-dependent new line character?
+How do I get tomcat 5.5 to run behind apache 2 with mod_rewrite passing through requests to mod_jk and stripping app context?
+NoClassDefFoundError when trying to use JMockit Coverage
+Get privatekey from Keystore
+How do I force/get to use GTKLookAndFeel in Java on KDE?
+Different spring XML files for development environment vs. deployment when using maven
+How do I change the default application icon in Java?
+JSP: How can I still get the code on my error page to run, even if I can't display it?
+Storing the state of a complex object with Memento pattern (and Command)
+Find "real" height/width of Swing/AWT object
+How do I permit my Java applet to use MySQL?
+Connection to Oracle without a username or password
+Java Enum definition
+Interface is not visible from ClassLoader when using a proxy?
+Update more than one row atomically
+How to add a JUnit 4 test that doesn't extend from TestCase to a TestSuite?
+Struts Logic Problem
+How to remove classpath variables from WAS module
+Which annotation should I use: @IdClass or @EmbeddedId
+Is there a good way to have a Map<String, ?> get and put ignoring case?
+getResultSet from Spring-JDBC
+Should we @Override an interface's method implementation?
+How do you reduce Java logging boilerplate code?
+In Java, how do I dynamically determine the type of an array?
+java.net.URLEncoder.encode(String) is deprecated, what should I use instead?
+AIX: IBM Java: java.net.SocketException: Connection timed out:could be due to invalid address
+Is making an empty string constant worth it?
+Why not allow an external interface to provide hashCode/equals for a HashMap?
+Stop a event from bubbling in GWT
+Java BlockingQueue of Size=1?
+JNI memory management using the Invocation API
+What is a StackOverflowError?
+Sort arrays of primitive types in descending order
+In Java, difference between default, public, protected, and private
+Why does my JNI code not successfully find a jthrowable's getMessage method?
+Rotation matrix for direction vector
+Big O Notation Homework--Code Fragment Algorithm Analysis?
+Repairing wrong encoding in XML files
+Get an OutputStream into a String
+Cannot create an array of LinkedLists in Java...?
+How do I add query parameters to a GetMethod (using Java commons-httpclient)?
+Newbie java memory management
+How to create a string representing a Java long as though it were unsigned 64-bit value
+How do I inject a single property value into a string using spring 2.5.x?
+How to use Hibernate @Any-related annotations?
+How to toggle between one maven profile and another?
+Problem with Commons Logging / Log4j setup in spring webapp with tomcat 6
+Logging PreparedStatements in Java
+How do I change JPanel inside a JFrame on the fly?
+Does Java Connection.close rollback?
+What is a NullPointerException, and how do I fix it?
+Customized naming of columns in JPA relationships
+How do I programatically inspect a HTML document
+A good library to do URL Query String manipulation in Java
+How to reduce space between JCheckboxes in GridLayout
+Returning a PDF file from a Java Bean to a JSP
+Jasper report generating bad HTML
+Is it really a best practice to use jstl out tag?
+Large Inner classes and private variables
+Setting multiple jars in java classpath
+Java array reflection: isArray vs. instanceof
+Java Concurrent and Parallel GC
+printable char in java
+Java Application/Class Design - How do accessors in Java work?
+How do I "require" a neighbour class in Java?
+Performance question: Fastest way to convert hexadecimal char to its number value in Java?
+Illegal attempt to associate a collection with two open sessions
+JTidy Node.findBody() — How to use?
+Is it okay to update a Java web application by replacing just single class files?
+Hibernate: hbm2ddl.auto=update in production?
+How would you implement an LRU cache in Java?
+SWT - OS agnostic way to get monospaced font
+Creation timestamp and last update timestamp with Hibernate and MySQL
+Java extendable enumeration
+How to use MySQL prepared statement caching?
+Getting the Java thread id and stack trace of run-away Java thread
+How to stop Hibernate from eagerly fetching many-to-one associated object
+How Do You Get the Height of the Titlebar Using Java (Swing)?
+Java generics - returning subtype of declared type from method
+Logging in Eclipse/OSGi plugins
+How do you deal with "super" generics in java?
+Iterating through a Collection, avoiding ConcurrentModificationException when removing in loop
+Is the Open Source Jalopy Eclipse plugin compatible with Ganymede?
+Cleanest way to toggle a boolean variable in Java?
+No suitable MySQL driver found for JBoss application
+Creating a custom Hibernate UserType - What does isMutable() mean?
+Deep-Initialising Java Bean properties
+Double cast for Double smaller than zero
+Mocking non-public static methods in abstract classes with JMockit?
+Java Application Hang on Linux at "java.io.UnixFileSystem.getBooleanAttributes0"
+Most concise way to read the contents of a file/input stream in Java?
+Testing what's written to a Java OutputStream
+Resize a JPanel in line with a JDialog
+How do I look up an ejb in jBoss 4.2?
+How do I split a string with any whitespace chars as delimiters?
+How can you uniquify context-root on jBoss
+API java 5 and more: should I return an array or a Collection?
+Thread.getContextClassLoader() == null?
+Can this Java singleton get rebuilt repeatedly in WebSphere 6?
+How do I specify values in a properties file so they can be retrieved using ResourceBundle#getStringArray?
+Applet - 'java.lang.NullPointerException: null pData' when browser closed
+Eclipse class version bug
+Using Apache commons FileUpload
+declare JSP taglib directives in web.xml
+Migrating Java UNO code from OpenOffice 2.4 to 3.0
+How to transform a time value into YYYY-MM-DD format in Java?
+ant filtering - fail if property not set
+Creating friendly urls to dynamic resources in struts2
+Java Timestamp valueOf
+Resetting the time part of a timestamp in Java
+What is java.awt.Component.getName() and setName() used for?
+Java RMI not closing socket after lease expiration
+Can I use regular expressions to find a method on a class in java?
+JSTL, Beans, and method calls
+Make a Perl-style regex interpreter behave like a basic or extended regex interpreter
+How do I pass model data beween a view state and action state in Spring Web Flow 2
+Date time parsing that accepts 05/05/1999 and 5/5/1999, etc
+Beanshell catch(ex): Exception or Throwable?
+Java Web Application Sync Question
+Should I put my test method in a separate class? If so, how?
+How do I write a Java function that returns a typed instance of 'this' and works when extended?
+Why does byteArray have a length of 22 instead of 20?
+Display the OSX Command symbol key in a JLabel
+Comparing hibernate-mapped dates?
+When does Hibernate read from second-level cache and when from DB?
+Unsupported protocol: jndi with Websphere 6.1 when trying to access a file as a resource
+How to ignore whitespace while reading a file to produce an XML DOM
+How to improve Netbeans performance?
+Ways to save enums in database
+Using request.setAttribute in a JSP page
+How to handle calendar TimeZones using Java?
+How is Jmock used with HttpSession and HttpServletRequest
+Attach Javadoc to Library in NetBeans
+HashSet problem -- equals and hashCode with contains working differently than I'd expect
+Lightweight Java Object cache API
+Getting template text from FreeMarker in Spring app
+Is there a memory-efficient replacement of java.lang.String?
+How to handle huge result sets from database
+Finding numerical substrings mathematically, without string comparison
+Sun App Server Deployment Error
+How Do You Get the Height of the Titlebar Using Java (Swing)?
+Java generics - returning subtype of declared type from method
+Logging in Eclipse/OSGi plugins
+How do you deal with "super" generics in java?
+Iterating through a Collection, avoiding ConcurrentModificationException when removing in loop
+Is the Open Source Jalopy Eclipse plugin compatible with Ganymede?
+Cleanest way to toggle a boolean variable in Java?
+No suitable MySQL driver found for JBoss application
+Creating a custom Hibernate UserType - What does isMutable() mean?
+Deep-Initialising Java Bean properties
+Double cast for Double smaller than zero
+Mocking non-public static methods in abstract classes with JMockit?
+Java Application Hang on Linux at "java.io.UnixFileSystem.getBooleanAttributes0"
+Most concise way to read the contents of a file/input stream in Java?
+Testing what's written to a Java OutputStream
+Resize a JPanel in line with a JDialog
+How do I look up an ejb in jBoss 4.2?
+How do I split a string with any whitespace chars as delimiters?
+How can you uniquify context-root on jBoss
+API java 5 and more: should I return an array or a Collection?
+Thread.getContextClassLoader() == null?
+Can this Java singleton get rebuilt repeatedly in WebSphere 6?
+How do I specify values in a properties file so they can be retrieved using ResourceBundle#getStringArray?
+Applet - 'java.lang.NullPointerException: null pData' when browser closed
+Eclipse class version bug
+Using Apache commons FileUpload
+declare JSP taglib directives in web.xml
+Migrating Java UNO code from OpenOffice 2.4 to 3.0
+How to transform a time value into YYYY-MM-DD format in Java?
+ant filtering - fail if property not set
+Creating friendly urls to dynamic resources in struts2
+Java Timestamp valueOf
+Resetting the time part of a timestamp in Java
+What is java.awt.Component.getName() and setName() used for?
+Java RMI not closing socket after lease expiration
+Can I use regular expressions to find a method on a class in java?
+JSTL, Beans, and method calls
+Make a Perl-style regex interpreter behave like a basic or extended regex interpreter
+How do I pass model data beween a view state and action state in Spring Web Flow 2
+Date time parsing that accepts 05/05/1999 and 5/5/1999, etc
+Beanshell catch(ex): Exception or Throwable?
+Java Web Application Sync Question
+Should I put my test method in a separate class? If so, how?
+How do I write a Java function that returns a typed instance of 'this' and works when extended?
+Why does byteArray have a length of 22 instead of 20?
+Display the OSX Command symbol key in a JLabel
+Comparing hibernate-mapped dates?
+When does Hibernate read from second-level cache and when from DB?
+Unsupported protocol: jndi with Websphere 6.1 when trying to access a file as a resource
+How to ignore whitespace while reading a file to produce an XML DOM
+How to improve Netbeans performance?
+Ways to save enums in database
+Using request.setAttribute in a JSP page
+How to handle calendar TimeZones using Java?
+How is Jmock used with HttpSession and HttpServletRequest
+Attach Javadoc to Library in NetBeans
+HashSet problem -- equals and hashCode with contains working differently than I'd expect
+Lightweight Java Object cache API
+Getting template text from FreeMarker in Spring app
+Is there a memory-efficient replacement of java.lang.String?
+How to handle huge result sets from database
+Finding numerical substrings mathematically, without string comparison
+Sun App Server Deployment Error
+Read environment variables from file in Windows Batch (cmd.exe)
+Java L&F customization: How do I use synth to customize BorderFactory borders?
+Write dpi metadata to a jpeg image in Java
+Colorize logs in eclipse console
+Spring + Tiles2 + Freemarker - integrate via Freemarker Servlet or via Spring's FreeMarkerViewResolver?
+How to pass parameter to servlet
+Can anyone explain servlet mapping?
+Java file extension regex
+Can I use Class.newInstance() with constructor arguments?
+Weird case sensitivity bug in Class.getResource?
+Why do I get an OutOfMemoryError when inserting 50,000 objects into HashMap?
+JFileChooser use within JApplet
+Context information in Tomcat5.5
+Java - Abstract class to contain variables?
+What's the best way to have stringTokenizer split up a line of text into predefined variables
+How do you determine the ideal buffer size when using FileInputStream?
+Using Regular Expressions to Extract a Value in Java
+Could "attach source" be made easier for popular Java libraries?
+How do I create a custom JPanel extension and use it from the NetBeans palette?
+abstract methods in skeletal implementations of interfaces
+What's the best way to check to see if a String represents an integer in Java?
+What is the easiest way to do 'is' in Java?
+Java Vector Field (private member) accumulator doesn't store my Cows!
+Java Comparator
+How do I get my dependencies inject using @Configurable in conjunction with readResolve()
+Java HTML Parsing
+question about java interfaces
+Missing ant-javamail.jar file on Macintosh
+How do you Programmatically Download a Webpage in Java
+How do you import classes in JSP?
+How to output a String on multiple lines using Graphics
+When should I use primitives instead of wrapping objects?
+Overriding a method with Generic Parameters in Java?
+Menu item accel key works only after menu item has been shown
+Custom Error Pages in JBoss
+How to convert string result of enum with overridden toString() back to enum?
+Corrupt form data: premature ending (Resolved)
+Getting Invalid Address with javax.mail when the addresses are fine
+Given a Java InputStream, how can I determine the current offset in the stream?
+How can I wrap a method so that I can kill its execution if it exceeds a specified timeout?
+Convert a string to GregorianCalendar
+Remove HTML tags from a String
+Regex to find static (non final) variables
+Download xml.gz file with HttpsURLConnection
+Making a custom Sin() function in Java
+How to remotely shutdown a Java RMI Server
+What do curly braces in Java mean by themselves?
+Is it possible to display Swing components in a JSP?
+How to play sound in JavaFX?
+Best way to manage database connection for a Java servlet
+Can unchecked warnings be avoided when overriding a method with raw type parameters?
+Is it better to reuse a StringBuilder in a loop?
+Limit for URL length for "rundll32 url.dll,FileProtocolHandler"?
+Escape path separator in a regular expression
+JPA Composite Key + Sequence
+Why does addition of long variables cause concatenation?
+javac error "code too large"?
+How do I interpret a WSDL with references to a namespace java: on a non-java client?
+Setting FetchMode in native Hibernate
+How best to implement user selectable variables in web application
+When should I use the java 5 method cast of Class?
+GZip HttpResponse using XSL Transformer
+How to split a huge zip file into multiple volumes?
+What are your thoughts on method scoped constants?
+Threading issues in a Java HashMap
+Hibernate transaction problem
+Duplicate spring configurations being loaded?
+Retrieving records from MySQL in Java
+jsp:forward in Java without using JSP tag?
+Refactor this recursive method?
+How JPA (Hibernate) deal with transaction when fetching Object from database
+Button text in JTable renderer not visible. Why?
+Why does my application still run after closing main window?
+2 instances of the same table inside jsp
+Use AJAX instead of TagLib?
+Retain relative mouse position while resizing a JPanel in a JScrollPane
+How do I turn a String into a InputStreamReader in java?
+Polymorphism in JAX-RPC web services
+Message delivery when user is offline
+Should I catch exceptions thrown when closing java.sql.Connection
+Method Overloading. Can you overuse it?
+comparison of code performance, threaded versus non-threaded
+Open Browser window from Java program
+When using Spring Security, what is the proper way to obtain current username (i.e. SecurityContext) information in a bean?
+Netbeans GUI Designer & Fixed-Size Application Panels
+How to manage and deal with a group of developers with different knowledge levels?
+Alternative to deprecated javax.servlet.http.HttpUtils.parseQueryString?
+Java IPC: GUI and Command Line
+Jython 2.2.1, howto move a file? shutils.move is non-existant!
+How to disable array bounds checking in opensource Java?
+When using Eclipse with FindBugs can you mark a bug as not a bug and have it removed from the bug list?
+Should I expect problems when communicating via RMI between Java5 and Java6?
+Synchronising twice on the same object?
+How do I find the DNS servers in Android from a Java program?
+Refactoring static method / static field for Testing
+NoClassDefFoundError while trying to run my jar with java.exe -jar...what's wrong?
+How can I dynamically alter the Java LAF UIDefaults?
+How to set the working directory for a <junit> task to something other than the basedir?
+Why is SomeClass<? super T> not equivalent to SomeClass<T> in Java generic types?
+Using complex data types from Java in Axis webservice
+What is the best way to parse a date in MM/DD/YY format and adjust it to the current / previous century?
+Running Eclipse Junit Plugin tests with Junit 4.4 or newer -- why aren't tests detected?
+Programmatically generate an Eclipse project
+javax.jms does not exist - compiling activemq examples
+Java Generics (Wildcards)
+Why can't I call a method outside of an anonymous class of the same name
+Advanced Java Generics question: why do we need to specify redundant information
+Eclipse 3.4 TextViewer
+Jython and Java nested class
+Nested Java enum definition - does declaring as static make a difference?
+Not getting the proper size of an ArrayList in JSP
+Static nested class in Java, why?
+How far do you take code coverage?
+Getting ClassFormatError with EMMA?
+Design Pattern to apply conversion to multiple properties in multiple classes
+Preserve JTable selection across TableModel change
+How to determine database type for a given JDBC connection?
+Should javac find methods outside of an anonymous class of the same name?
+Would syntax for composition be a useful addition to Java?
+Map of collections
+How do I auto load a database jar in Groovy without using the -cp switch?
+HashSet.remove() and Iterator.remove() not working
+File Upload with Java (with progress bar)
+In Java, for a string x, what is the runtime cost of s.length()? Is it O(1) or O(n)?
+JSP bean tag for property that might not exist
+Referencing existing SWIG wrappers when creating new ones
+Automating unit tests (junit) for Eclipse Plugin development
+Is there a performance difference between a for loop and a for-each loop?
+JSTL forEach tag: problems with enumeration, and with understanding how it should work
+Using Stream Result with Struts2
+How to close a Java Swing application from the code
+Type mismatch with generics
+Transformation Failing due to xsl:include
+Can every float be expressed exactly as a double?
+Scanning Java annotations at runtime
+Why is tomcat looking for JSF classes?
+JFileChooser embedded in a JPanel
+JSF getValue() v.s. getSubmittedValue()
+How to add an xml element in Java 1.4
+what are the limitations of jython's PyObject.__tojava__ method?
+Override getContextPath in an HttpServletRequest (for URL rewriting)
+Why does synchronized notifyAll result in a IllegalMonitorStateException?
+Message Driven Bean with a Datasource
+How can I make Java back-end development faster? Or can I?
+Is there an easy way to clone the structure of a table in Oracle?
+Abstract class constructor access modifier
+How do I get rid of Java child processes when my Java app exits/crashes?
+Userland autoboxing?
+Mapping multi-Level inheritance in Hibernate
+What Ubuntu/Debian packages do I need to build with Java+OpenGL?
+Entry point for Java applications: main(), init(), or run()?
+Foosball result prediction
+Better Understanding an OC4J Stack Trace
+jQuery Ajax error resolution
+How can I provide context to a URLStreamHandler?
+Type safety: Unchecked cast
+Java BufferedReader back to the top of a text file?

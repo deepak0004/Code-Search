@@ -1,0 +1,4 @@
+template new getclass ( ) getresource filehelper.url2path output 0.0 file filehelper.copydirectory ; =
+exception string data pw fileoutputstream str.split read.readline fos bufferedreader while printwriter filereader file found [ catch ] if new ! read e f ( false ) i + int str 0.0 pw.write boolean 1.0 null true ; system.out.println { < =
+7.57 avail 442.0 internal g used k none j4200-1 2.44 mountpoint 1.0 t refer name 196.0 98.4
+reader mydata character tmp mylist else continue myreader catch ioexception if new ! system.out.print static myreader.read ( ) * filenotfoundexception + list 1.0 try : mystring ; < mylist.add = > integer.parseint string for filereader num1 myinputstream.read num2 e i arraylist int string.valueof equal 0.0 -1.0 char { } myreader.close

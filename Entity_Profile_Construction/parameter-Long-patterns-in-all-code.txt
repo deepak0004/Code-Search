@@ -1,0 +1,283 @@
+return of,1
+< > < > { },1
+println ( ) ;,1
+super ( ( ) ) ;,1
+< = = = =,1
+return ( value ) ;,1
+return new ( name ) ;,1
+arraylist < > = ;,1
+int = > > ;,1
+static (,1
+: : value : ;,1
+the { },1
+= ( int ) ( (,1
+the name the,1
+integer = ;,1
+< > system <,1
+name :,1
+value = ( ) ;,1
+( < >,1
+( = value = ),1
+arraylist of,1
+value = value ;,1
+out,1
+> new ( ),1
+: : : : the,1
+: the :,1
+static ( string,1
+( value + ) ;,1
+( ( ) out ) ;,1
+= ( value ) ;,1
+= value,1
+: : the,2
+int id ;,2
+string value = ( ) ;,2
+int value ;,2
+= ( out ) ;,2
+: version,2
+< name = value = >,2
+return list ;,2
+return out ;,2
+( name value ) ;,2
+: : value,2
+{ = ; },2
+< name = = = =,2
+string value ( ) ;,2
+< : id =,2
+: value,2
+< : name = = =,2
+< : name = = >,2
+= new ( is ) ;,2
+( new ( ) ),2
+value = ;,2
+of the,2
+( value ) ;,2
+( list < >,2
+this is,3
+main ( ),3
+< name = = =,3
+< > { },3
+( list ) ;,3
+= ( + ),3
+< > {,3
+name ( ),3
+< = value =,3
+catch ( ) { },3
+out = ;,3
+this ( ) ;,3
+< id = >,3
+< = name = > <,3
+( out ) ;,3
+return new < > ( ),3
+list < > = ;,3
+< id = = = >,3
+: : : ;,3
+< : value = >,3
+package,3
+< ( ) >,3
+( name ),3
+static int ;,4
+the is the,4
+: name,4
+value ;,4
+string,4
+: : ( : ),4
++ ) ;,4
+< : = = =,4
+name = ;,4
+< id = = =,4
+value,4
+static ( < > ) {,4
++ + ) ;,4
+< : = value =,5
+main :,5
+return the,5
+= value ;,5
+version,5
+< = = =,5
++ = + ;,5
+= id ;,5
+list = ( ) ;,5
+< : value = = >,5
+static ( ) {,5
+name,5
+( int ),5
+( : ) :,5
+( value = ),5
+< = = = = >,5
+return,5
+list < > ;,5
+< : value = =,5
+integer = ( ) ;,5
+< > =,5
+is = ( ) ;,5
+< : name = value =,6
+the of,6
+new ( ),6
+this,6
+( value = = ),6
+this the,6
+return ( ),6
+( < = ),6
+static int = ;,6
+( string : ) {,6
+< : = value = >,6
+< : name =,6
+: of,6
+int = { } ;,6
+{ : :,7
+< : name = =,7
+: the,7
+the is,7
+} ( = = ) {,7
+return name ;,7
+string name = ( ) ;,7
+of,7
+static {,7
+= ( new ( ) {,8
+< :,8
+< value > <,8
+= > ( ) ;,8
+out = ( ) ;,9
+< > : <,9
+< = = = >,9
+: : is,9
+< name = > <,9
+< : name = >,9
+< : id = >,9
+= name ;,9
+static ;,9
+= = ;,9
+( int ) {,9
+the of the,9
+( +,10
+( ) :,10
+< = > <,10
+< name =,10
+( {,10
+string name ;,10
+< : value =,10
+< > ( ) {,10
+new ( ) ) ;,10
+is,10
+out = new ( ) ;,10
+< name > <,11
+( < > ) {,11
+( tostring ( ) ) ;,11
+) {,12
+< > { } <,12
++ = ;,12
+= ( + + ) ;,13
+name =,13
+new ( ) {,13
+< > ( ) ;,13
+< name = value =,13
+< > ;,13
+< name = =,14
+< : id = = >,14
+( { } ),14
+: >,14
+return new ( ) ;,15
+>,15
+< : = =,15
+( > ),15
+new (,15
+< id = = >,15
+( ( ) > ),15
+) ) ;,15
+( name = = = ),16
+< version > <,16
+< > ( ),16
+< = =,16
+< : = >,16
+: ( ),17
+( name = = ),17
+( < ),17
+< : = = >,17
+< name = = >,18
+< : >,18
+the the,18
+< > ( : ),18
+< name = >,19
+= (,19
+< : =,20
+= { } ;,20
++,21
+( : ( ) ) {,21
+( ) ) ;,23
+),24
+return ( ) ( ) ;,24
+= new ( ),24
+= new ( this ) ;,25
+id,25
+= ( ),26
+= =,26
+( : ) {,27
+= >,27
+( name = ),27
+= + ;,28
+try,30
+the,31
+( this ) ;,31
+},32
+{ },34
+= new (,34
+( + + ) ;,36
+super ( ) ;,37
+new ( ) ;,37
+: : :,37
+( + + + ) ;,38
+( ( ) = ) {,38
+< = = >,39
+string ;,39
+< = >,41
+catch ( ),41
+( ( ) = = ),41
+) ;,43
+< =,44
+: :,47
+= new ;,48
+int ;,52
+( new ( ) {,54
++ + ;,55
+( = = ),55
+(,58
+return ( ) ;,61
+( ( ),63
+package ;,66
+( = ),70
+< > <,72
+( = = ) {,74
+} {,78
+{,79
+int = ( ) ;,80
+} ) ;,81
+( + ( ) ) ;,81
+( : ),94
+( ( ) ),95
+string = ( ) ;,96
+( = ) {,100
+< > = ( ) ;,104
+=,110
+( + ) ;,111
+:,121
+string = ;,121
+< >,125
+( ) {,128
+= ( ( ) ) ;,132
+( ( ) ) {,142
+int = ;,142
+( ) ( ) ;,147
+} catch ( ) {,151
+( new ( ) ) ;,162
+;,177
+( ( ) ) ;,181
+try {,192
+<,194
+( ),200
+= ( ) ( ) ;,205
+return ;,256
+= ;,305
+= new ( ) ;,424
+= ( ) ;,427
+( ) ;,728

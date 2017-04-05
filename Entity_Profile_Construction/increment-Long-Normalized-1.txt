@@ -1,0 +1,7 @@
+( ) ;,6
+int = ;,42
+string ;,138
+id ;,500
+string name ;,602
+boolean ;,753
+= + + ;,1000

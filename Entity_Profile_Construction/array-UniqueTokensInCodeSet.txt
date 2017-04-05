@@ -1,0 +1,53 @@
+packets.size packets.equals flavour for ( index ) counter + int 0.0 else ; { system.out.println < = if return
+int 1.0 2.0 3.0 4.0 10.0 5.0 7.0 8.0 [ { 9.0 ] = } nums
+const integer nlinks array of fout [ ] value ^ linkvar sizeof var ( ) * procedure blockread getlinkvalues single 0.0 : psinglearray maxsize ; = tsinglearray timeperiod
+nodelist.add hashset dijkstra integer source convert n.adjacentnodes.keyset tempset.removeall adjacentnodes.put else pathynode hashmap if new ! adjacent.keyset minnode n.adjacentnodes.get ( adjacent.containskey ) + node input 1.0 null 3.0 5.0 name : ; visited.add < = > adjacent.get answer.put adjacent2.put dijkstrahelper for destination sum min.intvalue ingraph adjacentnodes adjacent2 java.lang.integer.max_value min nodelist.get nodelist [ ] map temp set ingraph.get treemap length start i j adjacent arraylist inmatrix.length m n int tempset inmatrix 0.0 -1.0 answer 2.0 4.0 adjacent.put visited { system.out.println } return
+- 1.0 3.0 5.0 a b c d e 2.0 4.0 z
+while uniquearr.length hashset.toarray partition tmp pivot uniquearr uniqueset [ ] quicksort if e rankbagarr ( ) i index j k + compareto - int startquick 0.0 1.0 ; { < = return > object
+maxvalue1 maxvalue2 value2 value1 borderlayout.north 300.0 20.0 btn1.addactionlistener new package static void double panel.add ( ) jbutton + jtextfield jframe.exit_on_close frame.setdefaultcloseoperation true ; < = maxvalue1.gettext frame for frame.add textfieldtodouble [ panel frame.setvisible ] todouble jpanel i double.parsedouble int buildthegui maxvalue2.gettext 0.0 frame.setsize borderlayout.south jframe x btn1 { system.out.println
+t4 show [ ] t3.length-1 new ( length ) int 0.0 system.arraycopy 1.0 2.0 3.0 4.0 6.0 99.0 7.0 8.0 { 9.0 ; = } t3.length t3
+col bframe bframe.setlocation for jgo gridlayout row [ ] new static jpanel p.add ms bframe.setvisible ( count ) jbutton + bframe.setdefaultcloseoperation jframe.exit_on_close int p 0.0 1.0 810.0 jframe bframe.add bframe.setsize true ; 9.0 { < =
+rightpanel.setborder 50.0 for setenabled battons feedbackknop.rechterknop rightpanel gridlayout [ rightpanel.setlayout ] dimension new a b jpanel rightpanel.add ( false ) + emptyborder int 0.0 12.0 4.0 10.0 5.0 ; { < = setpreferredsize
+input static 1.0 string currentelections index [ ; + ] = int
+( ) { if this.in_total_results
+new stringbuffer ps db.preparestatement ( ) ps.setstring sb.append sb preparedstatement ; = sb.tostring ps.set ?
+regclass ( ) equipment not default character null nextval 10.0 create : id [ bigint ] table
+abstractclass new getdatatoexport ( ) 0.0 1.0 array subclass [ ; system.out.println ] =
+stack stacknode stacksize isempty 300.0 26.0 24.0 22.0 20.0 buffer 28.0 new void ( ) * + - push 16.0 14.0 1.0 12.0 null 3.0 10.0 5.0 7.0 ; 9.0 = 18.0 stackpointer pop 27.0 25.0 23.0 public [ stacknum ] value class 29.0 indexused previous int peek p 15.0 0.0 -1.0 13.0 boolean 2.0 11.0 4.0 lastindex v 6.0 8.0 { } 19.0 return 17.0
+base64binary h4siaaaaaaaeao29b2acszylji9tynt < >
+a new 12.0 ( ) [ ; system.out.println ] = int
+! field.gettext for ( ) jtextfield 0.0 field equals rows.add : { ; fields if
+sub a arrays.tostring string ( ) ; [ system.out.println = ] sub.split
+test byte ( ) classbytes clazz.newinstance resolveclass 0.0 com.mypackage.test [ ; ] = clazz
+padding layout_width layout_height android encoding version textview xmlns textsize xml : < = > ?
+exception c.close listview c.getcolumnindexorthrow body msglist.get view gettext smsmanager.getdefault r.layout.list_item c.getcolumnindex catch new adapter destinationnumber smsmanager c.movetofirst query ( ) * + list messages.add msglist.size null c.getstring final messages try ; findviewbyid < = msglist > r.id.messages cursor super.oncreate string for getsms setcontentview hasdata messages.setadapter messages.setonitemclicklistener m.sendtextmessage getapplicationcontext uri.parse c address e i mainactivity.this arraylist m uri int textview 0.0 arrayadapter boolean r.layout.main c.movetonext onitemclicklistener { system.out.println getcontentresolver savedinstancestate } return
+singlestring string searcharray for ( false ) singlestring.equals true : ; if return searchstring
+0.0 { }
+
+response.contenttype def ( ) response.setheader viewimage response.outputstream photo.filetype response.outputstream.flush { ; < = photo.file return
+player.length for ( i ) j playerlist.get + int 0.0 1.0 min round ; { [ system.out.println < = if ] player
+updatecommand new updatequery.put basicdbobject ( ) newshoppingitem updatequery result true ; writeresult shoppinglists.update = updatecommand.put
+1.0 3.0 : { [ } ]
+a 0.0 b 1.0 c 2.0 d 3.0 temp_array [ ] =
+new temp static string temp_array ( for ) i output_list.get temp.split arraylist + int letter.size 0.0 letter ; [ < = ] >
+{ ; }
+data num system.in for while scanner [ ] if new ! system.out.print ( ) i + int input 0.0 1.0 100.0 input.nextint ; { system.out.println < = >
+android.r.layout.simple_list_item_1 notifydatasetchanged super.oncreate string listview show r.id.button1 button editmessage setcontentview array list1.getadapter v.getcontext r.id.edittextwebsite toast.length_long [ ] setlistdata r.id.listview01 editmessage.gettext new website toast.maketext onclicklistener ( this ) button.setonclicklistener list1 arrayadapter 0.0 system.arraycopy r.layout.main la final array2 ; { findviewbyid list1.setadapter edittext savedinstancestate = tostring } baseadapter array.length
+new data for ( i ) holder + ray counter int 0.0 ray.length [ ; < ] = } return
+new inputs int 0.0 14.0 1.0 -1.0 10.0 [ ; { ] = }
+while result iterator [ catch itr.hasnext ] new e double itr ( itr.next ) i + double.parsedouble int arr.size 0.0 arr.iterator indexoutofboundsexception try ; { system.out.println < = tostring } > return
+isempty q.length else [ if ] new item % f ( ) * + q system.arraycopy 0.0 r 1.0 size 2.0 anytype { ; copyq = q.length-f object
+new ( creader ) args 0.0 file null scanner [ ; = ]
+nullpointer for excp. getprioritet s.length [ prio ] if temp ( i ) + - int temp.getprioritet node 0.0 s 1.0 ; { < = return temp.getelement
+inputfile col in.close data matrixlength while scanner mrbug new system.out.print in.hasnextline in matrixrows ( ) + lineget.length postition ; < = lineget.charat data.length in.next txtfile for constructs title computer and row [ placeholder class ] a length lineget i gets room int the with 0.0 startingpoint bug initialposition char days time } return
+struct id_t sender_id_t_ % ( ) uint32_t typedef sample id_v1_t rename 32.0 char phy_idx unsigned [ ; { id ]
+struct sender_id_t_ use foo_array_getitem error type undefined incomplete top function new_foo_array 785.0 of parameter test_wrap.c warning [ foo_array_setitem ] value ` pointer in sizeof level is dereferencing an 793.0 at 792.0 application 795.0 invalid : to exec return
+this.lb synchronized data interruptedexception ub p2.join this.ub 66.0 catch if val new this.data p1.join ( ) + 14.0 p2.start 1.0 33.0 3.0 5.0 7.0 try _value 9.0 77.0 ; < = _min data.length p1 p2 min.value for min 21.0 88.0 intobj 44.0 [ ] value 29.0 proc e i p1.start int 0.0 2.0 compareset lb 99.0 6.0 8.0 55.0 { system.out.println }
+arr 0.0 1.0 2.0 3.0 4.0 [ ; ] =
+a maxcount maxvalue for ( count i ) j + a.length int 0.0 ; { [ < = if ] > return
+col arraylist.add string line for in.nextline while line.charat array scanner catch [ row ] if 2337.0 new ! system.out.print in line.length ( ) filenotfoundexception arraylist + e1 int 0.0 null char try ; { system.out.println < = } > array.length
+string br.close br.readline wordlist.size wordlist.add bufferedreader while br filereader wordlist wordlist.toarray catch [ ioexception ] new ! e finally ( words ) arraylist list ex null try ; { < = word } >
+for button [ ] new ispositionempty ( this ) i + int n 0.0 imageview final counti true 7.0 8.0 position ; { < = countn board
+string for button.getid button [ ] log.d new ispositionempty ( this false ) i button.setonclicklistener boardstring + int n string.valueof 0.0 imageview final counti buttonid view.onclicklistener 8.0 ; { < = countn board
+scan12 scan11 system.in float while bal bank balance getcustomer limit scanner scan11.nextint case new system.out.print scan.nextint scan132.nextfloat ( ) * + 1.0 3.0 name deposit : ; = cid string cbalance cname scan switch scan132 scan1 [ ] c i j k int scan1.nextint 0.0 scan12.next s 2.0 system.out.println } cust customer withdraw
+for integer [ ] arrays.deeptostring new list.get ( ) i j * arraylist + list int a2 list.add 0.0 1.0 4.0 ; { system.out.println collections.shuffle < = > 17.0

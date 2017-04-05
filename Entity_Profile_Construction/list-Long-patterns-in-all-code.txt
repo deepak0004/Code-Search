@@ -1,0 +1,292 @@
+( list < > ) {,1
+( ) < >,1
+list < string > = ;,1
+int id ;,1
+id = >,1
+id =,1
++ = + ;,1
+list < > = ( (,1
+< name >,1
+list list = ( ) ;,1
+[ ] null,1
+for ( : list ) {,1
+( object ) {,1
+size + + ;,1
+arraylist < > ;,1
+= this ;,1
+string name,1
+< > = ;,1
+return ; },1
+< > = null ;,1
+arraylist < > ( ) ;,1
+arraylist ;,1
+list < string > ;,1
+= list ;,1
+: {,2
+< class = > <,2
+null ( ),2
+* if,2
+return list ;,2
+< value = > <,2
+< name = type = >,2
+< string > ;,2
+list < > = ;,2
+list = new ( ) ;,2
+< : name = = >,2
+name = =,2
+( layout ) ;,2
+: ),2
+} } ;,2
+< : if = >,2
+= new string [ ] ;,2
+< type = id =,2
+( ) ; *,2
+* to this,3
+string ( ) ;,3
+( list ) ;,3
+: { },3
+|,3
+catch ( ) { },3
+< id = >,3
+[ ] = [ ],3
+return = = null ;,3
+for ( string : ),3
+object = ;,3
+int,3
+< = = = =,4
+if ( ! ) {,4
+{ } { },4
+object,4
+< : = : =,4
+list = ( ) ;,4
+< : name = =,4
+( value = = ),4
+return ( ),4
+= { },4
+object ;,4
+= new ( null ) ;,4
+= + ( ) ;,4
+list < > ( ) ;,4
+null,4
+( name =,4
+< class name = = >,5
+= value ;,5
+= id ;,5
+< list >,5
+return id ;,5
+| | | |,5
+string,5
+( id ) ;,5
+name =,5
+object = ( ) ;,5
+< id > <,5
+result = ;,5
+} *,5
+string result = ;,5
+< :,5
+} ;,5
+return,5
+list < > ;,5
+< string >,5
+null ) ;,5
+string [ ] = {,5
+return value ;,5
+( string ),5
+| |,5
+} ( ) ;,5
+< : name = type =,5
+( ) ( true ) ;,6
+: id =,6
+< = = = = =,6
+for ( object : ),6
+= new ( file ) ;,6
+< class = >,6
+* :,6
+= = ;,6
+( name = = true ),6
+( value ) ;,6
+( name ) ;,7
+id ;,7
+< : value = = >,7
+( ! = null ),7
+return name ;,7
+= {,7
+< : id =,7
+= ( ) ( ),7
+return ( ( ) ) ;,7
+if ( > = ),7
++ = ( ) ;,8
+>,8
+( result ) ;,8
+< : = = = >,8
+class {,8
+* this,8
+= name ;,8
+( ! = ) {,8
+if ( ( ) < ),9
+if ( > ) {,9
+string [ ] ;,9
+< value > <,9
+* return,9
+for ( string : ) {,10
+( +,10
+string name ;,10
+result = ( ) ;,10
+for ( : ),10
+new ( ( ) ) ;,10
+< > ;,10
+< name = = >,11
+< name > <,11
+< : name = >,11
+= ( null ) ;,11
+= new ( new (,11
+< > ( ) {,11
+( new ( ),11
+[ ;,11
++ = ;,11
+if ( > ),11
+) {,12
+string =,12
+if ( ! = ) {,12
+if ( < ),12
+* *,12
+* to,13
+( name = = = ),13
+= new arraylist ( ) ;,13
+if ( ( ) > ),13
+} catch ( ) { },13
+) ) ;,13
+new ( ),14
+return result ;,14
+= new ( ),14
+= ( + ) ;,14
+catch ( exception ) {,14
+< !,14
+< name = =,15
+string = null ;,15
+catch ( exception ),15
+< class =,15
+< id = class = >,15
+< = = = >,16
+( name = = ),16
+( true ) {,16
+< : value =,16
+[ ] =,16
+return new ( ) ;,17
++,17
+< = =,18
+< = > <,18
+< name =,18
+catch ( ),18
+[ ] ( ) ;,18
+catch ( ) {,18
+= ( [ ] ) ;,18
+( ) add ( ) ;,18
+< name = >,19
+< : = >,19
+< : >,19
+( ! = null ) {,19
+= (,19
+: = >,19
+< : = = >,20
+if ( ( ) ),20
+< name = value =,20
+return null ;,21
+for ( : ) {,21
+( [ ] ( ) ),22
+),23
+-,23
+if ( ),23
+= >,23
+add ( ) ;,23
+[ ] = { } ;,23
+< > :,23
+{ },24
+id,24
+return ( ) ( ) ;,25
+: ( ),26
+},26
+< : =,26
+= new ( this ) ;,26
+= new ( ) {,26
+( ) ) ;,26
+= new (,26
+( ) ( ),27
+( name = ),27
+: =,28
+( null ) ;,30
+= [ ] ;,30
+return true ;,31
+= + ;,31
+if ( = = ),31
+[ ] = ;,31
+try,31
+if ( = = ) {,32
+( this ) ;,33
+if ( = = null ),33
+if ( ) {,34
+< = >,35
+( ( ) ),35
+if ( ! ( ) ),35
+string ;,37
+new ( ) ;,38
+= true ;,40
+= ( ),41
+< =,41
+) ;,42
+[ ],42
+< = = >,43
+if ( ! = null ),45
+( = = ),45
+: : :,45
+( = ),46
+( [ ] ) ;,49
+( + + ) ;,52
++ + ;,53
+- -,53
+( new ( ) {,53
+int ;,55
+return ( ) ;,57
+*,59
+( ( ) + ) ;,61
+( + ( ) ) ;,62
+[ ] = [ ] ;,63
+package ;,65
+[ ] = ( ) ;,69
+if ( ( ) ) {,72
+{,73
+int = ( ) ;,73
+< > <,73
+= null ;,74
+} catch ( exception ) {,75
+} ) ;,78
+} {,78
+(,81
+( : ),83
+=,84
+( ) ( ) ;,84
+( ( ) ) {,86
+} catch ( ) {,88
+string = ( ) ;,89
+( true ) ;,94
+( + ) ;,97
+string = ;,98
+( ( ) ( ) ),99
+< > = ( ) ;,103
+:,119
+< >,121
+( ) {,134
+( new ( ) ) ;,139
+int = ;,150
+= ( ) ( ) ;,158
+;,167
+( ( ) ) ;,168
+<,189
+try {,192
+= ( ( ) ) ;,208
+( ),222
+return ;,228
+= ;,230
+= ( ) ;,398
+= new ( ) ;,407
+( ) ;,707

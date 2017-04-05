@@ -1,0 +1,9 @@
+maxvalue1 maxvalue2 value2 value1 borderlayout.north 300.0 20.0 btn1.addactionlistener new package static void double panel.add ( ) jbutton + jtextfield jframe.exit_on_close frame.setdefaultcloseoperation true ; < = maxvalue1.gettext frame for frame.add textfieldtodouble [ panel frame.setvisible ] todouble jpanel i double.parsedouble int buildthegui maxvalue2.gettext 0.0 frame.setsize borderlayout.south jframe x btn1 { system.out.println
+integer.parseint string clockout 30.0 23.0 22.0 else convertedtimeout [ 45.0 ] if hours splitfields double minutes ( ) + int time.split 15.0 0.0 1.0 31.0 53.0 7.0 8.0 ; time < | = > 37.0 return
+new d double unlimited count scan ( system.in ) sum + while int ave 0.0 scanner scan.hasnext ; scan.nextdouble system.out.println = return
+1.234567E7 1.2345679E7 1.2345678E7 500.0 133.87 123.0
+accountnumber in.hasnextint line & ( ) console.next + while 3.0 accounttries accountnumber.length accountlength 8.0 system.out.println ; < = if }
+cursor string columns for result c.isafterlast key_swimmerlaps c.getdouble [ ] new ! c c.movetofirst ( key_sponsor database_table ) + 0.0 null c.movetonext ourdatabase.rawquery { ; = } return
+@ double.valueof this.c06_saldoinicial c06_saldoinicial.trim c07_totaldebitos c08_totalcreditos.trim param else if c06_saldoinicial ! new set & double ( this.c08_totalcreditos ) * multicashencabezado.c07_totaldebitos the 0.0 null equals c07_totaldebitos.trim c08_totalcreditos ; to { = } return
+csv1 reader listbinding xmlns xml smooks-resource-list class version separator : < fields beanid = > ?
+data csv1 reader bindings createonelement wiring der xmlns default xml property smooks-resource-list beanidref class value version separator jb : < fields beanid = > ?

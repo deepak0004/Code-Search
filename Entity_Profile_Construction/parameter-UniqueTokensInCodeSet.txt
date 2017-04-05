@@ -1,0 +1,10 @@
+arr new ( ) arraylist integer ; < n_elements = >
+super.oncreate static r.id.text label.settext ( ) label system.loadlibrary nativeadd integer.tostring textview 0.0 setcontentview 1.0 r.layout.main contador ; { findviewbyid savedinstancestate =
+securityexception illegalargumentexception method ( e.getactioncommand this ) nosuchmethodexception invocationtargetexception method.invoke e1 getmethod 0.0 this.getclass illegalaccessexception try { ; catch system.out.println = }
+
+here integer.parseint parmstringred color string 150.0 parmstringgreen program title body head output param of html value parms height new b anapplet g ( getparameter ) is + my int n p the with r width name : 100.0 ; parmstringblue system.out.println setbackground < = > applet
+property name < = value properties >
+new student ( familyname ) + system.out this.familyname cs s1.showdetails total modulemark 42.0 this.name name course system.out.println ; = s1 return this.modulemark
+stylesheet template select xsd match message version xsi xsl xmlns param name : copy-of < = > dc
+foo ( ) i index foo.setxid updatewithcontex { ; foo.setappid return
+new package string ( ) arraylist list list.add scjp.collection.list 10.0 lastindexof ; system.out.println < = list.lastindexof >

@@ -1,0 +1,253 @@
+: {,1
+int id ;,1
+[ ] = input ;,1
++ = + ;,1
+( - ) ;,1
+double = [ ] ;,1
+= new [ size ] ;,1
+[ ] = + ;,1
+add ( [ ] ) ;,1
+size + + ;,1
+[ ] = [ ],1
+[ ] = ; },1
+static string [ ] ;,1
+double [ ] ;,1
+string [ ] =,1
+[ ] = >,1
++ = [ ] ;,1
+return [ ] [ ] ;,1
+} else,1
+static final int = ;,1
+= new string [ ] ;,1
+int [ ] = {,1
+if ( < > ) {,2
+int result = ;,2
+],2
+if ( > = ) {,2
+= [ ( ) ] ;,2
+[ ] + + ;,2
+: : : in,2
+[ ] = =,2
+{ } } ;,2
+< id = > <,2
+* for,2
+string [ ] = {,2
+byte [ ] ;,2
+if ( [ ] > ),2
+int = - ;,3
+[ ] : in,3
+input = ( ) ;,3
+while ( < ) {,3
+catch ( ) { },3
+= new ( data ) ;,3
+while ( < = ) {,3
+= [ ] [ ] ;,3
+string [ ] ;,3
+[ [ ],3
+for ( string : ),3
+static int ;,4
+int [ ] ;,4
++ + +,4
+while ( ! = ) {,4
+static = new ( ) ;,4
+= new ( file ) ;,4
+while ( < ),4
+* of,4
+name = ;,4
+int =,4
+if ( > = ),4
+[ ] = null ;,4
+[ ] [ ] = {,4
+string = [ ] ;,4
+: [,4
+int = [ ] ;,5
+for ( object : ) {,5
+[,5
+if ( < = ),5
+static int = ;,5
+( data ) ;,5
+arraylist < > ;,5
+} *,5
+} ;,5
+if ( ! = ),5
+return,5
+static ;,5
+null,5
+return [ ] ;,5
+return value ;,5
+- - -,6
+: id =,6
+int = + ;,6
+= [ ] ;,6
+( + [ ] ) ;,6
++ ) ;,6
+object = ( ) ;,6
+{ : : },6
+( new (,6
+[ ] [ ] = ;,6
+in = new ( ) ;,6
+( ) ),6
+int,6
+[ ] = [ ] ;,7
+double = ( ) ;,7
+( [ ] ) {,7
+double ;,7
+if ( > ) {,7
+return name ;,7
+static {,7
+( [ ] + ) ;,8
+[ ] =,8
+boolean ;,8
+else if ( ( ) ),8
+ioexception {,8
+: : : error,8
+= name ;,8
+: [ ],8
+new ( ) ) ) ;,8
+double = ;,9
+= ( ) [ ] ;,9
+( +,9
+boolean = true ;,9
+( [ ] ),9
+< : name = >,9
+else if ( = = ),9
+if ( < = ) {,9
+if ( > ),9
+for ( string : ) {,10
+for,10
+for ( : ),10
+input = new ( ) ;,10
+= [ ] ( ) ;,10
+final int = ;,10
+new (,10
+* *,10
+= - ;,10
+[ ] ( ),11
+[ ] ( ) ;,11
+if ( ! = ) {,11
+if ( < ),11
++ = ;,11
+= ( + ) ;,12
+= new [ ] ;,12
+[ ] ;,12
+= ( [ ] ) ;,12
+) ) ;,12
+< name = > <,13
+( new ( ),13
+return result ;,14
+catch ( exception ) {,14
+final = ( ) ;,15
+string = null ;,16
+= false ;,16
+[ ] [ ] [ ],16
+} else if ( ) {,16
+while ( true ) {,16
+catch ( ioexception ),16
++,17
+< : >,17
+if ( < ) {,17
+if ( ) {,18
+= (,18
+( ) add ( ) ;,18
+[ ] [ ],20
+new ( ),20
+[ ] = ;,20
+[ ] = { } ;,20
+= new int [ ] ;,20
+} {,21
+boolean = false ;,21
+return null ;,22
+int = = ;,23
+add ( ) ;,23
+= + ;,25
+},25
+( + + + ) ;,25
+void ( ) {,25
+return false ;,26
+= new ( this ) ;,26
+* the,26
+{ },28
+while ( ( ) ),28
+else {,28
+: =,28
+( false ) ;,30
+return true ;,31
+= true ;,31
+if ( = = ) {,31
+- -,31
+- - - -,31
+try,31
+if ( = = ),32
+[ ] ( ) ) ;,32
+( + + ) ;,33
+if ( = = null ),33
+[ ],33
+( this ) ;,34
+if ( ! ( ) ),34
+if ( ( ) ),34
+super ( ) ;,35
+< name = >,37
+for ( : ) {,37
+< : = = >,37
+( [ ] ) ;,37
+( ( ),39
+catch ( ),39
+( null ) ;,39
+: = >,39
+new ( ) ;,41
+string ;,41
+else,41
+} catch ( ioexception ) {,42
+) ;,43
+[ ] = new [ ],43
+( ( ) ),44
+: : :,44
+if ( ! = null ),46
+< : =,48
+int ;,48
++ + ;,50
+*,51
+{,53
+= ( ),54
+= new (,61
+( ( ) + ) ;,63
+} else {,63
+[ ] = ( ) ;,64
+package ;,65
+} catch ( ) {,66
+( new ( ) {,67
+( + ( ) ) ;,69
+(,71
+return ( ) ;,73
+while ( ( ) ) {,74
+= null ;,77
+} catch ( exception ) {,78
+} ) ;,79
+( : ),83
+< > <,86
+string = ( ) ;,90
+< = >,92
+int = ( ) ;,93
+( true ) ;,96
+if ( ( ) ) {,96
+( + ) ;,97
+string = ;,103
+=,116
+( ) {,126
+:,126
+int = ;,132
+( new ( ) ) ;,135
+( ) ( ) ;,141
+< >,144
+= ( ) ( ) ;,160
+;,162
+( ( ) ) ;,172
+try {,192
+<,193
+= ( ( ) ) ;,201
+= ;,211
+return ;,212
+( ),277
+= ( ) ;,418
+= new ( ) ;,459
+( ) ;,707

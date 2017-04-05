@@ -1,0 +1,251 @@
+< : value = data =,1
+: {,1
+[ ] : class,1
+: this,1
+( ) = ;,1
+static string = ;,1
++ = + ;,1
+= ( + +,1
+double = (,1
+double = * ;,1
+* = ;,1
++ = ( ) + ;,1
+static ( [,1
+[ ] = + ;,1
+| | | | : :,1
+= ( int ) ;,1
+double,1
+void ( int ),1
+= ( int ) (,1
+: true,1
+* = ( ) ;,1
+return ; },1
+data ;,1
+next = null ;,1
+* the the to,1
+double [ ] [ ] ;,1
+next = ( ) ;,1
+| | | | :,1
+* @ < >,1
+int [ ] [ ] ;,2
+{ } { },2
+else if ( ) {,2
+= ( int ),2
+if ( > = ) {,2
+this ) ;,2
+static,2
+( ) for,2
+= ( * ( ),2
+static void ( ) {,2
+return ( + ) ;,2
+data = ;,2
+* @ ( ),2
+double [ ] ;,2
+} ),2
+{ } } ;,2
+( this ) {,2
+* @ return,2
+double = ( double ),2
+version,3
+( null,3
+= ( ) ( {,3
+( double ) {,3
+if ( [ ] ),3
+string = + ;,3
+static = new ( ) ;,3
++ = [ ] ;,3
+return,3
+package,3
+int,3
+: [,3
+* the to the,4
+( * * ) ;,4
+if ( ! ) {,4
+: [ {,4
++ + + ;,4
+| | | |,4
+double =,4
+* @ the,4
+static class {,4
+static {,4
+value,4
+int = [ ] length ;,4
+int = [ ] ;,5
+* @ the to,5
+= value ;,5
+if ( < = ),5
+* the in,5
+if ( & & ) {,5
+while ( true ),5
+string result = ( ) ;,5
+class,5
+* @ return the,5
+result ;,5
+= +,5
+< : = = =,5
+string result = ;,5
+string = + + ;,5
+< : = class =,5
+static ;,5
+return value ;,5
+while ( ! = ),5
+@ ( value = ),5
+double = ( ) ;,6
+( ( ) +,6
+if ( > ) {,6
+result = ;,6
+< > < = > <,6
+return [ ] ;,6
+= ( + + ) ;,7
+= ( ( ) ),7
+while ( ! = null ),7
+while ( ! ) {,7
+double ;,7
+< > = (,7
+in = new ( ) ;,7
+< class = = >,7
+void ( ),7
+|,8
+if ( = = true ),8
+return + ;,8
+string [ ] [ ] ;,8
+= = = ;,8
+double = ;,9
+@ (,9
+if ( < = ) {,9
+in :,9
+= [ ] ;,10
+< : = = = =,10
+( new ( ),11
+setvisible ( true ) ;,11
+( = = ) ;,11
++ = ;,11
+) {,12
+the,12
+to the,12
+result = ( ) ;,13
+in,13
+if ( ! = ) {,13
+) ) ;,13
+return result ;,14
+to,14
+else if ( ( ) ),14
+( new (,14
+while ( ),14
+if ( ) {,15
+< !,15
+if ( > ),15
+< : = value =,16
+string = null ;,16
+= new [ ] ;,16
+@ ( {,16
+while ( true ) {,16
+if ( < ) {,17
+= ( [ ] ) ;,17
+: [ ],17
+= * ;,18
+< class =,18
+( ) { },18
+< > ( : ),18
+void ( ) {,19
+: = >,19
+( ) add ( ) ;,19
+< ! >,20
+= =,21
+return null ;,22
+< = > <,22
+add ( ) ;,23
+} {,23
+while ( ( ) ),23
+: >,23
+new ( ) ( ) ;,24
+* @,24
+),25
+return ( ) ( ) ;,25
+},26
+< : = >,26
+= new ( this ) ;,26
+< : = = >,27
+else {,28
+: =,29
+: ( ),30
+= + ;,30
+return true ;,31
+if ( = = ) {,31
+if ( = = ),31
+[ ] [ ],32
+( + + ) ;,32
+[ ] ;,33
+( this ) ;,33
+if ( = = null ),33
+( ) ( ),36
+@ ( = = ),37
+= ( ),38
+( null ) ;,38
+= true ;,38
+( (,40
+[ ],40
+< : =,41
+= (,41
+else,41
+new ( ) ;,42
+< = =,43
+( + + + ) ;,44
+[ ] = ;,45
+( [ ] ) ;,45
+) ;,46
+new ( ),47
+if ( ! = null ),47
+@ ( = ),47
+< =,48
+@ ( ),48
++ + ;,49
+for ( : ) {,50
+if ( ( ) ),50
+< = >,51
+int ;,51
+[ ] = [ ] ;,61
+(,61
+*,62
+} else {,63
+package ;,66
+( new ( ) {,66
+[ ] = ( ) ;,69
+< = = >,71
+return ( ) ;,72
+while ( ( ) ) {,74
+= null ;,76
+} ) ;,78
+: :,78
+( + ( ) ) ;,83
+( true ) ;,87
+string = ( ) ;,87
+string = ;,88
+< > <,88
+int = ( ) ;,92
+( + ) ;,96
+( : ),97
+:,100
+= + +,102
+=,103
+< > = ( ) ;,103
+( ) {,105
+if ( ( ) ) {,107
+( ) ( ) ;,122
+int = ;,125
+< >,134
+( new ( ) ) ;,139
+} ( ) {,147
+= ( ) ( ) ;,149
+( ( ) ) ;,183
+<,190
+( ),191
+;,193
+@,210
+= ( ( ) ) ;,215
+return ;,228
+= ;,229
+{,238
+= ( ) ;,407
+= new ( ) ;,414
+( ) ;,722

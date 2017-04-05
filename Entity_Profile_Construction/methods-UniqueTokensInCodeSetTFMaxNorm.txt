@@ -1,0 +1,14 @@
+synchronized,1000
+wait,1000
+other,1000
+void,1000
+interruptedexception,1000
+(,1000
+),1000
+compute,1000
+public,1000
+variable,1000
+try,1000
+;,1000
+catch,1000
+mark,1000

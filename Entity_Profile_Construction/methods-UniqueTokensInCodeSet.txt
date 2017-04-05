@@ -1,0 +1,1 @@
+synchronized wait void interruptedexception e other.mark ( ) compute public variable try ; catch

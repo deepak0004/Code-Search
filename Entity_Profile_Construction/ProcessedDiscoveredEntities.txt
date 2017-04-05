@@ -1,0 +1,16 @@
+condition
+parameter
+malloc
+method
+string
+double
+arguments
+while
+variables
+decrement
+increment
+structure
+list
+loop
+function
+array

@@ -1,0 +1,2 @@
+add new a ( ) arraylist list 0.0 mylist animal ; < mylist.add dog = > genericstest
+new util.makestring test ( ) i integer abstract + o t t.getvalue { system.out.println ; < = class value > return

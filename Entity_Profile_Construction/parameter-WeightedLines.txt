@@ -1,0 +1,501 @@
+< ( ) ;,145
+int = ( list new < > ( ) {,146
+< string string > = ( ) ;,147
+= new < string > ( ) ;,147
+list = ( ) ( ) ;,147
+( new < > ( ) ) ;,147
+= ( tostring ( ) ) ;,147
+super ( ( ) ) ;,148
+( list = = ) {,148
+( ( ) > ),148
+( ) > = ( ),148
+( tostring ( ) ) ;,148
+int out = ;,149
+( < = ),149
+< : id =,149
+return ( < > ) ( ) ;,149
+> new ( ),149
+> ( : ),149
+> < : ( : ),151
+( < ),151
+( ( ) out ) ;,151
+( out = ) {,152
+= new < > ( ) ;,153
+( : list ),154
+return new < > ( ),154
+{ } < = > <,154
+< = = = =,156
+( < > ) {,156
+< > ( ) {,156
+( = > ) > ( ) ;,156
+list = ( ) ;,156
+= { } of { },157
+< : version = : = : = : = : = >,157
+< = = =,158
+< : id = = = > < > { } <,158
+list ( ) ;,158
+< string string > = new < string string > ( ) ; < >,158
+int = > > ;,159
+: : ( < > ) ( < > ),159
+out = ( ) ;,159
+< > = ( new < > ( ) {,159
+< = =,163
+: the try,163
+( println ( ) ),163
+list < > = ( list < > ) ( ) ( new ( ) {,163
+out ) {,163
+< > = new < > ( new < > ( ) {,164
+( ( ) list < > ) ;,165
+list < string > = ( ) ;,165
+= new < < > > ( ) ;,167
+< : id = >,167
+list < > list = ( new new ) ;,168
+< : = = = > <,168
+< = = = = >,169
+static int = { } ;,169
+= new ( is ) ;,169
+: the :,169
+: : : : : value,169
+: : the,169
+is = new ( ) ;,169
+return list ;,169
+return ( list < > ) ;,171
+( = > println ( ) ),171
+: >,172
+< > ( ),172
+< ( ) >,172
+( value = = = ) int,173
+list < > = ( ) (,173
+= { ( name = ) } ),174
+< < > > = ( ) ;,174
+return out ;,175
+< = = = > < = > : <,176
+static ( string string string string ),176
+list < > = new < > ( ) ;,176
+< < string > > = < < string > > ( ) ;,177
+< > ( < > ) ;,179
+list < > ) {,181
+= { ( name = ) },181
+out = ;,181
+( name = = { } ),181
+static ( int int ),181
+< id = >,181
+is = ( ) ;,181
+list < > list = ( ) ;,183
+string name = ( ) ( ) ;,183
+= ( + name + ) ;,183
+value = new ( ) ;,184
+= + + value ;,184
+new main ( ) ( ) ;,184
+< < > > add ( < > < > ) {,184
+: : value : ;,185
+list < > list = ( list < > ) ( ) ;,185
+< = > id <,185
+< = > < = = >,186
+< > new <,186
+( < >,187
+< > < > ( < > ) ;,187
+( + value ) ;,188
+( value + ) ;,188
+out out int out int out ),189
+= { value },190
+> =,190
+< > ; <,190
+< is { } >,192
+value = new ( ) ; < >,192
+list < > = ;,192
+string value ( ) ;,192
+int arraylist = { } ;,193
+< > =,193
+catch ( ) { },194
+< = > < = > < = > <,194
+< > < = = > <,194
+( ( ) ) name = ;,194
+return ( value ) ;,196
+( value = ) string,196
+string name = new string ;,196
+( new arraylist < string > ( ) ) ;,197
+return new ( name ) ;,199
+: the,199
+: : is,199
+( name = ) ) {,199
+< value = > { } <,199
+= ( ) value ;,199
+= ( value ) ;,199
+( ( this ) name ) ;,199
+( name = = = = ),202
+string name = ( ) ;,202
+( = value = ),203
+{ : :,204
+( int ),204
+list < > ( ) value ) {,204
+list < > ;,204
+( list < >,204
+list < string > = new arraylist < string > ( ) ;,205
+static < > ( list < > ) { },206
+( string name ) {,206
+( + + + + + ) ;,206
+id = name = = = =,207
+< : value = = = >,207
+< : = value = = >,207
+( new arraylist < > ( ) ) ;,207
+( value = +,208
+list < string > list = new arraylist < string > ( ) ;,208
+return the,208
+( value string ),208
+= { } ;,208
+{ = ; },208
+list < > =,208
+( + new {,208
+value + = ;,208
+= ( arraylist < > ) ( ) ;,211
+( name = ) {,214
+< name = > { } <,215
+int id ;,216
+( {,216
+string ) {,216
++ + ) ;,216
+int value ;,217
+( = ) string name,217
+static int = ;,217
+< : = value = >,217
+< : id = name = > <,220
+( new integer ( ( ) ) ) ;,222
+( ) of ;,222
+list < > = new arraylist < > ( ) ;,222
+< : : = > name <,225
+( out ) is,226
+( + ( ) + + ) ;,226
+< name = = = =,226
++ = + ;,226
+: : : ;,226
+main ( : ),227
+: version,227
+< name = = id = >,228
+int = ( ( ) + ) ;,230
+: : ;,230
+( + + ( ) ) ;,232
+return new ( ) {,232
+( + ( ) + ) ;,232
+< : value = >,232
+the value ; < > : <,233
+( arraylist ( ) < ),233
+= ( int ) ( (,234
+= ( + + ) ;,234
+this the,235
+>,236
+return the value ( ) the,238
+( int = ; < ( ) ; + + ) {,238
+( ) ( new ( ) {,238
+( arraylist ( ) > ),239
+< = value =,240
+= ( new ( ) {,240
+< > < id = = name = value = >,240
+static int ;,242
+value ( ),242
+= new < string integer > ( ) ;,242
+: return ; ;,244
+= ( + ),244
+return ( < integer > ) ( ) ;,244
+( ( ) + ( ) ) ;,244
+( ) ( ( ) ( ) ) +,244
+< > system <,245
+new ( ) ) ;,246
+( ( ) = ) {,246
+the ( ) of < >,248
+( new ( ( ) ) ) ;,248
+value = ;,248
+: ( ) of is,250
+< = name = > <,251
+( ) of,254
+return ( ),254
+return,254
+= new ( ( ) ( ) ) ;,254
+) ) ;,254
+< > < = value = name = > <,256
+= ( ) ( ( ) ( ) ) ;,256
+= ( ) ( ( ) ) ;,258
+= new < integer > ( ) ;,258
+= ( ( ) ( ) ) ;,258
+static ( string,260
+< : name = value = > <,261
+( static ),266
+( ( ) = = ),266
+< name = =,267
+},270
+return the name ( string ) of the,270
+the of this this list is list of { },270
+< name = > <,272
+out out,272
+name : the ( ) of < > the,274
+< = name = value = >,274
+< > is the of : <,275
+list < integer > = ( ) ;,277
+< value > <,277
+= id ;,278
+( name ),278
+< arraylist > = ;,279
+arraylist < > = ;,279
+this ( ) ;,280
+this is,281
+< > { } ;,282
+int = { } ;,282
+string = ( ) tostring ( ) ;,284
+name = ;,284
+the { },288
+return new < > ( ) {,290
+value :,290
+< > { },290
+: : : : the,290
+: value,290
+< string string > ( ) ;,294
+< : = = =,296
+( int ) {,297
+< string string > = new < string string > ( ) ;,298
+value ;,299
+( ) integer ) ;,301
+list = new arraylist < integer > ( ) ;,301
+value = value ;,304
+< name > <,304
+integer = ( ) ;,305
+< string > = ( ) ;,306
+value =,308
+< :,308
+< name =,308
+> ( ) ;,308
+this is is the,308
+= value,308
+: of,309
+< id = = =,312
+( list ) ;,316
+< integer > = new < integer > ( ) ;,318
+= ( out ) ;,318
+the is the,320
+( +,324
+< : id = = >,326
+this value,326
+( > ),326
+( out ) ;,326
+< > ( ) ;,326
+< integer > ) {,330
+( value = { } = ),330
+static (,336
+( string : ) {,336
+static ;,336
+< id = = = >,338
+new ( ) {,339
+( arraylist < integer > list ) {,340
+( string integer ),340
+< integer > = ;,341
++ ) ;,342
+} ( = = ) {,342
+println ( ) ;,344
+the of ; the of,345
+: name,345
+name :,345
+version version,345
+< integer > = new arraylist < integer > ( ) ;,349
+( : ( ) ) {,351
+name ;,354
+new (,354
+( is ) {,362
+this,362
+the of the,363
+is version,363
+name =,363
+( ( ) ( ) ) {,363
+string value = ( ) ;,368
+( new ( ) ),369
+< > : <,372
+integer = new integer ( ) ;,376
+the of the of the,377
+( ( ),381
+is,381
+string = ( ) ( ) ;,381
+( ) ) ;,381
+= new (,381
+the name the,387
+( { } ),396
+value = ( ) ;,398
+of the,399
+= new ( this ) ;,408
+< > < : = = > < : name = =,408
+value { },410
+< : id = = name = = >,410
+= = ;,417
+< : > < : value =,420
+( this ) ;,420
+( name = = = ),422
+string value = ;,426
+< : = value =,428
+< : name = = =,440
+= new arraylist < > ( ) ;,440
+static ( < > ) {,440
+list < > list = new arraylist < > ( ) ;,450
+( name = = ),450
+out = new ( ) ;,453
+= > ( ) ;,456
+< : name = = > <,460
+: : ( : ),464
+< > < = name = = > <,464
+< : name = = >,472
+value,472
+arraylist < string > = new arraylist < string > ( ) ;,476
+< : out value =,478
+( ) :,484
+: ( ),484
+< version > <,490
+< > = ( < > ) ( ) ;,495
+= new ( new ( ) ) ;,496
+< > = new < > ( ) ;,501
+< =,516
+= ( ( ) ) ;,520
+arraylist < > = new arraylist < > ( ) ;,524
+: : out of ( > of is ),528
+main ( ),532
+return the is,532
+< = name =,534
+try,540
+( + + + ) ;,540
+< = > < = = = >,543
+out,544
+main,545
+< > ;,561
+: out of ( > of is ),566
+catch ( ),570
+( name value ) ;,572
+( new arraylist < integer > ( ) ) ;,574
+= =,580
+id,580
+the the,580
+name,581
+arraylist of,599
+( + ( ) ) ;,600
+new ( ),605
+= new arraylist < integer > ( ) ;,612
+of :,618
+( ( ) = = ) {,630
+static {,634
+),635
+= new ( ),635
+( ( ) ),635
+return of,636
+< > ( : ),636
+< : value = =,642
+< : value = = >,651
+( value = ),651
+main :,654
+the is,670
+version,690
+: : value,690
+( integer ) ;,690
+< id = = >,696
+< > {,700
++ + ;,714
+= + ;,720
+return new ( ) ;,738
+) {,756
+( ( ) ( ) ) ;,762
+= new ;,762
+< : name =,774
+< string > = new < string > ( ) ;,780
+the of,798
+integer ) {,810
+= (,816
+< : value = name =,825
+name ( ),834
+< : = = >,835
++ = ;,840
+{ },864
+< = = = >,870
+< name = >,870
+( ( ) ) ( ) ;,889
+) ;,889
+return ( ) ( ) ;,889
+= new ( ( ) ) ;,889
+package,927
+= >,950
+< > = ( ) ;,960
+< name = = =,972
+< = > <,975
+: : :,981
+= value ;,992
+< value = > <,1000
+< > < > { },1014
+( new ( ) {,1044
+< > { } <,1092
+static ( ) {,1110
+return name ;,1112
+the value,1143
+} {,1152
+< : name = =,1180
+string ;,1180
+< name = value = >,1184
+string,1199
+( int = ; < ; + + ),1200
+< : =,1208
+( = ) {,1220
+< name = value =,1232
+( = = ) {,1260
+super ( ) ;,1264
+( ) ( ) ;,1270
+integer = ;,1272
+< name = = >,1305
+< : = =,1341
+string name ;,1360
+list < > = ( ) ;,1384
+< : value =,1386
+( value = = ),1421
+< = = >,1448
+( value ) ;,1491
+( = = ),1496
+< : name = >,1524
+of,1527
+new ( ) ;,1586
++,1710
+( name = ),1715
+< : = >,1720
+= ( ),1729
+( ( ) ) {,1785
+( = ),1862
+( int = ; < ; + + ) {,1872
+{,1890
+( + + ) ;,1904
+(,1905
+} ) ;,2040
+< value = >,2104
+package ;,2180
+( : ) {,2260
+= name ;,2272
+: :,2398
+string = ;,2413
+int = ;,2484
+< = >,2509
+int ;,2520
+< : >,2715
+< : name = value =,2750
+return ( ) ;,2921
+try {,3060
+( ) {,3078
+( new ( ) ) ;,3224
+string = ( ) ;,3302
+} catch ( ) {,4074
+( + ) ;,4095
+:,4142
+int = ( ) ;,4176
+;,4572
+the,5510
+( : ) :,5546
+< > <,5724
+=,5800
+( ( ) ) ;,6985
+= ( ) ( ) ;,7020
+< >,12208
+= new ( ) ;,12827
+return ;,13208
+( ),13843
+= ( ) ;,19912
+= ;,22168
+<,26600
+( : ),33275
+( ) ;,52832

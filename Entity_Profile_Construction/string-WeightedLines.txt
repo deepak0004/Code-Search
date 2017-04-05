@@ -1,0 +1,501 @@
+( string ) ;,1140
+: ( ) {,1140
+int length = ;,1143
+print the -,1148
+( ) ( true ) ;,1152
+string [ ] = [ ] ( ) ;,1152
+( + string ) ;,1158
+= new < string > ( ) ;,1160
+to,1160
+string [ ] result = ( ) ;,1161
+if ( ( ( ) ) = = null ),1164
+< ! - - - - >,1164
+if ( ! = null ) ( ) ;,1164
+= new string [ ] [ ] ;,1167
+data [,1170
+if ( ( ) = = true ) {,1172
+string input ;,1172
+( list ) ;,1180
+value = ( ) ;,1185
+string [ ] = ( new string [ ] ) ;,1188
+int = ( ) ( ) ;,1188
+if ( ( ) = = false ),1192
+the static,1196
+for ( int = ; < ( ) ; + = ),1200
+out = ( ) ;,1208
+( data [ ] ) ;,1212
+: < > { [ ] } <,1215
+= new ( url ) ;,1215
+< > < > <,1218
+string = + + + + ;,1221
+< = = > <,1224
+else if ( ( ) equals ( ) ),1227
+string = ( string ) ;,1227
+string string = ( ) ;,1227
+if ( = = null ) return ;,1232
+= [ ] ( ) ( ) ;,1236
+= ( +,1240
++ + ( ( ) ) ) ;,1240
+for the,1242
+string ( ),1245
+( string ),1245
+arraylist < > = new arraylist < > ( ) ;,1248
+int = ( ),1252
+string value = ( ) ;,1252
+: for input string :,1263
+: = + ;,1300
+( {,1300
+( ) ; },1300
+< string > ;,1304
+if ( [ ] = = true ) {,1304
+double null,1306
+< > = new < > ( ) ;,1308
+) {,1320
+string value = ;,1320
+if ( [ ] ( ) ) {,1320
+string [ ] = new string [ ],1323
+} else ( ) ;,1324
+} *,1326
+[ ] = ( [ ] ) ( ) ;,1328
+data | | | | |,1335
+bufferedreader in = new bufferedreader ( new ( ) ) ;,1344
+static string ( ) {,1356
+: = >,1360
+= ( ) ( ) ( ) ;,1365
+if ( ( [ ] ) ),1368
+= new bufferedreader ( ) ;,1368
+string name ;,1376
+< > { } <,1379
+string url = ;,1380
+bufferedreader = new bufferedreader ( new ( ( ) ) ) ;,1380
+( ) ( ) ( ) ;,1380
+[ ;,1380
+* of the,1383
+( ) ( ),1385
+= new ( input ) ;,1388
+( ) ) ) ;,1390
+} catch ( exception ) { },1392
+< > ( : ),1407
+* the for,1408
+double [ ] [ ] = new double [ ] [ ] ;,1410
+( + ( ( ) - ) ) ;,1410
+arraylist < string > = ( ) ;,1415
+if ( ( ) > ),1420
+[ + ] = ;,1420
+if ( ( ( ) ( ) ) ( ) tostring ( ) equals ( ) ) {,1420
++ = [ ] * [ ] ;,1424
+if ( < ) {,1430
+is,1432
+out = new ( ) ;,1435
+< name = = >,1440
+while ( ( = ( ) ) ! = ),1450
+new (,1458
+int = - ;,1460
+( [ ] [ ] + ) ;,1464
+bufferedreader in = new bufferedreader ( ) ;,1464
+> ( ) ;,1470
+= > ( ) ;,1470
+result = new ( ) ;,1475
+: id =,1476
+if ( [ ] getname ( ) equals ( ) ) {,1476
+return ( ) ( ) ;,1480
+( ) ; = > [ ],1480
+< name > <,1490
+url = ( ) ;,1494
+while ( ( ) ! = ),1500
+int = * ;,1500
+while ( ! ( ) ) {,1500
+for ( int = ; < input [ ] length ; + + ) {,1504
+if ( ( ( ) ) ),1505
+if ( ( ) ( ) ),1505
+for ( = ; < ( ) ; + + ),1505
+( new ( this ) ) ;,1518
+[ ] = { } ;,1520
+: [ { : } ],1524
+( : true ),1524
+( ) ! = & & ( ) ! = & &,1526
+for ( int = ; < size ; + + ),1530
+if ( ( ) equals ( ) ),1536
+while ( ! ( ) ),1540
+string [ ] = new string [ ] { } ;,1548
+bufferedreader ;,1563
+( * ),1566
+url url = new url ( ) ;,1568
+= name ;,1568
+< > { [ ] } <,1572
+< ! [ [,1575
+< = =,1589
+if ( ( ),1590
+( ( [ ] ) ) ;,1590
+( [ ] [ ] [ ],1604
+( ) ( ) + +,1605
+double [ ] = { } ;,1612
+( + input ) ;,1624
+( ( ) ) {,1626
+< input = name = value =,1626
+string ) {,1628
+= +,1640
+the *,1640
+= new ( is ) ;,1644
+[ string value ],1648
+( ( ) ) ( ) ;,1656
+else if ( ( ) = = ),1660
+if ( [ ] = = ),1670
+if ( > = ),1674
++ = + ;,1675
+] ] >,1675
+* * * : * *,1680
+int = ( [ ] ) ;,1690
+println ( + ) ;,1705
+static = new ( ) ;,1710
++ + ) ;,1715
+if ( < = ),1716
+int id ;,1722
+int = + ;,1725
+void ( string ),1740
+( ( ) tostring ( ) ) ;,1745
++ = ( ( ) ) ;,1746
+< id = = >,1746
+* return the,1750
+else if ( = = ),1755
+( is is the,1770
+if ( < ),1776
+while ( < ) {,1788
+< name = >,1804
+< string > <,1830
+url = new url ( ) ;,1856
+[ ] : :,1862
+= new ( new file ( ) ) ;,1869
+double = new double ( ) ;,1876
+string = ( string ) ( ) ;,1880
+return [ ] ;,1885
+= new [ ] ;,1890
+( ) string ;,1900
+string string = ;,1904
+= new ( file ) ;,1911
+= ( ( ( ) ) ) ;,1911
+* of,1912
+= ( ) [ ] ;,1920
+string name = ;,1920
+) ( ) ;,1939
+} ;,1944
+{ = + ; },1946
+list < string > = ( ) ;,1946
+int [ ] = { } ;,1950
+return name ;,1952
+( name = ),1953
+if ( ( [ ] ) ) {,1980
+while ( > = ) {,1988
+< : name = >,1989
+static int ;,1992
+[ ] = null ;,2004
+= new ( ) {,2016
+static double ;,2040
+list < > = new arraylist < > ( ) ;,2040
+return the,2050
+string [ ] = ;,2055
+if ( ( ( ) ) ) {,2058
+} else,2070
+[ ] = ( [ ] ) ;,2070
+else if ( ( ) ) {,2070
+return ( ( ) ) ;,2072
+= + ( ) ;,2079
+else if is =,2080
+while ( ! = ) {,2086
+( value ) ;,2106
+< string > = ( ) ;,2107
+string [ ] [ ] = new string [ ] [ ] ;,2110
+( + + + + ) ;,2112
+= ( ) tostring ( ) ;,2124
+name is,2130
+string = new string ( ( ) ) ;,2148
+[ ] = ( ) ( ) ;,2163
+string ( string ) {,2185
+( ( ) ( ) ) ( ) tostring ( ) equals ( ) | |,2214
+string ( ) {,2238
+input = ( ) ;,2238
+println ( ) ;,2268
+add ( ( ),2288
+| | |,2304
+[ ] = new [ ( ) ] ;,2310
+< id = = = = = = = = =,2310
+static string ;,2312
+for ( int = ; < length ; + + ) {,2338
+else if ( ( ) equals ( ) ) {,2358
+super ( ) ;,2360
+int = ( ( ) ) ;,2376
+= new string [ ] { } ;,2387
+while ( ! = null ) {,2392
+bufferedreader = null ;,2394
+for ( = ; < = ; + + ),2400
++ ( ) +,2401
+if ( [ ] equals ( ) ) {,2406
+[ ] [ ] = ( ) ;,2415
+string = (,2424
+int length = ( ) ;,2429
+( input ) ;,2430
+[ ] = new ( ) ;,2432
+int = = ;,2432
+- >,2436
+null,2456
+= =,2470
+} if ( = = & & = = ) {,2470
+return new string ( ) ;,2478
+return + ;,2506
+( + ( ) + ) ;,2512
+( result [ ] ) ;,2520
+else if ( < ),2520
+< ? = = ? >,2534
+arraylist < string > = new arraylist < string > ( ) ;,2538
+-,2548
+< string string > = new < string string > ( ) ;,2548
+string = = ;,2548
+} if ( > = & & < = ) {,2563
+void ( ) {,2592
+< =,2604
+= ( input ) ;,2611
+( = = ) ;,2640
+if ( ! = ),2673
+( new ( ( ) ) ) ;,2680
+if ( = = true ) {,2682
+( + + + ) ;,2744
+arraylist = new arraylist ( ) ;,2760
+< ! - - : - - >,2760
+: true,2760
+( ( ) ( ) ) ;,2760
+( [ ] + ) ;,2776
+void ( string ) {,2779
+if ( > ) {,2790
+int =,2792
+= >,2800
+int string double string,2836
+= + [ ] ;,2840
+string [ ] = {,2842
+is = ( ) ;,2860
+[ ] ( ( ) ) ;,2862
+if ( [ ] = = ) {,2907
+< = = >,2912
+for ( : ( ) ) {,2937
+( ( ) ) log ( null ) ;,2940
+boolean = ( ) ;,2979
+if ( ! ( ) ),2980
+string input = ( ) ;,2982
+[ ] = [ + ] ;,2992
+} else if ( equals ( string ) ) {,2996
+string result = ( ) ;,3000
+double,3000
+< string > = new < string > ( ) ;,3040
+( ( ) ),3047
+),3102
+< = > <,3104
+: ( ) ; ;,3146
+( data ) ;,3160
+string [ ] = new string [ ( ) ] ;,3168
+= new ( this ) ;,3172
+input,3176
+= [ ] ( ) ;,3200
+( = ),3204
+if ( = = null ) {,3212
+string = ( + ) ;,3258
++ = ( ) ;,3267
+< : =,3276
+( ( ) + ) ;,3278
+= new string ( ) ;,3300
+int [ ] = new int [ ] ;,3321
+( ) ) ;,3324
+if ( ),3330
+- -,3332
+list < string > = new arraylist < string > ( ) ;,3348
+= + + ;,3350
+string result = ;,3392
+( +,3410
+boolean ;,3416
+if ( ( ) ! = ) {,3420
+| | | |,3456
+for ( : ),3458
+static string = ;,3465
+if ( ! ( ) ) {,3492
+file file = new file ( ) ;,3504
+- - - -,3528
+: null,3553
+string [ ] =,3568
+string = +,3592
+of,3630
+for ( = ; < ; + + ),3672
+in = new ( ) ;,3696
+[ ] = ( ( ) ) ;,3708
+if ( ! = ) {,3744
+if ( ( ) = = ),3796
+string [ ] = ( ) ( ) ;,3861
+< : >,3900
+= (,3900
+= new (,3904
+( result ) ;,3936
+| | ( ) | | ( ),3960
+: ( ) ;,3978
+boolean = true ;,3982
+: :,3996
++ ;,4092
+[ ] [ ] = + ;,4114
+{ },4140
+double = ( ) ;,4150
++ ) ;,4173
+if ( ( ) > ) {,4185
+from,4224
+( this ) ;,4267
+= - ;,4284
+catch ( exception ) {,4320
+return,4323
+string [ ] = null ;,4334
+add ( ),4350
+result = ( ) ;,4368
+: [ ],4452
+catch ( ) {,4484
+for ( = ; < ; + + ) {,4500
+string input = ;,4509
+= new ( [ ] ) ;,4560
+for ( string : ),4563
+} {,4600
+| |,4608
+string = ( ) ( ) ;,4634
+( false ) ;,4672
+catch ( exception ),4780
+= ( ),4806
+: {,4833
+[ ] ;,4836
+for ( int = ; < = ; + + ) {,4928
+string = [ ] ;,4932
+while ( true ) {,4965
+file = new file ( ) ;,5112
+bufferedreader = new bufferedreader ( ) ;,5239
++ +,5330
+if ( ! = null ),5364
+( ) null,5453
+if ( ( ) equals ( ) ) {,5535
+string = + + ;,5684
+else if ( = = ) {,5712
+: : : error,5712
+add ( ) ;,5720
+while ( ( = ( ) ) ! = null ),5820
+} else if ( ( ) ) {,5904
+= ( + ) ;,5940
+if ( = = null ),6000
+for ( : ) {,6026
+( null,6090
+if ( ! = null ) {,6111
+* the,6232
+( + [ ] ) ;,6246
+( ) : = ( ) ; ;,6275
+double ;,6360
+= new ( new ( ) ) ;,6425
+name + = ;,6474
+[ ] =,6552
+< = >,6860
+return result ;,6912
+[ ] = [ ] ;,6992
+double = ;,7084
+if ( ( ) = = ) {,7150
+while ( ( = ( ) ) ! = null ) {,7200
+string [ ] ;,7232
+new ( ) ;,7280
+input = new ( ) ;,7287
+string = ( ) tostring ( ) ;,7543
+= ( [ ] ) ;,7680
+bufferedreader = new bufferedreader ( new ( ) ) ;,7898
+catch ( ),7922
+[,7942
+( ) {,8010
+try,8024
+while ( ( ) ),8050
+if ( > ),8064
+if ( ) {,8086
+= ( ( ) ( ) ) ;,8190
+: : :,8214
+the,8540
+else if ( ( ) ),8664
+( ( ( ) ) ) ;,8832
+( new ( ) {,8995
+string,8996
+boolean = false ;,9000
+string = ( ( ) ) ;,9268
+( null ) ;,9339
+string = + ;,9720
+: [,10032
+string [ ] = new string [ ] ;,10152
+: =,10203
+( ) ( ) ;,10212
+for ( string : ) {,10354
+(,10374
+return null ;,11016
+return false ;,11055
+return true ;,11154
+package ;,11286
+[ ] [ ] = ;,11408
+for ( int = ; < ( ) ; + + ),11894
+[ ],12238
+{,12844
+= new ( ( ) ) ;,12887
+= false ;,13202
+},13419
+= ( ( ) ) ;,13821
+[ ] = new [ ] ;,13840
+= true ;,14210
+} ) ;,14848
+= [ ] ;,15004
+string [ ] = { } ;,15078
+string = null ;,15160
+if ( ( ) ),15190
+< > <,15488
+( true ) ;,15582
+( [ ] ) ;,15698
+} catch ( exception ) {,15812
+= + ;,16430
+) ;,17728
+if ( = = ),17880
++ = ;,18600
+for ( int = ; < ( ) ; + + ) {,18788
+if ( = = ) {,19140
+( + + ) ;,19740
+for ( int = ; < ; + + ),19840
+while ( ( ) ) {,21080
+string =,21105
+else {,21119
+*,21620
+string = new string ( ) ;,21717
+( + ( ) ) ;,21754
+( new ( ) ) ;,22344
+: false,25086
+=,29146
+= null ;,29975
+if ( ( ) ) {,31800
+[ ] = ( ) ;,33280
+int ;,33304
+[ ] = ;,33418
+< >,33490
+string [ ] = ( ) ;,35435
+} catch ( ) {,36192
+return ( ) ;,37210
+int = ( ) ;,37820
+} else {,39022
+= ( ) ( ) ;,44173
++ + ;,46228
+for ( int = ; < ; + + ) {,47414
++,47560
+try {,52525
+<,55836
+( ),61771
+string ;,63142
+else,69495
+int = ;,70956
+( + ) ;,72924
+:,78810
+;,81627
+( ( ) ) ;,95772
+( : ),101676
+string = ( ) ;,115431
+return ;,117216
+= ;,122980
+= new ( ) ;,189666
+string = ;,235532
+= ( ) ;,284884
+( ) ;,715392

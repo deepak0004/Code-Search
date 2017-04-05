@@ -1,0 +1,3 @@
+new parent ! ( ) _children node _parent _hasparent 0.0 null 10.0 [ ; = ]
+exception new tfactory e transformerfactory ( transformer fileoutputstream ) transformer.transform streamresult transformerfactory.newinstance streamsource tfactory.newtransformer try ; catch =
+new countershard pm.makepersistent pm.currenttransaction tx countershard.class.getsimplename shard.increment countershard.class ( ) counter + tx.commit null pm.getobjectbyid randomindex ; shard { = if transaction key keyfactory.createkey

@@ -1,0 +1,64 @@
+( ) ; super.mymethod
+exception registry e ( ) locateregistry.createregistry registry.unbind 0.0 serverport myremoteobject try { ; registry.rebind catch = }
+exception e ( ) registry.unbind myremoteobject unicastremoteobject.unexportobject true try { ; catch }
+new util.makestring test ( ) i integer abstract + o t t.getvalue { system.out.println ; < = class value > return
+new super.setinnervalue ( innervalue ) cls.getinnervalue myclass cls this.innervalue throw unsupportedoperationexception myclassreadonly ; { = return
+new file file.delete file.exists ( ) { ; system.out.println = if
+new package ( ) arraylist list matcher second super allof 0.0 matchers t 2.0 org.hamcrest.core matchers.add ; < = > first return ?
+con malformedurlexception fileoutputstream while con.setrequestmethod fromurl else con.getrequestmethod catch ioexception if new read startrange & byte ( ) * + - 1.0 null 3.0 con.setrequestproperty tofile.close con.getcontentlength try lastindexof tofile.write ; < mue = httpurlconnection.http_partial > string bufferedoutputstream tofile httpurlconnection fromurl.read substring finishrange file con.getinputstream con.getresponse [ ] url.getpath charat url.openconnection outputfile bufsize outputfilename int url args.length bufferedinputstream args 0.0 buf -1.0 2.0 8.0 1024.0 httpurlconnection.http_ok { system.out.println | } ioe
+arr void foo ( ) [ ; dostuff ]
+0.0 200.0 ( ) 100.0 ; l = myejb.method long result2 result1
+
+exception logger.getlogger tasks.add myejb getresult executors.newfixedthreadpool exec.invokeall catch results tasks valuetotest integrationtests.class new 200.0 ( results.get ) list callejbtask 1.0 null 100.0 try ; this.patient < = exec > myejbproxy this.logger this.myejb.method long result get result2 result1 e arraylist executorservice l super this.myejb 0.0 2.0 this.valuetotest future { } return
+line.contains string def reader.readline reader line line.split bufferedreader while predef else inputstreamreader predef.substring [ ] if new ! read ( openstream predef.indexof ) url args 0.0 newurl 1.0 null ; { } = return
+implements system.out.printf callable string hashset word.length for sum integer executors.newfixedthreadpool future.get new integer.valueof set wordlengthcallable pool.submit ( pool ) set.add + executorservice int args this.word 0.0 3.0 future : { ; system.exit < = word return >
+string match ( ) ; text position = getposition int
+system.out.printf monthlyinterestrate while this.loanamount interestrate monthlyprincipalpaid client payment loanid loanlength paymentnumber method last this.interestrate double ( loanamount monthlyinterest ) monthlypayment * + math.pow - int nextid 0.0 print 1.0 -1.0 this.loanlength this.client ; system.out.println { to = } return > newprincipal
+new 0.0 void t test ( ) ; < > object
+a new listobj b ( ) integer list arrays. long listnum listcmp number 0.0 listerror ; < arrays.aslist = aslist comparable > object ?
+new instance ( ) + illegalstateexception creditcardprocessor null throw ; { = if return
+new panel2.validate actionlistener ( ) panel2.add jbutton { ; button1.addactionlistener }
+new ( ) arraylist map.values listtosort.sublist comparator 0.0 5.0 collections.sort ; < listtosort = > return player
+new inputevent.button1_mask robot.mousepress 1300.0 var 40.0 ( ) + robot.keyrelease stddelay robot robot.mousemove robot.mouserelease robot.keypress 20.0 keyevent.vk_control robot.delay ; =
+singlestring string searcharray for ( false ) singlestring.equals true : ; if return searchstring
+calculate.getsource integer.parseint string operand.getlabel value2 intvalue1 value1 integer.tostring intvalue2 flip if negativeint operation.equals totalvalue totalresult box1.gettext box1.settext box2.settext box2.gettext & ( ) jbutton negateintvalue * + - int -1.0 flip.equals ; system.out.println = operation operand intvalueneg
+integer.parseint illegalargumentexception string ti.getnumberoffields for params.length fieldlengths ti.getfieldlengths numberformatexception param [ catch if ] ! new fieldnames e byte ti.getfieldnames ( param.length ) i + params int 0.0 throw true try ; { < | = } > return
+this.getrowheight col prenderer for this.getcolumncount getcellrenderer prenderersize rowheight getrowcount row dimension if prenderersize.height this.setrowheight ( ) + int prenderer.getpreferredsize 0.0 component ; { < = >
+firstname string ; int age
+! other firstname ( this false ) other.firstname employee int instanceof other.age obj true ; if = age return
+
+this.name ; return
+( ) system.currenttimemillis ;
+
+typedeclaration astvisitor astparser.newparser parser.setsource string type sourcecontent new testunit ast.jls3 compilationunit list.get ( false fileutils.readfiletostring ) parser.createast arraylist list content.tochararray accept node astparser 0.0 list.add parser null newtest final ; { < type.insertmethod = } > return
+securityexception illegalargumentexception method ( e.getactioncommand this ) nosuchmethodexception invocationtargetexception method.invoke e1 getmethod 0.0 this.getclass illegalaccessexception try { ; catch system.out.println = }
+const_int new xy centery generalpath centerx theplots ( false ) 0.0 line2d.double 1.0 ; [ = ] append
+new ( for ) arraylist arrayelements.add t arrayelements elements : ; [ < = ] arrayelements.toarray > return element
+date synchronized myclass.class getuniquetimestam ( ) {
+do buffer.append while current else buffer if new ! stringbuffer previous & system_line_separator ( ) i int reader.read 0.0 -1.0 null char true buffer.length ; { = } return buffer.tostring
+
+! resp.setcontenttype session resp.sendredirect ( httpsession false ) throws req.getsession null session.invalidate { ; system.out.println ioexception = if
+
+this.lbl.settext p2 400.0 this.fld.settext jlabel frm.setdefaultcloseoperation fld.addkeylistener fld.settext pnl.add frm.setlayout btn frm.setsize fld frm add new jpanel btn.addactionlistener this.btn.settext ( this ) jbutton frm.getcontentpane jtextfield jframe.exit_on_close pnl 0.0 runnable fld.selectall 10.0 lbl jframe frm.setvisible true ; system.out.println swingutilities.invokelater flowlayout =
+0.0 pipedinputstream_.read ( ) ; { = if pipedinputstream_.available int n >
+in ( ) + - out 0.0 else buffer.length ; < if = return >
+read ( lorg
+new data for ( i ) holder + ray counter int 0.0 ray.length [ ; < ] = } return
+void ring ( bell.ring ) * alarmbell bell int firelevel onfire 0.0 2.0 ; { } alarmlevel
+new foo ( ) extendsinterfaceclazz bar 0.0 t operationonbar type.class ; < clazz return >
+localhost server_name remote_addr request_method remote_host 127.0 0.0 0.1 null get : hello = query_string info
+method is your body type br input form name action html : id < = value >
+0.0 user.class base.class ( ) ; fun
+0.0 string klass.getannotation ( table.class name ) ; tablename =
+new e ( ) re e.getmessage re.addsuppressed throw runtimeexception try { catch ; ioexception =
+new e ( ) throw runtimeexception try { catch ; ioexception
+exception controllerb selecteditemindex details.create jsfutil.addsuccessmessage resourcebundle.getbundle current jsfutil.adderrormessage create catch getstring new system.out.print e ( ) 0.0 -1.0 null try preparecreate ; { = } return getjpacontroller
+string liststring.trim.split for ss.parsecommands [ ] ss new system.out.print commandhash.get ( ) + int directive args 0.0 liststring 2.0 linecounter parts : mystring ; stringsplit =
+new package string ( ) arraylist list list.add scjp.collection.list 10.0 lastindexof ; system.out.println < = list.lastindexof >
+this.y this.x x y ; = return
+new p1 coll p2 coll.contains coll.add hashset ( ) point ; system.out.println < = >
+assertthat 0.0 containsstring string and there ( ) hello ; = both
+assert.assertthat containsstring string combinablematcher. ( ) both 0.0 and there hello ; < = >
+secondmethod firstmethod ( ) ; system.out.println
+sub new sup.dosomething sub.dosomething superclass subclass ( ) ; = sup
+br sub new sub.secondmethod superclass subclass ( ) sub.firstmethod ; < =

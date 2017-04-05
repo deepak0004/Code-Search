@@ -1,0 +1,56 @@
+= ( [ ] ) ;,1
+< : value = data =,1
+package ;,1
+( ) {,1
+double = ( ) ;,1
+else,1
+string [ ] [ ] ;,1
+( ( ) ) ;,1
+* @ the to,1
+double =,1
+double ;,1
+new ( ) ;,1
+string = ;,1
+if ( ! = null ),1
+< : =,1
+( true ) ;,1
+int ;,1
+< : = = >,1
+double [ ] ;,1
+=,1
+result = ( ) ;,1
+string result = ;,1
+= + ;,1
+( ) ( ) ;,1
++ = ;,1
+: =,1
+( new ( ) ) ;,1
+if ( < = ),1
+return result ;,1
+[ ] ;,1
+= ( + +,1
+while ( ),1
++ + + ;,1
+} else {,1
+void ( ) {,1
+static = new ( ) ;,1
+int = ;,1
+* @ return the,1
+= + +,1
+[ ] = + ;,1
+},1
+= ( ( ) ) ;,2
+double = ;,2
+if ( = = ),2
+= new ( ) ;,2
+<,2
+while ( ( ) ),2
+( ) ;,2
+< : = class =,2
+< =,2
+< = >,2
+: = >,2
+= ;,3
+= ( ) ;,3
+return ;,3
++ + ;,3

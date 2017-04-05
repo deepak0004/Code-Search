@@ -1,0 +1,28 @@
+date string description jobowner collection history name assigndate ; id < user > jobhistory
+date string jobownerhistory description jobowner collection history name assigndate ; id < user >
+a new b string ( ) collections.copy a.size arraylist list a.add ; < = >
+new customerdto customers.convert converter ( ) arraylist list 0.0 customers ; dtos { < = > return customer
+xsd name : < type = minoccurs element
+new cart.add string products.add ( ) arraylist list cart products ; < = >
+10000.0 for random.nextdouble listone random min getrandomnumber doublylinkedlist new max ( ) i * j + - int 0.0 listone.add 10.0 ; system.out.println < = return
+new ( ) arraylist map.values listtosort.sublist comparator 0.0 5.0 collections.sort ; < listtosort = > return player
+standard 0.0 hawaii gmt-10 ( hst ) : time pacific
+cursor exception select string columns r.id.isbn_entry madapter mydbhelper.rawq startmanagingcursor [ catch ] r.id.title_entry new simplecursoradapter c e ( this this.setlistadapter ) int r.layout.listlayout try ; { to = }
+cursor exception select string columns r.id.isbn_entry show madapter mydbhelper.rawq startmanagingcursor setmessage alertdialog.builder v.getcontext setpositivebutton [ catch ] l.getitematposition android.r.string.ok r.id.title_entry new simplecursoradapter c e ( this this.setlistadapter ) int r.layout.listlayout 0.0 selection settitle null try ; { to position = } tostring
+new agelist.add ( for ) arraylist list users 0.0 equals : ; { < agelist object.getsex user = if > object
+all variables getter for * and setter
+daemons ; list < > daemon
+map.put statment for ( result.add ) { ; value map key
+
+string toast.show list.exists load_alert load_alert.setitems load_alert.setmessage file alertdialog.builder [ toast.length_long if ] getapplicationcontext new ! toast.maketext dialoginterface.onclicklistener ( this ) filelist load_alert.show list list.isdirectory toast ; { | = list.list } return
+storevalues null ( ) fillrows.remove ; storevalues.add savevalues selected return
+servlet-mapping 0.0 welcome-file-list url-pattern selectsessionserver.wfn servlet-name welcome-file * < myservlet > wfn
+0.0 field myobject.getclass field.setaccessible ( true ) getfield ; =
+
+product productid categorylist 1007.0 1.0000569E7 1.0000568E7 1.000057E7 1.0000567E7 : 1001.0 { 1002.0 1003.0 = } 1004.0 1005.0
+ps collections.sort ( ) ;
+new package string ( ) arraylist list list.add scjp.collection.list 10.0 lastindexof ; system.out.println < = list.lastindexof >
+a new string ( ) list ins objectoutputstream ins.writeobject ; < = > soc.getoutputstream
+string.class new ( ) + cn queryforlist 0.0 this.getjdbctemplate [ { ; ] } return object
+exception new string system.getproperty e jrbeancollectiondatasource ( jasperprint jasperfillmanager.fillreport ) + jasperexportmanager.exportreporttopdffile null reportname datasource alist try ; jasperreport { system.out.println catch = }
+application $ { = } doc.mime office.mime

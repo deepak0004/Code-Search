@@ -1,0 +1,14 @@
+rgbtohsl lum _sat rgbhelper _hue hsltorgb hslvalues if hslhelper new b _b & g sat _g ( _lum ) r 0.0 _r null rgbvalues xff hue ; = return
+normalize val b _b & g ( _g ) r 0.0 _r xff ; = return
+@ defaultedge be string priorityqueue dag result param if a new g ( ) result.addall * sort g.vertexset directedgraph comparator 0.0 g.indegreeof -1.0 1.0 size arg1 arg0 must { ; topological < = } queue > return
+add new string work values ( ) arraylist al it with 0.0 on.... and ; < so = >
+e.annopropstarttag string e starttag ( class.forname ) foo.getclass 0.0 classname ; getannotation = ?
+e.annopropstarttag string e starttag ( ) foo.getclass 0.0 extendedcommandannotation.class extendedcommandannotation getannotation ; =
+string annopropusetab ( ) default annopropendtag annopropstarttag ;
+a ( ) ; system.out.println + int
+test workout ( mworkout ) ; = workoutfactory.createworkout
+next prev lt choose when pagenumber pages pager param unless scope href export value maxpageitems otherwise a nbsp c test $ last & gt url pg name : ; { < = items } > first
+status.show ( ) + ; 7.6547545E7 mee 2000.0 = return moo.moo
+super.oncreate cdtjammertimer countdowntimer 60000.0 long button setcontentview bstartjammer.setonclicklistener timerrunning new r.layout.timing ljammertotalms onclicklistener ( false ) bstartjammer boolean final true ; r.id.buttonstartjammer { findviewbyid savedinstancestate = }
+string liststring.trim.split for ss.parsecommands [ ] ss new system.out.print commandhash.get ( ) + int directive args 0.0 liststring 2.0 linecounter parts : mystring ; stringsplit =
+javax.swing.grouplayout.default_size jtextfield1actionperformed setvisible jtextfield1.addactionlistener layout.createsequentialgroup getcontentpane addcontainergap setlayout jtextfield1 javax.swing.windowconstants.exit_on_close javax.swing.grouplayout.alignment.leading javax.swing.grouplayout.preferred_size setdefaultcloseoperation addcomponent 86.0 47.0 new java.awt.event.actionlistener evt layout.createparallelgroup addgap layout.setverticalgroup javax.swing.jtextfield classa ( ) javax.swing.grouplayout layout.sethorizontalgroup jtextfield1.settext pack initcomponents layout 0.0 runnable 33.0 short.max_value java.awt.eventqueue.invokelater addgroup true ; { = } 104.0 124.0

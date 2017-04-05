@@ -1,0 +1,269 @@
+< : out value =,1
+final class,1
+( false ),1
+return ( name ) ;,1
+return & ;,1
+final = (,1
+final boolean = false ;,1
+< layout class = >,1
+* = ;,1
+( string boolean ) {,1
+} ( = ) ;,1
+& ; <,1
+: : = ;,1
+int ( ) {,1
+java ( ) add class,1
+= * * ;,1
+} ( ),1
+value = ( ) ;,1
+arraylist < string > ;,1
+string name,1
+return new ( ),1
+@ id @,1
+[ ] = >,1
+string name = ;,1
+return ; },1
+result = result + ;,1
+} } },1
+* size,1
+( & ) ;,1
+< string > = (,1
+( ) ; ;,1
+< string > = ;,1
+boolean,1
+= java,2
+int result = ;,2
+java class,2
++ + +,2
+( ( string ) ) ;,2
+if ( > = ) {,2
+final,2
+= ( false ) ;,2
+= + ( ) ;,2
+arraylist < > ;,2
+( ) ( layout ) ;,2
+if ( result ) {,2
+string id ;,2
+int = ( ) + ;,2
+result = true ;,2
+= true,2
+= [ + ] ;,2
+super = new ( ) ;,2
+( layout ) ;,2
+= < >,2
+: ( ) ;,2
+int size = ( ) ;,2
+( ) { = ; },3
+string url = ;,3
+boolean = ( ) ;,3
+( * * ),3
+string ( ) ;,3
+add,3
+id = ( ) ;,3
+@ @ ( name = ),3
+= ( true ) ;,3
+< string > ;,3
+: : < >,3
+< name = class = >,3
+= :,3
+( ) ) {,3
+< > : : : <,3
+result = ;,3
+< > = ;,3
+@ id @ ( = ),3
+( ) *,3
+result = false ;,3
+( ) { return ; },4
+( id ) ;,4
+class,4
++ ) ;,4
+= & ;,4
+= new ( name ) ;,4
+= ( ) + ;,4
+@ ( value = = ),4
+( ) ; },4
+} ( ) ;,4
+int,4
+string = [ ] ;,4
+java ( ),5
+@ =,5
+= id ;,5
+= ),5
+= +,5
+string = + + ;,5
+( true ),5
+@ ( value =,5
+string name = ( ) ;,5
+( ) ),5
+layout = new ( ) ;,5
+< : name = value =,6
+( ( ) ( ),6
+( ) ( + ) ;,6
+name,6
+string,6
+= new ( + ) ;,6
+value,6
++ + ) ;,6
+int = [ ] ;,7
+java,7
+( +,7
+< @ = >,7
+= ( = ),7
+class {,7
+final ;,7
+* @ return,7
+= new string [ ] ;,7
++ = ( ) ;,8
+< : id = value =,8
+if ( > ) {,8
+boolean ;,8
+= name ;,8
+= = = ;,8
+= ( url ) ;,8
+boolean = true ;,9
+for,9
+( string ) {,9
+= [ ] ;,9
+return + ;,9
+= new ( ( ),9
+* ( ),9
+for ( string : ) {,10
+string name ;,10
+result = ( ) ;,10
+= [ ] ( ) ;,10
+= new ( ),11
+new ( ) {,11
+string =,11
+setvisible ( true ) ;,11
+final int = ;,11
+new ( ( ) ) ;,11
++ = ;,11
+) {,12
+< > { } <,12
+< : name = >,12
+( new ( ),12
+if ( = = null ),12
+if ( < ),12
+[ ] [ ] = ;,12
+( = = ( ) ),13
+( + [ ] ) ;,13
+= new arraylist ( ) ;,13
+< : name =,13
+( ) + ) ;,13
+= new string ( ) ;,13
+< > ;,13
+return result ;,14
+final = ( ) ;,14
+if ( > ),14
+string = null ;,15
+>,15
+= false ;,15
+if ( ( ) > ),15
+string [ ] ;,15
+= * ;,16
+( true ) {,16
+return new ( ) ;,17
+< : id = >,17
+( ) { },17
+final = new ( ) ;,17
+( ) add ( ) ;,18
+boolean = false ;,18
+( = ) {,19
+< : >,19
+= (,19
+[ ] =,20
+if ( < ) {,20
+new ( ) ( ) ;,20
+< = > <,21
+< class = >,21
+< : = =,22
+= =,22
+add ( ) ;,23
+return ( ) ( ) ;,25
+},26
+return false ;,26
+for ( : ) {,27
+if ( ) {,27
+= true ;,27
+= new ( ) {,27
+( ) ) ;,27
+: : : :,27
+{ },29
+= + ;,30
+return true ;,31
+if ( = = ) {,31
+( false ) ;,31
+* @,31
+[ ] = ;,32
+< : = >,33
+[ ] ;,34
+= new (,34
+super ( ) ;,35
+if ( = = ),35
+if ( ( ) ),35
+( ( ),36
+( < ( ) ),36
+( ( ) ),36
+: : :,36
+string ;,37
+new ( ) ;,38
+@ ( name = ),39
+( null ) ;,39
+@ ( = ),41
+( + +,43
+( ( ) ( ) ),45
+= ( ),45
++ + ;,48
+( [ ] ) ;,50
+@ ( ),50
+) ;,51
+int ;,51
+( ) ( ( ) ),52
+( ) ( ) ) ;,54
+( + + ) ;,54
+: =,55
+= new [ ] ;,57
+if ( = null ) {,57
+( new ( ) {,57
+return ( ) ;,58
+*,60
+: :,61
+int = ( ) ;,62
+( int ) {,67
+( + ( ) ) ;,68
+( ) ( ) ;,72
+[ ] = ( ) ;,73
+= null ;,75
+} ) ;,76
+} {,78
+(,81
+< > <,83
+string = ( ) ;,85
+if ( ( ) ) {,85
+( true ) ;,87
+( ( ) ) {,89
+( : ),96
+string = ;,97
+( + ) ;,97
+( ) {,98
+< > = ( ) ;,101
+=,102
+< =,115
+int = ;,115
+:,116
+< >,128
+( new ( ) ) ;,139
+} ( ) {,147
+= ( ) ( ) ;,152
+( ( ) ) ;,172
+<,193
+@,208
+= ;,210
+= ( ( ) ) ;,212
+( ),216
+;,216
+return ;,224
+{,241
+= ( ) ;,387
+= new ( ) ;,407
+( ) ;,708

@@ -1,0 +1,15 @@
+33,500
+owner,500
+string,500
+(,500
+),500
++,500
+incremental,500
+int,500
+long,500
+printf,500
+boolean,500
+name,500
+id,500
+=,500
+;,1000

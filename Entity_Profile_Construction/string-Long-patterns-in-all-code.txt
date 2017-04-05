@@ -1,0 +1,316 @@
+< ! [ [,1
+string [ ] = ;,1
+: {,1
+= + [ ] ;,1
+data | | | | |,1
+static string = ;,1
+string = (,1
+static string ( ) {,1
++ = + ;,1
+println ( + ) ;,1
+: [ { : } ],1
+name is,1
+the *,1
+static string ;,1
+| | |,1
+< string > <,1
+string input ;,1
+value = ( ) ;,1
+double,1
+: false,1
+url = ( ) ;,1
+add ( ),1
+: true,1
+data [,1
+( ) string ;,1
+string [ ] =,1
+string name = ;,1
+out = new ( ) ;,1
+= new ( input ) ;,1
+string = = ;,1
++ ;,1
+string ) {,1
+} else,1
+void ( string ),1
+] ] >,1
+( ) null,1
+( string ) ;,2
+return the,2
+int id ;,2
+string url = ;,2
+( null,2
++ ( ) +,2
+result = new ( ) ;,2
+while ( > = ) {,2
+= ( +,2
+( + input ) ;,2
+( ) ( ) + +,2
+= +,2
+- >,2
+string = ( + ) ;,2
+add ( ( ),2
+bufferedreader ;,2
+string input = ( ) ;,2
+= new ( is ) ;,2
+: ( ) ;,2
+string input = ;,2
+string ( ) {,3
+int = - ;,3
+boolean = ( ) ;,3
+string value = ( ) ;,3
+( input ) ;,3
+( list ) ;,3
+[,3
+string = +,3
+input = ( ) ;,3
+= ( input ) ;,3
+string = + ;,3
+string string = ( ) ;,3
+static = new ( ) ;,3
+= new ( file ) ;,3
+return,3
+= + + ;,3
+null,3
+for ( string : ),3
+static int ;,4
+void ( string ) {,4
++ ) ;,4
+) ( ) ;,4
+< string > ;,4
+while ( ! = ) {,4
+string [ ] ;,4
+int = ( ),4
+* of,4
+int =,4
+[ ] = null ;,4
+string = [ ] ;,4
+: [,4
+( * ),4
+bufferedreader = null ;,5
+( data [ ] ) ;,5
+* the for,5
+| | | |,5
+string,5
+= + ( ) ;,5
+( data ) ;,5
+return name ;,5
+string result = ;,5
+string = + + ;,5
+} ;,5
+if ( ! = ),5
++ +,5
+while ( ! ( ) ),5
+string [ ] = {,5
+is = ( ) ;,5
+of,5
+| |,5
+for the,5
++ + ) ;,5
++ = ( ) ;,6
+( ) ( true ) ;,6
+* return the,6
+( ) ) ) ;,6
+if ( ( ),6
+while ( < ) {,6
+int = + ;,6
+string result = ( ) ;,6
+: null,6
+} *,6
+string ( ),6
+( ) ; },6
+in = new ( ) ;,6
+if ( > = ),6
+( value ) ;,6
+double = ( ) ;,7
+= ( ) [ ] ;,7
+double ;,7
+int = * ;,7
+( + [ ] ) ;,7
+* of the,7
+[ ] [ ] = ;,7
+return [ ] ;,7
+string = ( string ) ;,7
+( result ) ;,8
+the,8
+= new ( url ) ;,8
+if ( > ) {,8
+boolean ;,8
+: : : error,8
+= name ;,8
+out = ( ) ;,9
+double = ;,9
+( +,9
+boolean = true ;,9
+( [ ] + ) ;,9
+return + ;,9
+< > < > <,9
+( = = ) ;,9
+< = = > <,9
+for ( string : ) {,10
++,10
+if ( < = ),10
+string name ;,10
+for ( : ),10
+input = new ( ) ;,10
+= - ;,10
+< name > <,11
+< = > <,11
+< : name = >,11
+is,11
+else if ( ( ) ),11
+if ( ! = ) {,11
+if ( < ),11
+from,11
++ = ;,11
+( string ),11
+if ( > ),11
+) {,12
+( {,12
+< > { } <,12
+= ( + ) ;,12
+result = ( ) ;,12
+string =,12
+= ( [ ] ) ;,12
+[ ] : :,13
+return result ;,14
+return ( ) ( ) ;,14
+to,14
+= [ ] ;,14
+[ ] =,14
+string = null ;,15
+catch ( exception ),15
+if ( ( ) > ),15
+catch ( exception ) {,15
+new (,15
+= false ;,16
+: id =,16
+while ( true ) {,16
+[ ] = { } ;,16
+< : >,17
+= new [ ] ;,17
+( ( ) ),17
+= [ ] ( ) ;,17
+< > ( : ),17
+if ( ),18
+catch ( ),18
+= (,18
+= =,18
+if ( < ) {,18
+if ( ) {,19
+else if ( = = ),19
+< name = >,20
+-,20
+catch ( ) {,20
+return ( ( ) ) ;,20
+< name = = >,21
+= + ;,21
+= >,21
+} {,21
+boolean = false ;,21
+return null ;,22
+[ ] = ;,22
+: [ ],22
+void ( ) {,23
+add ( ) ;,23
+* the,24
+( ) ) ;,24
+),25
+int = = ;,25
+},25
+( + + + ) ;,25
+return false ;,26
+= new ( this ) ;,26
+while ( ( ) ),26
+: =,26
+for ( : ) {,27
+< ? = = ? >,27
+= new ( ) {,27
+else {,28
+[ ] ;,29
+= new bufferedreader ( ) ;,29
+{ },30
+try,30
+return true ;,31
+= true ;,31
+if ( = = ) {,31
+- - - -,31
+if ( = = ),32
+( this ) ;,32
+= new string ( ) ;,32
+( false ) ;,33
+if ( ! ( ) ),33
+if ( ( ) ),33
+super ( ) ;,34
+( + + ) ;,34
+- -,34
+: = >,34
+( [ ] ) ;,34
+> ( ) ;,35
+string ;,35
+< id = = >,35
+= ( ),36
+new ( ) ;,36
+( null ) ;,38
+[ ],38
+( ) ( ),39
+else,40
+: : :,40
+if ( = = null ),41
+< = = >,42
+< = >,42
+if ( ! = null ),43
+< : =,44
+( name = ),45
+: :,45
+( ( ) ) {,47
+int ;,48
+= new (,48
++ + ;,49
+< = =,50
+) ;,53
+< =,53
+*,54
+{,55
+(,57
+= > ( ) ;,57
+( new ( ) {,57
+( ( ) + ) ;,61
+} else {,63
+[ ] = [ ] ;,65
+package ;,66
+( + ( ) ) ;,68
+return ( ) ;,69
+[ ] = ( ) ;,69
+( = ),73
+= null ;,74
+int = ( ) ;,74
+while ( ( ) ) {,74
+} catch ( exception ) {,78
+} ) ;,79
+( ) {,82
+=,83
+< > <,83
+string = ( ) ;,85
+string = ;,87
+( : ),87
+if ( ( ) ) {,90
+} catch ( ) {,91
+( + ) ;,94
+( true ) ;,97
+:,103
+< >,135
+( new ( ) ) ;,139
+( ) ( ) ;,141
+= ( ) ( ) ;,153
+;,164
+int = ;,167
+( ( ) ) ;,170
+= ( ( ) ) ;,190
+<,192
+try {,192
+= ;,210
+return ;,215
+( ),230
+= ( ) ;,386
+= new ( ) ;,390
+( ) ;,695
